@@ -12,8 +12,7 @@ const TESTIMONIALS = [
     name: "Angela C.",
     role: "Career Changer",
     location: "Atlanta, GA",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=face",
+    image: "/images/testimonials/testimonial-01.jpg",
   },
   {
     quote:
@@ -21,8 +20,7 @@ const TESTIMONIALS = [
     name: "Marcus T.",
     role: "Parent & Learner",
     location: "Miami, FL",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
+    image: "/images/testimonials/testimonial-02.jpg",
   },
   {
     quote:
@@ -30,8 +28,7 @@ const TESTIMONIALS = [
     name: "David R.",
     role: "After The Game Alum",
     location: "Los Angeles, CA",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face",
+    image: "/images/testimonials/testimonial-03.jpg",
   },
   {
     quote:
@@ -39,8 +36,7 @@ const TESTIMONIALS = [
     name: "Priya K.",
     role: "Forge Graduate",
     location: "Chicago, IL",
-    image:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face",
+    image: "/images/testimonials/testimonial-04.jpg",
   },
 ];
 

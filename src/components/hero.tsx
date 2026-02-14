@@ -7,50 +7,29 @@ import { ShuffleText } from "./ui/shuffle-text";
 import { useQuiz } from "./quiz-modal";
 
 const COMMUNITY_PHOTOS = [
-  {
-    src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=800&fit=crop",
-    alt: "People collaborating on tech project",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=800&fit=crop",
-    alt: "Team working together",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&h=800&fit=crop",
-    alt: "Person coding on laptop",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=800&fit=crop",
-    alt: "Group learning session",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=800&fit=crop",
-    alt: "Workshop in progress",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=600&h=800&fit=crop",
-    alt: "Young people in tech",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?w=600&h=800&fit=crop",
-    alt: "Working on computer",
-  },
+  { src: "/images/community/community-01.jpg", alt: "People collaborating on tech project" },
+  { src: "/images/community/community-02.jpg", alt: "Team working together" },
+  { src: "/images/community/community-03.jpg", alt: "Person coding on laptop" },
+  { src: "/images/community/community-04.jpg", alt: "Group learning session" },
+  { src: "/images/community/community-05.jpg", alt: "Workshop in progress" },
+  { src: "/images/community/community-06.jpg", alt: "Young people in tech" },
+  { src: "/images/community/community-07.jpg", alt: "Working on computer" },
 ];
 
 // Floating face tiles representing learners across the community
 const FLOATING_FACES = [
-  { src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=face", alt: "Learner" },
-  { src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&h=120&fit=crop&crop=face", alt: "Learner" },
-  { src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=120&h=120&fit=crop&crop=face", alt: "Learner" },
-  { src: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&h=120&fit=crop&crop=face", alt: "Learner" },
-  { src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&crop=face", alt: "Learner" },
-  { src: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&h=120&fit=crop&crop=face", alt: "Learner" },
-  { src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&crop=face", alt: "Learner" },
-  { src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=120&h=120&fit=crop&crop=face", alt: "Learner" },
-  { src: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=120&h=120&fit=crop&crop=face", alt: "Learner" },
-  { src: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&h=120&fit=crop&crop=face", alt: "Learner" },
-  { src: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=120&h=120&fit=crop&crop=face", alt: "Learner" },
-  { src: "https://images.unsplash.com/photo-1552058544-f2b08422138a?w=120&h=120&fit=crop&crop=face", alt: "Learner" },
+  { src: "/images/faces/face-01.jpg", alt: "Learner" },
+  { src: "/images/faces/face-02.jpg", alt: "Learner" },
+  { src: "/images/faces/face-03.jpg", alt: "Learner" },
+  { src: "/images/faces/face-04.jpg", alt: "Learner" },
+  { src: "/images/faces/face-05.jpg", alt: "Learner" },
+  { src: "/images/faces/face-06.jpg", alt: "Learner" },
+  { src: "/images/faces/face-07.jpg", alt: "Learner" },
+  { src: "/images/faces/face-08.jpg", alt: "Learner" },
+  { src: "/images/faces/face-09.jpg", alt: "Learner" },
+  { src: "/images/faces/face-10.jpg", alt: "Learner" },
+  { src: "/images/faces/face-11.jpg", alt: "Learner" },
+  { src: "/images/faces/face-12.jpg", alt: "Learner" },
 ];
 
 const FACE_POSITIONS = FLOATING_FACES.map((face, i) => ({

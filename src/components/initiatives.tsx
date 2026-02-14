@@ -7,14 +7,10 @@ import { INITIATIVES } from "@/lib/constants";
 import { useQuiz } from "./quiz-modal";
 
 const INITIATIVE_IMAGES = [
-  // The Forge — community tech hub, intergenerational learning
-  "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&h=600&fit=crop",
-  // Beyond Code Catalysts — adults in career training / professional development
-  "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&h=600&fit=crop",
-  // Code Along — person coding, tutorials, screen-focused
-  "https://cdn.sanity.io/images/dbbwy5n2/develop/db9534d4388495308475ff39f5bbe87e3bc6675b-1400x786.jpg",
-  // After The Game — athletes transitioning to tech careers
-  "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&h=600&fit=crop",
+  "/images/initiatives/forge.jpg",
+  "/images/initiatives/catalysts.jpg",
+  "/images/initiatives/code-along.jpg",
+  "/images/initiatives/after-the-game.jpg",
 ];
 
 const INITIATIVE_TAGS = [
