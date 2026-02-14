@@ -59,7 +59,7 @@ export function Resources() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="mt-8 max-w-2xl text-lg leading-relaxed text-off-white/70"
+          className="mt-8 max-w-2xl text-base leading-relaxed text-off-white/70 sm:text-lg"
         >
           Everything you need to understand our mission, share with your
           network, or bring Beyond Code to your community.
@@ -113,10 +113,10 @@ export function Resources() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 * i, duration: 0.5 }}
-                  className="group flex items-start gap-4 border border-off-white/10 p-5 transition-all hover:border-electric-green/40 hover:bg-off-white/5"
+                  className="group flex items-start gap-3 border border-off-white/10 p-4 transition-all hover:border-electric-green/40 hover:bg-off-white/5 sm:gap-4 sm:p-5"
                 >
                   {/* PDF icon */}
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center bg-electric-green/10 transition-colors group-hover:bg-electric-green/20">
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center bg-electric-green/10 transition-colors group-hover:bg-electric-green/20 sm:h-12 sm:w-12">
                     <span
                       className="font-mono text-xs font-bold text-electric-green"
                       style={{ fontFamily: "var(--font-mono)" }}

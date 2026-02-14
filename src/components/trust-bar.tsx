@@ -20,7 +20,7 @@ export function TrustBar() {
         </motion.p>
 
         <div className="mt-4 relative overflow-hidden">
-          <div className="flex animate-scroll items-center gap-16 whitespace-nowrap">
+          <div className="flex animate-scroll items-center gap-10 whitespace-nowrap sm:gap-16">
             {[...EMPLOYER_LOGOS, ...EMPLOYER_LOGOS].map((logo, i) => (
               <div
                 key={`${logo.name}-${i}`}
@@ -29,7 +29,7 @@ export function TrustBar() {
                 <img
                   src={`/images/logos/${logo.slug}.svg`}
                   alt={logo.name}
-                  className="h-7 w-auto opacity-30 transition-opacity hover:opacity-100"
+                  className="h-5 w-auto opacity-30 transition-opacity hover:opacity-100 sm:h-7"
                 />
               </div>
             ))}

@@ -31,7 +31,7 @@ export function About() {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="mt-8 max-w-3xl"
         >
-          <p className="text-xl leading-relaxed text-charcoal lg:text-2xl">
+          <p className="text-lg leading-relaxed text-charcoal sm:text-xl lg:text-2xl">
             Beyond Code Collective bridges the gap between inspiration,
             training, and employment in tech, connecting learners to educational
             content, opportunities to develop cutting-edge technologies, and

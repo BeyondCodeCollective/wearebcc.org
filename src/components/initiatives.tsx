@@ -56,7 +56,7 @@ export function Initiatives() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="mt-8 max-w-2xl text-lg leading-relaxed text-off-white/80"
+          className="mt-8 max-w-2xl text-base leading-relaxed text-off-white/80 sm:text-lg"
         >
           Beyond Code Collective is an integrated ecosystem creating sustainable
           pathways to quality jobs while strengthening the digital capacity of
@@ -122,10 +122,10 @@ export function Initiatives() {
                     ))}
                   </div>
 
-                  <div className="mt-8 flex flex-wrap gap-3">
+                  <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                     <a
                       href={`mailto:${initiative.contact}`}
-                      className="inline-flex items-center gap-2 bg-electric-green px-6 py-3 font-mono text-xs tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80"
+                      className="inline-flex items-center justify-center gap-2 bg-electric-green px-6 py-3 font-mono text-xs tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80"
                       style={{ fontFamily: "var(--font-mono)" }}
                     >
                       Learn More
@@ -134,7 +134,7 @@ export function Initiatives() {
                     {"quizUrl" in initiative && initiative.quizUrl && (
                       <button
                         onClick={() => openQuiz()}
-                        className="inline-flex items-center gap-2 border-2 border-electric-green px-6 py-3 font-mono text-xs tracking-wider uppercase text-electric-green transition-colors hover:bg-electric-green hover:text-true-black"
+                        className="inline-flex items-center justify-center gap-2 border-2 border-electric-green px-6 py-3 font-mono text-xs tracking-wider uppercase text-electric-green transition-colors hover:bg-electric-green hover:text-true-black"
                         style={{ fontFamily: "var(--font-mono)" }}
                       >
                         Take the Career Quiz

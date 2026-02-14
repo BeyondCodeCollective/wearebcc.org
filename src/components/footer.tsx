@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-true-black px-6 py-16 lg:px-8 lg:py-20">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-12 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-3 md:gap-12">
           {/* Logo & tagline */}
           <div>
             <span
@@ -40,7 +40,7 @@ export function Footer() {
                 <a
                   key={key}
                   href={`mailto:${email}`}
-                  className="text-sm text-off-white/70 transition-colors hover:text-off-white"
+                  className="text-sm text-off-white/70 transition-colors hover:text-off-white break-all"
                 >
                   {email}
                 </a>

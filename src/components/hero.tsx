@@ -136,7 +136,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.4, duration: 0.6 }}
-              className="mt-8 max-w-md text-lg leading-relaxed text-grey-2"
+              className="mt-8 max-w-md text-base leading-relaxed text-grey-2 sm:text-lg"
             >
               Beyond Code Collective provides human-powered resources for a
               tech-driven world. Building intergenerational equity in the
@@ -147,18 +147,18 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.6, duration: 0.6 }}
-              className="mt-10 flex flex-wrap gap-4"
+              className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4"
             >
               <button
                 onClick={() => openQuiz()}
-                className="bg-electric-green px-10 py-4 font-mono text-sm tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80"
+                className="bg-electric-green px-8 py-4 font-mono text-sm tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80 sm:px-10"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 Get Started &rarr;
               </button>
               <a
                 href="#get-involved"
-                className="border border-off-white/30 px-8 py-4 font-mono text-sm tracking-wider uppercase text-off-white/70 transition-all hover:border-off-white hover:text-off-white"
+                className="border border-off-white/30 px-6 py-4 text-center font-mono text-sm tracking-wider uppercase text-off-white/70 transition-all hover:border-off-white hover:text-off-white sm:px-8"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 Join Newsletter
@@ -219,12 +219,12 @@ export function Hero() {
           >
             OUR COMMUNITY
           </p>
-          <div className="flex gap-3 overflow-x-auto pb-4 scrollbar-hide">
+          <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide sm:gap-3">
             {COMMUNITY_PHOTOS.map((photo, i) => (
               <button
                 key={i}
                 onClick={() => setActivePhoto(i)}
-                className={`relative h-20 w-20 flex-shrink-0 overflow-hidden transition-all cursor-pointer ${
+                className={`relative h-16 w-16 flex-shrink-0 overflow-hidden transition-all cursor-pointer sm:h-20 sm:w-20 ${
                   activePhoto === i
                     ? "opacity-100 ring-2 ring-electric-green"
                     : "opacity-40 hover:opacity-70"
@@ -235,7 +235,7 @@ export function Hero() {
                   alt={photo.alt}
                   fill
                   className="object-cover"
-                  sizes="80px"
+                  sizes="(min-width: 640px) 80px, 64px"
                 />
                 <span
                   className="absolute bottom-1 left-1 text-off-white font-mono text-[10px]"

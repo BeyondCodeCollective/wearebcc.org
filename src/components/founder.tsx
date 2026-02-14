@@ -70,13 +70,13 @@ export function Founder() {
               {FOUNDER.title}
             </p>
 
-            <p className="mt-8 text-base leading-relaxed text-grey-2 lg:text-lg">
+            <p className="mt-6 text-sm leading-relaxed text-grey-2 sm:mt-8 sm:text-base lg:text-lg">
               {FOUNDER.bio}
             </p>
 
             {/* Quote */}
-            <blockquote className="mt-8 border-l-4 border-electric-green pl-6">
-              <p className="text-base italic leading-relaxed text-off-white lg:text-lg">
+            <blockquote className="mt-6 border-l-4 border-electric-green pl-4 sm:mt-8 sm:pl-6">
+              <p className="text-sm italic leading-relaxed text-off-white sm:text-base lg:text-lg">
                 {FOUNDER.quote}
               </p>
               <cite
@@ -88,14 +88,14 @@ export function Founder() {
             </blockquote>
 
             {/* Press logos */}
-            <div className="mt-12">
+            <div className="mt-8 sm:mt-12">
               <p
                 className="font-mono text-xs tracking-wider text-grey-3"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 AS SEEN ON
               </p>
-              <div className="mt-4 flex flex-wrap items-center gap-6">
+              <div className="mt-3 flex flex-wrap items-center gap-4 sm:mt-4 sm:gap-6">
                 {PRESS_OUTLETS.map((outlet) => (
                   <span
                     key={outlet}

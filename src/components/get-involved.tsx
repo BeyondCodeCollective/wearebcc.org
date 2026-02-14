@@ -92,14 +92,14 @@ export function GetInvolved() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 disabled={loading}
-                className="w-full border-2 border-true-black bg-transparent px-6 py-4 text-true-black placeholder:text-true-black/40 focus:outline-none focus:ring-2 focus:ring-true-black disabled:opacity-50"
+                className="w-full border-2 border-true-black bg-transparent px-4 py-3 text-true-black placeholder:text-true-black/40 focus:outline-none focus:ring-2 focus:ring-true-black disabled:opacity-50 sm:px-6 sm:py-4"
               />
               <select
                 required
                 value={segment}
                 onChange={(e) => setSegment(e.target.value)}
                 disabled={loading}
-                className="w-full border-2 border-true-black bg-transparent px-6 py-4 text-true-black focus:outline-none focus:ring-2 focus:ring-true-black appearance-none disabled:opacity-50"
+                className="w-full border-2 border-true-black bg-transparent px-4 py-3 text-true-black focus:outline-none focus:ring-2 focus:ring-true-black appearance-none disabled:opacity-50 sm:px-6 sm:py-4"
               >
                 <option value="" disabled>
                   I am a...
@@ -118,7 +118,7 @@ export function GetInvolved() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-true-black px-8 py-4 font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:bg-charcoal disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-true-black px-6 py-3 font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:bg-charcoal disabled:opacity-50 disabled:cursor-not-allowed sm:px-8 sm:py-4"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {loading ? "Joining..." : "Join The Community →"}

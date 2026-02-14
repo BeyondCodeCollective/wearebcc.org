@@ -25,7 +25,7 @@ export function CTABridge() {
             <br />
             ALL OF OURS.
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-off-white/70">
+          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-off-white/70 sm:text-lg">
             We partner with industry leaders to create pathways into tech.
             Together, we&apos;re building a workforce that reflects the world it
             serves.
@@ -47,13 +47,13 @@ export function CTABridge() {
             Where Tech Careers Are Being Built
           </p>
           <div className="relative overflow-hidden">
-            <div className="flex animate-scroll items-center gap-16 whitespace-nowrap">
+            <div className="flex animate-scroll items-center gap-10 whitespace-nowrap sm:gap-16">
               {[...EMPLOYER_LOGOS, ...EMPLOYER_LOGOS].map((logo, i) => (
                 <div key={`${logo.name}-${i}`} className="flex-shrink-0">
                   <img
                     src={`/images/logos/${logo.slug}.svg`}
                     alt={logo.name}
-                    className="h-7 w-auto opacity-30 transition-opacity hover:opacity-80"
+                    className="h-5 w-auto opacity-30 transition-opacity hover:opacity-80 sm:h-7"
                   />
                 </div>
               ))}

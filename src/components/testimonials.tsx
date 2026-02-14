@@ -75,19 +75,19 @@ export function Testimonials() {
 
         {/* Testimonial card */}
         <div className="mt-12">
-          <div className="relative min-h-[320px]">
+          <div className="relative min-h-[280px] sm:min-h-[320px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={current}
-                initial={{ opacity: 0, x: 50 }}
+                initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
+                exit={{ opacity: 0, x: -30 }}
                 transition={{ duration: 0.4 }}
                 className="grid gap-8 lg:grid-cols-3 lg:gap-12"
               >
                 {/* Quote */}
                 <div className="lg:col-span-2">
-                  <blockquote className="text-2xl leading-relaxed text-true-black lg:text-3xl">
+                  <blockquote className="text-xl leading-relaxed text-true-black sm:text-2xl lg:text-3xl">
                     &ldquo;{testimonial.quote}&rdquo;
                   </blockquote>
                 </div>

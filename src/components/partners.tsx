@@ -32,11 +32,11 @@ export function Partners() {
 
           {/* Scrolling employer logos */}
           <div className="mt-6 relative overflow-hidden">
-            <div className="flex animate-scroll gap-16 whitespace-nowrap">
+            <div className="flex animate-scroll gap-10 whitespace-nowrap sm:gap-16">
               {[...EMPLOYER_LOGOS, ...EMPLOYER_LOGOS].map((name, i) => (
                 <span
                   key={`${name}-${i}`}
-                  className="text-2xl font-bold tracking-wider text-grey-2 uppercase flex-shrink-0"
+                  className="text-xl font-bold tracking-wider text-grey-2 uppercase flex-shrink-0 sm:text-2xl"
                 >
                   {name}
                 </span>
