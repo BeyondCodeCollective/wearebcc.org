@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ShuffleText } from "./ui/shuffle-text";
 import { useQuiz } from "./quiz-modal";
+import { useNewsletter } from "./newsletter-modal";
 
 const COMMUNITY_PHOTOS = [
   { src: "/images/community/community-01.jpg", alt: "People collaborating on tech project" },
@@ -44,6 +45,7 @@ const FACE_POSITIONS = FLOATING_FACES.map((face, i) => ({
 
 export function Hero() {
   const { openQuiz } = useQuiz();
+  const { openNewsletter } = useNewsletter();
   const [activePhoto, setActivePhoto] = useState(0);
 
   return (
@@ -156,13 +158,13 @@ export function Hero() {
               >
                 Get Started &rarr;
               </button>
-              <a
-                href="#get-involved"
+              <button
+                onClick={() => openNewsletter()}
                 className="border border-off-white/30 px-6 py-4 text-center font-mono text-sm tracking-wider uppercase text-off-white/70 transition-all hover:border-off-white hover:text-off-white sm:px-8"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 Join Newsletter
-              </a>
+              </button>
             </motion.div>
           </div>
 
@@ -211,7 +213,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.8, duration: 0.6 }}
-          className="mt-16"
+          className="mt-16 hidden lg:block"
         >
           <p
             className="mb-4 text-electric-green font-mono text-xs tracking-wider"

@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { UsersThree, Circuitry, Rocket } from "@phosphor-icons/react";
 import { SectionLabel } from "./ui/section-label";
 import { PILLARS } from "@/lib/constants";
+
+const PILLAR_ICONS = [UsersThree, Circuitry, Rocket];
 
 export function About() {
   return (
@@ -48,8 +51,12 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 * i, duration: 0.6 }}
-              className="group border-t-4 border-electric-green pt-6"
+              className="group border-t-4 border-electric-green pt-8"
             >
+              {(() => {
+                const Icon = PILLAR_ICONS[i];
+                return <Icon size={48} weight="bold" className="text-cobalt mb-4" />;
+              })()}
               <h3 className="font-heading text-xl leading-tight text-true-black lg:text-2xl">
                 {pillar.title}
               </h3>

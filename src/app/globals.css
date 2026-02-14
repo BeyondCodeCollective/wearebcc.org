@@ -87,3 +87,53 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Quiz animation utilities */
+.fade-in { animation: fadeIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.fade-out { animation: fadeOut 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+.slide-up { animation: slideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.stagger-1 { animation-delay: 0.04s; opacity: 0; }
+.stagger-2 { animation-delay: 0.08s; opacity: 0; }
+.stagger-3 { animation-delay: 0.12s; opacity: 0; }
+.stagger-4 { animation-delay: 0.16s; opacity: 0; }
+.stagger-5 { animation-delay: 0.2s; opacity: 0; }
+.stagger-6 { animation-delay: 0.24s; opacity: 0; }
+
+/* Safe area insets for mobile notch */
+@supports (padding: max(0px)) {
+  .safe-top { padding-top: max(0px, env(safe-area-inset-top)); }
+  .safe-bottom { padding-bottom: max(0px, env(safe-area-inset-bottom)); }
+}
+
+/* Selection styling */
+::selection { background: rgba(29, 89, 255, 0.2); color: inherit; }
+
+/* Focus-visible accessibility */
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 3px solid #1D59FF; outline-offset: 2px;
+}
+*:focus:not(:focus-visible) { outline: none; }
+
+/* Screen reader only */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;
+}
+.focus\:not-sr-only:focus {
+  position: static; width: auto; height: auto; padding: inherit; margin: inherit;
+  overflow: visible; clip: auto; white-space: normal;
+}
