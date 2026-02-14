@@ -9,11 +9,41 @@ export function GetInvolved() {
   const [email, setEmail] = useState("");
   const [segment, setSegment] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Connect to Mailchimp or email service
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    try {
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email.trim(),
+          segment,
+          source: "get-involved",
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to subscribe");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : "Something went wrong. Please try again."
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -61,13 +91,15 @@ export function GetInvolved() {
                 placeholder="Email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full border-2 border-true-black bg-transparent px-6 py-4 text-true-black placeholder:text-true-black/40 focus:outline-none focus:ring-2 focus:ring-true-black"
+                disabled={loading}
+                className="w-full border-2 border-true-black bg-transparent px-6 py-4 text-true-black placeholder:text-true-black/40 focus:outline-none focus:ring-2 focus:ring-true-black disabled:opacity-50"
               />
               <select
                 required
                 value={segment}
                 onChange={(e) => setSegment(e.target.value)}
-                className="w-full border-2 border-true-black bg-transparent px-6 py-4 text-true-black focus:outline-none focus:ring-2 focus:ring-true-black appearance-none"
+                disabled={loading}
+                className="w-full border-2 border-true-black bg-transparent px-6 py-4 text-true-black focus:outline-none focus:ring-2 focus:ring-true-black appearance-none disabled:opacity-50"
               >
                 <option value="" disabled>
                   I am a...
@@ -78,12 +110,18 @@ export function GetInvolved() {
                   </option>
                 ))}
               </select>
+              {error && (
+                <p className="text-true-black font-mono text-sm">
+                  {error}
+                </p>
+              )}
               <button
                 type="submit"
-                className="w-full bg-true-black px-8 py-4 font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:bg-charcoal"
+                disabled={loading}
+                className="w-full bg-true-black px-8 py-4 font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:bg-charcoal disabled:opacity-50 disabled:cursor-not-allowed"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
-                Join The Community &rarr;
+                {loading ? "Joining..." : "Join The Community →"}
               </button>
             </form>
           )}

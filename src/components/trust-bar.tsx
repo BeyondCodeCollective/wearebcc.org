@@ -1,27 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  GoogleLogo,
-  MicrosoftLogo,
-  AmazonLogo,
-  MetaLogo,
-  AppleLogo,
-  SalesforceLogo,
-  IBMLogo,
-  AdobeLogo,
-} from "./ui/brand-logos";
+import { EMPLOYER_LOGOS } from "./ui/brand-logos";
 
-const LOGOS = [
-  { name: "Google", Component: GoogleLogo, width: "w-20" },
-  { name: "Microsoft", Component: MicrosoftLogo, width: "w-7" },
-  { name: "Amazon", Component: AmazonLogo, width: "w-24" },
-  { name: "Meta", Component: MetaLogo, width: "w-20" },
-  { name: "Apple", Component: AppleLogo, width: "w-7" },
-  { name: "Salesforce", Component: SalesforceLogo, width: "w-10" },
-  { name: "IBM", Component: IBMLogo, width: "w-14" },
-  { name: "Adobe", Component: AdobeLogo, width: "w-7" },
-];
+const LOGO_COLOR = "999999"; // Grey color for logos
 
 export function TrustBar() {
   return (
@@ -39,12 +21,16 @@ export function TrustBar() {
 
         <div className="mt-4 relative overflow-hidden">
           <div className="flex animate-scroll items-center gap-16 whitespace-nowrap">
-            {[...LOGOS, ...LOGOS].map((logo, i) => (
+            {[...EMPLOYER_LOGOS, ...EMPLOYER_LOGOS].map((logo, i) => (
               <div
                 key={`${logo.name}-${i}`}
-                className={`flex-shrink-0 text-grey-3/30 transition-colors hover:text-grey-3 ${logo.width} h-8`}
+                className="flex-shrink-0"
               >
-                <logo.Component className="h-full w-full" />
+                <img
+                  src={`https://cdn.simpleicons.org/${logo.slug}/${LOGO_COLOR}`}
+                  alt={logo.name}
+                  className="h-7 w-auto opacity-30 transition-opacity hover:opacity-100"
+                />
               </div>
             ))}
           </div>

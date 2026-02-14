@@ -4,22 +4,14 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { SectionLabel } from "./ui/section-label";
 import { FOUNDER } from "@/lib/constants";
-import {
-  ForbesLogo,
-  CNBCLogo,
-  EssenceLogo,
-  FastCompanyLogo,
-  MashableLogo,
-  BlackEnterpriseLogo,
-} from "./ui/brand-logos";
 
-const PRESS_OUTLET_LOGOS = [
-  { name: "Forbes", Component: ForbesLogo, width: "w-20" },
-  { name: "CNBC", Component: CNBCLogo, width: "w-16" },
-  { name: "Essence", Component: EssenceLogo, width: "w-24" },
-  { name: "Fast Company", Component: FastCompanyLogo, width: "w-28" },
-  { name: "Mashable", Component: MashableLogo, width: "w-24" },
-  { name: "Black Enterprise", Component: BlackEnterpriseLogo, width: "w-24" },
+const PRESS_OUTLETS = [
+  "Forbes",
+  "CNBC",
+  "Essence",
+  "Fast Company",
+  "Mashable",
+  "Black Enterprise",
 ];
 
 export function Founder() {
@@ -104,13 +96,13 @@ export function Founder() {
                 AS SEEN ON
               </p>
               <div className="mt-4 flex flex-wrap items-center gap-6">
-                {PRESS_OUTLET_LOGOS.map((logo) => (
-                  <div
-                    key={logo.name}
-                    className={`text-grey-3/50 transition-colors hover:text-off-white ${logo.width} h-6`}
+                {PRESS_OUTLETS.map((outlet) => (
+                  <span
+                    key={outlet}
+                    className="font-heading text-sm text-grey-3/50 transition-colors hover:text-off-white"
                   >
-                    <logo.Component className="h-full w-full" />
-                  </div>
+                    {outlet}
+                  </span>
                 ))}
               </div>
             </div>

@@ -37,11 +37,13 @@ export function CTABridge() {
               Join The Community
             </a>
             <a
-              href="#initiatives"
+              href="https://bcc-guidance-quiz.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="border-2 border-off-white px-10 py-4 font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:bg-off-white/10"
               style={{ fontFamily: "var(--font-mono)" }}
             >
-              Explore Initiatives
+              Take the Career Quiz
             </a>
           </div>
         </motion.div>
