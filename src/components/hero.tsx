@@ -66,50 +66,6 @@ const FACE_POSITIONS = FLOATING_FACES.map((face, i) => ({
 export function Hero() {
   const { openQuiz } = useQuiz();
   const [activePhoto, setActivePhoto] = useState(0);
-  const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState("");
-
-  const handleEmailSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setError("");
-
-    try {
-      const response = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email.trim(),
-          segment: "",
-          source: "hero",
-        }),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || "Failed to subscribe");
-      }
-
-      setSuccess(true);
-      setEmail("");
-
-      // Reset success message after 3 seconds
-      setTimeout(() => {
-        setSuccess(false);
-      }, 3000);
-    } catch (err) {
-      setError(
-        err instanceof Error ? err.message : "Something went wrong. Please try again."
-      );
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <section className="relative min-h-screen bg-true-black px-6 pt-32 pb-16 lg:px-8 overflow-hidden">
@@ -208,52 +164,14 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.6, duration: 0.6 }}
-              className="mt-8 flex flex-col gap-4 max-w-md"
+              className="mt-10"
             >
-              {success ? (
-                <div className="bg-electric-green/20 border-2 border-electric-green px-6 py-4">
-                  <p
-                    className="font-mono text-sm tracking-wider text-electric-green"
-                    style={{ fontFamily: "var(--font-mono)" }}
-                  >
-                    You&apos;re in!
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleEmailSubmit} className="flex gap-2">
-                  <input
-                    type="email"
-                    required
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    disabled={loading}
-                    className="flex-1 border-2 border-off-white bg-true-black px-4 py-3 text-off-white placeholder:text-grey-3 focus:outline-none focus:ring-2 focus:ring-electric-green disabled:opacity-50"
-                  />
-                  <button
-                    type="submit"
-                    disabled={loading}
-                    className="bg-electric-green px-6 py-3 font-mono text-sm tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap"
-                    style={{ fontFamily: "var(--font-mono)" }}
-                  >
-                    {loading ? "..." : "Get Started →"}
-                  </button>
-                </form>
-              )}
-              {error && (
-                <p
-                  className="font-mono text-sm text-red-400"
-                  style={{ fontFamily: "var(--font-mono)" }}
-                >
-                  {error}
-                </p>
-              )}
               <button
-                onClick={() => openQuiz(email || undefined)}
-                className="bg-transparent border-2 border-off-white px-8 py-3 font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:bg-off-white/10 text-center w-full"
+                onClick={() => openQuiz()}
+                className="bg-electric-green px-10 py-4 font-mono text-sm tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
-                Take the Career Quiz
+                Get Started &rarr;
               </button>
             </motion.div>
           </div>
