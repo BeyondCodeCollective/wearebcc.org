@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Special Gothic";
+  src: url("/fonts/SpecialGothicCondensedOne-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GT America";
+  src: url("/fonts/GT-America-Standard-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme inline {
+  --color-cobalt: #1D59FF;
+  --color-electric-green: #E5F701;
+  --color-true-black: #000000;
+  --color-off-white: #FFFDF7;
+  --color-dark-cobalt: #012966;
+  --color-forest-green: #193F0F;
+  --color-orange: #FF4C00;
+  --color-dark-orange: #570000;
+  --color-grey-1: #ECECEC;
+  --color-grey-2: #D8D8D8;
+  --color-grey-3: #646464;
+  --color-charcoal: #2F2F2F;
+
+  --font-heading: "Special Gothic", "Impact", "Arial Narrow", sans-serif;
+  --font-body: "GT America", "Inter", system-ui, sans-serif;
+  --font-mono: "Space Mono", "JetBrains Mono", ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-off-white);
+  color: var(--color-true-black);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Brand typography utilities */
+.font-heading {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+/* Infinite scroll animation for partner logos */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbar for community photo row */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
