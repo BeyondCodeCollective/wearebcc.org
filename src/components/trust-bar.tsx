@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { EMPLOYER_LOGOS } from "./ui/brand-logos";
 
-const LOGO_COLOR = "999999"; // Grey color for logos
+// Grey logos served locally (white SVGs with CSS opacity)
 
 export function TrustBar() {
   return (
@@ -27,7 +27,7 @@ export function TrustBar() {
                 className="flex-shrink-0"
               >
                 <img
-                  src={`https://cdn.simpleicons.org/${logo.slug}/${LOGO_COLOR}`}
+                  src={`/images/logos/${logo.slug}.svg`}
                   alt={logo.name}
                   className="h-7 w-auto opacity-30 transition-opacity hover:opacity-100"
                 />

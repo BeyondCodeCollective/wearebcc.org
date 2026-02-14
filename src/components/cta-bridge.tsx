@@ -3,8 +3,6 @@
 import { motion } from "framer-motion";
 import { EMPLOYER_LOGOS } from "./ui/brand-logos";
 
-const LOGO_COLOR = "FFFFFF"; // White logos on dark cobalt
-
 export function CTABridge() {
   return (
     <section id="partners" className="bg-dark-cobalt px-6 py-20 lg:px-8 lg:py-28">
@@ -53,7 +51,7 @@ export function CTABridge() {
               {[...EMPLOYER_LOGOS, ...EMPLOYER_LOGOS].map((logo, i) => (
                 <div key={`${logo.name}-${i}`} className="flex-shrink-0">
                   <img
-                    src={`https://cdn.simpleicons.org/${logo.slug}/${LOGO_COLOR}`}
+                    src={`/images/logos/${logo.slug}.svg`}
                     alt={logo.name}
                     className="h-7 w-auto opacity-30 transition-opacity hover:opacity-80"
                   />
