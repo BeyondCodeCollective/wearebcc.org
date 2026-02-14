@@ -1,16 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
+import {
+  GoogleLogo,
+  MicrosoftLogo,
+  AmazonLogo,
+  MetaLogo,
+  AppleLogo,
+  SalesforceLogo,
+  IBMLogo,
+  AdobeLogo,
+} from "./ui/brand-logos";
 
 const LOGOS = [
-  "Google",
-  "Microsoft",
-  "Amazon",
-  "Meta",
-  "Apple",
-  "Salesforce",
-  "IBM",
-  "Adobe",
+  { name: "Google", Component: GoogleLogo, width: "w-20" },
+  { name: "Microsoft", Component: MicrosoftLogo, width: "w-7" },
+  { name: "Amazon", Component: AmazonLogo, width: "w-24" },
+  { name: "Meta", Component: MetaLogo, width: "w-20" },
+  { name: "Apple", Component: AppleLogo, width: "w-7" },
+  { name: "Salesforce", Component: SalesforceLogo, width: "w-10" },
+  { name: "IBM", Component: IBMLogo, width: "w-14" },
+  { name: "Adobe", Component: AdobeLogo, width: "w-7" },
 ];
 
 export function TrustBar() {
@@ -28,14 +38,14 @@ export function TrustBar() {
         </motion.p>
 
         <div className="mt-4 relative overflow-hidden">
-          <div className="flex animate-scroll gap-16 whitespace-nowrap">
-            {[...LOGOS, ...LOGOS].map((name, i) => (
-              <span
-                key={`${name}-${i}`}
-                className="text-sm font-bold tracking-wider text-grey-3/40 uppercase flex-shrink-0 lg:text-base"
+          <div className="flex animate-scroll items-center gap-16 whitespace-nowrap">
+            {[...LOGOS, ...LOGOS].map((logo, i) => (
+              <div
+                key={`${logo.name}-${i}`}
+                className={`flex-shrink-0 text-grey-3/30 transition-colors hover:text-grey-3 ${logo.width} h-8`}
               >
-                {name}
-              </span>
+                <logo.Component className="h-full w-full" />
+              </div>
             ))}
           </div>
         </div>

@@ -38,6 +38,7 @@ export const INITIATIVES = [
     description:
       "Place-based hubs blending tech education, workforce development, and community engagement for learners of all ages — from K-12 to adults looking to upskill or pivot into tech careers.",
     contact: "partnership@wearebcc.org",
+    quizUrl: "https://bcc-guidance-quiz.vercel.app/",
   },
   {
     title: "Beyond Code Catalysts",

@@ -11,7 +11,7 @@ const INITIATIVE_IMAGES = [
   // Beyond Code Catalysts — adults in career training / professional development
   "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&h=600&fit=crop",
   // Code Along — person coding, tutorials, screen-focused
-  "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop",
+  "https://cdn.sanity.io/images/dbbwy5n2/develop/db9534d4388495308475ff39f5bbe87e3bc6675b-1400x786.jpg",
   // After The Game — athletes transitioning to tech careers
   "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&h=600&fit=crop",
 ];
@@ -123,14 +123,28 @@ export function Initiatives() {
                     ))}
                   </div>
 
-                  <a
-                    href={`mailto:${initiative.contact}`}
-                    className="mt-8 inline-flex items-center gap-2 bg-electric-green px-6 py-3 font-mono text-xs tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80"
-                    style={{ fontFamily: "var(--font-mono)" }}
-                  >
-                    Learn More
-                    <span aria-hidden="true">&rarr;</span>
-                  </a>
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <a
+                      href={`mailto:${initiative.contact}`}
+                      className="inline-flex items-center gap-2 bg-electric-green px-6 py-3 font-mono text-xs tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80"
+                      style={{ fontFamily: "var(--font-mono)" }}
+                    >
+                      Learn More
+                      <span aria-hidden="true">&rarr;</span>
+                    </a>
+                    {"quizUrl" in initiative && initiative.quizUrl && (
+                      <a
+                        href={initiative.quizUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 border-2 border-electric-green px-6 py-3 font-mono text-xs tracking-wider uppercase text-electric-green transition-colors hover:bg-electric-green hover:text-true-black"
+                        style={{ fontFamily: "var(--font-mono)" }}
+                      >
+                        Take the Career Quiz
+                        <span aria-hidden="true">&rarr;</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             );
