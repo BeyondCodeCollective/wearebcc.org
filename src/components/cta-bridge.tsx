@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useQuiz } from "./quiz-modal";
 
 export function CTABridge() {
+  const { openQuiz } = useQuiz();
+
   return (
     <section className="bg-dark-cobalt px-6 py-20 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl text-center">
@@ -36,15 +39,13 @@ export function CTABridge() {
             >
               Join The Community
             </a>
-            <a
-              href="https://bcc-guidance-quiz.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => openQuiz()}
               className="border-2 border-off-white px-10 py-4 font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:bg-off-white/10"
               style={{ fontFamily: "var(--font-mono)" }}
             >
               Take the Career Quiz
-            </a>
+            </button>
           </div>
         </motion.div>
       </div>

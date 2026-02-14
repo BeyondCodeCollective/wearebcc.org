@@ -10,10 +10,11 @@ import { Resources } from "@/components/resources";
 import { CTABridge } from "@/components/cta-bridge";
 import { GetInvolved } from "@/components/get-involved";
 import { Footer } from "@/components/footer";
+import { QuizProvider } from "@/components/quiz-modal";
 
 export default function Home() {
   return (
-    <>
+    <QuizProvider>
       <Nav />
       <main>
         <Hero />
@@ -28,6 +29,6 @@ export default function Home() {
         <GetInvolved />
       </main>
       <Footer />
-    </>
+    </QuizProvider>
   );
 }

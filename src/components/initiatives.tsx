@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { SectionLabel } from "./ui/section-label";
 import { INITIATIVES } from "@/lib/constants";
+import { useQuiz } from "./quiz-modal";
 
 const INITIATIVE_IMAGES = [
   // The Forge — community tech hub, intergenerational learning
@@ -24,6 +25,8 @@ const INITIATIVE_TAGS = [
 ];
 
 export function Initiatives() {
+  const { openQuiz } = useQuiz();
+
   return (
     <section
       id="initiatives"
@@ -133,16 +136,14 @@ export function Initiatives() {
                       <span aria-hidden="true">&rarr;</span>
                     </a>
                     {"quizUrl" in initiative && initiative.quizUrl && (
-                      <a
-                        href={initiative.quizUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        onClick={() => openQuiz()}
                         className="inline-flex items-center gap-2 border-2 border-electric-green px-6 py-3 font-mono text-xs tracking-wider uppercase text-electric-green transition-colors hover:bg-electric-green hover:text-true-black"
                         style={{ fontFamily: "var(--font-mono)" }}
                       >
                         Take the Career Quiz
                         <span aria-hidden="true">&rarr;</span>
-                      </a>
+                      </button>
                     )}
                   </div>
                 </div>

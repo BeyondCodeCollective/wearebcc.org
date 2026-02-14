@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ShuffleText } from "./ui/shuffle-text";
+import { useQuiz } from "./quiz-modal";
 
 const COMMUNITY_PHOTOS = [
   {
@@ -63,6 +64,7 @@ const FACE_POSITIONS = FLOATING_FACES.map((face, i) => ({
 }));
 
 export function Hero() {
+  const { openQuiz } = useQuiz();
   const [activePhoto, setActivePhoto] = useState(0);
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
@@ -246,13 +248,13 @@ export function Hero() {
                   {error}
                 </p>
               )}
-              <a
-                href="#initiatives"
-                className="bg-transparent border-2 border-off-white px-8 py-3 font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:bg-off-white/10 text-center"
+              <button
+                onClick={() => openQuiz(email || undefined)}
+                className="bg-transparent border-2 border-off-white px-8 py-3 font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:bg-off-white/10 text-center w-full"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
-                Explore Initiatives
-              </a>
+                Take the Career Quiz
+              </button>
             </motion.div>
           </div>
 
