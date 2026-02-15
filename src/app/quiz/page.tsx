@@ -1027,41 +1027,25 @@ function ResultsScreen({
     <div className="min-h-[100dvh] flex">
       <div className="w-full lg:w-1/2 min-h-[100dvh] bg-off-white overflow-y-auto pb-24 lg:pb-0">
         <header className="sticky top-0 z-30 bg-off-white border-b border-grey-2 safe-top">
-          <div className="px-4 md:px-12 lg:px-16 py-4">
-            <div className="flex items-center justify-between mb-2">
-              <div className="font-heading text-true-black text-sm">Beyond Code</div>
-              <div className="flex items-center gap-4">
-                <Link
-                  href="/"
-                  className="text-grey-3 hover:text-true-black text-sm transition-colors"
-                  style={{ fontFamily: "var(--font-mono)" }}
-                >
-                  HOME
-                </Link>
-                <button
-                  onClick={onRestart}
-                  className="text-grey-3 hover:text-true-black text-sm font-medium transition-colors"
-                  style={{ fontFamily: "var(--font-mono)" }}
-                  aria-label="Retake quiz"
-                >
-                  RETAKE QUIZ
-                </button>
-              </div>
-            </div>
-            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm">
-              <button
-                onClick={onRestart}
-                className="text-grey-3 hover:text-true-black transition-colors flex items-center gap-1"
-                aria-label="Go back to quiz start"
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                </svg>
-                Quiz
-              </button>
-              <span className="text-grey-2">/</span>
-              <span className="text-true-black font-medium">Your Results</span>
-            </nav>
+          <div className="px-4 md:px-12 lg:px-16 py-4 flex items-center justify-between">
+            <Link
+              href="/"
+              className="flex items-center gap-2 text-grey-3 hover:text-true-black transition-colors text-sm"
+              style={{ fontFamily: "var(--font-mono)" }}
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+              HOME
+            </Link>
+            <button
+              onClick={onRestart}
+              className="text-grey-3 hover:text-true-black text-sm font-medium transition-colors"
+              style={{ fontFamily: "var(--font-mono)" }}
+              aria-label="Retake quiz"
+            >
+              RETAKE QUIZ
+            </button>
           </div>
         </header>
 
@@ -1423,13 +1407,6 @@ export default function GuidanceQuiz() {
 
   return (
     <>
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-cobalt focus:text-off-white focus:font-medium"
-      >
-        Skip to main content
-      </a>
-
       <main id="main-content">
         {screen === "home" && <HomeScreen onSelectAge={handleAgeSelect} />}
         {screen === "capture" && (
