@@ -69,7 +69,7 @@ export function Nav() {
             <Logo
               variant="stacked"
               color={logoColor}
-              className="h-8 w-auto sm:h-10"
+              className="h-10 w-auto sm:h-12"
             />
           </a>
 

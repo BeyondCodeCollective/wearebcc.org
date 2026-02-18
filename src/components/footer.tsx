@@ -16,7 +16,7 @@ export function Footer() {
             <Logo
               variant="horizontal"
               color="white"
-              className="h-4 w-auto sm:h-5"
+              className="h-5 w-auto sm:h-6"
             />
             <p
               className="mt-3 font-mono text-xs tracking-wider text-off-white/60"
