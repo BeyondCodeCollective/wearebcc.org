@@ -86,26 +86,17 @@ export function Founder() {
                 {t("asSeenOn")}
               </p>
               <div className="mt-3 flex flex-wrap items-center gap-4 sm:mt-4 sm:gap-6">
-                {PRESS_FEATURES.map((outlet) =>
-                  outlet.href ? (
-                    <a
-                      key={outlet.name}
-                      href={outlet.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-heading text-sm text-off-white/50 transition-colors hover:text-electric-green"
-                    >
-                      {outlet.name}
-                    </a>
-                  ) : (
-                    <span
-                      key={outlet.name}
-                      className="font-heading text-sm text-off-white/50"
-                    >
-                      {outlet.name}
-                    </span>
-                  )
-                )}
+                {PRESS_FEATURES.map((outlet) => (
+                  <a
+                    key={outlet.name}
+                    href={outlet.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-heading text-sm text-off-white/50 transition-colors hover:text-electric-green"
+                  >
+                    {outlet.name}
+                  </a>
+                ))}
               </div>
             </div>
           </motion.div>
