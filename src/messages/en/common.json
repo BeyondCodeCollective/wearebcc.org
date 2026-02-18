@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "about": "About",
+    "initiatives": "Initiatives",
+    "partners": "Partners",
+    "resources": "Resources",
+    "getInvolved": "Get Involved",
+    "donate": "Donate"
+  },
+  "footer": {
+    "contact": "CONTACT",
+    "followUs": "FOLLOW US",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "copyright": "Beyond Code Collective. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfUse": "Terms of Use"
+  },
+  "newsletter": {
+    "label": "[ JOIN THE COMMUNITY ]",
+    "headline1": "STAY IN",
+    "headline2": "THE LOOP.",
+    "description": "Get updates on initiatives, events, and opportunities from Beyond Code Collective.",
+    "close": "CLOSE"
+  },
+  "form": {
+    "firstName": "First name",
+    "email": "Email address",
+    "phone": "Phone number (optional)",
+    "iAmA": "I am a...",
+    "iAmAOptional": "I am a... (optional)",
+    "joining": "Joining...",
+    "joinTheCommunity": "Join The Community \u2192",
+    "youreIn": "YOU'RE IN.",
+    "wellBeInTouch": "We'll be in touch. The future is all of ours.",
+    "somethingWentWrong": "Something went wrong. Please try again."
+  },
+  "segments": {
+    "student": "Student (7-17)",
+    "learner": "Learner (18+)",
+    "parent": "Parent / Family",
+    "careerChanger": "Career Changer",
+    "employer": "Employer",
+    "partnerDonor": "Partner / Donor"
+  }
+}

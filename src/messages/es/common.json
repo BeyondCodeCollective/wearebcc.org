@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "about": "Nosotros",
+    "initiatives": "Iniciativas",
+    "partners": "Socios",
+    "resources": "Recursos",
+    "getInvolved": "Participa",
+    "donate": "Donar"
+  },
+  "footer": {
+    "contact": "CONTACTO",
+    "followUs": "S\u00cdGUENOS",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "copyright": "Beyond Code Collective. Todos los derechos reservados.",
+    "privacyPolicy": "Pol\u00edtica de Privacidad",
+    "termsOfUse": "T\u00e9rminos de Uso"
+  },
+  "newsletter": {
+    "label": "[ \u00daNETE A LA COMUNIDAD ]",
+    "headline1": "MANTENTE",
+    "headline2": "INFORMADO.",
+    "description": "Recibe actualizaciones sobre iniciativas, eventos y oportunidades de Beyond Code Collective.",
+    "close": "CERRAR"
+  },
+  "form": {
+    "firstName": "Nombre",
+    "email": "Correo electr\u00f3nico",
+    "phone": "Tel\u00e9fono (opcional)",
+    "iAmA": "Soy un/una...",
+    "iAmAOptional": "Soy un/una... (opcional)",
+    "joining": "Uniendo...",
+    "joinTheCommunity": "\u00danete a la Comunidad \u2192",
+    "youreIn": "\u00a1EST\u00c1S DENTRO!",
+    "wellBeInTouch": "Estaremos en contacto. El futuro es de todos.",
+    "somethingWentWrong": "Algo sali\u00f3 mal. Por favor, int\u00e9ntalo de nuevo."
+  },
+  "segments": {
+    "student": "Estudiante (7-17)",
+    "learner": "Aprendiz (18+)",
+    "parent": "Padre / Familia",
+    "careerChanger": "Cambio de Carrera",
+    "employer": "Empleador",
+    "partnerDonor": "Socio / Donante"
+  }
+}

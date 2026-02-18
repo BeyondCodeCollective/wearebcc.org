@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { ShuffleText } from "./ui/shuffle-text";
 import { useQuiz } from "./quiz-modal";
 import { useNewsletter } from "./newsletter-modal";
@@ -17,7 +18,6 @@ const COMMUNITY_PHOTOS = [
   { src: "/images/community/community-07.jpg", alt: "Working on computer" },
 ];
 
-// Floating face tiles representing learners across the community
 const FLOATING_FACES = [
   { src: "/images/faces/face-01.jpg", alt: "Learner" },
   { src: "/images/faces/face-02.jpg", alt: "Learner" },
@@ -47,6 +47,14 @@ export function Hero() {
   const { openQuiz } = useQuiz();
   const { openNewsletter } = useNewsletter();
   const [activePhoto, setActivePhoto] = useState(0);
+  const t = useTranslations("hero");
+
+  const rotatingWords = [
+    t("rotatingWords.0"),
+    t("rotatingWords.1"),
+    t("rotatingWords.2"),
+    t("rotatingWords.3"),
+  ];
 
   return (
     <section className="relative min-h-screen bg-true-black px-6 pt-32 pb-16 lg:px-8 overflow-hidden">
@@ -85,7 +93,6 @@ export function Hero() {
           </motion.div>
         ))}
 
-        {/* Large subtle BCC bracket in background */}
         <motion.div
           className="absolute right-[-5%] top-[15%] font-heading text-[20rem] leading-none text-off-white/[0.03] select-none lg:text-[30rem]"
           animate={{ y: [0, -20, 0] }}
@@ -96,7 +103,6 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto max-w-7xl">
-        {/* Main headline + featured photo */}
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-end">
           <div>
             <motion.h1
@@ -105,10 +111,10 @@ export function Hero() {
               transition={{ duration: 0.8 }}
               className="font-heading text-[clamp(4rem,12vw,10rem)] leading-[0.85] text-off-white"
             >
-              <ShuffleText text="EVERYONE" delay={200} />
+              <ShuffleText text={t("headline1")} delay={200} />
               <br />
               <ShuffleText
-                texts={["BUILDS.", "GROWS.", "LEARNS.", "LEADS."]}
+                texts={rotatingWords}
                 delay={600}
                 cycleInterval={15000}
               />
@@ -124,13 +130,13 @@ export function Hero() {
                 className="text-electric-green font-mono text-sm tracking-wider"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
-                // BEYOND CODE COLLECTIVE //
+                {t("humanInTheLoop")}
               </p>
               <p
-                className="mt-1 text-grey-3 font-mono text-xs tracking-wider"
+                className="mt-1 text-off-white/60 font-mono text-xs tracking-wider"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
-                &lt; FOR THE FUTURE &gt;
+                {t("tagline")}
               </p>
             </motion.div>
 
@@ -140,9 +146,7 @@ export function Hero() {
               transition={{ delay: 1.4, duration: 0.6 }}
               className="mt-8 max-w-md text-base leading-relaxed text-grey-2 sm:text-lg"
             >
-              Beyond Code Collective provides human-powered resources for a
-              tech-driven world. Building intergenerational equity in the
-              technologies of today and tomorrow.
+              {t("description")}
             </motion.p>
 
             <motion.div
@@ -156,19 +160,18 @@ export function Hero() {
                 className="bg-electric-green px-8 py-4 font-mono text-sm tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80 sm:px-10"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
-                Get Started &rarr;
+                {t("getStarted")} &rarr;
               </button>
               <button
                 onClick={() => openNewsletter()}
                 className="border border-off-white/30 px-6 py-4 text-center font-mono text-sm tracking-wider uppercase text-off-white/70 transition-all hover:border-off-white hover:text-off-white sm:px-8"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
-                Join Newsletter
+                {t("joinNewsletter")}
               </button>
             </motion.div>
           </div>
 
-          {/* Featured photo — swaps when thumbnails are clicked */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -196,7 +199,6 @@ export function Hero() {
                 </motion.div>
               </AnimatePresence>
 
-              {/* Photo counter overlay */}
               <span
                 className="absolute bottom-4 left-4 bg-true-black/60 px-3 py-1 font-mono text-xs tracking-wider text-off-white backdrop-blur-sm"
                 style={{ fontFamily: "var(--font-mono)" }}
@@ -208,7 +210,6 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Community photo selector row */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -219,7 +220,7 @@ export function Hero() {
             className="mb-4 text-electric-green font-mono text-xs tracking-wider"
             style={{ fontFamily: "var(--font-mono)" }}
           >
-            OUR COMMUNITY
+            {t("ourCommunity")}
           </p>
           <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide sm:gap-3">
             {COMMUNITY_PHOTOS.map((photo, i) => (

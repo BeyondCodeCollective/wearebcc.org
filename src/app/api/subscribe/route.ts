@@ -13,7 +13,7 @@ function getResend() {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { email, segment, source } = body;
+    const { firstName, email, phone, segment, source } = body;
 
     if (!email || typeof email !== "string") {
       return NextResponse.json(
@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
       email: cleanEmail,
       audienceId: process.env.RESEND_AUDIENCE_ID!,
       unsubscribed: false,
-      firstName: "",
+      firstName: typeof firstName === "string" ? firstName.trim() : "",
       lastName: "",
     });
 

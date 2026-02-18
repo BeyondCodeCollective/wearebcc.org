@@ -2,15 +2,30 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { SectionLabel } from "./ui/section-label";
-import { AUDIENCE_SEGMENTS } from "@/lib/constants";
+
+const SEGMENT_KEYS = [
+  "student",
+  "learner",
+  "parent",
+  "careerChanger",
+  "employer",
+  "partnerDonor",
+] as const;
 
 export function GetInvolved() {
+  const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [segment, setSegment] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  const t = useTranslations("getInvolved");
+  const tf = useTranslations("form");
+  const ts = useTranslations("segments");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,7 +39,9 @@ export function GetInvolved() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          firstName: firstName.trim(),
           email: email.trim(),
+          phone: phone.trim(),
           segment,
           source: "get-involved",
         }),
@@ -39,7 +56,7 @@ export function GetInvolved() {
       setSubmitted(true);
     } catch (err) {
       setError(
-        err instanceof Error ? err.message : "Something went wrong. Please try again."
+        err instanceof Error ? err.message : tf("somethingWentWrong")
       );
     } finally {
       setLoading(false);
@@ -60,9 +77,9 @@ export function GetInvolved() {
             transition={{ duration: 0.6 }}
             className="font-heading text-[clamp(3rem,8vw,7rem)] leading-[0.85] text-true-black"
           >
-            BUILD YOUR
+            {t("headline1")}
             <br />
-            POSSIBLE.
+            {t("headline2")}
           </motion.h2>
           <SectionLabel number="06" className="text-true-black/30 mt-2" />
         </div>
@@ -77,20 +94,37 @@ export function GetInvolved() {
           {submitted ? (
             <div className="bg-true-black p-8">
               <p className="font-heading text-2xl text-electric-green">
-                YOU&apos;RE IN.
+                {tf("youreIn")}
               </p>
               <p className="mt-2 text-off-white">
-                We&apos;ll be in touch. The future is all of ours.
+                {tf("wellBeInTouch")}
               </p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
               <input
+                type="text"
+                required
+                placeholder={tf("firstName")}
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                disabled={loading}
+                className="w-full border-2 border-true-black bg-transparent px-4 py-3 text-true-black placeholder:text-true-black/40 focus:outline-none focus:ring-2 focus:ring-true-black disabled:opacity-50 sm:px-6 sm:py-4"
+              />
+              <input
                 type="email"
                 required
-                placeholder="Email address"
+                placeholder={tf("email")}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                disabled={loading}
+                className="w-full border-2 border-true-black bg-transparent px-4 py-3 text-true-black placeholder:text-true-black/40 focus:outline-none focus:ring-2 focus:ring-true-black disabled:opacity-50 sm:px-6 sm:py-4"
+              />
+              <input
+                type="tel"
+                placeholder={tf("phone")}
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
                 disabled={loading}
                 className="w-full border-2 border-true-black bg-transparent px-4 py-3 text-true-black placeholder:text-true-black/40 focus:outline-none focus:ring-2 focus:ring-true-black disabled:opacity-50 sm:px-6 sm:py-4"
               />
@@ -102,11 +136,11 @@ export function GetInvolved() {
                 className="w-full border-2 border-true-black bg-transparent px-4 py-3 text-true-black focus:outline-none focus:ring-2 focus:ring-true-black appearance-none disabled:opacity-50 sm:px-6 sm:py-4"
               >
                 <option value="" disabled>
-                  I am a...
+                  {tf("iAmA")}
                 </option>
-                {AUDIENCE_SEGMENTS.map((seg) => (
-                  <option key={seg} value={seg}>
-                    {seg}
+                {SEGMENT_KEYS.map((key) => (
+                  <option key={key} value={ts(key)}>
+                    {ts(key)}
                   </option>
                 ))}
               </select>
@@ -121,7 +155,7 @@ export function GetInvolved() {
                 className="w-full bg-true-black px-6 py-3 font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:bg-charcoal disabled:opacity-50 disabled:cursor-not-allowed sm:px-8 sm:py-4"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
-                {loading ? "Joining..." : "Join The Community →"}
+                {loading ? tf("joining") : tf("joinTheCommunity")}
               </button>
             </form>
           )}

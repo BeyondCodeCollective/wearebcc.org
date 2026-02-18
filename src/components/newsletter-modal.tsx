@@ -9,7 +9,7 @@ import {
   type ReactNode,
 } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { AUDIENCE_SEGMENTS } from "@/lib/constants";
+import { useTranslations } from "next-intl";
 
 interface NewsletterContextType {
   openNewsletter: () => void;
@@ -25,13 +25,28 @@ export function useNewsletter() {
   return useContext(NewsletterContext);
 }
 
+const SEGMENT_KEYS = [
+  "student",
+  "learner",
+  "parent",
+  "careerChanger",
+  "employer",
+  "partnerDonor",
+] as const;
+
 export function NewsletterProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [segment, setSegment] = useState("");
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+
+  const tn = useTranslations("newsletter");
+  const tf = useTranslations("form");
+  const ts = useTranslations("segments");
 
   const openNewsletter = useCallback(() => {
     setIsOpen(true);
@@ -41,16 +56,16 @@ export function NewsletterProvider({ children }: { children: ReactNode }) {
   const closeNewsletter = useCallback(() => {
     setIsOpen(false);
     document.body.style.overflow = "";
-    // Reset form after close animation
     setTimeout(() => {
+      setFirstName("");
       setEmail("");
+      setPhone("");
       setSegment("");
       setSubmitted(false);
       setError("");
     }, 300);
   }, []);
 
-  // Auto-close after success
   useEffect(() => {
     if (submitted) {
       const timer = setTimeout(closeNewsletter, 2000);
@@ -68,7 +83,9 @@ export function NewsletterProvider({ children }: { children: ReactNode }) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          firstName: firstName.trim(),
           email: email.trim(),
+          phone: phone.trim(),
           segment,
           source: "newsletter-modal",
         }),
@@ -83,7 +100,7 @@ export function NewsletterProvider({ children }: { children: ReactNode }) {
       setSubmitted(true);
     } catch (err) {
       setError(
-        err instanceof Error ? err.message : "Something went wrong. Try again."
+        err instanceof Error ? err.message : tf("somethingWentWrong")
       );
     } finally {
       setLoading(false);
@@ -103,13 +120,12 @@ export function NewsletterProvider({ children }: { children: ReactNode }) {
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-[90] flex items-center justify-center bg-true-black/95 px-6"
           >
-            {/* Close button */}
             <button
               onClick={closeNewsletter}
               className="absolute top-4 right-4 flex items-center gap-2 font-mono text-xs tracking-wider text-off-white/60 transition-colors hover:text-off-white lg:top-6 lg:right-6"
               style={{ fontFamily: "var(--font-mono)" }}
             >
-              CLOSE
+              {tn("close")}
               <svg
                 width="16"
                 height="16"
@@ -125,7 +141,6 @@ export function NewsletterProvider({ children }: { children: ReactNode }) {
               </svg>
             </button>
 
-            {/* Card */}
             <motion.div
               initial={{ opacity: 0, y: 30, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -136,10 +151,10 @@ export function NewsletterProvider({ children }: { children: ReactNode }) {
               {submitted ? (
                 <div className="bg-electric-green p-8 text-center">
                   <p className="font-heading text-3xl text-true-black">
-                    YOU&apos;RE IN.
+                    {tf("youreIn")}
                   </p>
                   <p className="mt-2 text-true-black/70">
-                    We&apos;ll be in touch. The future is all of ours.
+                    {tf("wellBeInTouch")}
                   </p>
                 </div>
               ) : (
@@ -148,16 +163,15 @@ export function NewsletterProvider({ children }: { children: ReactNode }) {
                     className="mb-6 font-mono text-xs tracking-wider text-electric-green"
                     style={{ fontFamily: "var(--font-mono)" }}
                   >
-                    [ JOIN THE COMMUNITY ]
+                    {tn("label")}
                   </p>
                   <h2 className="font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.85] text-off-white">
-                    STAY IN
+                    {tn("headline1")}
                     <br />
-                    THE LOOP.
+                    {tn("headline2")}
                   </h2>
-                  <p className="mt-4 text-sm leading-relaxed text-grey-3 lg:text-base">
-                    Get updates on initiatives, events, and opportunities from
-                    Beyond Code Collective.
+                  <p className="mt-4 text-sm leading-relaxed text-off-white/60 lg:text-base">
+                    {tn("description")}
                   </p>
 
                   <form
@@ -165,11 +179,28 @@ export function NewsletterProvider({ children }: { children: ReactNode }) {
                     className="mt-8 flex flex-col gap-3"
                   >
                     <input
+                      type="text"
+                      required
+                      placeholder={tf("firstName")}
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      disabled={loading}
+                      className="w-full border border-off-white/20 bg-off-white/5 px-4 py-3 text-off-white placeholder:text-off-white/30 focus:border-electric-green focus:outline-none disabled:opacity-50"
+                    />
+                    <input
                       type="email"
                       required
-                      placeholder="Email address"
+                      placeholder={tf("email")}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
+                      disabled={loading}
+                      className="w-full border border-off-white/20 bg-off-white/5 px-4 py-3 text-off-white placeholder:text-off-white/30 focus:border-electric-green focus:outline-none disabled:opacity-50"
+                    />
+                    <input
+                      type="tel"
+                      placeholder={tf("phone")}
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
                       disabled={loading}
                       className="w-full border border-off-white/20 bg-off-white/5 px-4 py-3 text-off-white placeholder:text-off-white/30 focus:border-electric-green focus:outline-none disabled:opacity-50"
                     />
@@ -180,11 +211,11 @@ export function NewsletterProvider({ children }: { children: ReactNode }) {
                       className="w-full border border-off-white/20 bg-off-white/5 px-4 py-3 text-off-white focus:border-electric-green focus:outline-none appearance-none disabled:opacity-50"
                     >
                       <option value="" className="bg-true-black">
-                        I am a... (optional)
+                        {tf("iAmAOptional")}
                       </option>
-                      {AUDIENCE_SEGMENTS.map((seg) => (
-                        <option key={seg} value={seg} className="bg-true-black">
-                          {seg}
+                      {SEGMENT_KEYS.map((key) => (
+                        <option key={key} value={ts(key)} className="bg-true-black">
+                          {ts(key)}
                         </option>
                       ))}
                     </select>
@@ -197,7 +228,7 @@ export function NewsletterProvider({ children }: { children: ReactNode }) {
                       className="w-full bg-electric-green px-6 py-3 font-mono text-sm tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80 disabled:opacity-50 disabled:cursor-not-allowed"
                       style={{ fontFamily: "var(--font-mono)" }}
                     >
-                      {loading ? "Joining..." : "Join The Community \u2192"}
+                      {loading ? tf("joining") : tf("joinTheCommunity")}
                     </button>
                   </form>
                 </>

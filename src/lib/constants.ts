@@ -3,7 +3,7 @@ export const SITE = {
   shortName: "Beyond Code",
   tagline: "For The Future",
   url: "https://www.wearebcc.org",
-  donateUrl: "https://donorbox.org/beyond-code-collective",
+  donateUrl: "https://donorbox.org/beyondcodecollective",
 } as const;
 
 export const NAV_LINKS = [
@@ -51,22 +51,17 @@ export const INITIATIVES = [
     description:
       "A free video coding academy with step-by-step tutorials, making tech education accessible to everyone through digital how-to learning.",
     contact: "marketing@wearebcc.org",
-  },
-  {
-    title: "After The Game",
-    description:
-      "A cohort-based workforce initiative for transitioning and recently retired professional athletes, with structured support for designing a second career in tech.",
-    contact: "programs@wearebcc.org",
+    learnMoreUrl: "https://www.youtube.com/watch?v=VroOSToSNx8",
   },
 ] as const;
 
-export const PRESS_LOGOS = [
-  "Forbes",
-  "CNBC",
-  "Essence",
-  "Fast Company",
-  "Mashable",
-  "Black Enterprise",
+export const PRESS_FEATURES = [
+  { name: "Forbes", href: "https://www.forbes.com/sites/pauleannareid/2025/06/18/how-cristina-mancini-is-rewriting-the-future-of-tech-and-who-gets-to-code-it/" },
+  { name: "CNBC", href: "https://www.cnbc.com/2025/10/24/ceo-cristina-mancini-the-no-1-trait-workers-need-for-success.html" },
+  { name: "Essence", href: "https://www.essence.com/news/money-career/the-future-of-tech-depends-on-whos-coding-it/" },
+  { name: "Fast Company", href: "https://www.fastcompany.com/user/cristinamancini" },
+  { name: "Mashable", href: "https://mashable.com/article/black-girls-who-code-representation" },
+  { name: "Black Enterprise", href: "https://www.blackenterprise.com/black-girls-code-ceo-sponsor-mentor-tech/" },
 ] as const;
 
 export const PARTNERS = [
@@ -88,7 +83,6 @@ export const AUDIENCE_SEGMENTS = [
 ] as const;
 
 export const CONTACT = {
-  general: "mica@wearebcc.org",
   marketing: "marketing@wearebcc.org",
   partnerships: "partnership@wearebcc.org",
 } as const;
@@ -112,15 +106,9 @@ export const RESOURCES = [
     title: "Brand Flipbook",
     description:
       "Our visual identity, brand story, and the design language behind Beyond Code Collective.",
-    type: "PDF" as const,
-    href: "/resources/bcc-brand-flipbook.pdf",
-  },
-  {
-    title: "After The Game Brief",
-    description:
-      "A cohort-based initiative helping professional athletes transition into tech careers.",
-    type: "PDF" as const,
-    href: "/resources/after-the-game-brief.pdf",
+    type: "LINK" as const,
+    href: "https://www.flipsnack.com/5AA5E76F8D6/beyondcode",
+    external: true as const,
   },
 ] as const;
 

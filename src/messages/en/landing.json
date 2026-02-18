@@ -1,0 +1,183 @@
+{
+  "hero": {
+    "headline1": "EVERYONE",
+    "rotatingWords": ["BUILDS.", "GROWS.", "LEARNS.", "LEADS."],
+    "humanInTheLoop": "// HUMAN IN THE LOOP //",
+    "tagline": "< BEYOND CODE COLLECTIVE >",
+    "description": "Beyond Code Collective provides human-powered resources for a tech-driven world. Building intergenerational equity in the technologies of today and tomorrow.",
+    "getStarted": "Get Started",
+    "joinNewsletter": "Join Newsletter",
+    "ourCommunity": "OUR COMMUNITY"
+  },
+  "about": {
+    "headline1": "BEYOND CODE",
+    "headline2": "COLLECTIVE",
+    "description": "Beyond Code Collective bridges the gap between inspiration, training, and employment in tech, connecting learners to educational content, opportunities to develop cutting-edge technologies, and avenues to launch careers.",
+    "pillars": {
+      "intergenerationalEquity": {
+        "title": "Intergenerational Equity",
+        "description": "An ecosystem where all generations participate; not a pipeline that serves one age group, but a model that meets learners wherever they are in life."
+      },
+      "allTechnologies": {
+        "title": "All Technologies",
+        "description": "From digital fluency and data literacy to automation, cybersecurity, and responsible AI, we prepare learners for the full range of tools they'll encounter."
+      },
+      "todayAndTomorrow": {
+        "title": "Today & Tomorrow",
+        "description": "Programming that keeps communities relevant now and ready for what's next, as the workforce changes in real time."
+      }
+    }
+  },
+  "audience": {
+    "label": "Who We Serve",
+    "headline1": "EVERYONE HAS A REASON",
+    "headline2": "TO BE HERE.",
+    "personas": {
+      "forTheFuture": {
+        "title": "For The Future",
+        "description": "Building skills and knowledge to develop interests and inform future life decisions.",
+        "quote": "I want to learn a new skill and build a career path in a field or industry that helps me prepare for the future.",
+        "segments": ["7-17 Learners", "18+ Learners"]
+      },
+      "understandingOurWorld": {
+        "title": "Understanding Our World",
+        "description": "Improving knowledge to make sense of an ever-changing world.",
+        "quote": "I want to be informed so I can better understand how technology will impact me and the ones I care about.",
+        "segments": ["Parents & Family", "Older Adults"]
+      },
+      "changingDirection": {
+        "title": "Changing Direction",
+        "description": "Learning specific skills to change or upgrade careers, or improve prospects.",
+        "quote": "I want to learn the skills that are most desired by employers so I can develop a clear pathway into an evolved or new technology role.",
+        "segments": ["Career Upgraders", "Career Pivoters", "18+ Learners"]
+      },
+      "makingADifference": {
+        "title": "Making A Difference",
+        "description": "Contributing to a better future via funds, partnerships, or otherwise.",
+        "quote": "I want to help fuel the next generation of technologists by offering the resources I or my organization have at our disposal.",
+        "segments": ["Partners & Donors", "Community Leaders", "Press"]
+      }
+    }
+  },
+  "stats": {
+    "label": "More Opportunity. More Impact.",
+    "items": [
+      {
+        "value": "77",
+        "suffix": "%",
+        "label": "Of Employers Intend to Upskill Teams for Emerging Tech"
+      },
+      {
+        "value": "3",
+        "suffix": "+",
+        "label": "Initiatives Building Pathways to Quality Careers"
+      },
+      {
+        "value": "ALL",
+        "suffix": "",
+        "label": "Ages and Backgrounds Welcome — From K-12 to Career Changers"
+      },
+      {
+        "value": "1",
+        "suffix": "st",
+        "label": "Of Its Kind Intergenerational Tech Ecosystem"
+      }
+    ]
+  },
+  "initiatives": {
+    "headline1": "INFINITE",
+    "headline2": "POSSIBILITIES",
+    "subheading": "[ POWERED BY THE CODE ]",
+    "description": "Beyond Code Collective is an integrated ecosystem creating sustainable pathways to quality jobs while strengthening the digital capacity of mission-driven organizations.",
+    "learnMore": "Learn More",
+    "takeCareerQuiz": "Take the Career Quiz",
+    "items": {
+      "forge": {
+        "title": "The Forge",
+        "description": "Place-based hubs blending tech education, workforce development, and community engagement for learners of all ages — from K-12 to adults looking to upskill or pivot into tech careers.",
+        "tags": ["All Ages", "In-Person + Online", "K-12 to Adult"]
+      },
+      "catalysts": {
+        "title": "Beyond Code Catalysts",
+        "description": "Career pathways for 18+ learners combining accessible training, hands-on projects, and career readiness support. No traditional tech background required.",
+        "tags": ["18+", "Career Pathways", "Hands-On"]
+      },
+      "codeAlong": {
+        "title": "Code Along",
+        "description": "A free video coding academy with step-by-step tutorials, making tech education accessible to everyone through digital how-to learning.",
+        "tags": ["All Ages", "Free", "Video Tutorials"]
+      }
+    }
+  },
+  "testimonials": {
+    "headline": "SUCCESS STORIES",
+    "subheading": "WHY LEARNERS CHOOSE BEYOND CODE",
+    "prevLabel": "Previous testimonial",
+    "nextLabel": "Next testimonial",
+    "items": [
+      {
+        "quote": "Beyond Code gave me the confidence to transition from teaching into tech. The community made all the difference — I never felt like I was starting over alone.",
+        "name": "Angela C.",
+        "role": "Career Changer",
+        "location": "Atlanta, GA"
+      },
+      {
+        "quote": "As a parent, I wanted my kids to have access to real tech skills — not just games. Beyond Code's intergenerational approach means we learn together as a family.",
+        "name": "Marcus T.",
+        "role": "Parent & Learner",
+        "location": "Miami, FL"
+      },
+      {
+        "quote": "The Forge hub in my neighborhood changed everything. I went from scrolling job boards to building websites in three months. Now I freelance full-time.",
+        "name": "Priya K.",
+        "role": "Forge Graduate",
+        "location": "Chicago, IL"
+      }
+    ]
+  },
+  "founder": {
+    "label": "Meet The Founder",
+    "title": "Founder & CEO",
+    "bio": "Cristina Mancini is the visionary Founder & CEO of Beyond Code Collective (BCC), a new national ecosystem built to close the AI literacy gap and unlock digital dignity for communities long excluded from the future of work. She created BCC to answer a transformative question: What if every community had permanent, culturally grounded access to the skills and pathways that define the next decade of innovation and the future of work?",
+    "quote": "\"I want people to know that tech is for everyone, and it doesn't matter how old you are or where you are in life. This is an incredible moment in time where you can opt in and affect change at great scale, so there's no wrong answer to how you start. Just start.\"",
+    "quoteAttribution": "Cristina Mancini For Forbes",
+    "asSeenOn": "AS SEEN ON"
+  },
+  "resources": {
+    "headline1": "RESOURCES &",
+    "headline2": "MEDIA",
+    "subheading": "[ EXPLORE, DOWNLOAD, WATCH ]",
+    "description": "Everything you need to understand our mission, share with your network, or bring Beyond Code to your community.",
+    "featuredVideo": "FEATURED VIDEO",
+    "downloads": "DOWNLOADS",
+    "items": {
+      "onePager": {
+        "title": "BCC One-Pager",
+        "description": "An overview of Beyond Code Collective — mission, initiatives, and how to get involved."
+      },
+      "forgeOverview": {
+        "title": "The Forge Overview",
+        "description": "Details on our place-based tech hubs blending education, workforce development, and community engagement."
+      },
+      "brandFlipbook": {
+        "title": "Brand Flipbook",
+        "description": "Our visual identity, brand story, and the design language behind Beyond Code Collective."
+      }
+    }
+  },
+  "ctaBridge": {
+    "label": "[ PARTNERSHIPS ]",
+    "headline1": "THE FUTURE IS",
+    "headline2": "ALL OF OURS.",
+    "description": "We partner with industry leaders to create pathways into tech. Together, we're building a workforce that reflects the world it serves.",
+    "logoLabel": "Where Tech Careers Are Being Built",
+    "partnerWithUs": "Partner With Us"
+  },
+  "getInvolved": {
+    "headline1": "BUILD YOUR",
+    "headline2": "POSSIBLE."
+  },
+  "trustBar": {
+    "label": "Where Tech Careers Are Being Built"
+  }
+}

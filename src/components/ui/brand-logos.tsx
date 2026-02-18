@@ -1,13 +1,11 @@
-// Employer logo data for trust bar
-// Maps company names to Simple Icons slugs
+// Partner logo data for partnerships section
+// Maps partner names to logo file paths
 
 export const EMPLOYER_LOGOS = [
-  { name: "Google", slug: "google" },
-  { name: "Microsoft", slug: "microsoft" },
-  { name: "Amazon", slug: "amazon" },
-  { name: "Meta", slug: "meta" },
-  { name: "Apple", slug: "apple" },
-  { name: "Salesforce", slug: "salesforce" },
-  { name: "IBM", slug: "ibm" },
-  { name: "Adobe", slug: "adobe" },
+  { name: "IF/THEN", src: "/images/logos/ifthen.svg" },
+  { name: "NextEra Energy", src: "/images/logos/nextera-energy.png", invert: true },
+  { name: "Zapier", src: "/images/logos/zapier.svg" },
+  { name: "ATDC Georgia Tech", src: "/images/logos/atdc.webp", invert: true },
+  { name: "Spelman College", src: "/images/logos/spelman.png" },
+  { name: "Serpentine", src: "/images/logos/serpentine.svg" },
 ];

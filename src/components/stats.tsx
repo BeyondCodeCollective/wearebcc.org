@@ -2,30 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
-
-const STATS = [
-  {
-    value: "77",
-    suffix: "%",
-    label: "Of Employers Intend to Upskill Teams for Emerging Tech",
-  },
-  {
-    value: "3",
-    prefix: "",
-    suffix: "+",
-    label: "Initiatives Building Pathways to Quality Careers",
-  },
-  {
-    value: "ALL",
-    suffix: "",
-    label: "Ages and Backgrounds Welcome — From K-12 to Career Changers",
-  },
-  {
-    value: "1",
-    suffix: "st",
-    label: "Of Its Kind Intergenerational Tech Ecosystem",
-  },
-];
+import { useTranslations } from "next-intl";
 
 function AnimatedNumber({
   value,
@@ -43,7 +20,6 @@ function AnimatedNumber({
   useEffect(() => {
     if (!isInView) return;
 
-    // If value is not a pure number, just show it
     const numericValue = parseInt(value);
     if (isNaN(numericValue)) {
       setDisplay(value);
@@ -80,6 +56,19 @@ function AnimatedNumber({
 }
 
 export function Stats() {
+  const t = useTranslations("stats");
+
+  const items: { value: string; suffix: string; prefix?: string; label: string }[] = [];
+  let idx = 0;
+  while (t.has(`items.${idx}.value`)) {
+    items.push({
+      value: t(`items.${idx}.value`),
+      suffix: t(`items.${idx}.suffix`),
+      label: t(`items.${idx}.label`),
+    });
+    idx++;
+  }
+
   return (
     <section className="bg-true-black px-6 py-20 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-7xl">
@@ -90,13 +79,13 @@ export function Stats() {
           className="font-mono text-xs tracking-wider uppercase text-electric-green"
           style={{ fontFamily: "var(--font-mono)" }}
         >
-          More Opportunity. More Impact.
+          {t("label")}
         </motion.p>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {STATS.map((stat, i) => (
+          {items.map((stat, i) => (
             <motion.div
-              key={stat.label}
+              key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -110,7 +99,7 @@ export function Stats() {
                   suffix={stat.suffix}
                 />
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-grey-3">
+              <p className="mt-3 text-sm leading-relaxed text-off-white/60">
                 {stat.label}
               </p>
             </motion.div>

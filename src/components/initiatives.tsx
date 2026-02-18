@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { SectionLabel } from "./ui/section-label";
 import { INITIATIVES } from "@/lib/constants";
 import { useQuiz } from "./quiz-modal";
@@ -10,18 +11,13 @@ const INITIATIVE_IMAGES = [
   "/images/initiatives/forge.jpg",
   "/images/initiatives/catalysts.jpg",
   "/images/initiatives/code-along.jpg",
-  "/images/initiatives/after-the-game.jpg",
 ];
 
-const INITIATIVE_TAGS = [
-  ["All Ages", "In-Person + Online", "K-12 to Adult"],
-  ["18+", "Career Pathways", "Hands-On"],
-  ["All Ages", "Free", "Video Tutorials"],
-  ["Athletes", "Cohort-Based", "Career Transition"],
-];
+const INITIATIVE_KEYS = ["forge", "catalysts", "codeAlong"] as const;
 
 export function Initiatives() {
   const { openQuiz } = useQuiz();
+  const t = useTranslations("initiatives");
 
   return (
     <section
@@ -37,18 +33,18 @@ export function Initiatives() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="font-heading text-[clamp(2.5rem,6vw,5rem)] leading-[0.85] text-electric-green">
-              INFINITE
+              {t("headline1")}
               <br />
-              POSSIBILITIES
+              {t("headline2")}
             </h2>
             <p
-              className="mt-4 font-mono text-sm tracking-wider text-off-white/70"
+              className="mt-4 font-mono text-sm tracking-wider text-off-white/90"
               style={{ fontFamily: "var(--font-mono)" }}
             >
-              [ POWERED BY THE CODE ]
+              {t("subheading")}
             </p>
           </motion.div>
-          <SectionLabel number="02" className="text-off-white/50 mt-2" />
+          <SectionLabel number="02" className="text-off-white/70 mt-2" />
         </div>
 
         <motion.p
@@ -56,20 +52,27 @@ export function Initiatives() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="mt-8 max-w-2xl text-base leading-relaxed text-off-white/80 sm:text-lg"
+          className="mt-8 max-w-2xl text-base leading-relaxed text-off-white sm:text-lg"
         >
-          Beyond Code Collective is an integrated ecosystem creating sustainable
-          pathways to quality jobs while strengthening the digital capacity of
-          mission-driven organizations.
+          {t("description")}
         </motion.p>
 
-        {/* ALX-style alternating initiative sections */}
         <div className="mt-16 space-y-16 lg:space-y-24">
-          {INITIATIVES.map((initiative, i) => {
+          {INITIATIVE_KEYS.map((key, i) => {
+            const initiative = INITIATIVES[i];
             const isReversed = i % 2 !== 0;
+
+            // Read tags array from translations
+            const tags: string[] = [];
+            let idx = 0;
+            while (t.has(`items.${key}.tags.${idx}`)) {
+              tags.push(t(`items.${key}.tags.${idx}`));
+              idx++;
+            }
+
             return (
               <motion.div
-                key={initiative.title}
+                key={key}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
@@ -78,7 +81,6 @@ export function Initiatives() {
                   isReversed ? "lg:direction-rtl" : ""
                 }`}
               >
-                {/* Image */}
                 <div
                   className={`relative aspect-[4/3] overflow-hidden ${
                     isReversed ? "lg:order-2" : ""
@@ -86,12 +88,11 @@ export function Initiatives() {
                 >
                   <Image
                     src={INITIATIVE_IMAGES[i]}
-                    alt={initiative.title}
+                    alt={t(`items.${key}.title`)}
                     fill
                     className="object-cover"
                     sizes="(min-width: 1024px) 50vw, 100vw"
                   />
-                  {/* Numbered overlay */}
                   <span
                     className="absolute top-4 left-4 bg-electric-green px-3 py-1 font-mono text-xs tracking-wider text-true-black"
                     style={{ fontFamily: "var(--font-mono)" }}
@@ -100,21 +101,19 @@ export function Initiatives() {
                   </span>
                 </div>
 
-                {/* Content */}
                 <div className={isReversed ? "lg:order-1" : ""}>
                   <h3 className="font-heading text-[clamp(1.75rem,4vw,3rem)] leading-[0.9] text-off-white">
-                    {initiative.title}
+                    {t(`items.${key}.title`)}
                   </h3>
-                  <p className="mt-4 text-base leading-relaxed text-off-white/70 lg:text-lg">
-                    {initiative.description}
+                  <p className="mt-4 text-base leading-relaxed text-off-white/90 lg:text-lg">
+                    {t(`items.${key}.description`)}
                   </p>
 
-                  {/* Tags */}
                   <div className="mt-6 flex flex-wrap gap-2">
-                    {INITIATIVE_TAGS[i].map((tag) => (
+                    {tags.map((tag) => (
                       <span
                         key={tag}
-                        className="border border-off-white/30 px-3 py-1 text-xs text-off-white/60"
+                        className="border border-off-white/40 px-3 py-1 text-xs text-off-white/80"
                         style={{ fontFamily: "var(--font-mono)" }}
                       >
                         {tag}
@@ -124,11 +123,12 @@ export function Initiatives() {
 
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                     <a
-                      href={`mailto:${initiative.contact}`}
+                      href={"learnMoreUrl" in initiative && initiative.learnMoreUrl ? initiative.learnMoreUrl : `mailto:${initiative.contact}`}
+                      {...("learnMoreUrl" in initiative && initiative.learnMoreUrl ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                       className="inline-flex items-center justify-center gap-2 bg-electric-green px-6 py-3 font-mono text-xs tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80"
                       style={{ fontFamily: "var(--font-mono)" }}
                     >
-                      Learn More
+                      {t("learnMore")}
                       <span aria-hidden="true">&rarr;</span>
                     </a>
                     {"quizUrl" in initiative && initiative.quizUrl && (
@@ -137,7 +137,7 @@ export function Initiatives() {
                         className="inline-flex items-center justify-center gap-2 border-2 border-electric-green px-6 py-3 font-mono text-xs tracking-wider uppercase text-electric-green transition-colors hover:bg-electric-green hover:text-true-black"
                         style={{ fontFamily: "var(--font-mono)" }}
                       >
-                        Take the Career Quiz
+                        {t("takeCareerQuiz")}
                         <span aria-hidden="true">&rarr;</span>
                       </button>
                     )}

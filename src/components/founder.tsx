@@ -2,19 +2,13 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { SectionLabel } from "./ui/section-label";
-import { FOUNDER } from "@/lib/constants";
-
-const PRESS_OUTLETS = [
-  "Forbes",
-  "CNBC",
-  "Essence",
-  "Fast Company",
-  "Mashable",
-  "Black Enterprise",
-];
+import { PRESS_FEATURES } from "@/lib/constants";
 
 export function Founder() {
+  const t = useTranslations("founder");
+
   return (
     <section
       id="founder"
@@ -29,13 +23,12 @@ export function Founder() {
             className="font-mono text-xs tracking-wider uppercase text-electric-green"
             style={{ fontFamily: "var(--font-mono)" }}
           >
-            Meet The Founder
+            {t("label")}
           </motion.p>
-          <SectionLabel number="04" className="text-off-white/30" />
+          <SectionLabel number="04" className="text-off-white/50" />
         </div>
 
         <div className="mt-8 grid gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Photo */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -52,7 +45,6 @@ export function Founder() {
             />
           </motion.div>
 
-          {/* Bio */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -61,49 +53,59 @@ export function Founder() {
             className="flex flex-col justify-center"
           >
             <h2 className="font-heading text-[clamp(2rem,5vw,4rem)] leading-[0.9] text-off-white">
-              {FOUNDER.name}
+              Cristina Mancini
             </h2>
             <p
-              className="mt-2 font-mono text-xs tracking-wider text-grey-3"
+              className="mt-2 font-mono text-xs tracking-wider text-off-white/60"
               style={{ fontFamily: "var(--font-mono)" }}
             >
-              {FOUNDER.title}
+              {t("title")}
             </p>
 
             <p className="mt-6 text-sm leading-relaxed text-grey-2 sm:mt-8 sm:text-base lg:text-lg">
-              {FOUNDER.bio}
+              {t("bio")}
             </p>
 
-            {/* Quote */}
             <blockquote className="mt-6 border-l-4 border-electric-green pl-4 sm:mt-8 sm:pl-6">
               <p className="text-sm italic leading-relaxed text-off-white sm:text-base lg:text-lg">
-                {FOUNDER.quote}
+                {t("quote")}
               </p>
               <cite
                 className="mt-3 block not-italic font-mono text-xs tracking-wider text-electric-green"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
-                — {FOUNDER.quoteAttribution}
+                — {t("quoteAttribution")}
               </cite>
             </blockquote>
 
-            {/* Press logos */}
             <div className="mt-8 sm:mt-12">
               <p
-                className="font-mono text-xs tracking-wider text-grey-3"
+                className="font-mono text-xs tracking-wider text-off-white/60"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
-                AS SEEN ON
+                {t("asSeenOn")}
               </p>
               <div className="mt-3 flex flex-wrap items-center gap-4 sm:mt-4 sm:gap-6">
-                {PRESS_OUTLETS.map((outlet) => (
-                  <span
-                    key={outlet}
-                    className="font-heading text-sm text-grey-3/50 transition-colors hover:text-off-white"
-                  >
-                    {outlet}
-                  </span>
-                ))}
+                {PRESS_FEATURES.map((outlet) =>
+                  outlet.href ? (
+                    <a
+                      key={outlet.name}
+                      href={outlet.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-heading text-sm text-off-white/50 transition-colors hover:text-electric-green"
+                    >
+                      {outlet.name}
+                    </a>
+                  ) : (
+                    <span
+                      key={outlet.name}
+                      className="font-heading text-sm text-off-white/50"
+                    >
+                      {outlet.name}
+                    </span>
+                  )
+                )}
               </div>
             </div>
           </motion.div>
