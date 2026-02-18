@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/navigation";
+import { GlobeSimple } from "@phosphor-icons/react";
 import { SITE } from "@/lib/constants";
 import { Logo } from "./ui/logo";
 
@@ -88,22 +89,44 @@ export function Nav() {
 
             {/* Language toggle */}
             <div
-              className="flex items-center gap-1 font-mono text-xs tracking-wider"
+              className={`flex items-center gap-0 border font-mono text-xs tracking-wider ${
+                scrolled ? "border-true-black/15" : "border-off-white/20"
+              }`}
               style={{ fontFamily: "var(--font-mono)" }}
+              role="radiogroup"
+              aria-label="Language"
             >
               <button
                 onClick={() => switchLocale("en")}
-                className={`transition-colors ${locale === "en" ? toggleActiveColor : toggleInactiveColor}`}
+                role="radio"
+                aria-checked={locale === "en"}
+                className={`relative px-3 py-1.5 transition-all ${
+                  locale === "en"
+                    ? "bg-electric-green text-true-black font-semibold"
+                    : scrolled
+                    ? "text-true-black/40 hover:text-true-black/70"
+                    : "text-off-white/40 hover:text-off-white/70"
+                }`}
               >
                 EN
               </button>
-              <span className={scrolled ? "text-true-black/20" : "text-off-white/20"}>|</span>
               <button
                 onClick={() => switchLocale("es")}
-                className={`transition-colors ${locale === "es" ? toggleActiveColor : toggleInactiveColor}`}
+                role="radio"
+                aria-checked={locale === "es"}
+                className={`relative px-3 py-1.5 transition-all ${
+                  locale === "es"
+                    ? "bg-electric-green text-true-black font-semibold"
+                    : scrolled
+                    ? "text-true-black/40 hover:text-true-black/70"
+                    : "text-off-white/40 hover:text-off-white/70"
+                }`}
               >
                 ES
               </button>
+              <div className={`px-2 py-1.5 ${scrolled ? "text-true-black/30" : "text-off-white/30"}`}>
+                <GlobeSimple size={14} weight="bold" />
+              </div>
             </div>
 
             <a
@@ -164,28 +187,44 @@ export function Nav() {
 
             {/* Mobile language toggle */}
             <div
-              className="flex items-center gap-3 font-mono text-sm tracking-wider"
+              className="flex items-center gap-0 border border-off-white/20 font-mono text-sm tracking-wider"
               style={{ fontFamily: "var(--font-mono)" }}
+              role="radiogroup"
+              aria-label="Language"
             >
               <button
                 onClick={() => {
                   switchLocale("en");
                   setMobileOpen(false);
                 }}
-                className={`transition-colors ${locale === "en" ? "text-electric-green" : "text-off-white/40 hover:text-off-white/70"}`}
+                role="radio"
+                aria-checked={locale === "en"}
+                className={`px-5 py-3 transition-all ${
+                  locale === "en"
+                    ? "bg-electric-green text-true-black font-semibold"
+                    : "text-off-white/40 hover:text-off-white/70"
+                }`}
               >
                 ENGLISH
               </button>
-              <span className="text-off-white/20">|</span>
               <button
                 onClick={() => {
                   switchLocale("es");
                   setMobileOpen(false);
                 }}
-                className={`transition-colors ${locale === "es" ? "text-electric-green" : "text-off-white/40 hover:text-off-white/70"}`}
+                role="radio"
+                aria-checked={locale === "es"}
+                className={`px-5 py-3 transition-all ${
+                  locale === "es"
+                    ? "bg-electric-green text-true-black font-semibold"
+                    : "text-off-white/40 hover:text-off-white/70"
+                }`}
               >
                 ESPA&Ntilde;OL
               </button>
+              <div className="px-3 py-3 text-off-white/30">
+                <GlobeSimple size={18} weight="bold" />
+              </div>
             </div>
 
             <a
