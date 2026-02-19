@@ -70,7 +70,21 @@
       "\u00bfQu\u00e9 habilidades necesito?",
       "\u00bfC\u00f3mo empiezo?",
       "\u00bfC\u00f3mo est\u00e1 el mercado laboral?"
-    ]
+    ],
+    "saveResults": {
+      "adultHeadline": "Guarda Tus Resultados",
+      "adultBody": "Recibe esta hoja de ruta completa en tu correo.",
+      "youthHeadline": "Env\u00eda a un Padre o Tutor",
+      "youthBody": "Tendr\u00e1n todo lo que necesitan para ayudarte a empezar.",
+      "emailPlaceholder": "tu@correo.com",
+      "youthEmailPlaceholder": "padre@correo.com",
+      "submitButton": "ENVIAR MIS RESULTADOS",
+      "successHeadline": "\u00a1Revisa tu correo!",
+      "successBody": "Tus resultados est\u00e1n en camino.",
+      "errorText": "Algo sali\u00f3 mal. \u00bfLo intentas de nuevo?",
+      "privacy": "Sin spam. Cancela cuando quieras.",
+      "emailSentTo": "Resultados enviados a"
+    }
   },
   "careers": {
     "fixer": {

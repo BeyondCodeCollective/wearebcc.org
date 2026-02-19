@@ -70,7 +70,21 @@
       "What skills do I need?",
       "How do I get started?",
       "What's the job market like?"
-    ]
+    ],
+    "saveResults": {
+      "adultHeadline": "Save Your Results",
+      "adultBody": "Get this full roadmap in your inbox.",
+      "youthHeadline": "Send to a Parent or Guardian",
+      "youthBody": "They'll have everything they need to help you get started.",
+      "emailPlaceholder": "your@email.com",
+      "youthEmailPlaceholder": "parent@email.com",
+      "submitButton": "SEND MY RESULTS",
+      "successHeadline": "Check your inbox!",
+      "successBody": "Your results are on the way.",
+      "errorText": "Something went wrong. Try again?",
+      "privacy": "No spam. Unsubscribe anytime.",
+      "emailSentTo": "Results sent to"
+    }
   },
   "careers": {
     "fixer": {

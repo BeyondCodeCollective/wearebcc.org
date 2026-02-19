@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
+import SaveResultsCard from "@/components/quiz/SaveResultsCard";
 import {
   Wrench,
   ChartBar,
@@ -663,10 +664,12 @@ function ResultsScreen({
   personalityKey,
   ageGroup,
   onRestart,
+  contactInfo,
 }: {
   personalityKey: PersonalityKey;
   ageGroup: AgeGroup;
   onRestart: () => void;
+  contactInfo: { type: 'email' | 'phone'; value: string } | null;
 }) {
   const t = useTranslations("quiz");
   const locale = useLocale();
@@ -677,6 +680,7 @@ function ResultsScreen({
   const [isLoading, setIsLoading] = useState(false);
   const [chatStarted, setChatStarted] = useState(false);
   const [showMobileChat, setShowMobileChat] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const isYouth = ageGroup === "under18";
@@ -712,6 +716,32 @@ function ResultsScreen({
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
+
+  // Auto-send results email if user provided email during capture
+  useEffect(() => {
+    if (contactInfo?.type === "email" && !emailSent) {
+      setEmailSent(true);
+      const careerName = t(`careers.${personalityKey}.name`);
+      const careerRole = t(`careers.${personalityKey}.role`);
+      const careerTagline = t(`careers.${personalityKey}.tagline`);
+      fetch("/api/send-results", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: contactInfo.value,
+          locale,
+          personalityName: careerName,
+          personalityKey,
+          role: careerRole,
+          tagline: careerTagline,
+          ageGroup,
+          salary: career.salary,
+          courses: pathwayItems,
+        }),
+      }).catch(() => { /* silent fail */ });
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const sendMessage = async (text: string) => {
     if (!text.trim()) return;
@@ -880,6 +910,28 @@ function ResultsScreen({
               ))}
             </div>
           </div>
+
+          {/* Save Results — show card if no email, or confirmation if auto-sent */}
+          {(!contactInfo || contactInfo.type === "phone") && (
+            <div className="mb-6 md:mb-8">
+              <SaveResultsCard
+                personalityName={careerName}
+                personalityKey={personalityKey}
+                role={careerRole}
+                tagline={careerTagline}
+                ageGroup={ageGroup}
+                salary={career.salary}
+                courses={pathwayItems}
+                tNamespace="quiz"
+              />
+            </div>
+          )}
+          {contactInfo?.type === "email" && emailSent && (
+            <p className="mb-6 md:mb-8 text-sm text-grey-3 flex items-center gap-1.5" style={{ fontFamily: "var(--font-mono)" }}>
+              <Check size={14} weight="bold" className="text-cobalt" />
+              {t("results.saveResults.emailSentTo")} {contactInfo.value}
+            </p>
+          )}
 
           <Link
             href={ctaUrl}
@@ -1114,6 +1166,13 @@ export default function GuidanceQuiz() {
   const handleContactSubmit = (contact: { type: 'email' | 'phone'; value: string }) => {
     setContactInfo(contact);
     setScreen("quiz");
+    if (contact.type === "email") {
+      fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: contact.value, source: "quiz-lead-capture" }),
+      }).catch(() => {});
+    }
   };
 
   const handleContactSkip = () => {
@@ -1161,7 +1220,7 @@ export default function GuidanceQuiz() {
         )}
         {screen === "loading" && <LoadingScreen personalityKey={getWinningPersonality()} />}
         {screen === "results" && (
-          <ResultsScreen personalityKey={getWinningPersonality()} ageGroup={ageGroup} onRestart={handleRestart} />
+          <ResultsScreen personalityKey={getWinningPersonality()} ageGroup={ageGroup} onRestart={handleRestart} contactInfo={contactInfo} />
         )}
       </main>
     </>
