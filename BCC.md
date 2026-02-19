@@ -6,7 +6,9 @@
 
 ## Mission
 
-Close the AI literacy gap and unlock digital dignity for communities long excluded from the future of work. BCC is intergenerational by design: ages 7 to 107, serving students, career changers, parents, educators, and seniors across the United States and Puerto Rico.
+Close the AI literacy gap and unlock digital dignity for communities long excluded from the future of work.
+
+BCC is intergenerational by design: ages 7 to 107. Students, career changers, parents, educators, and seniors. English and Spanish speaking. Operating across the United States and Puerto Rico with hub locations planned. The website and quiz reflect all of this — bilingual from day one, split into youth (7-17) and adult (18+) tracks, with safety and legal protections appropriate for working with minors.
 
 **Full name:** Beyond Code Collective
 **Short name (after first reference):** Beyond Code
@@ -111,7 +113,11 @@ Vercel (hosting + analytics)
 
 ---
 
-## Internationalization (i18n)
+## Bilingual by Design (i18n)
+
+BCC serves communities where English and Spanish are both primary languages. Bilingual support is not a translation layer added after the fact — it was built into the architecture from the start. Every screen, every disclaimer, every quiz question, every safety measure, and every results email exists in both languages. This includes the AI career guide chat, which responds in the user's selected locale.
+
+The site also serves an intergenerational audience. The quiz splits into two tracks at entry: ages 7-17 (youth) and 18+ (adults). Each track gets age-appropriate course recommendations, different AI chat behavior, and different safety framing. The youth track includes parental guidance notices and age-appropriate language throughout. This is foundational to how BCC operates — not a feature toggle, but a core design principle.
 
 **Supported locales:** English (`en`), Spanish (`es`)
 
@@ -121,10 +127,12 @@ Vercel (hosting + analytics)
 /es          — Spanish landing page
 /en/quiz     — English quiz (v1, aspirational courses)
 /en/quiz-v2  — English quiz (v2, real BCC catalog courses)
+/es/quiz     — Spanish quiz
+/es/quiz-v2  — Spanish quiz v2
 ```
 
 **Translation namespaces** (in `src/messages/{locale}/`):
-- `common.json` — nav, footer, newsletter, form labels, segments
+- `common.json` — nav, footer, newsletter, form labels, audience segments
 - `landing.json` — all landing page section copy
 - `quiz.json` — quiz v1 (placeholder courses)
 - `quiz-v2.json` — quiz v2 (real BCC courses)
