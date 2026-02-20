@@ -36,7 +36,7 @@ interface DashboardData {
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <p
-      className="text-[11px] uppercase tracking-wider text-white/30 mb-4"
+      className="text-[11px] uppercase tracking-wider text-black/40 mb-4"
       style={{ fontFamily: "var(--font-mono)" }}
     >
       {children}
@@ -94,11 +94,11 @@ export default function DashboardShell() {
 
   if (!authenticated) {
     return (
-      <div className="min-h-screen bg-true-black flex items-center justify-center px-6">
+      <div className="min-h-screen bg-off-white flex items-center justify-center px-6">
         <form onSubmit={handleLogin} className="w-full max-w-xs">
           <div className="flex items-center gap-2.5 mb-8">
             <Lock size={18} weight="bold" className="text-cobalt" />
-            <h1 className="font-heading text-xl text-off-white uppercase tracking-tight">
+            <h1 className="font-heading text-xl text-true-black uppercase tracking-tight">
               BCC Dashboard
             </h1>
           </div>
@@ -107,11 +107,11 @@ export default function DashboardShell() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
-            className="w-full bg-white/5 text-off-white px-4 py-3 text-sm rounded-lg border border-white/10 focus:border-cobalt focus:outline-none placeholder:text-white/20"
+            className="w-full bg-white text-true-black px-4 py-3 text-sm rounded-lg border border-black/10 focus:border-cobalt focus:outline-none placeholder:text-black/30"
             style={{ fontFamily: "var(--font-mono)" }}
           />
           {authError && (
-            <p className="text-[#FF6B35] text-xs mt-2" style={{ fontFamily: "var(--font-mono)" }}>
+            <p className="text-[#D32F2F] text-xs mt-2" style={{ fontFamily: "var(--font-mono)" }}>
               Invalid password
             </p>
           )}
@@ -128,7 +128,7 @@ export default function DashboardShell() {
   }
 
   return (
-    <div className="min-h-screen bg-true-black text-off-white">
+    <div className="min-h-screen bg-off-white text-true-black">
       <div className="max-w-6xl mx-auto px-6 py-12">
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
@@ -139,7 +139,7 @@ export default function DashboardShell() {
         </div>
 
         {loading && !data && (
-          <p className="text-sm text-white/30" style={{ fontFamily: "var(--font-mono)" }}>
+          <p className="text-sm text-black/30" style={{ fontFamily: "var(--font-mono)" }}>
             Loading...
           </p>
         )}
@@ -165,7 +165,7 @@ export default function DashboardShell() {
             {/* Funnel */}
             <section>
               <SectionLabel>Funnel</SectionLabel>
-              <div className="border border-white/10 rounded-lg p-6">
+              <div className="bg-white rounded-lg border border-black/5 p-6">
                 <FunnelChart steps={data.funnel} />
               </div>
             </section>
@@ -173,11 +173,11 @@ export default function DashboardShell() {
             {/* Personality Breakdown */}
             <section>
               <SectionLabel>Personality Results</SectionLabel>
-              <div className="border border-white/10 rounded-lg p-6">
+              <div className="bg-white rounded-lg border border-black/5 p-6">
                 {data.personalities.length > 0 ? (
                   <PersonalityBreakdown data={data.personalities} />
                 ) : (
-                  <p className="text-sm text-white/30" style={{ fontFamily: "var(--font-mono)" }}>
+                  <p className="text-sm text-black/30" style={{ fontFamily: "var(--font-mono)" }}>
                     No completed quizzes yet
                   </p>
                 )}
@@ -187,7 +187,7 @@ export default function DashboardShell() {
             {/* Demographics */}
             <section>
               <SectionLabel>Demographics</SectionLabel>
-              <div className="border border-white/10 rounded-lg p-6">
+              <div className="bg-white rounded-lg border border-black/5 p-6">
                 <DemographicsPanel
                   ageGroups={data.demographics.ageGroups}
                   locales={data.demographics.locales}
@@ -198,7 +198,7 @@ export default function DashboardShell() {
             {/* Timeseries */}
             <section>
               <SectionLabel>Daily Activity</SectionLabel>
-              <div className="border border-white/10 rounded-lg p-6">
+              <div className="bg-white rounded-lg border border-black/5 p-6">
                 <TimeseriesChart data={data.timeseries} />
               </div>
             </section>
@@ -206,7 +206,7 @@ export default function DashboardShell() {
             {/* Engagement */}
             <section>
               <SectionLabel>Engagement</SectionLabel>
-              <div className="border border-white/10 rounded-lg p-6">
+              <div className="bg-white rounded-lg border border-black/5 p-6">
                 <EngagementPanel data={data.engagement} />
               </div>
             </section>

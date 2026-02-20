@@ -17,7 +17,7 @@ export default function TimeRangeSelector({
   onChange: (range: Range) => void;
 }) {
   return (
-    <div className="flex gap-0.5 bg-white/5 rounded-lg p-1">
+    <div className="flex gap-0.5 bg-black/[0.04] rounded-lg p-1">
       {RANGES.map((range) => (
         <button
           key={range.value}
@@ -25,7 +25,7 @@ export default function TimeRangeSelector({
           className={`px-3.5 py-1.5 text-xs rounded-md transition-colors ${
             selected === range.value
               ? "bg-cobalt text-off-white"
-              : "text-white/40 hover:text-white/70"
+              : "text-black/40 hover:text-black/70"
           }`}
           style={{ fontFamily: "var(--font-mono)" }}
         >

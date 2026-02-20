@@ -11,19 +11,19 @@ function BarRow({ label, count, percentage, color }: { label: string; count: num
   return (
     <div className="flex items-center gap-3">
       <p
-        className="text-xs text-white/50 w-24 shrink-0 text-right"
+        className="text-xs text-black/50 w-24 shrink-0 text-right"
         style={{ fontFamily: "var(--font-mono)" }}
       >
         {label}
       </p>
-      <div className="flex-1 h-8 bg-white/5 rounded relative overflow-hidden">
+      <div className="flex-1 h-8 bg-black/[0.04] rounded relative overflow-hidden">
         <div
           className={`h-full rounded transition-all duration-500 ${color}`}
           style={{ width: `${percentage}%`, minWidth: count > 0 ? 4 : 0 }}
         />
       </div>
       <p
-        className="text-xs text-white/70 w-20 shrink-0 tabular-nums text-right"
+        className="text-xs text-black/60 w-20 shrink-0 tabular-nums text-right"
         style={{ fontFamily: "var(--font-mono)" }}
       >
         {count} ({percentage}%)
@@ -53,7 +53,7 @@ export default function DemographicsPanel({
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div>
         <p
-          className="text-[11px] uppercase tracking-wider text-white/40 mb-3"
+          className="text-[11px] uppercase tracking-wider text-black/40 mb-3"
           style={{ fontFamily: "var(--font-mono)" }}
         >
           Age Group
@@ -72,7 +72,7 @@ export default function DemographicsPanel({
       </div>
       <div>
         <p
-          className="text-[11px] uppercase tracking-wider text-white/40 mb-3"
+          className="text-[11px] uppercase tracking-wider text-black/40 mb-3"
           style={{ fontFamily: "var(--font-mono)" }}
         >
           Language
@@ -84,7 +84,7 @@ export default function DemographicsPanel({
               label={LOCALE_LABELS[item.locale || ""] || item.locale || ""}
               count={item.count}
               percentage={item.percentage}
-              color="bg-electric-green"
+              color="bg-cobalt/60"
             />
           ))}
         </div>

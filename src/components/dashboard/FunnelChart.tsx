@@ -30,19 +30,19 @@ export default function FunnelChart({ steps }: { steps: FunnelStep[] }) {
         return (
           <div key={step.step} className="flex items-center gap-3">
             <p
-              className="text-xs text-white/50 w-32 shrink-0 text-right"
+              className="text-xs text-black/50 w-32 shrink-0 text-right"
               style={{ fontFamily: "var(--font-mono)" }}
             >
               {STEP_LABELS[step.step] || step.step}
             </p>
-            <div className="flex-1 h-8 bg-white/5 rounded relative overflow-hidden">
+            <div className="flex-1 h-8 bg-black/[0.04] rounded relative overflow-hidden">
               <div
                 className="h-full bg-cobalt rounded transition-all duration-500"
                 style={{ width: `${width}%`, minWidth: step.count > 0 ? 4 : 0 }}
               />
             </div>
             <p
-              className="text-xs text-white/70 w-16 shrink-0 tabular-nums"
+              className="text-xs text-black/60 w-16 shrink-0 tabular-nums"
               style={{ fontFamily: "var(--font-mono)" }}
             >
               {step.count}

@@ -10,7 +10,7 @@ interface TimeseriesPoint {
 export default function TimeseriesChart({ data }: { data: TimeseriesPoint[] }) {
   if (data.length === 0) {
     return (
-      <p className="text-sm text-white/30" style={{ fontFamily: "var(--font-mono)" }}>
+      <p className="text-sm text-black/30" style={{ fontFamily: "var(--font-mono)" }}>
         No data yet
       </p>
     );
@@ -31,18 +31,18 @@ export default function TimeseriesChart({ data }: { data: TimeseriesPoint[] }) {
                   title={`Starts: ${point.starts}`}
                 />
                 <div
-                  className="w-3 bg-electric-green rounded-t transition-all duration-300"
+                  className="w-3 bg-cobalt/50 rounded-t transition-all duration-300"
                   style={{ height: `${(point.completions / maxVal) * 100}%`, minHeight: point.completions > 0 ? 2 : 0 }}
                   title={`Completions: ${point.completions}`}
                 />
                 <div
-                  className="w-3 bg-[#FF6B35] rounded-t transition-all duration-300"
+                  className="w-3 bg-cobalt/25 rounded-t transition-all duration-300"
                   style={{ height: `${(point.leads / maxVal) * 100}%`, minHeight: point.leads > 0 ? 2 : 0 }}
                   title={`Leads: ${point.leads}`}
                 />
               </div>
               <p
-                className="text-[9px] text-white/30 whitespace-nowrap"
+                className="text-[9px] text-black/30 whitespace-nowrap"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {new Date(point.date).toLocaleDateString("en", { month: "short", day: "numeric" })}
@@ -51,15 +51,15 @@ export default function TimeseriesChart({ data }: { data: TimeseriesPoint[] }) {
           ))}
         </div>
       </div>
-      <div className="flex gap-5 mt-5 pt-4 border-t border-white/5">
-        <span className="flex items-center gap-2 text-xs text-white/50" style={{ fontFamily: "var(--font-mono)" }}>
+      <div className="flex gap-5 mt-5 pt-4 border-t border-black/5">
+        <span className="flex items-center gap-2 text-xs text-black/50" style={{ fontFamily: "var(--font-mono)" }}>
           <span className="w-2.5 h-2.5 bg-cobalt rounded-sm inline-block" /> Starts
         </span>
-        <span className="flex items-center gap-2 text-xs text-white/50" style={{ fontFamily: "var(--font-mono)" }}>
-          <span className="w-2.5 h-2.5 bg-electric-green rounded-sm inline-block" /> Completions
+        <span className="flex items-center gap-2 text-xs text-black/50" style={{ fontFamily: "var(--font-mono)" }}>
+          <span className="w-2.5 h-2.5 bg-cobalt/50 rounded-sm inline-block" /> Completions
         </span>
-        <span className="flex items-center gap-2 text-xs text-white/50" style={{ fontFamily: "var(--font-mono)" }}>
-          <span className="w-2.5 h-2.5 bg-[#FF6B35] rounded-sm inline-block" /> Leads
+        <span className="flex items-center gap-2 text-xs text-black/50" style={{ fontFamily: "var(--font-mono)" }}>
+          <span className="w-2.5 h-2.5 bg-cobalt/25 rounded-sm inline-block" /> Leads
         </span>
       </div>
     </div>
