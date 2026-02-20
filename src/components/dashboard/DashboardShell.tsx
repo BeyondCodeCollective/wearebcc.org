@@ -131,7 +131,7 @@ export default function DashboardShell() {
     <div className="min-h-screen bg-off-white text-true-black">
       <div className="max-w-6xl mx-auto px-6 py-12">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
           <h1 className="font-heading text-3xl uppercase tracking-tight">
             Quiz Dashboard
           </h1>
@@ -145,35 +145,34 @@ export default function DashboardShell() {
         )}
 
         {data && (
-          <div className="space-y-12">
+          <div className="space-y-6">
             {/* KPI Cards */}
-            <section>
-              <SectionLabel>Overview</SectionLabel>
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-                <MetricCard label="Quiz Starts" value={data.totalStarts} />
-                <MetricCard label="Completions" value={data.totalCompletions} />
-                <MetricCard label="Completion Rate" value={data.completionRate} suffix="%" accent="green" />
-                <MetricCard label="Leads Captured" value={data.totalLeads} accent="green" />
-              </div>
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mt-3">
-                <MetricCard label="Lead Capture Rate" value={data.leadCaptureRate} suffix="%" />
-                <MetricCard label="Leads Skipped" value={data.totalSkips} accent="orange" />
-                <MetricCard label="Email Leads" value={data.emailLeads} />
-              </div>
-            </section>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+              <MetricCard label="Quiz Starts" value={data.totalStarts} />
+              <MetricCard label="Completions" value={data.totalCompletions} />
+              <MetricCard label="Completion Rate" value={data.completionRate} suffix="%" accent="green" />
+              <MetricCard label="Leads Captured" value={data.totalLeads} accent="green" />
+              <MetricCard label="Lead Capture Rate" value={data.leadCaptureRate} suffix="%" />
+              <MetricCard label="Leads Skipped" value={data.totalSkips} accent="orange" />
+              <MetricCard label="Email Leads" value={data.emailLeads} />
+            </div>
 
-            {/* Funnel */}
-            <section>
-              <SectionLabel>Funnel</SectionLabel>
-              <div className="bg-white rounded-lg border border-black/5 p-6">
+            {/* Funnel + Engagement */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
+              <div className="lg:col-span-2 bg-white rounded-lg border border-black/5 p-5">
+                <SectionLabel>Funnel</SectionLabel>
                 <FunnelChart steps={data.funnel} />
               </div>
-            </section>
+              <div className="bg-white rounded-lg border border-black/5 p-5">
+                <SectionLabel>Engagement</SectionLabel>
+                <EngagementPanel data={data.engagement} />
+              </div>
+            </div>
 
-            {/* Personality Breakdown */}
-            <section>
-              <SectionLabel>Personality Results</SectionLabel>
-              <div className="bg-white rounded-lg border border-black/5 p-6">
+            {/* Personality + Demographics */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+              <div className="bg-white rounded-lg border border-black/5 p-5">
+                <SectionLabel>Personality Results</SectionLabel>
                 {data.personalities.length > 0 ? (
                   <PersonalityBreakdown data={data.personalities} />
                 ) : (
@@ -182,34 +181,20 @@ export default function DashboardShell() {
                   </p>
                 )}
               </div>
-            </section>
-
-            {/* Demographics */}
-            <section>
-              <SectionLabel>Demographics</SectionLabel>
-              <div className="bg-white rounded-lg border border-black/5 p-6">
+              <div className="bg-white rounded-lg border border-black/5 p-5">
+                <SectionLabel>Demographics</SectionLabel>
                 <DemographicsPanel
                   ageGroups={data.demographics.ageGroups}
                   locales={data.demographics.locales}
                 />
               </div>
-            </section>
+            </div>
 
-            {/* Timeseries */}
-            <section>
+            {/* Daily Activity */}
+            <div className="bg-white rounded-lg border border-black/5 p-5">
               <SectionLabel>Daily Activity</SectionLabel>
-              <div className="bg-white rounded-lg border border-black/5 p-6">
-                <TimeseriesChart data={data.timeseries} />
-              </div>
-            </section>
-
-            {/* Engagement */}
-            <section>
-              <SectionLabel>Engagement</SectionLabel>
-              <div className="bg-white rounded-lg border border-black/5 p-6">
-                <EngagementPanel data={data.engagement} />
-              </div>
-            </section>
+              <TimeseriesChart data={data.timeseries} />
+            </div>
           </div>
         )}
       </div>

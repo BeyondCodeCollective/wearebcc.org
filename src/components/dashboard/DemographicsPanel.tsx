@@ -50,7 +50,7 @@ export default function DemographicsPanel({
   locales: DemoItem[];
 }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="space-y-6">
       <div>
         <p
           className="text-[11px] uppercase tracking-wider text-black/40 mb-3"
