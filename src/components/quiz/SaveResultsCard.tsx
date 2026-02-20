@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { Envelope, Lock, Check } from "@phosphor-icons/react";
+import { trackEvent } from "@/lib/analytics";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -17,6 +18,7 @@ interface SaveResultsCardProps {
   salary: { low: number; mid: number; high: number };
   courses: string[];
   tNamespace: "quiz" | "quiz-v2";
+  sessionId?: string;
 }
 
 export default function SaveResultsCard({
@@ -28,6 +30,7 @@ export default function SaveResultsCard({
   salary,
   courses,
   tNamespace,
+  sessionId,
 }: SaveResultsCardProps) {
   const t = useTranslations(tNamespace);
   const locale = useLocale();
@@ -59,6 +62,9 @@ export default function SaveResultsCard({
       });
       if (res.ok) {
         setStatus("success");
+        if (sessionId) {
+          trackEvent(sessionId, tNamespace, "save_results_email", {}, locale);
+        }
       } else {
         setStatus("error");
       }

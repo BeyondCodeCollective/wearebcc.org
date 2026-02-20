@@ -6,6 +6,7 @@ import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import SaveResultsCard from "@/components/quiz/SaveResultsCard";
+import { generateSessionId, trackEvent } from "@/lib/analytics";
 import {
   Wrench,
   ChartBar,
@@ -665,11 +666,13 @@ function ResultsScreen({
   ageGroup,
   onRestart,
   contactInfo,
+  sessionId,
 }: {
   personalityKey: PersonalityKey;
   ageGroup: AgeGroup;
   onRestart: () => void;
   contactInfo: { type: 'email' | 'phone'; value: string } | null;
+  sessionId: string;
 }) {
   const t = useTranslations("quiz-v2");
   const locale = useLocale();
@@ -717,6 +720,12 @@ function ResultsScreen({
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
+  // Track results viewed
+  useEffect(() => {
+    trackEvent(sessionId, "quiz-v2", "results_viewed", { personality_result: personalityKey }, locale);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // Auto-send results email if user provided email during capture
   useEffect(() => {
     if (contactInfo?.type === "email" && !emailSent) {
@@ -738,6 +747,8 @@ function ResultsScreen({
           salary: career.salary,
           courses: pathwayItems,
         }),
+      }).then(() => {
+        trackEvent(sessionId, "quiz-v2", "results_email_sent", {}, locale);
       }).catch(() => { /* silent fail */ });
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -750,6 +761,10 @@ function ResultsScreen({
     setMessages(prev => [...prev, userMessage]);
     setInput("");
     setIsLoading(true);
+    if (!chatStarted) {
+      trackEvent(sessionId, "quiz-v2", "chat_started", {}, locale);
+    }
+    trackEvent(sessionId, "quiz-v2", "chat_message", { message_count: messages.length + 1 }, locale);
     setChatStarted(true);
 
     try {
@@ -923,6 +938,7 @@ function ResultsScreen({
                 salary={career.salary}
                 courses={pathwayItems}
                 tNamespace="quiz-v2"
+                sessionId={sessionId}
               />
             </div>
           )}
@@ -938,6 +954,7 @@ function ResultsScreen({
             className="inline-flex items-center justify-center gap-3 bg-cobalt text-off-white text-base md:text-lg font-bold px-6 md:px-8 py-4 transition-all active:scale-95 md:hover:scale-105 w-full md:w-auto"
             style={{ fontFamily: "var(--font-mono)" }}
             aria-label={pathwayCta}
+            onClick={() => trackEvent(sessionId, "quiz-v2", "cta_clicked", { cta_url: ctaUrl }, locale)}
           >
             <span>{pathwayCta}</span>
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3} aria-hidden="true">
@@ -1155,17 +1172,22 @@ export default function GuidanceQuiz() {
     fixer: 0, architect: 0, connector: 0, creator: 0, builder: 0, maker: 0,
     strategist: 0, guardian: 0, analyst: 0, healer: 0, educator: 0, advocate: 0,
   });
+  const [sessionId] = useState(() => generateSessionId());
+  const locale = useLocale();
+  const QV = "quiz-v2" as const;
 
   const handleAgeSelect = (age: AgeGroup) => {
     setAgeGroup(age);
     setCurrentQuestion(0);
     setScores({ fixer: 0, architect: 0, connector: 0, creator: 0, builder: 0, maker: 0, strategist: 0, guardian: 0, analyst: 0, healer: 0, educator: 0, advocate: 0 });
     setScreen("capture");
+    trackEvent(sessionId, QV, "quiz_started", { age_group: age }, locale);
   };
 
   const handleContactSubmit = (contact: { type: 'email' | 'phone'; value: string }) => {
     setContactInfo(contact);
     setScreen("quiz");
+    trackEvent(sessionId, QV, "lead_captured", { lead_type: contact.type }, locale);
     if (contact.type === "email") {
       fetch("/api/subscribe", {
         method: "POST",
@@ -1177,19 +1199,26 @@ export default function GuidanceQuiz() {
 
   const handleContactSkip = () => {
     setScreen("quiz");
+    trackEvent(sessionId, QV, "lead_skipped", {}, locale);
   };
 
   const handleAnswer = (personality: PersonalityKey) => {
     setScores((prev) => ({ ...prev, [personality]: prev[personality] + 1 }));
+    trackEvent(sessionId, QV, "question_answered", { question_index: currentQuestion, personality_chosen: personality }, locale);
     if (currentQuestion < questionMeta.length - 1) {
       setCurrentQuestion((prev) => prev + 1);
     } else {
+      const entries = Object.entries(scores) as [PersonalityKey, number][];
+      const updatedScores = { ...Object.fromEntries(entries), [personality]: (scores[personality] || 0) + 1 };
+      const winner = (Object.entries(updatedScores) as [PersonalityKey, number][]).reduce((a, b) => (b[1] > a[1] ? b : a))[0];
+      trackEvent(sessionId, QV, "quiz_completed", { personality_result: winner }, locale);
       setScreen("loading");
       setTimeout(() => setScreen("results"), 2800);
     }
   };
 
   const handleRestart = () => {
+    trackEvent(sessionId, QV, "quiz_restarted", {}, locale);
     setScreen("home");
     setAgeGroup(null);
     setCurrentQuestion(0);
@@ -1220,7 +1249,7 @@ export default function GuidanceQuiz() {
         )}
         {screen === "loading" && <LoadingScreen personalityKey={getWinningPersonality()} />}
         {screen === "results" && (
-          <ResultsScreen personalityKey={getWinningPersonality()} ageGroup={ageGroup} onRestart={handleRestart} contactInfo={contactInfo} />
+          <ResultsScreen personalityKey={getWinningPersonality()} ageGroup={ageGroup} onRestart={handleRestart} contactInfo={contactInfo} sessionId={sessionId} />
         )}
       </main>
     </>
