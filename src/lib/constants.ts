@@ -16,7 +16,7 @@ export const NAV_LINKS = [
 
 export const PILLARS = [
   {
-    title: "Intergenerational",
+    title: "Intergenerational Opportunity",
     description:
       "An ecosystem where all generations participate; not a pipeline that serves one age group, but a model that meets learners wherever they are in life.",
   },
