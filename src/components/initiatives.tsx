@@ -10,11 +10,10 @@ import { useQuiz } from "./quiz-modal";
 const INITIATIVE_IMAGES = [
   "/images/initiatives/forge.jpg",
   "/images/initiatives/catalysts.jpg",
-  "/images/initiatives/code-along.jpg",
   "/images/initiatives/after-the-game.jpg",
 ];
 
-const INITIATIVE_KEYS = ["forge", "catalysts", "codeAlong", "afterTheGame"] as const;
+const INITIATIVE_KEYS = ["forge", "catalysts", "afterTheGame"] as const;
 
 export function Initiatives() {
   const { openQuiz } = useQuiz();
@@ -124,8 +123,7 @@ export function Initiatives() {
 
                   <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                     <a
-                      href={"learnMoreUrl" in initiative && initiative.learnMoreUrl ? initiative.learnMoreUrl : `mailto:${initiative.contact}`}
-                      {...("learnMoreUrl" in initiative && initiative.learnMoreUrl ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                      href={`mailto:${initiative.contact}`}
                       className="inline-flex items-center justify-center gap-2 bg-electric-green px-6 py-3 font-mono text-xs tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80"
                       style={{ fontFamily: "var(--font-mono)" }}
                     >

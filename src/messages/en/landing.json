@@ -67,7 +67,7 @@
         "label": "Of Employers Intend to Upskill Teams for Emerging Tech"
       },
       {
-        "value": "4",
+        "value": "3",
         "suffix": "+",
         "label": "Initiatives Building Pathways to Quality Careers"
       },
@@ -100,11 +100,6 @@
         "title": "Beyond Code Catalysts",
         "description": "Career pathways for 18+ learners combining accessible training, hands-on projects, and career readiness support. No traditional tech background required.",
         "tags": ["18+", "Career Pathways", "Hands-On"]
-      },
-      "codeAlong": {
-        "title": "Code Along",
-        "description": "A free video coding academy with step-by-step tutorials, making tech education accessible to everyone through digital how-to learning.",
-        "tags": ["All Ages", "Free", "Video Tutorials"]
       },
       "afterTheGame": {
         "title": "After The Game",
