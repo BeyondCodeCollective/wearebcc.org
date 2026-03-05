@@ -44,7 +44,7 @@ export const INITIATIVES = [
     title: "Beyond Code Catalysts",
     description:
       "Career pathways for 18+ learners combining accessible training, hands-on projects, and career readiness support. No traditional tech background required.",
-    contact: "programs@wearebcc.org",
+    contact: "partnerships@wearebcc.org",
   },
   {
     title: "Code Along",
