@@ -195,13 +195,6 @@ export function Hero() {
                 </motion.div>
               </AnimatePresence>
 
-              <span
-                className="absolute bottom-4 left-4 bg-true-black/60 px-3 py-1 font-mono text-xs tracking-wider text-off-white backdrop-blur-sm"
-                style={{ fontFamily: "var(--font-mono)" }}
-              >
-                [{String(activePhoto + 1).padStart(2, "0")}] OF [
-                {String(COMMUNITY_PHOTOS.length).padStart(2, "0")}]
-              </span>
             </div>
           </motion.div>
         </div>
@@ -236,12 +229,6 @@ export function Hero() {
                   className="object-cover"
                   sizes="(min-width: 640px) 80px, 64px"
                 />
-                <span
-                  className="absolute bottom-1 left-1 text-off-white font-mono text-[10px]"
-                  style={{ fontFamily: "var(--font-mono)" }}
-                >
-                  [{String(i + 1).padStart(2, "0")}]
-                </span>
               </button>
             ))}
           </div>

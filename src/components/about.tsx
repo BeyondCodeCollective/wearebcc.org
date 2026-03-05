@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { UsersThree, Circuitry, Rocket } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
-import { SectionLabel } from "./ui/section-label";
 
 const PILLAR_ICONS = [UsersThree, Circuitry, Rocket];
 const PILLAR_KEYS = [
@@ -31,7 +30,6 @@ export function About() {
               {t("headline2")}
             </h2>
           </motion.div>
-          <SectionLabel number="01" className="text-grey-3 mt-2" />
         </div>
 
         <motion.div

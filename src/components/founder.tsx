@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { SectionLabel } from "./ui/section-label";
 import { PRESS_FEATURES } from "@/lib/constants";
 
 export function Founder() {
@@ -25,7 +24,6 @@ export function Founder() {
           >
             {t("label")}
           </motion.p>
-          <SectionLabel number="04" className="text-off-white/50" />
         </div>
 
         <div className="mt-8 grid gap-12 lg:grid-cols-2 lg:gap-16">

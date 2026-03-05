@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { SectionLabel } from "./ui/section-label";
 import { RESOURCES, FEATURED_VIDEO } from "@/lib/constants";
 
 const RESOURCE_KEYS = ["onePager", "forgeOverview", "brandFlipbook"] as const;
@@ -48,7 +47,6 @@ export function Resources() {
               {t("subheading")}
             </p>
           </motion.div>
-          <SectionLabel number="05" className="text-off-white/50 mt-2" />
         </div>
 
         <motion.p
