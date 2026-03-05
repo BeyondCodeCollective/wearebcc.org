@@ -4,7 +4,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { SectionLabel } from "./ui/section-label";
 
 const TESTIMONIAL_IMAGES = [
   "/images/testimonials/testimonial-01.jpg",
@@ -52,7 +51,6 @@ export function Testimonials() {
               {t("subheading")}
             </p>
           </motion.div>
-          <SectionLabel number="02" className="text-grey-3 mt-2" />
         </div>
 
         <div className="mt-12">
@@ -119,13 +117,6 @@ export function Testimonials() {
             >
               &rarr;
             </button>
-            <span
-              className="ml-4 font-mono text-xs tracking-wider text-grey-3"
-              style={{ fontFamily: "var(--font-mono)" }}
-            >
-              [{String(current + 1).padStart(2, "0")}] OF [
-              {String(items.length).padStart(2, "0")}]
-            </span>
           </div>
         </div>
       </div>

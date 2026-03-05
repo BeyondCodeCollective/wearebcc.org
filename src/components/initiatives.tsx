@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { SectionLabel } from "./ui/section-label";
 import { usePartnerships } from "./partnerships-modal";
 
 const INITIATIVE_IMAGES = [
@@ -43,7 +42,6 @@ export function Initiatives() {
               {t("subheading")}
             </p>
           </motion.div>
-          <SectionLabel number="03" className="text-off-white/70 mt-2" />
         </div>
 
         <motion.p
@@ -91,12 +89,6 @@ export function Initiatives() {
                     className="object-cover"
                     sizes="(min-width: 1024px) 50vw, 100vw"
                   />
-                  <span
-                    className="absolute top-4 left-4 bg-electric-green px-3 py-1 font-mono text-xs tracking-wider text-true-black"
-                    style={{ fontFamily: "var(--font-mono)" }}
-                  >
-                    [{String(i + 1).padStart(2, "0")}]
-                  </span>
                 </div>
 
                 <div className={isReversed ? "lg:order-1" : ""}>

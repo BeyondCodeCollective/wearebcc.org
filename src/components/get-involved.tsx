@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import { SectionLabel } from "./ui/section-label";
 
 const SEGMENT_KEYS = [
   "student",
@@ -81,7 +80,6 @@ export function GetInvolved() {
             <br />
             {t("headline2")}
           </motion.h2>
-          <SectionLabel number="06" className="text-true-black/30 mt-2" />
         </div>
 
         <motion.div
