@@ -67,7 +67,7 @@
         "label": "De Empleadores Planean Capacitar Equipos en Tecnolog\u00edas Emergentes"
       },
       {
-        "value": "4",
+        "value": "3",
         "suffix": "+",
         "label": "Iniciativas Construyendo Caminos hacia Carreras de Calidad"
       },
@@ -100,11 +100,6 @@
         "title": "Beyond Code Catalysts",
         "description": "Rutas profesionales para aprendices de 18+ que combinan formaci\u00f3n accesible, proyectos pr\u00e1cticos y apoyo para la preparaci\u00f3n laboral. No se requiere experiencia t\u00e9cnica tradicional.",
         "tags": ["18+", "Rutas Profesionales", "Pr\u00e1ctico"]
-      },
-      "codeAlong": {
-        "title": "Code Along",
-        "description": "Una academia de programaci\u00f3n en video gratuita con tutoriales paso a paso, haciendo la educaci\u00f3n tecnol\u00f3gica accesible para todos a trav\u00e9s del aprendizaje digital.",
-        "tags": ["Todas las Edades", "Gratis", "Tutoriales en Video"]
       },
       "afterTheGame": {
         "title": "After The Game",

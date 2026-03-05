@@ -47,13 +47,6 @@ export const INITIATIVES = [
     contact: "partnerships@wearebcc.org",
   },
   {
-    title: "Code Along",
-    description:
-      "A free video coding academy with step-by-step tutorials, making tech education accessible to everyone through digital how-to learning.",
-    contact: "marketing@wearebcc.org",
-    learnMoreUrl: "https://www.youtube.com/watch?v=VroOSToSNx8",
-  },
-  {
     title: "After The Game",
     description:
       "A national, cohort-based workforce program for transitioning or recently retired professional and NCAA student-athletes. Bridges the digital skill divide with technical leads teaching live classes, plus wraparound support from corporate readiness to job placement.",
