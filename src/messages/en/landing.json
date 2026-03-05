@@ -120,22 +120,16 @@
     "nextLabel": "Next testimonial",
     "items": [
       {
-        "quote": "Beyond Code gave me the confidence to transition from teaching into tech. The community made all the difference — I never felt like I was starting over alone.",
-        "name": "Angela C.",
+        "quote": "Before Beyond Code Collective, I thought tech was out of reach for me. Now I know it's within my reach — it's not impossible to enter this field and do what I want to do. I was working in healthcare doing medical billing and coding, but I realized it wasn't what I wanted long-term. This program gave me the opportunity to refocus and pursue the technology path I always wanted.",
+        "name": "Londella",
         "role": "Career Changer",
         "location": "Atlanta, GA"
       },
       {
-        "quote": "As a parent, I wanted my kids to have access to real tech skills — not just games. Beyond Code's intergenerational approach means we learn together as a family.",
-        "name": "Marcus T.",
-        "role": "Parent & Learner",
-        "location": "Miami, FL"
-      },
-      {
-        "quote": "The Forge hub in my neighborhood changed everything. I went from scrolling job boards to building websites in three months. Now I freelance full-time.",
-        "name": "Priya K.",
-        "role": "Forge Graduate",
-        "location": "Chicago, IL"
+        "quote": "Before Beyond Code Collective, I thought tech was impossible to get my hands on. Now tech is at my fingertips. The birth of my son pushed me to take tech more seriously and just go for it. I wanted to provide for my family and dive into an interest I already had.",
+        "name": "Josh",
+        "role": "Learner",
+        "location": "Atlanta, GA"
       }
     ]
   },
