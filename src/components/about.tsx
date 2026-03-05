@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 
 const PILLAR_ICONS = [UsersThree, Circuitry, Rocket];
 const PILLAR_KEYS = [
-  "intergenerationalEquity",
+  "intergenerationalOpportunity",
   "allTechnologies",
   "todayAndTomorrow",
 ] as const;
