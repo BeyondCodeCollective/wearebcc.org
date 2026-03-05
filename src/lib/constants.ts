@@ -44,7 +44,7 @@ export const INITIATIVES = [
     title: "Beyond Code Catalysts",
     description:
       "Career pathways for 18+ learners combining accessible training, hands-on projects, and career readiness support. No traditional tech background required.",
-    contact: "programs@wearebcc.org",
+    contact: "partnerships@wearebcc.org",
   },
   {
     title: "Code Along",
@@ -99,14 +99,15 @@ export const RESOURCES = [
     description:
       "An overview of Beyond Code Collective — mission, initiatives, and how to get involved.",
     type: "PDF" as const,
-    href: "/resources/bcc-one-pager.pdf",
+    href: "/resources/Beyond-Code-Collective-One-Pager.pdf",
   },
   {
     title: "The Forge Overview",
     description:
       "Details on our place-based tech hubs blending education, workforce development, and community engagement.",
-    type: "PDF" as const,
-    href: "/resources/the-forge-overview.pdf",
+    type: "LINK" as const,
+    href: "https://www.instagram.com/p/DPMtj0Wkhxq/",
+    external: true as const,
   },
   {
     title: "Brand Flipbook",
