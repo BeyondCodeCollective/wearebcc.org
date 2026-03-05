@@ -9,7 +9,6 @@ import { SectionLabel } from "./ui/section-label";
 const TESTIMONIAL_IMAGES = [
   "/images/testimonials/testimonial-01.jpg",
   "/images/testimonials/testimonial-02.jpg",
-  "/images/testimonials/testimonial-04.jpg",
 ];
 
 export function Testimonials() {

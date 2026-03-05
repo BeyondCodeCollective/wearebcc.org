@@ -120,22 +120,16 @@
     "nextLabel": "Siguiente testimonio",
     "items": [
       {
-        "quote": "Beyond Code me dio la confianza para hacer la transici\u00f3n de la ense\u00f1anza a la tecnolog\u00eda. La comunidad hizo toda la diferencia \u2014 nunca sent\u00ed que estaba empezando de cero sola.",
-        "name": "Angela C.",
+        "quote": "Antes de Beyond Code Collective, pensaba que la tecnolog\u00eda estaba fuera de mi alcance. Ahora s\u00e9 que est\u00e1 a mi alcance \u2014 no es imposible entrar en este campo y hacer lo que quiero hacer. Trabajaba en salud haciendo facturaci\u00f3n y codificaci\u00f3n m\u00e9dica, pero me di cuenta de que no era lo que quer\u00eda a largo plazo. Este programa me dio la oportunidad de reenfocarme y seguir el camino tecnol\u00f3gico que siempre quise.",
+        "name": "Londella",
         "role": "Cambio de Carrera",
         "location": "Atlanta, GA"
       },
       {
-        "quote": "Como padre, quer\u00eda que mis hijos tuvieran acceso a habilidades tecnol\u00f3gicas reales \u2014 no solo juegos. El enfoque intergeneracional de Beyond Code significa que aprendemos juntos como familia.",
-        "name": "Marcus T.",
-        "role": "Padre y Aprendiz",
-        "location": "Miami, FL"
-      },
-      {
-        "quote": "El centro The Forge en mi vecindario lo cambi\u00f3 todo. Pas\u00e9 de buscar empleos en l\u00ednea a construir sitios web en tres meses. Ahora trabajo como freelance a tiempo completo.",
-        "name": "Priya K.",
-        "role": "Graduada de The Forge",
-        "location": "Chicago, IL"
+        "quote": "Antes de Beyond Code Collective, pensaba que era imposible acceder a la tecnolog\u00eda. Ahora la tecnolog\u00eda est\u00e1 al alcance de mis manos. El nacimiento de mi hijo me impuls\u00f3 a tomar la tecnolog\u00eda m\u00e1s en serio y simplemente ir a por ello. Quer\u00eda proveer para mi familia y sumergirme en un inter\u00e9s que ya ten\u00eda.",
+        "name": "Josh",
+        "role": "Aprendiz",
+        "location": "Atlanta, GA"
       }
     ]
   },
