@@ -4,12 +4,12 @@ import { NewsletterProvider } from "@/components/newsletter-modal";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Beyond Code Collective",
+  title: "Privacy Notice — Beyond Code Collective",
   description:
-    "Beyond Code Collective Privacy Policy. Learn how we collect, use, and protect your personal information.",
+    "Beyond Code Collective Privacy Notice. Learn how we collect, use, and protect your personal information.",
 };
 
-export default function PrivacyPolicyPage() {
+export default function PrivacyNoticePage() {
   return (
     <NewsletterProvider>
       <Nav />
@@ -26,433 +26,379 @@ export default function PrivacyPolicyPage() {
               className="mt-4 text-5xl leading-[0.9] tracking-tight text-true-black sm:text-6xl lg:text-7xl"
               style={{ fontFamily: "var(--font-heading)" }}
             >
-              PRIVACY POLICY
+              PRIVACY NOTICE
             </h1>
-            <p className="mt-4 text-sm text-grey-3">Last updated: November 17, 2025</p>
+            <p className="mt-4 text-sm text-grey-3">Last Updated: March 2026</p>
           </header>
 
           <div className="legal-content space-y-8 text-base leading-relaxed text-charcoal">
             <p>
-              Beyond Code Collective, Inc. (&quot;Beyond Code Collective,&quot; &quot;BCC,&quot;
-              &quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) commits to respecting privacy and
-              protecting personal information from students, parents/guardians, educators,
-              volunteers, donors, alumni, and community members. This Privacy Policy explains what
-              personal information is collected, how it&apos;s used and shared, available choices,
-              and contact information for questions. It includes a TCPA &amp; Mobile Messaging Notice
-              governing SMS/text communications.
+              Beyond Code Collective (&quot;BCC,&quot; &quot;we,&quot; &quot;us,&quot; or
+              &quot;our&quot;) respects your privacy. This Privacy Notice (&quot;Notice&quot;)
+              describes the processing of Personal Information (defined below) that is provided,
+              collected, or disclosed while providing our products or services to you
+              (&quot;Services&quot;) and on the websites, applications, and online platforms that link
+              to this Notice (collectively, &quot;Site&quot;). Please read this Notice carefully to
+              understand our policies and practices regarding your Personal Information and how we will
+              treat it.
             </p>
 
-            <div className="rounded-sm border border-grey-2 bg-grey-1 p-6">
-              <p className="text-sm font-semibold text-true-black">Snapshot Summary</p>
-              <p className="mt-2 text-sm text-charcoal">
-                BCC collects information provided directly (workshop registration, donations,
-                volunteering), limited automatic information (device data, analytics), and
-                information from service providers. Data supports educational programs, community
-                services, communications, fundraising, legal compliance, and safety. Users control
-                communication methods, including opting out of marketing emails and text messages
-                anytime (reply STOP to cancel texts). See Sections IV &amp; VIII.
-              </p>
-            </div>
-
             <section>
               <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
-                SCOPE OF THIS POLICY
+                PERSONAL INFORMATION WE COLLECT
               </h2>
               <p>
-                This Privacy Policy applies to BCC-operated websites and online services including
-                our main website at{" "}
-                <a href="https://wearebcc.org" className="text-cobalt underline">
-                  wearebcc.org
-                </a>{" "}
-                and the BCC Learning Platform.
-              </p>
-              <p className="mt-4">
-                This Privacy Policy does not cover offline data practices (paper sign-in sheets at
-                in-person events) except when those data are entered into digital systems. By
-                accessing sites linking to this Privacy Policy, you acknowledge reading and
-                understanding its terms. This Privacy Policy is not a contract and creates no legal
-                rights beyond those required by law; it describes good-faith practices and available
-                choices.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
-                I. PERSONAL INFORMATION WE COLLECT
-              </h2>
-              <p>
-                &quot;Personal Information&quot; means information identifying, relating to,
-                describing, or reasonably associated with an identifiable individual. Categories
-                collected depend on your interaction with BCC (student, parent/guardian, educator,
-                volunteer, donor, etc.).
-              </p>
-
-              <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">
-                A. Information You Provide Directly
-              </h3>
-              <ul className="list-disc space-y-2 pl-6">
-                <li>Name (first, last, preferred name)</li>
-                <li>Date of birth / age range / school grade level</li>
-                <li>Parent or legal guardian name(s) for minors</li>
-                <li>Email address(es)</li>
-                <li>Telephone and/or mobile phone number (including SMS opt-in status)</li>
-                <li>Mailing address / shipping address / region</li>
-                <li>
-                  Program registration details (event selections, waitlists, dietary or accessibility
-                  notes)
-                </li>
-                <li>
-                  Demographic information to measure impact (race/ethnicity, gender identity,
-                  pronouns) — optional
-                </li>
-                <li>
-                  Donation and fundraising information (pledge amounts, dedication info; payment card
-                  data processed directly by payment processor, not stored by BCC)
-                </li>
-                <li>
-                  Account credentials for portals (username, hashed password or SSO token — raw
-                  passwords not visible if SSO used)
-                </li>
-                <li>
-                  Photos, videos, written submissions, code projects, survey responses, and other
-                  uploaded content
-                </li>
-                <li>Communication preferences (email, SMS/text, phone, postal mail)</li>
-              </ul>
-
-              <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">
-                B. Information Collected Automatically
-              </h3>
-              <p>
-                When interacting with Sites, we and third-party analytics providers automatically
-                collect limited Usage Information:
-              </p>
-              <ul className="mt-3 list-disc space-y-2 pl-6">
-                <li>Browser type and settings</li>
-                <li>
-                  Device type, operating system, Device Identifier (IP address; sometimes mobile
-                  advertising ID)
-                </li>
-                <li>Referring/exit pages and Site navigation paths</li>
-                <li>Date/time stamps and pages viewed</li>
-                <li>General location derived from IP address (city/region level; not precise GPS)</li>
-              </ul>
-              <p className="mt-4">
-                BCC currently uses Google Analytics (standard implementation) to understand aggregate
-                Site usage and improve content. Google Analytics uses cookies and similar
-                technologies; see Section I.D for cookie controls.
-              </p>
-
-              <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">
-                C. Information From Other Sources
-              </h3>
-              <ul className="list-disc space-y-2 pl-6">
-                <li>
-                  Event registration partners or learning management tools used for BCC program
-                  signup
-                </li>
-                <li>
-                  Payment / donation processors (transaction confirmation, donation amount, limited
-                  billing details)
-                </li>
-                <li>
-                  Email / SMS communications platforms capturing communication preferences or
-                  engagement data
-                </li>
-                <li>
-                  Social media platforms when interacting with official accounts or using social
-                  log-in
-                </li>
-                <li>
-                  Publicly available sources (school or district websites listing educators
-                  coordinating BCC programming)
-                </li>
-              </ul>
-
-              <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">
-                D. Cookies, Pixels &amp; Similar Technologies
-              </h3>
-              <p>
-                BCC and service providers use first-party and third-party technologies for Site
-                operation, login maintenance, preference storage, traffic measurement, and content
-                usefulness assessment.
-              </p>
-              <ul className="mt-3 list-disc space-y-2 pl-6">
-                <li>
-                  <strong>Cookies:</strong> Small text files enabling core functionality (session
-                  management) and analytics. Browsers typically allow refusing or removing cookies;
-                  some Site features may not work without them.
-                </li>
-                <li>
-                  <strong>Tracking pixels / web beacons:</strong> Small code snippets loading when
-                  pages or emails open; measure engagement or campaign effectiveness.
-                </li>
-                <li>
-                  <strong>Local storage &amp; similar:</strong> Other browser storage mechanisms
-                  remembering settings.
-                </li>
-                <li>
-                  <strong>Mobile identifiers / SDKs:</strong> Currently limited; mobile app additions
-                  will update this section.
-                </li>
-                <li>
-                  <strong>Do Not Track:</strong> Sites currently don&apos;t respond to browser
-                  &quot;Do Not Track&quot; signals. Use controls described above (and Section IV) for
-                  cookie and communication management.
-                </li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
-                II. HOW WE USE PERSONAL INFORMATION
-              </h2>
-              <ul className="list-disc space-y-3 pl-6">
-                <li>
-                  <strong>Program delivery:</strong> Register you or your child for workshops, camps,
-                  events, online programs; manage waitlists; verify eligibility; communicate
-                  logistical details.
-                </li>
-                <li>
-                  <strong>Education content &amp; community engagement:</strong> Enable access to
-                  learning modules, project submissions, collaborative forums, alumni networks,
-                  mentorship features.
-                </li>
-                <li>
-                  <strong>Parent/guardian communications:</strong> Provide required notices, consent
-                  requests, program updates, safety information for minors.
-                </li>
-                <li>
-                  <strong>Donor &amp; supporter relations:</strong> Process and acknowledge
-                  donations; send stewardship updates; invite fundraising participation.
-                </li>
-                <li>
-                  <strong>Marketing &amp; outreach (opt-in):</strong> Send newsletters, program
-                  announcements, event invitations, fundraising appeals you elect to receive.
-                </li>
-                <li>
-                  <strong>Surveys &amp; impact measurement:</strong> Solicit feedback evaluating
-                  educational and community impact; compile anonymized/aggregated statistics for grant
-                  reporting.
-                </li>
-                <li>
-                  <strong>Site operations &amp; security:</strong> Diagnose technical issues, detect
-                  fraud or abuse, maintain platform integrity, secure accounts.
-                </li>
-                <li>
-                  <strong>Legal &amp; compliance:</strong> Meet obligations under applicable laws,
-                  respond to lawful requests, enforce Terms, protect rights, safety, and property.
-                </li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
-                III. HOW WE SHARE PERSONAL INFORMATION
-              </h2>
-              <p className="mb-4 font-semibold">BCC does not sell Personal Information.</p>
-
-              <h3 className="mt-4 mb-3 text-sm font-bold text-true-black">
-                A. Service Providers (Processors)
-              </h3>
-              <p>
-                BCC works with trusted vendors performing services: website hosting, registration and
-                ticketing, learning management systems, payment processing, email &amp; SMS delivery,
-                analytics, customer relationship management, cloud storage, IT/security support.
-                Service providers are contractually required to safeguard Personal Information and use
-                it only for contracted services.
-              </p>
-
-              <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">
-                B. Program and Community Partners
-              </h3>
-              <p>
-                BCC occasionally collaborates with schools, community organizations, sponsors, or
-                corporate partners delivering programming. Where appropriate and permitted, limited
-                participant information may be shared for joint event operation, attendance
-                confirmation, or grant reporting compliance. Personal contact information is not
-                shared with partners for independent marketing without explicit agreement.
-              </p>
-
-              <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">
-                C. Legal, Safety &amp; Organizational Transfers
-              </h3>
-              <p>
-                Personal Information may be disclosed when believed necessary in good faith to: (i)
-                comply with applicable law or legal process; (ii) respond to lawful public authority
-                requests; (iii) enforce Terms, policies, or agreements; (iv) protect rights, privacy,
-                safety, or property of BCC, participants, or others; or (v) in connection with
-                organizational transactions consistent with nonprofit mission.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
-                IV. YOUR PRIVACY CHOICES &amp; ACCESS REQUESTS
-              </h2>
-              <ul className="list-disc space-y-3 pl-6">
-                <li>
-                  <strong>Marketing email opt-out:</strong> Click the unsubscribe link in any BCC
-                  marketing email or email{" "}
-                  <a href="mailto:info@wearebcc.org" className="text-cobalt underline">
-                    info@wearebcc.org
-                  </a>{" "}
-                  with subject line &quot;Unsubscribe.&quot;
-                </li>
-                <li>
-                  <strong>SMS/text opt-out:</strong> Reply STOP to any BCC text message, or see
-                  additional options in Section VIII.
-                </li>
-                <li>
-                  <strong>Access, correction &amp; deletion requests:</strong> Request access to,
-                  correct, or delete Personal Information by emailing{" "}
-                  <a href="mailto:info@wearebcc.org" className="text-cobalt underline">
-                    info@wearebcc.org
-                  </a>
-                  .
-                </li>
-                <li>
-                  <strong>Cookies &amp; analytics controls:</strong> Most browsers allow refusing or
-                  deleting cookies. Google offers an opt-out browser add-on for Google Analytics.
-                </li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
-                V. LINKS TO OTHER WEBSITES &amp; SERVICES
-              </h2>
-              <p>
-                BCC Sites may link to third-party websites, apps, social platforms, or services
-                outside BCC control. Links don&apos;t imply endorsement. Those third parties&apos;
-                privacy practices govern any data provided to them.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
-                VI. CHILDREN&apos;S PRIVACY (COPPA &amp; SIMILAR LAWS)
-              </h2>
-              <p>
-                Many BCC programs serve children and teens. Protecting young people&apos;s privacy is
-                core to the mission.
+                &quot;Personal Information&quot; means information that uniquely identifies, relates to,
+                describes, or is reasonably capable of being associated with or linked to you. The
+                categories of Personal Information we collect may include:
               </p>
               <ul className="mt-3 list-disc space-y-3 pl-6">
                 <li>
-                  <strong>Children under 13:</strong> BCC doesn&apos;t knowingly permit children
-                  under 13 to create independent accounts. A parent or legal guardian must complete
-                  registration and provide required permissions. If BCC learns it collected Personal
-                  Information directly from a child under 13 without required authorization, it will
-                  delete it as soon as practicable.
+                  <strong>Contact Information</strong> &ndash; If you submit an inquiry, register for an
+                  account, submit a donation, or provide information on or through our Site or Services,
+                  we may collect your contact information including your name, mailing address, email
+                  address, and phone number.
                 </li>
                 <li>
-                  <strong>Parental rights:</strong> Parents/guardians may review, correct, or request
-                  deletion of their child&apos;s Personal Information and may refuse further
-                  collection or use. Exercise these rights by emailing{" "}
-                  <a href="mailto:info@wearebcc.org" className="text-cobalt underline">
-                    info@wearebcc.org
-                  </a>{" "}
-                  with &quot;Child Privacy Request&quot; in the subject line.
+                  <strong>Commercial Information</strong> &ndash; If you submit an inquiry, or provide
+                  information on our Site, we may collect commercial information including information
+                  about Services you have shown interest in.
                 </li>
                 <li>
-                  <strong>Minimum necessary:</strong> Only Personal Information reasonably necessary
-                  for a child to participate in an activity is collected.
+                  <strong>Usage Information</strong> &ndash; When you use our Site, we may automatically
+                  record information, including your Internet Protocol address (IP Address), geolocation
+                  of your device, browser type, referring URLs (e.g., the website you visited before
+                  coming to our Site), domain names associated with your internet service provider, and
+                  any other information regarding your interaction with our Site.
+                </li>
+                <li>
+                  <strong>Communication Information</strong> &ndash; We may collect Personal Information
+                  contained within your communications with us via email, social media, telephone, or
+                  otherwise, and in certain cases we may use third-party service providers to do so.
+                  Where permitted by applicable law, we may collect and maintain records of calls and
+                  chats with our agents, representatives, or employees via message, chat, post, or
+                  similar functionality.
+                </li>
+                <li>
+                  <strong>Financial Information</strong> &ndash; If you make a donation, your financial
+                  information will be securely processed by our third-party payment service provider,
+                  and we do not store your full financial account details on our systems.
                 </li>
               </ul>
             </section>
 
             <section>
               <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
-                VII. GLOBAL ACCESS &amp; INTERNATIONAL DATA TRANSFERS
+                HOW WE COLLECT PERSONAL INFORMATION
+              </h2>
+              <ul className="list-disc space-y-3 pl-6">
+                <li>
+                  <strong>Directly From You</strong> &ndash; We collect Personal Information that you
+                  provide to us directly, for example, if you choose to contact us, request information
+                  from us or otherwise utilize our Site or Services.
+                </li>
+                <li>
+                  <strong>From Third Parties</strong> &ndash; We may collect Personal Information from
+                  third parties, including but not limited to business partners, advertising networks,
+                  social networks, data analytics providers, mobile device providers, and Internet or
+                  mobile service providers.
+                </li>
+                <li>
+                  <strong>Through Online Tracking Technologies</strong> &ndash; We use cookies and
+                  similar technologies to collect Personal Information automatically as you navigate our
+                  Site. For additional information regarding our use of these technologies, see the
+                  Cookies and Tracking Technologies section below.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
+                HOW WE USE PERSONAL INFORMATION
               </h2>
               <p>
-                Sites are operated in the United States and governed by U.S. law. If located outside
-                the U.S., be aware that your information may be transferred to, processed, and stored
-                in the United States where data protection laws may differ from your home
-                jurisdiction.
+                To the extent permitted by applicable law, we use Personal Information:
+              </p>
+              <ul className="mt-3 list-disc space-y-3 pl-6">
+                <li>
+                  <strong>To provide and optimize our Site and Services,</strong> such as processing
+                  donations, providing customer service, maintaining or servicing accounts, providing
+                  educational content and resources, maintaining participant and donor records, creating
+                  and maintaining business records, verifying eligibility, and undertaking or providing
+                  similar services.
+                </li>
+                <li>
+                  <strong>For internal research and development,</strong> such as testing, verifying, and
+                  improving the quality of our Services or developing new ones.
+                </li>
+                <li>
+                  <strong>For marketing and advertising,</strong> including using your information to send
+                  you messages, notices, newsletters, surveys, promotions, or event invitations about our
+                  own or third parties&apos; goods and services that may be of interest to you. We also
+                  use Personal Information to conduct interest-based advertising as discussed in the
+                  Cookies and Other Tracking Technologies section below. You can also unsubscribe from
+                  any marketing emails or text messages that we may send you by following the
+                  instructions included in the email or text correspondence.
+                </li>
+                <li>
+                  <strong>For communicating with you,</strong> such as responding to your questions and
+                  comments or notifying you of changes to our Site or Services.
+                </li>
+                <li>
+                  <strong>For legal, security, or safety reasons,</strong> such as protecting our and our
+                  users&apos; safety, property, or rights; complying with legal requirements; enforcing
+                  our terms, conditions, and policies; detecting, preventing, and responding to security
+                  incidents; and protecting against malicious, deceptive, fraudulent, or illegal
+                  activity.
+                </li>
+                <li>
+                  <strong>As part of a corporate transaction,</strong> such as in connection with the
+                  sale of part or all of our assets or business, the acquisition of part or all of
+                  another business or another business&apos; assets, or another corporate transaction,
+                  including bankruptcy.
+                </li>
+                <li>
+                  <strong>To fulfill any other purpose</strong> for which you provide it, including
+                  purposes described when you provide the information or give your consent.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
+                HOW WE DISCLOSE PERSONAL INFORMATION
+              </h2>
+              <p>
+                We may disclose aggregated information about our users, and information that does not
+                identify any individual, without restriction.
+              </p>
+              <p className="mt-4">
+                We may disclose your Personal Information with your consent or in the following
+                circumstances:
+              </p>
+              <ul className="mt-3 list-disc space-y-3 pl-6">
+                <li>
+                  <strong>Employees and Other Personnel</strong> &ndash; We may share Personal
+                  Information with our employees and personnel (such as contractors) who have a need to
+                  know the information for our business purposes.
+                </li>
+                <li>
+                  <strong>Service Providers</strong> &ndash; We disclose your Personal Information with
+                  the service providers that we use to support our business, including but not limited
+                  to, data analytics providers, website hosting providers, and other technology
+                  providers.
+                </li>
+                <li>
+                  <strong>Business Partners</strong> &ndash; We may disclose Personal Information with
+                  trusted business partners. For example, we may disclose your Personal Information with
+                  a company whose products or services we think may be of interest to you or who we
+                  co-sponsor a promotion or service with.
+                </li>
+                <li>
+                  <strong>Ad Tech Companies and Other Providers</strong> &ndash; We may share or make
+                  available limited Personal Information (such as mobile device identifiers) with ad tech
+                  companies and other online service providers. When we share your Personal Information
+                  in this context, we follow applicable legal requirements, which may require that we
+                  provide opt-out rights or other individual rights.
+                </li>
+                <li>
+                  <strong>Legal Obligation or Safety Reasons</strong> &ndash; We may disclose Personal
+                  Information to a third party when we have a good faith belief that such disclosure of
+                  Personal Information is reasonably necessary to (a) satisfy or comply with any
+                  requirement of law, regulation, legal process, or enforceable governmental request, (b)
+                  enforce or investigate a potential violation of any agreement you have with us, (c)
+                  detect, prevent, or otherwise respond to fraud, security or technical concerns, (d)
+                  support auditing and compliance functions, or (e) protect the rights, property, or
+                  safety of BCC, its employees and clients, or the public against harm.
+                </li>
+                <li>
+                  <strong>Merger or Change of Control</strong> &ndash; We may disclose Personal
+                  Information to third parties as necessary if we are involved in a merger, acquisition,
+                  or any other transaction involving a change of control in our business, including but
+                  not limited to, a bankruptcy or similar proceeding. Where legally required, we will
+                  give you notice prior to such disclosure.
+                </li>
+                <li>
+                  <strong>Other</strong> &ndash; We may disclose Personal Information to third parties
+                  when explicitly requested by or consented to by you, or for the purposes for which you
+                  disclosed the Personal Information to us as indicated at the time and point of the
+                  disclosure (or as was obvious at the time and point of disclosure).
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
+                COOKIES AND OTHER TRACKING TECHNOLOGIES
+              </h2>
+              <p>
+                We and our service providers may use cookies and similar technologies to collect usage
+                and browser information about how you use our Site. The technologies we use for this
+                automatic data collection may include cookies and web beacons that permit us to verify
+                system and server integrity and generate statistics around the popularity of certain
+                content. We process the information collected through such technologies, which may
+                include or be combined with Personal Information, to help operate certain features of
+                our Site, to enhance your experience through personalization, and to help us better
+                understand the features of our Site that you and other users are most interested in.
+              </p>
+
+              <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">
+                Website Delivery and Appearance
+              </h3>
+              <p>
+                We may use third-party providers to enable certain customer interaction opportunities,
+                content delivery (like audio or video), or other service capabilities. For example, we
+                partner with companies like YouTube to deliver specific content delivery like audio and
+                video. For more information about how YouTube collects and uses your data, visit
+                Google&apos;s Privacy Policy.
+              </p>
+
+              <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">
+                Website Analytics and Session Replay
+              </h3>
+              <p>
+                We use analytics and session replay services, that use cookies and other technologies
+                that collect your Personal Information, to assist us with analyzing our Site traffic and
+                site usage to optimize, maintain, and secure our Site and inform subsequent business
+                decisions (including, e.g., advertising). These include, but are not limited to, Google
+                Analytics. To learn more about how Google uses data, visit Google&apos;s Privacy Policy
+                and Google&apos;s page on &quot;How Google uses data from sites or apps that use our
+                services.&quot; You may download the Google Analytics Opt-out Browser Add-on for each
+                web browser you use, but this does not prevent the use of other analytics tools. To
+                learn more about Google Analytics cookies, visit Google Analytics Cookie Usage on
+                Websites.
+              </p>
+
+              <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">
+                Interest-Based Advertising
+              </h3>
+              <p>
+                We may also allow or enable third parties to collect Personal Information to provide
+                their interest-based advertising on behalf of our products and services, or their own.
+                Interest-based advertising occurs when advertisements are shown to you based on
+                information collected from your online interactions over time and across multiple
+                websites, devices, or online services that you visit or use.
+              </p>
+              <p className="mt-4">
+                We do not control these third parties&apos; collection or use of your information for
+                these purposes, or the opt-out options they may individually offer you via their terms,
+                conditions, and privacy policies. If you have any questions about an advertisement or
+                other targeted content, you should contact the responsible provider directly.
+              </p>
+
+              <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">
+                Selling Personal Information
+              </h3>
+              <p>
+                While we do not sell Personal Information in exchange for monetary consideration, we do
+                disclose Personal Information for other benefits that could be deemed a &quot;sale&quot;
+                under various data protection laws because it is sometimes broadly defined to include
+                activities such as the delivery of interest-based advertising on websites or allowing
+                third parties to receive certain information, such as cookies, IP address, and/or
+                browsing behavior.
+              </p>
+
+              <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">Cookie Choices</h3>
+              <p>To manage your preferences with respect to these technologies, you can:</p>
+              <ul className="mt-3 list-disc space-y-2 pl-6">
+                <li>
+                  Customize your browser settings to refuse all or some browser cookies, or to alert you
+                  when websites set or access cookies. If you disable certain cookies, please note that
+                  some parts of our Site may not function properly. These settings may be lost and
+                  require reconfiguration if you delete your cookies.
+                </li>
+                <li>
+                  Block the collection and use of your information by online platforms and ad tech
+                  companies for the purpose of serving interest-based advertising by visiting the opt out
+                  pages of the self-regulatory programs of which those companies are members: National
+                  Advertising Initiative and Digital Advertising Alliance. Please note that even if you
+                  opt out of interest-based advertising, you may still see &quot;contextual&quot; ads
+                  which are based on the context of what you are looking at on the websites and pages you
+                  visit.
+                </li>
+                <li>
+                  Review and execute any provider-specific instructions to customize your preferences or
+                  opt-out of certain processing, including interest-based advertising, by third-party
+                  service providers. For example, to opt-out of this type of advertising by Google,
+                  customize your ad preferences, or limit Google&apos;s collection or use of your data,
+                  visit Google&apos;s Safety Center and Google&apos;s Ad Settings and follow
+                  Google&apos;s personalized ad opt-out instructions.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
+                HOW LONG WE KEEP YOUR PERSONAL INFORMATION
+              </h2>
+              <p>
+                We retain your Personal Information for as long as needed: (i) to conduct business with
+                you; (ii) fulfill the purposes outlined in this Notice; and (iii) to comply with our
+                legal obligations, resolve disputes, and enforce any agreements. Criteria we will use to
+                determine how long to retain your Personal Information include the nature and length of
+                our business relationship with you; our legal rights, obligations, and retention
+                requirements; and if we have an ongoing business purpose for retaining your Personal
+                Information.
               </p>
             </section>
 
             <section>
               <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
-                VIII. TCPA &amp; MOBILE MESSAGING TERMS (SMS/TEXT PROGRAMS)
+                LINKS TO THIRD-PARTY WEBSITES
               </h2>
-              <p className="mb-4">
-                This section applies when you provide a mobile telephone number and expressly opt in
-                to receive SMS/text messages from BCC.
-              </p>
-
-              <h3 className="mt-4 mb-3 text-sm font-bold text-true-black">1. How to Opt In</h3>
-              <p>Opt in to BCC text programs by:</p>
-              <ul className="mt-2 list-disc space-y-2 pl-6">
-                <li>
-                  Checking an SMS/text consent box (not pre-checked) on a BCC registration, donation,
-                  or sign-up form and submitting your mobile number;
-                </li>
-                <li>
-                  Texting a published BCC keyword to a BCC short code or 10-digit number; or
-                </li>
-                <li>
-                  Providing written or digital consent in another clearly disclosed manner.
-                </li>
-              </ul>
-
-              <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">
-                2. Program Description &amp; Message Types
-              </h3>
               <p>
-                By opting in, you agree to receive recurring SMS/text messages from BCC that may
-                include program registrations &amp; reminders, waitlist notices &amp; schedule
-                changes, learning prompts, volunteer &amp; mentor opportunities, fundraising and
-                donation appeals, and impact updates.
+                We are not responsible for the practices employed by any websites or services linked to
+                or from our Site, including the information or content contained within them. We
+                encourage you to investigate and ask questions before disclosing Personal Information to
+                third parties, since any Personal Information disclosed will be handled in accordance
+                with the applicable third party&apos;s privacy policy.
               </p>
+              <p className="mt-4">
+                In some cases, we offer links to social media platforms (like Facebook, Instagram,
+                LinkedIn, and X (formerly known as Twitter)) that enable you to easily connect with us
+                or share information on social media. Any content you post via these social media pages
+                is subject to the Terms of Use and Privacy Policies for those platforms.
+              </p>
+            </section>
 
-              <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">
-                3. Message Frequency
-              </h3>
+            <section>
+              <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
+                INTERNATIONAL USE
+              </h2>
               <p>
-                Message frequency varies by program and season. BCC strives to limit messaging to
-                what&apos;s relevant and useful.
+                If you are visiting our Site from outside of the United States, please note that our
+                Site is hosted in the United States. Where permitted by applicable law, we may transfer
+                the Personal Information we collect about you to the United States and other
+                jurisdictions that may not be deemed to provide the same level of data protection as
+                your home country, as necessary for the purposes set out in this Notice.
               </p>
+            </section>
 
-              <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">4. Cost Disclosure</h3>
-              <p>Message &amp; data rates may apply. Check your mobile plan for details.</p>
-
-              <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">
-                5. Automated Technology Disclosure
-              </h3>
+            <section>
+              <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
+                HOW WE PROTECT PERSONAL INFORMATION
+              </h2>
               <p>
-                Some BCC text messages may be sent using automated dialing technology or other
-                automated means. Consent to receive automated texts isn&apos;t required to
-                participate in any BCC program or make a donation.
+                We have implemented commercially reasonable measures designed to secure your Personal
+                Information from accidental loss and from unauthorized access, use, alteration, and
+                disclosure. Unfortunately, the transmission of information via the internet is not
+                completely secure. Despite these efforts to store Personal Information in a secure
+                environment, we cannot guarantee the security of Personal Information during its
+                transmission or its storage on our systems.
               </p>
+            </section>
 
-              <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">
-                6. Opt-Out Instructions
-              </h3>
-              <p>Cancel SMS/text messages from BCC anytime:</p>
-              <ul className="mt-2 list-disc space-y-2 pl-6">
-                <li>Reply STOP to any BCC text;</li>
-                <li>Reply with recognized keywords: QUIT, END, CANCEL, UNSUBSCRIBE;</li>
-                <li>
-                  Email{" "}
-                  <a href="mailto:info@wearebcc.org" className="text-cobalt underline">
-                    info@wearebcc.org
-                  </a>{" "}
-                  with your mobile number and opt-out request; or
-                </li>
-                <li>Update communication preferences in your BCC account (where available).</li>
-              </ul>
-              <p className="mt-3">
-                SMS opt-out requests are honored within 10 business days (typically much faster).
-                Reply-text opt-outs are usually immediate.
-              </p>
-
-              <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">
-                7. Help &amp; Customer Care
-              </h3>
+            <section>
+              <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
+                CHILDREN&apos;S PRIVACY
+              </h2>
               <p>
-                For BCC text help, reply HELP to any BCC message or email{" "}
+                We do not knowingly collect or solicit any Personal Information from children, as
+                defined under applicable law, without verified written parental consent, and we have no
+                actual knowledge of selling Personal Information of minors under 16 years of age. If we
+                learn that we have collected Personal Information from a child, we will promptly take
+                steps to delete that information. If you believe we might have any information from or
+                about a child, please contact us at{" "}
                 <a href="mailto:info@wearebcc.org" className="text-cobalt underline">
                   info@wearebcc.org
                 </a>
@@ -462,54 +408,32 @@ export default function PrivacyPolicyPage() {
 
             <section>
               <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
-                IX. DATA SECURITY &amp; RETENTION
+                CHANGES TO THIS NOTICE
               </h2>
               <p>
-                BCC uses administrative, technical, and physical safeguards protecting Personal
-                Information against loss, misuse, unauthorized access, disclosure, alteration, and
-                destruction. No data transmission or storage system guarantees 100% security. BCC
-                retains Personal Information as long as needed to provide requested services, satisfy
-                legal requirements, resolve disputes, and enforce agreements. When no longer needed,
-                BCC takes steps to delete, de-identify, or aggregate it.
+                Please note that we may modify or update this Notice from time to time, so please
+                review it periodically. If we make material changes to how we treat Personal
+                Information, we will notify you according to applicable law. Unless otherwise indicated,
+                any changes to this Notice will apply immediately upon posting to our Site. You are
+                responsible for periodically visiting our Site and this Notice to check for any changes.
               </p>
             </section>
 
             <section>
               <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
-                X. CHANGES TO THIS PRIVACY POLICY
+                CONTACT US
               </h2>
               <p>
-                BCC may update this Privacy Policy to reflect operational, legal, or regulatory
-                changes. The updated version will be posted on Sites and the &quot;Last updated&quot;
-                date revised above. In some cases, BCC may provide additional notice or request
-                renewed consent as required by law.
+                If you have any questions about our practices or this Notice, please contact us at{" "}
+                <a href="mailto:info@wearebcc.org" className="text-cobalt underline">
+                  info@wearebcc.org
+                </a>
+                .
               </p>
-            </section>
-
-            <section>
-              <h2 className="mb-4 text-sm font-bold tracking-[0.1em] text-true-black" style={{ fontFamily: "var(--font-mono)" }}>
-                XI. CONTACT US
-              </h2>
-              <p>
-                For questions, concerns, or requests regarding this Privacy Policy or privacy
-                practices, contact BCC:
-              </p>
-              <div className="mt-4 space-y-1">
-                <p>
-                  <strong>Email:</strong>{" "}
-                  <a href="mailto:info@wearebcc.org" className="text-cobalt underline">
-                    info@wearebcc.org
-                  </a>
-                </p>
-                <p>
-                  <strong>Mail:</strong> Beyond Code Collective, 1736 Franklin St., Suite 100,
-                  Oakland, CA 94612 USA
-                </p>
-              </div>
             </section>
 
             <p className="mt-12 border-t border-grey-2 pt-8 text-sm text-grey-3">
-              &copy; 2025 Beyond Code Collective, Inc. All Rights Reserved.
+              &copy; 2026 Beyond Code Collective, Inc. All Rights Reserved.
             </p>
           </div>
         </article>
