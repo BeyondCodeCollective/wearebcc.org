@@ -39,6 +39,12 @@ export const PILLARS = [
 
 export const INITIATIVES = [
   {
+    title: "After The Game",
+    description:
+      "A national, cohort-based workforce program for transitioning or recently retired professional and NCAA student-athletes. Bridges the digital skill divide with technical leads teaching live classes, plus wraparound support from corporate readiness to job placement.",
+    contact: "partnerships@wearebcc.org",
+  },
+  {
     title: "The Forge",
     description:
       "Place-based hubs blending tech education, workforce development, and community engagement for learners of all ages — from K-12 to adults looking to upskill or pivot into tech careers.",
@@ -49,12 +55,6 @@ export const INITIATIVES = [
     title: "Beyond Code Catalysts",
     description:
       "Career pathways for 18+ learners combining accessible training, hands-on projects, and career readiness support. No traditional tech background required.",
-    contact: "partnerships@wearebcc.org",
-  },
-  {
-    title: "After The Game",
-    description:
-      "A national, cohort-based workforce program for transitioning or recently retired professional and NCAA student-athletes. Bridges the digital skill divide with technical leads teaching live classes, plus wraparound support from corporate readiness to job placement.",
     contact: "partnerships@wearebcc.org",
   },
 ] as const;
