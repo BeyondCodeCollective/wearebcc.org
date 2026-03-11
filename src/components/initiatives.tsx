@@ -6,12 +6,12 @@ import { useTranslations } from "next-intl";
 import { usePartnerships } from "./partnerships-modal";
 
 const INITIATIVE_IMAGES = [
+  "/images/initiatives/after-the-game.jpg",
   "/images/initiatives/forge.jpg",
   "/images/initiatives/catalysts.jpg",
-  "/images/initiatives/after-the-game.jpg",
 ];
 
-const INITIATIVE_KEYS = ["forge", "catalysts", "afterTheGame"] as const;
+const INITIATIVE_KEYS = ["afterTheGame", "forge", "catalysts"] as const;
 
 export function Initiatives() {
   const { openPartnerships } = usePartnerships();
