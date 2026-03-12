@@ -1,3 +1,4 @@
+import { AnnouncementBanner } from "@/components/announcement-banner";
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
@@ -20,6 +21,7 @@ export default function Home() {
     <QuizProvider>
       <NewsletterProvider>
       <PartnershipsProvider>
+        <AnnouncementBanner />
         <Nav />
         <main>
           <Hero />
