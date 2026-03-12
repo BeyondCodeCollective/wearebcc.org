@@ -12,9 +12,9 @@ const PERSONA_KEYS = [
 ] as const;
 
 const PERSONA_PHOTOS = [
-  { src: "/images/community/community-01.jpg", alt: "Young people learning tech together" },
   { src: "/images/community/community-02.jpg", alt: "Family members engaging with technology" },
   { src: "/images/community/community-03.jpg", alt: "Professional transitioning into tech" },
+  { src: "/images/community/community-01.jpg", alt: "Young people learning tech together" },
   { src: "/images/community/community-04.jpg", alt: "Community leaders and partners collaborating" },
 ];
 
