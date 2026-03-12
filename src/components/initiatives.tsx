@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { usePartnerships } from "./partnerships-modal";
 
 const INITIATIVE_IMAGES = [
@@ -113,14 +114,25 @@ export function Initiatives() {
                   </div>
 
                   <div className="mt-8">
-                    <button
-                      onClick={() => openPartnerships()}
-                      className="inline-flex items-center justify-center gap-2 bg-electric-green px-6 py-3 font-mono text-xs tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80"
-                      style={{ fontFamily: "var(--font-mono)" }}
-                    >
-                      {t("learnMore")}
-                      <span aria-hidden="true">&rarr;</span>
-                    </button>
+                    {key === "afterTheGame" ? (
+                      <Link
+                        href="/after-the-game"
+                        className="inline-flex items-center justify-center gap-2 bg-electric-green px-6 py-3 font-mono text-xs tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80"
+                        style={{ fontFamily: "var(--font-mono)" }}
+                      >
+                        {t("learnMore")}
+                        <span aria-hidden="true">&rarr;</span>
+                      </Link>
+                    ) : (
+                      <button
+                        onClick={() => openPartnerships()}
+                        className="inline-flex items-center justify-center gap-2 bg-electric-green px-6 py-3 font-mono text-xs tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80"
+                        style={{ fontFamily: "var(--font-mono)" }}
+                      >
+                        {t("learnMore")}
+                        <span aria-hidden="true">&rarr;</span>
+                      </button>
+                    )}
                   </div>
                 </div>
               </motion.div>

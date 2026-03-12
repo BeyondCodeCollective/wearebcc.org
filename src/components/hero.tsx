@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ShuffleText } from "./ui/shuffle-text";
+import { Link } from "@/i18n/navigation";
 import { useQuiz } from "./quiz-modal";
 import { useNewsletter } from "./newsletter-modal";
 
@@ -158,6 +159,13 @@ export function Hero() {
                 {t("getStarted")} &rarr;
               </button>
               */}
+              <Link
+                href="/after-the-game"
+                className="bg-cobalt px-8 py-4 text-center font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:bg-cobalt/80 sm:px-10"
+                style={{ fontFamily: "var(--font-mono)" }}
+              >
+                AFTER THE GAME &rarr;
+              </Link>
               <button
                 onClick={() => openNewsletter()}
                 className="border border-off-white/30 px-6 py-4 text-center font-mono text-sm tracking-wider uppercase text-off-white/70 transition-all hover:border-off-white hover:text-off-white sm:px-8"
