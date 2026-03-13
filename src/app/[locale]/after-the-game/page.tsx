@@ -9,6 +9,7 @@ export default function AfterTheGame() {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [interest, setInterest] = useState("");
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
@@ -26,7 +27,7 @@ export default function AfterTheGame() {
           firstName: firstName.trim(),
           email: email.trim(),
           phone: phone.trim(),
-          segment: "Athlete / After The Game",
+          segment: interest ? `ATG - ${interest}` : "ATG - General",
           source: "after-the-game-landing",
         }),
       });
@@ -318,6 +319,25 @@ export default function AfterTheGame() {
                     disabled={loading}
                     className="w-full border border-off-white/20 bg-off-white/5 px-4 py-3 text-off-white placeholder:text-off-white/30 focus:border-cobalt focus:outline-none disabled:opacity-50"
                   />
+                  <select
+                    value={interest}
+                    onChange={(e) => setInterest(e.target.value)}
+                    disabled={loading}
+                    className="w-full border border-off-white/20 bg-off-white/5 px-4 py-3 text-off-white focus:border-cobalt focus:outline-none appearance-none disabled:opacity-50"
+                  >
+                    <option value="" className="bg-true-black">
+                      I want to... (select one)
+                    </option>
+                    <option value="Join" className="bg-true-black">
+                      Join the program
+                    </option>
+                    <option value="Volunteer" className="bg-true-black">
+                      Volunteer
+                    </option>
+                    <option value="Support" className="bg-true-black">
+                      Support / Sponsor
+                    </option>
+                  </select>
                   {error && (
                     <p className="font-mono text-xs text-orange">{error}</p>
                   )}
