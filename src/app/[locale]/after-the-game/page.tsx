@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowLeft } from "@phosphor-icons/react";
+import { ArrowLeft, CheckCircle, UsersThree, Path, ArrowsClockwise } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 
 export default function AfterTheGame() {
@@ -44,15 +44,20 @@ export default function AfterTheGame() {
     }
   };
 
-  // Read features array from translations
-  const features: { title: string; description: string }[] = [];
-  let idx = 0;
-  while (t.has(`features.${idx}.title`)) {
-    features.push({
-      title: t(`features.${idx}.title`),
-      description: t(`features.${idx}.description`),
-    });
-    idx++;
+  // Read stats array
+  const stats: { stat: string; label: string }[] = [];
+  let si = 0;
+  while (t.has(`problemStats.${si}.stat`)) {
+    stats.push({ stat: t(`problemStats.${si}.stat`), label: t(`problemStats.${si}.label`) });
+    si++;
+  }
+
+  // Read program items
+  const programItems: string[] = [];
+  let pi = 0;
+  while (t.has(`programItems.${pi}`)) {
+    programItems.push(t(`programItems.${pi}`));
+    pi++;
   }
 
   return (
@@ -144,8 +149,53 @@ export default function AfterTheGame() {
         </div>
       </section>
 
+      {/* Stats bar */}
+      <section className="border-t border-b border-off-white/10 bg-charcoal px-6 py-10 lg:px-8">
+        <div className="mx-auto grid max-w-4xl grid-cols-2 gap-6 sm:grid-cols-4">
+          {stats.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 * i, duration: 0.5 }}
+              className="text-center"
+            >
+              <p className="font-heading text-[clamp(1.25rem,3vw,2rem)] leading-none text-electric-green">
+                {item.stat}
+              </p>
+              <p
+                className="mt-1 font-mono text-[10px] tracking-wider text-off-white/50"
+                style={{ fontFamily: "var(--font-mono)" }}
+              >
+                {item.label}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* The Bridge — why this exists */}
+      <section className="px-6 py-16 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-base leading-relaxed text-off-white/70 sm:text-lg">
+              {t("problemText")}
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-off-white sm:text-lg">
+              {t("problemText2")}
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Video + text */}
-      <section className="px-6 pb-16 lg:px-8 lg:pb-24">
+      <section className="border-t border-off-white/10 px-6 py-16 lg:px-8 lg:py-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -182,9 +232,9 @@ export default function AfterTheGame() {
         </motion.div>
       </section>
 
-      {/* What to expect */}
-      <section className="border-t border-off-white/10 px-6 py-16 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-4xl">
+      {/* The Program — checklist + image */}
+      <section className="border-t border-off-white/10 bg-charcoal px-6 py-16 lg:px-8 lg:py-24">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -195,41 +245,140 @@ export default function AfterTheGame() {
               className="font-mono text-xs tracking-wider text-electric-green"
               style={{ fontFamily: "var(--font-mono)" }}
             >
-              {t("expectLabel")}
+              {t("programLabel")}
             </p>
             <h2 className="mt-4 font-heading text-[clamp(1.75rem,4vw,3rem)] leading-[0.9] text-off-white">
-              {t("expectHeadline1")}
+              {t("programHeadline1")}
               <br />
-              {t("expectHeadline2")}
+              {t("programHeadline2")}
             </h2>
+
+            <div className="mt-10 space-y-4">
+              {programItems.map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 * i, duration: 0.5 }}
+                  className="flex items-start gap-3"
+                >
+                  <CheckCircle size={20} weight="fill" className="mt-0.5 flex-shrink-0 text-electric-green" />
+                  <p className="text-base leading-relaxed text-off-white/80 sm:text-lg">{item}</p>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
 
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 * i, duration: 0.5 }}
-                className="border border-off-white/10 border-l-cobalt border-l-2 p-6"
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="relative aspect-[4/5] w-full overflow-hidden"
+          >
+            <Image
+              src="/images/atg/excelling.jpg"
+              alt="Confident young professional in a modern workspace"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Classroom + Curriculum + Ecosystem — editorial flow */}
+      <section className="border-t border-off-white/10 px-6 py-16 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-4xl space-y-16">
+          {/* Classroom */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="border-l-2 border-electric-green pl-6"
+          >
+            <div className="flex items-center gap-3">
+              <UsersThree size={28} weight="bold" className="text-electric-green" />
+              <p
+                className="font-mono text-xs tracking-wider text-electric-green"
+                style={{ fontFamily: "var(--font-mono)" }}
               >
-                <h3 className="font-heading text-lg text-off-white">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-off-white/60">
-                  {item.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
+                {t("classroomLabel")}
+              </p>
+            </div>
+            <h3 className="mt-3 font-heading text-[clamp(1.5rem,3vw,2.25rem)] leading-[0.9] text-off-white">
+              {t("classroomHeadline1")}
+              <br />
+              <span className="text-electric-green">{t("classroomHeadline2")}</span>
+            </h3>
+            <p className="mt-4 text-base leading-relaxed text-off-white/70">
+              {t("classroomText")}
+            </p>
+          </motion.div>
+
+          {/* Curriculum */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="border-l-2 border-off-white/30 pl-6"
+          >
+            <div className="flex items-center gap-3">
+              <Path size={28} weight="bold" className="text-off-white" />
+              <p
+                className="font-mono text-xs tracking-wider text-off-white/60"
+                style={{ fontFamily: "var(--font-mono)" }}
+              >
+                {t("curriculumLabel")}
+              </p>
+            </div>
+            <h3 className="mt-3 font-heading text-[clamp(1.5rem,3vw,2.25rem)] leading-[0.9] text-off-white">
+              {t("curriculumHeadline1")}
+              <br />
+              {t("curriculumHeadline2")}
+            </h3>
+            <p className="mt-4 text-base leading-relaxed text-off-white/70">
+              {t("curriculumText")}
+            </p>
+          </motion.div>
+
+          {/* Ecosystem */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="border-l-2 border-electric-green pl-6"
+          >
+            <div className="flex items-center gap-3">
+              <ArrowsClockwise size={28} weight="bold" className="text-electric-green" />
+              <p
+                className="font-mono text-xs tracking-wider text-electric-green"
+                style={{ fontFamily: "var(--font-mono)" }}
+              >
+                {t("ecosystemLabel")}
+              </p>
+            </div>
+            <h3 className="mt-3 font-heading text-[clamp(1.5rem,3vw,2.25rem)] leading-[0.9] text-off-white">
+              {t("ecosystemHeadline1")}
+              <br />
+              <span className="text-electric-green">{t("ecosystemHeadline2")}</span>
+            </h3>
+            <p className="mt-4 text-base leading-relaxed text-off-white/70">
+              {t("ecosystemText")}
+            </p>
+          </motion.div>
         </div>
       </section>
 
       {/* Signup form */}
       <section
         id="signup"
-        className="border-t border-off-white/10 px-6 py-16 lg:px-8 lg:py-24"
+        className="border-t border-off-white/10 bg-charcoal px-6 py-16 lg:px-8 lg:py-24"
       >
         <div className="mx-auto max-w-md">
           <motion.div
@@ -251,7 +400,7 @@ export default function AfterTheGame() {
             ) : (
               <>
                 <p
-                  className="font-mono text-xs tracking-wider text-cobalt"
+                  className="font-mono text-xs tracking-wider text-electric-green"
                   style={{ fontFamily: "var(--font-mono)" }}
                 >
                   {t("formLabel")}
@@ -259,7 +408,7 @@ export default function AfterTheGame() {
                 <h2 className="mt-4 font-heading text-[clamp(1.75rem,4vw,2.5rem)] leading-[0.9] text-off-white">
                   {t("formHeadline1")}
                   <br />
-                  <span className="text-cobalt">{t("formHeadline2")}</span>
+                  <span className="text-electric-green">{t("formHeadline2")}</span>
                 </h2>
                 <p className="mt-4 text-sm text-off-white/60">
                   {t("formDescription")}
