@@ -208,163 +208,84 @@ export default function TheForge() {
         </div>
       </section>
 
-      {/* ─── A Third Place for Tech — intro ─── */}
-      <section className="px-6 py-16 lg:px-8 lg:py-24">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p
-              className="font-mono text-xs tracking-wider text-cobalt"
-              style={{ fontFamily: "var(--font-mono)" }}
-            >
-              {t("whatLabel")}
-            </p>
-            <h2 className="mt-4 font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.85] text-true-black">
-              {t("whatHeadline1")}
-              <br />
-              <span className="text-cobalt">{t("whatHeadline2")}</span>
-            </h2>
-            <p className="mt-6 text-base leading-relaxed text-grey-3 sm:text-lg">
-              {t("whatText")}
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative aspect-[4/3] w-full overflow-hidden"
-          >
-            <Image
-              src="/images/community/community-01.jpg"
-              alt="AI Fundamentals Fellowship classroom at The Forge"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-true-black/30 via-transparent to-transparent" />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* ─── Founder quote ─── */}
-      <section className="bg-cobalt px-6 py-12 lg:px-8 lg:py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mx-auto max-w-4xl text-center"
-        >
-          <p className="text-lg leading-relaxed italic text-off-white/90 sm:text-xl lg:text-2xl">
-            &ldquo;{t("quoteText")}&rdquo;
-          </p>
-          <p
-            className="mt-6 font-mono text-xs tracking-wider text-off-white/60"
-            style={{ fontFamily: "var(--font-mono)" }}
-          >
-            {t("quoteAuthor")} &mdash; {t("quoteRole")}
-          </p>
-        </motion.div>
-      </section>
-
-      {/* ─── Photo Gallery ─── */}
-      <section className="bg-true-black px-6 py-16 lg:px-8 lg:py-20">
-        <div className="mx-auto max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p
-              className="font-mono text-xs tracking-wider text-cobalt"
-              style={{ fontFamily: "var(--font-mono)" }}
-            >
-              {t("galleryLabel")}
-            </p>
-            <h2 className="mt-4 font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.85] text-off-white">
-              {t("galleryHeadline1")}
-              <br />
-              <span className="text-cobalt">{t("galleryHeadline2")}</span>
-            </h2>
-          </motion.div>
-        </div>
-
-        <div className="mt-12 overflow-x-auto scrollbar-hide">
-          <div className="flex gap-4 px-6 lg:px-8" style={{ width: "max-content" }}>
-            {GALLERY_IMAGES.map((img, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 * i, duration: 0.5 }}
-                className="relative h-[280px] w-[400px] flex-shrink-0 overflow-hidden sm:h-[340px] sm:w-[480px]"
-              >
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover transition-transform duration-500 hover:scale-105"
-                  sizes="480px"
-                />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ─── The Forge: ATL — residency / programming / how it works ─── */}
       <section id="programming" className="px-6 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p
-              className="font-mono text-xs tracking-wider text-cobalt"
-              style={{ fontFamily: "var(--font-mono)" }}
+          {/* Intro — two-column with image */}
+          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
             >
-              {t("atlLabel")}
-            </p>
-            <h2 className="mt-4 font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.85] text-true-black">
-              {t("atlHeadline1")}
-              <br />
-              <span className="text-cobalt">{t("atlHeadline2")}</span>
-            </h2>
-            <p className="mt-6 max-w-3xl text-base leading-relaxed text-grey-3 sm:text-lg">
-              {t("atlText")}
-            </p>
-          </motion.div>
+              <p
+                className="font-mono text-xs tracking-wider text-cobalt"
+                style={{ fontFamily: "var(--font-mono)" }}
+              >
+                {t("atlLabel")}
+              </p>
+              <h2 className="mt-4 font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.85] text-true-black">
+                {t("atlHeadline1")}
+                <br />
+                <span className="text-cobalt">{t("atlHeadline2")}</span>
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-grey-3 sm:text-lg">
+                {t("atlText")}
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="relative aspect-[4/3] w-full overflow-hidden"
+            >
+              <Image
+                src="/images/community/community-01.jpg"
+                alt="AI Fundamentals Fellowship classroom at The Forge"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-true-black/30 via-transparent to-transparent" />
+            </motion.div>
+          </div>
 
           {/* ATL residency details */}
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: <Buildings size={24} weight="bold" />, text: t("atlPartner") },
-              { icon: <Clock size={24} weight="bold" />, text: t("atlSchedule") },
-              { icon: <CalendarBlank size={24} weight="bold" />, text: t("atlDates") },
-              { icon: <MapPin size={24} weight="bold" />, text: t("atlLocation") },
-            ].map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 * i, duration: 0.5 }}
-                className="border border-true-black/10 bg-grey-1 p-6"
-              >
-                <div className="text-cobalt">{item.icon}</div>
-                <p className="mt-3 text-sm leading-relaxed text-grey-3">{item.text}</p>
-              </motion.div>
-            ))}
+              { icon: <Buildings size={24} weight="bold" />, text: t("atlPartner"), href: undefined },
+              { icon: <Clock size={24} weight="bold" />, text: t("atlSchedule"), href: undefined },
+              { icon: <CalendarBlank size={24} weight="bold" />, text: t("atlDates"), href: undefined },
+              { icon: <MapPin size={24} weight="bold" />, text: t("atlLocation"), href: "https://www.google.com/maps/search/Georgia+Tech+ATDC+Atlanta+GA" },
+            ].map((item, i) => {
+              const content = (
+                <>
+                  <div className="text-cobalt">{item.icon}</div>
+                  <p className={`mt-3 text-sm leading-relaxed text-grey-3 ${item.href ? "underline decoration-cobalt/30 underline-offset-2" : ""}`}>{item.text}</p>
+                </>
+              );
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 * i, duration: 0.5 }}
+                  className="border border-true-black/10 bg-grey-1 p-6"
+                >
+                  {item.href ? (
+                    <a href={item.href} target="_blank" rel="noopener noreferrer" className="block transition-opacity hover:opacity-70">
+                      {content}
+                    </a>
+                  ) : (
+                    content
+                  )}
+                </motion.div>
+              );
+            })}
           </div>
 
           {/* Programming types */}
@@ -499,61 +420,96 @@ export default function TheForge() {
         </div>
       </section>
 
-      {/* ─── Built for Everyone ─── */}
-      <section className="bg-grey-1 px-6 py-16 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+      {/* ─── Founder quote ─── */}
+      <section className="bg-cobalt px-6 py-12 lg:px-8 lg:py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="mx-auto max-w-4xl text-center"
+        >
+          <p className="text-lg leading-relaxed italic text-off-white/90 sm:text-xl lg:text-2xl">
+            &ldquo;{t("quoteText")}&rdquo;
+          </p>
+          <p
+            className="mt-6 font-mono text-xs tracking-wider text-off-white/60"
+            style={{ fontFamily: "var(--font-mono)" }}
           >
-            <p
-              className="font-mono text-xs tracking-wider text-cobalt"
-              style={{ fontFamily: "var(--font-mono)" }}
-            >
-              {t("pillarsLabel")}
-            </p>
-            <h2 className="mt-4 font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.85] text-true-black">
-              {t("pillarsHeadline1")}
-              <br />
-              <span className="text-cobalt">{t("pillarsHeadline2")}</span>
-            </h2>
-          </motion.div>
+            {t("quoteAuthor")} &mdash; {t("quoteRole")}
+          </p>
+        </motion.div>
+      </section>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {pillars.map((pillar, i) => (
+      {/* ─── Our Community + Built for Everyone ─── */}
+      <section className="bg-true-black px-6 py-16 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
+            {/* Left — headline */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-2"
+            >
+              <p
+                className="font-mono text-xs tracking-wider text-cobalt"
+                style={{ fontFamily: "var(--font-mono)" }}
+              >
+                {t("pillarsLabel")}
+              </p>
+              <h2 className="mt-4 font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.85] text-off-white">
+                {t("pillarsHeadline1")}
+                <br />
+                <span className="text-cobalt">{t("pillarsHeadline2")}</span>
+              </h2>
+            </motion.div>
+
+            {/* Right — pillars as stacked rows */}
+            <div className="space-y-8 lg:col-span-3">
+              {pillars.map((pillar, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 * i, duration: 0.5 }}
+                  className="flex gap-5 border-l-2 border-cobalt pl-6"
+                >
+                  <div className="shrink-0 pt-0.5 text-cobalt">{pillarIcons[i]}</div>
+                  <div>
+                    <h3 className="font-heading text-lg text-off-white">{pillar.title}</h3>
+                    <p className="mt-1 text-sm leading-relaxed text-off-white/60">{pillar.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Photo gallery */}
+        <div className="mt-16 overflow-x-auto scrollbar-hide">
+          <div className="flex gap-4 px-6 lg:px-8" style={{ width: "max-content" }}>
+            {GALLERY_IMAGES.map((img, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 * i, duration: 0.5 }}
-                className="border border-grey-2 bg-off-white p-6"
+                className="relative h-[280px] w-[400px] flex-shrink-0 overflow-hidden sm:h-[340px] sm:w-[480px]"
               >
-                <div className="text-cobalt">{pillarIcons[i]}</div>
-                <h3 className="mt-3 font-heading text-lg text-true-black">{pillar.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-grey-3">{pillar.description}</p>
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                  sizes="480px"
+                />
               </motion.div>
             ))}
           </div>
-
-          {/* Community image strip */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="relative mt-12 aspect-[21/9] w-full overflow-hidden"
-          >
-            <Image
-              src="/images/community/community-02.jpg"
-              alt="Young Beyond Code community members"
-              fill
-              className="object-cover object-top"
-              sizes="100vw"
-            />
-          </motion.div>
         </div>
       </section>
 
