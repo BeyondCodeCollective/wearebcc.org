@@ -54,26 +54,48 @@
   "atg": {
     "back": "WEAREBCC.ORG",
     "nextCohort": "NEXT COHORT: SUMMER 2026",
-    "initiative": "A BEYOND CODE COLLECTIVE INITIATIVE",
-    "headline1": "YOUR CAREER AFTER",
-    "headline2": "THE FINAL WHISTLE",
-    "description": "A national, cohort-based workforce program for transitioning or recently-retired professional and NCAA student-athletes. Explicitly designed for those who are not long-term earners and need structured support to design and enter a second career.",
+    "initiative": "A BEYOND CODE COLLECTIVE ANCHOR PROGRAM",
+    "headline1": "FROM SPORTS",
+    "headline2": "TO TECH",
+    "description": "After The Game is a national, cohort-based workforce program for transitioning professional and NCAA student-athletes. It is explicitly designed for those who are not long-term earners and need structured support to design and enter a second career. This structured program bridges the \u201cdigital skill divide\u201d with technical leaders teaching live classes and building curricula, and a community providing wraparound support that covers everything from corporate readiness to job placement.",
     "joinWaitlist": "JOIN THE WAITLIST",
     "videoLabel": "HEAR FROM OUR COMMUNITY",
     "videoHeadline1": "REAL STORIES,",
     "videoHeadline2": "REAL IMPACT",
     "videoDescription": "Hear directly from athletes who are building their next chapter through After The Game. The transition doesn't have to be a solo journey.",
-    "expectLabel": "WHAT TO EXPECT",
-    "expectHeadline1": "BUILT FOR ATHLETES,",
-    "expectHeadline2": "NOT THE TECH INDUSTRY",
-    "features": [
-      { "title": "Cohort-Based", "description": "Learn alongside fellow athletes who understand the transition. No solo online courses \u2014 real accountability, real peers." },
-      { "title": "Career Design", "description": "Not just job skills \u2014 a structured path to discover, plan, and launch your second career with wraparound support." },
-      { "title": "Live Instruction", "description": "Technical leads teaching live classes, not pre-recorded videos. Real questions, real feedback, real progress." },
-      { "title": "Job Placement", "description": "From corporate readiness to interview prep to direct employer connections. We don't stop at the certificate." },
-      { "title": "Digital Skills", "description": "Bridge the digital skill divide with practical tech training \u2014 from digital fluency to data, automation, and AI." },
-      { "title": "National Reach", "description": "Designed to serve athletes across the country. Your city, your schedule, your next chapter." }
+    "problemLabel": "THE REALITY",
+    "problemHeadline1": "WHAT COMES",
+    "problemHeadline2": "NEXT?",
+    "problemText": "Less than 2 percent of NCAA student-athletes go on to play professionally, and for those who do, the clock is already ticking. NFL careers last an average of 3\u20135 years; NBA careers, 4.5 years; and MLB, 5 years. When it comes to deciding what\u2019s next, most athletes are left to figure it out alone.",
+    "problemText2": "This is not because they lack discipline, motivation or drive. What they lack is a bridge: the knowledge, context, and guidance to translate their skills into the next career they want.",
+    "problemStats": [
+      { "stat": "<2%", "label": "of NCAA athletes go pro" },
+      { "stat": "3\u20135 yrs", "label": "average NFL career" },
+      { "stat": "4.5 yrs", "label": "average NBA career" },
+      { "stat": "5 yrs", "label": "average MLB career" }
     ],
+    "programLabel": "THE PROGRAM",
+    "programHeadline1": "THIS IS WHERE",
+    "programHeadline2": "AFTER THE GAME COMES IN",
+    "programItems": [
+      "Early, advisory coaching to clarify direction",
+      "A shared workforce and digital foundations core",
+      "Interest-aligned technical specialization",
+      "Wraparound support to sustain participation",
+      "Employer-connected placement, including sports-adjacent roles"
+    ],
+    "classroomLabel": "A PARTICIPANT-LED CLASSROOM MODEL",
+    "classroomHeadline1": "FACILITATORS,",
+    "classroomHeadline2": "NOT LECTURERS",
+    "classroomText": "After The Game uses a \u201cflipped-classroom\u201d model using peer-based milestones and hands-on coding labs that respect the athlete\u2019s learning style: facilitators over lecturers and team-based competition. Participants are selected based on proven motivation to build a durable post-sports career, demonstrated through a pre-program interview and selection process.",
+    "curriculumLabel": "THE CURRICULUM",
+    "curriculumHeadline1": "6\u20139 MONTHS.",
+    "curriculumHeadline2": "PART-TIME. FULL IMPACT.",
+    "curriculumText": "After The Game is a part-time, 6\u20139 month program that begins with a skills assessment to determine what technical path is best aligned to the individual to ensure higher likelihood of completion and satisfaction. The curriculum goes beyond technical training, integrating wraparound programming such as workplace fundamentals to support productivity tools literacy (e.g. Zoom, Slack, AI fundamentals), professional communication, financial literacy, and mental health support to navigate the psychological identity shift from \u201cElite Athlete\u201d to \u201cTech Innovator.\u201d",
+    "ecosystemLabel": "THE ECOSYSTEM",
+    "ecosystemHeadline1": "A TWO-SIDED",
+    "ecosystemHeadline2": "VALUE LOOP",
+    "ecosystemText": "We\u2019re building a two-sided ecosystem, a value loop that delivers workforce-ready talent to employers while providing athletes with a clear roadmap to high-trajectory careers: upon completion of the program, participants will be placed in paid externships and apprenticeships with partner employers for 3\u20136 months.",
     "formLabel": "SUMMER 2026 WAITLIST",
     "formHeadline1": "JOIN THE NEXT",
     "formHeadline2": "COHORT",
@@ -89,6 +111,124 @@
     "submit": "JOIN THE WAITLIST",
     "successTitle": "YOU'RE IN",
     "successMessage": "We'll be in touch when enrollment opens.",
+    "error": "Something went wrong"
+  },
+  "forge": {
+    "back": "WEAREBCC.ORG",
+    "initiative": "A BEYOND CODE COLLECTIVE INITIATIVE",
+    "headline1": "WHERE INNOVATION",
+    "headline2": "MEETS COMMUNITY",
+    "description": "The Forge is a network of intergenerational, site-specific hubs that blend technology education, community engagement, and workforce development under one roof. A true \u201cthird place\u201d that is neither school nor work, where middle schoolers sit alongside mid-career professionals, and families with their kids, as they explore AI and emerging technology together.",
+    "learnMore": "EXPLORE PROGRAMMING",
+    "viewCalendar": "VIEW FULL CALENDAR",
+    "eventbriteCta": "BROWSE UPCOMING EVENTS",
+    "quoteText": "At Beyond Code, we believe that everyone should have a role in shaping tomorrow\u2019s technology. The Forge allows us to not only give people access to tools, but the community support and space to explore these tools, so they are empowered to confidently shape the future of technology and work.",
+    "quoteAuthor": "Cristina Mancini",
+    "quoteRole": "Founder & CEO, Beyond Code Collective",
+    "whatLabel": "WHAT IS THE FORGE",
+    "whatHeadline1": "A THIRD PLACE",
+    "whatHeadline2": "FOR TECH",
+    "whatText": "The Forge is designed to be a safe space to ask questions without fear or shame. Each Forge center delivers culturally responsive programming to its community, serving K-12 students and adults seeking pathways into tech-driven careers.",
+    "pillarsLabel": "THE MODEL",
+    "pillarsHeadline1": "BUILT FOR",
+    "pillarsHeadline2": "EVERYONE",
+    "pillars": [
+      {
+        "title": "Intergenerational",
+        "description": "Middle schoolers alongside mid-career professionals and families. Every generation learns together."
+      },
+      {
+        "title": "Culturally Responsive",
+        "description": "Designed in collaboration with local stakeholders. Programming shaped by and for the community it serves."
+      },
+      {
+        "title": "AI & Emerging Tech",
+        "description": "Expanding opportunity in AI, data literacy, automation, and the technologies defining the future of work."
+      },
+      {
+        "title": "Free & Accessible",
+        "description": "Free programming offered on a regular schedule. No barriers to entry, no prerequisites required."
+      }
+    ],
+    "programmingLabel": "PROGRAMMING",
+    "programmingHeadline1": "WHAT HAPPENS",
+    "programmingHeadline2": "AT THE FORGE",
+    "programmingTypes": [
+      {
+        "title": "Lunch & Learn",
+        "description": "Open, one-time sessions on topics like AI, data literacy, and digital tools. No commitment required \u2014 just show up, learn, and connect.",
+        "format": "One-time event",
+        "audience": "All ages welcome"
+      },
+      {
+        "title": "Cohort Programs",
+        "description": "Multi-week structured courses like AI Fundamentals. Limited seats, deeper learning, hands-on projects, and a dedicated instructor-led experience.",
+        "format": "4-week cohort",
+        "audience": "Application required"
+      }
+    ],
+    "programmingNote": "No preparation needed \u2014 you don\u2019t need to bring a computer. Just come with an open mind and ready to learn.",
+    "howItWorksLabel": "HOW IT WORKS",
+    "howItWorksHeadline1": "FROM DISCOVERY",
+    "howItWorksHeadline2": "TO PARTICIPATION",
+    "howItWorksSteps": [
+      {
+        "step": "01",
+        "title": "Discover",
+        "description": "Find The Forge through our website, a friend, or community outreach."
+      },
+      {
+        "step": "02",
+        "title": "Browse the Calendar",
+        "description": "View upcoming Lunch & Learns and cohort programs on our Eventbrite calendar."
+      },
+      {
+        "step": "03",
+        "title": "RSVP",
+        "description": "Register for free through Eventbrite. Cohort programs have limited seats \u2014 sign up early."
+      },
+      {
+        "step": "04",
+        "title": "Show Up & Learn",
+        "description": "Attend in person at Georgia Tech ATDC. No prep needed, just bring yourself."
+      }
+    ],
+    "atlLabel": "THE FORGE: ATL",
+    "atlHeadline1": "FIRST RESIDENCY",
+    "atlHeadline2": "ATLANTA, GEORGIA",
+    "atlText": "The Forge: ATL is hosted within North Star AI Labs at Georgia Tech\u2019s Advanced Technology Development Center (ATDC). Free programming is offered two days a week, running from March 2026 through August 2026.",
+    "atlPartner": "In partnership with Georgia Tech\u2019s ATDC",
+    "atlSchedule": "Two days a week, free programming",
+    "atlDates": "March 2026 \u2013 August 2026",
+    "atlLocation": "North Star AI Labs at Georgia Tech ATDC",
+    "galleryLabel": "THE FORGE IN ACTION",
+    "galleryHeadline1": "OUR",
+    "galleryHeadline2": "COMMUNITY",
+    "openingLabel": "[07] LAUNCH EVENT",
+    "openingHeadline1": "THE FORGE",
+    "openingHeadline2": "OPENING",
+    "openingText": "The Forge hosted its opening event on March 9, convening some of Atlanta\u2019s leading educators, technologists, and community leaders.",
+    "panelists": [
+      { "name": "Rep. Kim Schofield", "role": "Georgia Representative" },
+      { "name": "Darrell Booker", "role": "Technology & Social Impact Strategist" },
+      { "name": "Ram\u00f3n Clemente", "role": "Professional Basketball Player" }
+    ],
+    "formLabel": "GET INVOLVED",
+    "formHeadline1": "JOIN THE",
+    "formHeadline2": "FORGE",
+    "formDescription": "Interested in attending The Forge: ATL, volunteering, or partnering? Sign up and we\u2019ll keep you in the loop.",
+    "firstName": "First Name",
+    "email": "Email",
+    "phone": "Phone (optional)",
+    "interestPlaceholder": "I want to... (select one)",
+    "interestAttend": "Attend programming",
+    "interestVolunteer": "Volunteer",
+    "interestPartner": "Partner / Sponsor",
+    "interestEnroll": "Enroll my child",
+    "submitting": "JOINING...",
+    "submit": "GET INVOLVED",
+    "successTitle": "YOU'RE IN",
+    "successMessage": "We\u2019ll be in touch with programming details and updates.",
     "error": "Something went wrong"
   },
   "segments": {

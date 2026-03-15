@@ -41,7 +41,7 @@ export const INITIATIVES = [
   {
     title: "After The Game",
     description:
-      "A national, cohort-based workforce program for transitioning or recently retired professional and NCAA student-athletes. Bridges the digital skill divide with technical leads teaching live classes, plus wraparound support from corporate readiness to job placement.",
+      "A national, cohort-based workforce program for transitioning professional and NCAA student-athletes. Bridges the digital skill divide with technical leads teaching live classes, plus wraparound support from corporate readiness to job placement.",
     contact: "partnerships@wearebcc.org",
   },
   {

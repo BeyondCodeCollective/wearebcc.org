@@ -54,26 +54,48 @@
   "atg": {
     "back": "WEAREBCC.ORG",
     "nextCohort": "PR\u00d3XIMA COHORTE: VERANO 2026",
-    "initiative": "UNA INICIATIVA DE BEYOND CODE COLLECTIVE",
-    "headline1": "TU CARRERA DESPU\u00c9S",
-    "headline2": "DEL PITAZO FINAL",
-    "description": "Un programa nacional de fuerza laboral basado en cohortes para atletas profesionales y universitarios (NCAA) en transici\u00f3n o reci\u00e9n retirados. Dise\u00f1ado expl\u00edcitamente para quienes no son asalariados a largo plazo y necesitan apoyo estructurado para dise\u00f1ar e ingresar a una segunda carrera.",
+    "initiative": "UN PROGRAMA ANCLA DE BEYOND CODE COLLECTIVE",
+    "headline1": "DEL DEPORTE",
+    "headline2": "A LA TECNOLOG\u00cdA",
+    "description": "After The Game es un programa nacional de fuerza laboral basado en cohortes para atletas profesionales y universitarios (NCAA) en transici\u00f3n. Est\u00e1 dise\u00f1ado expl\u00edcitamente para quienes no son asalariados a largo plazo y necesitan apoyo estructurado para dise\u00f1ar e ingresar a una segunda carrera. Este programa estructurado cierra la \u201cbrecha de habilidades digitales\u201d con l\u00edderes t\u00e9cnicos que ense\u00f1an clases en vivo y desarrollan curr\u00edculos, y una comunidad que brinda apoyo integral que cubre todo, desde la preparaci\u00f3n corporativa hasta la colocaci\u00f3n laboral.",
     "joinWaitlist": "\u00daNETE A LA LISTA DE ESPERA",
     "videoLabel": "ESCUCHA A NUESTRA COMUNIDAD",
     "videoHeadline1": "HISTORIAS REALES,",
     "videoHeadline2": "IMPACTO REAL",
     "videoDescription": "Escucha directamente a atletas que est\u00e1n construyendo su pr\u00f3ximo cap\u00edtulo a trav\u00e9s de After The Game. La transici\u00f3n no tiene que ser un viaje en solitario.",
-    "expectLabel": "QU\u00c9 ESPERAR",
-    "expectHeadline1": "DISE\u00d1ADO PARA ATLETAS,",
-    "expectHeadline2": "NO PARA LA INDUSTRIA TECNOL\u00d3GICA",
-    "features": [
-      { "title": "Basado en Cohortes", "description": "Aprende junto a otros atletas que entienden la transici\u00f3n. Sin cursos en l\u00ednea solitarios \u2014 responsabilidad real, compa\u00f1eros reales." },
-      { "title": "Dise\u00f1o de Carrera", "description": "No solo habilidades laborales \u2014 un camino estructurado para descubrir, planificar y lanzar tu segunda carrera con apoyo integral." },
-      { "title": "Instrucci\u00f3n en Vivo", "description": "L\u00edderes t\u00e9cnicos ense\u00f1ando clases en vivo, no videos pregrabados. Preguntas reales, retroalimentaci\u00f3n real, progreso real." },
-      { "title": "Colocaci\u00f3n Laboral", "description": "Desde preparaci\u00f3n corporativa hasta pr\u00e1ctica de entrevistas y conexiones directas con empleadores. No nos detenemos en el certificado." },
-      { "title": "Habilidades Digitales", "description": "Cierra la brecha de habilidades digitales con capacitaci\u00f3n t\u00e9cnica pr\u00e1ctica \u2014 desde alfabetizaci\u00f3n digital hasta datos, automatizaci\u00f3n e IA." },
-      { "title": "Alcance Nacional", "description": "Dise\u00f1ado para servir a atletas en todo el pa\u00eds. Tu ciudad, tu horario, tu pr\u00f3ximo cap\u00edtulo." }
+    "problemLabel": "LA REALIDAD",
+    "problemHeadline1": "\u00bfQU\u00c9 VIENE",
+    "problemHeadline2": "DESPU\u00c9S?",
+    "problemText": "Menos del 2 por ciento de los atletas universitarios NCAA llegan a jugar profesionalmente, y para quienes lo logran, el reloj ya est\u00e1 corriendo. Las carreras en la NFL duran en promedio de 3 a 5 a\u00f1os; en la NBA, 4.5 a\u00f1os; y en la MLB, 5 a\u00f1os. Cuando llega el momento de decidir qu\u00e9 sigue, la mayor\u00eda de los atletas deben resolverlo solos.",
+    "problemText2": "No es porque les falte disciplina, motivaci\u00f3n o determinaci\u00f3n. Lo que les falta es un puente: el conocimiento, el contexto y la gu\u00eda para traducir sus habilidades en la pr\u00f3xima carrera que desean.",
+    "problemStats": [
+      { "stat": "<2%", "label": "de atletas NCAA llegan a profesionales" },
+      { "stat": "3\u20135 a\u00f1os", "label": "carrera promedio NFL" },
+      { "stat": "4.5 a\u00f1os", "label": "carrera promedio NBA" },
+      { "stat": "5 a\u00f1os", "label": "carrera promedio MLB" }
     ],
+    "programLabel": "EL PROGRAMA",
+    "programHeadline1": "AQU\u00cd ES DONDE",
+    "programHeadline2": "AFTER THE GAME INTERVIENE",
+    "programItems": [
+      "Coaching temprano y asesor\u00eda para clarificar la direcci\u00f3n",
+      "Un n\u00facleo compartido de fuerza laboral y fundamentos digitales",
+      "Especializaci\u00f3n t\u00e9cnica alineada a intereses",
+      "Apoyo integral para sostener la participaci\u00f3n",
+      "Colocaci\u00f3n conectada con empleadores, incluyendo roles adyacentes al deporte"
+    ],
+    "classroomLabel": "UN MODELO DE AULA LIDERADO POR PARTICIPANTES",
+    "classroomHeadline1": "FACILITADORES,",
+    "classroomHeadline2": "NO PROFESORES",
+    "classroomText": "After The Game utiliza un modelo de \u201caula invertida\u201d con hitos basados en pares y laboratorios pr\u00e1cticos de programaci\u00f3n que respetan el estilo de aprendizaje del atleta: facilitadores en lugar de profesores y competencia en equipo. Los participantes son seleccionados en base a su motivaci\u00f3n comprobada para construir una carrera duradera post-deportiva, demostrada a trav\u00e9s de un proceso de entrevista y selecci\u00f3n previo al programa.",
+    "curriculumLabel": "EL CURR\u00cdCULO",
+    "curriculumHeadline1": "6\u20139 MESES.",
+    "curriculumHeadline2": "MEDIO TIEMPO. IMPACTO TOTAL.",
+    "curriculumText": "After The Game es un programa de medio tiempo de 6 a 9 meses que comienza con una evaluaci\u00f3n de habilidades para determinar qu\u00e9 camino t\u00e9cnico est\u00e1 mejor alineado con el individuo para asegurar una mayor probabilidad de finalizaci\u00f3n y satisfacci\u00f3n. El curr\u00edculo va m\u00e1s all\u00e1 de la capacitaci\u00f3n t\u00e9cnica, integrando programaci\u00f3n integral como fundamentos del lugar de trabajo para apoyar la alfabetizaci\u00f3n en herramientas de productividad (ej. Zoom, Slack, fundamentos de IA), comunicaci\u00f3n profesional, alfabetizaci\u00f3n financiera y apoyo de salud mental para navegar el cambio de identidad psicol\u00f3gica de \u201cAtleta de \u00c9lite\u201d a \u201cInnovador Tecnol\u00f3gico.\u201d",
+    "ecosystemLabel": "EL ECOSISTEMA",
+    "ecosystemHeadline1": "UN CICLO DE VALOR",
+    "ecosystemHeadline2": "BILATERAL",
+    "ecosystemText": "Estamos construyendo un ecosistema bilateral, un ciclo de valor que entrega talento listo para el mercado laboral a los empleadores mientras proporciona a los atletas un camino claro hacia carreras de alta trayectoria: al completar el programa, los participantes ser\u00e1n colocados en pasant\u00edas pagadas y aprendizajes con empleadores asociados por 3 a 6 meses.",
     "formLabel": "LISTA DE ESPERA VERANO 2026",
     "formHeadline1": "\u00daNETE A LA PR\u00d3XIMA",
     "formHeadline2": "COHORTE",
@@ -89,6 +111,124 @@
     "submit": "\u00daNETE A LA LISTA DE ESPERA",
     "successTitle": "\u00a1EST\u00c1S DENTRO!",
     "successMessage": "Estaremos en contacto cuando abra la inscripci\u00f3n.",
+    "error": "Algo sali\u00f3 mal"
+  },
+  "forge": {
+    "back": "WEAREBCC.ORG",
+    "initiative": "UNA INICIATIVA DE BEYOND CODE COLLECTIVE",
+    "headline1": "DONDE LA INNOVACI\u00d3N",
+    "headline2": "SE ENCUENTRA CON LA COMUNIDAD",
+    "description": "The Forge es una red de centros intergeneracionales y espec\u00edficos por ubicaci\u00f3n que combinan educaci\u00f3n tecnol\u00f3gica, participaci\u00f3n comunitaria y desarrollo laboral bajo un mismo techo. Un verdadero \u201ctercer lugar\u201d que no es escuela ni trabajo, donde estudiantes de secundaria se sientan junto a profesionales de mitad de carrera y familias con sus hijos, mientras exploran la IA y la tecnolog\u00eda emergente juntos.",
+    "learnMore": "EXPLORA LA PROGRAMACI\u00d3N",
+    "viewCalendar": "VER CALENDARIO COMPLETO",
+    "eventbriteCta": "VER PR\u00d3XIMOS EVENTOS",
+    "quoteText": "En Beyond Code, creemos que todos deber\u00edan tener un papel en dar forma a la tecnolog\u00eda del ma\u00f1ana. The Forge nos permite no solo dar a las personas acceso a herramientas, sino el apoyo comunitario y el espacio para explorar estas herramientas, para que est\u00e9n empoderados para dar forma con confianza al futuro de la tecnolog\u00eda y el trabajo.",
+    "quoteAuthor": "Cristina Mancini",
+    "quoteRole": "Fundadora y CEO, Beyond Code Collective",
+    "whatLabel": "\u00bfQU\u00c9 ES THE FORGE?",
+    "whatHeadline1": "UN TERCER LUGAR",
+    "whatHeadline2": "PARA LA TECNOLOG\u00cdA",
+    "whatText": "The Forge est\u00e1 dise\u00f1ado para ser un espacio seguro para hacer preguntas sin miedo ni verg\u00fcenza. Cada centro Forge ofrece programaci\u00f3n culturalmente responsiva a su comunidad, sirviendo a estudiantes K-12 y adultos que buscan caminos hacia carreras impulsadas por la tecnolog\u00eda.",
+    "pillarsLabel": "EL MODELO",
+    "pillarsHeadline1": "CONSTRUIDO PARA",
+    "pillarsHeadline2": "TODOS",
+    "pillars": [
+      {
+        "title": "Intergeneracional",
+        "description": "Estudiantes de secundaria junto a profesionales de mitad de carrera y familias. Cada generaci\u00f3n aprende junta."
+      },
+      {
+        "title": "Culturalmente Responsivo",
+        "description": "Dise\u00f1ado en colaboraci\u00f3n con actores locales. Programaci\u00f3n moldeada por y para la comunidad a la que sirve."
+      },
+      {
+        "title": "IA y Tecnolog\u00eda Emergente",
+        "description": "Expandiendo oportunidad en IA, alfabetizaci\u00f3n de datos, automatizaci\u00f3n y las tecnolog\u00edas que definen el futuro del trabajo."
+      },
+      {
+        "title": "Gratuito y Accesible",
+        "description": "Programaci\u00f3n gratuita ofrecida en un horario regular. Sin barreras de entrada, sin prerrequisitos."
+      }
+    ],
+    "programmingLabel": "PROGRAMACI\u00d3N",
+    "programmingHeadline1": "QU\u00c9 SUCEDE",
+    "programmingHeadline2": "EN THE FORGE",
+    "programmingTypes": [
+      {
+        "title": "Almuerzo y Aprendizaje",
+        "description": "Sesiones abiertas y \u00fanicas sobre temas como IA, alfabetizaci\u00f3n de datos y herramientas digitales. Sin compromiso \u2014 solo ven, aprende y conecta.",
+        "format": "Evento \u00fanico",
+        "audience": "Todas las edades"
+      },
+      {
+        "title": "Programas de Cohorte",
+        "description": "Cursos estructurados de varias semanas como Fundamentos de IA. Cupos limitados, aprendizaje profundo, proyectos pr\u00e1cticos y una experiencia dirigida por instructores.",
+        "format": "Cohorte de 4 semanas",
+        "audience": "Aplicaci\u00f3n requerida"
+      }
+    ],
+    "programmingNote": "No se necesita preparaci\u00f3n \u2014 no necesitas traer computadora. Solo ven con mente abierta y listo para aprender.",
+    "howItWorksLabel": "C\u00d3MO FUNCIONA",
+    "howItWorksHeadline1": "DEL DESCUBRIMIENTO",
+    "howItWorksHeadline2": "A LA PARTICIPACI\u00d3N",
+    "howItWorksSteps": [
+      {
+        "step": "01",
+        "title": "Descubre",
+        "description": "Encuentra The Forge a trav\u00e9s de nuestro sitio web, un amigo o alcance comunitario."
+      },
+      {
+        "step": "02",
+        "title": "Explora el Calendario",
+        "description": "Ve los pr\u00f3ximos Almuerzos y Aprendizajes y programas de cohorte en nuestro calendario de Eventbrite."
+      },
+      {
+        "step": "03",
+        "title": "Reg\u00edstrate",
+        "description": "Inscr\u00edbete gratis a trav\u00e9s de Eventbrite. Los programas de cohorte tienen cupos limitados \u2014 reg\u00edstrate temprano."
+      },
+      {
+        "step": "04",
+        "title": "Ven y Aprende",
+        "description": "Asiste en persona en Georgia Tech ATDC. No se necesita preparaci\u00f3n, solo ven."
+      }
+    ],
+    "atlLabel": "THE FORGE: ATL",
+    "atlHeadline1": "PRIMERA RESIDENCIA",
+    "atlHeadline2": "ATLANTA, GEORGIA",
+    "atlText": "The Forge: ATL est\u00e1 alojado dentro de North Star AI Labs en el Advanced Technology Development Center (ATDC) de Georgia Tech. Se ofrece programaci\u00f3n gratuita dos d\u00edas a la semana, desde marzo de 2026 hasta agosto de 2026.",
+    "atlPartner": "En asociaci\u00f3n con ATDC de Georgia Tech",
+    "atlSchedule": "Dos d\u00edas a la semana, programaci\u00f3n gratuita",
+    "atlDates": "Marzo 2026 \u2013 Agosto 2026",
+    "atlLocation": "North Star AI Labs en Georgia Tech ATDC",
+    "galleryLabel": "THE FORGE EN ACCI\u00d3N",
+    "galleryHeadline1": "NUESTRA",
+    "galleryHeadline2": "COMUNIDAD",
+    "openingLabel": "[07] EVENTO DE LANZAMIENTO",
+    "openingHeadline1": "LA APERTURA",
+    "openingHeadline2": "DE THE FORGE",
+    "openingText": "The Forge celebr\u00f3 su evento de apertura el 9 de marzo, reuniendo a algunos de los principales educadores, tecn\u00f3logos y l\u00edderes comunitarios de Atlanta.",
+    "panelists": [
+      { "name": "Rep. Kim Schofield", "role": "Representante de Georgia" },
+      { "name": "Darrell Booker", "role": "Estratega de Tecnolog\u00eda e Impacto Social" },
+      { "name": "Ram\u00f3n Clemente", "role": "Jugador Profesional de Baloncesto" }
+    ],
+    "formLabel": "PARTICIPA",
+    "formHeadline1": "\u00daNETE A",
+    "formHeadline2": "THE FORGE",
+    "formDescription": "\u00bfInteresado en asistir a The Forge: ATL, ser voluntario o asociarte? Reg\u00edstrate y te mantendremos informado.",
+    "firstName": "Nombre",
+    "email": "Correo electr\u00f3nico",
+    "phone": "Tel\u00e9fono (opcional)",
+    "interestPlaceholder": "Quiero... (selecciona uno)",
+    "interestAttend": "Asistir a la programaci\u00f3n",
+    "interestVolunteer": "Ser voluntario",
+    "interestPartner": "Asociarme / Patrocinar",
+    "interestEnroll": "Inscribir a mi hijo/a",
+    "submitting": "UNIENDO...",
+    "submit": "PARTICIPA",
+    "successTitle": "\u00a1EST\u00c1S DENTRO!",
+    "successMessage": "Estaremos en contacto con detalles de programaci\u00f3n y actualizaciones.",
     "error": "Algo sali\u00f3 mal"
   },
   "segments": {
