@@ -105,6 +105,7 @@ export const RESOURCES = [
       "Details on our place-based tech hubs blending education, workforce development, and community engagement.",
     type: "LINK" as const,
     href: "/the-forge",
+    internal: true as const,
   },
   {
     title: "Brand Flipbook",
