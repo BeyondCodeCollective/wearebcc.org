@@ -206,7 +206,9 @@
   },
   "getInvolved": {
     "headline1": "BUILD YOUR",
-    "headline2": "POSSIBLE."
+    "headline2": "POSSIBLE.",
+    "description": "Whether you're a student exploring tech for the first time, a professional pivoting your career, or an organization looking to make an impact \u2014 there's a place for you at Beyond Code.",
+    "cta": "GET IN TOUCH"
   },
   "trustBar": {
     "label": "Where Tech Careers Are Being Built"

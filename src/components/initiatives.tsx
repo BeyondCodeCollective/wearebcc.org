@@ -130,9 +130,9 @@ export function Initiatives() {
                   </div>
 
                   <div className="mt-8">
-                    {key === "afterTheGame" ? (
+                    {key === "afterTheGame" || key === "forge" ? (
                       <Link
-                        href="/after-the-game"
+                        href={key === "afterTheGame" ? "/after-the-game" : "/the-forge"}
                         className="inline-flex items-center justify-center gap-2 bg-electric-green px-6 py-3 font-mono text-xs tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80"
                         style={{ fontFamily: "var(--font-mono)" }}
                       >

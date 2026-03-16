@@ -206,7 +206,9 @@
   },
   "getInvolved": {
     "headline1": "CONSTRUYE TU",
-    "headline2": "POSIBLE."
+    "headline2": "POSIBLE.",
+    "description": "Ya seas un estudiante explorando la tecnolog\u00eda por primera vez, un profesional cambiando de carrera, o una organizaci\u00f3n buscando generar impacto \u2014 hay un lugar para ti en Beyond Code.",
+    "cta": "CONT\u00c1CTANOS"
   },
   "trustBar": {
     "label": "Donde Se Construyen Carreras Tecnol\u00f3gicas"
