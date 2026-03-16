@@ -12,6 +12,11 @@ const INITIATIVE_IMAGES = [
   "/images/initiatives/catalysts.jpg",
 ];
 
+const INITIATIVE_LOGOS: Record<string, { src: string; width: number; height: number }> = {
+  afterTheGame: { src: "/images/atg/atg-logo-white.png", width: 400, height: 50 },
+  forge: { src: "/images/forge/forge-logo-white.png", width: 400, height: 50 },
+};
+
 const INITIATIVE_KEYS = ["afterTheGame", "forge", "catalysts"] as const;
 
 export function Initiatives() {
@@ -94,7 +99,18 @@ export function Initiatives() {
                 </div>
 
                 <div className={isReversed ? "lg:order-1" : ""}>
-                  <h3 className="font-heading text-[clamp(1.75rem,4vw,3rem)] leading-[0.9] text-off-white">
+                  {INITIATIVE_LOGOS[key] && (
+                    <div className="mb-6">
+                      <Image
+                        src={INITIATIVE_LOGOS[key].src}
+                        alt={t(`items.${key}.title`)}
+                        width={INITIATIVE_LOGOS[key].width}
+                        height={INITIATIVE_LOGOS[key].height}
+                        className="h-8 w-auto sm:h-10"
+                      />
+                    </div>
+                  )}
+                  <h3 className={`font-heading text-[clamp(1.75rem,4vw,3rem)] leading-[0.9] text-off-white ${INITIATIVE_LOGOS[key] ? "sr-only" : ""}`}>
                     {t(`items.${key}.title`)}
                   </h3>
                   <p className="mt-4 text-base leading-relaxed text-off-white/90 lg:text-lg">
