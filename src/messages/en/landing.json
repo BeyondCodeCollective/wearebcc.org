@@ -162,6 +162,40 @@
       }
     }
   },
+  "hireTalent": {
+    "label": "[ FOR EMPLOYERS ]",
+    "headline1": "HIRE OUR",
+    "headline2": "TALENT.",
+    "description": "Our graduates are workforce-ready professionals trained in AI, data, cybersecurity, and software development. Diverse candidates with real-world project experience and the discipline to deliver.",
+    "point1": "Pre-vetted candidates from structured cohort programs with hands-on training",
+    "point2": "Diverse talent across junior, mid, and senior experience levels",
+    "point3": "Externship and apprenticeship pathways for low-risk hiring",
+    "formLabel": "TELL US WHAT YOU'RE LOOKING FOR",
+    "companyName": "Company name",
+    "contactName": "Your name",
+    "email": "Work email",
+    "levelPlaceholder": "Experience level needed",
+    "levels": {
+      "junior": "Junior / Entry Level",
+      "mid": "Mid Level (2-5 years)",
+      "senior": "Senior Level (5+ years)",
+      "mixed": "Multiple Levels"
+    },
+    "interestPlaceholder": "Area of interest (optional)",
+    "interests": {
+      "softwareEng": "Software Engineering",
+      "dataAnalytics": "Data & Analytics",
+      "productDesign": "Product & Design",
+      "cybersecurity": "Cybersecurity",
+      "aiMl": "AI & Machine Learning",
+      "general": "General Tech Talent"
+    },
+    "submitting": "SUBMITTING...",
+    "submit": "CONNECT WITH OUR TALENT TEAM",
+    "successTitle": "WE'LL BE IN TOUCH.",
+    "successMessage": "Our talent partnerships team will reach out to discuss your hiring needs.",
+    "error": "Something went wrong. Please try again."
+  },
   "ctaBridge": {
     "label": "[ PARTNERSHIPS ]",
     "headline1": "THE FUTURE IS",

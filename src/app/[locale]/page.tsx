@@ -10,6 +10,7 @@ import { Testimonials } from "@/components/testimonials";
 import { Founder } from "@/components/founder";
 import { Resources } from "@/components/resources";
 import { CTABridge } from "@/components/cta-bridge";
+import { HireTalent } from "@/components/hire-talent";
 import { GetInvolved } from "@/components/get-involved";
 import { Footer } from "@/components/footer";
 import { QuizProvider } from "@/components/quiz-modal";
@@ -34,6 +35,7 @@ export default function Home() {
           <Founder />
           <Resources />
           <CTABridge />
+          <HireTalent />
           <GetInvolved />
         </main>
         <Footer />
