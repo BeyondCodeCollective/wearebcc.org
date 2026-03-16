@@ -104,8 +104,8 @@ export const RESOURCES = [
     description:
       "Details on our place-based tech hubs blending education, workforce development, and community engagement.",
     type: "LINK" as const,
-    href: "/the-forge",
-    internal: true as const,
+    href: "https://www.wearebcc.org/the-forge",
+    external: true as const,
   },
   {
     title: "Brand Flipbook",
