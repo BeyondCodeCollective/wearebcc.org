@@ -12,7 +12,6 @@ import {
   MapPin,
   CalendarBlank,
   Clock,
-  Buildings,
   Chalkboard,
   UsersThree,
   ArrowRight,
@@ -29,7 +28,7 @@ const GALLERY_IMAGES = [
 ];
 
 // Placeholder — replace with actual Eventbrite URL once live
-const EVENTBRITE_URL = "#";
+const EVENTBRITE_URL = "https://theforgeacademy.io/events/";
 
 export default function TheForge() {
   const t = useTranslations("forge");
@@ -77,7 +76,7 @@ export default function TheForge() {
     pi++;
   }
 
-  const programmingTypes: { title: string; description: string; format: string; audience: string }[] = [];
+  const programmingTypes: { title: string; description: string; format: string; audience: string; price: string }[] = [];
   let pti = 0;
   while (t.has(`programmingTypes.${pti}.title`)) {
     programmingTypes.push({
@@ -85,6 +84,7 @@ export default function TheForge() {
       description: t(`programmingTypes.${pti}.description`),
       format: t(`programmingTypes.${pti}.format`),
       audience: t(`programmingTypes.${pti}.audience`),
+      price: t(`programmingTypes.${pti}.price`),
     });
     pti++;
   }
@@ -254,9 +254,8 @@ export default function TheForge() {
           </div>
 
           {/* ATL residency details */}
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-4 sm:grid-cols-3">
             {[
-              { icon: <Buildings size={24} weight="bold" />, text: t("atlPartner"), href: undefined },
               { icon: <Clock size={24} weight="bold" />, text: t("atlSchedule"), href: undefined },
               { icon: <CalendarBlank size={24} weight="bold" />, text: t("atlDates"), href: undefined },
               { icon: <MapPin size={24} weight="bold" />, text: t("atlLocation"), href: "https://www.google.com/maps/search/Georgia+Tech+ATDC+Atlanta+GA" },
@@ -342,6 +341,12 @@ export default function TheForge() {
                   >
                     {prog.audience}
                   </span>
+                  <span
+                    className="font-mono text-[10px] tracking-wider uppercase text-electric-green"
+                    style={{ fontFamily: "var(--font-mono)" }}
+                  >
+                    {prog.price}
+                  </span>
                 </div>
               </motion.div>
             ))}
@@ -377,7 +382,7 @@ export default function TheForge() {
             </h3>
           </motion.div>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-3">
             {steps.map((step, i) => (
               <motion.div
                 key={i}

@@ -158,13 +158,15 @@
         "title": "Almuerzo y Aprendizaje",
         "description": "Sesiones abiertas y \u00fanicas sobre temas como IA, alfabetizaci\u00f3n de datos y herramientas digitales. Sin compromiso \u2014 solo ven, aprende y conecta.",
         "format": "Evento \u00fanico",
-        "audience": "Todas las edades"
+        "audience": "Mayores de 18",
+        "price": "Gratis"
       },
       {
         "title": "Programas de Cohorte",
         "description": "Cursos estructurados de varias semanas como Fundamentos de IA. Cupos limitados, aprendizaje profundo, proyectos pr\u00e1cticos y una experiencia dirigida por instructores.",
         "format": "Cohorte de 4 semanas",
-        "audience": "Aplicaci\u00f3n requerida"
+        "audience": "Aplicaci\u00f3n requerida",
+        "price": "Gratis"
       }
     ],
     "programmingNote": "No se necesita preparaci\u00f3n \u2014 no necesitas traer computadora. Solo ven con mente abierta y listo para aprender.",
@@ -174,23 +176,18 @@
     "howItWorksSteps": [
       {
         "step": "01",
-        "title": "Descubre",
-        "description": "Encuentra The Forge a trav\u00e9s de nuestro sitio web, un amigo o alcance comunitario."
-      },
-      {
-        "step": "02",
         "title": "Explora el Calendario",
         "description": "Ve los pr\u00f3ximos Almuerzos y Aprendizajes y programas de cohorte en nuestro calendario de Eventbrite."
       },
       {
-        "step": "03",
-        "title": "Reg\u00edstrate",
+        "step": "02",
+        "title": "Aseg\u00farate de Registrarte",
         "description": "Inscr\u00edbete gratis a trav\u00e9s de Eventbrite. Los programas de cohorte tienen cupos limitados \u2014 reg\u00edstrate temprano."
       },
       {
-        "step": "04",
+        "step": "03",
         "title": "Ven y Aprende",
-        "description": "Asiste en persona en Georgia Tech ATDC. No se necesita preparaci\u00f3n, solo ven."
+        "description": "Asiste en persona en The Forge. No se necesita preparaci\u00f3n, solo ven con mente abierta."
       }
     ],
     "atlLabel": "THE FORGE: ATL",
