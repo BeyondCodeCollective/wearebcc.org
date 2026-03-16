@@ -35,7 +35,7 @@ export function Founder() {
             className="relative aspect-[3/4] max-h-[600px] overflow-hidden"
           >
             <Image
-              src="/images/cristina-mancini.png"
+              src="/images/cristina-mancini.jpg"
               alt="Cristina Mancini, Founder & CEO of Beyond Code Collective"
               fill
               className="object-cover object-top"

@@ -158,13 +158,15 @@
         "title": "Lunch & Learn",
         "description": "Open, one-time sessions on topics like AI, data literacy, and digital tools. No commitment required \u2014 just show up, learn, and connect.",
         "format": "One-time event",
-        "audience": "All ages welcome"
+        "audience": "Ages 18+",
+        "price": "Free"
       },
       {
         "title": "Cohort Programs",
         "description": "Multi-week structured courses like AI Fundamentals. Limited seats, deeper learning, hands-on projects, and a dedicated instructor-led experience.",
         "format": "4-week cohort",
-        "audience": "Application required"
+        "audience": "Application required",
+        "price": "Free"
       }
     ],
     "programmingNote": "No preparation needed \u2014 you don\u2019t need to bring a computer. Just come with an open mind and ready to learn.",
@@ -174,30 +176,25 @@
     "howItWorksSteps": [
       {
         "step": "01",
-        "title": "Discover",
-        "description": "Find The Forge through our website, a friend, or community outreach."
-      },
-      {
-        "step": "02",
         "title": "Browse the Calendar",
         "description": "View upcoming Lunch & Learns and cohort programs on our Eventbrite calendar."
       },
       {
-        "step": "03",
-        "title": "RSVP",
+        "step": "02",
+        "title": "Be Sure to RSVP",
         "description": "Register for free through Eventbrite. Cohort programs have limited seats \u2014 sign up early."
       },
       {
-        "step": "04",
+        "step": "03",
         "title": "Show Up & Learn",
-        "description": "Attend in person at Georgia Tech ATDC. No prep needed, just bring yourself."
+        "description": "Show up in person at The Forge. No prep needed, just bring yourself and an open mind."
       }
     ],
     "atlLabel": "THE FORGE: ATL",
     "atlHeadline1": "FIRST RESIDENCY",
     "atlHeadline2": "ATLANTA, GEORGIA",
     "atlText": "The Forge: ATL is hosted within North Star AI Labs at Georgia Tech\u2019s Advanced Technology Development Center (ATDC). Free programming is offered two days a week, running from March 2026 through August 2026.",
-    "atlPartner": "In partnership with Georgia Tech\u2019s ATDC",
+    "atlPartner": "Hosted at North Star AI Labs, Georgia Tech ATDC",
     "atlSchedule": "Two days a week, free programming",
     "atlDates": "March 2026 \u2013 August 2026",
     "atlLocation": "North Star AI Labs at Georgia Tech ATDC",

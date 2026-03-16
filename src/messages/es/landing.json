@@ -162,6 +162,40 @@
       }
     }
   },
+  "hireTalent": {
+    "label": "[ PARA EMPLEADORES ]",
+    "headline1": "CONTRATA NUESTRO",
+    "headline2": "TALENTO.",
+    "description": "Nuestros graduados son profesionales listos para trabajar, capacitados en IA, datos, ciberseguridad y desarrollo de software. Candidatos diversos con experiencia en proyectos reales y la disciplina para cumplir.",
+    "point1": "Candidatos pre-evaluados de programas de cohorte estructurados con capacitación práctica",
+    "point2": "Talento diverso en niveles junior, intermedio y senior",
+    "point3": "Programas de pasantías y aprendizaje para contratación de bajo riesgo",
+    "formLabel": "CUÉNTANOS QUÉ BUSCAS",
+    "companyName": "Nombre de la empresa",
+    "contactName": "Tu nombre",
+    "email": "Correo corporativo",
+    "levelPlaceholder": "Nivel de experiencia necesario",
+    "levels": {
+      "junior": "Junior / Nivel de entrada",
+      "mid": "Nivel intermedio (2-5 años)",
+      "senior": "Nivel senior (5+ años)",
+      "mixed": "Múltiples niveles"
+    },
+    "interestPlaceholder": "Área de interés (opcional)",
+    "interests": {
+      "softwareEng": "Ingeniería de Software",
+      "dataAnalytics": "Datos y Analítica",
+      "productDesign": "Producto y Diseño",
+      "cybersecurity": "Ciberseguridad",
+      "aiMl": "IA y Machine Learning",
+      "general": "Talento Tech General"
+    },
+    "submitting": "ENVIANDO...",
+    "submit": "CONECTAR CON NUESTRO EQUIPO DE TALENTO",
+    "successTitle": "NOS PONDREMOS EN CONTACTO.",
+    "successMessage": "Nuestro equipo de alianzas de talento se comunicará contigo para hablar sobre tus necesidades de contratación.",
+    "error": "Algo salió mal. Por favor intenta de nuevo."
+  },
   "ctaBridge": {
     "label": "[ ALIANZAS ]",
     "headline1": "EL FUTURO ES",
