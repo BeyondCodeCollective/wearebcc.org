@@ -20,11 +20,11 @@ import {
 import { useTranslations } from "next-intl";
 
 const GALLERY_IMAGES = [
+  { src: "/images/forge/forge_1.jpg", alt: "The Forge opening event — panel discussion with audience" },
+  { src: "/images/forge/forge_2.jpg", alt: "Community members connecting at The Forge" },
+  { src: "/images/forge/forge_3.jpg", alt: "Attendees taking a selfie at The Forge launch" },
+  { src: "/images/forge/forge_4.jpg", alt: "The Forge panel — The Future of Tech Starts Here" },
   { src: "/images/forge/hero.jpg", alt: "The Forge opening event community gathering" },
-  { src: "/images/community/community-01.jpg", alt: "AI Fundamentals Fellowship classroom session" },
-  { src: "/images/community/community-02.jpg", alt: "Young BCC community members" },
-  { src: "/images/community/community-05.jpg", alt: "Workshop planning session" },
-  { src: "/images/community/community-06.jpg", alt: "Collaborative learning at Beyond Code" },
 ];
 
 // Placeholder — replace with actual Eventbrite URL once live
