@@ -99,11 +99,12 @@ export function Resources() {
               {RESOURCE_KEYS.map((key, i) => {
                 const resource = RESOURCES[i];
                 const isExternal = "external" in resource && resource.external;
+                const isInternal = "internal" in resource && resource.internal;
                 return (
                   <motion.a
                     key={key}
                     href={resource.href}
-                    {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : { download: true })}
+                    {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : isInternal ? {} : { download: true })}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -129,7 +130,7 @@ export function Resources() {
                     </div>
 
                     <div className="flex-shrink-0 text-off-white/50 transition-colors group-hover:text-electric-green">
-                      {isExternal ? <ExternalIcon /> : <DownloadIcon />}
+                      {isExternal || isInternal ? <ExternalIcon /> : <DownloadIcon />}
                     </div>
                   </motion.a>
                 );
