@@ -133,9 +133,9 @@ export default function TheForge() {
           sizes="100vw"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-true-black via-true-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-true-black via-true-black/60 to-true-black/30" />
 
-        <div className="relative z-10 flex min-h-[70vh] flex-col justify-end px-6 pb-16 lg:px-8 lg:pb-24">
+        <div className="relative z-10 flex min-h-[70vh] flex-col justify-end px-6 pb-10 pt-20 lg:px-8 lg:pb-24">
           <div className="mx-auto w-full max-w-6xl">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -166,7 +166,7 @@ export default function TheForge() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="mt-2 font-heading text-[clamp(1.25rem,3vw,2rem)] leading-[0.9] text-cobalt"
+              className="mt-4 font-heading text-[clamp(1.25rem,3vw,2rem)] leading-[1.1] text-cobalt"
             >
               {t("headline1")}
               <br />
