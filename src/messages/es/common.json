@@ -167,6 +167,20 @@
         "format": "Cohorte de 4 semanas",
         "audience": "Aplicaci\u00f3n requerida",
         "price": "Gratis"
+      },
+      {
+        "title": "Programaci\u00f3n Familiar",
+        "description": "Cuidadores y ni\u00f1os construyen proyectos tecnol\u00f3gicos reales juntos. Es aprendizaje pr\u00e1ctico dise\u00f1ado para toda la familia \u2014 no se necesita experiencia, solo curiosidad.",
+        "format": "Sesiones abiertas",
+        "audience": "Todas las edades",
+        "price": "Gratis"
+      },
+      {
+        "title": "Estudiantes de Secundaria",
+        "description": "Espacios dedicados donde los adolescentes vienen a aprender, construir y encontrar su comunidad. Ya sea su primer proyecto o el quinto, los estudiantes se van con habilidades y conexiones reales.",
+        "format": "Sesiones semanales",
+        "audience": "Edades 14\u201318",
+        "price": "Gratis"
       }
     ],
     "programmingNote": "No se necesita preparaci\u00f3n \u2014 no necesitas traer computadora. Solo ven con mente abierta y listo para aprender.",

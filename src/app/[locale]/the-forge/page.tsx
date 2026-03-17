@@ -14,6 +14,8 @@ import {
   Clock,
   Chalkboard,
   UsersThree,
+  House,
+  Student,
   ArrowRight,
   ArrowUpRight,
 } from "@phosphor-icons/react";
@@ -243,8 +245,8 @@ export default function TheForge() {
               className="relative aspect-[4/3] w-full overflow-hidden"
             >
               <Image
-                src="/images/community/community-01.jpg"
-                alt="AI Fundamentals Fellowship classroom at The Forge"
+                src="/images/forge/forge_5.jpg"
+                alt="The Forge panel discussion with engaged audience"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -318,11 +320,12 @@ export default function TheForge() {
                 className="flex flex-col border-t-4 border-cobalt bg-true-black p-8"
               >
                 <div className="flex items-center gap-3 text-cobalt">
-                  {i === 0 ? (
-                    <Chalkboard size={28} weight="bold" />
-                  ) : (
-                    <UsersThree size={28} weight="bold" />
-                  )}
+                  {[
+                    <Chalkboard key="chalk" size={28} weight="bold" />,
+                    <UsersThree key="cohort" size={28} weight="bold" />,
+                    <House key="family" size={28} weight="bold" />,
+                    <Student key="hs" size={28} weight="bold" />,
+                  ][i]}
                   <h3 className="font-heading text-2xl text-off-white">{prog.title}</h3>
                 </div>
                 <p className="mt-4 flex-1 text-sm leading-relaxed text-off-white/70">

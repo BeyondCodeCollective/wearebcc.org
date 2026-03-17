@@ -167,6 +167,20 @@
         "format": "4-week cohort",
         "audience": "Application required",
         "price": "Free"
+      },
+      {
+        "title": "Family Programming",
+        "description": "Caregivers and kids build real tech projects side by side. It's hands-on learning designed for the whole family — no experience required, just curiosity.",
+        "format": "Drop-in sessions",
+        "audience": "All ages",
+        "price": "Free"
+      },
+      {
+        "title": "High Schoolers",
+        "description": "Dedicated spaces where teens come to learn, build, and find their people. Whether it's a first project or a fifth, high schoolers leave with real skills and real connections.",
+        "format": "Weekly sessions",
+        "audience": "Ages 14–18",
+        "price": "Free"
       }
     ],
     "programmingNote": "No preparation needed \u2014 you don\u2019t need to bring a computer. Just come with an open mind and ready to learn.",
