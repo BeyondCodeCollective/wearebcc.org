@@ -24,7 +24,6 @@ import { useTranslations } from "next-intl";
 const GALLERY_IMAGES = [
   { src: "/images/forge/forge_1.jpg", alt: "The Forge opening event — panel discussion with audience" },
   { src: "/images/forge/forge_2.jpg", alt: "Community members connecting at The Forge" },
-  { src: "/images/forge/forge_3.jpg", alt: "Attendees taking a selfie at The Forge launch" },
   { src: "/images/forge/forge_4.jpg", alt: "The Forge panel — The Future of Tech Starts Here" },
   { src: "/images/forge/hero.jpg", alt: "The Forge opening event community gathering" },
 ];
@@ -126,8 +125,8 @@ export default function TheForge() {
       {/* ─── Hero ─── */}
       <section className="relative min-h-[70vh] overflow-hidden bg-true-black">
         <Image
-          src="/images/forge/hero.jpg"
-          alt="The Forge community event with diverse attendees"
+          src="/images/forge/forge_3.jpg"
+          alt="Attendees taking a selfie at The Forge launch"
           fill
           className="object-cover opacity-40"
           sizes="100vw"
