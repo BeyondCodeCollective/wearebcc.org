@@ -14,7 +14,6 @@ const INITIATIVE_IMAGES = [
 
 const INITIATIVE_LOGOS: Record<string, { src: string; width: number; height: number }> = {
   afterTheGame: { src: "/images/atg/atg-logo-white.png", width: 400, height: 50 },
-  forge: { src: "/images/forge/forge-logo-white.png", width: 400, height: 50 },
 };
 
 const INITIATIVE_KEYS = ["afterTheGame", "forge", "catalysts"] as const;
@@ -93,7 +92,7 @@ export function Initiatives() {
                     alt={t(`items.${key}.title`)}
                     fill
                     className="object-cover"
-                    style={key === "forge" ? { objectPosition: "80% center" } : undefined}
+                    style={undefined}
                     sizes="(min-width: 1024px) 50vw, 100vw"
                   />
                 </div>
