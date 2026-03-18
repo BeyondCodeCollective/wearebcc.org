@@ -144,7 +144,7 @@ export function InitiativesEditor({ value, onChange }: { value: V; onChange: OnC
       <KeyedGroupEditor
         label="Initiatives"
         keys={[
-          { key: "forge", displayName: "The Forge" },
+          { key: "forge", displayName: "BCC Academy" },
           { key: "catalysts", displayName: "Beyond Code Catalysts" },
           { key: "codeAlong", displayName: "Code Along" },
         ]}
@@ -190,7 +190,7 @@ export function ResourcesEditor({ value, onChange }: { value: V; onChange: OnCha
         label="Resource Items"
         keys={[
           { key: "onePager", displayName: "BCC One-Pager" },
-          { key: "forgeOverview", displayName: "The Forge Overview" },
+          { key: "forgeOverview", displayName: "BCC Academy Overview" },
           { key: "brandFlipbook", displayName: "Brand Flipbook" },
         ]}
         fields={[

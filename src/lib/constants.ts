@@ -45,7 +45,7 @@ export const INITIATIVES = [
     contact: "partnerships@wearebcc.org",
   },
   {
-    title: "The Forge",
+    title: "BCC Academy",
     description:
       "Place-based hubs blending tech education, workforce development, and community engagement for learners of all ages — from K-12 to adults looking to upskill or pivot into tech careers.",
     contact: "partnerships@wearebcc.org",
@@ -100,11 +100,11 @@ export const RESOURCES = [
     href: "/resources/Beyond-Code-Collective-One-Pager.pdf",
   },
   {
-    title: "The Forge Overview",
+    title: "BCC Academy Overview",
     description:
       "Details on our place-based tech hubs blending education, workforce development, and community engagement.",
     type: "LINK" as const,
-    href: "https://www.wearebcc.org/the-forge",
+    href: "https://www.wearebcc.org/bcc-academy",
     external: true as const,
   },
   {
