@@ -22,14 +22,14 @@ import {
 import { useTranslations } from "next-intl";
 
 const GALLERY_IMAGES = [
-  { src: "/images/forge/forge_1.jpg", alt: "BCC Academy opening event — panel discussion with audience" },
-  { src: "/images/forge/forge_2.jpg", alt: "Community members connecting at BCC Academy" },
-  { src: "/images/forge/forge_4.jpg", alt: "BCC Academy panel — The Future of Tech Starts Here" },
-  { src: "/images/forge/hero.jpg", alt: "BCC Academy opening event community gathering" },
+  { src: "/images/forge/forge_1.jpg", alt: "The Forge opening event — panel discussion with audience" },
+  { src: "/images/forge/forge_2.jpg", alt: "Community members connecting at The Forge" },
+  { src: "/images/forge/forge_4.jpg", alt: "The Forge panel — The Future of Tech Starts Here" },
+  { src: "/images/forge/hero.jpg", alt: "The Forge opening event community gathering" },
 ];
 
 // Placeholder — replace with actual Eventbrite URL once live
-const EVENTBRITE_URL = "https://bccacademy.io/events/";
+const EVENTBRITE_URL = "https://theforgeacademy.io/events/";
 
 export default function BCCAcademy() {
   const t = useTranslations("forge");
@@ -54,8 +54,8 @@ export default function BCCAcademy() {
           firstName: firstName.trim(),
           email: email.trim(),
           phone: phone.trim(),
-          segment: interest ? `BCC Academy - ${interest}` : "BCC Academy - General",
-          source: "bcc-academy-landing",
+          segment: interest ? `Forge - ${interest}` : "Forge - General",
+          source: "the-forge-landing",
         }),
       });
 
@@ -126,7 +126,7 @@ export default function BCCAcademy() {
       <section className="relative min-h-[70vh] overflow-hidden bg-true-black">
         <Image
           src="/images/forge/forge_3.jpg"
-          alt="Attendees at BCC Academy launch event"
+          alt="Attendees at The Forge launch event"
           fill
           className="object-cover opacity-40"
           sizes="100vw"
@@ -146,14 +146,20 @@ export default function BCCAcademy() {
               {t("initiative")}
             </motion.p>
 
-            <motion.h1
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.6 }}
-              className="mt-4 font-heading text-[clamp(2.5rem,7vw,5rem)] leading-[0.85] tracking-tight text-off-white"
+              className="mt-4"
             >
-              BCC ACADEMY
-            </motion.h1>
+              <Image
+                src="/images/forge/forge-logo-white.png"
+                alt="The Forge"
+                width={400}
+                height={50}
+                className="h-10 w-auto sm:h-14 lg:h-16"
+              />
+            </motion.div>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -203,7 +209,7 @@ export default function BCCAcademy() {
         </div>
       </section>
 
-      {/* ─── The BCC Academy: ATL — residency / programming / how it works ─── */}
+      {/* ─── The The Forge: ATL — residency / programming / how it works ─── */}
       <section id="programming" className="px-6 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-6xl">
           {/* Intro — two-column with image */}
@@ -239,7 +245,7 @@ export default function BCCAcademy() {
             >
               <Image
                 src="/images/forge/forge_5.jpg"
-                alt="BCC Academy panel discussion with engaged audience"
+                alt="The Forge panel discussion with engaged audience"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
