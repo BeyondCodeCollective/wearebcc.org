@@ -96,7 +96,7 @@
     "takeCareerQuiz": "Toma el Quiz de Carreras",
     "items": {
       "forge": {
-        "title": "BCC Academy",
+        "title": "The Forge",
         "description": "Centros presenciales que combinan educaci\u00f3n tecnol\u00f3gica, desarrollo laboral y participaci\u00f3n comunitaria para aprendices de todas las edades \u2014 desde K-12 hasta adultos que buscan mejorar sus habilidades o cambiar a carreras tecnol\u00f3gicas.",
         "tags": ["Todas las Edades", "Presencial + En L\u00ednea", "K-12 a Adultos"]
       },
@@ -153,7 +153,7 @@
         "description": "Una visi\u00f3n general de Beyond Code Collective \u2014 misi\u00f3n, iniciativas y c\u00f3mo participar."
       },
       "forgeOverview": {
-        "title": "Resumen de BCC Academy",
+        "title": "Resumen de The Forge",
         "description": "Detalles sobre nuestros centros tecnol\u00f3gicos presenciales que combinan educaci\u00f3n, desarrollo laboral y participaci\u00f3n comunitaria."
       },
       "brandFlipbook": {

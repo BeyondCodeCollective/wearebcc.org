@@ -96,7 +96,7 @@
     "takeCareerQuiz": "Take the Career Quiz",
     "items": {
       "forge": {
-        "title": "BCC Academy",
+        "title": "The Forge",
         "description": "Place-based hubs blending tech education, workforce development, and community engagement for learners of all ages — from K-12 to adults looking to upskill or pivot into tech careers.",
         "tags": ["All Ages", "In-Person + Online", "K-12 to Adult"]
       },
@@ -153,7 +153,7 @@
         "description": "An overview of Beyond Code Collective — mission, initiatives, and how to get involved."
       },
       "forgeOverview": {
-        "title": "BCC Academy Overview",
+        "title": "The Forge Overview",
         "description": "Details on our place-based tech hubs blending education, workforce development, and community engagement."
       },
       "brandFlipbook": {
