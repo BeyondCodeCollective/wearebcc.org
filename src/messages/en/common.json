@@ -125,7 +125,7 @@
     "quoteText": "At Beyond Code, we believe that everyone should have a role in shaping tomorrow\u2019s technology. The Forge allows us to not only give people access to tools, but the community support and space to explore these tools, so they are empowered to confidently shape the future of technology and work.",
     "quoteAuthor": "Cristina Mancini",
     "quoteRole": "Founder & CEO, Beyond Code Collective",
-    "whatLabel": "WHAT IS BCC ACADEMY",
+    "whatLabel": "WHAT IS THE FORGE?",
     "whatHeadline1": "A THIRD PLACE",
     "whatHeadline2": "FOR TECH",
     "whatText": "The Forge is designed to be a safe space to ask questions without fear or shame. Each The Forge center delivers culturally responsive programming to its community, serving K-12 students and adults seeking pathways into tech-driven careers.",
@@ -152,7 +152,7 @@
     ],
     "programmingLabel": "PROGRAMMING",
     "programmingHeadline1": "WHAT HAPPENS",
-    "programmingHeadline2": "AT BCC ACADEMY",
+    "programmingHeadline2": "AT THE FORGE",
     "programmingTypes": [
       {
         "title": "Lunch & Learn",
@@ -204,7 +204,7 @@
         "description": "Show up in person at The Forge. No prep needed, just bring yourself and an open mind."
       }
     ],
-    "atlLabel": "BCC ACADEMY: ATL",
+    "atlLabel": "THE FORGE: ATL",
     "atlHeadline1": "FIRST RESIDENCY",
     "atlHeadline2": "ATLANTA, GEORGIA",
     "atlText": "The Forge: ATL is hosted within North Star AI Labs at Georgia Tech\u2019s Advanced Technology Development Center (ATDC). Free programming is offered two days a week, running from March 2026 through August 2026.",
@@ -212,11 +212,11 @@
     "atlSchedule": "Two days a week, free programming",
     "atlDates": "March 2026 \u2013 August 2026",
     "atlLocation": "North Star AI Labs at Georgia Tech ATDC",
-    "galleryLabel": "BCC ACADEMY IN ACTION",
+    "galleryLabel": "THE FORGE IN ACTION",
     "galleryHeadline1": "OUR",
     "galleryHeadline2": "COMMUNITY",
     "openingLabel": "[07] LAUNCH EVENT",
-    "openingHeadline1": "BCC ACADEMY",
+    "openingHeadline1": "THE FORGE",
     "openingHeadline2": "OPENING",
     "openingText": "The Forge hosted its opening event on March 9, convening some of Atlanta\u2019s leading educators, technologists, and community leaders.",
     "panelists": [
@@ -226,7 +226,7 @@
     ],
     "formLabel": "GET INVOLVED",
     "formHeadline1": "JOIN THE",
-    "formHeadline2": "BCC ACADEMY",
+    "formHeadline2": "THE FORGE",
     "formDescription": "Interested in attending The Forge: ATL, volunteering, or partnering? Sign up and we\u2019ll keep you in the loop.",
     "firstName": "First Name",
     "email": "Email",
