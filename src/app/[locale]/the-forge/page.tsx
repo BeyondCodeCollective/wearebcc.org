@@ -30,7 +30,7 @@ const GALLERY_IMAGES = [
 
 const EVENTBRITE_URL = "https://bccacademy.io/events/";
 
-export default function BCCAcademy() {
+export default function TheForge() {
   const t = useTranslations("forge");
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
