@@ -28,8 +28,7 @@ const GALLERY_IMAGES = [
   { src: "/images/forge/hero.jpg", alt: "The Forge opening event community gathering" },
 ];
 
-// Placeholder — replace with actual Eventbrite URL once live
-const EVENTBRITE_URL = "https://theforgeacademy.io/events/";
+const EVENTBRITE_URL = "https://bccacademy.io/events/";
 
 export default function BCCAcademy() {
   const t = useTranslations("forge");
