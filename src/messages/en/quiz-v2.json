@@ -350,61 +350,6 @@
         "Donate to causes that matter",
         "Pay for someone's education or training"
       ]
-    },
-    {
-      "question": "What would make you quit a job on the spot?",
-      "answers": [
-        "Being forced to ship something broken",
-        "Leadership ignoring the data",
-        "A toxic team that doesn't have each other's backs",
-        "Zero creative freedom",
-        "Seeing people get hurt because corners were cut",
-        "Working for a company that hurts communities"
-      ]
-    },
-    {
-      "question": "You're leading a group project. What's your move?",
-      "answers": [
-        "Jump in and handle the hardest technical part",
-        "Create a clear plan so everyone knows their role",
-        "Make sure everyone feels heard and included",
-        "Focus on making the final product look amazing",
-        "Research everything so we don't make mistakes",
-        "Make sure we're building something that helps people"
-      ]
-    },
-    {
-      "question": "It's 2 AM and you can't sleep. What are you doing?",
-      "answers": [
-        "Down a rabbit hole learning something new",
-        "Planning my next big move",
-        "Texting friends or scrolling socials",
-        "Working on a creative project",
-        "Worrying about all the things that could go wrong",
-        "Thinking about how to make tomorrow better for someone"
-      ]
-    },
-    {
-      "question": "What compliment hits different for you?",
-      "answers": [
-        "\"You always figure things out\"",
-        "\"You see things nobody else sees\"",
-        "\"Everyone loves working with you\"",
-        "\"This is beautiful\"",
-        "\"You made this from scratch?!\"",
-        "\"You changed my life\""
-      ]
-    },
-    {
-      "question": "Pick your superpower.",
-      "answers": [
-        "Fix anything with one touch",
-        "See 10 years into the future",
-        "Make anyone trust you instantly",
-        "Create anything you imagine",
-        "Be immune to all threats",
-        "Heal anyone's pain"
-      ]
     }
   ]
 }

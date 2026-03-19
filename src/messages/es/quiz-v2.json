@@ -350,61 +350,6 @@
         "Donar a causas que importan",
         "Pagar la educaci\u00f3n de alguien"
       ]
-    },
-    {
-      "question": "\u00bfQu\u00e9 te har\u00eda renunciar a un trabajo en el acto?",
-      "answers": [
-        "Que me obliguen a entregar algo roto",
-        "Que el liderazgo ignore los datos",
-        "Un equipo t\u00f3xico que no se apoya entre s\u00ed",
-        "Cero libertad creativa",
-        "Ver a personas afectadas porque se cortaron esquinas",
-        "Trabajar para una empresa que da\u00f1a comunidades"
-      ]
-    },
-    {
-      "question": "Est\u00e1s liderando un proyecto grupal. \u00bfCu\u00e1l es tu movimiento?",
-      "answers": [
-        "Meterme y manejar la parte t\u00e9cnica m\u00e1s dif\u00edcil",
-        "Crear un plan claro para que todos sepan su rol",
-        "Asegurarme de que todos sean escuchados e incluidos",
-        "Enfocarme en que el producto final se vea incre\u00edble",
-        "Investigar todo para no cometer errores",
-        "Asegurarme de que estamos construyendo algo que ayude a la gente"
-      ]
-    },
-    {
-      "question": "Son las 2 AM y no puedes dormir. \u00bfQu\u00e9 est\u00e1s haciendo?",
-      "answers": [
-        "Perdido en un rabbit hole aprendiendo algo nuevo",
-        "Planeando mi pr\u00f3ximo gran movimiento",
-        "Escribiendo a amigos o en redes sociales",
-        "Trabajando en un proyecto creativo",
-        "Preocup\u00e1ndome por todo lo que podr\u00eda salir mal",
-        "Pensando en c\u00f3mo hacer ma\u00f1ana mejor para alguien"
-      ]
-    },
-    {
-      "question": "\u00bfQu\u00e9 cumplido te llega diferente?",
-      "answers": [
-        "\"Siempre encuentras la soluci\u00f3n\"",
-        "\"Ves cosas que nadie m\u00e1s ve\"",
-        "\"A todos les encanta trabajar contigo\"",
-        "\"Esto es hermoso\"",
-        "\"\u00bfHiciste esto desde cero?!\"",
-        "\"Cambiaste mi vida\""
-      ]
-    },
-    {
-      "question": "Elige tu superpoder.",
-      "answers": [
-        "Arreglar cualquier cosa con un toque",
-        "Ver 10 a\u00f1os en el futuro",
-        "Hacer que cualquiera conf\u00ede en ti al instante",
-        "Crear cualquier cosa que imagines",
-        "Ser inmune a todas las amenazas",
-        "Sanar el dolor de cualquier persona"
-      ]
     }
   ]
 }
