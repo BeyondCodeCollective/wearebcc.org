@@ -18,14 +18,29 @@ import {
   Student,
   ArrowRight,
   ArrowUpRight,
+  CalendarCheck,
+  Ticket,
 } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 
 const GALLERY_IMAGES = [
-  { src: "/images/forge/forge_1.jpg", alt: "The Forge opening event — panel discussion with audience" },
-  { src: "/images/forge/forge_2.jpg", alt: "Community members connecting at The Forge" },
-  { src: "/images/forge/forge_4.jpg", alt: "The Forge panel — The Future of Tech Starts Here" },
-  { src: "/images/forge/hero.jpg", alt: "The Forge opening event community gathering" },
+  { src: "/images/forge/gallery-panel.jpg", alt: "The Forge panel discussion on stage" },
+  { src: "/images/forge/gallery-bottle.jpg", alt: "Community member with Beyond Code Collective water bottle" },
+  { src: "/images/forge/gallery-speaker.jpg", alt: "Panelist speaking at The Forge opening" },
+  { src: "/images/forge/gallery-atdc.jpg", alt: "Attendees networking at Georgia Tech ATDC" },
+  { src: "/images/forge/gallery-pink.jpg", alt: "Community members laughing at The Forge" },
+  { src: "/images/forge/gallery-conversation.jpg", alt: "One-on-one conversation at The Forge" },
+  { src: "/images/forge/gallery-lounge.jpg", alt: "Community members in conversation at The Forge lounge" },
+  { src: "/images/forge/gallery-notebooks.jpg", alt: "Beyond Code Collective branded notebooks" },
+  { src: "/images/forge/gallery-repkim.jpg", alt: "Rep Kim at The Forge step and repeat" },
+  { src: "/images/forge/gallery-catering.jpg", alt: "Catering spread at The Forge opening event" },
+  { src: "/images/forge/gallery-group4.jpg", alt: "Four attendees at The Forge step and repeat" },
+  { src: "/images/forge/gallery-panelists.jpg", alt: "Panelists in conversation on stage at The Forge" },
+  { src: "/images/forge/gallery-repkim-speaking.jpg", alt: "Rep Kim speaking at The Forge" },
+  { src: "/images/forge/gallery-team-steprepeat.jpg", alt: "The Forge team group photo at step and repeat" },
+  { src: "/images/forge/gallery-panelist-closeup.jpg", alt: "Panelist laughing during The Forge discussion" },
+  { src: "/images/forge/gallery-chairs.jpg", alt: "Director chairs with The Future of Tech Starts Here pillows" },
+  { src: "/images/forge/gallery-checkin.jpg", alt: "Beyond Code Collective check-in at Georgia Tech ATDC" },
 ];
 
 const EVENTBRITE_URL = "https://bccacademy.io/events/";
@@ -124,14 +139,14 @@ export default function TheForge() {
       {/* ─── Hero ─── */}
       <section className="relative min-h-[70vh] overflow-hidden bg-true-black">
         <Image
-          src="/images/forge/forge_3.jpg"
-          alt="Attendees at The Forge launch event"
+          src="/images/forge/hero-audience.jpg"
+          alt="Engaged audience at The Forge opening event"
           fill
-          className="object-cover opacity-40"
+          className="object-cover object-center opacity-70"
           sizes="100vw"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-true-black via-true-black/60 to-true-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-true-black/80 via-true-black/30 to-transparent" />
 
         <div className="relative z-10 flex min-h-[70vh] flex-col justify-end px-6 pb-10 pt-20 lg:px-8 lg:pb-24">
           <div className="mx-auto w-full max-w-6xl">
@@ -139,7 +154,7 @@ export default function TheForge() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="font-mono text-xs tracking-wider text-cobalt"
+              className="font-mono text-xs tracking-wider text-off-white/80"
               style={{ fontFamily: "var(--font-mono)" }}
             >
               {t("initiative")}
@@ -164,7 +179,7 @@ export default function TheForge() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="mt-4 font-heading text-[clamp(1.25rem,3vw,2rem)] leading-[1.1] text-cobalt"
+              className="mt-4 font-heading text-[clamp(1.25rem,3vw,2rem)] leading-[1.1] text-off-white"
             >
               {t("headline1")}
               <br />
@@ -240,13 +255,13 @@ export default function TheForge() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="relative aspect-[4/3] w-full overflow-hidden"
+              className="relative aspect-[3/2] w-full overflow-hidden"
             >
               <Image
-                src="/images/forge/forge_5.jpg"
-                alt="The Forge panel discussion with engaged audience"
+                src="/images/forge/residency-selfie.jpg"
+                alt="Community members taking a selfie at The Forge"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-true-black/30 via-transparent to-transparent" />
@@ -315,7 +330,7 @@ export default function TheForge() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.15 * i, duration: 0.5 }}
-                className="flex flex-col border-t-4 border-cobalt bg-true-black p-8"
+                className="flex flex-col border-t-4 border-cobalt bg-grey-1 p-8"
               >
                 <div className="flex items-center gap-3 text-cobalt">
                   {[
@@ -324,9 +339,9 @@ export default function TheForge() {
                     <House key="family" size={28} weight="bold" />,
                     <Student key="hs" size={28} weight="bold" />,
                   ][i]}
-                  <h3 className="font-heading text-2xl text-off-white">{prog.title}</h3>
+                  <h3 className="font-heading text-2xl text-true-black">{prog.title}</h3>
                 </div>
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-off-white/70">
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-grey-3">
                   {prog.description}
                 </p>
                 <div className="mt-6 flex gap-4">
@@ -337,13 +352,13 @@ export default function TheForge() {
                     {prog.format}
                   </span>
                   <span
-                    className="font-mono text-[10px] tracking-wider text-off-white/40"
+                    className="font-mono text-[10px] tracking-wider text-grey-3"
                     style={{ fontFamily: "var(--font-mono)" }}
                   >
                     {prog.audience}
                   </span>
                   <span
-                    className="font-mono text-[10px] tracking-wider uppercase text-electric-green"
+                    className="font-mono text-[10px] tracking-wider uppercase text-cobalt"
                     style={{ fontFamily: "var(--font-mono)" }}
                   >
                     {prog.price}
@@ -393,6 +408,13 @@ export default function TheForge() {
                 transition={{ delay: 0.12 * i, duration: 0.5 }}
                 className="relative"
               >
+                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-cobalt/10 text-cobalt">
+                  {[
+                    <CalendarBlank key="cal" size={24} weight="bold" />,
+                    <Ticket key="ticket" size={24} weight="bold" />,
+                    <MapPin key="pin" size={24} weight="bold" />,
+                  ][i]}
+                </div>
                 <p className="font-heading text-5xl text-cobalt/20">{step.step}</p>
                 <h4 className="mt-1 font-heading text-lg text-true-black">{step.title}</h4>
                 <p className="mt-2 text-sm leading-relaxed text-grey-3">{step.description}</p>
@@ -542,7 +564,7 @@ export default function TheForge() {
       </section>
 
       {/* ─── Signup form ─── */}
-      <section id="signup" className="bg-true-black px-6 py-16 lg:px-8 lg:py-24">
+      <section id="signup" className="bg-grey-1 px-6 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-md">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -564,12 +586,12 @@ export default function TheForge() {
                 >
                   {t("formLabel")}
                 </p>
-                <h2 className="mt-4 font-heading text-[clamp(1.75rem,4vw,2.5rem)] leading-[0.9] text-off-white">
+                <h2 className="mt-4 font-heading text-[clamp(1.75rem,4vw,2.5rem)] leading-[0.9] text-true-black">
                   {t("formHeadline1")}
                   <br />
                   <span className="text-cobalt">{t("formHeadline2")}</span>
                 </h2>
-                <p className="mt-4 text-sm text-off-white/60">{t("formDescription")}</p>
+                <p className="mt-4 text-sm text-grey-3">{t("formDescription")}</p>
 
                 <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-3 text-left">
                   <input
@@ -579,7 +601,7 @@ export default function TheForge() {
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     disabled={loading}
-                    className="w-full border border-off-white/20 bg-off-white/5 px-4 py-3 text-off-white placeholder:text-off-white/30 focus:border-cobalt focus:outline-none disabled:opacity-50"
+                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black placeholder:text-true-black/40 focus:border-cobalt focus:outline-none disabled:opacity-50"
                   />
                   <input
                     type="email"
@@ -588,7 +610,7 @@ export default function TheForge() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     disabled={loading}
-                    className="w-full border border-off-white/20 bg-off-white/5 px-4 py-3 text-off-white placeholder:text-off-white/30 focus:border-cobalt focus:outline-none disabled:opacity-50"
+                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black placeholder:text-true-black/40 focus:border-cobalt focus:outline-none disabled:opacity-50"
                   />
                   <input
                     type="tel"
@@ -596,27 +618,27 @@ export default function TheForge() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     disabled={loading}
-                    className="w-full border border-off-white/20 bg-off-white/5 px-4 py-3 text-off-white placeholder:text-off-white/30 focus:border-cobalt focus:outline-none disabled:opacity-50"
+                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black placeholder:text-true-black/40 focus:border-cobalt focus:outline-none disabled:opacity-50"
                   />
                   <select
                     value={interest}
                     onChange={(e) => setInterest(e.target.value)}
                     disabled={loading}
-                    className="w-full appearance-none border border-off-white/20 bg-off-white/5 px-4 py-3 text-off-white focus:border-cobalt focus:outline-none disabled:opacity-50"
+                    className="w-full appearance-none border border-true-black/15 bg-white px-4 py-3 text-true-black focus:border-cobalt focus:outline-none disabled:opacity-50"
                   >
-                    <option value="" className="bg-true-black">
+                    <option value="" className="bg-white">
                       {t("interestPlaceholder")}
                     </option>
-                    <option value="Attend" className="bg-true-black">
+                    <option value="Attend" className="bg-white">
                       {t("interestAttend")}
                     </option>
-                    <option value="Volunteer" className="bg-true-black">
+                    <option value="Volunteer" className="bg-white">
                       {t("interestVolunteer")}
                     </option>
-                    <option value="Partner" className="bg-true-black">
+                    <option value="Partner" className="bg-white">
                       {t("interestPartner")}
                     </option>
-                    <option value="Enroll Child" className="bg-true-black">
+                    <option value="Enroll Child" className="bg-white">
                       {t("interestEnroll")}
                     </option>
                   </select>
