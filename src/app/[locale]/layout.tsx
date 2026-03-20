@@ -90,6 +90,7 @@ export default async function LocaleLayout({
           <SpeedInsights />
         </NextIntlClientProvider>
         <GoogleAnalytics gaId="G-KJF6CKFSTP" />
+        <GoogleAnalytics gaId="G-4HKGVZ4CWD" />
       </body>
     </html>
   );

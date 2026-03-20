@@ -187,7 +187,7 @@ export default function TheForge() {
               className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4"
             >
               <a
-                href="#programming"
+                href="#signup"
                 className="inline-block bg-cobalt px-8 py-4 font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:bg-cobalt/80"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
