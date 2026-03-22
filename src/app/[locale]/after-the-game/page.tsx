@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowLeft, CheckCircle, UsersThree, Path, ArrowsClockwise } from "@phosphor-icons/react";
+import { ArrowLeft, CheckCircle, UsersThree, Path, ArrowsClockwise, Certificate } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 
 export default function AfterTheGame() {
@@ -214,7 +214,7 @@ export default function AfterTheGame() {
         >
           <div>
             <p
-              className="font-mono text-xs tracking-wider text-electric-green"
+              className="font-mono text-xs tracking-wider text-cobalt"
               style={{ fontFamily: "var(--font-mono)" }}
             >
               {t("videoLabel")}
@@ -251,7 +251,7 @@ export default function AfterTheGame() {
             transition={{ duration: 0.6 }}
           >
             <p
-              className="font-mono text-xs tracking-wider text-electric-green"
+              className="font-mono text-xs tracking-wider text-cobalt"
               style={{ fontFamily: "var(--font-mono)" }}
             >
               {t("programLabel")}
@@ -272,7 +272,7 @@ export default function AfterTheGame() {
                   transition={{ delay: 0.1 * i, duration: 0.5 }}
                   className="flex items-start gap-3"
                 >
-                  <CheckCircle size={20} weight="fill" className="mt-0.5 flex-shrink-0 text-electric-green" />
+                  <CheckCircle size={20} weight="fill" className="mt-0.5 flex-shrink-0 text-cobalt" />
                   <p className="text-base leading-relaxed text-grey-3 sm:text-lg">{item}</p>
                 </motion.div>
               ))}
@@ -316,12 +316,12 @@ export default function AfterTheGame() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="border-l-2 border-electric-green pl-6"
+            className="border-l-2 border-cobalt pl-6"
           >
             <div className="flex items-center gap-3">
-              <UsersThree size={28} weight="bold" className="text-electric-green" />
+              <UsersThree size={28} weight="bold" className="text-cobalt" />
               <p
-                className="font-mono text-xs tracking-wider text-electric-green"
+                className="font-mono text-xs tracking-wider text-cobalt"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {t("classroomLabel")}
@@ -330,7 +330,7 @@ export default function AfterTheGame() {
             <h3 className="mt-3 font-heading text-[clamp(1.5rem,3vw,2.25rem)] leading-[0.9] text-true-black">
               {t("classroomHeadline1")}
               <br />
-              <span className="text-electric-green">{t("classroomHeadline2")}</span>
+              <span className="text-cobalt">{t("classroomHeadline2")}</span>
             </h3>
             <p className="mt-4 text-base leading-relaxed text-grey-3">
               {t("classroomText")}
@@ -343,12 +343,12 @@ export default function AfterTheGame() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="border-l-2 border-true-black/20 pl-6"
+            className="border-l-2 border-cobalt pl-6"
           >
             <div className="flex items-center gap-3">
-              <Path size={28} weight="bold" className="text-true-black" />
+              <Path size={28} weight="bold" className="text-cobalt" />
               <p
-                className="font-mono text-xs tracking-wider text-true-black/60"
+                className="font-mono text-xs tracking-wider text-cobalt"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {t("curriculumLabel")}
@@ -364,18 +364,57 @@ export default function AfterTheGame() {
             </p>
           </motion.div>
 
+          {/* CompTIA */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="border-l-2 border-cobalt pl-6"
+          >
+            <div className="flex items-center gap-3">
+              <Certificate size={28} weight="bold" className="text-cobalt" />
+              <p
+                className="font-mono text-xs tracking-wider text-cobalt"
+                style={{ fontFamily: "var(--font-mono)" }}
+              >
+                {t("comptiaLabel")}
+              </p>
+            </div>
+            <h3 className="mt-3 font-heading text-[clamp(1.5rem,3vw,2.25rem)] leading-[0.9] text-true-black">
+              {t("comptiaHeadline1")}
+              <br />
+              <span className="text-cobalt">{t("comptiaHeadline2")}</span>
+            </h3>
+            <p className="mt-4 text-base leading-relaxed text-grey-3">
+              {t("comptiaText")}
+            </p>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              <div className="border border-true-black/10 bg-white p-5">
+                <p className="font-heading text-lg text-true-black">{t("comptiaCourse1Title")}</p>
+                <p className="mt-1 font-mono text-[10px] tracking-wider text-cobalt" style={{ fontFamily: "var(--font-mono)" }}>{t("comptiaCourse1Detail")}</p>
+                <p className="mt-3 text-sm leading-relaxed text-grey-3">{t("comptiaCourse1Desc")}</p>
+              </div>
+              <div className="border border-true-black/10 bg-white p-5">
+                <p className="font-heading text-lg text-true-black">{t("comptiaCourse2Title")}</p>
+                <p className="mt-1 font-mono text-[10px] tracking-wider text-cobalt" style={{ fontFamily: "var(--font-mono)" }}>{t("comptiaCourse2Detail")}</p>
+                <p className="mt-3 text-sm leading-relaxed text-grey-3">{t("comptiaCourse2Desc")}</p>
+              </div>
+            </div>
+          </motion.div>
+
           {/* Ecosystem */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="border-l-2 border-electric-green pl-6"
+            className="border-l-2 border-cobalt pl-6"
           >
             <div className="flex items-center gap-3">
-              <ArrowsClockwise size={28} weight="bold" className="text-electric-green" />
+              <ArrowsClockwise size={28} weight="bold" className="text-cobalt" />
               <p
-                className="font-mono text-xs tracking-wider text-electric-green"
+                className="font-mono text-xs tracking-wider text-cobalt"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {t("ecosystemLabel")}
@@ -384,7 +423,7 @@ export default function AfterTheGame() {
             <h3 className="mt-3 font-heading text-[clamp(1.5rem,3vw,2.25rem)] leading-[0.9] text-true-black">
               {t("ecosystemHeadline1")}
               <br />
-              <span className="text-electric-green">{t("ecosystemHeadline2")}</span>
+              <span className="text-cobalt">{t("ecosystemHeadline2")}</span>
             </h3>
             <p className="mt-4 text-base leading-relaxed text-grey-3">
               {t("ecosystemText")}
@@ -407,18 +446,18 @@ export default function AfterTheGame() {
             className="text-center"
           >
             {submitted ? (
-              <div className="bg-electric-green p-8">
-                <p className="font-heading text-3xl text-true-black">
+              <div className="bg-cobalt p-8">
+                <p className="font-heading text-3xl text-off-white">
                   {t("successTitle")}
                 </p>
-                <p className="mt-2 text-true-black/70">
+                <p className="mt-2 text-off-white/80">
                   {t("successMessage")}
                 </p>
               </div>
             ) : (
               <>
                 <p
-                  className="font-mono text-xs tracking-wider text-electric-green"
+                  className="font-mono text-xs tracking-wider text-cobalt"
                   style={{ fontFamily: "var(--font-mono)" }}
                 >
                   {t("formLabel")}
@@ -426,7 +465,7 @@ export default function AfterTheGame() {
                 <h2 className="mt-4 font-heading text-[clamp(1.75rem,4vw,2.5rem)] leading-[0.9] text-true-black">
                   {t("formHeadline1")}
                   <br />
-                  <span className="text-electric-green">{t("formHeadline2")}</span>
+                  <span className="text-cobalt">{t("formHeadline2")}</span>
                 </h2>
                 <p className="mt-4 text-sm text-grey-3">
                   {t("formDescription")}
