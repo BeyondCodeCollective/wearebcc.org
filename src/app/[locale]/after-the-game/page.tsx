@@ -75,8 +75,17 @@ export default function AfterTheGame() {
       </div>
 
       {/* Hero */}
-      <section className="px-6 pt-12 pb-16 lg:px-8 lg:pt-20 lg:pb-24">
-        <div className="mx-auto max-w-5xl text-center">
+      <section className="relative px-6 pt-12 pb-16 lg:px-8 lg:pt-20 lg:pb-24">
+        <Image
+          src="/images/atg/ramon.jpg"
+          alt="Ramón Clemente, Head of After The Game"
+          fill
+          className="object-cover object-center opacity-40"
+          sizes="100vw"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-true-black via-true-black/50 to-true-black/70" />
+        <div className="relative z-10 mx-auto max-w-5xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -176,7 +185,7 @@ export default function AfterTheGame() {
       </section>
 
       {/* The Bridge — why this exists */}
-      <section className="px-6 py-16 lg:px-8 lg:py-24">
+      <section className="bg-off-white px-6 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -184,10 +193,10 @@ export default function AfterTheGame() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-base leading-relaxed text-off-white/70 sm:text-lg">
+            <p className="text-base leading-relaxed text-grey-3 sm:text-lg">
               {t("problemText")}
             </p>
-            <p className="mt-4 text-base leading-relaxed text-off-white sm:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-true-black sm:text-lg">
               {t("problemText2")}
             </p>
           </motion.div>
@@ -195,7 +204,7 @@ export default function AfterTheGame() {
       </section>
 
       {/* Video + text */}
-      <section className="border-t border-off-white/10 px-6 py-16 lg:px-8 lg:py-24">
+      <section className="bg-grey-1 px-6 py-16 lg:px-8 lg:py-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -210,16 +219,16 @@ export default function AfterTheGame() {
             >
               {t("videoLabel")}
             </p>
-            <h2 className="mt-4 font-heading text-[clamp(1.75rem,4vw,2.5rem)] leading-[0.9] text-off-white">
+            <h2 className="mt-4 font-heading text-[clamp(1.75rem,4vw,2.5rem)] leading-[0.9] text-true-black">
               {t("videoHeadline1")}
               <br />
               {t("videoHeadline2")}
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-off-white/60">
+            <p className="mt-4 text-base leading-relaxed text-grey-3">
               {t("videoDescription")}
             </p>
           </div>
-          <div className="relative mx-auto aspect-[9/16] w-full max-w-[320px] overflow-hidden bg-charcoal">
+          <div className="relative mx-auto aspect-[9/16] w-full max-w-[320px] overflow-hidden bg-true-black">
             <video
               controls
               playsInline
@@ -233,7 +242,7 @@ export default function AfterTheGame() {
       </section>
 
       {/* The Program — checklist + image */}
-      <section className="border-t border-off-white/10 bg-charcoal px-6 py-16 lg:px-8 lg:py-24">
+      <section className="bg-off-white px-6 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -247,7 +256,7 @@ export default function AfterTheGame() {
             >
               {t("programLabel")}
             </p>
-            <h2 className="mt-4 font-heading text-[clamp(1.75rem,4vw,3rem)] leading-[0.9] text-off-white">
+            <h2 className="mt-4 font-heading text-[clamp(1.75rem,4vw,3rem)] leading-[0.9] text-true-black">
               {t("programHeadline1")}
               <br />
               {t("programHeadline2")}
@@ -264,7 +273,7 @@ export default function AfterTheGame() {
                   className="flex items-start gap-3"
                 >
                   <CheckCircle size={20} weight="fill" className="mt-0.5 flex-shrink-0 text-electric-green" />
-                  <p className="text-base leading-relaxed text-off-white/80 sm:text-lg">{item}</p>
+                  <p className="text-base leading-relaxed text-grey-3 sm:text-lg">{item}</p>
                 </motion.div>
               ))}
             </div>
@@ -275,22 +284,31 @@ export default function AfterTheGame() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="relative aspect-[4/5] w-full overflow-hidden"
           >
-            <Image
-              src="/images/atg/excelling.jpg"
-              alt="Confident young professional in a modern workspace"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
+            <div className="relative aspect-[4/5] w-full overflow-hidden">
+              <Image
+                src="/images/atg/ramon.jpg"
+                alt="Ramón Clemente, Head of After The Game"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+            <div className="mt-4">
+              <p className="font-heading text-lg text-true-black">Ramón Clemente</p>
+              <p
+                className="font-mono text-[10px] tracking-wider text-grey-3"
+                style={{ fontFamily: "var(--font-mono)" }}
+              >
+                HEAD OF AFTER THE GAME
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Classroom + Curriculum + Ecosystem — editorial flow */}
-      <section className="border-t border-off-white/10 px-6 py-16 lg:px-8 lg:py-24">
+      <section className="bg-grey-1 px-6 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-4xl space-y-16">
           {/* Classroom */}
           <motion.div
@@ -309,12 +327,12 @@ export default function AfterTheGame() {
                 {t("classroomLabel")}
               </p>
             </div>
-            <h3 className="mt-3 font-heading text-[clamp(1.5rem,3vw,2.25rem)] leading-[0.9] text-off-white">
+            <h3 className="mt-3 font-heading text-[clamp(1.5rem,3vw,2.25rem)] leading-[0.9] text-true-black">
               {t("classroomHeadline1")}
               <br />
               <span className="text-electric-green">{t("classroomHeadline2")}</span>
             </h3>
-            <p className="mt-4 text-base leading-relaxed text-off-white/70">
+            <p className="mt-4 text-base leading-relaxed text-grey-3">
               {t("classroomText")}
             </p>
           </motion.div>
@@ -325,23 +343,23 @@ export default function AfterTheGame() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="border-l-2 border-off-white/30 pl-6"
+            className="border-l-2 border-true-black/20 pl-6"
           >
             <div className="flex items-center gap-3">
-              <Path size={28} weight="bold" className="text-off-white" />
+              <Path size={28} weight="bold" className="text-true-black" />
               <p
-                className="font-mono text-xs tracking-wider text-off-white/60"
+                className="font-mono text-xs tracking-wider text-true-black/60"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {t("curriculumLabel")}
               </p>
             </div>
-            <h3 className="mt-3 font-heading text-[clamp(1.5rem,3vw,2.25rem)] leading-[0.9] text-off-white">
+            <h3 className="mt-3 font-heading text-[clamp(1.5rem,3vw,2.25rem)] leading-[0.9] text-true-black">
               {t("curriculumHeadline1")}
               <br />
               {t("curriculumHeadline2")}
             </h3>
-            <p className="mt-4 text-base leading-relaxed text-off-white/70">
+            <p className="mt-4 text-base leading-relaxed text-grey-3">
               {t("curriculumText")}
             </p>
           </motion.div>
@@ -363,12 +381,12 @@ export default function AfterTheGame() {
                 {t("ecosystemLabel")}
               </p>
             </div>
-            <h3 className="mt-3 font-heading text-[clamp(1.5rem,3vw,2.25rem)] leading-[0.9] text-off-white">
+            <h3 className="mt-3 font-heading text-[clamp(1.5rem,3vw,2.25rem)] leading-[0.9] text-true-black">
               {t("ecosystemHeadline1")}
               <br />
               <span className="text-electric-green">{t("ecosystemHeadline2")}</span>
             </h3>
-            <p className="mt-4 text-base leading-relaxed text-off-white/70">
+            <p className="mt-4 text-base leading-relaxed text-grey-3">
               {t("ecosystemText")}
             </p>
           </motion.div>
@@ -378,7 +396,7 @@ export default function AfterTheGame() {
       {/* Signup form */}
       <section
         id="signup"
-        className="border-t border-off-white/10 bg-charcoal px-6 py-16 lg:px-8 lg:py-24"
+        className="bg-off-white px-6 py-16 lg:px-8 lg:py-24"
       >
         <div className="mx-auto max-w-md">
           <motion.div
@@ -405,12 +423,12 @@ export default function AfterTheGame() {
                 >
                   {t("formLabel")}
                 </p>
-                <h2 className="mt-4 font-heading text-[clamp(1.75rem,4vw,2.5rem)] leading-[0.9] text-off-white">
+                <h2 className="mt-4 font-heading text-[clamp(1.75rem,4vw,2.5rem)] leading-[0.9] text-true-black">
                   {t("formHeadline1")}
                   <br />
                   <span className="text-electric-green">{t("formHeadline2")}</span>
                 </h2>
-                <p className="mt-4 text-sm text-off-white/60">
+                <p className="mt-4 text-sm text-grey-3">
                   {t("formDescription")}
                 </p>
 
@@ -425,7 +443,7 @@ export default function AfterTheGame() {
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     disabled={loading}
-                    className="w-full border border-off-white/20 bg-off-white/5 px-4 py-3 text-off-white placeholder:text-off-white/30 focus:border-cobalt focus:outline-none disabled:opacity-50"
+                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black placeholder:text-true-black/40 focus:border-cobalt focus:outline-none disabled:opacity-50"
                   />
                   <input
                     type="email"
@@ -434,7 +452,7 @@ export default function AfterTheGame() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     disabled={loading}
-                    className="w-full border border-off-white/20 bg-off-white/5 px-4 py-3 text-off-white placeholder:text-off-white/30 focus:border-cobalt focus:outline-none disabled:opacity-50"
+                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black placeholder:text-true-black/40 focus:border-cobalt focus:outline-none disabled:opacity-50"
                   />
                   <input
                     type="tel"
@@ -442,24 +460,24 @@ export default function AfterTheGame() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     disabled={loading}
-                    className="w-full border border-off-white/20 bg-off-white/5 px-4 py-3 text-off-white placeholder:text-off-white/30 focus:border-cobalt focus:outline-none disabled:opacity-50"
+                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black placeholder:text-true-black/40 focus:border-cobalt focus:outline-none disabled:opacity-50"
                   />
                   <select
                     value={interest}
                     onChange={(e) => setInterest(e.target.value)}
                     disabled={loading}
-                    className="w-full border border-off-white/20 bg-off-white/5 px-4 py-3 text-off-white focus:border-cobalt focus:outline-none appearance-none disabled:opacity-50"
+                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black focus:border-cobalt focus:outline-none appearance-none disabled:opacity-50"
                   >
-                    <option value="" className="bg-true-black">
+                    <option value="" className="bg-white">
                       {t("interestPlaceholder")}
                     </option>
-                    <option value="Join" className="bg-true-black">
+                    <option value="Join" className="bg-white">
                       {t("interestJoin")}
                     </option>
-                    <option value="Volunteer" className="bg-true-black">
+                    <option value="Volunteer" className="bg-white">
                       {t("interestVolunteer")}
                     </option>
-                    <option value="Support" className="bg-true-black">
+                    <option value="Support" className="bg-white">
                       {t("interestSupport")}
                     </option>
                   </select>
@@ -482,17 +500,17 @@ export default function AfterTheGame() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-off-white/10 px-6 py-8 lg:px-8">
+      <footer className="border-t border-true-black/10 bg-off-white px-6 py-8 lg:px-8">
         <div className="mx-auto flex max-w-5xl items-center justify-between">
           <a
             href="/"
-            className="font-mono text-xs tracking-wider text-off-white/40 transition-colors hover:text-off-white"
+            className="font-mono text-xs tracking-wider text-true-black/40 transition-colors hover:text-true-black"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             {t("back")}
           </a>
           <p
-            className="font-mono text-xs tracking-wider text-off-white/30"
+            className="font-mono text-xs tracking-wider text-true-black/30"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             &copy; {new Date().getFullYear()} BEYOND CODE COLLECTIVE
