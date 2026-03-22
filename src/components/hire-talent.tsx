@@ -57,7 +57,7 @@ export function HireTalent() {
   return (
     <section id="hire-talent" className="bg-charcoal px-6 py-24 lg:px-8 lg:py-32">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="grid gap-8 lg:grid-cols-2 sm:gap-12 lg:gap-20">
           {/* Left — messaging */}
           <div>
             <motion.div
@@ -185,7 +185,7 @@ export function HireTalent() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-electric-green px-6 py-4 font-mono text-sm tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="w-full bg-electric-green px-5 py-3 font-mono text-xs tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80 disabled:cursor-not-allowed disabled:opacity-50 sm:px-6 sm:py-4 sm:text-sm"
                   style={{ fontFamily: "var(--font-mono)" }}
                 >
                   {loading ? t("submitting") : t("submit")}

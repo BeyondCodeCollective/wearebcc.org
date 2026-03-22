@@ -149,7 +149,7 @@ export default function AfterTheGame() {
           >
             <a
               href="#signup"
-              className="bg-cobalt px-8 py-4 font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:bg-cobalt/80"
+              className="bg-cobalt px-5 py-3 font-mono text-xs tracking-wider sm:px-8 sm:py-4 sm:text-sm uppercase text-off-white transition-colors hover:bg-cobalt/80"
               style={{ fontFamily: "var(--font-mono)" }}
             >
               {t("joinWaitlist")} &rarr;
@@ -228,7 +228,7 @@ export default function AfterTheGame() {
               {t("videoDescription")}
             </p>
           </div>
-          <div className="relative mx-auto aspect-[9/16] w-full max-w-[320px] overflow-hidden bg-true-black">
+          <div className="relative mx-auto aspect-[9/16] w-full max-w-[260px] overflow-hidden bg-true-black sm:max-w-[320px]">
             <video
               controls
               playsInline

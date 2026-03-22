@@ -75,7 +75,7 @@ export function CTABridge() {
         >
           <button
             onClick={() => openPartnerships()}
-            className="inline-block bg-electric-green px-10 py-4 font-mono text-sm tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80 cursor-pointer"
+            className="inline-block bg-electric-green px-6 py-3 font-mono text-xs tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80 cursor-pointer sm:px-10 sm:py-4 sm:text-sm"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             {t("partnerWithUs")}

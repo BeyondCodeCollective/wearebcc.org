@@ -39,7 +39,7 @@ export function GetInvolved() {
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <a
               href="mailto:info@wearebcc.org"
-              className="inline-flex items-center justify-center gap-2 bg-true-black px-8 py-4 font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:bg-charcoal"
+              className="inline-flex items-center justify-center gap-2 bg-true-black px-5 py-3 font-mono text-xs tracking-wider uppercase text-off-white transition-colors hover:bg-charcoal sm:px-8 sm:py-4 sm:text-sm"
               style={{ fontFamily: "var(--font-mono)" }}
             >
               {t("cta")}
