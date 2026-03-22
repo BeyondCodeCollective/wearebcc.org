@@ -203,7 +203,7 @@ export default function TheForge() {
             >
               <a
                 href="#signup"
-                className="inline-block bg-cobalt px-8 py-4 font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:bg-cobalt/80"
+                className="inline-block bg-cobalt px-5 py-3 font-mono text-xs tracking-wider sm:px-8 sm:py-4 sm:text-sm uppercase text-off-white transition-colors hover:bg-cobalt/80"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {t("learnMore")} &rarr;
@@ -212,7 +212,7 @@ export default function TheForge() {
                 href={EVENTBRITE_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 border border-off-white/30 px-8 py-4 font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:border-off-white hover:bg-off-white/5"
+                className="inline-flex items-center gap-2 border border-off-white/30 px-5 py-3 font-mono text-xs tracking-wider sm:px-8 sm:py-4 sm:text-sm uppercase text-off-white transition-colors hover:border-off-white hover:bg-off-white/5"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {t("eventbriteCta")}
@@ -438,7 +438,7 @@ export default function TheForge() {
               href={EVENTBRITE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-cobalt px-8 py-4 font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:bg-cobalt/80"
+              className="inline-flex items-center gap-2 bg-cobalt px-5 py-3 font-mono text-xs tracking-wider sm:px-8 sm:py-4 sm:text-sm uppercase text-off-white transition-colors hover:bg-cobalt/80"
               style={{ fontFamily: "var(--font-mono)" }}
             >
               {t("viewCalendar")}
@@ -526,7 +526,7 @@ export default function TheForge() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 * i, duration: 0.5 }}
-                className="relative h-[280px] w-[400px] flex-shrink-0 overflow-hidden sm:h-[340px] sm:w-[480px]"
+                className="relative h-[220px] w-[300px] flex-shrink-0 overflow-hidden sm:h-[280px] sm:w-[400px] lg:h-[340px] lg:w-[480px]"
               >
                 <Image
                   src={img.src}
@@ -554,7 +554,7 @@ export default function TheForge() {
             href={EVENTBRITE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center gap-2 border-2 border-off-white px-8 py-4 font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:bg-off-white hover:text-cobalt"
+            className="inline-flex shrink-0 items-center gap-2 border-2 border-off-white px-5 py-3 font-mono text-xs tracking-wider sm:px-8 sm:py-4 sm:text-sm uppercase text-off-white transition-colors hover:bg-off-white hover:text-cobalt"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             {t("eventbriteCta")}

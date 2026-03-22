@@ -161,14 +161,14 @@ export function Hero() {
               */}
               <Link
                 href="/after-the-game"
-                className="bg-cobalt px-8 py-4 text-center font-mono text-sm tracking-wider uppercase text-off-white transition-colors hover:bg-cobalt/80 sm:px-10"
+                className="bg-cobalt px-5 py-3 text-center font-mono text-xs tracking-wider uppercase text-off-white transition-colors hover:bg-cobalt/80 sm:px-8 sm:py-4 sm:text-sm"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 AFTER THE GAME &rarr;
               </Link>
               <button
                 onClick={() => openNewsletter()}
-                className="border border-off-white/30 px-6 py-4 text-center font-mono text-sm tracking-wider uppercase text-off-white/70 transition-all hover:border-off-white hover:text-off-white sm:px-8"
+                className="border border-off-white/30 px-5 py-3 text-center font-mono text-xs tracking-wider uppercase text-off-white/70 transition-all hover:border-off-white hover:text-off-white sm:px-8 sm:py-4 sm:text-sm"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {t("joinNewsletter")}
