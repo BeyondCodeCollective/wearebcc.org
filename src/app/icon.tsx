@@ -13,20 +13,20 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#FF4C00",
+          backgroundColor: "#E4F800",
           borderRadius: "4px",
         }}
       >
         <span
           style={{
-            fontSize: "11px",
+            fontSize: "18px",
             fontWeight: 900,
-            color: "#FFFFFF",
-            letterSpacing: "-0.5px",
+            color: "#0A0A0A",
+            letterSpacing: "-1px",
             lineHeight: 1,
           }}
         >
-          BCC
+          [ ]
         </span>
       </div>
     ),
