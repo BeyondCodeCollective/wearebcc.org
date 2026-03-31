@@ -1,6 +1,8 @@
 {
   "nav": {
     "about": "About",
+    "aboutUs": "About Us",
+    "council": "Council",
     "initiatives": "Initiatives",
     "partners": "Partners",
     "resources": "Resources",
@@ -261,7 +263,7 @@
     "founderQuote": "I founded Beyond Code Collective because innovation must include everyone and technology should be a bridge to opportunity, not a barrier. I am thrilled to bring together a team that shares this vision. The leadership team reflects the expertise, passion, and commitment required to advance our mission. Together, we\u2019re not just focused on closing the digital divide but ensuring communities aren\u2019t left behind.",
     "founderName": "Cristina Mancini",
     "founderTitle": "Founder & CEO, Beyond Code Collective",
-    "leadershipLabel": "[01] LEADERSHIP",
+    "leadershipLabel": "[02] LEADERSHIP",
     "leadershipHeadline1": "THE TEAM",
     "leadershipHeadline2": "LEADING THE WAY",
     "leadershipBios": {
@@ -272,7 +274,7 @@
     "edQuote": "Each member of the Tech Futures National Council brings a unique background and perspective, and we are proud to welcome such a distinguished group to the Beyond Code community. Their extensive experience will be instrumental in shaping our ecosystem and ensuring that our programming translates into real-world impact.",
     "edQuoteName": "Mica Le John",
     "edQuoteTitle": "Executive Director, Beyond Code Collective",
-    "councilLabel": "[02] THE COUNCIL",
+    "councilLabel": "[01] THE COUNCIL",
     "councilHeadline1": "TECH FUTURES",
     "councilHeadline2": "NATIONAL COUNCIL",
     "councilDescription": "Council members share a commitment to Beyond Code\u2019s vision of building a future where under-resourced learners not only access emerging technologies, but also shape them. The Council includes representatives from NASA, YouTube, Xbox, UT Austin, and more.",

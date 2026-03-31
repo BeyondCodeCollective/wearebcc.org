@@ -68,6 +68,28 @@ export default function Council() {
       {/* Council Member Photos */}
       <section className="px-6 pb-16 lg:px-8 lg:pb-20">
         <div className="mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35, duration: 0.6 }}
+            className="mb-10"
+          >
+            <p
+              className="font-mono text-xs tracking-wider text-cobalt"
+              style={{ fontFamily: "var(--font-mono)" }}
+            >
+              {t("councilLabel")}
+            </p>
+            <h2 className="mt-4 font-heading text-[clamp(1.75rem,4vw,3rem)] leading-[0.85] text-true-black">
+              {t("councilHeadline1")}
+              <br />
+              <span className="text-cobalt">{t("councilHeadline2")}</span>
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-grey-3 sm:text-lg">
+              {t("councilDescription")}
+            </p>
+          </motion.div>
+
           {/* Top row: 4 cards */}
           <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:gap-6">
             {COUNCIL_MEMBERS.slice(0, 4).map((member, i) => (

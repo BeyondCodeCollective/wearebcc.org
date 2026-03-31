@@ -1,24 +1,32 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname } from "@/i18n/navigation";
-import { GlobeSimple } from "@phosphor-icons/react";
+import { GlobeSimple, CaretDown } from "@phosphor-icons/react";
 import { SITE } from "@/lib/constants";
 import { Logo } from "./ui/logo";
+import { Link } from "@/i18n/navigation";
 
 const NAV_KEYS = [
-  { key: "about", href: "#about" },
   { key: "initiatives", href: "#initiatives" },
   { key: "partners", href: "#partners" },
   { key: "resources", href: "#resources" },
   { key: "getInvolved", href: "#get-involved" },
 ] as const;
 
+const ABOUT_DROPDOWN = [
+  { key: "aboutUs", href: "#about" },
+  { key: "council", href: "/council", isPage: true },
+] as const;
+
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
+  const aboutRef = useRef<HTMLDivElement>(null);
   const t = useTranslations("nav");
   const locale = useLocale();
   const router = useRouter();
@@ -41,6 +49,17 @@ export function Nav() {
     };
   }, [mobileOpen]);
 
+  // Close about dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (aboutRef.current && !aboutRef.current.contains(e.target as Node)) {
+        setAboutOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
   const switchLocale = (newLocale: "en" | "es") => {
     router.replace(pathname, { locale: newLocale });
   };
@@ -50,10 +69,6 @@ export function Nav() {
     ? "text-true-black/70 hover:text-true-black"
     : "text-off-white/70 hover:text-off-white";
   const hamburgerColor = scrolled ? "bg-true-black" : "bg-off-white";
-  const toggleActiveColor = scrolled ? "text-true-black" : "text-off-white";
-  const toggleInactiveColor = scrolled
-    ? "text-true-black/30 hover:text-true-black/60"
-    : "text-off-white/30 hover:text-off-white/60";
 
   return (
     <>
@@ -76,6 +91,64 @@ export function Nav() {
 
           {/* Desktop nav */}
           <div className="hidden items-center gap-8 md:flex">
+            {/* About dropdown */}
+            <div
+              ref={aboutRef}
+              className="relative"
+              onMouseEnter={() => setAboutOpen(true)}
+              onMouseLeave={() => setAboutOpen(false)}
+            >
+              <button
+                onClick={() => setAboutOpen(!aboutOpen)}
+                className={`flex items-center gap-1 font-mono text-xs tracking-wider uppercase transition-colors ${textColor}`}
+                style={{ fontFamily: "var(--font-mono)" }}
+              >
+                {t("about")}
+                <CaretDown
+                  size={10}
+                  weight="bold"
+                  className={`transition-transform duration-200 ${aboutOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+
+              <AnimatePresence>
+                {aboutOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 4 }}
+                    transition={{ duration: 0.15 }}
+                    className="absolute left-0 top-full mt-2 min-w-[160px] border border-true-black/10 bg-off-white/95 backdrop-blur-md shadow-lg"
+                  >
+                    {ABOUT_DROPDOWN.map((item) =>
+                      item.isPage ? (
+                        <Link
+                          key={item.key}
+                          href={item.href}
+                          onClick={() => setAboutOpen(false)}
+                          className="block px-4 py-3 font-mono text-xs tracking-wider uppercase text-true-black/70 transition-colors hover:bg-electric-green/10 hover:text-true-black"
+                          style={{ fontFamily: "var(--font-mono)" }}
+                        >
+                          {t(item.key)}
+                        </Link>
+                      ) : (
+                        <a
+                          key={item.key}
+                          href={item.href}
+                          onClick={() => setAboutOpen(false)}
+                          className="block px-4 py-3 font-mono text-xs tracking-wider uppercase text-true-black/70 transition-colors hover:bg-electric-green/10 hover:text-true-black"
+                          style={{ fontFamily: "var(--font-mono)" }}
+                        >
+                          {t(item.key)}
+                        </a>
+                      )
+                    )}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Rest of nav links */}
             {NAV_KEYS.map((link) => (
               <a
                 key={link.href}
@@ -217,6 +290,59 @@ export function Nav() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-40 flex flex-col items-start justify-center gap-8 bg-true-black px-8 pt-24"
           >
+            {/* About with sub-links */}
+            <div>
+              <button
+                onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
+                className="flex items-center gap-2 font-heading text-4xl text-off-white transition-colors hover:text-electric-green"
+              >
+                {t("about")}
+                <CaretDown
+                  size={20}
+                  weight="bold"
+                  className={`transition-transform duration-200 ${mobileAboutOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              <AnimatePresence>
+                {mobileAboutOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="overflow-hidden pl-4 pt-4"
+                  >
+                    <div className="flex flex-col gap-4 border-l-2 border-electric-green pl-4">
+                      {ABOUT_DROPDOWN.map((item) =>
+                        item.isPage ? (
+                          <Link
+                            key={item.key}
+                            href={item.href}
+                            onClick={() => setMobileOpen(false)}
+                            className="font-mono text-sm tracking-wider uppercase text-off-white/70 transition-colors hover:text-electric-green"
+                            style={{ fontFamily: "var(--font-mono)" }}
+                          >
+                            {t(item.key)}
+                          </Link>
+                        ) : (
+                          <a
+                            key={item.key}
+                            href={item.href}
+                            onClick={() => setMobileOpen(false)}
+                            className="font-mono text-sm tracking-wider uppercase text-off-white/70 transition-colors hover:text-electric-green"
+                            style={{ fontFamily: "var(--font-mono)" }}
+                          >
+                            {t(item.key)}
+                          </a>
+                        )
+                      )}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Rest of nav links */}
             {NAV_KEYS.map((link) => (
               <a
                 key={link.href}
