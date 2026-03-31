@@ -30,9 +30,9 @@ export default function Council() {
         </a>
       </div>
 
-      {/* Hero Text */}
-      <section className="px-6 pt-12 pb-12 lg:px-8 lg:pt-20 lg:pb-16">
-        <div className="mx-auto max-w-5xl">
+      {/* Hero + Leadership — compact, visual-first */}
+      <section className="px-6 pt-8 pb-0 lg:px-8 lg:pt-12">
+        <div className="mx-auto max-w-6xl">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ export default function Council() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.6 }}
-            className="mt-6 max-w-4xl font-heading text-[clamp(2.5rem,6vw,5rem)] leading-[0.85] text-true-black"
+            className="mt-4 max-w-4xl font-heading text-[clamp(2rem,5vw,4rem)] leading-[0.85] text-true-black"
           >
             {t("heroHeadline1")}
             <br />
@@ -58,41 +58,19 @@ export default function Council() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="mt-8 max-w-2xl text-base leading-relaxed text-grey-3 sm:text-lg"
+            className="mt-5 max-w-2xl text-sm leading-relaxed text-grey-3 sm:text-base"
           >
             {t("heroDescription")}
           </motion.p>
-        </div>
-      </section>
 
-      {/* Leadership Team */}
-      <section className="bg-off-white px-6 pb-16 lg:px-8 lg:pb-20">
-        <div className="mx-auto max-w-5xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.35, duration: 0.6 }}
-          >
-            <p
-              className="font-mono text-xs tracking-wider text-cobalt"
-              style={{ fontFamily: "var(--font-mono)" }}
-            >
-              {t("leadershipLabel")}
-            </p>
-            <h2 className="mt-4 font-heading text-[clamp(2rem,4vw,3.5rem)] leading-[0.85] text-true-black">
-              {t("leadershipHeadline1")}
-              <br />
-              <span className="text-cobalt">{t("leadershipHeadline2")}</span>
-            </h2>
-          </motion.div>
-
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:gap-12">
+          {/* Leadership photos — immediately after hero text */}
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:mt-12 lg:gap-10">
             {COUNCIL_LEADERSHIP.map((leader, i) => (
               <motion.div
                 key={leader.name}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.45 + 0.15 * i, duration: 0.6 }}
+                transition={{ delay: 0.4 + 0.15 * i, duration: 0.6 }}
                 className="group"
               >
                 <div className="relative aspect-[3/4] w-full overflow-hidden shadow-sm transition-shadow duration-300 group-hover:shadow-md">
@@ -126,7 +104,7 @@ export default function Council() {
       </section>
 
       {/* Mica Le John Quote */}
-      <section className="bg-cobalt px-6 py-16 lg:px-8 lg:py-24">
+      <section className="bg-cobalt px-6 py-16 mt-16 lg:px-8 lg:py-24 lg:mt-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -167,7 +145,7 @@ export default function Council() {
               <br />
               <span className="text-cobalt">{t("councilHeadline2")}</span>
             </h2>
-            <p className="mt-4 max-w-2xl text-base leading-relaxed text-grey-3 sm:text-lg">
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-grey-3 sm:text-base">
               {t("councilDescription")}
             </p>
           </motion.div>
