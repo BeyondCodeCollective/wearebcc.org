@@ -3,22 +3,16 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations, useLocale } from "next-intl";
-import { useRouter, usePathname } from "@/i18n/navigation";
+import { useRouter, usePathname, Link } from "@/i18n/navigation";
 import { GlobeSimple, CaretDown } from "@phosphor-icons/react";
 import { SITE } from "@/lib/constants";
 import { Logo } from "./ui/logo";
-import { Link } from "@/i18n/navigation";
 
 const NAV_KEYS = [
   { key: "initiatives", href: "#initiatives" },
   { key: "partners", href: "#partners" },
   { key: "resources", href: "#resources" },
   { key: "getInvolved", href: "#get-involved" },
-] as const;
-
-const ABOUT_DROPDOWN = [
-  { key: "aboutUs", href: "#about" },
-  { key: "council", href: "/council", isPage: true },
 ] as const;
 
 export function Nav() {
@@ -70,6 +64,12 @@ export function Nav() {
     : "text-off-white/70 hover:text-off-white";
   const hamburgerColor = scrolled ? "bg-true-black" : "bg-off-white";
 
+  const dropdownLinkClass =
+    "block px-4 py-3 font-mono text-xs tracking-wider uppercase text-true-black/70 transition-colors hover:bg-electric-green/10 hover:text-true-black";
+
+  const mobileSubLinkClass =
+    "font-mono text-sm tracking-wider uppercase text-off-white/70 transition-colors hover:text-electric-green";
+
   return (
     <>
       <nav
@@ -120,29 +120,22 @@ export function Nav() {
                     transition={{ duration: 0.15 }}
                     className="absolute left-0 top-full mt-2 min-w-[160px] border border-true-black/10 bg-off-white/95 backdrop-blur-md shadow-lg"
                   >
-                    {ABOUT_DROPDOWN.map((item) =>
-                      item.isPage ? (
-                        <Link
-                          key={item.key}
-                          href={item.href}
-                          onClick={() => setAboutOpen(false)}
-                          className="block px-4 py-3 font-mono text-xs tracking-wider uppercase text-true-black/70 transition-colors hover:bg-electric-green/10 hover:text-true-black"
-                          style={{ fontFamily: "var(--font-mono)" }}
-                        >
-                          {t(item.key)}
-                        </Link>
-                      ) : (
-                        <a
-                          key={item.key}
-                          href={item.href}
-                          onClick={() => setAboutOpen(false)}
-                          className="block px-4 py-3 font-mono text-xs tracking-wider uppercase text-true-black/70 transition-colors hover:bg-electric-green/10 hover:text-true-black"
-                          style={{ fontFamily: "var(--font-mono)" }}
-                        >
-                          {t(item.key)}
-                        </a>
-                      )
-                    )}
+                    <a
+                      href="#about"
+                      onClick={() => setAboutOpen(false)}
+                      className={dropdownLinkClass}
+                      style={{ fontFamily: "var(--font-mono)" }}
+                    >
+                      {t("aboutUs")}
+                    </a>
+                    <Link
+                      href="/council"
+                      onClick={() => setAboutOpen(false)}
+                      className={dropdownLinkClass}
+                      style={{ fontFamily: "var(--font-mono)" }}
+                    >
+                      {t("council")}
+                    </Link>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -313,29 +306,22 @@ export function Nav() {
                     className="overflow-hidden pl-4 pt-4"
                   >
                     <div className="flex flex-col gap-4 border-l-2 border-electric-green pl-4">
-                      {ABOUT_DROPDOWN.map((item) =>
-                        item.isPage ? (
-                          <Link
-                            key={item.key}
-                            href={item.href}
-                            onClick={() => setMobileOpen(false)}
-                            className="font-mono text-sm tracking-wider uppercase text-off-white/70 transition-colors hover:text-electric-green"
-                            style={{ fontFamily: "var(--font-mono)" }}
-                          >
-                            {t(item.key)}
-                          </Link>
-                        ) : (
-                          <a
-                            key={item.key}
-                            href={item.href}
-                            onClick={() => setMobileOpen(false)}
-                            className="font-mono text-sm tracking-wider uppercase text-off-white/70 transition-colors hover:text-electric-green"
-                            style={{ fontFamily: "var(--font-mono)" }}
-                          >
-                            {t(item.key)}
-                          </a>
-                        )
-                      )}
+                      <a
+                        href="#about"
+                        onClick={() => setMobileOpen(false)}
+                        className={mobileSubLinkClass}
+                        style={{ fontFamily: "var(--font-mono)" }}
+                      >
+                        {t("aboutUs")}
+                      </a>
+                      <Link
+                        href="/council"
+                        onClick={() => setMobileOpen(false)}
+                        className={mobileSubLinkClass}
+                        style={{ fontFamily: "var(--font-mono)" }}
+                      >
+                        {t("council")}
+                      </Link>
                     </div>
                   </motion.div>
                 )}
