@@ -123,6 +123,31 @@ export const FEATURED_VIDEO = {
   thumbnailUrl: "/images/video-thumbnail.jpg",
 } as const;
 
+export const COUNCIL_LEADERSHIP = [
+  {
+    name: "Mica Le John",
+    role: "Executive Director",
+    bio: "micaLeJohn",
+    image: "/images/council/mica-le-john.png",
+  },
+  {
+    name: "Jihan Johnston-McGlotten",
+    role: "Managing Director, The Forge",
+    bio: "jihanJohnstonMcGlotten",
+    image: "/images/council/jihan-johnston-mcglotten.png",
+  },
+] as const;
+
+export const COUNCIL_MEMBERS = [
+  { name: "Mark Stephen Meadows", org: "NASA", image: "/images/council/mark-meadows.png" },
+  { name: "Jennifer Clark", org: "YouTube", image: "/images/council/jennifer-clark.png" },
+  { name: "Christopher Douglas", org: "Xbox", image: "/images/council/christopher-douglas.png" },
+  { name: "Max Murphy", org: "AI Technologist", image: "/images/council/max-murphy.png" },
+  { name: "Darrell Booker", org: "Seven and Grace", image: "/images/council/darrell-booker.png" },
+  { name: "Sofía De Jesus", org: "UT Austin", image: "/images/council/sofia-de-jesus.png" },
+  { name: "Dr. José Morey", org: "Ad Astra Media", image: "/images/council/jose-morey.png" },
+] as const;
+
 export const FOUNDER = {
   name: "Cristina Mancini",
   title: "Founder & CEO",

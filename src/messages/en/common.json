@@ -252,6 +252,51 @@
     "successMessage": "We\u2019ll be in touch with programming details and updates.",
     "error": "Something went wrong"
   },
+  "council": {
+    "back": "WEAREBCC.ORG",
+    "heroLabel": "[ ANNOUNCEMENT ]",
+    "heroHeadline1": "INTRODUCING THE",
+    "heroHeadline2": "TECH FUTURES NATIONAL COUNCIL",
+    "heroDescription": "Beyond Code Collective announces the formation of its Tech Futures National Council \u2014 a distinguished group of technologists, academics, and business leaders providing strategic insight and real-world perspectives to inform curricula and programming, while unlocking networks that amplify impact across AI literacy, innovation pathways, and workforce development.",
+    "founderQuote": "I founded Beyond Code Collective because innovation must include everyone and technology should be a bridge to opportunity, not a barrier. I am thrilled to bring together a team that shares this vision. The leadership team reflects the expertise, passion, and commitment required to advance our mission. Together, we\u2019re not just focused on closing the digital divide but ensuring communities aren\u2019t left behind.",
+    "founderName": "Cristina Mancini",
+    "founderTitle": "Founder & CEO, Beyond Code Collective",
+    "leadershipLabel": "[01] LEADERSHIP",
+    "leadershipHeadline1": "THE TEAM",
+    "leadershipHeadline2": "LEADING THE WAY",
+    "leadershipBios": {
+      "micaLeJohn": "Over a decade of experience at the intersection of technology, creativity, and social impact. Formerly leading strategic partnerships and innovation at Black Girls Code.",
+      "jihanJohnstonMcGlotten": "Over a decade of experience building tech communities and driving access. Leading growth and expansion of The Forge in Atlanta.",
+      "ramonClemente": "After a 17-year professional basketball career, bridging the world of athletics and technology through After The Game."
+    },
+    "edQuote": "Each member of the Tech Futures National Council brings a unique background and perspective, and we are proud to welcome such a distinguished group to the Beyond Code community. Their extensive experience will be instrumental in shaping our ecosystem and ensuring that our programming translates into real-world impact.",
+    "edQuoteName": "Mica Le John",
+    "edQuoteTitle": "Executive Director, Beyond Code Collective",
+    "councilLabel": "[02] THE COUNCIL",
+    "councilHeadline1": "TECH FUTURES",
+    "councilHeadline2": "NATIONAL COUNCIL",
+    "councilDescription": "Council members share a commitment to Beyond Code\u2019s vision of building a future where under-resourced learners not only access emerging technologies, but also shape them. The Council includes representatives from NASA, YouTube, Xbox, UT Austin, and more.",
+    "missionLabel": "[03] THE MISSION",
+    "missionHeadline1": "THREE PILLARS",
+    "missionHeadline2": "OF IMPACT",
+    "missionPillars": {
+      "0": {
+        "label": "AI LITERACY",
+        "title": "Demystifying Artificial Intelligence",
+        "description": "Ensuring communities understand and can participate in the AI revolution \u2014 not just consume it."
+      },
+      "1": {
+        "label": "INNOVATION PATHWAYS",
+        "title": "Creating On-Ramps to Tech",
+        "description": "Building structured paths from curiosity to career through mentorship, education, and real-world application."
+      },
+      "2": {
+        "label": "WORKFORCE DEVELOPMENT",
+        "title": "Closing the Opportunity Gap",
+        "description": "Connecting learners to employment through industry partnerships, certifications, and placement support."
+      }
+    }
+  },
   "segments": {
     "student": "Student (7-17)",
     "learner": "Learner (18+)",
