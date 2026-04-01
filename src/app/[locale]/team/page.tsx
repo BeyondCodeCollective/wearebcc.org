@@ -38,9 +38,7 @@ export default function Team() {
 
       {/* Hero */}
       <section className="px-6 pt-8 pb-0 lg:px-8 lg:pt-12">
-        <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-2 lg:gap-8">
-          <div className="flex flex-col justify-end lg:items-end">
-            <div className="w-full lg:max-w-[375px]">
+        <div className="mx-auto max-w-6xl">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -70,42 +68,38 @@ export default function Team() {
           >
             {t("heroDescription")}
           </motion.p>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Founder — Cristina Mancini */}
       <section className="bg-off-white px-6 py-10 lg:px-8 lg:py-16">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-4 lg:grid-cols-2 lg:gap-8">
-            <div className="flex flex-col lg:items-end">
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.35, duration: 0.6 }}
-                className="w-full lg:max-w-[375px] font-mono text-xs tracking-wider uppercase text-cobalt"
-                style={{ fontFamily: "var(--font-mono)" }}
-              >
-                {f("label")}
-              </motion.p>
-              <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4, duration: 0.6 }}
-                className="relative mt-4 aspect-[3/4] max-h-[500px] w-full lg:max-w-[375px] overflow-hidden"
-              >
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.35, duration: 0.6 }}
+            className="font-mono text-xs tracking-wider uppercase text-cobalt"
+            style={{ fontFamily: "var(--font-mono)" }}
+          >
+            {f("label")}
+          </motion.p>
+
+          <div className="mt-6 grid gap-6 lg:grid-cols-2 lg:gap-12">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="relative aspect-[3/4] max-h-[500px] overflow-hidden"
+            >
               <Image
                 src={FOUNDER.image}
                 alt={`${FOUNDER.name}, ${FOUNDER.title}`}
-                width={800}
-                height={1000}
-                className="h-full w-full object-cover object-top"
+                fill
+                className="object-cover object-top"
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 priority
               />
             </motion.div>
-            </div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -175,7 +169,7 @@ export default function Team() {
       {/* Leadership — Mica + Jihan */}
       <section className="px-6 pt-14 pb-0 lg:px-8 lg:pt-20">
         <div className="mx-auto max-w-3xl">
-          <div className="grid grid-cols-2 gap-4 sm:gap-6 lg:gap-10">
+          <div className="grid gap-6 grid-cols-2 lg:gap-10">
             {TEAM_LEADERSHIP.map((leader, i) => (
               <motion.div
                 key={leader.name}
@@ -190,7 +184,7 @@ export default function Team() {
                     alt={`${leader.name}, ${leader.role}`}
                     fill
                     className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
-                    sizes="(max-width: 640px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 100vw, 50vw"
                     priority
                   />
                 </div>
@@ -199,7 +193,7 @@ export default function Team() {
                     {leader.name}
                   </p>
                   <p
-                    className="mt-2 font-mono text-xs tracking-wider text-cobalt"
+                    className="mt-2 font-mono text-[10px] tracking-wider text-cobalt"
                     style={{ fontFamily: "var(--font-mono)" }}
                   >
                     {leader.role.toUpperCase()}
@@ -215,7 +209,7 @@ export default function Team() {
       </section>
 
       {/* Mica Le John Quote */}
-      <section className="mt-12 bg-cobalt px-6 py-12 lg:mt-20 lg:px-8 lg:py-24">
+      <section className="mt-16 bg-cobalt px-6 py-16 lg:mt-20 lg:px-8 lg:py-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -286,7 +280,7 @@ export default function Team() {
                     {member.name}
                   </p>
                   <p
-                    className="mt-1 font-mono text-xs tracking-wider text-cobalt"
+                    className="mt-1 font-mono text-[10px] tracking-wider text-cobalt"
                     style={{ fontFamily: "var(--font-mono)" }}
                   >
                     {member.org.toUpperCase()}
@@ -322,7 +316,7 @@ export default function Team() {
                     {member.name}
                   </p>
                   <p
-                    className="mt-1 font-mono text-xs tracking-wider text-cobalt"
+                    className="mt-1 font-mono text-[10px] tracking-wider text-cobalt"
                     style={{ fontFamily: "var(--font-mono)" }}
                   >
                     {member.org.toUpperCase()}
@@ -335,7 +329,7 @@ export default function Team() {
       </section>
 
       {/* Founder Quote */}
-      <section className="bg-charcoal px-6 py-12 lg:px-8 lg:py-24">
+      <section className="bg-charcoal px-6 py-16 lg:px-8 lg:py-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -356,7 +350,7 @@ export default function Team() {
       </section>
 
       {/* Mission Pillars */}
-      <section className="bg-grey-1 px-6 py-12 lg:px-8 lg:py-24">
+      <section className="bg-grey-1 px-6 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
