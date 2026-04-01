@@ -9,12 +9,18 @@ import {
   Briefcase,
 } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
-import { FOUNDER, TEAM_LEADERSHIP, COUNCIL_MEMBERS } from "@/lib/constants";
+import {
+  FOUNDER,
+  TEAM_LEADERSHIP,
+  COUNCIL_MEMBERS,
+  PRESS_FEATURES,
+} from "@/lib/constants";
 
 const MISSION_ICONS = [Brain, Lightbulb, Briefcase];
 
 export default function Team() {
   const t = useTranslations("team");
+  const f = useTranslations("founder");
 
   return (
     <div className="min-h-screen bg-off-white">
@@ -66,39 +72,97 @@ export default function Team() {
       </section>
 
       {/* Founder — Cristina Mancini */}
-      <section className="px-6 pt-12 pb-0 lg:px-8 lg:pt-16">
-        <div className="mx-auto max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+      <section className="bg-true-black px-6 py-16 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl">
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ delay: 0.35, duration: 0.6 }}
-            className="grid items-center gap-8 lg:grid-cols-[1fr_1.2fr] lg:gap-14"
+            className="font-mono text-xs tracking-wider uppercase text-electric-green"
+            style={{ fontFamily: "var(--font-mono)" }}
           >
-            <div className="relative aspect-[3/4] w-full overflow-hidden shadow-sm sm:aspect-[4/5]">
+            {f("label")}
+          </motion.p>
+
+          <div className="mt-8 grid gap-10 lg:grid-cols-2 lg:gap-16">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="relative aspect-[3/4] max-h-[500px] overflow-hidden"
+            >
               <Image
                 src={FOUNDER.image}
                 alt={`${FOUNDER.name}, ${FOUNDER.title}`}
                 fill
                 className="object-cover object-top"
-                sizes="(max-width: 1024px) 100vw, 45vw"
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 priority
               />
-            </div>
-            <div>
-              <p className="font-heading text-[clamp(1.5rem,3vw,2.5rem)] leading-[0.9] text-true-black">
-                {FOUNDER.name}
-              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="flex flex-col justify-center"
+            >
+              <h2 className="font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.9] text-off-white">
+                <a
+                  href="https://www.linkedin.com/in/crisbmancini/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-electric-green"
+                >
+                  {FOUNDER.name}
+                </a>
+              </h2>
               <p
-                className="mt-3 font-mono text-[10px] tracking-wider text-cobalt"
+                className="mt-2 font-mono text-xs tracking-wider text-off-white/60"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
-                {FOUNDER.title.toUpperCase()}
+                {f("title")}
               </p>
-              <p className="mt-5 text-sm leading-relaxed text-grey-3 sm:text-base">
-                {t("founderBio")}
+
+              <p className="mt-6 text-sm leading-relaxed text-grey-2 sm:text-base">
+                {f("bio")}
               </p>
-            </div>
-          </motion.div>
+
+              <blockquote className="mt-6 border-l-4 border-electric-green pl-4 sm:pl-6">
+                <p className="text-sm italic leading-relaxed text-off-white sm:text-base">
+                  {f("quote")}
+                </p>
+                <cite
+                  className="mt-3 block not-italic font-mono text-xs tracking-wider text-electric-green"
+                  style={{ fontFamily: "var(--font-mono)" }}
+                >
+                  — {f("quoteAttribution")}
+                </cite>
+              </blockquote>
+
+              <div className="mt-8">
+                <p
+                  className="font-mono text-xs tracking-wider text-off-white/60"
+                  style={{ fontFamily: "var(--font-mono)" }}
+                >
+                  {f("asSeenOn")}
+                </p>
+                <div className="mt-3 flex flex-wrap items-center gap-4 sm:gap-6">
+                  {PRESS_FEATURES.map((outlet) => (
+                    <a
+                      key={outlet.name}
+                      href={outlet.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-heading text-sm text-off-white/50 transition-colors hover:text-electric-green"
+                    >
+                      {outlet.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
