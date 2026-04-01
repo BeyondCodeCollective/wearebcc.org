@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
-  ArrowLeft,
   Users,
   Globe,
   Lightning,
@@ -21,6 +20,7 @@ import {
   CalendarCheck,
   Ticket,
 } from "@phosphor-icons/react";
+import { Nav } from "@/components/nav";
 import { useTranslations } from "next-intl";
 
 const GALLERY_IMAGES = [
@@ -124,17 +124,7 @@ export default function TheForge() {
 
   return (
     <div className="min-h-screen bg-off-white">
-      {/* Back to BCC */}
-      <div className="absolute top-0 left-0 z-20 px-6 py-4 lg:px-8">
-        <a
-          href="/"
-          className="inline-flex items-center gap-2 font-mono text-xs tracking-wider text-off-white/70 transition-colors hover:text-off-white"
-          style={{ fontFamily: "var(--font-mono)" }}
-        >
-          <ArrowLeft size={14} weight="bold" />
-          {t("back")}
-        </a>
-      </div>
+      <Nav />
 
       {/* ─── Hero ─── */}
       <section className="relative min-h-[70vh] overflow-hidden bg-true-black">
