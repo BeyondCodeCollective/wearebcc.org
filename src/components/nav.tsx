@@ -120,14 +120,6 @@ export function Nav() {
                     transition={{ duration: 0.15 }}
                     className="absolute left-0 top-full mt-2 min-w-[160px] border border-true-black/10 bg-off-white/95 backdrop-blur-md shadow-lg"
                   >
-                    <a
-                      href="#about"
-                      onClick={() => setAboutOpen(false)}
-                      className={dropdownLinkClass}
-                      style={{ fontFamily: "var(--font-mono)" }}
-                    >
-                      {t("aboutUs")}
-                    </a>
                     <Link
                       href="/team"
                       onClick={() => setAboutOpen(false)}
@@ -306,14 +298,6 @@ export function Nav() {
                     className="overflow-hidden pl-4 pt-4"
                   >
                     <div className="flex flex-col gap-4 border-l-2 border-electric-green pl-4">
-                      <a
-                        href="#about"
-                        onClick={() => setMobileOpen(false)}
-                        className={mobileSubLinkClass}
-                        style={{ fontFamily: "var(--font-mono)" }}
-                      >
-                        {t("aboutUs")}
-                      </a>
                       <Link
                         href="/team"
                         onClick={() => setMobileOpen(false)}
