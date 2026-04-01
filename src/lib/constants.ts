@@ -136,6 +136,12 @@ export const TEAM_LEADERSHIP = [
     bio: "jihanJohnstonMcGlotten",
     image: "/images/council/jihan-johnston-mcglotten-v2.png",
   },
+  {
+    name: "Ramon Clemente",
+    role: "Head of After The Game",
+    bio: "ramonClemente",
+    image: "/images/atg/ramon.jpg",
+  },
 ] as const;
 
 export const COUNCIL_MEMBERS = [

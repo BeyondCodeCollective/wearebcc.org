@@ -156,10 +156,10 @@ export default function Team() {
         </div>
       </section>
 
-      {/* Leadership — Mica + Jihan */}
+      {/* Leadership — Mica, Jihan, Ramon */}
       <section className="px-6 pt-14 pb-0 lg:px-8 lg:pt-20">
-        <div className="mx-auto max-w-3xl">
-          <div className="grid gap-6 grid-cols-2 lg:gap-10">
+        <div className="mx-auto max-w-4xl">
+          <div className="grid gap-6 grid-cols-2 sm:grid-cols-3 lg:gap-10">
             {TEAM_LEADERSHIP.map((leader, i) => (
               <motion.div
                 key={leader.name}
