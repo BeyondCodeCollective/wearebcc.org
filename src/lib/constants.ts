@@ -128,13 +128,13 @@ export const TEAM_LEADERSHIP = [
     name: "Mica Le John",
     role: "Executive Director",
     bio: "micaLeJohn",
-    image: "/images/council/mica-le-john.png",
+    image: "/images/council/mica-le-john-v2.png",
   },
   {
     name: "Jihan Johnston-McGlotten",
     role: "Managing Director, The Forge",
     bio: "jihanJohnstonMcGlotten",
-    image: "/images/council/jihan-johnston-mcglotten.png",
+    image: "/images/council/jihan-johnston-mcglotten-v2.png",
   },
 ] as const;
 
