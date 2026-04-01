@@ -84,7 +84,7 @@ export default function Team() {
             {f("label")}
           </motion.p>
 
-          <div className="mt-6 grid gap-6 lg:grid-cols-2 lg:gap-12">
+          <div className="mt-6 grid gap-4 lg:grid-cols-2 lg:gap-8">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
