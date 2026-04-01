@@ -209,7 +209,7 @@ export function Nav() {
           {/* Mobile: language toggle + hamburger */}
           <div className="flex items-center gap-3 md:hidden">
             <div
-              className={`flex items-center gap-0 border font-mono text-[10px] tracking-wider ${
+              className={`flex items-center gap-0 border font-mono text-xs tracking-wider ${
                 scrolled ? "border-true-black/15" : "border-off-white/20"
               }`}
               style={{ fontFamily: "var(--font-mono)" }}
@@ -220,7 +220,7 @@ export function Nav() {
                 onClick={() => switchLocale("en")}
                 role="radio"
                 aria-checked={locale === "en"}
-                className={`relative px-2 py-1 transition-all ${
+                className={`relative px-2.5 py-1.5 transition-all ${
                   locale === "en"
                     ? "bg-electric-green text-true-black font-semibold"
                     : scrolled
@@ -234,7 +234,7 @@ export function Nav() {
                 onClick={() => switchLocale("es")}
                 role="radio"
                 aria-checked={locale === "es"}
-                className={`relative px-2 py-1 transition-all ${
+                className={`relative px-2.5 py-1.5 transition-all ${
                   locale === "es"
                     ? "bg-electric-green text-true-black font-semibold"
                     : scrolled
@@ -244,14 +244,14 @@ export function Nav() {
               >
                 ES
               </button>
-              <div className={`px-1.5 py-1 ${scrolled ? "text-true-black/50" : "text-off-white"}`}>
-                <GlobeSimple size={12} weight="bold" />
+              <div className={`px-2 py-1.5 ${scrolled ? "text-true-black/50" : "text-off-white"}`}>
+                <GlobeSimple size={14} weight="bold" />
               </div>
             </div>
 
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="flex flex-col gap-1.5"
+              className="flex h-11 w-11 flex-col items-center justify-center gap-1.5"
               aria-label="Toggle menu"
             >
             <span
@@ -287,7 +287,7 @@ export function Nav() {
             <div>
               <button
                 onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
-                className="flex items-center gap-2 font-heading text-4xl text-off-white transition-colors hover:text-electric-green"
+                className="flex items-center gap-2 font-heading text-3xl text-off-white transition-colors hover:text-electric-green"
               >
                 {t("about")}
                 <CaretDown
@@ -334,7 +334,7 @@ export function Nav() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="font-heading text-4xl text-off-white transition-colors hover:text-electric-green"
+                className="font-heading text-3xl text-off-white transition-colors hover:text-electric-green"
               >
                 {t(link.key)}
               </a>
