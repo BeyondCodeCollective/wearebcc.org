@@ -139,8 +139,8 @@ export default function TheForge() {
       {/* ─── Hero ─── */}
       <section className="relative min-h-[70vh] overflow-hidden bg-true-black">
         <Image
-          src="/images/forge/hero-audience.jpg"
-          alt="Engaged audience at The Forge opening event"
+          src="/images/forge-hero-v2.jpg"
+          alt="The Forge event"
           fill
           className="object-cover object-center opacity-70"
           sizes="100vw"
@@ -258,7 +258,7 @@ export default function TheForge() {
               className="relative aspect-[3/2] w-full overflow-hidden"
             >
               <Image
-                src="/images/forge/residency-selfie.jpg"
+                src="/images/forge/residency-selfie-v2.jpg"
                 alt="Community members taking a selfie at The Forge"
                 fill
                 className="object-cover object-center"
