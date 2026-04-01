@@ -65,6 +65,14 @@ export function Footer() {
               >
                 {t("instagram")}
               </a>
+              <a
+                href="https://www.linkedin.com/company/beyond-code-collective"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-off-white/70 transition-colors hover:text-off-white"
+              >
+                {t("linkedin")}
+              </a>
             </div>
           </div>
         </div>
