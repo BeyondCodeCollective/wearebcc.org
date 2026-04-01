@@ -9,7 +9,6 @@ import { SITE } from "@/lib/constants";
 import { Logo } from "./ui/logo";
 
 const NAV_KEYS = [
-  { key: "initiatives", href: "#initiatives" },
   { key: "partners", href: "#partners" },
   { key: "resources", href: "#resources" },
   { key: "getInvolved", href: "#get-involved" },
@@ -19,8 +18,11 @@ export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
+  const [initiativesOpen, setInitiativesOpen] = useState(false);
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
+  const [mobileInitiativesOpen, setMobileInitiativesOpen] = useState(false);
   const aboutRef = useRef<HTMLDivElement>(null);
+  const initiativesRef = useRef<HTMLDivElement>(null);
   const t = useTranslations("nav");
   const locale = useLocale();
   const router = useRouter();
@@ -43,11 +45,14 @@ export function Nav() {
     };
   }, [mobileOpen]);
 
-  // Close about dropdown when clicking outside
+  // Close dropdowns when clicking outside
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (aboutRef.current && !aboutRef.current.contains(e.target as Node)) {
         setAboutOpen(false);
+      }
+      if (initiativesRef.current && !initiativesRef.current.contains(e.target as Node)) {
+        setInitiativesOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -127,6 +132,56 @@ export function Nav() {
                       style={{ fontFamily: "var(--font-mono)" }}
                     >
                       {t("team")}
+                    </Link>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Initiatives dropdown */}
+            <div
+              ref={initiativesRef}
+              className="relative"
+              onMouseEnter={() => setInitiativesOpen(true)}
+              onMouseLeave={() => setInitiativesOpen(false)}
+            >
+              <button
+                onClick={() => setInitiativesOpen(!initiativesOpen)}
+                className={`flex items-center gap-1 font-mono text-xs tracking-wider uppercase transition-colors ${textColor}`}
+                style={{ fontFamily: "var(--font-mono)" }}
+              >
+                {t("initiatives")}
+                <CaretDown
+                  size={10}
+                  weight="bold"
+                  className={`transition-transform duration-200 ${initiativesOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+
+              <AnimatePresence>
+                {initiativesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 4 }}
+                    transition={{ duration: 0.15 }}
+                    className="absolute left-0 top-full mt-2 min-w-[180px] border border-true-black/10 bg-off-white/95 backdrop-blur-md shadow-lg"
+                  >
+                    <Link
+                      href="/the-forge"
+                      onClick={() => setInitiativesOpen(false)}
+                      className={dropdownLinkClass}
+                      style={{ fontFamily: "var(--font-mono)" }}
+                    >
+                      {t("theForge")}
+                    </Link>
+                    <Link
+                      href="/after-the-game"
+                      onClick={() => setInitiativesOpen(false)}
+                      className={dropdownLinkClass}
+                      style={{ fontFamily: "var(--font-mono)" }}
+                    >
+                      {t("afterTheGame")}
                     </Link>
                   </motion.div>
                 )}
@@ -305,6 +360,51 @@ export function Nav() {
                         style={{ fontFamily: "var(--font-mono)" }}
                       >
                         {t("team")}
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* Initiatives with sub-links */}
+            <div>
+              <button
+                onClick={() => setMobileInitiativesOpen(!mobileInitiativesOpen)}
+                className="flex items-center gap-2 font-heading text-3xl text-off-white transition-colors hover:text-electric-green"
+              >
+                {t("initiatives")}
+                <CaretDown
+                  size={20}
+                  weight="bold"
+                  className={`transition-transform duration-200 ${mobileInitiativesOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              <AnimatePresence>
+                {mobileInitiativesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.2 }}
+                    className="overflow-hidden pl-4 pt-4"
+                  >
+                    <div className="flex flex-col gap-4 border-l-2 border-electric-green pl-4">
+                      <Link
+                        href="/the-forge"
+                        onClick={() => setMobileOpen(false)}
+                        className={mobileSubLinkClass}
+                        style={{ fontFamily: "var(--font-mono)" }}
+                      >
+                        {t("theForge")}
+                      </Link>
+                      <Link
+                        href="/after-the-game"
+                        onClick={() => setMobileOpen(false)}
+                        className={mobileSubLinkClass}
+                        style={{ fontFamily: "var(--font-mono)" }}
+                      >
+                        {t("afterTheGame")}
                       </Link>
                     </div>
                   </motion.div>
