@@ -72,13 +72,13 @@ export default function Team() {
       </section>
 
       {/* Founder — Cristina Mancini */}
-      <section className="bg-true-black px-6 py-16 lg:px-8 lg:py-24">
+      <section className="bg-grey-1 px-6 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.35, duration: 0.6 }}
-            className="font-mono text-xs tracking-wider uppercase text-electric-green"
+            className="font-mono text-xs tracking-wider uppercase text-cobalt"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             {f("label")}
@@ -107,33 +107,33 @@ export default function Team() {
               transition={{ delay: 0.5, duration: 0.6 }}
               className="flex flex-col justify-center"
             >
-              <h2 className="font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.9] text-off-white">
+              <h2 className="font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.9] text-true-black">
                 <a
                   href="https://www.linkedin.com/in/crisbmancini/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-colors hover:text-electric-green"
+                  className="transition-colors hover:text-cobalt"
                 >
                   {FOUNDER.name}
                 </a>
               </h2>
               <p
-                className="mt-2 font-mono text-xs tracking-wider text-off-white/60"
+                className="mt-2 font-mono text-xs tracking-wider text-cobalt"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {f("title")}
               </p>
 
-              <p className="mt-6 text-sm leading-relaxed text-grey-2 sm:text-base">
+              <p className="mt-6 text-sm leading-relaxed text-grey-3 sm:text-base">
                 {f("bio")}
               </p>
 
-              <blockquote className="mt-6 border-l-4 border-electric-green pl-4 sm:pl-6">
-                <p className="text-sm italic leading-relaxed text-off-white sm:text-base">
+              <blockquote className="mt-6 border-l-4 border-cobalt pl-4 sm:pl-6">
+                <p className="text-sm italic leading-relaxed text-true-black sm:text-base">
                   {f("quote")}
                 </p>
                 <cite
-                  className="mt-3 block not-italic font-mono text-xs tracking-wider text-electric-green"
+                  className="mt-3 block not-italic font-mono text-xs tracking-wider text-cobalt"
                   style={{ fontFamily: "var(--font-mono)" }}
                 >
                   — {f("quoteAttribution")}
@@ -142,7 +142,7 @@ export default function Team() {
 
               <div className="mt-8">
                 <p
-                  className="font-mono text-xs tracking-wider text-off-white/60"
+                  className="font-mono text-xs tracking-wider text-true-black/50"
                   style={{ fontFamily: "var(--font-mono)" }}
                 >
                   {f("asSeenOn")}
@@ -154,7 +154,7 @@ export default function Team() {
                       href={outlet.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-heading text-sm text-off-white/50 transition-colors hover:text-electric-green"
+                      className="font-heading text-sm text-true-black/40 transition-colors hover:text-cobalt"
                     >
                       {outlet.name}
                     </a>
