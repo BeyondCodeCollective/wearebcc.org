@@ -169,26 +169,39 @@ export default function Team() {
       {/* Leadership — Mica + Jihan */}
       <section className="px-6 pt-14 pb-0 lg:px-8 lg:pt-20">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-8 sm:grid-cols-2 lg:gap-12">
+          <div className="grid gap-6 sm:grid-cols-2 lg:gap-10">
             {TEAM_LEADERSHIP.map((leader, i) => (
               <motion.div
                 key={leader.name}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.45 + 0.15 * i, duration: 0.6 }}
+                className="group"
               >
-                <p className="font-heading text-[clamp(1.25rem,2.5vw,1.75rem)] leading-[0.9] text-true-black">
-                  {leader.name}
-                </p>
-                <p
-                  className="mt-2 font-mono text-[10px] tracking-wider text-cobalt"
-                  style={{ fontFamily: "var(--font-mono)" }}
-                >
-                  {leader.role.toUpperCase()}
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-grey-3">
-                  {t(`leadershipBios.${leader.bio}`)}
-                </p>
+                <div className="relative aspect-[3/4] w-full overflow-hidden shadow-sm transition-shadow duration-300 group-hover:shadow-md">
+                  <Image
+                    src={leader.image}
+                    alt={`${leader.name}, ${leader.role}`}
+                    fill
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    priority
+                  />
+                </div>
+                <div className="mt-4">
+                  <p className="font-heading text-[clamp(1.25rem,2.5vw,1.75rem)] leading-[0.9] text-true-black">
+                    {leader.name}
+                  </p>
+                  <p
+                    className="mt-2 font-mono text-[10px] tracking-wider text-cobalt"
+                    style={{ fontFamily: "var(--font-mono)" }}
+                  >
+                    {leader.role.toUpperCase()}
+                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-grey-3">
+                    {t(`leadershipBios.${leader.bio}`)}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>
