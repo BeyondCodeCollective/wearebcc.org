@@ -140,7 +140,7 @@ export const TEAM_LEADERSHIP = [
     name: "Ramon Clemente",
     role: "Head of After The Game",
     bio: "ramonClemente",
-    image: "/images/atg/ramon.jpg",
+    image: "/images/council/ramon-clemente.jpg",
   },
 ] as const;
 
