@@ -72,7 +72,7 @@ export default function Team() {
       </section>
 
       {/* Founder — Cristina Mancini */}
-      <section className="bg-grey-1 px-6 py-16 lg:px-8 lg:py-24">
+      <section className="bg-off-white px-6 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <motion.p
             initial={{ opacity: 0 }}
