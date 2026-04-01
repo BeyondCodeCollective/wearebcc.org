@@ -14,7 +14,7 @@ const NAV_KEYS = [
   { key: "getInvolved", href: "#get-involved" },
 ] as const;
 
-export function Nav() {
+export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [aboutOpen, setAboutOpen] = useState(false);
@@ -63,11 +63,12 @@ export function Nav() {
     router.replace(pathname, { locale: newLocale });
   };
 
-  const logoColor = scrolled ? "black" : "white";
-  const textColor = scrolled
+  const useDark = scrolled || variant === "light";
+  const logoColor = useDark ? "black" : "white";
+  const textColor = useDark
     ? "text-true-black/70 hover:text-true-black"
     : "text-off-white/70 hover:text-off-white";
-  const hamburgerColor = scrolled ? "bg-true-black" : "bg-off-white";
+  const hamburgerColor = useDark ? "bg-true-black" : "bg-off-white";
 
   const dropdownLinkClass =
     "block px-4 py-3 font-mono text-xs tracking-wider uppercase text-true-black/70 transition-colors hover:bg-electric-green/10 hover:text-true-black";
@@ -203,7 +204,7 @@ export function Nav() {
             {/* Language toggle */}
             <div
               className={`flex items-center gap-0 border font-mono text-xs tracking-wider ${
-                scrolled ? "border-true-black/15" : "border-off-white/20"
+                useDark ? "border-true-black/15" : "border-off-white/20"
               }`}
               style={{ fontFamily: "var(--font-mono)" }}
               role="radiogroup"
@@ -216,7 +217,7 @@ export function Nav() {
                 className={`relative px-3 py-1.5 transition-all ${
                   locale === "en"
                     ? "bg-electric-green text-true-black font-semibold"
-                    : scrolled
+                    : useDark
                     ? "text-true-black/40 hover:text-true-black/70"
                     : "text-off-white hover:text-off-white/80"
                 }`}
@@ -230,14 +231,14 @@ export function Nav() {
                 className={`relative px-3 py-1.5 transition-all ${
                   locale === "es"
                     ? "bg-electric-green text-true-black font-semibold"
-                    : scrolled
+                    : useDark
                     ? "text-true-black/40 hover:text-true-black/70"
                     : "text-off-white hover:text-off-white/80"
                 }`}
               >
                 ES
               </button>
-              <div className={`px-2 py-1.5 ${scrolled ? "text-true-black/50" : "text-off-white"}`}>
+              <div className={`px-2 py-1.5 ${useDark ? "text-true-black/50" : "text-off-white"}`}>
                 <GlobeSimple size={14} weight="bold" />
               </div>
             </div>
@@ -257,7 +258,7 @@ export function Nav() {
           <div className="flex items-center gap-3 md:hidden">
             <div
               className={`flex items-center gap-0 border font-mono text-xs tracking-wider ${
-                scrolled ? "border-true-black/15" : "border-off-white/20"
+                useDark ? "border-true-black/15" : "border-off-white/20"
               }`}
               style={{ fontFamily: "var(--font-mono)" }}
               role="radiogroup"
@@ -270,7 +271,7 @@ export function Nav() {
                 className={`relative px-2.5 py-1.5 transition-all ${
                   locale === "en"
                     ? "bg-electric-green text-true-black font-semibold"
-                    : scrolled
+                    : useDark
                     ? "text-true-black/40 hover:text-true-black/70"
                     : "text-off-white hover:text-off-white/80"
                 }`}
@@ -284,14 +285,14 @@ export function Nav() {
                 className={`relative px-2.5 py-1.5 transition-all ${
                   locale === "es"
                     ? "bg-electric-green text-true-black font-semibold"
-                    : scrolled
+                    : useDark
                     ? "text-true-black/40 hover:text-true-black/70"
                     : "text-off-white hover:text-off-white/80"
                 }`}
               >
                 ES
               </button>
-              <div className={`px-2 py-1.5 ${scrolled ? "text-true-black/50" : "text-off-white"}`}>
+              <div className={`px-2 py-1.5 ${useDark ? "text-true-black/50" : "text-off-white"}`}>
                 <GlobeSimple size={14} weight="bold" />
               </div>
             </div>

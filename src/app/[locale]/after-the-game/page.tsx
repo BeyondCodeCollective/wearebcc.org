@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowLeft, CheckCircle, UsersThree, Path, ArrowsClockwise, Certificate } from "@phosphor-icons/react";
+import { CheckCircle, UsersThree, Path, ArrowsClockwise, Certificate } from "@phosphor-icons/react";
+import { Nav } from "@/components/nav";
 import { useTranslations } from "next-intl";
 
 export default function AfterTheGame() {
@@ -62,20 +63,10 @@ export default function AfterTheGame() {
 
   return (
     <div className="min-h-screen bg-true-black">
-      {/* Back to BCC */}
-      <div className="px-6 py-4 lg:px-8">
-        <a
-          href="/"
-          className="inline-flex items-center gap-2 font-mono text-xs tracking-wider text-off-white/50 transition-colors hover:text-off-white"
-          style={{ fontFamily: "var(--font-mono)" }}
-        >
-          <ArrowLeft size={14} weight="bold" />
-          {t("back")}
-        </a>
-      </div>
+      <Nav />
 
       {/* Hero */}
-      <section className="relative px-6 pt-12 pb-16 lg:px-8 lg:pt-20 lg:pb-24">
+      <section className="relative px-6 pt-28 pb-16 lg:px-8 lg:pt-32 lg:pb-24">
         <Image
           src="/images/atg/ramon.jpg"
           alt="Ramón Clemente, Head of After The Game"

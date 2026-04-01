@@ -3,11 +3,11 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
-  ArrowLeft,
   Brain,
   Lightbulb,
   Briefcase,
 } from "@phosphor-icons/react";
+import { Nav } from "@/components/nav";
 import { useTranslations } from "next-intl";
 import {
   FOUNDER,
@@ -24,21 +24,11 @@ export default function Team() {
 
   return (
     <div className="min-h-screen bg-off-white">
-      {/* Back to BCC */}
-      <div className="px-6 py-4 lg:px-8">
-        <a
-          href="/"
-          className="inline-flex items-center gap-2 font-mono text-xs tracking-wider text-true-black/50 transition-colors hover:text-true-black"
-          style={{ fontFamily: "var(--font-mono)" }}
-        >
-          <ArrowLeft size={14} weight="bold" />
-          {t("back")}
-        </a>
-      </div>
+      <Nav variant="light" />
 
       {/* Hero */}
-      <section className="px-6 pt-8 pb-0 lg:px-8 lg:pt-12">
-        <div className="mx-auto max-w-6xl">
+      <section className="px-6 pt-28 pb-0 lg:px-8 lg:pt-32">
+        <div className="mx-auto max-w-5xl">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -53,7 +43,7 @@ export default function Team() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.6 }}
-            className="mt-4 max-w-4xl font-heading text-[clamp(2rem,5vw,4rem)] leading-[0.85] text-true-black"
+            className="mt-4 font-heading text-[clamp(2.5rem,5vw,4rem)] leading-[0.85] text-true-black"
           >
             {t("heroHeadline1")}
             <br />
@@ -73,23 +63,22 @@ export default function Team() {
 
       {/* Founder — Cristina Mancini */}
       <section className="bg-off-white px-6 py-10 lg:px-8 lg:py-16">
-        <div className="mx-auto max-w-7xl">
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.35, duration: 0.6 }}
-            className="font-mono text-xs tracking-wider uppercase text-cobalt"
-            style={{ fontFamily: "var(--font-mono)" }}
-          >
-            {f("label")}
-          </motion.p>
-
-          <div className="mt-6 grid gap-6 lg:grid-cols-2 lg:gap-12">
+        <div className="mx-auto max-w-5xl">
+          <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="relative aspect-[3/4] max-h-[500px] overflow-hidden"
+              className="flex flex-col items-end"
+            >
+              <p
+                className="mb-4 w-full max-w-[375px] font-mono text-xs tracking-wider uppercase text-cobalt"
+                style={{ fontFamily: "var(--font-mono)" }}
+              >
+                {f("label")}
+              </p>
+              <div
+                className="relative aspect-[3/4] max-h-[500px] w-full max-w-[375px] overflow-hidden"
             >
               <Image
                 src={FOUNDER.image}
@@ -99,13 +88,14 @@ export default function Team() {
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 priority
               />
+              </div>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.6 }}
-              className="flex flex-col justify-center"
+              className="flex flex-col justify-start lg:pt-[calc(1rem+1.25rem)]"
             >
               <h2 className="font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.9] text-true-black">
                 <a
