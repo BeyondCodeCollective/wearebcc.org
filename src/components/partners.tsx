@@ -15,7 +15,7 @@ const EMPLOYER_LOGOS = [
 
 export function Partners() {
   return (
-    <section className="bg-off-white px-6 py-16 lg:px-8 lg:py-20">
+    <section id="partners" className="bg-off-white px-6 py-16 lg:px-8 lg:py-20">
       <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0 }}

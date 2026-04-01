@@ -9,9 +9,9 @@ import { SITE } from "@/lib/constants";
 import { Logo } from "./ui/logo";
 
 const NAV_KEYS = [
-  { key: "partners", href: "#partners" },
-  { key: "resources", href: "#resources" },
-  { key: "getInvolved", href: "#get-involved" },
+  { key: "partners", hash: "#partners" },
+  { key: "resources", hash: "#resources" },
+  { key: "getInvolved", hash: "#get-involved" },
 ] as const;
 
 export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
@@ -61,6 +61,19 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
 
   const switchLocale = (newLocale: "en" | "es") => {
     router.replace(pathname, { locale: newLocale });
+  };
+
+  const scrollToSection = (hash: string) => {
+    const id = hash.replace("#", "");
+    const el = document.getElementById(id);
+    if (el) {
+      // Already on this page — just scroll
+      el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Navigate to home page with hash — use native navigation
+      // so browser handles hash scroll after full page load
+      window.location.href = `/${locale}/${hash}`;
+    }
   };
 
   const useDark = scrolled || variant === "light";
@@ -191,14 +204,14 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
 
             {/* Rest of nav links */}
             {NAV_KEYS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
+              <button
+                key={link.hash}
+                onClick={() => scrollToSection(link.hash)}
                 className={`font-mono text-xs tracking-wider uppercase transition-colors ${textColor}`}
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {t(link.key)}
-              </a>
+              </button>
             ))}
 
             {/* Language toggle */}
@@ -415,14 +428,16 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
 
             {/* Rest of nav links */}
             {NAV_KEYS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
+              <button
+                key={link.hash}
+                onClick={() => {
+                  setMobileOpen(false);
+                  scrollToSection(link.hash);
+                }}
                 className="font-heading text-3xl text-off-white transition-colors hover:text-electric-green"
               >
                 {t(link.key)}
-              </a>
+              </button>
             ))}
 
             {/* Mobile language toggle */}
