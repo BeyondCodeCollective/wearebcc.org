@@ -72,7 +72,7 @@ export default function Team() {
       </section>
 
       {/* Founder — Cristina Mancini */}
-      <section className="bg-off-white px-6 py-16 lg:px-8 lg:py-24">
+      <section className="bg-off-white px-6 py-10 lg:px-8 lg:py-16">
         <div className="mx-auto max-w-7xl">
           <motion.p
             initial={{ opacity: 0 }}
@@ -84,7 +84,7 @@ export default function Team() {
             {f("label")}
           </motion.p>
 
-          <div className="mt-8 grid gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="mt-6 grid gap-6 lg:grid-cols-2 lg:gap-12">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
