@@ -9,12 +9,12 @@ import {
   Briefcase,
 } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
-import { COUNCIL_LEADERSHIP, COUNCIL_MEMBERS } from "@/lib/constants";
+import { TEAM_LEADERSHIP, COUNCIL_MEMBERS } from "@/lib/constants";
 
 const MISSION_ICONS = [Brain, Lightbulb, Briefcase];
 
-export default function Council() {
-  const t = useTranslations("council");
+export default function Team() {
+  const t = useTranslations("team");
 
   return (
     <div className="min-h-screen bg-off-white">
@@ -30,7 +30,7 @@ export default function Council() {
         </a>
       </div>
 
-      {/* Hero + Leadership — compact, visual-first */}
+      {/* Hero + Leadership */}
       <section className="px-6 pt-8 pb-0 lg:px-8 lg:pt-12">
         <div className="mx-auto max-w-6xl">
           <motion.p
@@ -63,9 +63,9 @@ export default function Council() {
             {t("heroDescription")}
           </motion.p>
 
-          {/* Leadership photos — immediately after hero text */}
+          {/* Leadership photos */}
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:mt-12 lg:gap-10">
-            {COUNCIL_LEADERSHIP.map((leader, i) => (
+            {TEAM_LEADERSHIP.map((leader, i) => (
               <motion.div
                 key={leader.name}
                 initial={{ opacity: 0, y: 30 }}
@@ -73,12 +73,12 @@ export default function Council() {
                 transition={{ delay: 0.4 + 0.15 * i, duration: 0.6 }}
                 className="group"
               >
-                <div className="relative aspect-[4/5] w-full overflow-hidden shadow-sm transition-shadow duration-300 group-hover:shadow-md">
+                <div className="relative aspect-square w-full overflow-hidden shadow-sm transition-shadow duration-300 group-hover:shadow-md">
                   <Image
                     src={leader.image}
                     alt={`${leader.name}, ${leader.role}`}
                     fill
-                    className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                    className="object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-[1.02]"
                     sizes="(max-width: 640px) 100vw, 50vw"
                     priority
                   />
@@ -104,7 +104,7 @@ export default function Council() {
       </section>
 
       {/* Mica Le John Quote */}
-      <section className="bg-cobalt px-6 py-16 mt-16 lg:px-8 lg:py-24 lg:mt-20">
+      <section className="mt-16 bg-cobalt px-6 py-16 lg:mt-20 lg:px-8 lg:py-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -124,7 +124,7 @@ export default function Council() {
         </motion.div>
       </section>
 
-      {/* Council Member Photos */}
+      {/* Council Section */}
       <section className="bg-off-white px-6 py-16 lg:px-8 lg:py-20">
         <div className="mx-auto max-w-6xl">
           <motion.div
@@ -161,12 +161,12 @@ export default function Council() {
                 transition={{ delay: 0.1 * i, duration: 0.6 }}
                 className="group"
               >
-                <div className="relative aspect-[4/5] w-full overflow-hidden shadow-sm transition-shadow duration-300 group-hover:shadow-md">
+                <div className="relative aspect-square w-full overflow-hidden shadow-sm transition-shadow duration-300 group-hover:shadow-md">
                   <Image
                     src={member.image}
                     alt={`${member.name}, ${member.org} — Tech Futures National Council`}
                     fill
-                    className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                    className="object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-[1.02]"
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
                   />
                 </div>
@@ -197,12 +197,12 @@ export default function Council() {
                 transition={{ delay: 0.1 * (i + 4), duration: 0.6 }}
                 className="group"
               >
-                <div className="relative aspect-[4/5] w-full overflow-hidden shadow-sm transition-shadow duration-300 group-hover:shadow-md">
+                <div className="relative aspect-square w-full overflow-hidden shadow-sm transition-shadow duration-300 group-hover:shadow-md">
                   <Image
                     src={member.image}
                     alt={`${member.name}, ${member.org} — Tech Futures National Council`}
                     fill
-                    className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.02]"
+                    className="object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-[1.02]"
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
                   />
                 </div>

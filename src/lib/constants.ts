@@ -123,7 +123,7 @@ export const FEATURED_VIDEO = {
   thumbnailUrl: "/images/video-thumbnail.jpg",
 } as const;
 
-export const COUNCIL_LEADERSHIP = [
+export const TEAM_LEADERSHIP = [
   {
     name: "Mica Le John",
     role: "Executive Director",
