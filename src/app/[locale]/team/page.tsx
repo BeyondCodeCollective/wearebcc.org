@@ -96,7 +96,7 @@ export default function Team() {
                 alt={`${FOUNDER.name}, ${FOUNDER.title}`}
                 width={800}
                 height={1000}
-                className="h-full w-full object-cover object-top"
+                className="h-full w-full object-cover object-[50%_15%] scale-150"
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 priority
               />
