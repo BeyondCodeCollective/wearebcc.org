@@ -2,7 +2,7 @@
   "nav": {
     "about": "Nosotros",
     "aboutUs": "Sobre Nosotros",
-    "council": "Consejo",
+    "team": "Equipo",
     "initiatives": "Iniciativas",
     "partners": "Socios",
     "resources": "Recursos",
@@ -244,31 +244,28 @@
     "successMessage": "Estaremos en contacto con detalles de programaci\u00f3n y actualizaciones.",
     "error": "Algo sali\u00f3 mal"
   },
-  "council": {
+  "team": {
     "back": "WEAREBCC.ORG",
-    "heroLabel": "[ ANUNCIO ]",
-    "heroHeadline1": "PRESENTAMOS EL",
-    "heroHeadline2": "CONSEJO NACIONAL TECH FUTURES",
-    "heroDescription": "Beyond Code Collective anuncia la formaci\u00f3n de su Consejo Nacional Tech Futures \u2014 un distinguido grupo de tecn\u00f3logos, acad\u00e9micos y l\u00edderes empresariales que brindan perspectivas estrat\u00e9gicas y del mundo real para informar curr\u00edculos y programaci\u00f3n, mientras desbloquean redes que amplifican el impacto en alfabetizaci\u00f3n en IA, caminos de innovaci\u00f3n y desarrollo laboral.",
-    "founderQuote": "Fund\u00e9 Beyond Code Collective porque la innovaci\u00f3n debe incluir a todos y la tecnolog\u00eda debe ser un puente hacia las oportunidades, no una barrera. Estoy encantada de reunir un equipo que comparte esta visi\u00f3n. El equipo de liderazgo refleja la experiencia, pasi\u00f3n y compromiso necesarios para avanzar nuestra misi\u00f3n. Juntos, no solo nos enfocamos en cerrar la brecha digital sino en asegurar que las comunidades no se queden atr\u00e1s.",
-    "founderName": "Cristina Mancini",
-    "founderTitle": "Fundadora y CEO, Beyond Code Collective",
-    "leadershipLabel": "[02] LIDERAZGO",
-    "leadershipHeadline1": "EL EQUIPO",
-    "leadershipHeadline2": "QUE LIDERA EL CAMINO",
+    "heroLabel": "[ NUESTRO EQUIPO ]",
+    "heroHeadline1": "LAS PERSONAS",
+    "heroHeadline2": "DETR\u00c1S DE LA MISI\u00d3N",
+    "heroDescription": "Conoce a los l\u00edderes que impulsan la misi\u00f3n de Beyond Code Collective para cerrar la brecha de alfabetizaci\u00f3n en IA y desbloquear oportunidades digitales para las comunidades excluidas del futuro del trabajo.",
+    "founderBio": "Cristina Mancini es la visionaria Fundadora y CEO de Beyond Code Collective, un ecosistema nacional creado para cerrar la brecha de alfabetizaci\u00f3n en IA y desbloquear la dignidad digital para las comunidades excluidas del futuro del trabajo. Cre\u00f3 BCC para responder una pregunta transformadora: \u00bfQu\u00e9 pasar\u00eda si cada comunidad tuviera acceso permanente y culturalmente arraigado a las habilidades y caminos que definen la pr\u00f3xima d\u00e9cada de innovaci\u00f3n?",
     "leadershipBios": {
       "micaLeJohn": "M\u00e1s de una d\u00e9cada de experiencia en la intersecci\u00f3n de tecnolog\u00eda, creatividad e impacto social. Anteriormente liderando alianzas estrat\u00e9gicas e innovaci\u00f3n en Black Girls Code.",
-      "jihanJohnstonMcGlotten": "M\u00e1s de una d\u00e9cada de experiencia construyendo comunidades tecnol\u00f3gicas e impulsando el acceso. Liderando el crecimiento y expansi\u00f3n de The Forge en Atlanta.",
-      "ramonClemente": "Despu\u00e9s de una carrera profesional de baloncesto de 17 a\u00f1os, conectando el mundo del atletismo y la tecnolog\u00eda a trav\u00e9s de After The Game."
+      "jihanJohnstonMcGlotten": "M\u00e1s de una d\u00e9cada de experiencia construyendo comunidades tecnol\u00f3gicas e impulsando el acceso. Liderando el crecimiento y expansi\u00f3n de The Forge en Atlanta."
     },
     "edQuote": "Cada miembro del Consejo Nacional Tech Futures aporta una formaci\u00f3n y perspectiva \u00fanicas, y estamos orgullosos de dar la bienvenida a un grupo tan distinguido a la comunidad de Beyond Code. Su amplia experiencia ser\u00e1 fundamental para dar forma a nuestro ecosistema y asegurar que nuestra programaci\u00f3n se traduzca en impacto real.",
     "edQuoteName": "Mica Le John",
     "edQuoteTitle": "Directora Ejecutiva, Beyond Code Collective",
-    "councilLabel": "[01] EL CONSEJO",
+    "councilLabel": "[ EL CONSEJO ]",
     "councilHeadline1": "TECH FUTURES",
     "councilHeadline2": "CONSEJO NACIONAL",
-    "councilDescription": "Los miembros del Consejo comparten un compromiso con la visi\u00f3n de Beyond Code de construir un futuro donde los aprendices con menos recursos no solo accedan a las tecnolog\u00edas emergentes, sino que tambi\u00e9n las moldeen. El Consejo incluye representantes de NASA, YouTube, Xbox, UT Austin y m\u00e1s.",
-    "missionLabel": "[03] LA MISI\u00d3N",
+    "councilDescription": "Beyond Code Collective ha formado su Consejo Nacional Tech Futures \u2014 un distinguido grupo de tecn\u00f3logos, acad\u00e9micos y l\u00edderes empresariales que brindan perspectivas estrat\u00e9gicas y del mundo real para informar curr\u00edculos y programaci\u00f3n. Los miembros del Consejo comparten un compromiso con la construcci\u00f3n de un futuro donde los aprendices con menos recursos no solo accedan a las tecnolog\u00edas emergentes, sino que tambi\u00e9n las moldeen.",
+    "founderQuote": "Fund\u00e9 Beyond Code Collective porque la innovaci\u00f3n debe incluir a todos y la tecnolog\u00eda debe ser un puente hacia las oportunidades, no una barrera. Estoy encantada de reunir un equipo que comparte esta visi\u00f3n. El equipo de liderazgo refleja la experiencia, pasi\u00f3n y compromiso necesarios para avanzar nuestra misi\u00f3n. Juntos, no solo nos enfocamos en cerrar la brecha digital sino en asegurar que las comunidades no se queden atr\u00e1s.",
+    "founderName": "Cristina Mancini",
+    "founderTitle": "Fundadora y CEO, Beyond Code Collective",
+    "missionLabel": "[ LA MISI\u00d3N ]",
     "missionHeadline1": "TRES PILARES",
     "missionHeadline2": "DE IMPACTO",
     "missionPillars": {

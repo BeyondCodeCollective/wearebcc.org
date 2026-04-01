@@ -129,12 +129,12 @@ export function Nav() {
                       {t("aboutUs")}
                     </a>
                     <Link
-                      href="/council"
+                      href="/team"
                       onClick={() => setAboutOpen(false)}
                       className={dropdownLinkClass}
                       style={{ fontFamily: "var(--font-mono)" }}
                     >
-                      {t("council")}
+                      {t("team")}
                     </Link>
                   </motion.div>
                 )}
@@ -315,12 +315,12 @@ export function Nav() {
                         {t("aboutUs")}
                       </a>
                       <Link
-                        href="/council"
+                        href="/team"
                         onClick={() => setMobileOpen(false)}
                         className={mobileSubLinkClass}
                         style={{ fontFamily: "var(--font-mono)" }}
                       >
-                        {t("council")}
+                        {t("team")}
                       </Link>
                     </div>
                   </motion.div>

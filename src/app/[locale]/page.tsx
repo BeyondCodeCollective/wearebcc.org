@@ -7,7 +7,7 @@ import { Audience } from "@/components/audience";
 import { Stats } from "@/components/stats";
 import { Initiatives } from "@/components/initiatives";
 import { Testimonials } from "@/components/testimonials";
-import { Founder } from "@/components/founder";
+
 import { Resources } from "@/components/resources";
 import { CTABridge } from "@/components/cta-bridge";
 import { HireTalent } from "@/components/hire-talent";
@@ -32,7 +32,6 @@ export default function Home() {
           <Audience />
           <Stats />
           <Initiatives />
-          <Founder />
           <Resources />
           <CTABridge />
           <HireTalent />
