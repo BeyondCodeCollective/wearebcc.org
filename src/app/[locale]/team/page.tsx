@@ -89,14 +89,14 @@ export default function Team() {
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="relative max-h-[500px] overflow-hidden"
+              className="relative aspect-[3/4] max-h-[500px] overflow-hidden"
             >
               <Image
                 src={FOUNDER.image}
                 alt={`${FOUNDER.name}, ${FOUNDER.title}`}
                 width={800}
                 height={1000}
-                className="h-full w-full object-cover object-[50%_15%] scale-150"
+                className="h-full w-full object-cover object-top"
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 priority
               />
