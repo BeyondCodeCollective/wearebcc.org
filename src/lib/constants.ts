@@ -151,7 +151,7 @@ export const COUNCIL_MEMBERS = [
 export const FOUNDER = {
   name: "Cristina Mancini",
   title: "Founder & CEO",
-  image: "/images/cristina-mancini.jpg",
+  image: "/images/council/cristina-mancini.png",
   bio: "Cristina Mancini is the visionary Founder & CEO of Beyond Code Collective (BCC), a new national ecosystem built to close the AI literacy gap and unlock digital dignity for communities long excluded from the future of work. She created BCC to answer a transformative question: What if every community had permanent, culturally grounded access to the skills and pathways that define the next decade of innovation and the future of work?",
   quote:
     '"I want people to know that tech is for everyone, and it doesn\'t matter how old you are or where you are in life. This is an incredible moment in time where you can opt in and affect change at great scale, so there\'s no wrong answer to how you start. Just start."',
