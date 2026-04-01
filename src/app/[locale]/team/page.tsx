@@ -95,7 +95,7 @@ export default function Team() {
                 src={FOUNDER.image}
                 alt={`${FOUNDER.name}, ${FOUNDER.title}`}
                 fill
-                className="object-cover object-top"
+                className="object-cover object-[70%_top]"
                 sizes="(min-width: 1024px) 50vw, 100vw"
                 priority
               />
