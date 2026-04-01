@@ -160,7 +160,7 @@ export default function AfterTheGame() {
 
       {/* Stats bar */}
       <section className="border-t border-b border-off-white/10 bg-charcoal px-6 py-10 lg:px-8">
-        <div className="mx-auto grid max-w-4xl grid-cols-2 gap-6 sm:grid-cols-4">
+        <div className="mx-auto grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-4 sm:gap-6">
           {stats.map((item, i) => (
             <motion.div
               key={i}
@@ -228,7 +228,7 @@ export default function AfterTheGame() {
               {t("videoDescription")}
             </p>
           </div>
-          <div className="relative mx-auto aspect-[9/16] w-full max-w-[260px] overflow-hidden bg-true-black sm:max-w-[320px]">
+          <div className="relative mx-auto aspect-[9/16] w-full max-w-[300px] overflow-hidden bg-true-black sm:max-w-[320px]">
             <video
               controls
               playsInline
