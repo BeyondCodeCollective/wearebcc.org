@@ -9,7 +9,7 @@ import {
   Briefcase,
 } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
-import { TEAM_LEADERSHIP, COUNCIL_MEMBERS } from "@/lib/constants";
+import { FOUNDER, TEAM_LEADERSHIP, COUNCIL_MEMBERS } from "@/lib/constants";
 
 const MISSION_ICONS = [Brain, Lightbulb, Briefcase];
 
@@ -30,7 +30,7 @@ export default function Team() {
         </a>
       </div>
 
-      {/* Hero + Leadership */}
+      {/* Hero */}
       <section className="px-6 pt-8 pb-0 lg:px-8 lg:pt-12">
         <div className="mx-auto max-w-6xl">
           <motion.p
@@ -62,15 +62,56 @@ export default function Team() {
           >
             {t("heroDescription")}
           </motion.p>
+        </div>
+      </section>
 
-          {/* Leadership photos */}
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:mt-12 lg:gap-10">
+      {/* Founder — Cristina Mancini */}
+      <section className="px-6 pt-12 pb-0 lg:px-8 lg:pt-16">
+        <div className="mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.35, duration: 0.6 }}
+            className="grid items-center gap-8 lg:grid-cols-[1fr_1.2fr] lg:gap-14"
+          >
+            <div className="relative aspect-[3/4] w-full overflow-hidden shadow-sm sm:aspect-[4/5]">
+              <Image
+                src={FOUNDER.image}
+                alt={`${FOUNDER.name}, ${FOUNDER.title}`}
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                priority
+              />
+            </div>
+            <div>
+              <p className="font-heading text-[clamp(1.5rem,3vw,2.5rem)] leading-[0.9] text-true-black">
+                {FOUNDER.name}
+              </p>
+              <p
+                className="mt-3 font-mono text-[10px] tracking-wider text-cobalt"
+                style={{ fontFamily: "var(--font-mono)" }}
+              >
+                {FOUNDER.title.toUpperCase()}
+              </p>
+              <p className="mt-5 text-sm leading-relaxed text-grey-3 sm:text-base">
+                {t("founderBio")}
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Leadership — Mica + Jihan */}
+      <section className="px-6 pt-14 pb-0 lg:px-8 lg:pt-20">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid gap-6 sm:grid-cols-2 lg:gap-10">
             {TEAM_LEADERSHIP.map((leader, i) => (
               <motion.div
                 key={leader.name}
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 + 0.15 * i, duration: 0.6 }}
+                transition={{ delay: 0.45 + 0.15 * i, duration: 0.6 }}
                 className="group"
               >
                 <div className="relative aspect-square w-full overflow-hidden shadow-sm transition-shadow duration-300 group-hover:shadow-md">
