@@ -178,12 +178,12 @@ export default function Team() {
                 transition={{ delay: 0.45 + 0.15 * i, duration: 0.6 }}
                 className="group"
               >
-                <div className="relative aspect-square w-full overflow-hidden shadow-sm transition-shadow duration-300 group-hover:shadow-md">
+                <div className="relative aspect-[3/4] w-full overflow-hidden shadow-sm transition-shadow duration-300 group-hover:shadow-md">
                   <Image
                     src={leader.image}
                     alt={`${leader.name}, ${leader.role}`}
                     fill
-                    className="object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-[1.02]"
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
                     sizes="(max-width: 640px) 100vw, 50vw"
                     priority
                   />
