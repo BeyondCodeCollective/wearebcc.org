@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
+import { InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
 import { SITE, CONTACT } from "@/lib/constants";
 import { Logo } from "./ui/logo";
 
@@ -61,16 +62,18 @@ export function Footer() {
                 href="https://www.instagram.com/beyondcodecollective"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-off-white/70 transition-colors hover:text-off-white"
+                className="flex items-center gap-2 text-sm text-off-white/70 transition-colors hover:text-off-white"
               >
+                <InstagramLogo size={18} weight="bold" />
                 {t("instagram")}
               </a>
               <a
                 href="https://www.linkedin.com/company/beyond-code-collective"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-off-white/70 transition-colors hover:text-off-white"
+                className="flex items-center gap-2 text-sm text-off-white/70 transition-colors hover:text-off-white"
               >
+                <LinkedinLogo size={18} weight="bold" />
                 {t("linkedin")}
               </a>
             </div>
