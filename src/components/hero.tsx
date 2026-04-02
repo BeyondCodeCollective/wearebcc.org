@@ -172,8 +172,8 @@ export function Hero() {
           >
             <div className="relative aspect-[3/4] max-h-[500px] overflow-hidden">
               <Image
-                src="/images/forge/forge_2.jpg"
-                alt="Networking at BCC event"
+                src="/images/hero-main.jpg"
+                alt="Beyond Code Collective community"
                 fill
                 className="object-cover"
                 priority
