@@ -138,7 +138,7 @@ export default function TheForge() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-true-black/80 via-true-black/30 to-transparent" />
 
-        <div className="relative z-10 flex min-h-[70vh] flex-col justify-end px-6 pb-10 pt-20 lg:px-8 lg:pb-24">
+        <div className="relative z-10 flex min-h-[70vh] flex-col justify-end px-6 pb-10 pt-32 lg:px-8 lg:pb-24">
           <div className="mx-auto w-full max-w-6xl">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
