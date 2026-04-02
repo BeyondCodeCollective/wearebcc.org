@@ -43,7 +43,7 @@ const GALLERY_IMAGES = [
   { src: "/images/forge/gallery-checkin.jpg", alt: "Beyond Code Collective check-in at Georgia Tech ATDC" },
 ];
 
-const EVENTBRITE_URL = "https://bccacademy.io/events/";
+const EVENTBRITE_URL = "https://www.eventbrite.com/o/121108797503";
 
 export default function TheForge() {
   const t = useTranslations("forge");
