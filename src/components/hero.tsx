@@ -10,13 +10,13 @@ import { useQuiz } from "./quiz-modal";
 import { useNewsletter } from "./newsletter-modal";
 
 const COMMUNITY_PHOTOS = [
-  { src: "/images/community/community-01.jpg", alt: "People collaborating on tech project" },
-  { src: "/images/community/community-02.jpg", alt: "Team working together" },
-  { src: "/images/community/community-03.jpg", alt: "Person coding on laptop" },
-  { src: "/images/community/community-04.jpg", alt: "Group learning session" },
-  { src: "/images/community/community-05.jpg", alt: "Workshop in progress" },
-  { src: "/images/community/community-06.jpg", alt: "Young people in tech" },
-  { src: "/images/community/community-07.jpg", alt: "Working on computer" },
+  { src: "/images/forge/forge_3.jpg", alt: "Community members at The Forge event" },
+  { src: "/images/community/community-02.jpg", alt: "Hands on laptop keyboard" },
+  { src: "/images/forge/forge_4.jpg", alt: "Panel discussion at The Forge" },
+  { src: "/images/community/community-04.jpg", alt: "Brainstorming with sticky notes" },
+  { src: "/images/forge/forge_2.jpg", alt: "Networking at BCC event" },
+  { src: "/images/community/community-05.jpg", alt: "Women collaborating on project" },
+  { src: "/images/atg/excelling.jpg", alt: "After The Game community members" },
 ];
 
 const FLOATING_FACES = [
