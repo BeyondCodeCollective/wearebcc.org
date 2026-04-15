@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { ArrowUpRight } from "@phosphor-icons/react";
+import { useContact } from "./contact-modal";
 
 export function GetInvolved() {
   const t = useTranslations("getInvolved");
+  const { openContact } = useContact();
 
   return (
     <section
@@ -37,14 +39,14 @@ export function GetInvolved() {
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="mailto:info@wearebcc.org"
+            <button
+              onClick={openContact}
               className="inline-flex items-center justify-center gap-2 bg-true-black px-5 py-3 font-mono text-xs tracking-wider uppercase text-off-white transition-colors hover:bg-charcoal sm:px-8 sm:py-4 sm:text-sm"
               style={{ fontFamily: "var(--font-mono)" }}
             >
               {t("cta")}
               <ArrowUpRight size={16} weight="bold" />
-            </a>
+            </button>
           </div>
         </motion.div>
       </div>

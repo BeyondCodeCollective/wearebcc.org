@@ -50,6 +50,18 @@
     "submitting": "Submitting...",
     "connect": "Connect With Us \u2192"
   },
+  "contact": {
+    "label": "[ CONTACT US ]",
+    "headline1": "GET IN",
+    "headline2": "TOUCH.",
+    "description": "Have a question, idea, or opportunity? Drop us a message and our team will get back to you.",
+    "close": "CLOSE",
+    "message": "Your message",
+    "thanks": "MESSAGE SENT.",
+    "wellReachOut": "Our team will get back to you soon.",
+    "submitting": "Sending...",
+    "send": "Send Message \u2192"
+  },
   "banner": {
     "title": "AFTER THE GAME",
     "description": "A new initiative for transitioning athletes.",

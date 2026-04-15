@@ -16,12 +16,14 @@ import { Footer } from "@/components/footer";
 import { QuizProvider } from "@/components/quiz-modal";
 import { NewsletterProvider } from "@/components/newsletter-modal";
 import { PartnershipsProvider } from "@/components/partnerships-modal";
+import { ContactProvider } from "@/components/contact-modal";
 
 export default function Home() {
   return (
     <QuizProvider>
       <NewsletterProvider>
       <PartnershipsProvider>
+      <ContactProvider>
         <AnnouncementBanner />
         <Nav />
         <main>
@@ -38,6 +40,7 @@ export default function Home() {
           <GetInvolved />
         </main>
         <Footer />
+      </ContactProvider>
       </PartnershipsProvider>
       </NewsletterProvider>
     </QuizProvider>
