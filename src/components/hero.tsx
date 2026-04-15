@@ -11,12 +11,12 @@ import { useNewsletter } from "./newsletter-modal";
 
 const COMMUNITY_PHOTOS = [
   { src: "/images/community/community-01.jpg", alt: "Speaker presenting at The Forge event" },
-  { src: "/images/community/community-07.jpg", alt: "Panel discussion at Festival Diaspora" },
   { src: "/images/community/community-02.jpg", alt: "Students engaged in learning session" },
   { src: "/images/community/community-03.jpg", alt: "Beyond Code Collective group photo" },
   { src: "/images/community/community-04.jpg", alt: "The Future of Tech Starts Here pillow at BCC event" },
   { src: "/images/community/community-05.jpg", alt: "Community members networking at event" },
   { src: "/images/community/community-06.jpg", alt: "Speaker addressing audience at The Forge" },
+  { src: "/images/community/community-07.jpg", alt: "Panel discussion at Festival Diaspora" },
 ];
 
 const FLOATING_FACES = [
