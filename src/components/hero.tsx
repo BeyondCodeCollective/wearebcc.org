@@ -58,7 +58,7 @@ export function Hero() {
   ];
 
   return (
-    <section className="relative min-h-screen bg-true-black px-6 pt-32 pb-16 lg:px-8 overflow-hidden">
+    <section className="relative min-h-screen bg-true-black px-6 pt-32 pb-24 lg:px-8 overflow-x-hidden">
       {/* Floating learner faces background */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
         {FACE_POSITIONS.map((face) => (
