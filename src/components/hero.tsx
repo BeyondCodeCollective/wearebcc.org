@@ -1,12 +1,23 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ShuffleText } from "./ui/shuffle-text";
 import { Link } from "@/i18n/navigation";
 import { useQuiz } from "./quiz-modal";
 import { useNewsletter } from "./newsletter-modal";
+
+const COMMUNITY_PHOTOS = [
+  { src: "/images/community/community-01.jpg", alt: "Speaker presenting at The Forge event" },
+  { src: "/images/community/community-07.jpg", alt: "Panel discussion at Festival Diaspora" },
+  { src: "/images/community/community-02.jpg", alt: "Students engaged in learning session" },
+  { src: "/images/community/community-03.jpg", alt: "Beyond Code Collective group photo" },
+  { src: "/images/community/community-04.jpg", alt: "The Future of Tech Starts Here pillow at BCC event" },
+  { src: "/images/community/community-05.jpg", alt: "Community members networking at event" },
+  { src: "/images/community/community-06.jpg", alt: "Speaker addressing audience at The Forge" },
+];
 
 const FLOATING_FACES = [
   { src: "/images/faces/face-01.jpg", alt: "Learner" },
@@ -36,6 +47,7 @@ const FACE_POSITIONS = FLOATING_FACES.map((face, i) => ({
 export function Hero() {
   const { openQuiz } = useQuiz();
   const { openNewsletter } = useNewsletter();
+  const [activePhoto, setActivePhoto] = useState(0);
   const t = useTranslations("hero");
 
   const rotatingWords = [
@@ -171,18 +183,63 @@ export function Hero() {
             className="relative hidden lg:block"
           >
             <div className="relative aspect-[3/4] max-h-[500px] overflow-hidden">
-              <Image
-                src="/images/hero-main.jpg"
-                alt="Beyond Code Collective community"
-                fill
-                className="object-cover"
-                priority
-                sizes="(min-width: 1024px) 50vw, 100vw"
-              />
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activePhoto}
+                  initial={{ opacity: 0, scale: 1.05 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.95 }}
+                  transition={{ duration: 0.4 }}
+                  className="absolute inset-0"
+                >
+                  <Image
+                    src={COMMUNITY_PHOTOS[activePhoto].src}
+                    alt={COMMUNITY_PHOTOS[activePhoto].alt}
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                  />
+                </motion.div>
+              </AnimatePresence>
             </div>
           </motion.div>
         </div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.8, duration: 0.6 }}
+          className="mt-16 hidden lg:block"
+        >
+          <p
+            className="mb-4 text-electric-green font-mono text-xs tracking-wider"
+            style={{ fontFamily: "var(--font-mono)" }}
+          >
+            {t("ourCommunity")}
+          </p>
+          <div className="flex gap-2 overflow-x-auto pb-4 scrollbar-hide sm:gap-3">
+            {COMMUNITY_PHOTOS.map((photo, i) => (
+              <button
+                key={i}
+                onClick={() => setActivePhoto(i)}
+                className={`relative h-16 w-16 flex-shrink-0 overflow-hidden transition-all cursor-pointer sm:h-20 sm:w-20 ${
+                  activePhoto === i
+                    ? "opacity-100 ring-2 ring-electric-green"
+                    : "opacity-40 hover:opacity-70"
+                }`}
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 640px) 80px, 64px"
+                />
+              </button>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
