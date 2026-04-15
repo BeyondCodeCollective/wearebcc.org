@@ -50,6 +50,18 @@
     "submitting": "Enviando...",
     "connect": "Con\u00e9ctate Con Nosotros \u2192"
   },
+  "contact": {
+    "label": "[ CONT\u00c1CTANOS ]",
+    "headline1": "PONTE EN",
+    "headline2": "CONTACTO.",
+    "description": "\u00bfTienes una pregunta, idea u oportunidad? Env\u00edanos un mensaje y nuestro equipo te responder\u00e1.",
+    "close": "CERRAR",
+    "message": "Tu mensaje",
+    "thanks": "MENSAJE ENVIADO.",
+    "wellReachOut": "Nuestro equipo se pondr\u00e1 en contacto pronto.",
+    "submitting": "Enviando...",
+    "send": "Enviar Mensaje \u2192"
+  },
   "banner": {
     "title": "AFTER THE GAME",
     "description": "Una nueva iniciativa para atletas en transici\u00f3n.",
