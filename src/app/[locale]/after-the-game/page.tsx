@@ -68,7 +68,7 @@ export default function AfterTheGame() {
       {/* Hero */}
       <section className="relative px-6 pt-28 pb-16 lg:px-8 lg:pt-32 lg:pb-24">
         <Image
-          src="/images/atg/atg-hero.jpg"
+          src="/images/atg/atg-hero-panel.jpg"
           alt="After The Game"
           fill
           className="object-cover object-center opacity-40"
