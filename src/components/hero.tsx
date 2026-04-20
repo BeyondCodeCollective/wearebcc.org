@@ -10,7 +10,6 @@ import { useQuiz } from "./quiz-modal";
 import { useNewsletter } from "./newsletter-modal";
 
 const COMMUNITY_PHOTOS = [
-  { src: "/images/community/community-08.jpg", alt: "Students coding on laptops" },
   { src: "/images/community/community-01.jpg", alt: "Speaker presenting at The Forge event" },
   { src: "/images/community/community-02.jpg", alt: "Students engaged in learning session" },
   { src: "/images/community/community-03.jpg", alt: "Beyond Code Collective group photo" },
