@@ -275,14 +275,17 @@ export default function AfterTheGame() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <div className="relative aspect-[4/5] w-full overflow-hidden">
-              <Image
-                src="/images/atg/ramon-program.webp"
-                alt="Ramón Clemente, Head of After The Game"
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
+            <div className="relative aspect-[4/5] w-full overflow-hidden bg-true-black">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                className="h-full w-full object-cover"
+              >
+                <source src="/videos/atg-program.mp4" type="video/mp4" />
+              </video>
             </div>
             <div className="mt-4">
               <p className="font-heading text-lg text-true-black">Ramón Clemente</p>
