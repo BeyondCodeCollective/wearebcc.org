@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CheckCircle, UsersThree, Path, ArrowsClockwise, Certificate } from "@phosphor-icons/react";
+import { CheckCircle, UsersThree, Path } from "@phosphor-icons/react";
 import { Nav } from "@/components/nav";
 import { useTranslations } from "next-intl";
 
@@ -354,71 +354,6 @@ export default function AfterTheGame() {
             </p>
           </motion.div>
 
-          {/* CompTIA */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="border-l-2 border-cobalt pl-6"
-          >
-            <div className="flex items-center gap-3">
-              <Certificate size={28} weight="bold" className="text-cobalt" />
-              <p
-                className="font-mono text-xs tracking-wider text-cobalt"
-                style={{ fontFamily: "var(--font-mono)" }}
-              >
-                {t("comptiaLabel")}
-              </p>
-            </div>
-            <h3 className="mt-3 font-heading text-[clamp(1.5rem,3vw,2.25rem)] leading-[0.9] text-true-black">
-              {t("comptiaHeadline1")}
-              <br />
-              <span className="text-cobalt">{t("comptiaHeadline2")}</span>
-            </h3>
-            <p className="mt-4 text-base leading-relaxed text-grey-3">
-              {t("comptiaText")}
-            </p>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              <div className="border border-true-black/10 bg-white p-5">
-                <p className="font-heading text-lg text-true-black">{t("comptiaCourse1Title")}</p>
-                <p className="mt-1 font-mono text-[10px] tracking-wider text-cobalt" style={{ fontFamily: "var(--font-mono)" }}>{t("comptiaCourse1Detail")}</p>
-                <p className="mt-3 text-sm leading-relaxed text-grey-3">{t("comptiaCourse1Desc")}</p>
-              </div>
-              <div className="border border-true-black/10 bg-white p-5">
-                <p className="font-heading text-lg text-true-black">{t("comptiaCourse2Title")}</p>
-                <p className="mt-1 font-mono text-[10px] tracking-wider text-cobalt" style={{ fontFamily: "var(--font-mono)" }}>{t("comptiaCourse2Detail")}</p>
-                <p className="mt-3 text-sm leading-relaxed text-grey-3">{t("comptiaCourse2Desc")}</p>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Ecosystem */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="border-l-2 border-cobalt pl-6"
-          >
-            <div className="flex items-center gap-3">
-              <ArrowsClockwise size={28} weight="bold" className="text-cobalt" />
-              <p
-                className="font-mono text-xs tracking-wider text-cobalt"
-                style={{ fontFamily: "var(--font-mono)" }}
-              >
-                {t("ecosystemLabel")}
-              </p>
-            </div>
-            <h3 className="mt-3 font-heading text-[clamp(1.5rem,3vw,2.25rem)] leading-[0.9] text-true-black">
-              {t("ecosystemHeadline1")}
-              <br />
-              <span className="text-cobalt">{t("ecosystemHeadline2")}</span>
-            </h3>
-            <p className="mt-4 text-base leading-relaxed text-grey-3">
-              {t("ecosystemText")}
-            </p>
-          </motion.div>
         </div>
       </section>
 
