@@ -277,8 +277,8 @@ export default function AfterTheGame() {
           >
             <div className="relative aspect-[4/5] w-full overflow-hidden">
               <Image
-                src="/images/atg/ramon.jpg"
-                alt="Ramón Clemente, Head of After The Game"
+                src="/images/atg/program-athlete.jpg"
+                alt="Athlete transitioning through After The Game"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"
