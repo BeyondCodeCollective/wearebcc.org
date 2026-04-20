@@ -226,7 +226,7 @@ export default function AfterTheGame() {
               preload="metadata"
               className="h-full w-full object-cover"
             >
-              <source src="/videos/atg-testimonial.mp4" type="video/mp4" />
+              <source src="/videos/atg-testimonial-v7.mp4" type="video/mp4" />
             </video>
           </div>
         </motion.div>
