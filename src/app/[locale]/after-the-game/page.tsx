@@ -219,14 +219,15 @@ export default function AfterTheGame() {
               {t("videoDescription")}
             </p>
           </div>
-          <div className="relative aspect-[4/3] w-full overflow-hidden">
-            <Image
-              src="/images/community/community-05.jpg"
-              alt="Community members networking at event"
-              fill
-              className="object-cover"
-              sizes="(min-width: 1024px) 50vw, 100vw"
-            />
+          <div className="relative mx-auto aspect-[9/16] w-full max-w-[300px] overflow-hidden bg-true-black sm:max-w-[320px]">
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              className="h-full w-full object-cover"
+            >
+              <source src="/videos/atg-testimonial-v7.mp4" type="video/mp4" />
+            </video>
           </div>
         </motion.div>
       </section>
