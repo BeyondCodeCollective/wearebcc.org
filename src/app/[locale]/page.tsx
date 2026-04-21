@@ -2,7 +2,6 @@ import { AnnouncementBanner } from "@/components/announcement-banner";
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
-import { VideoFeature } from "@/components/video-feature";
 import { Audience } from "@/components/audience";
 import { Stats } from "@/components/stats";
 import { Initiatives } from "@/components/initiatives";
@@ -29,7 +28,6 @@ export default function Home() {
         <main>
           <Hero />
           <About />
-          <VideoFeature />
           <Testimonials />
           <Audience />
           <Stats />
