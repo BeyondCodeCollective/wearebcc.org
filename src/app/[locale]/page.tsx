@@ -28,9 +28,9 @@ export default function Home() {
         <main>
           <Hero />
           <About />
+          <Stats />
           <Testimonials />
           <Audience />
-          <Stats />
           <Initiatives />
           <Resources />
           <CTABridge />
