@@ -31,7 +31,7 @@ function subscriberHash(email: string): string {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { firstName, email, phone, segment, source } = body;
+    const { firstName, email, phone, segment, source, company } = body;
 
     const hasEmail = email && typeof email === "string" && EMAIL_REGEX.test(email.trim());
     const hasPhone = phone && typeof phone === "string" && phone.trim().length >= 10;
@@ -68,6 +68,9 @@ export async function POST(request: NextRequest) {
         PHONE: typeof phone === "string" && phone.trim() ? formatPhoneE164(phone.trim()) : "",
         SOURCE: source,
         SEGMENT: typeof segment === "string" ? segment : "",
+        ...(typeof company === "string" && company.trim()
+          ? { COMPANY: company.trim() }
+          : {}),
       },
     });
 
