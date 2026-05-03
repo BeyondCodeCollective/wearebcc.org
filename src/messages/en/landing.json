@@ -11,23 +11,19 @@
   "about": {
     "headline1": "BEYOND CODE",
     "headline2": "COLLECTIVE",
-    "description": "Beyond Code Collective bridges the gap between inspiration, training, and employment in tech, connecting learners to educational content, opportunities to develop cutting-edge technologies, and avenues to launch careers.",
+    "description": "A community-based learning and workforce ecosystem that gives people lifelong access to the skills, relationships, and pathways shaping the future of work.",
     "pillars": {
-      "intergenerationalOpportunity": {
-        "title": "Intergenerational Opportunity",
-        "description": "An ecosystem where all generations participate; not a pipeline that serves one age group, but a model that meets learners wherever they are in life."
+      "inspire": {
+        "title": "Inspire",
+        "description": "Spark a joyful curiosity that transforms into innovation and a lifelong passion for technology."
       },
-      "allTechnologies": {
-        "title": "All Technologies",
-        "description": "From digital fluency and data literacy to automation, cybersecurity, and responsible AI, we prepare learners for the full range of tools they'll encounter."
+      "educate": {
+        "title": "Educate",
+        "description": "Deliver versatile, cutting-edge, and accessible learning experiences that build a foundation for success in tech and beyond."
       },
-      "todayAndTomorrow": {
-        "title": "Today & Tomorrow",
-        "description": "Programming that keeps communities relevant now and ready for what's next, as the workforce changes in real time."
-      },
-      "adaptiveProgramming": {
-        "title": "Adaptive Programming",
-        "description": "Curriculum that evolves with the industry — adjusting content, delivery, and outcomes to match where learners and employers are headed."
+      "launch": {
+        "title": "Launch",
+        "description": "Transcend coding proficiency to fuel workforce readiness — offering a toolkit, a network, and the confidence to lead in tech."
       }
     }
   },
@@ -63,29 +59,77 @@
     }
   },
   "stats": {
-    "label": "More Opportunity. More Impact.",
+    "label": "By The Numbers — 2026",
     "items": [
       {
-        "value": "77",
-        "suffix": "%",
-        "label": "Of Employers Intend to Upskill Teams for Emerging Tech"
-      },
-      {
-        "value": "3",
+        "value": "4510",
         "suffix": "+",
-        "label": "Initiatives Building Pathways to Quality Careers — And More Coming Soon"
+        "label": "Learners served by the end of 2026"
       },
       {
-        "value": "ALL",
+        "value": "7–87",
         "suffix": "",
-        "label": "Ages and Backgrounds Welcome — From K-12 to Career Changers"
+        "label": "Age range we serve — from K-12 to retirees"
       },
       {
-        "value": "60",
-        "suffix": "%",
-        "label": "Of Organizations Report a Critical AI & Data Literacy Gap"
+        "value": "12500",
+        "suffix": "+",
+        "label": "Free Code Along learners reached globally"
+      },
+      {
+        "value": "6",
+        "suffix": "",
+        "label": "Priority cities anchoring our Year 1 work"
       }
     ]
+  },
+  "aiPrinciples": {
+    "label": "Our Stance on AI",
+    "headline1": "AI doesn't need",
+    "headline2": "to be in everything.",
+    "principles": {
+      "enhance": {
+        "use": "Use AI where it enhances learning.",
+        "notTo": "Not where it replaces it."
+      },
+      "deepen": {
+        "use": "Use AI to deepen understanding.",
+        "notTo": "Not to shortcut it."
+      },
+      "accelerate": {
+        "use": "Use AI to accelerate creativity.",
+        "notTo": "Not to override it."
+      }
+    },
+    "counterLabel": "Why we hold back",
+    "counterHeadline": "Some skills are built in the friction.",
+    "counterDescription": "Over-reliance on AI can short-circuit the process where understanding actually forms. We're intentional about when not to use it.",
+    "counter": {
+      "struggle": "Learning happens in the struggle, not just the solution.",
+      "constraints": "Creativity requires constraints, experimentation, and lived experience.",
+      "judgment": "Ethical judgment depends on discernment, not delegation.",
+      "connection": "Human connection — mentorship, affirmation, storytelling — can't be automated."
+    }
+  },
+  "whereWereBuilding": {
+    "label": "Where We're Building — 2026",
+    "headline1": "Place-based.",
+    "headline2": "Community-anchored.",
+    "description": "Our 2026 strategy prioritizes proof-of-place: a sequenced rollout that pairs flagship residencies, mobile experiences, and active regional work.",
+    "residencyLabel": "Residencies in Priority Regions",
+    "testLabel": "Forge Experiences in Test Markets",
+    "activeLabel": "Active Regional Work",
+    "cities": {
+      "atlanta": { "name": "Atlanta", "detail": "Year-1 residency" },
+      "newYork": { "name": "New York", "detail": "Year-1 residency" },
+      "losAngeles": { "name": "Los Angeles", "detail": "Year-1 residency" },
+      "detroit": { "name": "Detroit", "detail": "Forge Experience pilot" },
+      "newJersey": { "name": "New Jersey", "detail": "Forge Experience pilot" },
+      "oakland": { "name": "Oakland", "detail": "Forge Experience pilot" },
+      "virginia": { "name": "Hampton, VA", "detail": "Active partner work" },
+      "puertoRico": { "name": "Puerto Rico", "detail": "Active partner work" },
+      "palmBeach": { "name": "Palm Beach", "detail": "Active partner work" }
+    }
   },
   "initiatives": {
     "headline1": "INFINITE",
@@ -97,13 +141,13 @@
     "items": {
       "forge": {
         "title": "The Forge",
-        "description": "Place-based hubs blending tech education, workforce development, and community engagement for learners of all ages — from K-12 to adults looking to upskill or pivot into tech careers.",
-        "tags": ["All Ages", "In-Person + Online", "K-12 to Adult"]
+        "description": "A network of intergenerational, place-based learning hubs — a 'third space' where K-12 learners, adults, and elders explore tech together. Neither school nor work.",
+        "tags": ["All Ages", "Place-Based", "Third Space"]
       },
       "catalysts": {
         "title": "Beyond Code Catalysts",
-        "description": "Career pathways for 18+ learners combining accessible training, hands-on projects, and career readiness support. No traditional tech background required.",
-        "tags": ["18+", "Career Pathways", "Hands-On"]
+        "description": "Workforce-focused programs for learners 18 and older — combining technical skill-building, mentorship, and applied experience aligned to high-demand tech roles.",
+        "tags": ["18+", "Mentorship", "High-Demand Roles"]
       },
       "afterTheGame": {
         "title": "After The Game",

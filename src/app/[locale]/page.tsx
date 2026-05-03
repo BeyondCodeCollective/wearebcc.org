@@ -4,7 +4,9 @@ import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
 import { Audience } from "@/components/audience";
 import { Stats } from "@/components/stats";
+import { AIPrinciples } from "@/components/ai-principles";
 import { Initiatives } from "@/components/initiatives";
+import { WhereWereBuilding } from "@/components/where-were-building";
 import { Testimonials } from "@/components/testimonials";
 
 import { Resources } from "@/components/resources";
@@ -30,8 +32,10 @@ export default function Home() {
           <About />
           <Stats />
           <Testimonials />
+          <AIPrinciples />
           <Audience />
           <Initiatives />
+          <WhereWereBuilding />
           <Resources />
           <CTABridge />
           <HireTalent />
