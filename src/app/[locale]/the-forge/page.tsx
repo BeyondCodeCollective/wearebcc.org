@@ -438,6 +438,101 @@ export default function TheForge() {
         </div>
       </section>
 
+      {/* ─── Three Implementation Models ─── */}
+      <section className="bg-off-white px-6 py-16 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-6xl">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="font-mono text-xs tracking-wider uppercase text-cobalt"
+            style={{ fontFamily: "var(--font-mono)" }}
+          >
+            {t("modelsLabel")}
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="mt-4 max-w-3xl font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.9] text-true-black"
+          >
+            {t("modelsHeadline1")}
+            <br />
+            <span className="text-cobalt">{t("modelsHeadline2")}</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.15, duration: 0.6 }}
+            className="mt-6 max-w-3xl text-base leading-relaxed text-grey-3 lg:text-lg"
+          >
+            {t("modelsDescription")}
+          </motion.p>
+
+          <div className="mt-12 grid gap-px bg-true-black/10 md:grid-cols-3">
+            {(["experience", "residency", "standalone"] as const).map((key, i) => (
+              <motion.div
+                key={key}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 * i, duration: 0.6 }}
+                className="flex flex-col bg-off-white p-8 lg:p-10"
+              >
+                <p
+                  className="font-mono text-[10px] tracking-wider uppercase text-cobalt"
+                  style={{ fontFamily: "var(--font-mono)" }}
+                >
+                  [{String(i + 1).padStart(2, "0")}]
+                </p>
+                <h3 className="mt-4 font-heading text-2xl leading-tight text-true-black lg:text-3xl">
+                  {t(`models.${key}.title`)}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-grey-3 lg:text-base">
+                  {t(`models.${key}.description`)}
+                </p>
+                <div className="mt-6 grid grid-cols-2 gap-4 border-t border-true-black/10 pt-5">
+                  <div>
+                    <p
+                      className="font-mono text-[10px] tracking-wider uppercase text-cobalt"
+                      style={{ fontFamily: "var(--font-mono)" }}
+                    >
+                      {t("modelsDurationLabel")}
+                    </p>
+                    <p className="mt-1 font-heading text-base text-true-black">
+                      {t(`models.${key}.duration`)}
+                    </p>
+                  </div>
+                  <div>
+                    <p
+                      className="font-mono text-[10px] tracking-wider uppercase text-cobalt"
+                      style={{ fontFamily: "var(--font-mono)" }}
+                    >
+                      {t("modelsHostingLabel")}
+                    </p>
+                    <p className="mt-1 font-heading text-base text-true-black">
+                      {t(`models.${key}.hosting`)}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="mt-10 max-w-3xl text-sm italic leading-relaxed text-grey-3 lg:text-base"
+          >
+            {t("modelsFooter")}
+          </motion.p>
+        </div>
+      </section>
+
       {/* ─── Founder quote ─── */}
       <section className="bg-cobalt px-6 py-12 lg:px-8 lg:py-16">
         <motion.div

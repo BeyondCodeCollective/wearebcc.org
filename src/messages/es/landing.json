@@ -11,23 +11,19 @@
   "about": {
     "headline1": "BEYOND CODE",
     "headline2": "COLLECTIVE",
-    "description": "Beyond Code Collective cierra la brecha entre la inspiraci\u00f3n, la formaci\u00f3n y el empleo en tecnolog\u00eda, conectando a los aprendices con contenido educativo, oportunidades para desarrollar tecnolog\u00edas de vanguardia y caminos para lanzar carreras.",
+    "description": "Un ecosistema comunitario de aprendizaje y desarrollo profesional que da a las personas acceso de por vida a las habilidades, relaciones y caminos que est\u00e1n dando forma al futuro del trabajo.",
     "pillars": {
-      "intergenerationalOpportunity": {
-        "title": "Oportunidad Intergeneracional",
-        "description": "Un ecosistema donde todas las generaciones participan; no un sistema que sirve a un solo grupo de edad, sino un modelo que encuentra a los aprendices donde est\u00e9n en la vida."
+      "inspire": {
+        "title": "Inspirar",
+        "description": "Encender una curiosidad alegre que se transforme en innovaci\u00f3n y una pasi\u00f3n de por vida por la tecnolog\u00eda."
       },
-      "allTechnologies": {
-        "title": "Todas las Tecnolog\u00edas",
-        "description": "Desde alfabetizaci\u00f3n digital y datos hasta automatizaci\u00f3n, ciberseguridad e IA responsable, preparamos a los aprendices para toda la gama de herramientas que encontrar\u00e1n."
+      "educate": {
+        "title": "Educar",
+        "description": "Ofrecer experiencias de aprendizaje vers\u00e1tiles, vanguardistas y accesibles que construyan una base para el \u00e9xito en tecnolog\u00eda y m\u00e1s all\u00e1."
       },
-      "todayAndTomorrow": {
-        "title": "Hoy y Ma\u00f1ana",
-        "description": "Programas que mantienen a las comunidades relevantes ahora y preparadas para lo que viene, mientras la fuerza laboral cambia en tiempo real."
-      },
-      "adaptiveProgramming": {
-        "title": "Programaci\u00f3n Adaptativa",
-        "description": "Curr\u00edculo que evoluciona con la industria \u2014 ajustando contenido, entrega y resultados para coincidir con hacia d\u00f3nde se dirigen los aprendices y los empleadores."
+      "launch": {
+        "title": "Lanzar",
+        "description": "Trascender la competencia en c\u00f3digo para impulsar la preparaci\u00f3n profesional \u2014 con un kit de herramientas, una red y la confianza para liderar en tecnolog\u00eda."
       }
     }
   },
@@ -63,29 +59,77 @@
     }
   },
   "stats": {
-    "label": "M\u00e1s Oportunidad. M\u00e1s Impacto.",
+    "label": "En N\u00fameros \u2014 2026",
     "items": [
       {
-        "value": "77",
-        "suffix": "%",
-        "label": "De Empleadores Planean Capacitar Equipos en Tecnolog\u00edas Emergentes"
-      },
-      {
-        "value": "3",
+        "value": "4510",
         "suffix": "+",
-        "label": "Iniciativas Construyendo Caminos hacia Carreras de Calidad \u2014 Y M\u00e1s Pr\u00f3ximamente"
+        "label": "Estudiantes atendidos para finales de 2026"
       },
       {
-        "value": "TODAS",
+        "value": "7\u201387",
         "suffix": "",
-        "label": "Las Edades y Or\u00edgenes Son Bienvenidos \u2014 Desde K-12 hasta Cambio de Carrera"
+        "label": "Rango de edades que servimos \u2014 de K-12 a jubilados"
       },
       {
-        "value": "60",
-        "suffix": "%",
-        "label": "De Las Organizaciones Reportan una Brecha Cr\u00edtica en Alfabetizaci\u00f3n de IA y Datos"
+        "value": "12500",
+        "suffix": "+",
+        "label": "Estudiantes alcanzados globalmente con Code Along gratis"
+      },
+      {
+        "value": "6",
+        "suffix": "",
+        "label": "Ciudades prioritarias que anclan nuestro trabajo del A\u00f1o 1"
       }
     ]
+  },
+  "aiPrinciples": {
+    "label": "Nuestra Postura Sobre la IA",
+    "headline1": "La IA no necesita",
+    "headline2": "estar en todo.",
+    "principles": {
+      "enhance": {
+        "use": "Usa la IA donde mejora el aprendizaje.",
+        "notTo": "No donde lo reemplaza."
+      },
+      "deepen": {
+        "use": "Usa la IA para profundizar la comprensión.",
+        "notTo": "No para tomar atajos."
+      },
+      "accelerate": {
+        "use": "Usa la IA para acelerar la creatividad.",
+        "notTo": "No para anularla."
+      }
+    },
+    "counterLabel": "Por qué nos contenemos",
+    "counterHeadline": "Algunas habilidades se construyen en la fricción.",
+    "counterDescription": "La dependencia excesiva de la IA puede cortocircuitar el proceso donde realmente se forma la comprensión. Somos intencionales sobre cuándo no usarla.",
+    "counter": {
+      "struggle": "El aprendizaje ocurre en el esfuerzo, no solo en la solución.",
+      "constraints": "La creatividad requiere restricciones, experimentación y experiencia vivida.",
+      "judgment": "El juicio ético depende del discernimiento, no de la delegación.",
+      "connection": "La conexión humana — la mentoría, la afirmación, el relato — no se puede automatizar."
+    }
+  },
+  "whereWereBuilding": {
+    "label": "Dónde Estamos Construyendo — 2026",
+    "headline1": "Basado en el lugar.",
+    "headline2": "Anclado en la comunidad.",
+    "description": "Nuestra estrategia para 2026 prioriza la prueba de lugar: un despliegue secuenciado que combina residencias insignia, experiencias móviles y trabajo regional activo.",
+    "residencyLabel": "Residencias en Regiones Prioritarias",
+    "testLabel": "Experiencias Forge en Mercados de Prueba",
+    "activeLabel": "Trabajo Regional Activo",
+    "cities": {
+      "atlanta": { "name": "Atlanta", "detail": "Residencia Año 1" },
+      "newYork": { "name": "Nueva York", "detail": "Residencia Año 1" },
+      "losAngeles": { "name": "Los Ángeles", "detail": "Residencia Año 1" },
+      "detroit": { "name": "Detroit", "detail": "Piloto Forge Experience" },
+      "newJersey": { "name": "Nueva Jersey", "detail": "Piloto Forge Experience" },
+      "oakland": { "name": "Oakland", "detail": "Piloto Forge Experience" },
+      "virginia": { "name": "Hampton, VA", "detail": "Trabajo activo con socios" },
+      "puertoRico": { "name": "Puerto Rico", "detail": "Trabajo activo con socios" },
+      "palmBeach": { "name": "Palm Beach", "detail": "Trabajo activo con socios" }
+    }
   },
   "initiatives": {
     "headline1": "POSIBILIDADES",
@@ -97,13 +141,13 @@
     "items": {
       "forge": {
         "title": "The Forge",
-        "description": "Centros presenciales que combinan educaci\u00f3n tecnol\u00f3gica, desarrollo laboral y participaci\u00f3n comunitaria para aprendices de todas las edades \u2014 desde K-12 hasta adultos que buscan mejorar sus habilidades o cambiar a carreras tecnol\u00f3gicas.",
-        "tags": ["Todas las Edades", "Presencial + En L\u00ednea", "K-12 a Adultos"]
+        "description": "Una red de centros de aprendizaje intergeneracionales basados en el lugar \u2014 un 'tercer espacio' donde estudiantes K-12, adultos y mayores exploran la tecnolog\u00eda juntos. Ni escuela ni trabajo.",
+        "tags": ["Todas las Edades", "Basado en el Lugar", "Tercer Espacio"]
       },
       "catalysts": {
         "title": "Beyond Code Catalysts",
-        "description": "Rutas profesionales para aprendices de 18+ que combinan formaci\u00f3n accesible, proyectos pr\u00e1cticos y apoyo para la preparaci\u00f3n laboral. No se requiere experiencia t\u00e9cnica tradicional.",
-        "tags": ["18+", "Rutas Profesionales", "Pr\u00e1ctico"]
+        "description": "Programas enfocados en el desarrollo laboral para aprendices de 18 a\u00f1os o m\u00e1s \u2014 que combinan formaci\u00f3n t\u00e9cnica, mentor\u00eda y experiencia aplicada alineada con roles de alta demanda en tecnolog\u00eda.",
+        "tags": ["18+", "Mentor\u00eda", "Roles de Alta Demanda"]
       },
       "afterTheGame": {
         "title": "After The Game",

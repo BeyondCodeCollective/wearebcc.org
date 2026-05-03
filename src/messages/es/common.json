@@ -134,10 +134,37 @@
     "initiative": "UNA INICIATIVA DE BEYOND CODE COLLECTIVE",
     "headline1": "DONDE LA INNOVACI\u00d3N",
     "headline2": "SE ENCUENTRA CON LA COMUNIDAD",
-    "description": "The Forge es una red de centros intergeneracionales y espec\u00edficos por ubicaci\u00f3n que combinan educaci\u00f3n tecnol\u00f3gica, participaci\u00f3n comunitaria y desarrollo laboral bajo un mismo techo. Un verdadero \u201ctercer lugar\u201d que no es escuela ni trabajo, donde estudiantes de secundaria se sientan junto a profesionales de mitad de carrera y familias con sus hijos, mientras exploran la IA y la tecnolog\u00eda emergente juntos.",
+    "description": "The Forge es un verdadero \u201ctercer espacio\u201d \u2014 ni escuela ni trabajo, sino un lugar intergeneracional de confianza donde la gente se re\u00fane para explorar la IA sin verg\u00fcenza ni miedo. Estudiantes de secundaria se sientan junto a profesionales de mitad de carrera, padres aprenden con sus hijos, y l\u00edderes comunitarios comparten mesa con tecn\u00f3logos.",
     "learnMore": "INSCR\u00cdBETE A EVENTOS",
     "viewCalendar": "VER CALENDARIO COMPLETO",
     "eventbriteCta": "VER PR\u00d3XIMOS EVENTOS",
+    "modelsLabel": "Tres Modelos de Implementaci\u00f3n",
+    "modelsHeadline1": "C\u00f3mo The Forge",
+    "modelsHeadline2": "Cobra Vida",
+    "modelsDescription": "El crecimiento es secuenciado intencionalmente: las experiencias informan las residencias, las residencias se construyen hacia espacios independientes, y Forge Online extiende el alcance en todas las etapas.",
+    "modelsDurationLabel": "Duraci\u00f3n",
+    "modelsHostingLabel": "Hospedaje",
+    "modelsFooter": "Cada modelo est\u00e1 anclado en la comunidad. The Forge se adapta al mercado donde est\u00e1 \u2014 probando, integrando o construyendo centros insignia seg\u00fan lo que cada regi\u00f3n necesita.",
+    "models": {
+      "experience": {
+        "title": "Experience",
+        "description": "Activaciones de corto plazo, m\u00f3viles o pop-up dise\u00f1adas para probar el inter\u00e9s comunitario, construir visibilidad y recopilar informaci\u00f3n. A menudo el primer punto de entrada a un nuevo mercado.",
+        "duration": "~3 meses",
+        "hosting": "Co-dise\u00f1ado con socios comunitarios"
+      },
+      "residency": {
+        "title": "Residency",
+        "description": "Programas de tiempo limitado integrados en instituciones existentes \u2014 centros comunitarios, bibliotecas o campus \u2014 aprovechando la infraestructura del socio mientras se ofrece la experiencia completa de The Forge.",
+        "duration": "6\u201312 meses",
+        "hosting": "Hospedado en espacios de socios"
+      },
+      "standalone": {
+        "title": "Standalone",
+        "description": "Ubicaciones permanentes e insignia operadas por Beyond Code. Ancla el ecosistema localmente, apoya programaci\u00f3n durante todo el a\u00f1o, y sirve como un centro para alianzas y desarrollo de talento.",
+        "duration": "Todo el a\u00f1o",
+        "hosting": "Propiedad y operado por Beyond Code"
+      }
+    },
     "quoteText": "En Beyond Code, creemos que todos deber\u00edan tener un papel en dar forma a la tecnolog\u00eda del ma\u00f1ana. The Forge nos permite no solo dar a las personas acceso a herramientas, sino el apoyo comunitario y el espacio para explorar estas herramientas, para que est\u00e9n empoderados para dar forma con confianza al futuro de la tecnolog\u00eda y el trabajo.",
     "quoteAuthor": "Cristina Mancini",
     "quoteRole": "Fundadora y CEO, Beyond Code Collective",

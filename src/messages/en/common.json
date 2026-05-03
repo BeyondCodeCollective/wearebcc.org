@@ -144,10 +144,37 @@
     "initiative": "A BEYOND CODE COLLECTIVE INITIATIVE",
     "headline1": "WHERE INNOVATION",
     "headline2": "MEETS COMMUNITY",
-    "description": "The Forge is a network of intergenerational, site-specific hubs that blend technology education, community engagement, and workforce development under one roof. A true \u201cthird place\u201d that is neither school nor work, where middle schoolers sit alongside mid-career professionals, and families with their kids, as they explore AI and emerging technology together.",
+    "description": "The Forge is a true \u201cthird space\u201d \u2014 neither school nor work, but a trusted, intergenerational place where people come together to explore AI without shame or fear. Middle schoolers sit next to mid-career professionals, parents learn alongside their kids, and community leaders share tables with technologists.",
     "learnMore": "SIGN UP FOR EVENTS",
     "viewCalendar": "VIEW FULL CALENDAR",
     "eventbriteCta": "BROWSE UPCOMING EVENTS",
+    "modelsLabel": "Three Implementation Models",
+    "modelsHeadline1": "How The Forge",
+    "modelsHeadline2": "Comes To Life",
+    "modelsDescription": "Growth is intentionally sequenced: experiences inform residencies, residencies build toward standalones, and Forge Online extends reach across all stages.",
+    "modelsDurationLabel": "Duration",
+    "modelsHostingLabel": "Hosting",
+    "modelsFooter": "Each model is community-anchored. The Forge meets its market where it is \u2014 testing, embedding, or building flagship hubs based on what each region needs.",
+    "models": {
+      "experience": {
+        "title": "Experience",
+        "description": "Short-term, mobile, or pop-up activations designed to test community interest, build visibility, and gather insight. Often the first entry point into a new market.",
+        "duration": "~3 months",
+        "hosting": "Co-designed with community partners"
+      },
+      "residency": {
+        "title": "Residency",
+        "description": "Time-bound programs embedded within existing institutions \u2014 community centers, libraries, or campuses \u2014 leveraging partner infrastructure while delivering the full Forge experience.",
+        "duration": "6\u201312 months",
+        "hosting": "Hosted in partner spaces"
+      },
+      "standalone": {
+        "title": "Standalone",
+        "description": "Permanent, flagship locations operated by Beyond Code. Anchors the ecosystem locally, supports year-round programming, and serves as a hub for partnerships and talent development.",
+        "duration": "Year-round",
+        "hosting": "Owned and operated by Beyond Code"
+      }
+    },
     "quoteText": "At Beyond Code, we believe that everyone should have a role in shaping tomorrow\u2019s technology. The Forge allows us to not only give people access to tools, but the community support and space to explore these tools, so they are empowered to confidently shape the future of technology and work.",
     "quoteAuthor": "Cristina Mancini",
     "quoteRole": "Founder & CEO, Beyond Code Collective",

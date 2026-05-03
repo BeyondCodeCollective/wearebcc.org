@@ -1,16 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { UsersThree, Circuitry, Rocket, ArrowsClockwise } from "@phosphor-icons/react";
+import { Sparkle, GraduationCap, Rocket } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 
-const PILLAR_ICONS = [UsersThree, Circuitry, Rocket, ArrowsClockwise];
-const PILLAR_KEYS = [
-  "intergenerationalOpportunity",
-  "allTechnologies",
-  "todayAndTomorrow",
-  "adaptiveProgramming",
-] as const;
+const PILLAR_ICONS = [Sparkle, GraduationCap, Rocket];
+const PILLAR_KEYS = ["inspire", "educate", "launch"] as const;
 
 export function About() {
   const t = useTranslations("about");
@@ -45,7 +40,7 @@ export function About() {
           </p>
         </motion.div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div className="mt-16 grid gap-6 md:grid-cols-3 lg:gap-8">
           {PILLAR_KEYS.map((key, i) => (
             <motion.div
               key={key}
