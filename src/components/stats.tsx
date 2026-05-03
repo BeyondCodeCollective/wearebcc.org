@@ -20,13 +20,14 @@ function AnimatedNumber({
   useEffect(() => {
     if (!isInView) return;
 
-    if (!/^\d+$/.test(value)) {
+    const numericValue = parseInt(value);
+    if (isNaN(numericValue)) {
       setDisplay(value);
       return;
     }
 
-    const target = parseInt(value);
     let current = 0;
+    const target = numericValue;
     const duration = 1500;
     const steps = 30;
     const increment = target / steps;
@@ -35,10 +36,10 @@ function AnimatedNumber({
     const timer = setInterval(() => {
       current += increment;
       if (current >= target) {
-        setDisplay(target.toLocaleString());
+        setDisplay(String(target));
         clearInterval(timer);
       } else {
-        setDisplay(Math.floor(current).toLocaleString());
+        setDisplay(String(Math.floor(current)));
       }
     }, stepTime);
 
