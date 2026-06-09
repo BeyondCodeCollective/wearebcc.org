@@ -62,8 +62,10 @@ export async function generateMetadata({
       type: "website",
       images: [
         {
-          url: "https://www.wearebcc.org/images/council/cristina-mancini.png",
-          alt: "Cristina Mancini, CEO & Founder of Beyond Code Collective",
+          url: "https://www.wearebcc.org/images/community-og.webp",
+          width: 1456,
+          height: 816,
+          alt: "BCC Academy students in the classroom",
         },
       ],
     },
@@ -75,7 +77,7 @@ export async function generateMetadata({
       description: isEs
         ? "Beyond Code Collective ofrece recursos impulsados por personas para un mundo impulsado por la tecnología."
         : "Beyond Code Collective provides human-powered resources for a tech-driven world.",
-      images: ["https://www.wearebcc.org/images/council/cristina-mancini.png"],
+      images: ["https://www.wearebcc.org/images/community-og.webp"],
     },
     alternates: {
       canonical: `https://www.wearebcc.org/${locale}`,
