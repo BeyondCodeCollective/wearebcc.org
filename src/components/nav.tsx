@@ -10,7 +10,6 @@ import { Logo } from "./ui/logo";
 
 const NAV_KEYS = [
   { key: "partners", hash: "#partners" },
-  { key: "resources", hash: "#resources" },
   { key: "getInvolved", hash: "#get-involved" },
 ] as const;
 
@@ -72,7 +71,7 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
     } else {
       // Navigate to home page with hash — use native navigation
       // so browser handles hash scroll after full page load
-      window.location.href = `/${locale}/${hash}`;
+      window.location.href = `/${locale}${hash}`;
     }
   };
 
