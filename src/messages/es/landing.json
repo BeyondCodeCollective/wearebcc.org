@@ -294,7 +294,34 @@
         "imageAlt": "Cristina Mancini, Fundadora y CEO de Beyond Code Collective",
         "body": "Cristina Mancini, Fundadora y CEO de Beyond Code Collective, conversó con CNBC sobre la única cualidad que más necesitan los trabajadores para tener éxito mientras la IA transforma la fuerza laboral — y por qué el acceso a la tecnología emergente no puede dejarse al azar.\n\nSu mensaje refleja el corazón de nuestra misión: la tecnología debe ser un puente hacia la oportunidad, no una barrera. Lee el artículo completo en CNBC.",
         "linkUrl": "https://www.cnbc.com/2025/10/24/ceo-cristina-mancini-the-no-1-trait-workers-need-for-success.html",
-        "linkLabel": "Leer en CNBC"
+        "linkLabel": "Leer en CNBC",
+        "imagePosition": "top"
+      },
+      {
+        "slug": "bcc-launch-announcement",
+        "date": "2026-03-05",
+        "category": "Prensa",
+        "title": "Beyond Code Collective Lanza su Misión para Expandir la Alfabetización en IA y Preparar a la Próxima Generación de Líderes Tecnológicos",
+        "excerpt": "La organización sin fines de lucro independiente actuará como un ecosistema integrado con programas de desarrollo de habilidades virtuales y presenciales, preparando a personas de todos los orígenes para prosperar en una economía impulsada por la tecnología.",
+        "image": "/images/cristina-mancini.jpg",
+        "imageAlt": "Cristina Mancini, Fundadora y CEO de Beyond Code Collective",
+        "imagePosition": "top",
+        "body": "Black Girls Code anunció hoy la formación de Beyond Code Collective™, una organización sin fines de lucro independiente que cierra la brecha entre la inspiración, la formación y el empleo en tecnología, conectando a los aprendices con contenido educativo, oportunidades para desarrollar tecnologías de vanguardia y vías para lanzar sus carreras.\n\nBeyond Code Collective se enfoca en desmitificar el panorama digital y crear caminos profesionales sostenibles para personas en todas las etapas de la vida. La organización parte de una creencia sencilla: la tecnología es la herramienta, las personas son el poder.\n\n\"En Beyond Code Collective, estamos uniendo los mundos de la tecnología emergente y el talento humano para dar forma a un futuro donde la innovación sea inclusiva, responsable y al alcance de todos\", dijo Cristina Mancini, Fundadora y CEO. \"Fundé esta nueva organización para abordar la brecha creciente entre las habilidades y las oportunidades en todas las comunidades.\"\n\nBeyond Code Collective ofrecerá los siguientes programas: The Forge — centros intergeneracionales y presenciales que combinan educación tecnológica, participación comunitaria y desarrollo laboral; Beyond Code Catalysts — un programa de fuerza laboral basado en cohortes que crea caminos hacia carreras tecnológicas de alta demanda; y After The Game — un programa nacional para atletas profesionales y universitarios de la NCAA en transición.",
+        "linkUrl": "https://www.businesswire.com/news/home/20260305027298/en/Beyond-Code-Collective-Launches-to-Expand-AI-Literacy-and-Prepare-the-Next-Generation-of-Technology-Leaders",
+        "linkLabel": "Leer en Business Wire"
+      },
+      {
+        "slug": "bcc-leadership-team-council",
+        "date": "2026-03-31",
+        "category": "Prensa",
+        "title": "Beyond Code Collective Anuncia su Equipo de Liderazgo y el Tech Futures National Council",
+        "excerpt": "Beyond Code nombra a Mica Le John como Directora Ejecutiva, a Jihan Johnston-McGlotten como Directora General de The Forge y a Ramon Clemente como Director de After The Game, junto a un distinguido Tech Futures National Council.",
+        "image": "/images/council/mica-le-john-v2.png",
+        "imageAlt": "Mica Le John, Directora Ejecutiva de Beyond Code Collective",
+        "imagePosition": "top",
+        "body": "Beyond Code Collective anunció hoy la formación de su Tech Futures National Council y nombró a tres líderes clave para avanzar en su misión de preparar a personas de todas las generaciones para aprovechar las oportunidades de un mundo impulsado por la tecnología.\n\nMica Le John se une como Directora Ejecutiva, siendo la socia de ejecución de la CEO y apoyando la expansión, el desarrollo de programas, la visibilidad de la marca y el impacto comunitario de la organización. Le John aporta más de una década de experiencia en la intersección de tecnología, creatividad e impacto social.\n\nJihan Johnston-McGlotten se une como Directora General de The Forge, la red de centros intergeneracionales y presenciales de Beyond Code que integran educación tecnológica, participación comunitaria y desarrollo laboral. Johnston-McGlotten lidera el crecimiento y la expansión de The Forge en Atlanta.\n\nRamon Clemente se une tras una carrera profesional de baloncesto de 17 años como Director de After The Game, un programa nacional basado en cohortes para atletas profesionales y universitarios de la NCAA en transición.\n\n\"Fundé Beyond Code Collective porque la innovación debe incluir a todos y la tecnología debe ser un puente hacia la oportunidad, no una barrera\", dijo Cristina Mancini, Fundadora y CEO. \"Juntos, no solo nos enfocamos en cerrar la brecha digital, sino en asegurarnos de que las comunidades no se queden atrás.\"\n\nEl Tech Futures National Council reúne a líderes de la NASA, YouTube, Xbox, la Universidad de Texas en Austin y más, aportando perspectivas estratégicas y del mundo real para informar los planes de estudio y la programación en alfabetización en IA, caminos de innovación y desarrollo laboral.",
+        "linkUrl": "https://www.businesswire.com/news/home/20260317351486/en/Beyond-Code-Collective-Announces-The-Forge-An-Intergenerational-Innovation-and-Workforce-Hub",
+        "linkLabel": "Leer en Business Wire"
       }
     ]
   }

@@ -260,6 +260,7 @@ export function NewsEditor({ value, onChange }: { value: V; onChange: OnChange }
           { key: "body", label: "Body (leave a blank line between paragraphs)", multiline: true },
           { key: "linkUrl", label: "External link URL (optional — e.g. a press article)" },
           { key: "linkLabel", label: "External link label (optional — e.g. Read on CNBC)" },
+          { key: "imagePosition", label: "Image focal point (optional — top, center, bottom)" },
         ]}
         onChange={(v) => set(value, "items", v, onChange)}
         addLabel="Add Post"

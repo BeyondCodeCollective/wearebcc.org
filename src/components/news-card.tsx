@@ -31,6 +31,7 @@ export function NewsCard({ post, index = 0 }: { post: NewsPost; index?: number }
             alt={post.imageAlt || post.title}
             loading="lazy"
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            style={{ objectPosition: post.imagePosition || "center" }}
           />
           <span
             className="absolute left-3 top-3 bg-true-black/85 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-electric-green backdrop-blur-sm"

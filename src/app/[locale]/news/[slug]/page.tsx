@@ -108,6 +108,7 @@ export default function NewsArticle() {
               src={post.image}
               alt={post.imageAlt || post.title}
               className="h-full w-full object-cover"
+              style={{ objectPosition: post.imagePosition || "center" }}
             />
           </div>
         </motion.div>

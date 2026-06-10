@@ -9,6 +9,7 @@ export interface NewsPost {
   body: string;
   linkUrl?: string;
   linkLabel?: string;
+  imagePosition?: string;
 }
 
 /**
