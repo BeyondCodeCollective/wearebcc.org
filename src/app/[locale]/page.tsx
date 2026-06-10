@@ -8,6 +8,7 @@ import { Initiatives } from "@/components/initiatives";
 import { Testimonials } from "@/components/testimonials";
 
 import { Resources } from "@/components/resources";
+import { News } from "@/components/news";
 import { CTABridge } from "@/components/cta-bridge";
 import { HireTalent } from "@/components/hire-talent";
 import { GetInvolved } from "@/components/get-involved";
@@ -33,6 +34,7 @@ export default function Home() {
           <Audience />
           <Initiatives />
           <Resources />
+          <News />
           <CTABridge />
           <HireTalent />
           <GetInvolved />

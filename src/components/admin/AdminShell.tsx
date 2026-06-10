@@ -21,6 +21,8 @@ import EngagementPanel from "@/components/dashboard/EngagementPanel";
 import TimeRangeSelector from "@/components/dashboard/TimeRangeSelector";
 import enLanding from "@/messages/en/landing.json";
 import esLanding from "@/messages/es/landing.json";
+import enCommon from "@/messages/en/common.json";
+import esCommon from "@/messages/es/common.json";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
@@ -57,22 +59,36 @@ interface DashboardData {
 // ─── Constants ────────────────────────────────────────────────────
 
 const BASELINES: Record<string, Record<string, any>> = {
-  en: enLanding,
-  es: esLanding,
+  en: { ...enLanding, forge: enCommon.forge, atg: enCommon.atg },
+  es: { ...esLanding, forge: esCommon.forge, atg: esCommon.atg },
 };
 
-const SECTIONS = [
-  { key: "hero", label: "Hero" },
-  { key: "about", label: "About" },
-  { key: "testimonials", label: "Testimonials" },
-  { key: "audience", label: "Who We Serve" },
-  { key: "stats", label: "Stats" },
-  { key: "initiatives", label: "Initiatives" },
-  { key: "founder", label: "Founder" },
-  { key: "resources", label: "Resources" },
-  { key: "ctaBridge", label: "Partners" },
-  { key: "getInvolved", label: "Get Involved" },
+const SECTION_GROUPS = [
+  {
+    label: "HOMEPAGE",
+    sections: [
+      { key: "hero", label: "Hero" },
+      { key: "about", label: "About" },
+      { key: "stats", label: "Stats" },
+      { key: "testimonials", label: "Testimonials" },
+      { key: "audience", label: "Who We Serve" },
+      { key: "initiatives", label: "Initiatives" },
+      { key: "resources", label: "Resources" },
+      { key: "news", label: "News & Articles" },
+      { key: "ctaBridge", label: "Partners" },
+      { key: "getInvolved", label: "Get Involved" },
+    ],
+  },
+  {
+    label: "PROGRAMS",
+    sections: [
+      { key: "forge", label: "Beyond Code Centers" },
+      { key: "atg", label: "After The Game" },
+    ],
+  },
 ] as const;
+
+const ALL_SECTIONS = SECTION_GROUPS.flatMap((g) => g.sections);
 
 type Tab = "analytics" | "content";
 
@@ -321,7 +337,7 @@ export default function AdminShell() {
   // ─── Authenticated Layout ─────────────────────────────────────
 
   const activeSectionLabel =
-    SECTIONS.find((s) => s.key === activeSection)?.label || activeSection;
+    ALL_SECTIONS.find((s) => s.key === activeSection)?.label || activeSection;
 
   return (
     <div className="min-h-screen bg-off-white text-true-black flex flex-col">
@@ -514,23 +530,30 @@ export default function AdminShell() {
         <>
           <div className="flex-1 flex">
             {/* Sidebar */}
-            <nav className="w-48 shrink-0 border-r border-black/5 bg-white py-4 hidden md:block">
-              {SECTIONS.map(({ key, label }, i) => (
-                <button
-                  key={key}
-                  onClick={() => setActiveSection(key)}
-                  className={`w-full text-left px-4 py-2 text-xs transition-colors ${
-                    activeSection === key
-                      ? "text-cobalt bg-cobalt/5 border-r-2 border-cobalt"
-                      : "text-black/50 hover:text-black/80 hover:bg-black/[0.02]"
-                  }`}
-                  style={{ fontFamily: "var(--font-mono)" }}
-                >
-                  <span className="text-black/20 mr-1.5">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  {label}
-                </button>
+            <nav className="w-52 shrink-0 border-r border-black/5 bg-white py-4 hidden md:block overflow-y-auto">
+              {SECTION_GROUPS.map((group) => (
+                <div key={group.label} className="mb-4">
+                  <p
+                    className="px-4 pt-2 pb-1 text-[9px] uppercase tracking-widest text-black/25"
+                    style={{ fontFamily: "var(--font-mono)" }}
+                  >
+                    {group.label}
+                  </p>
+                  {group.sections.map(({ key, label }) => (
+                    <button
+                      key={key}
+                      onClick={() => setActiveSection(key)}
+                      className={`w-full text-left px-4 py-2 text-xs transition-colors ${
+                        activeSection === key
+                          ? "text-cobalt bg-cobalt/5 border-r-2 border-cobalt"
+                          : "text-black/50 hover:text-black/80 hover:bg-black/[0.02]"
+                      }`}
+                      style={{ fontFamily: "var(--font-mono)" }}
+                    >
+                      {label}
+                    </button>
+                  ))}
+                </div>
               ))}
             </nav>
 
@@ -542,10 +565,12 @@ export default function AdminShell() {
                 className="w-full bg-white text-true-black px-3 py-2 text-sm rounded-md border border-black/10 focus:border-cobalt focus:outline-none"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
-                {SECTIONS.map(({ key, label }, i) => (
-                  <option key={key} value={key}>
-                    {String(i + 1).padStart(2, "0")} {label}
-                  </option>
+                {SECTION_GROUPS.map((group) => (
+                  <optgroup key={group.label} label={group.label}>
+                    {group.sections.map(({ key, label }) => (
+                      <option key={key} value={key}>{label}</option>
+                    ))}
+                  </optgroup>
                 ))}
               </select>
             </div>
@@ -557,11 +582,7 @@ export default function AdminShell() {
                   className="text-[11px] uppercase tracking-wider text-black/40 mb-6"
                   style={{ fontFamily: "var(--font-mono)" }}
                 >
-                  [
-                  {String(
-                    SECTIONS.findIndex((s) => s.key === activeSection) + 1
-                  ).padStart(2, "0")}
-                  ] {activeSectionLabel} — {locale.toUpperCase()}
+                  {activeSectionLabel} — {locale.toUpperCase()}
                 </p>
 
                 {contentLoading ? (

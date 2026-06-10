@@ -4,8 +4,9 @@
     "aboutUs": "Sobre Nosotros",
     "team": "Equipo",
     "initiatives": "Iniciativas",
-    "theForge": "The Forge",
+    "theForge": "Beyond Code Centers",
     "afterTheGame": "After The Game",
+    "news": "Noticias",
     "partners": "Socios",
     "resources": "Recursos",
     "getInvolved": "Participa",
@@ -13,15 +14,15 @@
   },
   "footer": {
     "contact": "CONTACTO",
-    "followUs": "S\u00cdGUENOS",
+    "followUs": "SÍGUENOS",
     "instagram": "Instagram",
     "linkedin": "LinkedIn",
     "copyright": "Beyond Code Collective. Todos los derechos reservados.",
-    "privacyPolicy": "Pol\u00edtica de Privacidad",
-    "termsOfUse": "T\u00e9rminos de Uso"
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfUse": "Términos de Uso"
   },
   "newsletter": {
-    "label": "[ \u00daNETE A LA COMUNIDAD ]",
+    "label": "[ ÚNETE A LA COMUNIDAD ]",
     "headline1": "MANTENTE",
     "headline2": "INFORMADO.",
     "description": "Recibe actualizaciones sobre iniciativas, eventos y oportunidades de Beyond Code Collective.",
@@ -29,164 +30,176 @@
   },
   "form": {
     "firstName": "Nombre",
-    "email": "Correo electr\u00f3nico",
-    "phone": "Tel\u00e9fono (opcional)",
+    "email": "Correo electrónico",
+    "phone": "Teléfono (opcional)",
     "iAmA": "Soy un/una...",
     "iAmAOptional": "Soy un/una... (opcional)",
     "joining": "Uniendo...",
-    "joinTheCommunity": "\u00danete a la Comunidad \u2192",
-    "youreIn": "\u00a1EST\u00c1S DENTRO!",
+    "joinTheCommunity": "Únete a la Comunidad →",
+    "youreIn": "¡ESTÁS DENTRO!",
     "wellBeInTouch": "Estaremos en contacto. El futuro es de todos.",
-    "somethingWentWrong": "Algo sali\u00f3 mal. Por favor, int\u00e9ntalo de nuevo."
+    "somethingWentWrong": "Algo salió mal. Por favor, inténtalo de nuevo."
   },
   "partnerships": {
     "label": "[ ALIANZAS ]",
     "headline1": "CONSTRUYAMOS",
     "headline2": "JUNTOS.",
-    "description": "\u00bfInteresado en asociarte con Beyond Code Collective? Comparte tu informaci\u00f3n y nuestro equipo se pondr\u00e1 en contacto.",
+    "description": "¿Interesado en asociarte con Beyond Code Collective? Comparte tu información y nuestro equipo se pondrá en contacto.",
     "close": "CERRAR",
-    "thanks": "\u00a1GRACIAS!",
-    "wellReachOut": "Nuestro equipo de alianzas se pondr\u00e1 en contacto pronto.",
+    "thanks": "¡GRACIAS!",
+    "wellReachOut": "Nuestro equipo de alianzas se pondrá en contacto pronto.",
     "submitting": "Enviando...",
-    "connect": "Con\u00e9ctate Con Nosotros \u2192"
+    "connect": "Conéctate Con Nosotros →"
   },
   "contact": {
-    "label": "[ CONT\u00c1CTANOS ]",
+    "label": "[ CONTÁCTANOS ]",
     "headline1": "PONTE EN",
     "headline2": "CONTACTO.",
-    "description": "\u00bfTienes una pregunta, idea u oportunidad? Env\u00edanos un mensaje y nuestro equipo te responder\u00e1.",
+    "description": "¿Tienes una pregunta, idea u oportunidad? Envíanos un mensaje y nuestro equipo te responderá.",
     "close": "CERRAR",
     "message": "Tu mensaje",
     "thanks": "MENSAJE ENVIADO.",
-    "wellReachOut": "Nuestro equipo se pondr\u00e1 en contacto pronto.",
+    "wellReachOut": "Nuestro equipo se pondrá en contacto pronto.",
     "submitting": "Enviando...",
-    "send": "Enviar Mensaje \u2192"
+    "send": "Enviar Mensaje →"
   },
   "banner": {
     "title": "AFTER THE GAME",
-    "description": "Una nueva iniciativa para atletas en transici\u00f3n.",
-    "cta": "Conoce m\u00e1s"
+    "description": "Una nueva iniciativa para atletas en transición.",
+    "cta": "Conoce más"
   },
   "atg": {
     "back": "WEAREBCC.ORG",
-    "nextCohort": "PR\u00d3XIMA COHORTE: VERANO 2026",
+    "nextCohort": "PRÓXIMA COHORTE: VERANO 2026",
     "initiative": "UN PROGRAMA ANCLA DE BEYOND CODE COLLECTIVE",
     "headline1": "DEL DEPORTE",
-    "headline2": "A LA TECNOLOG\u00cdA",
-    "description": "After The Game es un programa nacional de fuerza laboral basado en cohortes para atletas profesionales y universitarios (NCAA) en transici\u00f3n. Est\u00e1 dise\u00f1ado expl\u00edcitamente para quienes no son asalariados a largo plazo y necesitan apoyo estructurado para dise\u00f1ar e ingresar a una segunda carrera. Este programa estructurado cierra la \u201cbrecha de habilidades digitales\u201d con l\u00edderes t\u00e9cnicos que ense\u00f1an clases en vivo y desarrollan curr\u00edculos, y una comunidad que brinda apoyo integral que cubre todo, desde la preparaci\u00f3n corporativa hasta la colocaci\u00f3n laboral.",
-    "joinWaitlist": "\u00daNETE A LA LISTA DE ESPERA",
+    "headline2": "A LA TECNOLOGÍA",
+    "description": "After The Game es un programa nacional de fuerza laboral basado en cohortes para atletas profesionales y universitarios (NCAA) en transición. Está diseñado explícitamente para quienes no son asalariados a largo plazo y necesitan apoyo estructurado para diseñar e ingresar a una segunda carrera. Este programa estructurado cierra la “brecha de habilidades digitales” con líderes técnicos que enseñan clases en vivo y desarrollan currículos, y una comunidad que brinda apoyo integral que cubre todo, desde la preparación corporativa hasta la colocación laboral.",
+    "joinWaitlist": "ÚNETE A LA LISTA DE ESPERA",
     "videoLabel": "ESCUCHA A NUESTRA COMUNIDAD",
     "videoHeadline1": "HISTORIAS REALES,",
     "videoHeadline2": "IMPACTO REAL",
-    "videoDescription": "Escucha directamente a atletas que est\u00e1n construyendo su pr\u00f3ximo cap\u00edtulo a trav\u00e9s de After The Game. La transici\u00f3n no tiene que ser un viaje en solitario.",
+    "videoDescription": "Escucha directamente a atletas que están construyendo su próximo capítulo a través de After The Game. La transición no tiene que ser un viaje en solitario.",
     "problemLabel": "LA REALIDAD",
-    "problemHeadline1": "\u00bfQU\u00c9 VIENE",
-    "problemHeadline2": "DESPU\u00c9S?",
-    "problemText": "Menos del 2 por ciento de los atletas universitarios NCAA llegan a jugar profesionalmente, y para quienes lo logran, el reloj ya est\u00e1 corriendo. Las carreras en la NFL duran en promedio de 3 a 5 a\u00f1os; en la NBA, 4.5 a\u00f1os; y en la MLB, 5 a\u00f1os. Cuando llega el momento de decidir qu\u00e9 sigue, la mayor\u00eda de los atletas deben resolverlo solos.",
-    "problemText2": "No es porque les falte disciplina, motivaci\u00f3n o determinaci\u00f3n. Lo que les falta es un puente: el conocimiento, el contexto y la gu\u00eda para traducir sus habilidades en la pr\u00f3xima carrera que desean.",
+    "problemHeadline1": "¿QUÉ VIENE",
+    "problemHeadline2": "DESPUÉS?",
+    "problemText": "Menos del 2 por ciento de los atletas universitarios NCAA llegan a jugar profesionalmente, y para quienes lo logran, el reloj ya está corriendo. Las carreras en la NFL duran en promedio de 3 a 5 años; en la NBA, 4.5 años; y en la MLB, 5 años. Cuando llega el momento de decidir qué sigue, la mayoría de los atletas deben resolverlo solos.",
+    "problemText2": "No es porque les falte disciplina, motivación o determinación. Lo que les falta es un puente: el conocimiento, el contexto y la guía para traducir sus habilidades en la próxima carrera que desean.",
     "problemStats": [
-      { "stat": "<2%", "label": "de atletas NCAA llegan a profesionales" },
-      { "stat": "3\u20135 a\u00f1os", "label": "carrera promedio NFL" },
-      { "stat": "4.5 a\u00f1os", "label": "carrera promedio NBA" },
-      { "stat": "5 a\u00f1os", "label": "carrera promedio MLB" }
+      {
+        "stat": "<2%",
+        "label": "de atletas NCAA llegan a profesionales"
+      },
+      {
+        "stat": "3–5 años",
+        "label": "carrera promedio NFL"
+      },
+      {
+        "stat": "4.5 años",
+        "label": "carrera promedio NBA"
+      },
+      {
+        "stat": "5 años",
+        "label": "carrera promedio MLB"
+      }
     ],
     "programLabel": "EL PROGRAMA",
-    "programHeadline1": "AQU\u00cd ES DONDE",
+    "programHeadline1": "AQUÍ ES DONDE",
     "programHeadline2": "AFTER THE GAME INTERVIENE",
     "programItems": [
-      "Coaching temprano y asesor\u00eda para clarificar la direcci\u00f3n",
-      "Un n\u00facleo compartido de fuerza laboral y fundamentos digitales",
-      "Especializaci\u00f3n t\u00e9cnica alineada a intereses",
-      "Apoyo integral para sostener la participaci\u00f3n",
-      "Colocaci\u00f3n conectada con empleadores, incluyendo roles adyacentes al deporte"
+      "Coaching temprano y asesoría para clarificar la dirección",
+      "Un núcleo compartido de fuerza laboral y fundamentos digitales",
+      "Especialización técnica alineada a intereses",
+      "Apoyo integral para sostener la participación",
+      "Colocación conectada con empleadores, incluyendo roles adyacentes al deporte"
     ],
     "classroomLabel": "UN MODELO DE AULA LIDERADO POR PARTICIPANTES",
     "classroomHeadline1": "FACILITADORES,",
     "classroomHeadline2": "NO PROFESORES",
-    "classroomText": "After The Game utiliza un modelo de \u201caula invertida\u201d con hitos basados en pares y laboratorios pr\u00e1cticos de programaci\u00f3n que respetan el estilo de aprendizaje del atleta: facilitadores en lugar de profesores y competencia en equipo. Los participantes son seleccionados en base a su motivaci\u00f3n comprobada para construir una carrera duradera post-deportiva, demostrada a trav\u00e9s de un proceso de entrevista y selecci\u00f3n previo al programa.",
-    "curriculumLabel": "EL CURR\u00cdCULO",
-    "curriculumHeadline1": "6\u20139 MESES.",
+    "classroomText": "After The Game utiliza un modelo de “aula invertida” con hitos basados en pares y laboratorios prácticos de programación que respetan el estilo de aprendizaje del atleta: facilitadores en lugar de profesores y competencia en equipo. Los participantes son seleccionados en base a su motivación comprobada para construir una carrera duradera post-deportiva, demostrada a través de un proceso de entrevista y selección previo al programa.",
+    "curriculumLabel": "EL CURRÍCULO",
+    "curriculumHeadline1": "6–9 MESES.",
     "curriculumHeadline2": "MEDIO TIEMPO. IMPACTO TOTAL.",
-    "curriculumText": "After The Game es un programa de medio tiempo de 6 a 9 meses que comienza con una evaluaci\u00f3n de habilidades para determinar qu\u00e9 camino t\u00e9cnico est\u00e1 mejor alineado con el individuo para asegurar una mayor probabilidad de finalizaci\u00f3n y satisfacci\u00f3n. El curr\u00edculo va m\u00e1s all\u00e1 de la capacitaci\u00f3n t\u00e9cnica, integrando programaci\u00f3n integral como fundamentos del lugar de trabajo para apoyar la alfabetizaci\u00f3n en herramientas de productividad (ej. Zoom, Slack, fundamentos de IA), comunicaci\u00f3n profesional, alfabetizaci\u00f3n financiera y apoyo de salud mental para navegar el cambio de identidad psicol\u00f3gica de \u201cAtleta de \u00c9lite\u201d a \u201cInnovador Tecnol\u00f3gico.\u201d",
+    "curriculumText": "After The Game es un programa de medio tiempo de 6 a 9 meses que comienza con una evaluación de habilidades para determinar qué camino técnico está mejor alineado con el individuo para asegurar una mayor probabilidad de finalización y satisfacción. El currículo va más allá de la capacitación técnica, integrando programación integral como fundamentos del lugar de trabajo para apoyar la alfabetización en herramientas de productividad (ej. Zoom, Slack, fundamentos de IA), comunicación profesional, alfabetización financiera y apoyo de salud mental para navegar el cambio de identidad psicológica de “Atleta de Élite” a “Innovador Tecnológico.”",
     "ecosystemLabel": "EL ECOSISTEMA",
     "ecosystemHeadline1": "UN CICLO DE VALOR",
     "ecosystemHeadline2": "BILATERAL",
-    "ecosystemText": "Estamos construyendo un ecosistema bilateral, un ciclo de valor que entrega talento listo para el mercado laboral a los empleadores mientras proporciona a los atletas un camino claro hacia carreras de alta trayectoria: al completar el programa, los participantes ser\u00e1n colocados en pasant\u00edas pagadas y aprendizajes con empleadores asociados por 3 a 6 meses.",
+    "ecosystemText": "Estamos construyendo un ecosistema bilateral, un ciclo de valor que entrega talento listo para el mercado laboral a los empleadores mientras proporciona a los atletas un camino claro hacia carreras de alta trayectoria: al completar el programa, los participantes serán colocados en pasantías pagadas y aprendizajes con empleadores asociados por 3 a 6 meses.",
     "formLabel": "LISTA DE ESPERA VERANO 2026",
-    "formHeadline1": "\u00daNETE A LA PR\u00d3XIMA",
+    "formHeadline1": "ÚNETE A LA PRÓXIMA",
     "formHeadline2": "COHORTE",
-    "formDescription": "La pr\u00f3xima cohorte comienza en verano 2026. Reg\u00edstrate ahora para reservar tu lugar y recibir actualizaciones sobre la inscripci\u00f3n.",
+    "formDescription": "La próxima cohorte comienza en verano 2026. Regístrate ahora para reservar tu lugar y recibir actualizaciones sobre la inscripción.",
     "firstName": "Nombre",
-    "email": "Correo electr\u00f3nico",
-    "phone": "Tel\u00e9fono (opcional)",
+    "email": "Correo electrónico",
+    "phone": "Teléfono (opcional)",
     "interestPlaceholder": "Quiero... (selecciona uno)",
     "interestJoin": "Unirme al programa",
     "interestVolunteer": "Ser voluntario",
     "interestSupport": "Apoyar / Patrocinar",
     "submitting": "UNIENDO...",
-    "submit": "\u00daNETE A LA LISTA DE ESPERA",
-    "successTitle": "\u00a1EST\u00c1S DENTRO!",
-    "successMessage": "Estaremos en contacto cuando abra la inscripci\u00f3n.",
-    "error": "Algo sali\u00f3 mal"
+    "submit": "ÚNETE A LA LISTA DE ESPERA",
+    "successTitle": "¡ESTÁS DENTRO!",
+    "successMessage": "Estaremos en contacto cuando abra la inscripción.",
+    "error": "Algo salió mal"
   },
   "forge": {
     "back": "WEAREBCC.ORG",
     "initiative": "UNA INICIATIVA DE BEYOND CODE COLLECTIVE",
-    "headline1": "DONDE LA INNOVACI\u00d3N",
+    "headline1": "DONDE LA INNOVACIÓN",
     "headline2": "SE ENCUENTRA CON LA COMUNIDAD",
-    "description": "The Forge es una red de centros intergeneracionales y espec\u00edficos por ubicaci\u00f3n que combinan educaci\u00f3n tecnol\u00f3gica, participaci\u00f3n comunitaria y desarrollo laboral bajo un mismo techo. Un verdadero \u201ctercer lugar\u201d que no es escuela ni trabajo, donde estudiantes de secundaria se sientan junto a profesionales de mitad de carrera y familias con sus hijos, mientras exploran la IA y la tecnolog\u00eda emergente juntos.",
-    "learnMore": "INSCR\u00cdBETE A EVENTOS",
+    "description": "The Forge es una red de centros intergeneracionales y específicos por ubicación que combinan educación tecnológica, participación comunitaria y desarrollo laboral bajo un mismo techo. Un verdadero “tercer lugar” que no es escuela ni trabajo, donde estudiantes de secundaria se sientan junto a profesionales de mitad de carrera y familias con sus hijos, mientras exploran la IA y la tecnología emergente juntos.",
+    "learnMore": "INSCRÍBETE A EVENTOS",
     "viewCalendar": "VER CALENDARIO COMPLETO",
-    "eventbriteCta": "VER PR\u00d3XIMOS EVENTOS",
-    "quoteText": "En Beyond Code, creemos que todos deber\u00edan tener un papel en dar forma a la tecnolog\u00eda del ma\u00f1ana. The Forge nos permite no solo dar a las personas acceso a herramientas, sino el apoyo comunitario y el espacio para explorar estas herramientas, para que est\u00e9n empoderados para dar forma con confianza al futuro de la tecnolog\u00eda y el trabajo.",
+    "eventbriteCta": "VER PRÓXIMOS EVENTOS",
+    "quoteText": "En Beyond Code, creemos que todos deberían tener un papel en dar forma a la tecnología del mañana. The Forge nos permite no solo dar a las personas acceso a herramientas, sino el apoyo comunitario y el espacio para explorar estas herramientas, para que estén empoderados para dar forma con confianza al futuro de la tecnología y el trabajo.",
     "quoteAuthor": "Cristina Mancini",
     "quoteRole": "Fundadora y CEO, Beyond Code Collective",
-    "whatLabel": "\u00bfQU\u00c9 ES THE FORGE?",
+    "whatLabel": "¿QUÉ ES THE FORGE?",
     "whatHeadline1": "UN TERCER LUGAR",
-    "whatHeadline2": "PARA LA TECNOLOG\u00cdA",
-    "whatText": "The Forge est\u00e1 dise\u00f1ado para ser un espacio seguro para hacer preguntas sin miedo ni verg\u00fcenza. Cada centro The Forge ofrece programaci\u00f3n culturalmente responsiva a su comunidad, sirviendo a estudiantes K-12 y adultos que buscan caminos hacia carreras impulsadas por la tecnolog\u00eda.",
+    "whatHeadline2": "PARA LA TECNOLOGÍA",
+    "whatText": "The Forge está diseñado para ser un espacio seguro para hacer preguntas sin miedo ni vergüenza. Cada centro The Forge ofrece programación culturalmente responsiva a su comunidad, sirviendo a estudiantes K-12 y adultos que buscan caminos hacia carreras impulsadas por la tecnología.",
     "pillarsLabel": "EL MODELO",
     "pillarsHeadline1": "CONSTRUIDO PARA",
     "pillarsHeadline2": "TODOS",
     "pillars": [
       {
         "title": "Intergeneracional",
-        "description": "Estudiantes de secundaria junto a profesionales de mitad de carrera y familias. Cada generaci\u00f3n aprende junta."
+        "description": "Estudiantes de secundaria junto a profesionales de mitad de carrera y familias. Cada generación aprende junta."
       },
       {
         "title": "Culturalmente Responsivo",
-        "description": "Dise\u00f1ado en colaboraci\u00f3n con actores locales. Programaci\u00f3n moldeada por y para la comunidad a la que sirve."
+        "description": "Diseñado en colaboración con actores locales. Programación moldeada por y para la comunidad a la que sirve."
       },
       {
-        "title": "IA y Tecnolog\u00eda Emergente",
-        "description": "Expandiendo oportunidad en IA, alfabetizaci\u00f3n de datos, automatizaci\u00f3n y las tecnolog\u00edas que definen el futuro del trabajo."
+        "title": "IA y Tecnología Emergente",
+        "description": "Expandiendo oportunidad en IA, alfabetización de datos, automatización y las tecnologías que definen el futuro del trabajo."
       },
       {
         "title": "Gratuito y Accesible",
-        "description": "Programaci\u00f3n gratuita ofrecida en un horario regular. Sin barreras de entrada, sin prerrequisitos."
+        "description": "Programación gratuita ofrecida en un horario regular. Sin barreras de entrada, sin prerrequisitos."
       }
     ],
-    "programmingLabel": "PROGRAMACI\u00d3N",
-    "programmingHeadline1": "QU\u00c9 SUCEDE",
+    "programmingLabel": "PROGRAMACIÓN",
+    "programmingHeadline1": "QUÉ SUCEDE",
     "programmingHeadline2": "EN THE FORGE",
     "programmingTypes": [
       {
         "title": "Almuerzo y Aprendizaje",
-        "description": "Sesiones abiertas y \u00fanicas sobre temas como IA, alfabetizaci\u00f3n de datos y herramientas digitales. Sin compromiso \u2014 solo ven, aprende y conecta.",
-        "format": "Evento \u00fanico",
+        "description": "Sesiones abiertas y únicas sobre temas como IA, alfabetización de datos y herramientas digitales. Sin compromiso — solo ven, aprende y conecta.",
+        "format": "Evento único",
         "audience": "Mayores de 18",
         "price": "Gratis"
       },
       {
         "title": "Programas de Cohorte",
-        "description": "Cursos estructurados de varias semanas como Fundamentos de IA. Cupos limitados, aprendizaje profundo, proyectos pr\u00e1cticos y una experiencia dirigida por instructores.",
+        "description": "Cursos estructurados de varias semanas como Fundamentos de IA. Cupos limitados, aprendizaje profundo, proyectos prácticos y una experiencia dirigida por instructores.",
         "format": "Cohorte de 4 semanas",
-        "audience": "Aplicaci\u00f3n requerida",
+        "audience": "Aplicación requerida",
         "price": "Gratis"
       },
       {
-        "title": "Programaci\u00f3n Familiar",
-        "description": "Cuidadores y ni\u00f1os construyen proyectos tecnol\u00f3gicos reales juntos. Es aprendizaje pr\u00e1ctico dise\u00f1ado para toda la familia \u2014 no se necesita experiencia, solo curiosidad.",
+        "title": "Programación Familiar",
+        "description": "Cuidadores y niños construyen proyectos tecnológicos reales juntos. Es aprendizaje práctico diseñado para toda la familia — no se necesita experiencia, solo curiosidad.",
         "format": "Sesiones abiertas",
         "audience": "Todas las edades",
         "price": "Gratis"
@@ -195,109 +208,118 @@
         "title": "Estudiantes de Secundaria",
         "description": "Espacios dedicados donde los adolescentes vienen a aprender, construir y encontrar su comunidad. Ya sea su primer proyecto o el quinto, los estudiantes se van con habilidades y conexiones reales.",
         "format": "Sesiones semanales",
-        "audience": "Edades 14\u201318",
+        "audience": "Edades 14–18",
         "price": "Gratis"
       }
     ],
-    "programmingNote": "No se necesita preparaci\u00f3n \u2014 no necesitas traer computadora. Solo ven con mente abierta y listo para aprender.",
-    "howItWorksLabel": "C\u00d3MO FUNCIONA",
+    "programmingNote": "No se necesita preparación — no necesitas traer computadora. Solo ven con mente abierta y listo para aprender.",
+    "howItWorksLabel": "CÓMO FUNCIONA",
     "howItWorksHeadline1": "DEL DESCUBRIMIENTO",
-    "howItWorksHeadline2": "A LA PARTICIPACI\u00d3N",
+    "howItWorksHeadline2": "A LA PARTICIPACIÓN",
     "howItWorksSteps": [
       {
         "step": "01",
         "title": "Explora el Calendario",
-        "description": "Ve los pr\u00f3ximos Almuerzos y Aprendizajes y programas de cohorte en nuestro calendario de Eventbrite."
+        "description": "Ve los próximos Almuerzos y Aprendizajes y programas de cohorte en nuestro calendario de Eventbrite."
       },
       {
         "step": "02",
-        "title": "Aseg\u00farate de Registrarte",
-        "description": "Inscr\u00edbete gratis a trav\u00e9s de Eventbrite. Los programas de cohorte tienen cupos limitados \u2014 reg\u00edstrate temprano."
+        "title": "Asegúrate de Registrarte",
+        "description": "Inscríbete gratis a través de Eventbrite. Los programas de cohorte tienen cupos limitados — regístrate temprano."
       },
       {
         "step": "03",
         "title": "Ven y Aprende",
-        "description": "Asiste en persona en The Forge. No se necesita preparaci\u00f3n, solo ven con mente abierta."
+        "description": "Asiste en persona en The Forge. No se necesita preparación, solo ven con mente abierta."
       }
     ],
     "atlLabel": "THE FORGE: ATL",
     "atlHeadline1": "PRIMERA RESIDENCIA",
     "atlHeadline2": "ATLANTA, GEORGIA",
-    "atlText": "The Forge: ATL est\u00e1 alojado dentro de North Star AI Labs en el Advanced Technology Development Center (ATDC) de Georgia Tech. Se ofrece programaci\u00f3n gratuita dos d\u00edas a la semana, desde marzo de 2026 hasta agosto de 2026.",
-    "atlPartner": "En asociaci\u00f3n con ATDC de Georgia Tech",
-    "atlSchedule": "Dos d\u00edas a la semana, programaci\u00f3n gratuita",
-    "atlDates": "Marzo 2026 \u2013 Agosto 2026",
+    "atlText": "The Forge: ATL está alojado dentro de North Star AI Labs en el Advanced Technology Development Center (ATDC) de Georgia Tech. Se ofrece programación gratuita dos días a la semana, desde marzo de 2026 hasta agosto de 2026.",
+    "atlPartner": "En asociación con ATDC de Georgia Tech",
+    "atlSchedule": "Dos días a la semana, programación gratuita",
+    "atlDates": "Marzo 2026 – Agosto 2026",
     "atlLocation": "North Star AI Labs en Georgia Tech ATDC",
-    "galleryLabel": "THE FORGE EN ACCI\u00d3N",
+    "galleryLabel": "THE FORGE EN ACCIÓN",
     "galleryHeadline1": "NUESTRA",
     "galleryHeadline2": "COMUNIDAD",
     "openingLabel": "[07] EVENTO DE LANZAMIENTO",
     "openingHeadline1": "LA APERTURA",
     "openingHeadline2": "DE THE FORGE",
-    "openingText": "The Forge celebr\u00f3 su evento de apertura el 9 de marzo, reuniendo a algunos de los principales educadores, tecn\u00f3logos y l\u00edderes comunitarios de Atlanta.",
+    "openingText": "The Forge celebró su evento de apertura el 9 de marzo, reuniendo a algunos de los principales educadores, tecnólogos y líderes comunitarios de Atlanta.",
     "panelists": [
-      { "name": "Rep. Kim Schofield", "role": "Representante de Georgia" },
-      { "name": "Darrell Booker", "role": "Estratega de Tecnolog\u00eda e Impacto Social" },
-      { "name": "Ram\u00f3n Clemente", "role": "Jugador Profesional de Baloncesto" }
+      {
+        "name": "Rep. Kim Schofield",
+        "role": "Representante de Georgia"
+      },
+      {
+        "name": "Darrell Booker",
+        "role": "Estratega de Tecnología e Impacto Social"
+      },
+      {
+        "name": "Ramón Clemente",
+        "role": "Jugador Profesional de Baloncesto"
+      }
     ],
     "formLabel": "PARTICIPA",
-    "formHeadline1": "\u00daNETE A",
+    "formHeadline1": "ÚNETE A",
     "formHeadline2": "THE FORGE",
-    "formDescription": "\u00bfInteresado en asistir a The Forge: ATL, ser voluntario o asociarte? Reg\u00edstrate y te mantendremos informado.",
+    "formDescription": "¿Interesado en asistir a The Forge: ATL, ser voluntario o asociarte? Regístrate y te mantendremos informado.",
     "firstName": "Nombre",
-    "email": "Correo electr\u00f3nico",
-    "phone": "Tel\u00e9fono (opcional)",
+    "email": "Correo electrónico",
+    "phone": "Teléfono (opcional)",
     "interestPlaceholder": "Quiero... (selecciona uno)",
-    "interestAttend": "Asistir a la programaci\u00f3n",
+    "interestAttend": "Asistir a la programación",
     "interestVolunteer": "Ser voluntario",
     "interestPartner": "Asociarme / Patrocinar",
     "interestEnroll": "Inscribir a mi hijo/a",
     "submitting": "UNIENDO...",
     "submit": "PARTICIPA",
-    "successTitle": "\u00a1EST\u00c1S DENTRO!",
-    "successMessage": "Estaremos en contacto con detalles de programaci\u00f3n y actualizaciones.",
-    "error": "Algo sali\u00f3 mal"
+    "successTitle": "¡ESTÁS DENTRO!",
+    "successMessage": "Estaremos en contacto con detalles de programación y actualizaciones.",
+    "error": "Algo salió mal"
   },
   "team": {
     "back": "WEAREBCC.ORG",
     "heroLabel": "[ NUESTRO EQUIPO ]",
     "heroHeadline1": "LAS PERSONAS",
-    "heroHeadline2": "DETR\u00c1S DE LA MISI\u00d3N",
-    "heroDescription": "Conoce a los l\u00edderes que impulsan la misi\u00f3n de Beyond Code Collective para cerrar la brecha de alfabetizaci\u00f3n en IA y desbloquear oportunidades digitales para las comunidades excluidas del futuro del trabajo.",
-    "founderBio": "Cristina Mancini es la visionaria Fundadora y CEO de Beyond Code Collective, un ecosistema nacional creado para cerrar la brecha de alfabetizaci\u00f3n en IA y desbloquear la dignidad digital para las comunidades excluidas del futuro del trabajo. Cre\u00f3 BCC para responder una pregunta transformadora: \u00bfQu\u00e9 pasar\u00eda si cada comunidad tuviera acceso permanente y culturalmente arraigado a las habilidades y caminos que definen la pr\u00f3xima d\u00e9cada de innovaci\u00f3n?",
+    "heroHeadline2": "DETRÁS DE LA MISIÓN",
+    "heroDescription": "Conoce a los líderes que impulsan la misión de Beyond Code Collective para cerrar la brecha de alfabetización en IA y desbloquear oportunidades digitales para las comunidades excluidas del futuro del trabajo.",
+    "founderBio": "Cristina Mancini es la visionaria Fundadora y CEO de Beyond Code Collective, un ecosistema nacional creado para cerrar la brecha de alfabetización en IA y desbloquear la dignidad digital para las comunidades excluidas del futuro del trabajo. Creó BCC para responder una pregunta transformadora: ¿Qué pasaría si cada comunidad tuviera acceso permanente y culturalmente arraigado a las habilidades y caminos que definen la próxima década de innovación?",
     "leadershipBios": {
-      "micaLeJohn": "M\u00e1s de una d\u00e9cada de experiencia en la intersecci\u00f3n de tecnolog\u00eda, creatividad e impacto social. Anteriormente liderando alianzas estrat\u00e9gicas e innovaci\u00f3n en Black Girls Code.",
+      "micaLeJohn": "Más de una década de experiencia en la intersección de tecnología, creatividad e impacto social. Anteriormente liderando alianzas estratégicas e innovación en Black Girls Code.",
       "jihanJohnstonMcGlotten": "Más de una década de experiencia construyendo comunidades tecnológicas e impulsando el acceso. Liderando el crecimiento y expansión de The Forge en Atlanta.",
       "ramonClemente": "Liderando After The Game, la iniciativa de BCC que conecta a atletas con carreras tecnológicas y habilidades digitales para la vida más allá del deporte."
     },
-    "edQuote": "Cada miembro del Consejo Nacional Tech Futures aporta una formaci\u00f3n y perspectiva \u00fanicas, y estamos orgullosos de dar la bienvenida a un grupo tan distinguido a la comunidad de Beyond Code. Su amplia experiencia ser\u00e1 fundamental para dar forma a nuestro ecosistema y asegurar que nuestra programaci\u00f3n se traduzca en impacto real.",
+    "edQuote": "Cada miembro del Consejo Nacional Tech Futures aporta una formación y perspectiva únicas, y estamos orgullosos de dar la bienvenida a un grupo tan distinguido a la comunidad de Beyond Code. Su amplia experiencia será fundamental para dar forma a nuestro ecosistema y asegurar que nuestra programación se traduzca en impacto real.",
     "edQuoteName": "Mica Le John",
     "edQuoteTitle": "Directora Ejecutiva, Beyond Code Collective",
     "councilLabel": "[ EL CONSEJO ]",
     "councilHeadline1": "TECH FUTURES",
     "councilHeadline2": "CONSEJO NACIONAL",
-    "councilDescription": "Beyond Code Collective ha formado su Consejo Nacional Tech Futures \u2014 un distinguido grupo de tecn\u00f3logos, acad\u00e9micos y l\u00edderes empresariales que brindan perspectivas estrat\u00e9gicas y del mundo real para informar curr\u00edculos y programaci\u00f3n. Los miembros del Consejo comparten un compromiso con la construcci\u00f3n de un futuro donde los aprendices con menos recursos no solo accedan a las tecnolog\u00edas emergentes, sino que tambi\u00e9n las moldeen.",
-    "founderQuote": "Fund\u00e9 Beyond Code Collective porque la innovaci\u00f3n debe incluir a todos y la tecnolog\u00eda debe ser un puente hacia las oportunidades, no una barrera. Estoy encantada de reunir un equipo que comparte esta visi\u00f3n. El equipo de liderazgo refleja la experiencia, pasi\u00f3n y compromiso necesarios para avanzar nuestra misi\u00f3n. Juntos, no solo nos enfocamos en cerrar la brecha digital sino en asegurar que las comunidades no se queden atr\u00e1s.",
+    "councilDescription": "Beyond Code Collective ha formado su Consejo Nacional Tech Futures — un distinguido grupo de tecnólogos, académicos y líderes empresariales que brindan perspectivas estratégicas y del mundo real para informar currículos y programación. Los miembros del Consejo comparten un compromiso con la construcción de un futuro donde los aprendices con menos recursos no solo accedan a las tecnologías emergentes, sino que también las moldeen.",
+    "founderQuote": "Fundé Beyond Code Collective porque la innovación debe incluir a todos y la tecnología debe ser un puente hacia las oportunidades, no una barrera. Estoy encantada de reunir un equipo que comparte esta visión. El equipo de liderazgo refleja la experiencia, pasión y compromiso necesarios para avanzar nuestra misión. Juntos, no solo nos enfocamos en cerrar la brecha digital sino en asegurar que las comunidades no se queden atrás.",
     "founderName": "Cristina Mancini",
     "founderTitle": "Fundadora y CEO, Beyond Code Collective",
-    "missionLabel": "[ LA MISI\u00d3N ]",
+    "missionLabel": "[ LA MISIÓN ]",
     "missionHeadline1": "TRES PILARES",
     "missionHeadline2": "DE IMPACTO",
     "missionPillars": {
       "0": {
-        "label": "ALFABETIZACI\u00d3N EN IA",
+        "label": "ALFABETIZACIÓN EN IA",
         "title": "Desmitificando la Inteligencia Artificial",
-        "description": "Asegurando que las comunidades comprendan y puedan participar en la revoluci\u00f3n de la IA \u2014 no solo consumirla."
+        "description": "Asegurando que las comunidades comprendan y puedan participar en la revolución de la IA — no solo consumirla."
       },
       "1": {
-        "label": "CAMINOS DE INNOVACI\u00d3N",
-        "title": "Creando Accesos a la Tecnolog\u00eda",
-        "description": "Construyendo caminos estructurados de la curiosidad a la carrera a trav\u00e9s de mentor\u00eda, educaci\u00f3n y aplicaci\u00f3n en el mundo real."
+        "label": "CAMINOS DE INNOVACIÓN",
+        "title": "Creando Accesos a la Tecnología",
+        "description": "Construyendo caminos estructurados de la curiosidad a la carrera a través de mentoría, educación y aplicación en el mundo real."
       },
       "2": {
         "label": "DESARROLLO LABORAL",
         "title": "Cerrando la Brecha de Oportunidades",
-        "description": "Conectando a los aprendices con el empleo a trav\u00e9s de alianzas con la industria, certificaciones y apoyo en la colocaci\u00f3n."
+        "description": "Conectando a los aprendices con el empleo a través de alianzas con la industria, certificaciones y apoyo en la colocación."
       }
     }
   },

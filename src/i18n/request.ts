@@ -46,12 +46,18 @@ export default getRequestConfig(async ({ requestLocale }) => {
   // Fetch DB overrides — returns {} on failure (site falls back to JSON files)
   const overrides = await getContentOverrides(locale);
 
-  // Deep-merge overrides on top of landing.json namespaces only
+  // Deep-merge overrides into landing.json namespaces, then common.json namespaces (forge, atg)
+  const mergedCommon = { ...common } as Record<string, unknown>;
   const mergedLanding = { ...landing } as Record<string, unknown>;
   for (const ns of Object.keys(overrides)) {
     if (mergedLanding[ns] && typeof mergedLanding[ns] === "object") {
       mergedLanding[ns] = deepMerge(
         mergedLanding[ns] as Record<string, unknown>,
+        overrides[ns] as Record<string, unknown>
+      );
+    } else if (mergedCommon[ns] && typeof mergedCommon[ns] === "object") {
+      mergedCommon[ns] = deepMerge(
+        mergedCommon[ns] as Record<string, unknown>,
         overrides[ns] as Record<string, unknown>
       );
     }
@@ -60,7 +66,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
   return {
     locale,
     messages: {
-      ...common,
+      ...mergedCommon,
       ...mergedLanding,
       ...quiz,
       ...quizV2,

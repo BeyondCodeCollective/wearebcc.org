@@ -1,7 +1,12 @@
 {
   "hero": {
     "headline1": "EVERYONE",
-    "rotatingWords": ["BUILDS.", "GROWS.", "LEARNS.", "LEADS."],
+    "rotatingWords": [
+      "BUILDS.",
+      "GROWS.",
+      "LEARNS.",
+      "LEADS."
+    ],
     "tagline": "< BEYOND CODE COLLECTIVE >",
     "description": "Beyond Code Collective keeps the human in the loop — providing real-world resources for a tech-driven world. Building intergenerational opportunity in the technologies of today and tomorrow.",
     "getStarted": "Take the Career Quiz",
@@ -40,25 +45,39 @@
         "title": "For The Future",
         "description": "Building skills and knowledge to develop interests and inform future life decisions.",
         "quote": "I want to learn a new skill and build a career path in a field or industry that helps me prepare for the future.",
-        "segments": ["7-17 Learners", "18+ Learners"]
+        "segments": [
+          "7-17 Learners",
+          "18+ Learners"
+        ]
       },
       "understandingOurWorld": {
         "title": "Understanding Our World",
         "description": "Improving knowledge to make sense of an ever-changing world.",
         "quote": "I want to be informed so I can better understand how technology will impact me and the ones I care about.",
-        "segments": ["Parents & Family", "Older Adults"]
+        "segments": [
+          "Parents & Family",
+          "Older Adults"
+        ]
       },
       "changingDirection": {
         "title": "Changing Direction",
         "description": "Learning specific skills to change or upgrade careers, or improve prospects.",
         "quote": "I want to learn the skills that are most desired by employers so I can develop a clear pathway into an evolved or new technology role.",
-        "segments": ["Career Upgraders", "Career Pivoters", "18+ Learners"]
+        "segments": [
+          "Career Upgraders",
+          "Career Pivoters",
+          "18+ Learners"
+        ]
       },
       "makingADifference": {
         "title": "Making A Difference",
         "description": "Contributing to a better future via funds, partnerships, or otherwise.",
         "quote": "I want to help fuel the next generation of technologists by offering the resources I or my organization have at our disposal.",
-        "segments": ["Partners & Donors", "Community Leaders", "Press"]
+        "segments": [
+          "Partners & Donors",
+          "Community Leaders",
+          "Press"
+        ]
       }
     }
   },
@@ -96,19 +115,31 @@
     "takeCareerQuiz": "Take the Career Quiz",
     "items": {
       "forge": {
-        "title": "The Forge",
+        "title": "Beyond Code Centers",
         "description": "Place-based hubs blending tech education, workforce development, and community engagement for learners of all ages — from K-12 to adults looking to upskill or pivot into tech careers.",
-        "tags": ["All Ages", "In-Person + Online", "K-12 to Adult"]
+        "tags": [
+          "All Ages",
+          "In-Person + Online",
+          "K-12 to Adult"
+        ]
       },
       "catalysts": {
         "title": "Beyond Code Catalysts",
         "description": "Career pathways for 18+ learners combining accessible training, hands-on projects, and career readiness support. No traditional tech background required.",
-        "tags": ["18+", "Career Pathways", "Hands-On"]
+        "tags": [
+          "18+",
+          "Career Pathways",
+          "Hands-On"
+        ]
       },
       "afterTheGame": {
         "title": "After The Game",
         "description": "A national, cohort-based workforce program for transitioning professional and NCAA student-athletes. Bridges the digital skill divide with technical leads teaching live classes, plus wraparound support from corporate readiness to job placement.",
-        "tags": ["Athletes", "Cohort-Based", "Career Transition"]
+        "tags": [
+          "Athletes",
+          "Cohort-Based",
+          "Career Transition"
+        ]
       }
     }
   },
@@ -153,7 +184,7 @@
         "description": "An overview of Beyond Code Collective — mission, initiatives, and how to get involved."
       },
       "forgeOverview": {
-        "title": "The Forge Overview",
+        "title": "Beyond Code Centers Overview",
         "description": "Details on our place-based tech hubs blending education, workforce development, and community engagement."
       },
       "brandFlipbook": {
@@ -207,7 +238,7 @@
   "getInvolved": {
     "headline1": "BUILD YOUR",
     "headline2": "POSSIBLE.",
-    "description": "Whether you're a student exploring tech for the first time, a professional pivoting your career, or an organization looking to make an impact \u2014 there's a place for you at Beyond Code.",
+    "description": "Whether you're a student exploring tech for the first time, a professional pivoting your career, or an organization looking to make an impact — there's a place for you at Beyond Code.",
     "cta": "CONTACT US"
   },
   "trustBar": {
@@ -216,5 +247,55 @@
   "videoFeature": {
     "label": "WATCH OUR STORY",
     "headline": "See BCC In Action"
+  },
+  "news": {
+    "label": "[ NEWSROOM ]",
+    "headline1": "WHAT'S",
+    "headline2": "HAPPENING",
+    "subheading": "Updates, milestones, and press from across the Beyond Code Collective community.",
+    "viewAll": "View All Updates",
+    "allUpdates": "All Updates",
+    "readMore": "Read More",
+    "backLabel": "All Updates",
+    "publishedLabel": "Published",
+    "emptyState": "No updates yet — check back soon.",
+    "items": [
+      {
+        "slug": "the-forge-atl-opening",
+        "date": "2026-03-09",
+        "category": "Event",
+        "title": "The Forge: ATL Opens Its Doors",
+        "excerpt": "Our first residency launched in Atlanta, convening educators, technologists, and community leaders to imagine the future of tech together.",
+        "image": "/images/forge/gallery-panel.jpg",
+        "imageAlt": "Panelists on stage at The Forge opening event",
+        "body": "On March 9, The Forge hosted its opening event at North Star AI Labs inside Georgia Tech's Advanced Technology Development Center, convening some of Atlanta's leading educators, technologists, and community leaders.\n\nThe evening featured a panel with Rep. Kim Schofield, technology and social impact strategist Darrell Booker, and professional basketball player Ramón Clemente — a conversation about who gets to shape the future of technology, and how.\n\nThe Forge: ATL now offers free programming two days a week through August 2026, serving K-12 students and adults seeking pathways into tech-driven careers.",
+        "linkUrl": "",
+        "linkLabel": ""
+      },
+      {
+        "slug": "after-the-game-summer-2026",
+        "date": "2026-05-20",
+        "category": "Announcement",
+        "title": "After The Game Opens Its Summer 2026 Waitlist",
+        "excerpt": "Our national workforce program for transitioning athletes is now accepting interest for the next cohort.",
+        "image": "/images/atg/atg-hero-panel.jpg",
+        "imageAlt": "An After The Game program session",
+        "body": "After The Game — our national, cohort-based workforce program for transitioning professional and NCAA student-athletes — has opened its waitlist for the Summer 2026 cohort.\n\nThe part-time, 6–9 month program pairs industry-recognized CompTIA certifications with wraparound support, from professional communication to mental health resources, helping athletes design and enter a durable second career.\n\nUpon completion, participants are placed in paid externships and apprenticeships with partner employers. Sign up now to reserve your spot and get updates on enrollment.",
+        "linkUrl": "",
+        "linkLabel": ""
+      },
+      {
+        "slug": "cristina-mancini-cnbc",
+        "date": "2026-04-15",
+        "category": "Press",
+        "title": "Our CEO on the No. 1 Trait Workers Need to Succeed",
+        "excerpt": "Founder & CEO Cristina Mancini joined CNBC to talk about the future of work and the skills that matter most in an AI-driven economy.",
+        "image": "/images/cristina-mancini.jpg",
+        "imageAlt": "Cristina Mancini, Founder & CEO of Beyond Code Collective",
+        "body": "Beyond Code Collective Founder & CEO Cristina Mancini spoke with CNBC about the single trait workers need most to succeed as AI reshapes the workforce — and why access to emerging technology can't be left to chance.\n\nHer message echoes the heart of our mission: technology should be a bridge to opportunity, not a barrier. Read the full feature on CNBC.",
+        "linkUrl": "https://www.cnbc.com/2025/10/24/ceo-cristina-mancini-the-no-1-trait-workers-need-for-success.html",
+        "linkLabel": "Read on CNBC"
+      }
+    ]
   }
 }

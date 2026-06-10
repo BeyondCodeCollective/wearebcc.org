@@ -182,7 +182,7 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
                     className="absolute left-0 top-full mt-2 min-w-[180px] border border-true-black/10 bg-off-white/95 backdrop-blur-md shadow-lg"
                   >
                     <Link
-                      href="/the-forge"
+                      href="/beyond-code-centers"
                       onClick={() => setInitiativesOpen(false)}
                       className={dropdownLinkClass}
                       style={{ fontFamily: "var(--font-mono)" }}
@@ -201,6 +201,15 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
                 )}
               </AnimatePresence>
             </div>
+
+            {/* News — real page */}
+            <Link
+              href="/news"
+              className={`font-mono text-xs tracking-wider uppercase transition-colors ${textColor}`}
+              style={{ fontFamily: "var(--font-mono)" }}
+            >
+              {t("news")}
+            </Link>
 
             {/* Rest of nav links */}
             {NAV_KEYS.map((link) => (
@@ -405,7 +414,7 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
                   >
                     <div className="flex flex-col gap-4 border-l-2 border-electric-green pl-4">
                       <Link
-                        href="/the-forge"
+                        href="/beyond-code-centers"
                         onClick={() => setMobileOpen(false)}
                         className={mobileSubLinkClass}
                         style={{ fontFamily: "var(--font-mono)" }}
@@ -425,6 +434,15 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
                 )}
               </AnimatePresence>
             </div>
+
+            {/* News — real page */}
+            <Link
+              href="/news"
+              onClick={() => setMobileOpen(false)}
+              className="font-heading text-3xl text-off-white transition-colors hover:text-electric-green"
+            >
+              {t("news")}
+            </Link>
 
             {/* Rest of nav links */}
             {NAV_KEYS.map((link) => (

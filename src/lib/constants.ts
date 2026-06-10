@@ -104,7 +104,7 @@ export const RESOURCES = [
     description:
       "Details on our place-based tech hubs blending education, workforce development, and community engagement.",
     type: "LINK" as const,
-    href: "https://www.wearebcc.org/the-forge",
+    href: "https://www.wearebcc.org/beyond-code-centers",
     external: true as const,
   },
   {

@@ -1,131 +1,162 @@
 {
   "hero": {
     "headline1": "TODOS",
-    "rotatingWords": ["CONSTRUYEN.", "CRECEN.", "APRENDEN.", "LIDERAN."],
+    "rotatingWords": [
+      "CONSTRUYEN.",
+      "CRECEN.",
+      "APRENDEN.",
+      "LIDERAN."
+    ],
     "tagline": "< BEYOND CODE COLLECTIVE >",
-    "description": "Beyond Code Collective mantiene al humano en el centro \u2014 ofreciendo recursos reales para un mundo impulsado por la tecnolog\u00eda. Construyendo oportunidad intergeneracional en las tecnolog\u00edas de hoy y ma\u00f1ana.",
+    "description": "Beyond Code Collective mantiene al humano en el centro — ofreciendo recursos reales para un mundo impulsado por la tecnología. Construyendo oportunidad intergeneracional en las tecnologías de hoy y mañana.",
     "getStarted": "Toma el Quiz de Carreras",
-    "joinNewsletter": "Suscr\u00edbete",
+    "joinNewsletter": "Suscríbete",
     "ourCommunity": "NUESTRA COMUNIDAD"
   },
   "about": {
     "headline1": "BEYOND CODE",
     "headline2": "COLLECTIVE",
-    "description": "Beyond Code Collective cierra la brecha entre la inspiraci\u00f3n, la formaci\u00f3n y el empleo en tecnolog\u00eda, conectando a los aprendices con contenido educativo, oportunidades para desarrollar tecnolog\u00edas de vanguardia y caminos para lanzar carreras.",
+    "description": "Beyond Code Collective cierra la brecha entre la inspiración, la formación y el empleo en tecnología, conectando a los aprendices con contenido educativo, oportunidades para desarrollar tecnologías de vanguardia y caminos para lanzar carreras.",
     "pillars": {
       "intergenerationalOpportunity": {
         "title": "Oportunidad Intergeneracional",
-        "description": "Un ecosistema donde todas las generaciones participan; no un sistema que sirve a un solo grupo de edad, sino un modelo que encuentra a los aprendices donde est\u00e9n en la vida."
+        "description": "Un ecosistema donde todas las generaciones participan; no un sistema que sirve a un solo grupo de edad, sino un modelo que encuentra a los aprendices donde estén en la vida."
       },
       "allTechnologies": {
-        "title": "Todas las Tecnolog\u00edas",
-        "description": "Desde alfabetizaci\u00f3n digital y datos hasta automatizaci\u00f3n, ciberseguridad e IA responsable, preparamos a los aprendices para toda la gama de herramientas que encontrar\u00e1n."
+        "title": "Todas las Tecnologías",
+        "description": "Desde alfabetización digital y datos hasta automatización, ciberseguridad e IA responsable, preparamos a los aprendices para toda la gama de herramientas que encontrarán."
       },
       "todayAndTomorrow": {
-        "title": "Hoy y Ma\u00f1ana",
+        "title": "Hoy y Mañana",
         "description": "Programas que mantienen a las comunidades relevantes ahora y preparadas para lo que viene, mientras la fuerza laboral cambia en tiempo real."
       },
       "adaptiveProgramming": {
-        "title": "Programaci\u00f3n Adaptativa",
-        "description": "Curr\u00edculo que evoluciona con la industria \u2014 ajustando contenido, entrega y resultados para coincidir con hacia d\u00f3nde se dirigen los aprendices y los empleadores."
+        "title": "Programación Adaptativa",
+        "description": "Currículo que evoluciona con la industria — ajustando contenido, entrega y resultados para coincidir con hacia dónde se dirigen los aprendices y los empleadores."
       }
     }
   },
   "audience": {
-    "label": "A Qui\u00e9n Servimos",
-    "headline1": "TODOS TIENEN UNA RAZ\u00d3N",
-    "headline2": "PARA ESTAR AQU\u00cd.",
+    "label": "A Quién Servimos",
+    "headline1": "TODOS TIENEN UNA RAZÓN",
+    "headline2": "PARA ESTAR AQUÍ.",
     "personas": {
       "forTheFuture": {
         "title": "Para el Futuro",
         "description": "Desarrollando habilidades y conocimientos para cultivar intereses e informar decisiones de vida futuras.",
         "quote": "Quiero aprender una nueva habilidad y construir un camino profesional en un campo que me ayude a prepararme para el futuro.",
-        "segments": ["Aprendices 7-17", "Aprendices 18+"]
+        "segments": [
+          "Aprendices 7-17",
+          "Aprendices 18+"
+        ]
       },
       "understandingOurWorld": {
         "title": "Entendiendo Nuestro Mundo",
         "description": "Mejorando el conocimiento para dar sentido a un mundo en constante cambio.",
-        "quote": "Quiero estar informado para poder entender mejor c\u00f3mo la tecnolog\u00eda me impactar\u00e1 a m\u00ed y a las personas que me importan.",
-        "segments": ["Padres y Familia", "Adultos Mayores"]
+        "quote": "Quiero estar informado para poder entender mejor cómo la tecnología me impactará a mí y a las personas que me importan.",
+        "segments": [
+          "Padres y Familia",
+          "Adultos Mayores"
+        ]
       },
       "changingDirection": {
-        "title": "Cambiando de Direcci\u00f3n",
-        "description": "Aprendiendo habilidades espec\u00edficas para cambiar o mejorar carreras, o mejorar perspectivas.",
-        "quote": "Quiero aprender las habilidades m\u00e1s demandadas por los empleadores para desarrollar un camino claro hacia un rol tecnol\u00f3gico nuevo o evolucionado.",
-        "segments": ["Mejora de Carrera", "Cambio de Carrera", "Aprendices 18+"]
+        "title": "Cambiando de Dirección",
+        "description": "Aprendiendo habilidades específicas para cambiar o mejorar carreras, o mejorar perspectivas.",
+        "quote": "Quiero aprender las habilidades más demandadas por los empleadores para desarrollar un camino claro hacia un rol tecnológico nuevo o evolucionado.",
+        "segments": [
+          "Mejora de Carrera",
+          "Cambio de Carrera",
+          "Aprendices 18+"
+        ]
       },
       "makingADifference": {
         "title": "Haciendo la Diferencia",
-        "description": "Contribuyendo a un futuro mejor a trav\u00e9s de fondos, alianzas u otros medios.",
-        "quote": "Quiero ayudar a impulsar la pr\u00f3xima generaci\u00f3n de tecn\u00f3logos ofreciendo los recursos que yo o mi organizaci\u00f3n tenemos a nuestra disposici\u00f3n.",
-        "segments": ["Socios y Donantes", "L\u00edderes Comunitarios", "Prensa"]
+        "description": "Contribuyendo a un futuro mejor a través de fondos, alianzas u otros medios.",
+        "quote": "Quiero ayudar a impulsar la próxima generación de tecnólogos ofreciendo los recursos que yo o mi organización tenemos a nuestra disposición.",
+        "segments": [
+          "Socios y Donantes",
+          "Líderes Comunitarios",
+          "Prensa"
+        ]
       }
     }
   },
   "stats": {
-    "label": "M\u00e1s Oportunidad. M\u00e1s Impacto.",
+    "label": "Más Oportunidad. Más Impacto.",
     "items": [
       {
         "value": "77",
         "suffix": "%",
-        "label": "De Empleadores Planean Capacitar Equipos en Tecnolog\u00edas Emergentes"
+        "label": "De Empleadores Planean Capacitar Equipos en Tecnologías Emergentes"
       },
       {
         "value": "3",
         "suffix": "+",
-        "label": "Iniciativas Construyendo Caminos hacia Carreras de Calidad \u2014 Y M\u00e1s Pr\u00f3ximamente"
+        "label": "Iniciativas Construyendo Caminos hacia Carreras de Calidad — Y Más Próximamente"
       },
       {
         "value": "TODAS",
         "suffix": "",
-        "label": "Las Edades y Or\u00edgenes Son Bienvenidos \u2014 Desde K-12 hasta Cambio de Carrera"
+        "label": "Las Edades y Orígenes Son Bienvenidos — Desde K-12 hasta Cambio de Carrera"
       },
       {
         "value": "60",
         "suffix": "%",
-        "label": "De Las Organizaciones Reportan una Brecha Cr\u00edtica en Alfabetizaci\u00f3n de IA y Datos"
+        "label": "De Las Organizaciones Reportan una Brecha Crítica en Alfabetización de IA y Datos"
       }
     ]
   },
   "initiatives": {
     "headline1": "POSIBILIDADES",
     "headline2": "INFINITAS",
-    "subheading": "[ IMPULSADO POR EL C\u00d3DIGO ]",
-    "description": "Beyond Code Collective es un ecosistema integrado que crea caminos sostenibles hacia empleos de calidad mientras fortalece la capacidad digital de organizaciones con misi\u00f3n social.",
-    "learnMore": "Saber M\u00e1s",
+    "subheading": "[ IMPULSADO POR EL CÓDIGO ]",
+    "description": "Beyond Code Collective es un ecosistema integrado que crea caminos sostenibles hacia empleos de calidad mientras fortalece la capacidad digital de organizaciones con misión social.",
+    "learnMore": "Saber Más",
     "takeCareerQuiz": "Toma el Quiz de Carreras",
     "items": {
       "forge": {
-        "title": "The Forge",
-        "description": "Centros presenciales que combinan educaci\u00f3n tecnol\u00f3gica, desarrollo laboral y participaci\u00f3n comunitaria para aprendices de todas las edades \u2014 desde K-12 hasta adultos que buscan mejorar sus habilidades o cambiar a carreras tecnol\u00f3gicas.",
-        "tags": ["Todas las Edades", "Presencial + En L\u00ednea", "K-12 a Adultos"]
+        "title": "Beyond Code Centers",
+        "description": "Centros presenciales que combinan educación tecnológica, desarrollo laboral y participación comunitaria para aprendices de todas las edades — desde K-12 hasta adultos que buscan mejorar sus habilidades o cambiar a carreras tecnológicas.",
+        "tags": [
+          "Todas las Edades",
+          "Presencial + En Línea",
+          "K-12 a Adultos"
+        ]
       },
       "catalysts": {
         "title": "Beyond Code Catalysts",
-        "description": "Rutas profesionales para aprendices de 18+ que combinan formaci\u00f3n accesible, proyectos pr\u00e1cticos y apoyo para la preparaci\u00f3n laboral. No se requiere experiencia t\u00e9cnica tradicional.",
-        "tags": ["18+", "Rutas Profesionales", "Pr\u00e1ctico"]
+        "description": "Rutas profesionales para aprendices de 18+ que combinan formación accesible, proyectos prácticos y apoyo para la preparación laboral. No se requiere experiencia técnica tradicional.",
+        "tags": [
+          "18+",
+          "Rutas Profesionales",
+          "Práctico"
+        ]
       },
       "afterTheGame": {
         "title": "After The Game",
         "description": "Un programa nacional de fuerza laboral basado en cohortes para atletas profesionales y universitarios NCAA en transición. Cierra la brecha de habilidades digitales con instructores técnicos en clases en vivo, más apoyo integral desde preparación corporativa hasta colocación laboral.",
-        "tags": ["Atletas", "Basado en Cohortes", "Transición de Carrera"]
+        "tags": [
+          "Atletas",
+          "Basado en Cohortes",
+          "Transición de Carrera"
+        ]
       }
     }
   },
   "testimonials": {
-    "headline": "HISTORIAS DE \u00c9XITO",
-    "subheading": "POR QU\u00c9 LOS APRENDICES ELIGEN BEYOND CODE",
+    "headline": "HISTORIAS DE ÉXITO",
+    "subheading": "POR QUÉ LOS APRENDICES ELIGEN BEYOND CODE",
     "prevLabel": "Testimonio anterior",
     "nextLabel": "Siguiente testimonio",
     "items": [
       {
-        "quote": "Antes de Beyond Code Collective, pensaba que la tecnolog\u00eda estaba fuera de mi alcance. Trabajaba en salud haciendo facturaci\u00f3n y codificaci\u00f3n m\u00e9dica, pero me di cuenta de que no era lo que quer\u00eda a largo plazo. Este programa me dio la oportunidad de reenfocarme y seguir el camino tecnol\u00f3gico que siempre quise.",
+        "quote": "Antes de Beyond Code Collective, pensaba que la tecnología estaba fuera de mi alcance. Trabajaba en salud haciendo facturación y codificación médica, pero me di cuenta de que no era lo que quería a largo plazo. Este programa me dio la oportunidad de reenfocarme y seguir el camino tecnológico que siempre quise.",
         "name": "Londella",
         "role": "Cambio de Carrera",
         "location": "Atlanta, GA"
       },
       {
-        "quote": "Antes de Beyond Code Collective, pensaba que era imposible acceder a la tecnolog\u00eda. Ahora la tecnolog\u00eda est\u00e1 al alcance de mis manos. El nacimiento de mi hijo me impuls\u00f3 a tomar la tecnolog\u00eda m\u00e1s en serio y simplemente ir a por ello. Quer\u00eda proveer para mi familia y sumergirme en un inter\u00e9s que ya ten\u00eda.",
+        "quote": "Antes de Beyond Code Collective, pensaba que era imposible acceder a la tecnología. Ahora la tecnología está al alcance de mis manos. El nacimiento de mi hijo me impulsó a tomar la tecnología más en serio y simplemente ir a por ello. Quería proveer para mi familia y sumergirme en un interés que ya tenía.",
         "name": "Josh",
         "role": "Aprendiz",
         "location": "Atlanta, GA"
@@ -135,8 +166,8 @@
   "founder": {
     "label": "Conoce a la Fundadora",
     "title": "Fundadora y CEO",
-    "bio": "Cristina Mancini es la visionaria Fundadora y CEO de Beyond Code Collective (BCC), un nuevo ecosistema nacional construido para cerrar la brecha de alfabetizaci\u00f3n en IA y desbloquear la dignidad digital para comunidades largamente excluidas del futuro del trabajo. Cre\u00f3 BCC para responder una pregunta transformadora: \u00bfQu\u00e9 pasar\u00eda si cada comunidad tuviera acceso permanente y culturalmente arraigado a las habilidades y caminos que definen la pr\u00f3xima d\u00e9cada de innovaci\u00f3n y el futuro del trabajo?",
-    "quote": "\"La IA no elimina la necesidad de alfabetizaci\u00f3n t\u00e9cnica; la hace m\u00e1s esencial. En BCC estamos ense\u00f1ando a nuestros aprendices c\u00f3mo supervisarla, protegerla y construir con ella. No puedes supervisar lo que no entiendes. Por eso el conocimiento fundamental es cr\u00edtico.\"",
+    "bio": "Cristina Mancini es la visionaria Fundadora y CEO de Beyond Code Collective (BCC), un nuevo ecosistema nacional construido para cerrar la brecha de alfabetización en IA y desbloquear la dignidad digital para comunidades largamente excluidas del futuro del trabajo. Creó BCC para responder una pregunta transformadora: ¿Qué pasaría si cada comunidad tuviera acceso permanente y culturalmente arraigado a las habilidades y caminos que definen la próxima década de innovación y el futuro del trabajo?",
+    "quote": "\"La IA no elimina la necesidad de alfabetización técnica; la hace más esencial. En BCC estamos enseñando a nuestros aprendices cómo supervisarla, protegerla y construir con ella. No puedes supervisar lo que no entiendes. Por eso el conocimiento fundamental es crítico.\"",
     "quoteAttribution": "Cristina Mancini",
     "asSeenOn": "COMO SE VIO EN"
   },
@@ -144,21 +175,21 @@
     "headline1": "RECURSOS Y",
     "headline2": "MEDIOS",
     "subheading": "[ EXPLORA, DESCARGA, MIRA ]",
-    "description": "Todo lo que necesitas para entender nuestra misi\u00f3n, compartir con tu red de contactos, o traer Beyond Code a tu comunidad.",
+    "description": "Todo lo que necesitas para entender nuestra misión, compartir con tu red de contactos, o traer Beyond Code a tu comunidad.",
     "featuredVideo": "VIDEO DESTACADO",
     "downloads": "DESCARGAS",
     "items": {
       "onePager": {
         "title": "Resumen de Beyond Code Collective",
-        "description": "Una visi\u00f3n general de Beyond Code Collective \u2014 misi\u00f3n, iniciativas y c\u00f3mo participar."
+        "description": "Una visión general de Beyond Code Collective — misión, iniciativas y cómo participar."
       },
       "forgeOverview": {
-        "title": "Resumen de The Forge",
-        "description": "Detalles sobre nuestros centros tecnol\u00f3gicos presenciales que combinan educaci\u00f3n, desarrollo laboral y participaci\u00f3n comunitaria."
+        "title": "Resumen de Beyond Code Centers",
+        "description": "Detalles sobre nuestros centros tecnológicos presenciales que combinan educación, desarrollo laboral y participación comunitaria."
       },
       "brandFlipbook": {
         "title": "Flipbook de Marca",
-        "description": "Nuestra identidad visual, historia de marca y el lenguaje de dise\u00f1o detr\u00e1s de Beyond Code Collective."
+        "description": "Nuestra identidad visual, historia de marca y el lenguaje de diseño detrás de Beyond Code Collective."
       }
     }
   },
@@ -200,21 +231,71 @@
     "label": "[ ALIANZAS ]",
     "headline1": "EL FUTURO ES",
     "headline2": "DE TODOS.",
-    "description": "Nos asociamos con l\u00edderes de la industria para crear caminos hacia la tecnolog\u00eda. Juntos, estamos construyendo una fuerza laboral que refleja el mundo al que sirve.",
-    "logoLabel": "Donde Se Construyen Carreras Tecnol\u00f3gicas",
-    "partnerWithUs": "As\u00f3ciate Con Nosotros"
+    "description": "Nos asociamos con líderes de la industria para crear caminos hacia la tecnología. Juntos, estamos construyendo una fuerza laboral que refleja el mundo al que sirve.",
+    "logoLabel": "Donde Se Construyen Carreras Tecnológicas",
+    "partnerWithUs": "Asóciate Con Nosotros"
   },
   "getInvolved": {
     "headline1": "CONSTRUYE TU",
     "headline2": "POSIBLE.",
-    "description": "Ya seas un estudiante explorando la tecnolog\u00eda por primera vez, un profesional cambiando de carrera, o una organizaci\u00f3n buscando generar impacto \u2014 hay un lugar para ti en Beyond Code.",
-    "cta": "CONT\u00c1CTANOS"
+    "description": "Ya seas un estudiante explorando la tecnología por primera vez, un profesional cambiando de carrera, o una organización buscando generar impacto — hay un lugar para ti en Beyond Code.",
+    "cta": "CONTÁCTANOS"
   },
   "trustBar": {
-    "label": "Donde Se Construyen Carreras Tecnol\u00f3gicas"
+    "label": "Donde Se Construyen Carreras Tecnológicas"
   },
   "videoFeature": {
     "label": "MIRA NUESTRA HISTORIA",
-    "headline": "Mira a BCC en Acci\u00f3n"
+    "headline": "Mira a BCC en Acción"
+  },
+  "news": {
+    "label": "[ NOTICIAS ]",
+    "headline1": "LO QUE ESTÁ",
+    "headline2": "PASANDO",
+    "subheading": "Novedades, logros y prensa de toda la comunidad de Beyond Code Collective.",
+    "viewAll": "Ver Todas las Novedades",
+    "allUpdates": "Todas las Novedades",
+    "readMore": "Leer Más",
+    "backLabel": "Todas las Novedades",
+    "publishedLabel": "Publicado",
+    "emptyState": "Aún no hay novedades — vuelve pronto.",
+    "items": [
+      {
+        "slug": "the-forge-atl-opening",
+        "date": "2026-03-09",
+        "category": "Evento",
+        "title": "The Forge: ATL Abre Sus Puertas",
+        "excerpt": "Nuestra primera residencia se inauguró en Atlanta, reuniendo a educadores, tecnólogos y líderes comunitarios para imaginar juntos el futuro de la tecnología.",
+        "image": "/images/forge/gallery-panel.jpg",
+        "imageAlt": "Panelistas en el escenario del evento de apertura de The Forge",
+        "body": "El 9 de marzo, The Forge celebró su evento de apertura en North Star AI Labs, dentro del Advanced Technology Development Center de Georgia Tech, reuniendo a algunos de los principales educadores, tecnólogos y líderes comunitarios de Atlanta.\n\nLa velada contó con un panel junto a la Rep. Kim Schofield, el estratega de tecnología e impacto social Darrell Booker y el jugador profesional de baloncesto Ramón Clemente — una conversación sobre quién moldea el futuro de la tecnología, y cómo.\n\nThe Forge: ATL ahora ofrece programación gratuita dos días a la semana hasta agosto de 2026, sirviendo a estudiantes de K-12 y adultos que buscan caminos hacia carreras impulsadas por la tecnología.",
+        "linkUrl": "",
+        "linkLabel": ""
+      },
+      {
+        "slug": "after-the-game-summer-2026",
+        "date": "2026-05-20",
+        "category": "Anuncio",
+        "title": "After The Game Abre Su Lista de Espera para Verano 2026",
+        "excerpt": "Nuestro programa nacional de fuerza laboral para atletas en transición ya acepta inscripciones para la próxima cohorte.",
+        "image": "/images/atg/atg-hero-panel.jpg",
+        "imageAlt": "Una sesión del programa After The Game",
+        "body": "After The Game — nuestro programa nacional de fuerza laboral, basado en cohortes, para atletas profesionales y universitarios de la NCAA en transición — ha abierto su lista de espera para la cohorte de Verano 2026.\n\nEl programa de medio tiempo de 6 a 9 meses combina certificaciones CompTIA reconocidas por la industria con apoyo integral, desde comunicación profesional hasta recursos de salud mental, ayudando a los atletas a diseñar e iniciar una segunda carrera duradera.\n\nAl completarlo, los participantes son ubicados en pasantías y aprendizajes remunerados con empleadores aliados. Inscríbete ahora para reservar tu lugar y recibir novedades sobre la inscripción.",
+        "linkUrl": "",
+        "linkLabel": ""
+      },
+      {
+        "slug": "cristina-mancini-cnbc",
+        "date": "2026-04-15",
+        "category": "Prensa",
+        "title": "Nuestra CEO Sobre la Cualidad No. 1 que Necesitan los Trabajadores",
+        "excerpt": "La Fundadora y CEO Cristina Mancini se unió a CNBC para hablar del futuro del trabajo y las habilidades que más importan en una economía impulsada por la IA.",
+        "image": "/images/cristina-mancini.jpg",
+        "imageAlt": "Cristina Mancini, Fundadora y CEO de Beyond Code Collective",
+        "body": "Cristina Mancini, Fundadora y CEO de Beyond Code Collective, conversó con CNBC sobre la única cualidad que más necesitan los trabajadores para tener éxito mientras la IA transforma la fuerza laboral — y por qué el acceso a la tecnología emergente no puede dejarse al azar.\n\nSu mensaje refleja el corazón de nuestra misión: la tecnología debe ser un puente hacia la oportunidad, no una barrera. Lee el artículo completo en CNBC.",
+        "linkUrl": "https://www.cnbc.com/2025/10/24/ceo-cristina-mancini-the-no-1-trait-workers-need-for-success.html",
+        "linkLabel": "Leer en CNBC"
+      }
+    ]
   }
 }

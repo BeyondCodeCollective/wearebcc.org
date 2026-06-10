@@ -11,6 +11,9 @@ import {
   ResourcesEditor,
   CtaBridgeEditor,
   GetInvolvedEditor,
+  NewsEditor,
+  ForgeEditor,
+  AtgEditor,
 } from "./editors/SectionEditors";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -47,6 +50,12 @@ export default function SectionEditor({
       return <CtaBridgeEditor value={value} onChange={onChange} />;
     case "getInvolved":
       return <GetInvolvedEditor value={value} onChange={onChange} />;
+    case "news":
+      return <NewsEditor value={value} onChange={onChange} />;
+    case "forge":
+      return <ForgeEditor value={value} onChange={onChange} />;
+    case "atg":
+      return <AtgEditor value={value} onChange={onChange} />;
     default:
       return null;
   }

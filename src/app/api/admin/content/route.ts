@@ -26,6 +26,9 @@ const VALID_NAMESPACES = new Set([
   "resources",
   "ctaBridge",
   "getInvolved",
+  "news",
+  "forge",
+  "atg",
 ]);
 
 const VALID_LOCALES = new Set(["en", "es"]);
@@ -106,6 +109,12 @@ export async function PUT(req: NextRequest) {
     // Bust ISR cache for both locale homepages
     revalidatePath("/en", "page");
     revalidatePath("/es", "page");
+
+    // News also renders on its own index + article pages — bust those too
+    if (namespace === "news") {
+      revalidatePath("/en/news", "layout");
+      revalidatePath("/es/news", "layout");
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {

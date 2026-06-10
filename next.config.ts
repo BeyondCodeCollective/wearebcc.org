@@ -12,6 +12,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/:locale/the-forge",
+        destination: "/:locale/beyond-code-centers",
+        permanent: true,
+      },
+      {
+        source: "/the-forge",
+        destination: "/beyond-code-centers",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);

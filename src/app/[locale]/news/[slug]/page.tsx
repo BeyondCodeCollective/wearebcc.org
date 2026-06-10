@@ -1,0 +1,170 @@
+"use client";
+
+import { useParams } from "next/navigation";
+import { motion } from "framer-motion";
+import { ArrowLeft, ArrowUpRight } from "@phosphor-icons/react";
+import { useTranslations, useLocale } from "next-intl";
+import { Nav } from "@/components/nav";
+import { Footer } from "@/components/footer";
+import { NewsCard } from "@/components/news-card";
+import {
+  normalizeNews,
+  newsParagraphs,
+  formatNewsDate,
+} from "@/lib/news";
+import { Link } from "@/i18n/navigation";
+
+export default function NewsArticle() {
+  const t = useTranslations("news");
+  const locale = useLocale();
+  const params = useParams();
+  const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug;
+
+  const posts = normalizeNews(t.raw("items"));
+  const post = posts.find((p) => p.slug === slug);
+  const more = posts.filter((p) => p.slug !== slug).slice(0, 3);
+
+  // Not found — keep the user inside the newsroom rather than dead-ending.
+  if (!post) {
+    return (
+      <div className="flex min-h-screen flex-col bg-off-white">
+        <Nav variant="light" />
+        <div className="mx-auto flex max-w-3xl flex-1 flex-col items-start justify-center px-6 py-40 lg:px-8">
+          <h1 className="font-heading text-4xl text-true-black">404</h1>
+          <p className="mt-3 text-grey-3">{t("emptyState")}</p>
+          <Link
+            href="/news"
+            className="mt-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-cobalt"
+            style={{ fontFamily: "var(--font-mono)" }}
+          >
+            <ArrowLeft size={14} weight="bold" />
+            {t("backLabel")}
+          </Link>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
+
+  const paragraphs = newsParagraphs(post.body);
+
+  return (
+    <div className="min-h-screen bg-off-white">
+      <Nav variant="light" />
+
+      <article className="px-6 pt-32 pb-24 lg:px-8 lg:pt-40 lg:pb-32">
+        <div className="mx-auto max-w-3xl">
+          {/* Back link */}
+          <Link
+            href="/news"
+            className="group inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-grey-3 transition-colors hover:text-true-black"
+            style={{ fontFamily: "var(--font-mono)" }}
+          >
+            <ArrowLeft
+              size={14}
+              weight="bold"
+              className="transition-transform duration-300 group-hover:-translate-x-1"
+            />
+            {t("backLabel")}
+          </Link>
+
+          {/* Header */}
+          <motion.header
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mt-8"
+          >
+            <div
+              className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-wider"
+              style={{ fontFamily: "var(--font-mono)" }}
+            >
+              <span className="bg-cobalt px-2.5 py-1 text-off-white">
+                {post.category}
+              </span>
+              <span className="text-grey-3">
+                {formatNewsDate(post.date, locale)}
+              </span>
+            </div>
+            <h1 className="mt-5 font-heading text-[clamp(2.25rem,6vw,4rem)] leading-[0.9] text-true-black">
+              {post.title}
+            </h1>
+            <p className="mt-5 text-lg leading-relaxed text-grey-3">
+              {post.excerpt}
+            </p>
+          </motion.header>
+        </div>
+
+        {/* Hero image */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mx-auto mt-10 max-w-5xl"
+        >
+          <div className="relative aspect-[16/9] w-full overflow-hidden bg-grey-1">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={post.image}
+              alt={post.imageAlt || post.title}
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </motion.div>
+
+        {/* Body */}
+        <div className="mx-auto mt-12 max-w-3xl">
+          <div className="space-y-6">
+            {paragraphs.map((para, i) => (
+              <p
+                key={i}
+                className="text-lg leading-relaxed text-true-black/80"
+              >
+                {para}
+              </p>
+            ))}
+          </div>
+
+          {/* Optional external link (press, partner sites, etc.) */}
+          {post.linkUrl ? (
+            <a
+              href={post.linkUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mt-10 inline-flex items-center gap-2 bg-true-black px-6 py-4 font-mono text-xs uppercase tracking-wider text-off-white transition-colors hover:bg-cobalt"
+              style={{ fontFamily: "var(--font-mono)" }}
+            >
+              {post.linkLabel || post.linkUrl}
+              <ArrowUpRight
+                size={14}
+                weight="bold"
+                className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
+            </a>
+          ) : null}
+        </div>
+      </article>
+
+      {/* More updates */}
+      {more.length > 0 && (
+        <section className="border-t border-true-black/10 px-6 py-20 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <p
+              className="font-mono text-xs uppercase tracking-wider text-cobalt"
+              style={{ fontFamily: "var(--font-mono)" }}
+            >
+              {t("label")}
+            </p>
+            <div className="mt-8 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+              {more.map((p, i) => (
+                <NewsCard key={p.slug} post={p} index={i} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      <Footer />
+    </div>
+  );
+}
