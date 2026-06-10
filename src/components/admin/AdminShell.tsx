@@ -86,7 +86,7 @@ const SECTION_GROUPS = [
       { key: "atg", label: "After The Game" },
     ],
   },
-] as const;
+];
 
 const ALL_SECTIONS = SECTION_GROUPS.flatMap((g) => g.sections);
 
