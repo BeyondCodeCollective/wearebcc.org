@@ -1,52 +1,50 @@
-import { NextRequest, NextResponse } from "next/server";
-import { put } from "@vercel/blob";
+import { NextResponse } from "next/server";
+import { handleUpload, type HandleUploadBody } from "@vercel/blob/client";
 
-const MAX_SIZE = 8 * 1024 * 1024; // 8MB
-const ALLOWED_TYPES = new Set([
-  "image/jpeg",
-  "image/png",
-  "image/webp",
-  "image/gif",
-  "image/svg+xml",
-]);
+/**
+ * Token endpoint for client-side Blob uploads. The browser uploads the
+ * file directly to Blob storage (bypassing the 4.5MB serverless body
+ * limit); this route only checks the admin password and issues a
+ * short-lived upload token.
+ */
+export async function POST(request: Request): Promise<NextResponse> {
+  const body = (await request.json()) as HandleUploadBody;
 
-export async function POST(req: NextRequest) {
   try {
-    const form = await req.formData();
-    const password = form.get("password");
-
-    if (
-      !process.env.DASHBOARD_PASSWORD ||
-      password !== process.env.DASHBOARD_PASSWORD
-    ) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
-
-    const file = form.get("file");
-    if (!(file instanceof File)) {
-      return NextResponse.json({ error: "No file provided" }, { status: 400 });
-    }
-    if (!ALLOWED_TYPES.has(file.type)) {
-      return NextResponse.json(
-        { error: "Only image files are allowed" },
-        { status: 400 }
-      );
-    }
-    if (file.size > MAX_SIZE) {
-      return NextResponse.json(
-        { error: "Image must be under 8MB" },
-        { status: 400 }
-      );
-    }
-
-    const blob = await put(`uploads/${file.name}`, file, {
-      access: "public",
-      addRandomSuffix: true,
+    const jsonResponse = await handleUpload({
+      body,
+      request,
+      onBeforeGenerateToken: async (pathname, clientPayload) => {
+        if (
+          !process.env.DASHBOARD_PASSWORD ||
+          clientPayload !== process.env.DASHBOARD_PASSWORD
+        ) {
+          throw new Error("Unauthorized — log out and back in, then retry");
+        }
+        return {
+          allowedContentTypes: [
+            "image/jpeg",
+            "image/png",
+            "image/webp",
+            "image/gif",
+            "image/svg+xml",
+          ],
+          maximumSizeInBytes: 20 * 1024 * 1024,
+          addRandomSuffix: true,
+        };
+      },
+      onUploadCompleted: async () => {
+        // No post-upload bookkeeping needed; the URL is saved with the
+        // article content when the editor hits Save.
+      },
     });
 
-    return NextResponse.json({ url: blob.url });
+    return NextResponse.json(jsonResponse);
   } catch (error) {
-    console.error("Admin upload error:", error);
-    return NextResponse.json({ error: "Upload failed" }, { status: 500 });
+    console.error("Admin upload token error:", error);
+    return NextResponse.json(
+      { error: (error as Error).message },
+      { status: 400 }
+    );
   }
 }
