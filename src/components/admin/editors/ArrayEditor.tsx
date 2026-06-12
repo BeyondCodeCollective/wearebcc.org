@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { upload } from "@vercel/blob/client";
 import {
   Trash,
   ArrowUp,
@@ -28,21 +29,21 @@ function ImageInput({
     setUploading(true);
     setError(null);
     try {
-      const form = new FormData();
-      form.append("file", file);
-      form.append("password", sessionStorage.getItem("bcc-admin-pw") || "");
-      const res = await fetch("/api/admin/upload", {
-        method: "POST",
-        body: form,
+      const blob = await upload(`uploads/${file.name}`, file, {
+        access: "public",
+        handleUploadUrl: "/api/admin/upload",
+        clientPayload: sessionStorage.getItem("bcc-admin-pw") || "",
       });
-      const data = await res.json();
-      if (!res.ok || !data.url) {
-        setError(data.error || "Upload failed");
-        return;
+      onChange(blob.url);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : "";
+      if (/content.?type/i.test(message)) {
+        setError("That file type isn't supported — use a JPG, PNG, WebP, or GIF");
+      } else if (/size/i.test(message)) {
+        setError("Image is too large — keep it under 20MB");
+      } else {
+        setError(message || "Upload failed");
       }
-      onChange(data.url);
-    } catch {
-      setError("Upload failed");
     } finally {
       setUploading(false);
       if (fileRef.current) fileRef.current.value = "";
@@ -72,7 +73,7 @@ function ImageInput({
         <input
           ref={fileRef}
           type="file"
-          accept="image/*"
+          accept="image/jpeg,image/png,image/webp,image/gif,image/svg+xml"
           className="hidden"
           onChange={(e) => {
             const file = e.target.files?.[0];
