@@ -136,6 +136,7 @@ export default function AdminShell() {
   const [password, setPassword] = useState("");
   const [authenticated, setAuthenticated] = useState(false);
   const [authError, setAuthError] = useState(false);
+  const [authChecking, setAuthChecking] = useState(false);
 
   // Top-level tab
   const [tab, setTab] = useState<Tab>("analytics");
@@ -166,11 +167,29 @@ export default function AdminShell() {
     }
   }, []);
 
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setAuthError(false);
-    sessionStorage.setItem("bcc-admin-pw", password);
-    setAuthenticated(true);
+    if (!password) {
+      setAuthError(true);
+      return;
+    }
+    setAuthChecking(true);
+    try {
+      const res = await fetch(
+        `/api/admin/content?password=${encodeURIComponent(password)}&locale=en&namespace=hero`
+      );
+      if (res.status === 401) {
+        setAuthError(true);
+        return;
+      }
+      sessionStorage.setItem("bcc-admin-pw", password);
+      setAuthenticated(true);
+    } catch {
+      setAuthError(true);
+    } finally {
+      setAuthChecking(false);
+    }
   };
 
   const handleLogout = () => {
@@ -324,10 +343,11 @@ export default function AdminShell() {
           )}
           <button
             type="submit"
-            className="mt-4 w-full bg-cobalt text-off-white py-3 text-sm font-bold uppercase tracking-wider rounded-lg hover:bg-cobalt/90 transition-colors"
+            disabled={authChecking}
+            className="mt-4 w-full bg-cobalt text-off-white py-3 text-sm font-bold uppercase tracking-wider rounded-lg hover:bg-cobalt/90 transition-colors disabled:opacity-50"
             style={{ fontFamily: "var(--font-mono)" }}
           >
-            Sign In
+            {authChecking ? "Checking..." : "Sign In"}
           </button>
         </form>
       </div>

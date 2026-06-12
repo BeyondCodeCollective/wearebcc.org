@@ -1,6 +1,104 @@
 "use client";
 
-import { Trash, ArrowUp, ArrowDown, Plus } from "@phosphor-icons/react";
+import { useRef, useState } from "react";
+import {
+  Trash,
+  ArrowUp,
+  ArrowDown,
+  Plus,
+  UploadSimple,
+} from "@phosphor-icons/react";
+
+/**
+ * Text input for an image URL plus an Upload button that sends the
+ * file to /api/admin/upload (Vercel Blob) and fills the URL in.
+ */
+function ImageInput({
+  value,
+  onChange,
+}: {
+  value: string;
+  onChange: (value: string) => void;
+}) {
+  const fileRef = useRef<HTMLInputElement>(null);
+  const [uploading, setUploading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const handleFile = async (file: File) => {
+    setUploading(true);
+    setError(null);
+    try {
+      const form = new FormData();
+      form.append("file", file);
+      form.append("password", sessionStorage.getItem("bcc-admin-pw") || "");
+      const res = await fetch("/api/admin/upload", {
+        method: "POST",
+        body: form,
+      });
+      const data = await res.json();
+      if (!res.ok || !data.url) {
+        setError(data.error || "Upload failed");
+        return;
+      }
+      onChange(data.url);
+    } catch {
+      setError("Upload failed");
+    } finally {
+      setUploading(false);
+      if (fileRef.current) fileRef.current.value = "";
+    }
+  };
+
+  return (
+    <div className="space-y-1.5">
+      <div className="flex items-center gap-1.5">
+        <input
+          type="text"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          placeholder="Upload an image or paste a URL"
+          className="flex-1 bg-white text-true-black px-3 py-2 text-sm rounded-md border border-black/10 focus:border-cobalt focus:outline-none"
+        />
+        <button
+          type="button"
+          onClick={() => fileRef.current?.click()}
+          disabled={uploading}
+          className="flex items-center gap-1.5 px-3 py-2 text-xs text-cobalt border border-cobalt/30 rounded-md hover:bg-cobalt/5 transition-colors disabled:opacity-50 whitespace-nowrap"
+          style={{ fontFamily: "var(--font-mono)" }}
+        >
+          <UploadSimple size={14} weight="bold" />
+          {uploading ? "Uploading..." : "Upload"}
+        </button>
+        <input
+          ref={fileRef}
+          type="file"
+          accept="image/*"
+          className="hidden"
+          onChange={(e) => {
+            const file = e.target.files?.[0];
+            if (file) handleFile(file);
+          }}
+        />
+      </div>
+      {error && (
+        <p
+          className="text-[#D32F2F] text-xs"
+          style={{ fontFamily: "var(--font-mono)" }}
+        >
+          {error}
+        </p>
+      )}
+      {value && (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={value}
+          alt=""
+          className="h-20 w-32 object-cover rounded-md border border-black/10"
+        />
+      )}
+    </div>
+  );
+}
 
 interface ArrayEditorStringProps {
   label: string;
@@ -97,7 +195,7 @@ export function ArrayEditorString({
 interface ArrayEditorObjectProps {
   label: string;
   items: Record<string, string>[];
-  fields: { key: string; label: string; multiline?: boolean }[];
+  fields: { key: string; label: string; multiline?: boolean; image?: boolean }[];
   onChange: (items: Record<string, string>[]) => void;
   addLabel?: string;
 }
@@ -192,7 +290,12 @@ export function ArrayEditorObject({
               >
                 {field.label}
               </label>
-              {field.multiline ? (
+              {field.image ? (
+                <ImageInput
+                  value={item[field.key] || ""}
+                  onChange={(v) => updateField(i, field.key, v)}
+                />
+              ) : field.multiline ? (
                 <textarea
                   value={item[field.key] || ""}
                   onChange={(e) =>
