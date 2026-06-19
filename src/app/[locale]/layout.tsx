@@ -6,6 +6,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { ContactProvider } from "@/components/contact-modal";
 import "../globals.css";
 
 const spaceMono = Space_Mono({
@@ -103,7 +104,7 @@ export default async function LocaleLayout({
     <html lang={locale} className={spaceMono.variable}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <ContactProvider>{children}</ContactProvider>
           <Analytics />
           <SpeedInsights />
         </NextIntlClientProvider>

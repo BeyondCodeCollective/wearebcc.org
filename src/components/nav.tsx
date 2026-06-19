@@ -7,10 +7,11 @@ import { useRouter, usePathname, Link } from "@/i18n/navigation";
 import { GlobeSimple, CaretDown } from "@phosphor-icons/react";
 import { SITE } from "@/lib/constants";
 import { Logo } from "./ui/logo";
+import { useContact } from "./contact-modal";
 
 const NAV_KEYS = [
   { key: "partners", hash: "#partners" },
-  { key: "getInvolved", hash: "#get-involved" },
+  { key: "getInvolved", hash: "#get-involved", contact: true },
 ] as const;
 
 export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
@@ -26,6 +27,7 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
+  const { openContact } = useContact();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -72,6 +74,15 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
       // Navigate to home page with hash — use native navigation
       // so browser handles hash scroll after full page load
       window.location.href = `/${locale}${hash}`;
+    }
+  };
+
+  // "Get Involved" opens the contact form directly; other links scroll.
+  const handleNavClick = (link: (typeof NAV_KEYS)[number]) => {
+    if ("contact" in link && link.contact) {
+      openContact();
+    } else {
+      scrollToSection(link.hash);
     }
   };
 
@@ -214,7 +225,7 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
             {NAV_KEYS.map((link) => (
               <button
                 key={link.hash}
-                onClick={() => scrollToSection(link.hash)}
+                onClick={() => handleNavClick(link)}
                 className={`font-mono text-xs tracking-wider uppercase transition-colors ${textColor}`}
                 style={{ fontFamily: "var(--font-mono)" }}
               >
@@ -449,7 +460,7 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
                 key={link.hash}
                 onClick={() => {
                   setMobileOpen(false);
-                  scrollToSection(link.hash);
+                  handleNavClick(link);
                 }}
                 className="font-heading text-3xl text-off-white transition-colors hover:text-electric-green"
               >
