@@ -160,11 +160,11 @@ export function Hero() {
               </button>
               */}
               <Link
-                href="/after-the-game"
+                href="/beyond-code-centers"
                 className="bg-cobalt px-5 py-3 text-center font-mono text-xs tracking-wider uppercase text-off-white transition-colors hover:bg-cobalt/80 sm:px-8 sm:py-4 sm:text-sm"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
-                AFTER THE GAME &rarr;
+                BEYOND CODE CENTERS &rarr;
               </Link>
               <button
                 onClick={() => openNewsletter()}
