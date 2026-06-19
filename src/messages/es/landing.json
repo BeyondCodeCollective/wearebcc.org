@@ -261,6 +261,18 @@
     "emptyState": "Aún no hay novedades — vuelve pronto.",
     "items": [
       {
+        "slug": "upcoming-events-summer-2026",
+        "date": "2026-06-19",
+        "category": "Evento",
+        "title": "Lo Que Se Viene: Talleres Gratuitos de Verano en The Forge ATL",
+        "excerpt": "Desde diseño y creación de videojuegos hasta vibe coding y narrativa digital — esto es todo lo que Beyond Code Collective tiene en el calendario este verano. Cada sesión es gratuita y se realiza en ATDC, en Atlanta.",
+        "image": "/images/news/pr-camp-classroom.png",
+        "imageAlt": "Estudiantes e instructores durante un taller de Beyond Code Collective",
+        "body": "El verano en The Forge: ATL viene cargado. Durante las próximas semanas, Beyond Code Collective ofrecerá una serie de talleres gratuitos y prácticos en el Advanced Technology Development Center (ATDC) de Atlanta — sobre diseño, desarrollo de videojuegos, IA, emprendimiento y más. Esto es lo que hay en el calendario.\n\nDESIGN YOUR WORLD — Haz Que Tus Ideas Se Vean Tan Bien Como Se Sienten · Lunes 29 de junio a las 11:00 AM · ATDC. Aprende los fundamentos de diseño para que tus ideas luzcan tan bien como se sienten.\n\nGAME ON — Deja de Jugar. Empieza a Crear. · Sábado 11 de julio a las 11:00 AM · ATDC. Pasa de jugador a creador y construye tu primer videojuego.\n\nReplit para Líderes con Sabiduría (55+) · Lunes 20 de julio a las 11:00 AM · ATDC. Una introducción práctica y acogedora para crear con Replit, diseñada para personas de 55 años en adelante.\n\nTaller de Vibe Coding con Replit · Jueves 23 de julio a las 11:00 AM · ATDC. Trae una idea y constrúyela en vivo con herramientas de programación asistida por IA.\n\nPonte en Acción: Narrativa Digital para Emprendedores · Viernes 24 de julio a la 1:00 PM · ATDC. Da forma a la historia detrás de tu proyecto y aprende a compartirla con confianza.\n\nCharla de Desayuno — IA en la Educación con Educadores y Familias · Martes 28 de julio a las 11:00 AM · ATDC. Una conversación abierta sobre cómo la IA está transformando el aprendizaje, para los adultos que guían a la próxima generación.\n\nTodas las sesiones son gratuitas, pero los cupos son limitados. Reserva tu lugar para cualquiera de estos eventos en Eventbrite.",
+        "linkUrl": "https://www.eventbrite.com/o/beyond-code-collective-121150678633",
+        "linkLabel": "Regístrate en Eventbrite"
+      },
+      {
         "slug": "the-forge-atl-opening",
         "date": "2026-03-09",
         "category": "Evento",

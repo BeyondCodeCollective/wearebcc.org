@@ -261,6 +261,18 @@
     "emptyState": "No updates yet — check back soon.",
     "items": [
       {
+        "slug": "upcoming-events-summer-2026",
+        "date": "2026-06-19",
+        "category": "Event",
+        "title": "What's Coming Up: Free Summer Workshops at The Forge ATL",
+        "excerpt": "From design and game-making to vibe coding and digital storytelling — here's everything Beyond Code Collective has on the calendar this summer. Every session is free and hosted at ATDC in Atlanta.",
+        "image": "/images/news/pr-camp-classroom.png",
+        "imageAlt": "Learners and instructors during a Beyond Code Collective workshop",
+        "body": "Summer at The Forge: ATL is packed. Over the coming weeks, Beyond Code Collective is hosting a series of free, hands-on workshops at the Advanced Technology Development Center (ATDC) in Atlanta — covering design, game development, AI, entrepreneurship, and more. Here's what's on the calendar.\n\nDESIGN YOUR WORLD — Making Your Ideas Look as Good as They Feel · Monday, June 29 at 11:00 AM · ATDC. Learn the design fundamentals that make your ideas land as well as they feel.\n\nGAME ON — Stop Playing Games. Start Making Them. · Saturday, July 11 at 11:00 AM · ATDC. Go from player to creator and build your first game.\n\nReplit for Wisdom Leaders Bootcamp (55+) · Monday, July 20 at 11:00 AM · ATDC. A welcoming, hands-on intro to building with Replit, designed for learners 55 and up.\n\nVibe Coding Workshop w/ Replit · Thursday, July 23 at 11:00 AM · ATDC. Bring an idea and build it live using AI-assisted coding tools.\n\nPutting Yourself Out There: Digital Storytelling for Entrepreneurs · Friday, July 24 at 1:00 PM · ATDC. Craft the story behind your venture and learn to share it with confidence.\n\nBreakfast Chat — AI in Education with Educators & Parents · Tuesday, July 28 at 11:00 AM · ATDC. An open conversation about how AI is reshaping learning, for the adults guiding the next generation.\n\nAll sessions are free, but space is limited. Reserve your seat for any of these events on Eventbrite.",
+        "linkUrl": "https://www.eventbrite.com/o/beyond-code-collective-121150678633",
+        "linkLabel": "Register on Eventbrite"
+      },
+      {
         "slug": "the-forge-atl-opening",
         "date": "2026-03-09",
         "category": "Event",
