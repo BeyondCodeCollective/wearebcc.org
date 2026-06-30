@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "@phosphor-icons/react";
 import { useLocale, useTranslations } from "next-intl";
@@ -14,6 +15,11 @@ export function NewsCard({ post, index = 0 }: { post: NewsPost; index?: number }
   const locale = useLocale();
   const t = useTranslations("news");
 
+  // Portrait headshots get cropped to a sliver in a wide landscape thumbnail.
+  // Detect the natural ratio on load and give tall images a portrait frame so
+  // the full face shows. Matches the article hero behaviour.
+  const [isPortrait, setIsPortrait] = useState(false);
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 30 }}
@@ -24,12 +30,20 @@ export function NewsCard({ post, index = 0 }: { post: NewsPost; index?: number }
     >
       <Link href={`/news/${post.slug}`} className="flex h-full flex-col">
         {/* Image */}
-        <div className="relative aspect-[16/10] w-full overflow-hidden bg-grey-1">
+        <div
+          className={`relative w-full overflow-hidden bg-grey-1 ${
+            isPortrait ? "aspect-[4/5]" : "aspect-[16/10]"
+          }`}
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={post.image}
             alt={post.imageAlt || post.title}
             loading="lazy"
+            onLoad={(e) => {
+              const img = e.currentTarget;
+              setIsPortrait(img.naturalHeight > img.naturalWidth);
+            }}
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             style={{ objectPosition: post.imagePosition || "center" }}
           />
