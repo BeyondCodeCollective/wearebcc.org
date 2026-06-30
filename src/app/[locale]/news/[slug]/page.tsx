@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight } from "@phosphor-icons/react";
@@ -23,6 +24,11 @@ export default function NewsArticle() {
   const posts = normalizeNews(t.raw("items"));
   const post = posts.find((p) => p.slug === slug);
   const more = posts.filter((p) => p.slug !== slug).slice(0, 3);
+
+  // Portrait headshots (taller than wide) get cropped to a sliver — only the
+  // eyes — inside a wide 16:9 frame. Detect the natural ratio on load and give
+  // tall images a portrait-shaped frame so the full face and shoulders show.
+  const [isPortrait, setIsPortrait] = useState(false);
 
   // Not found — keep the user inside the newsroom rather than dead-ending.
   if (!post) {
@@ -100,13 +106,21 @@ export default function NewsArticle() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mx-auto mt-10 max-w-5xl"
+          className={`mx-auto mt-10 ${isPortrait ? "max-w-md" : "max-w-5xl"}`}
         >
-          <div className="relative aspect-[16/9] w-full overflow-hidden bg-grey-1">
+          <div
+            className={`relative w-full overflow-hidden bg-grey-1 ${
+              isPortrait ? "aspect-[4/5]" : "aspect-[16/9]"
+            }`}
+          >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={post.image}
               alt={post.imageAlt || post.title}
+              onLoad={(e) => {
+                const img = e.currentTarget;
+                setIsPortrait(img.naturalHeight > img.naturalWidth);
+              }}
               className="h-full w-full object-cover"
               style={{ objectPosition: post.imagePosition || "center" }}
             />
