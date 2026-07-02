@@ -10,7 +10,6 @@ import { Logo } from "./ui/logo";
 import { useContact } from "./contact-modal";
 
 const NAV_KEYS = [
-  { key: "partners", hash: "#partners" },
   { key: "getInvolved", hash: "#get-involved", contact: true },
 ] as const;
 
