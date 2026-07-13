@@ -7,12 +7,19 @@ import { Logo } from "./ui/logo";
 
 export function Footer() {
   const t = useTranslations("footer");
+  const tNav = useTranslations("nav");
   const locale = useLocale();
+
+  const initiativeLinks = [
+    { key: "theForge", href: "beyond-code-centers" },
+    { key: "afterTheGame", href: "after-the-game" },
+    { key: "codeAlong", href: "code-along" },
+  ] as const;
 
   return (
     <footer className="bg-true-black px-6 py-16 lg:px-8 lg:py-20">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-8 md:grid-cols-3 md:gap-12">
+        <div className="grid gap-8 md:grid-cols-4 md:gap-12">
           {/* Logo & tagline */}
           <div>
             <Logo
@@ -26,6 +33,27 @@ export function Footer() {
             >
               {SITE.tagline}
             </p>
+          </div>
+
+          {/* Initiatives */}
+          <div>
+            <p
+              className="font-mono text-xs tracking-wider text-off-white/60"
+              style={{ fontFamily: "var(--font-mono)" }}
+            >
+              {t("initiatives")}
+            </p>
+            <div className="mt-3 flex flex-col gap-2">
+              {initiativeLinks.map(({ key, href }) => (
+                <a
+                  key={key}
+                  href={`/${locale}/${href}`}
+                  className="text-sm text-off-white/70 transition-colors hover:text-off-white"
+                >
+                  {tNav(key)}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Contact */}

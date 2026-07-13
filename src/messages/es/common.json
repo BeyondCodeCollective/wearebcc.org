@@ -10,7 +10,8 @@
     "partners": "Socios",
     "resources": "Recursos",
     "getInvolved": "Participa",
-    "donate": "Donar"
+    "donate": "Donar",
+    "codeAlong": "Code Along"
   },
   "footer": {
     "contact": "CONTACTO",
@@ -19,7 +20,8 @@
     "linkedin": "LinkedIn",
     "copyright": "Beyond Code Collective. Todos los derechos reservados.",
     "privacyPolicy": "Política de Privacidad",
-    "termsOfUse": "Términos de Uso"
+    "termsOfUse": "Términos de Uso",
+    "initiatives": "Iniciativas"
   },
   "newsletter": {
     "label": "[ ÚNETE A LA COMUNIDAD ]",
@@ -141,6 +143,80 @@
     "successTitle": "¡ESTÁS DENTRO!",
     "successMessage": "Estaremos en contacto cuando abra la inscripción.",
     "error": "Algo salió mal"
+  },
+  "codeAlong": {
+    "back": "WEAREBCC.ORG",
+    "premiereBadge": "TEMPORADA 6 — ESTRENO 25 DE JULIO",
+    "headline1": "LA TEMPORADA 6 ESTÁ",
+    "headline2": "CARGANDO…",
+    "poweredBy": "PRESENTADO POR BEYOND CODE COLLECTIVE",
+    "description": "Code Along es la academia de programación gratuita en video creada por Beyond Code Collective, Black Girls Code y GoldieBlox: proyectos reales, construidos paso a paso, con presentadores que programan contigo. Esta temporada: crea tu propia app de playlists de música.",
+    "episodesCta": "VER LOS EPISODIOS",
+    "countdownLabel": "LA TEMPORADA 6 SE ESTRENA EL 25 DE JULIO",
+    "days": "DÍAS",
+    "hours": "HRS",
+    "minutes": "MIN",
+    "seconds": "SEG",
+    "episodesLabel": "TEMPORADA 6",
+    "episodesHeadline1": "LA NUEVA TEMPORADA",
+    "episodesHeadline2": "SE DESBLOQUEA EL 25 DE JULIO",
+    "episodesNote": "Cuatro episodios. Una app de playlists de música, construida desde cero. Los episodios se desbloquean aquí a medida que se estrenan. Regístrate abajo y te avisaremos en cuanto salgan.",
+    "episode": "EPISODIO",
+    "lockedLabel": "LLEGA 25.07",
+    "aboutLabel": "SOBRE EL SHOW",
+    "aboutHeadline1": "APRENDE",
+    "aboutHeadline2": "CONSTRUYENDO",
+    "aboutText1": "Code Along es exactamente lo que suena: no solo ves a alguien programar, programas junto a ellos. Cada episodio construye un proyecto real paso a paso, a un ritmo pensado para quienes recién empiezan.",
+    "aboutText2": "Esta temporada, los presentadores Destiney Williams y Daniel Ray convierten una rivalidad amistosa sobre gustos musicales en un reto de programación: crear una app de playlists desde cero, con apariciones de la creadora de contenido Jalaiah Harmon y la ingeniera química Dra. Fernanda Sulantay Vargas.",
+    "channelCta": "VER EN YOUTUBE",
+    "hostsLabel": "TUS PRESENTADORES",
+    "hostsHeadline1": "CONOCE AL EQUIPO DE",
+    "hostsHeadline2": "LA TEMPORADA 6",
+    "hostsText": "Destiney Williams y Daniel Ray son creadores de la misma generación que la audiencia de Code Along. Escribirán cada línea de código contigo: errores, depuración y victorias incluidas.",
+    "poweredLabel": "LA TEMPORADA 6 ES PRESENTADA POR",
+    "poweredText": "Code Along es creado y presentado por Beyond Code Collective, manteniendo la serie gratis y abierta para cada joven creador.",
+    "formLabel": "NO TE PIERDAS EL ESTRENO",
+    "formHeadline1": "SÉ EL PRIMERO",
+    "formHeadline2": "EN VERLO",
+    "formDescription": "Déjanos tu correo y te avisaremos cuando la Temporada 6 se estrene el 25 de julio.",
+    "firstName": "Nombre",
+    "email": "Correo electrónico",
+    "submit": "AVÍSAME",
+    "submitting": "ENVIANDO...",
+    "successTitle": "ESTÁS EN LA LISTA",
+    "successMessage": "Te enviaremos un correo en cuanto salga la Temporada 6.",
+    "error": "Algo salió mal. Inténtalo de nuevo.",
+    "stats": [
+      {
+        "stat": "9M+",
+        "label": "vistas totales"
+      },
+      {
+        "stat": "150K+",
+        "label": "suscriptores"
+      },
+      {
+        "stat": "175K+",
+        "label": "horas vistas"
+      },
+      {
+        "stat": "2025",
+        "label": "Premio Young Artist"
+      }
+    ],
+    "episodeTitles": [
+      "¿Quién tiene el mejor gusto musical?",
+      "Cómo programar una app (Parte 1)",
+      "Cómo programar una app (Parte 2)",
+      "Programa junto a una role model de verdad"
+    ],
+    "hostRole": "CO-PRESENTADOR",
+    "subscribeCta": "SUSCRÍBETE EN YOUTUBE",
+    "trailerLabel": "ADELANTO",
+    "trailerHeadline": "MIRA EL TRÁILER",
+    "guestsLabel": "CON INVITADAS ESPECIALES",
+    "guestRoleInfluencer": "INVITADA ESPECIAL · EPISODIOS 1–3",
+    "guestRoleModel": "MODELO A SEGUIR · EPISODIO 4"
   },
   "forge": {
     "back": "WEAREBCC.ORG",
