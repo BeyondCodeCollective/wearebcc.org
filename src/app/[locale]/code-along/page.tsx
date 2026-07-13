@@ -79,16 +79,16 @@ function TrailerEmbed({ title, comingSoon }: { title: string; comingSoon: string
         style={{ backgroundColor: VOID, boxShadow: `10px 10px 0 ${NEON}` }}
       >
         <Image
-          src="/images/code-along/hero-still.jpg"
+          src="/images/code-along/playlist-card.jpg"
           alt={title}
           fill
-          className="object-cover opacity-40"
+          className="object-cover"
           sizes="(min-width: 1024px) 896px, 100vw"
         />
-        <span className="absolute inset-0 flex items-center justify-center">
+        <span className="absolute top-5 right-5">
           <span
             className="px-5 py-2.5 font-mono text-sm tracking-wider"
-            style={{ fontFamily: "var(--font-mono)", backgroundColor: NEON, color: VOID }}
+            style={{ fontFamily: "var(--font-mono)", backgroundColor: VOID, color: NEON }}
           >
             {comingSoon}
           </span>
