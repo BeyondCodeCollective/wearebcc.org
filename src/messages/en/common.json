@@ -66,17 +66,17 @@
     "send": "Send Message →"
   },
   "banner": {
-    "title": "CODE ALONG BEYOND: MUSIC",
-    "description": "Premieres July 20. Four episodes, one playlist app, free for all ages.",
+    "title": "Code Along Beyond: Music",
+    "description": "premieres July 20. Four episodes, one playlist app, free for all ages.",
     "cta": "Learn More"
   },
   "launchOverlay": {
-    "badge": "NEW SERIES",
-    "title": "CODE ALONG BEYOND: MUSIC",
+    "badge": "New Series",
+    "title": "Code Along Beyond: Music",
     "description": "In the first season of Code Along Beyond, cohosts Destiney Williams and Daniel Ray build a music playlist app from scratch, and builders of all ages code along. Four episodes, free on YouTube, no experience required. Premieres Monday, July 20.",
     "credit": "Created with Black Girls Code.",
     "sponsor": "With support from Apple.",
-    "cta": "SEE THE SERIES",
+    "cta": "See the Series",
     "close": "Close"
   },
   "atg": {
