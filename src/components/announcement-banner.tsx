@@ -37,7 +37,7 @@ export function AnnouncementBanner() {
               <strong>{t("title")}</strong>
               <span className="hidden sm:inline">
                 {" "}
-                — {t("description")}
+                {t("description")}
               </span>{" "}
               <span className="underline underline-offset-2">{t("cta")}</span>
             </span>

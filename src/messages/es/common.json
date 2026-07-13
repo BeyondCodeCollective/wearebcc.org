@@ -66,17 +66,17 @@
     "send": "Enviar Mensaje →"
   },
   "banner": {
-    "title": "CODE ALONG BEYOND: MUSIC",
-    "description": "Se estrena el 20 de julio. Cuatro episodios, una app de playlists, gratis para todas las edades.",
+    "title": "Code Along Beyond: Music",
+    "description": "se estrena el 20 de julio. Cuatro episodios, una app de playlists, gratis para todas las edades.",
     "cta": "Conoce Más"
   },
   "launchOverlay": {
-    "badge": "NUEVA SERIE",
-    "title": "CODE ALONG BEYOND: MUSIC",
+    "badge": "Nueva Serie",
+    "title": "Code Along Beyond: Music",
     "description": "En la primera temporada de Code Along Beyond, los coanfitriones Destiney Williams y Daniel Ray crean una app de playlists de música desde cero, y builders de todas las edades programan junto a ellos. Cuatro episodios, gratis en YouTube, sin experiencia necesaria. Se estrena el lunes 20 de julio.",
     "credit": "Creado con Black Girls Code.",
     "sponsor": "Con el apoyo de Apple.",
-    "cta": "VER LA SERIE",
+    "cta": "Ver la Serie",
     "close": "Cerrar"
   },
   "atg": {
