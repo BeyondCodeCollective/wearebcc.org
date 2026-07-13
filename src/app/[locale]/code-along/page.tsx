@@ -21,7 +21,7 @@ const SUBSCRIBE_URL = "https://www.youtube.com/@blackgirlscode?sub_confirmation=
 // embedded for internal team review — swap in the final trailer ID before launch.
 const TRAILER_ID: string | null = "43ilWJWr6fE";
 
-// Season 6 premieres July 25, 2026 (noon ET). Drop each episode's YouTube ID
+// Season 1 premieres July 25, 2026 (noon ET). Drop each episode's YouTube ID
 // here as it goes live — cards flip from locked stills to playable embeds.
 const PREMIERE_DATE = new Date("2026-07-25T12:00:00-04:00");
 const EPISODES: { num: number; thumb: string; youtubeId: string | null }[] = [
@@ -228,7 +228,7 @@ export default function CodeAlong() {
         body: JSON.stringify({
           firstName: firstName.trim(),
           email: email.trim(),
-          segment: "Code Along - Season 6",
+          segment: "Code Along - Season 1",
           source: "code-along-landing",
         }),
       });

@@ -11,7 +11,7 @@
     "resources": "Resources",
     "getInvolved": "Get Involved",
     "donate": "Donate",
-    "codeAlong": "Code Along"
+    "codeAlong": "Code Along Beyond"
   },
   "footer": {
     "contact": "CONTACT",
@@ -66,9 +66,16 @@
     "send": "Send Message →"
   },
   "banner": {
-    "title": "BEYOND CODE CENTERS",
-    "description": "Intergenerational tech hubs for learners of all ages.",
+    "title": "CODE ALONG BEYOND: MUSIC",
+    "description": "Season 1 of our free coding series premieres July 25.",
     "cta": "Learn more"
+  },
+  "launchOverlay": {
+    "badge": "NEW SERIES",
+    "title": "CODE ALONG BEYOND: MUSIC",
+    "description": "Season 1 of our free coding series premieres July 25 — build a music playlist app from scratch, episode by episode.",
+    "cta": "SEE THE SERIES",
+    "close": "Close"
   },
   "atg": {
     "back": "WEAREBCC.ORG",
@@ -156,18 +163,18 @@
   },
   "codeAlong": {
     "back": "WEAREBCC.ORG",
-    "premiereBadge": "SEASON 6 — PREMIERES JULY 25",
-    "headline1": "SEASON 6 IS",
+    "premiereBadge": "SEASON 1 — PREMIERES JULY 25",
+    "headline1": "SEASON 1 IS",
     "headline2": "LOADING…",
-    "poweredBy": "POWERED BY BEYOND CODE COLLECTIVE",
+    "poweredBy": "POWERED BY BEYOND CODE COLLECTIVE · WITH SUPPORT FROM APPLE",
     "description": "Code Along is the free, video-based coding academy created by Beyond Code Collective, Black Girls Code, and GoldieBlox — real projects, built step by step, with hosts who code right alongside you. This season: build your own music playlist app.",
     "episodesCta": "SEE THE EPISODES",
-    "countdownLabel": "SEASON 6 PREMIERES JULY 25",
+    "countdownLabel": "SEASON 1 PREMIERES JULY 25",
     "days": "DAYS",
     "hours": "HRS",
     "minutes": "MIN",
     "seconds": "SEC",
-    "episodesLabel": "SEASON 6",
+    "episodesLabel": "SEASON 1",
     "episodesHeadline1": "THE NEW SEASON",
     "episodesHeadline2": "UNLOCKS JULY 25",
     "episodesNote": "Four episodes. One music playlist app, built from scratch. Episodes unlock here as they premiere — sign up below and we'll let you know the second they drop.",
@@ -181,20 +188,20 @@
     "channelCta": "WATCH ON YOUTUBE",
     "hostsLabel": "YOUR HOSTS",
     "hostsHeadline1": "MEET THE",
-    "hostsHeadline2": "SEASON 6 CREW",
+    "hostsHeadline2": "SEASON 1 CREW",
     "hostsText": "Destiney Williams and Daniel Ray are creators from the same generation as the Code Along audience. They'll be writing every line of code with you — mistakes, debugging, wins and all.",
-    "poweredLabel": "SEASON 6 IS POWERED BY",
+    "poweredLabel": "SEASON 1 IS POWERED BY",
     "poweredText": "Code Along is created and powered by Beyond Code Collective — keeping the series free and open for every young builder.",
     "formLabel": "DON'T MISS THE DROP",
     "formHeadline1": "BE FIRST",
     "formHeadline2": "TO WATCH",
-    "formDescription": "Drop your email and we'll ping you when Season 6 premieres on July 25.",
+    "formDescription": "Drop your email and we'll ping you when Season 1 premieres on July 25.",
     "firstName": "First name",
     "email": "Email address",
     "submit": "NOTIFY ME",
     "submitting": "SENDING...",
     "successTitle": "YOU'RE ON THE LIST",
-    "successMessage": "We'll email you the moment Season 6 drops.",
+    "successMessage": "We'll email you the moment Season 1 drops.",
     "error": "Something went wrong. Please try again.",
     "stats": [
       {
