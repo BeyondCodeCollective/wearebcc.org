@@ -17,9 +17,9 @@ const NEON = "#F4FF70"; // sampled from the host-circle ring art
 const CHANNEL_URL: string | null = "https://www.youtube.com/@blackgirlscode";
 const SUBSCRIBE_URL = "https://www.youtube.com/@blackgirlscode?sub_confirmation=1";
 
-// NOTE: 43ilWJWr6fE is the Episode 2 ROUGH CUT (temp gfx, no color/sound mix),
-// embedded for internal team review — swap in the final trailer ID before launch.
-const TRAILER_ID: string | null = "43ilWJWr6fE";
+// Set to the final trailer's YouTube ID when it's ready — until then the
+// trailer section shows a "coming soon" placeholder.
+const TRAILER_ID: string | null = null;
 
 // Season 1 premieres July 25, 2026 (noon ET). Drop each episode's YouTube ID
 // here as it goes live — cards flip from locked stills to playable embeds.
@@ -69,10 +69,33 @@ function useCountdown(target: Date) {
   };
 }
 
-function TrailerEmbed({ title }: { title: string }) {
+function TrailerEmbed({ title, comingSoon }: { title: string; comingSoon: string }) {
   const [playing, setPlaying] = useState(false);
 
-  if (!TRAILER_ID) return null;
+  if (!TRAILER_ID) {
+    return (
+      <div
+        className="relative aspect-video w-full overflow-hidden"
+        style={{ backgroundColor: VOID, boxShadow: `10px 10px 0 ${NEON}` }}
+      >
+        <Image
+          src="/images/code-along/hero-still.jpg"
+          alt={title}
+          fill
+          className="object-cover opacity-40"
+          sizes="(min-width: 1024px) 896px, 100vw"
+        />
+        <span className="absolute inset-0 flex items-center justify-center">
+          <span
+            className="px-5 py-2.5 font-mono text-sm tracking-wider"
+            style={{ fontFamily: "var(--font-mono)", backgroundColor: NEON, color: VOID }}
+          >
+            {comingSoon}
+          </span>
+        </span>
+      </div>
+    );
+  }
   return (
     <div
       className="group relative aspect-video w-full overflow-hidden"
@@ -439,12 +462,11 @@ export default function CodeAlong() {
         </div>
       </section>
 
-      {/* Trailer — renders only once TRAILER_ID is set */}
-      {TRAILER_ID && (
-        <section
-          className="px-6 py-16 lg:px-8 lg:py-24"
-          style={{ backgroundColor: SIGNAL }}
-        >
+      {/* Trailer — shows a coming-soon placeholder until TRAILER_ID is set */}
+      <section
+        className="px-6 py-16 lg:px-8 lg:py-24"
+        style={{ backgroundColor: SIGNAL }}
+      >
           <div className="mx-auto max-w-4xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -473,11 +495,10 @@ export default function CodeAlong() {
               transition={{ delay: 0.15, duration: 0.6 }}
               className="mt-10"
             >
-              <TrailerEmbed title={t("trailerHeadline")} />
+              <TrailerEmbed title={t("trailerHeadline")} comingSoon={t("trailerComingSoon")} />
             </motion.div>
-          </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* Stats — big and readable */}
       <section className="px-6 py-16 lg:px-8 lg:py-20" style={{ backgroundColor: MINT }}>
