@@ -10,7 +10,8 @@
     "partners": "Partners",
     "resources": "Resources",
     "getInvolved": "Get Involved",
-    "donate": "Donate"
+    "donate": "Donate",
+    "codeAlong": "Code Along"
   },
   "footer": {
     "contact": "CONTACT",
@@ -19,7 +20,8 @@
     "linkedin": "LinkedIn",
     "copyright": "Beyond Code Collective. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
-    "termsOfUse": "Terms of Use"
+    "termsOfUse": "Terms of Use",
+    "initiatives": "Initiatives"
   },
   "newsletter": {
     "label": "[ JOIN THE COMMUNITY ]",
@@ -151,6 +153,80 @@
     "successTitle": "YOU'RE IN",
     "successMessage": "We'll be in touch when enrollment opens.",
     "error": "Something went wrong"
+  },
+  "codeAlong": {
+    "back": "WEAREBCC.ORG",
+    "premiereBadge": "SEASON 6 — PREMIERES JULY 25",
+    "headline1": "SEASON 6 IS",
+    "headline2": "LOADING…",
+    "poweredBy": "POWERED BY BEYOND CODE COLLECTIVE",
+    "description": "Code Along is the free, video-based coding academy created by Beyond Code Collective, Black Girls Code, and GoldieBlox — real projects, built step by step, with hosts who code right alongside you. This season: build your own music playlist app.",
+    "episodesCta": "SEE THE EPISODES",
+    "countdownLabel": "SEASON 6 PREMIERES JULY 25",
+    "days": "DAYS",
+    "hours": "HRS",
+    "minutes": "MIN",
+    "seconds": "SEC",
+    "episodesLabel": "SEASON 6",
+    "episodesHeadline1": "THE NEW SEASON",
+    "episodesHeadline2": "UNLOCKS JULY 25",
+    "episodesNote": "Four episodes. One music playlist app, built from scratch. Episodes unlock here as they premiere — sign up below and we'll let you know the second they drop.",
+    "episode": "EPISODE",
+    "lockedLabel": "COMING 07.25",
+    "aboutLabel": "ABOUT THE SHOW",
+    "aboutHeadline1": "LEARN BY",
+    "aboutHeadline2": "BUILDING",
+    "aboutText1": "Code Along is exactly what it sounds like: you don't just watch someone code — you code along. Each episode walks through a real project step by step, at a pace made for first-time builders.",
+    "aboutText2": "This season, hosts Destiney Williams and Daniel Ray turn a friendly rivalry over music taste into a coding challenge: building a music playlist app from scratch — with guest appearances from content creator Jalaiah Harmon and chemical engineer Dr. Fernanda Sulantay Vargas.",
+    "channelCta": "WATCH ON YOUTUBE",
+    "hostsLabel": "YOUR HOSTS",
+    "hostsHeadline1": "MEET THE",
+    "hostsHeadline2": "SEASON 6 CREW",
+    "hostsText": "Destiney Williams and Daniel Ray are creators from the same generation as the Code Along audience. They'll be writing every line of code with you — mistakes, debugging, wins and all.",
+    "poweredLabel": "SEASON 6 IS POWERED BY",
+    "poweredText": "Code Along is created and powered by Beyond Code Collective — keeping the series free and open for every young builder.",
+    "formLabel": "DON'T MISS THE DROP",
+    "formHeadline1": "BE FIRST",
+    "formHeadline2": "TO WATCH",
+    "formDescription": "Drop your email and we'll ping you when Season 6 premieres on July 25.",
+    "firstName": "First name",
+    "email": "Email address",
+    "submit": "NOTIFY ME",
+    "submitting": "SENDING...",
+    "successTitle": "YOU'RE ON THE LIST",
+    "successMessage": "We'll email you the moment Season 6 drops.",
+    "error": "Something went wrong. Please try again.",
+    "stats": [
+      {
+        "stat": "9M+",
+        "label": "total views"
+      },
+      {
+        "stat": "150K+",
+        "label": "subscribers"
+      },
+      {
+        "stat": "175K+",
+        "label": "hours watched"
+      },
+      {
+        "stat": "2025",
+        "label": "Young Artist Award winner"
+      }
+    ],
+    "episodeTitles": [
+      "Who Has the Best Music Taste?",
+      "How to Code an App (Part 1)",
+      "How to Code an App (Part 2)",
+      "Code Along with a Real-Life Role Model"
+    ],
+    "hostRole": "CO-HOST",
+    "subscribeCta": "SUBSCRIBE ON YOUTUBE",
+    "trailerLabel": "SNEAK PEEK",
+    "trailerHeadline": "WATCH THE TRAILER",
+    "guestsLabel": "FEATURING SPECIAL GUESTS",
+    "guestRoleInfluencer": "CELEBRITY GUEST · EPISODES 1–3",
+    "guestRoleModel": "ROLE MODEL · EPISODE 4"
   },
   "forge": {
     "back": "WEAREBCC.ORG",
