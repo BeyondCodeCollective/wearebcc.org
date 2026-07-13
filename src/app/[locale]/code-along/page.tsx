@@ -21,9 +21,9 @@ const SUBSCRIBE_URL = "https://www.youtube.com/@blackgirlscode?sub_confirmation=
 // trailer section shows a "coming soon" placeholder.
 const TRAILER_ID: string | null = null;
 
-// Season 1 premieres July 25, 2026 (noon ET). Drop each episode's YouTube ID
+// Season 1 premieres July 20, 2026 (noon ET). Drop each episode's YouTube ID
 // here as it goes live — cards flip from locked stills to playable embeds.
-const PREMIERE_DATE = new Date("2026-07-25T12:00:00-04:00");
+const PREMIERE_DATE = new Date("2026-07-20T12:00:00-04:00");
 const EPISODES: { num: number; thumb: string; youtubeId: string | null }[] = [
   { num: 1, thumb: "/images/code-along/ep-1.jpg", youtubeId: null },
   { num: 2, thumb: "/images/code-along/ep-2.jpg", youtubeId: null },
@@ -455,7 +455,7 @@ export default function CodeAlong() {
                 className="font-heading text-4xl leading-none sm:text-5xl"
                 style={{ color: NEON }}
               >
-                07.25
+                07.20
               </p>
             )}
           </div>

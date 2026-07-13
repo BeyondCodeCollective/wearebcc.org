@@ -74,6 +74,14 @@ export function LaunchOverlay() {
               <p className="text-sm leading-relaxed text-charcoal/80">
                 {t("description")}
               </p>
+              <p
+                className="font-mono text-[11px] leading-relaxed tracking-wider text-charcoal/60"
+                style={{ fontFamily: "var(--font-mono)" }}
+              >
+                {t("credit")}
+                <br />
+                {t("sponsor")}
+              </p>
               <Link
                 href="/code-along"
                 onClick={dismiss}
