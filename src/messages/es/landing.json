@@ -261,6 +261,38 @@
     "emptyState": "Aún no hay novedades — vuelve pronto.",
     "items": [
       {
+        "slug": "volunteer-with-bcc",
+        "date": "2026-07-13",
+        "category": "Anuncio",
+        "title": "Sé Voluntario con Beyond Code Collective",
+        "excerpt": "Nuestro portal de voluntariado ya está activo. Regístrate, explora los roles disponibles, reporta tus horas y consulta tu registro de contacto: todo lo que necesitas para participar está en un solo lugar.",
+        "image": "/images/community-og.webp",
+        "imageAlt": "Estudiantes de BCC Academy en el aula",
+        "body": "Beyond Code Collective funciona gracias a las personas que se presentan: mentores, instructores, apoyo en eventos y todos los demás. Nuestro portal de voluntariado ya está activo, haciendo más fácil que nunca participar y mantenerse involucrado.\n\n¿Eres nuevo? Comienza en la página de registro para unirte a nuestra comunidad de voluntarios. ¿Ya estás registrado? Explora las vacantes para encontrar un rol que se ajuste a tus habilidades y horario, y usa la página de reporte de horas para registrar tu tiempo después de cada sesión: esas horas nos ayudan a mostrar a patrocinadores y socios el impacto real de esta comunidad.\n\nUsa los enlaces de abajo para comenzar. Cada hora que das nos ayuda a llevar educación tecnológica gratuita a más estudiantes.",
+        "links": [
+          {
+            "label": "Registro de Voluntarios",
+            "url": "https://beyondcodecollectiveinc.my.salesforce-sites.com/BCCVolunteersSignupFS",
+            "description": "Únete a la comunidad de voluntarios de BCC"
+          },
+          {
+            "label": "Vacantes de Voluntariado",
+            "url": "https://beyondcodecollectiveinc.my.salesforce-sites.com/BCCVolunteersJobListingFS",
+            "description": "Explora los roles disponibles"
+          },
+          {
+            "label": "Reporta Tus Horas",
+            "url": "https://beyondcodecollectiveinc.my.salesforce-sites.com/BCCVolunteersReportHours",
+            "description": "Registra tu tiempo de voluntariado"
+          },
+          {
+            "label": "Búsqueda de Contacto",
+            "url": "https://beyondcodecollectiveinc.my.salesforce-sites.com/BCCPersonalSiteContactLookup",
+            "description": "Consulta tu registro de contacto de voluntario"
+          }
+        ]
+      },
+      {
         "slug": "upcoming-events-summer-2026",
         "date": "2026-06-19",
         "category": "Evento",
