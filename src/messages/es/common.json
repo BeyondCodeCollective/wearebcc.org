@@ -11,7 +11,7 @@
     "resources": "Recursos",
     "getInvolved": "Participa",
     "donate": "Donar",
-    "codeAlong": "Code Along"
+    "codeAlong": "Code Along Beyond"
   },
   "footer": {
     "contact": "CONTACTO",
@@ -66,9 +66,16 @@
     "send": "Enviar Mensaje →"
   },
   "banner": {
-    "title": "BEYOND CODE CENTERS",
-    "description": "Centros tecnológicos intergeneracionales para todas las edades.",
+    "title": "CODE ALONG BEYOND: MUSIC",
+    "description": "La Temporada 1 de nuestra serie gratuita de programación se estrena el 25 de julio.",
     "cta": "Conoce más"
+  },
+  "launchOverlay": {
+    "badge": "NUEVA SERIE",
+    "title": "CODE ALONG BEYOND: MUSIC",
+    "description": "La Temporada 1 de nuestra serie gratuita de programación se estrena el 25 de julio: crea una app de playlists de música desde cero, episodio a episodio.",
+    "cta": "VER LA SERIE",
+    "close": "Cerrar"
   },
   "atg": {
     "back": "WEAREBCC.ORG",
@@ -146,18 +153,18 @@
   },
   "codeAlong": {
     "back": "WEAREBCC.ORG",
-    "premiereBadge": "TEMPORADA 6 — ESTRENO 25 DE JULIO",
-    "headline1": "LA TEMPORADA 6 ESTÁ",
+    "premiereBadge": "TEMPORADA 1 — ESTRENO 25 DE JULIO",
+    "headline1": "LA TEMPORADA 1 ESTÁ",
     "headline2": "CARGANDO…",
-    "poweredBy": "PRESENTADO POR BEYOND CODE COLLECTIVE",
+    "poweredBy": "PRESENTADO POR BEYOND CODE COLLECTIVE · CON EL APOYO DE APPLE",
     "description": "Code Along es la academia de programación gratuita en video creada por Beyond Code Collective, Black Girls Code y GoldieBlox: proyectos reales, construidos paso a paso, con presentadores que programan contigo. Esta temporada: crea tu propia app de playlists de música.",
     "episodesCta": "VER LOS EPISODIOS",
-    "countdownLabel": "LA TEMPORADA 6 SE ESTRENA EL 25 DE JULIO",
+    "countdownLabel": "LA TEMPORADA 1 SE ESTRENA EL 25 DE JULIO",
     "days": "DÍAS",
     "hours": "HRS",
     "minutes": "MIN",
     "seconds": "SEG",
-    "episodesLabel": "TEMPORADA 6",
+    "episodesLabel": "TEMPORADA 1",
     "episodesHeadline1": "LA NUEVA TEMPORADA",
     "episodesHeadline2": "SE DESBLOQUEA EL 25 DE JULIO",
     "episodesNote": "Cuatro episodios. Una app de playlists de música, construida desde cero. Los episodios se desbloquean aquí a medida que se estrenan. Regístrate abajo y te avisaremos en cuanto salgan.",
@@ -171,20 +178,20 @@
     "channelCta": "VER EN YOUTUBE",
     "hostsLabel": "TUS PRESENTADORES",
     "hostsHeadline1": "CONOCE AL EQUIPO DE",
-    "hostsHeadline2": "LA TEMPORADA 6",
+    "hostsHeadline2": "LA TEMPORADA 1",
     "hostsText": "Destiney Williams y Daniel Ray son creadores de la misma generación que la audiencia de Code Along. Escribirán cada línea de código contigo: errores, depuración y victorias incluidas.",
-    "poweredLabel": "LA TEMPORADA 6 ES PRESENTADA POR",
+    "poweredLabel": "LA TEMPORADA 1 ES PRESENTADA POR",
     "poweredText": "Code Along es creado y presentado por Beyond Code Collective, manteniendo la serie gratis y abierta para cada joven creador.",
     "formLabel": "NO TE PIERDAS EL ESTRENO",
     "formHeadline1": "SÉ EL PRIMERO",
     "formHeadline2": "EN VERLO",
-    "formDescription": "Déjanos tu correo y te avisaremos cuando la Temporada 6 se estrene el 25 de julio.",
+    "formDescription": "Déjanos tu correo y te avisaremos cuando la Temporada 1 se estrene el 25 de julio.",
     "firstName": "Nombre",
     "email": "Correo electrónico",
     "submit": "AVÍSAME",
     "submitting": "ENVIANDO...",
     "successTitle": "ESTÁS EN LA LISTA",
-    "successMessage": "Te enviaremos un correo en cuanto salga la Temporada 6.",
+    "successMessage": "Te enviaremos un correo en cuanto salga la Temporada 1.",
     "error": "Algo salió mal. Inténtalo de nuevo.",
     "stats": [
       {

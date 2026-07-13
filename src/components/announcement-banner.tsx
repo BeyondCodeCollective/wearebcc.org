@@ -23,7 +23,7 @@ export function AnnouncementBanner() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-center gap-4 px-6 py-2.5 lg:px-8">
           <Link
-            href="/beyond-code-centers"
+            href="/code-along"
             className="flex items-center gap-3 text-center"
           >
             <span className="relative flex h-2 w-2">
