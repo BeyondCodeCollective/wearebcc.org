@@ -4,5 +4,7 @@ import { routing } from "./i18n/routing";
 export default createMiddleware(routing);
 
 export const config = {
-  matcher: ["/", "/(en|es)/:path*", "/(privacy|terms|after-the-game)"],
+  // Match everything except API routes, Next internals, and files with an
+  // extension, so bare paths like /partners or /code-along get a locale.
+  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
 };
