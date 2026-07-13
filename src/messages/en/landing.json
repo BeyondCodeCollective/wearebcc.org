@@ -261,6 +261,38 @@
     "emptyState": "No updates yet — check back soon.",
     "items": [
       {
+        "slug": "volunteer-with-bcc",
+        "date": "2026-07-13",
+        "category": "Announcement",
+        "title": "Volunteer With Beyond Code Collective",
+        "excerpt": "Our volunteer portal is live. Sign up, browse open volunteer roles, report your hours, and look up your contact record — everything you need to get involved is in one place.",
+        "image": "/images/community-og.webp",
+        "imageAlt": "BCC Academy students in the classroom",
+        "body": "Beyond Code Collective runs on people who show up — mentors, instructors, event support, and everyone in between. Our volunteer portal is now live, making it easier than ever to get involved and stay involved.\n\nNew here? Start with the signup page to join our volunteer community. Already signed up? Browse the job listings to find a role that fits your skills and schedule, and use the report hours page to log your time after every session — those hours help us show funders and partners the real impact of this community.\n\nUse the links below to get started. Every hour you give helps us bring free tech education to more learners.",
+        "links": [
+          {
+            "label": "Volunteer Signup",
+            "url": "https://beyondcodecollectiveinc.my.salesforce-sites.com/BCCVolunteersSignupFS",
+            "description": "Join the BCC volunteer community"
+          },
+          {
+            "label": "Volunteer Job Listings",
+            "url": "https://beyondcodecollectiveinc.my.salesforce-sites.com/BCCVolunteersJobListingFS",
+            "description": "Browse open volunteer roles"
+          },
+          {
+            "label": "Report Your Hours",
+            "url": "https://beyondcodecollectiveinc.my.salesforce-sites.com/BCCVolunteersReportHours",
+            "description": "Log your volunteer time"
+          },
+          {
+            "label": "Contact Lookup",
+            "url": "https://beyondcodecollectiveinc.my.salesforce-sites.com/BCCPersonalSiteContactLookup",
+            "description": "Find your volunteer contact record"
+          }
+        ]
+      },
+      {
         "slug": "upcoming-events-summer-2026",
         "date": "2026-06-19",
         "category": "Event",

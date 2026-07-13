@@ -140,6 +140,40 @@ export default function NewsArticle() {
             ))}
           </div>
 
+          {/* Optional link list (e.g. volunteer portals, resource hubs) */}
+          {post.links?.length ? (
+            <div className="mt-10 flex flex-col gap-4">
+              {post.links.map((link) => (
+                <a
+                  key={link.url}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between gap-4 border border-true-black/15 px-6 py-5 transition-colors hover:border-cobalt hover:bg-cobalt hover:text-off-white"
+                >
+                  <span>
+                    <span
+                      className="block font-mono text-xs uppercase tracking-wider"
+                      style={{ fontFamily: "var(--font-mono)" }}
+                    >
+                      {link.label}
+                    </span>
+                    {link.description ? (
+                      <span className="mt-1 block text-sm text-true-black/60 group-hover:text-off-white/80">
+                        {link.description}
+                      </span>
+                    ) : null}
+                  </span>
+                  <ArrowUpRight
+                    size={16}
+                    weight="bold"
+                    className="flex-shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  />
+                </a>
+              ))}
+            </div>
+          ) : null}
+
           {/* Optional external link (press, partner sites, etc.) */}
           {post.linkUrl ? (
             <a
