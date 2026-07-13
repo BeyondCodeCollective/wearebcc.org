@@ -2,11 +2,134 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { LockSimple } from "@phosphor-icons/react";
+import { LockSimple, ShieldCheck, ArrowUpRight } from "@phosphor-icons/react";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 
 const STORAGE_KEY = "bcc-partner-portal-unlocked";
+
+const CREDENTIALS = [
+  "CompTIA Tech+",
+  "CompTIA Network+",
+  "CompTIA Security+ (SY0-701)",
+  "SOC-Analyst Capstone",
+  "Durable Skills Coaching",
+];
+
+const PILLARS = [
+  {
+    n: "01",
+    title: "STACKED CREDENTIALS",
+    text: "Tech+, Network+, and Security+ — industry-recognized proof that compounds, not a single bootcamp certificate.",
+  },
+  {
+    n: "02",
+    title: "HANDS-ON CAPSTONE",
+    text: "A completed SOC-analyst simulation demonstrates ability directly, even for candidates without prior security job history.",
+  },
+  {
+    n: "03",
+    title: "DURABLE SKILLS",
+    text: "Our career coaching curriculum builds the reliability, communication, and follow-through that make entry-level hires stick.",
+  },
+  {
+    n: "04",
+    title: "ONGOING SUPPORT",
+    text: "We stay engaged after the hire with wraparound support to protect retention.",
+  },
+];
+
+const ROLES = [
+  {
+    track: "Track · Operations",
+    title: "SOC ANALYST I",
+    text: "Security operations, SIEM monitoring, and alert triage — backed directly by the cohort's capstone. Multiple candidates name SOC work as their clear goal.",
+  },
+  {
+    track: "Track · Foundations",
+    title: "IT SUPPORT & HELP DESK",
+    text: "Service desk, desktop, and technical support — the proven on-ramp for candidates with Network+/Tech+ and strong transferable experience.",
+  },
+  {
+    track: "Track · Governance",
+    title: "GRC & COMPLIANCE",
+    text: "Governance, risk, IT audit, and compliance analysis — a natural fit for candidates coming from audit, Salesforce administration, and operations.",
+  },
+  {
+    track: "Track · Cloud & Automation",
+    title: "CLOUD & SECURITY AUTOMATION",
+    text: "Entry cloud security and DevSecOps-adjacent roles — including a QA-automation engineer bridging into security automation.",
+  },
+];
+
+const CALIBER = [
+  {
+    tag: "SOC · Forensics",
+    text: "Cybersecurity master's candidate, fluent in ServiceNow, Wireshark, and Azure — targeting SOC and digital-forensics roles.",
+  },
+  {
+    tag: "Security Leadership Track",
+    text: "Former Director of Systems Development from the nonprofit IT world, bringing management depth into a security pivot.",
+  },
+  {
+    tag: "Security Automation",
+    text: "QA automation engineer with a clear bridge story: from test automation into DevSecOps and security automation.",
+  },
+  {
+    tag: "GRC · Compliance",
+    text: "Salesforce administrator and consultant moving deliberately toward governance, risk, and compliance work.",
+  },
+  {
+    tag: "Security Operations",
+    text: "Military IT veteran seeking to stay in IT and security operations — a repeat, high-commitment learner.",
+  },
+  {
+    tag: "SOC · SIEM · GRC",
+    text: "Local-government data and audit analyst, ServiceNow user, targeting SOC, SIEM, and GRC pathways.",
+  },
+];
+
+const STEPS = [
+  {
+    n: "Step 01",
+    title: "INFORMATIONAL INTERVIEW",
+    text: "Give 30 minutes to a candidate. Low lift, and it doubles as real-world exposure for our learners.",
+  },
+  {
+    n: "Step 02",
+    title: "PREVIEW AT DEMO DAY",
+    text: "Join us in early September to watch the cohort present their SOC-analyst capstones live.",
+  },
+  {
+    n: "Step 03",
+    title: "INTERVIEW IN OCTOBER",
+    text: "Commit to interview job-ready candidates matched to your open roles.",
+  },
+];
+
+const reveal = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.6 },
+} as const;
+
+function MonoLabel({
+  children,
+  className = "text-cobalt",
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <p
+      className={`font-mono text-xs uppercase tracking-wider ${className}`}
+      style={{ fontFamily: "var(--font-mono)" }}
+    >
+      {children}
+    </p>
+  );
+}
 
 function PasswordGate({ onUnlock }: { onUnlock: () => void }) {
   const [password, setPassword] = useState("");
@@ -36,7 +159,7 @@ function PasswordGate({ onUnlock }: { onUnlock: () => void }) {
   };
 
   return (
-    <section className="flex min-h-[60vh] items-center justify-center px-6 pt-36 pb-20 lg:pt-44">
+    <section className="flex min-h-[70vh] items-center justify-center bg-off-white px-6 pt-36 pb-20 lg:pt-44">
       <motion.form
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -47,10 +170,13 @@ function PasswordGate({ onUnlock }: { onUnlock: () => void }) {
         <span className="flex h-12 w-12 items-center justify-center bg-cobalt text-off-white">
           <LockSimple size={20} weight="bold" />
         </span>
-        <h1 className="mt-6 font-heading text-3xl leading-[0.95] text-true-black">
-          PARTNER ACCESS
+        <MonoLabel className="mt-6 text-cobalt">[ Partners Only ]</MonoLabel>
+        <h1 className="mt-3 font-heading text-4xl leading-[0.9] text-true-black">
+          PARTNER
+          <br />
+          ACCESS
         </h1>
-        <p className="mt-3 text-sm leading-relaxed text-grey-3">
+        <p className="mt-4 text-sm leading-relaxed text-grey-3">
           This page is for Beyond Code Collective hiring partners. Enter the
           access code you received from our team.
         </p>
@@ -81,164 +207,155 @@ function PasswordGate({ onUnlock }: { onUnlock: () => void }) {
   );
 }
 
-function CatalystSheet() {
+function CatalystContent() {
   return (
-    <section className="px-4 pt-32 pb-20 sm:px-6 lg:px-8 lg:pt-40">
-      <style>{`
-        .cat-sheet{--sky:#A8DBFF;--warm:#FEF9ED;width:100%;max-width:8.5in;margin:0 auto;background:var(--color-off-white);box-shadow:0 10px 50px rgba(1,41,102,.16);overflow:hidden;line-height:1.5;}
-        .cat-sheet .eyebrow{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.18em;font-size:10.5px;font-weight:500;}
-        .cat-sheet .display{font-family:var(--font-heading);text-transform:uppercase;line-height:.94;}
-        .cat-sheet .sec-label{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.14em;font-size:10px;color:var(--color-cobalt);margin-bottom:7px;}
-        .cat-sheet .cs-header{background:var(--color-dark-cobalt);color:#fff;padding:30px 42px 26px;display:flex;align-items:center;gap:30px;}
-        .cat-sheet .head-text{flex:1 1 58%;min-width:0;}
-        .cat-sheet .head-img{flex:0 0 36%;align-self:stretch;border-radius:6px;overflow:hidden;box-shadow:0 10px 30px rgba(1,41,102,.35);min-height:196px;background:var(--color-dark-cobalt);}
-        .cat-sheet .head-img img{width:100%;height:100%;object-fit:cover;display:block;}
-        .cat-sheet .cs-header .logo img{height:36px;width:auto;display:block;margin-bottom:18px;}
-        .cat-sheet .cs-header h1{font-family:var(--font-heading);font-size:60px;line-height:.9;text-transform:uppercase;margin:0 0 10px;}
-        .cat-sheet .cs-header h1 .sky{color:var(--sky);}
-        .cat-sheet .cs-header .tag{font-size:15px;font-weight:500;opacity:.95;}
-        .cat-sheet .hook{padding:24px 42px 4px;}
-        .cat-sheet .hook h2{font-family:var(--font-heading);font-size:30px;line-height:.96;text-transform:uppercase;margin-bottom:10px;}
-        .cat-sheet .hook h2 .blue{color:var(--color-cobalt);}
-        .cat-sheet .hook p{font-size:14px;color:var(--color-charcoal);max-width:94%;}
-        .cat-sheet .cs-main{padding:22px 42px 6px;display:grid;grid-template-columns:1fr 1fr;gap:30px;}
-        .cat-sheet h3.block{font-family:var(--font-heading);font-size:21px;text-transform:uppercase;margin-bottom:9px;line-height:.96;}
-        .cat-sheet .cs-main p{font-size:12.5px;color:var(--color-charcoal);margin-bottom:11px;}
-        .cat-sheet .cs-main p strong{color:var(--color-true-black);}
-        .cat-sheet .pillar{display:flex;gap:12px;margin-bottom:13px;}
-        .cat-sheet .pillar .pn{font-family:var(--font-heading);font-size:26px;color:var(--color-cobalt);line-height:.8;min-width:30px;}
-        .cat-sheet .pillar h4{font-family:var(--font-heading);font-size:15px;text-transform:uppercase;margin-bottom:3px;}
-        .cat-sheet .pillar p{font-size:12px;margin:0;}
-        .cat-sheet .chips{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 13px;}
-        .cat-sheet .chip{font-family:var(--font-mono);font-size:10px;letter-spacing:.04em;text-transform:uppercase;border:1.5px solid var(--color-true-black);padding:4px 9px;background:var(--warm);}
-        .cat-sheet .chip.soft{border-color:var(--color-cobalt);color:var(--color-cobalt);}
-        .cat-sheet .callout{background:var(--color-true-black);color:var(--color-off-white);padding:16px 18px;margin-top:4px;}
-        .cat-sheet .callout .eyebrow{color:var(--sky);margin-bottom:6px;display:flex;align-items:center;gap:7px;}
-        .cat-sheet .callout .dot{width:8px;height:8px;border-radius:50%;background:var(--sky);display:inline-block;}
-        .cat-sheet .callout h4{font-family:var(--font-heading);font-size:18px;text-transform:uppercase;margin-bottom:6px;}
-        .cat-sheet .callout p{font-size:12px;color:#D8D8D8;margin:0;}
-        .cat-sheet .cs-stats{background:var(--color-dark-cobalt);color:#fff;display:grid;grid-template-columns:repeat(2,1fr);margin-top:18px;}
-        .cat-sheet .cs-stats .s{padding:18px 16px;border-right:1px solid rgba(255,255,255,.22);}
-        .cat-sheet .cs-stats .s:last-child{border-right:none;}
-        .cat-sheet .cs-stats .num{font-family:var(--font-heading);font-size:34px;line-height:.85;}
-        .cat-sheet .cs-stats .lab{font-family:var(--font-mono);font-size:9.5px;text-transform:uppercase;letter-spacing:.07em;margin-top:8px;opacity:.85;line-height:1.35;}
-        .cat-sheet .roles-wrap{padding:22px 42px 6px;}
-        .cat-sheet .roles{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:6px;}
-        .cat-sheet .role{border:1.5px solid var(--color-true-black);padding:13px 14px;background:var(--warm);}
-        .cat-sheet .role .tn{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;color:var(--color-cobalt);text-transform:uppercase;}
-        .cat-sheet .role h4{font-family:var(--font-heading);font-size:17px;text-transform:uppercase;margin:3px 0 6px;}
-        .cat-sheet .role p{font-size:11.5px;color:var(--color-charcoal);margin:0;}
-        .cat-sheet .caliber-wrap{padding:20px 42px 6px;}
-        .cat-sheet .caliber{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px;}
-        .cat-sheet .card{background:var(--warm);border-top:3px solid var(--color-cobalt);padding:12px 13px;}
-        .cat-sheet .card .role-tag{font-family:var(--font-mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-cobalt);margin-bottom:5px;}
-        .cat-sheet .card p{font-size:11.5px;color:var(--color-charcoal);margin:0;line-height:1.4;}
-        .cat-sheet .caliber-note{font-family:var(--font-mono);font-size:10px;color:var(--color-grey-3);margin-top:11px;letter-spacing:.02em;}
-        .cat-sheet .ask-wrap{padding:20px 42px 6px;}
-        .cat-sheet .ask{background:var(--color-dark-cobalt);color:#fff;padding:22px 24px;}
-        .cat-sheet .ask .sec-label{color:var(--sky);}
-        .cat-sheet .ask h3{font-family:var(--font-heading);font-size:22px;text-transform:uppercase;margin-bottom:12px;line-height:.98;}
-        .cat-sheet .ask-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-        .cat-sheet .ask-step .n{font-family:var(--font-mono);font-size:10px;letter-spacing:.1em;color:var(--sky);text-transform:uppercase;}
-        .cat-sheet .ask-step h4{font-family:var(--font-heading);font-size:15px;text-transform:uppercase;margin:4px 0 5px;}
-        .cat-sheet .ask-step p{font-size:11.5px;color:#D8D8D8;margin:0;}
-        .cat-sheet .about-wrap{padding:20px 42px 4px;}
-        .cat-sheet .about-wrap p{font-size:12px;color:var(--color-charcoal);margin-bottom:9px;max-width:96%;}
-        .cat-sheet .quote-wrap{padding:16px 42px 20px;}
-        .cat-sheet blockquote{background:var(--warm);border-left:5px solid var(--color-cobalt);padding:16px 20px;font-size:14px;font-weight:500;}
-        .cat-sheet blockquote cite{font-family:var(--font-mono);display:block;margin-top:11px;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-style:normal;color:var(--color-grey-3);}
-        .cat-sheet .cs-cta{background:var(--color-true-black);color:var(--color-off-white);padding:22px 42px;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px;}
-        .cat-sheet .cs-cta .cta{font-family:var(--font-heading);font-size:20px;text-transform:uppercase;line-height:.95;max-width:60%;}
-        .cat-sheet .cs-cta .cta .sky{color:var(--sky);}
-        .cat-sheet .cs-cta .contact{font-family:var(--font-mono);font-size:11px;text-align:right;line-height:1.7;letter-spacing:.04em;}
-        .cat-sheet .cs-cta .contact a{color:var(--sky);text-decoration:none;}
-        @media (max-width:680px){
-          .cat-sheet .cs-main,.cat-sheet .roles,.cat-sheet .caliber,.cat-sheet .ask-grid{grid-template-columns:1fr;}
-          .cat-sheet .cs-stats{grid-template-columns:1fr 1fr;}
-          .cat-sheet .cs-header{flex-direction:column;align-items:flex-start;}
-          .cat-sheet .cs-header h1{font-size:46px;}
-        }
-      `}</style>
-
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="cat-sheet"
-      >
-        <div className="cs-header">
-          <div className="head-text">
-            <div className="logo">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/bcc-logo-horizontal-white.png"
-                alt="Beyond Code Collective"
-              />
+    <>
+      {/* Hero */}
+      <section className="relative bg-dark-cobalt px-6 pt-36 pb-16 lg:px-8 lg:pt-44 lg:pb-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.2fr_1fr]">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="flex items-center gap-2">
+              <div className="h-2 w-2 animate-pulse rounded-full bg-electric-green" />
+              <MonoLabel className="text-electric-green">
+                Catalyst · Cybersecurity Cohort
+              </MonoLabel>
             </div>
-            <h1>
-              Hire
+            <h1 className="mt-6 font-heading text-[clamp(3rem,8vw,6rem)] leading-[0.85] text-off-white">
+              HIRE
               <br />
-              <span className="sky">Ready.</span>
+              <span className="text-electric-green">READY.</span>
             </h1>
-            <p className="tag">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-off-white/70 sm:text-lg">
               A cohort of certified, screened, job-ready cybersecurity talent —
               available to interview this October.
             </p>
-          </div>
-          <div className="head-img">
+            <a
+              href="mailto:mica@wearebcc.org"
+              className="mt-8 inline-flex items-center gap-2 bg-cobalt px-6 py-4 font-mono text-xs uppercase tracking-wider text-off-white transition-colors hover:bg-off-white hover:text-true-black"
+              style={{ fontFamily: "var(--font-mono)" }}
+            >
+              Talk To Our Team
+              <ArrowUpRight size={14} weight="bold" />
+            </a>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="relative hidden aspect-[4/3] overflow-hidden lg:block"
+          >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://beyondcode-catalyst.vercel.app/hero.jpg"
               alt="Beyond Code Catalyst cohort collaborating"
+              className="h-full w-full object-cover"
             />
-          </div>
+          </motion.div>
         </div>
+      </section>
 
-        <div className="hook">
-          <h2>
-            There Are More Open Cyber Roles Than Credentialed People To Fill
-            Them.
-            <br />
-            <span className="blue">
-              We&apos;ve Screened The Talent To Close The Gap.
-            </span>
-          </h2>
-          <p>
-            Beyond Code&apos;s Cybersecurity cohort is a pre-vetted pipeline of
-            career-changers who hold stacked CompTIA industry credentials, have
-            completed a live SOC-analyst simulation, and bring extensive work
-            experience with transferable skills.{" "}
-            <strong>You get first access to proven talent.</strong>
-          </p>
+      {/* Stats bar */}
+      <section className="border-t border-off-white/10 bg-true-black px-6 py-10 lg:px-8">
+        <div className="mx-auto grid max-w-4xl grid-cols-2 gap-6">
+          {[
+            { stat: "15", label: "Vetted candidates in the inaugural cohort" },
+            { stat: "OCT", label: "Interview-ready · 2026 placement window" },
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              {...reveal}
+              transition={{ delay: 0.1 * i, duration: 0.5 }}
+              className="text-center"
+            >
+              <p className="font-heading text-[clamp(2rem,5vw,3.5rem)] leading-none text-electric-green">
+                {item.stat}
+              </p>
+              <p
+                className="mt-2 font-mono text-[10px] uppercase tracking-wider text-off-white/50"
+                style={{ fontFamily: "var(--font-mono)" }}
+              >
+                {item.label}
+              </p>
+            </motion.div>
+          ))}
         </div>
+      </section>
 
-        <div className="cs-main">
-          <div>
-            <div className="sec-label">[ Who You&apos;re Hiring ]</div>
-            <h3 className="block">Certified &amp; Screened</h3>
-            <p>
+      {/* Hook */}
+      <section className="bg-off-white px-6 py-16 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-4xl">
+          <motion.div {...reveal}>
+            <MonoLabel>[ The Gap ]</MonoLabel>
+            <h2 className="mt-4 font-heading text-[clamp(1.75rem,4.5vw,3rem)] leading-[0.92] text-true-black">
+              THERE ARE MORE OPEN CYBER ROLES THAN CREDENTIALED PEOPLE TO FILL
+              THEM.{" "}
+              <span className="text-cobalt">
+                WE&apos;VE SCREENED THE TALENT TO CLOSE THE GAP.
+              </span>
+            </h2>
+            <p className="mt-6 max-w-3xl text-base leading-relaxed text-grey-3 sm:text-lg">
+              Beyond Code&apos;s Cybersecurity cohort is a pre-vetted pipeline
+              of career-changers who hold stacked CompTIA industry credentials,
+              have completed a live SOC-analyst simulation, and bring extensive
+              work experience with transferable skills.{" "}
+              <strong className="text-true-black">
+                You get first access to proven talent.
+              </strong>
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Certified & Screened + Why the model works */}
+      <section className="bg-grey-1 px-6 py-16 lg:px-8 lg:py-24">
+        <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2">
+          <motion.div {...reveal}>
+            <MonoLabel>[ Who You&apos;re Hiring ]</MonoLabel>
+            <h3 className="mt-4 font-heading text-3xl leading-[0.92] text-true-black sm:text-4xl">
+              CERTIFIED &amp;
+              <br />
+              SCREENED
+            </h3>
+            <p className="mt-5 text-base leading-relaxed text-grey-3">
               Every candidate enters your pipeline already holding a stack of
               CompTIA credentials, with all of them finishing Security+
               certification by Q4 2026.
             </p>
-            <div className="chips">
-              <span className="chip">CompTIA Tech+</span>
-              <span className="chip">CompTIA Network+</span>
-              <span className="chip">CompTIA Security+ (SY0-701)</span>
-              <span className="chip soft">SOC-Analyst Capstone</span>
-              <span className="chip soft">Durable Skills Coaching</span>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {CREDENTIALS.map((c) => (
+                <span
+                  key={c}
+                  className="border border-true-black/30 bg-white px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-true-black"
+                  style={{ fontFamily: "var(--font-mono)" }}
+                >
+                  {c}
+                </span>
+              ))}
             </div>
-            <p>
+            <p className="mt-6 text-base leading-relaxed text-grey-3">
               These aren&apos;t first-time learners. They&apos;re bringing real
               careers in systems administration, QA automation, IT leadership,
               and government audit as they transition into tech careers.
             </p>
-            <div className="callout">
-              <div className="eyebrow">
-                <span className="dot" /> [ Proof, Not Promise ]
+            <div className="mt-8 bg-true-black p-6">
+              <div className="flex items-center gap-2">
+                <ShieldCheck
+                  size={16}
+                  weight="bold"
+                  className="text-electric-green"
+                />
+                <MonoLabel className="text-electric-green">
+                  Proof, Not Promise
+                </MonoLabel>
               </div>
-              <h4>They&apos;ve Done The Work</h4>
-              <p>
+              <h4 className="mt-3 font-heading text-xl text-off-white">
+                THEY&apos;VE DONE THE WORK
+              </h4>
+              <p className="mt-2 text-sm leading-relaxed text-off-white/70">
                 Every graduate completes a SOC-analyst simulation — triaging
                 real alerts in a SIEM lab, identifying the threat, and writing
                 an incident report. It&apos;s the closest thing to an
@@ -246,238 +363,209 @@ function CatalystSheet() {
                 interview.
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div>
-            <div className="sec-label">[ Why Catalyst Talent ]</div>
-            <h3 className="block">Why The Model Works</h3>
-            <div className="pillar">
-              <div className="pn">01</div>
-              <div>
-                <h4>Stacked Credentials</h4>
-                <p>
-                  Tech+, Network+, and Security+ — industry-recognized proof
-                  that compounds, not a single bootcamp certificate.
-                </p>
-              </div>
+          <motion.div {...reveal} transition={{ delay: 0.15, duration: 0.6 }}>
+            <MonoLabel>[ Why Catalyst Talent ]</MonoLabel>
+            <h3 className="mt-4 font-heading text-3xl leading-[0.92] text-true-black sm:text-4xl">
+              WHY THE
+              <br />
+              MODEL WORKS
+            </h3>
+            <div className="mt-8 space-y-7">
+              {PILLARS.map((p) => (
+                <div key={p.n} className="flex gap-5">
+                  <span className="font-heading text-3xl leading-none text-cobalt">
+                    {p.n}
+                  </span>
+                  <div>
+                    <h4 className="font-heading text-lg text-true-black">
+                      {p.title}
+                    </h4>
+                    <p className="mt-1 text-sm leading-relaxed text-grey-3">
+                      {p.text}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="pillar">
-              <div className="pn">02</div>
-              <div>
-                <h4>Hands-On Capstone</h4>
-                <p>
-                  A completed SOC-analyst simulation demonstrates ability
-                  directly, even for candidates without prior security job
-                  history.
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Roles */}
+      <section className="bg-off-white px-6 py-16 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl">
+          <motion.div {...reveal}>
+            <MonoLabel>[ Roles They&apos;re Ready For ]</MonoLabel>
+            <h2 className="mt-4 font-heading text-3xl leading-[0.92] text-true-black sm:text-5xl">
+              FOUR TRACKS,
+              <br />
+              JOB-READY NOW
+            </h2>
+          </motion.div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
+            {ROLES.map((r, i) => (
+              <motion.div
+                key={r.title}
+                {...reveal}
+                transition={{ delay: 0.08 * i, duration: 0.5 }}
+                className="bg-white p-7"
+              >
+                <MonoLabel className="text-cobalt">{r.track}</MonoLabel>
+                <h3 className="mt-2 font-heading text-2xl text-true-black">
+                  {r.title}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-grey-3">
+                  {r.text}
                 </p>
-              </div>
-            </div>
-            <div className="pillar">
-              <div className="pn">03</div>
-              <div>
-                <h4>Durable Skills</h4>
-                <p>
-                  Our career coaching curriculum builds the reliability,
-                  communication, and follow-through that make entry-level hires
-                  stick.
-                </p>
-              </div>
-            </div>
-            <div className="pillar">
-              <div className="pn">04</div>
-              <div>
-                <h4>Ongoing Support</h4>
-                <p>
-                  We stay engaged after the hire with wraparound support to
-                  protect retention.
-                </p>
-              </div>
-            </div>
+              </motion.div>
+            ))}
           </div>
         </div>
+      </section>
 
-        <div className="cs-stats">
-          <div className="s">
-            <div className="num">15</div>
-            <div className="lab">Vetted candidates in the inaugural cohort</div>
+      {/* Caliber */}
+      <section className="bg-grey-1 px-6 py-16 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl">
+          <motion.div {...reveal}>
+            <MonoLabel>[ A Preview Of The Room ]</MonoLabel>
+            <h2 className="mt-4 font-heading text-3xl leading-[0.92] text-true-black sm:text-5xl">
+              THE CALIBER
+              <br />
+              YOU&apos;LL MEET
+            </h2>
+          </motion.div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {CALIBER.map((c, i) => (
+              <motion.div
+                key={c.tag}
+                {...reveal}
+                transition={{ delay: 0.06 * i, duration: 0.5 }}
+                className="bg-white p-6"
+              >
+                <MonoLabel className="text-cobalt">{c.tag}</MonoLabel>
+                <p className="mt-3 text-sm leading-relaxed text-grey-3">
+                  {c.text}
+                </p>
+              </motion.div>
+            ))}
           </div>
-          <div className="s">
-            <div className="num">OCT</div>
-            <div className="lab">Interview-ready · 2026 placement window</div>
-          </div>
-        </div>
-
-        <div className="roles-wrap">
-          <div className="sec-label">[ Roles They&apos;re Ready For ]</div>
-          <div className="roles">
-            <div className="role">
-              <div className="tn">Track · Operations</div>
-              <h4>SOC Analyst I</h4>
-              <p>
-                Security operations, SIEM monitoring, and alert triage — backed
-                directly by the cohort&apos;s capstone. Multiple candidates name
-                SOC work as their clear goal.
-              </p>
-            </div>
-            <div className="role">
-              <div className="tn">Track · Foundations</div>
-              <h4>IT Support &amp; Help Desk</h4>
-              <p>
-                Service desk, desktop, and technical support — the proven
-                on-ramp for candidates with Network+/Tech+ and strong
-                transferable experience.
-              </p>
-            </div>
-            <div className="role">
-              <div className="tn">Track · Governance</div>
-              <h4>GRC &amp; Compliance</h4>
-              <p>
-                Governance, risk, IT audit, and compliance analysis — a natural
-                fit for candidates coming from audit, Salesforce
-                administration, and operations.
-              </p>
-            </div>
-            <div className="role">
-              <div className="tn">Track · Cloud &amp; Automation</div>
-              <h4>Cloud &amp; Security Automation</h4>
-              <p>
-                Entry cloud security and DevSecOps-adjacent roles — including a
-                QA-automation engineer bridging into security automation.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="caliber-wrap">
-          <div className="sec-label">[ A Preview Of The Room ]</div>
-          <h3 className="block" style={{ fontSize: 19 }}>
-            The Caliber You&apos;ll Meet
-          </h3>
-          <div className="caliber">
-            <div className="card">
-              <div className="role-tag">SOC · Forensics</div>
-              <p>
-                Cybersecurity master&apos;s candidate, fluent in ServiceNow,
-                Wireshark, and Azure — targeting SOC and digital-forensics
-                roles.
-              </p>
-            </div>
-            <div className="card">
-              <div className="role-tag">Security Leadership Track</div>
-              <p>
-                Former Director of Systems Development from the nonprofit IT
-                world, bringing management depth into a security pivot.
-              </p>
-            </div>
-            <div className="card">
-              <div className="role-tag">Security Automation</div>
-              <p>
-                QA automation engineer with a clear bridge story: from test
-                automation into DevSecOps and security automation.
-              </p>
-            </div>
-            <div className="card">
-              <div className="role-tag">GRC · Compliance</div>
-              <p>
-                Salesforce administrator and consultant moving deliberately
-                toward governance, risk, and compliance work.
-              </p>
-            </div>
-            <div className="card">
-              <div className="role-tag">Security Operations</div>
-              <p>
-                Military IT veteran seeking to stay in IT and security
-                operations — a repeat, high-commitment learner.
-              </p>
-            </div>
-            <div className="card">
-              <div className="role-tag">SOC · SIEM · GRC</div>
-              <p>
-                Local-government data and audit analyst, ServiceNow user,
-                targeting SOC, SIEM, and GRC pathways.
-              </p>
-            </div>
-          </div>
-          <p className="caliber-note">
+          <p
+            className="mt-8 font-mono text-xs tracking-wider text-grey-3"
+            style={{ fontFamily: "var(--font-mono)" }}
+          >
             Anonymized snapshots from the confirmed cohort. Full candidate
             profiles shared with committed hiring partners.
           </p>
         </div>
+      </section>
 
-        <div className="ask-wrap">
-          <div className="ask">
-            <div className="sec-label">[ How Partnership Works ]</div>
-            <h3>Three Ways In — Start Wherever You Like</h3>
-            <div className="ask-grid">
-              <div className="ask-step">
-                <div className="n">Step 01</div>
-                <h4>Informational Interview</h4>
-                <p>
-                  Give 30 minutes to a candidate. Low lift, and it doubles as
-                  real-world exposure for our learners.
+      {/* How partnership works */}
+      <section className="bg-dark-cobalt px-6 py-16 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl">
+          <motion.div {...reveal}>
+            <MonoLabel className="text-electric-green">
+              [ How Partnership Works ]
+            </MonoLabel>
+            <h2 className="mt-4 font-heading text-3xl leading-[0.92] text-off-white sm:text-5xl">
+              THREE WAYS IN —
+              <br />
+              START WHEREVER YOU LIKE
+            </h2>
+          </motion.div>
+          <div className="mt-12 grid gap-10 sm:grid-cols-3">
+            {STEPS.map((s, i) => (
+              <motion.div
+                key={s.n}
+                {...reveal}
+                transition={{ delay: 0.1 * i, duration: 0.5 }}
+              >
+                <MonoLabel className="text-electric-green">{s.n}</MonoLabel>
+                <h3 className="mt-3 font-heading text-xl text-off-white">
+                  {s.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-off-white/70">
+                  {s.text}
                 </p>
-              </div>
-              <div className="ask-step">
-                <div className="n">Step 02</div>
-                <h4>Preview At Demo Day</h4>
-                <p>
-                  Join us in early September to watch the cohort present their
-                  SOC-analyst capstones live.
-                </p>
-              </div>
-              <div className="ask-step">
-                <div className="n">Step 03</div>
-                <h4>Interview In October</h4>
-                <p>
-                  Commit to interview job-ready candidates matched to your open
-                  roles.
-                </p>
-              </div>
-            </div>
+              </motion.div>
+            ))}
           </div>
         </div>
+      </section>
 
-        <div className="about-wrap">
-          <div className="sec-label">[ About Beyond Code ]</div>
-          <p>
-            Beyond Code Collective is a nonprofit bridging the gap between
-            inspiration, training, and employment in tech. We connect learners
-            to accessible education, hands-on opportunities to build with
-            emerging technologies, and clear pathways to launch and grow
-            meaningful careers.
-          </p>
-          <p>
-            Designed for learners of all ages and backgrounds, Beyond Code
-            prepares people to thrive in a tech-powered world and achieve
-            lasting career mobility. Catalyst is our flagship workforce program
-            for adults — pairing market-relevant technical skills with durable
-            mindset coaching, employer partnerships, and community.
-          </p>
+      {/* About + quote */}
+      <section className="bg-off-white px-6 py-16 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-4xl">
+          <motion.div {...reveal}>
+            <MonoLabel>[ About Beyond Code ]</MonoLabel>
+            <p className="mt-5 text-base leading-relaxed text-grey-3 sm:text-lg">
+              Beyond Code Collective is a nonprofit bridging the gap between
+              inspiration, training, and employment in tech. We connect
+              learners to accessible education, hands-on opportunities to build
+              with emerging technologies, and clear pathways to launch and grow
+              meaningful careers.
+            </p>
+            <p className="mt-4 text-base leading-relaxed text-grey-3 sm:text-lg">
+              Designed for learners of all ages and backgrounds, Beyond Code
+              prepares people to thrive in a tech-powered world and achieve
+              lasting career mobility. Catalyst is our flagship workforce
+              program for adults — pairing market-relevant technical skills
+              with durable mindset coaching, employer partnerships, and
+              community.
+            </p>
+          </motion.div>
+          <motion.blockquote
+            {...reveal}
+            transition={{ delay: 0.15, duration: 0.6 }}
+            className="mt-12 bg-white p-8"
+          >
+            <p className="text-lg font-medium leading-relaxed text-true-black">
+              &ldquo;Catalyst is how we ensure a human stays in the loop. We
+              focus on building access to inspiration, to community, to early
+              skills, enabling learners to build meaningful careers and become
+              catalysts for change in the tech ecosystem.&rdquo;
+            </p>
+            <cite
+              className="mt-5 block font-mono text-xs uppercase not-italic tracking-wider text-grey-3"
+              style={{ fontFamily: "var(--font-mono)" }}
+            >
+              Cristina Mancini · Founder &amp; CEO, Beyond Code Collective
+            </cite>
+          </motion.blockquote>
         </div>
+      </section>
 
-        <div className="quote-wrap">
-          <blockquote>
-            &ldquo;Catalyst is how we ensure a human stays in the loop. We
-            focus on building access to inspiration, to community, to early
-            skills, enabling learners to build meaningful careers and become
-            catalysts for change in the tech ecosystem.&rdquo;
-            <cite>Cristina Mancini · Founder &amp; CEO, Beyond Code Collective</cite>
-          </blockquote>
-        </div>
-
-        <div className="cs-cta">
-          <div className="cta">
-            Meet the talent this summer.{" "}
-            <span className="sky">Hire before end of year.</span>
-          </div>
-          <div className="contact">
+      {/* CTA band */}
+      <section className="bg-true-black px-6 py-16 lg:px-8 lg:py-20">
+        <div className="mx-auto flex max-w-7xl flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
+          <motion.h2
+            {...reveal}
+            className="max-w-xl font-heading text-3xl leading-[0.92] text-off-white sm:text-4xl"
+          >
+            MEET THE TALENT THIS SUMMER.{" "}
+            <span className="text-electric-green">
+              HIRE BEFORE END OF YEAR.
+            </span>
+          </motion.h2>
+          <motion.div
+            {...reveal}
+            transition={{ delay: 0.1, duration: 0.6 }}
+            className="font-mono text-sm leading-relaxed text-off-white/70"
+            style={{ fontFamily: "var(--font-mono)" }}
+          >
             Mica Le John · Executive Director
             <br />
-            <a href="mailto:mica@wearebcc.org">mica@wearebcc.org</a>
-          </div>
+            <a
+              href="mailto:mica@wearebcc.org"
+              className="text-electric-green underline-offset-4 hover:underline"
+            >
+              mica@wearebcc.org
+            </a>
+          </motion.div>
         </div>
-      </motion.div>
-    </section>
+      </section>
+    </>
   );
 }
 
@@ -491,16 +579,16 @@ export default function PartnersPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-grey-1">
-      <Nav variant="light" />
+    <div className="min-h-screen bg-off-white">
+      <Nav variant={unlocked ? "dark" : "light"} />
       {ready ? (
         unlocked ? (
-          <CatalystSheet />
+          <CatalystContent />
         ) : (
           <PasswordGate onUnlock={() => setUnlocked(true)} />
         )
       ) : (
-        <div className="min-h-[60vh]" />
+        <div className="min-h-[70vh]" />
       )}
       <Footer />
     </div>
