@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Code Along — Season 1 | Beyond Code Collective",
+  title: "Code Along Beyond: Music | Beyond Code Collective",
   description:
-    "Code Along is back. Season 1 of Beyond Code Collective's free YouTube coding series premieres July 20 — four episodes, one music playlist app, built from scratch.",
+    "Code Along Beyond: Music — Beyond Code Collective's free YouTube coding series launches Saturday, Aug 8, with support from Apple. Four episodes, one music playlist app, built from scratch.",
   openGraph: {
-    title: "Code Along — Season 1",
+    title: "Code Along Beyond: Music",
     description:
-      "The free coding series returns. Season 1 premieres July 20 on YouTube.",
+      "The free coding series returns. Season launches Saturday, Aug 8 on YouTube.",
     images: [
       {
         url: "https://www.wearebcc.org/images/code-along/playlist-card.jpg",
