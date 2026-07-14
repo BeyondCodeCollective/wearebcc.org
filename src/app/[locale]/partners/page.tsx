@@ -81,7 +81,7 @@ const CALIBER = [
   },
   {
     tag: "Security Operations",
-    text: "Military IT veteran seeking to stay in IT and security operations — a repeat, high-commitment learner.",
+    text: "Military IT veteran seeking to stay in IT and security operations — a repeat, high-commitment participant.",
   },
   {
     tag: "SOC · SIEM · GRC",
@@ -93,7 +93,7 @@ const STEPS = [
   {
     n: "Step 01",
     title: "INFORMATIONAL INTERVIEW",
-    text: "Give 30 minutes to a candidate. Low lift, and it doubles as real-world exposure for our learners.",
+    text: "Spend 30 minutes with a vetted candidate. Your insights help prepare future cybersecurity professionals while introducing you to highly motivated career changers who are ready to make an immediate impact.",
   },
   {
     n: "Step 02",
@@ -202,6 +202,16 @@ function PasswordGate({ onUnlock }: { onUnlock: () => void }) {
         >
           {checking ? "Checking..." : "View Partner Page"}
         </button>
+        <p className="mt-4 text-sm leading-relaxed text-grey-3">
+          Need access? Email{" "}
+          <a
+            href="mailto:catalyst@wearebcc.org"
+            className="text-cobalt underline-offset-4 hover:underline"
+          >
+            catalyst@wearebcc.org
+          </a>{" "}
+          and our team will send you a code.
+        </p>
       </motion.form>
     </section>
   );
@@ -234,7 +244,7 @@ function CatalystContent() {
               available to interview this October.
             </p>
             <a
-              href="mailto:mica@wearebcc.org"
+              href="mailto:catalyst@wearebcc.org"
               className="mt-8 inline-flex items-center gap-2 bg-cobalt px-6 py-4 font-mono text-xs uppercase tracking-wider text-off-white transition-colors hover:bg-off-white hover:text-true-black"
               style={{ fontFamily: "var(--font-mono)" }}
             >
@@ -337,7 +347,7 @@ function CatalystContent() {
               ))}
             </div>
             <p className="mt-6 text-base leading-relaxed text-grey-3">
-              These aren&apos;t first-time learners. They&apos;re bringing real
+              This isn&apos;t first-time talent. They&apos;re bringing real
               careers in systems administration, QA automation, IT leadership,
               and government audit as they transition into tech careers.
             </p>
@@ -502,12 +512,12 @@ function CatalystContent() {
             <p className="mt-5 text-base leading-relaxed text-grey-3 sm:text-lg">
               Beyond Code Collective is a nonprofit bridging the gap between
               inspiration, training, and employment in tech. We connect
-              learners to accessible education, hands-on opportunities to build
+              talent to accessible education, hands-on opportunities to build
               with emerging technologies, and clear pathways to launch and grow
               meaningful careers.
             </p>
             <p className="mt-4 text-base leading-relaxed text-grey-3 sm:text-lg">
-              Designed for learners of all ages and backgrounds, Beyond Code
+              Designed for participants of all ages and backgrounds, Beyond Code
               prepares people to thrive in a tech-powered world and achieve
               lasting career mobility. Catalyst is our flagship workforce
               program for adults — pairing market-relevant technical skills
@@ -523,7 +533,7 @@ function CatalystContent() {
             <p className="text-lg font-medium leading-relaxed text-true-black">
               &ldquo;Catalyst is how we ensure a human stays in the loop. We
               focus on building access to inspiration, to community, to early
-              skills, enabling learners to build meaningful careers and become
+              skills, enabling talent to build meaningful careers and become
               catalysts for change in the tech ecosystem.&rdquo;
             </p>
             <cite
