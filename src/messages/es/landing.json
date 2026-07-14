@@ -16,15 +16,15 @@
   "about": {
     "headline1": "BEYOND CODE",
     "headline2": "COLLECTIVE",
-    "description": "Beyond Code Collective cierra la brecha entre la inspiración, la formación y el empleo en tecnología, conectando a los aprendices con contenido educativo, oportunidades para desarrollar tecnologías de vanguardia y caminos para lanzar carreras.",
+    "description": "Beyond Code Collective cierra la brecha entre la inspiración, la formación y el empleo en tecnología, conectando al talento con contenido educativo, oportunidades para desarrollar tecnologías de vanguardia y caminos para lanzar carreras.",
     "pillars": {
       "intergenerationalOpportunity": {
         "title": "Oportunidad Intergeneracional",
-        "description": "Un ecosistema donde todas las generaciones participan; no un sistema que sirve a un solo grupo de edad, sino un modelo que encuentra a los aprendices donde estén en la vida."
+        "description": "Un ecosistema donde todas las generaciones participan; no un sistema que sirve a un solo grupo de edad, sino un modelo que encuentra a los participantes donde estén en la vida."
       },
       "allTechnologies": {
         "title": "Todas las Tecnologías",
-        "description": "Desde alfabetización digital y datos hasta automatización, ciberseguridad e IA responsable, preparamos a los aprendices para toda la gama de herramientas que encontrarán."
+        "description": "Desde alfabetización digital y datos hasta automatización, ciberseguridad e IA responsable, preparamos a los participantes para toda la gama de herramientas que encontrarán."
       },
       "todayAndTomorrow": {
         "title": "Hoy y Mañana",
@@ -32,7 +32,7 @@
       },
       "adaptiveProgramming": {
         "title": "Programación Adaptativa",
-        "description": "Currículo que evoluciona con la industria — ajustando contenido, entrega y resultados para coincidir con hacia dónde se dirigen los aprendices y los empleadores."
+        "description": "Currículo que evoluciona con la industria — ajustando contenido, entrega y resultados para coincidir con hacia dónde se dirigen el talento y los empleadores."
       }
     }
   },
@@ -116,7 +116,7 @@
     "items": {
       "forge": {
         "title": "Beyond Code Centers",
-        "description": "Centros presenciales que combinan educación tecnológica, desarrollo laboral y participación comunitaria para aprendices de todas las edades — desde K-12 hasta adultos que buscan mejorar sus habilidades o cambiar a carreras tecnológicas.",
+        "description": "Centros presenciales que combinan educación tecnológica, desarrollo laboral y participación comunitaria para participantes de todas las edades — desde K-12 hasta adultos que buscan mejorar sus habilidades o cambiar a carreras tecnológicas.",
         "tags": [
           "Todas las Edades",
           "Presencial + En Línea",
@@ -125,7 +125,7 @@
       },
       "catalysts": {
         "title": "Beyond Code Catalysts",
-        "description": "Rutas profesionales para aprendices de 18+ que combinan formación accesible, proyectos prácticos y apoyo para la preparación laboral. No se requiere experiencia técnica tradicional.",
+        "description": "Rutas profesionales para participantes de 18+ que combinan formación accesible, proyectos prácticos y apoyo para la preparación laboral. No se requiere experiencia técnica tradicional.",
         "tags": [
           "18+",
           "Rutas Profesionales",
@@ -167,7 +167,7 @@
     "label": "Conoce a la Fundadora",
     "title": "Fundadora y CEO",
     "bio": "Cristina Mancini es la visionaria Fundadora y CEO de Beyond Code Collective (BCC), un nuevo ecosistema nacional construido para cerrar la brecha de alfabetización en IA y desbloquear la dignidad digital para comunidades largamente excluidas del futuro del trabajo. Creó BCC para responder una pregunta transformadora: ¿Qué pasaría si cada comunidad tuviera acceso permanente y culturalmente arraigado a las habilidades y caminos que definen la próxima década de innovación y el futuro del trabajo?",
-    "quote": "\"La IA no elimina la necesidad de alfabetización técnica; la hace más esencial. En BCC estamos enseñando a nuestros aprendices cómo supervisarla, protegerla y construir con ella. No puedes supervisar lo que no entiendes. Por eso el conocimiento fundamental es crítico.\"",
+    "quote": "\"La IA no elimina la necesidad de alfabetización técnica; la hace más esencial. En BCC estamos enseñando a nuestro talento cómo supervisarla, protegerla y construir con ella. No puedes supervisar lo que no entiendes. Por eso el conocimiento fundamental es crítico.\"",
     "quoteAttribution": "Cristina Mancini",
     "asSeenOn": "COMO SE VIO EN"
   },

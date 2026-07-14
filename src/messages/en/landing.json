@@ -16,15 +16,15 @@
   "about": {
     "headline1": "BEYOND CODE",
     "headline2": "COLLECTIVE",
-    "description": "Beyond Code Collective bridges the gap between inspiration, training, and employment in tech, connecting learners to educational content, opportunities to develop cutting-edge technologies, and avenues to launch careers.",
+    "description": "Beyond Code Collective bridges the gap between inspiration, training, and employment in tech, connecting talent to educational content, opportunities to develop cutting-edge technologies, and avenues to launch careers.",
     "pillars": {
       "intergenerationalOpportunity": {
         "title": "Intergenerational Opportunity",
-        "description": "An ecosystem where all generations participate; not a pipeline that serves one age group, but a model that meets learners wherever they are in life."
+        "description": "An ecosystem where all generations participate; not a pipeline that serves one age group, but a model that meets participants wherever they are in life."
       },
       "allTechnologies": {
         "title": "All Technologies",
-        "description": "From digital fluency and data literacy to automation, cybersecurity, and responsible AI, we prepare learners for the full range of tools they'll encounter."
+        "description": "From digital fluency and data literacy to automation, cybersecurity, and responsible AI, we prepare participants for the full range of tools they'll encounter."
       },
       "todayAndTomorrow": {
         "title": "Today & Tomorrow",
@@ -32,7 +32,7 @@
       },
       "adaptiveProgramming": {
         "title": "Adaptive Programming",
-        "description": "Curriculum that evolves with the industry — adjusting content, delivery, and outcomes to match where learners and employers are headed."
+        "description": "Curriculum that evolves with the industry — adjusting content, delivery, and outcomes to match where talent and employers are headed."
       }
     }
   },
@@ -116,7 +116,7 @@
     "items": {
       "forge": {
         "title": "Beyond Code Centers",
-        "description": "Place-based hubs blending tech education, workforce development, and community engagement for learners of all ages — from K-12 to adults looking to upskill or pivot into tech careers.",
+        "description": "Place-based hubs blending tech education, workforce development, and community engagement for participants of all ages — from K-12 to adults looking to upskill or pivot into tech careers.",
         "tags": [
           "All Ages",
           "In-Person + Online",
@@ -125,7 +125,7 @@
       },
       "catalysts": {
         "title": "Beyond Code Catalysts",
-        "description": "Career pathways for 18+ learners combining accessible training, hands-on projects, and career readiness support. No traditional tech background required.",
+        "description": "Career pathways for participants 18+ combining accessible training, hands-on projects, and career readiness support. No traditional tech background required.",
         "tags": [
           "18+",
           "Career Pathways",
@@ -167,7 +167,7 @@
     "label": "Meet The Founder",
     "title": "Founder & CEO",
     "bio": "Cristina Mancini is the visionary Founder & CEO of Beyond Code Collective (BCC), a new national ecosystem built to close the AI literacy gap and unlock digital dignity for communities long excluded from the future of work. She created BCC to answer a transformative question: What if every community had permanent, culturally grounded access to the skills and pathways that define the next decade of innovation and the future of work?",
-    "quote": "\"AI doesn't eliminate the need for technical literacy; it makes it more essential. At BCC we're teaching our learners how to supervise it, secure it, and build with it. You cannot supervise what you do not understand. This is why foundational knowledge is critical.\"",
+    "quote": "\"AI doesn't eliminate the need for technical literacy; it makes it more essential. At BCC we're teaching our talent how to supervise it, secure it, and build with it. You cannot supervise what you do not understand. This is why foundational knowledge is critical.\"",
     "quoteAttribution": "Cristina Mancini",
     "asSeenOn": "AS SEEN ON"
   },
