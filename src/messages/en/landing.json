@@ -261,6 +261,30 @@
     "emptyState": "No updates yet — check back soon.",
     "items": [
       {
+        "slug": "kleon-penn-passes-comptia-tech-plus",
+        "date": "2026-07-14",
+        "category": "Spotlight",
+        "title": "Kleon Penn Passes CompTIA Tech+ on His First Try",
+        "excerpt": "Kleon Penn is part of the very first Beyond the Game cohort — the group that had to be the proof the model worked. He just passed the CompTIA Tech+ exam on his first attempt, with a score of 700.",
+        "image": "/images/news/kleon-penn-techplus.png",
+        "imageAlt": "Kleon Penn, Beyond the Game first cohort, passed CompTIA Tech+ on his first attempt",
+        "body": "Kleon Penn is part of our initial Beyond the Game cohort, the first group of students to go through the program. That matters. The first cohort had no older students to look to, no proof yet that the model worked. They were the proof. When Kleon joined, IT certifications were a goal on a whiteboard. Now they're on his resume: he passed the CompTIA Tech+ exam on his first attempt, with a score of 700.\n\nIf you've never sat for a cert exam, here's the context. Tech+ covers hardware, software, networking basics, security, and troubleshooting. It's the exam that tells employers you understand how technology works, not just how to use it. A lot of people take it two or three times. Kleon walked in once and walked out certified.\n\nHe earned that score the boring way, with study sessions and practice exams, going back over whatever he missed until it stuck. Credit also goes to his instructor, Kobie Joyner, who taught the cohort through the full Tech+ curriculum and pushed the class to treat practice exams like the real thing. Kobie has now guided two cohorts through this material, including the one our program lead Ramon Clemente came through, and results like Kleon's are what that teaching looks like on paper.\n\nTech+ is the first credential on a track that leads to Network+, Security+, and real jobs in IT. Ramon took the same first step on his own path. Kleon is right behind him, with a plan to keep stacking certifications.\n\nCongratulations, Kleon. First try. We see you.\n\nIf his story sounds like something you want for yourself, the program is open.",
+        "linkUrl": "/after-the-game",
+        "linkLabel": "Learn About Beyond the Game"
+      },
+      {
+        "slug": "ramon-clemente-passed-two-it-certifications",
+        "date": "2026-07-14",
+        "category": "Spotlight",
+        "title": "Ramon Clemente Passed Two IT Certifications. He's Not Done.",
+        "excerpt": "Ramon Clemente spent years playing basketball before he took over Beyond the Game. This year he became the program's best argument — passing CompTIA Tech+ and Network+, with a security certification up next.",
+        "image": "/images/news/ramon-clemente-certs.png",
+        "imageAlt": "Ramon Clemente, Head of Beyond the Game, passed CompTIA Tech+ and Network+",
+        "body": "Ramon Clemente spent years playing basketball before he took over Beyond the Game, our program for athletes working out what comes after sports. This year he became the program's best argument.\n\nRamon passed the CompTIA Tech+ and Network+ exams, studying under Kobie Joyner, the instructor for his cohort's certification track. Neither exam is a formality. Tech+ covers hardware, software, and troubleshooting fundamentals. Network+ covers how systems connect, and a lot of people fail it at least once. Ramon passed both, and his next target is a security certification.\n\nHe's not just collecting certs. Less than a year into the transition, Ramon is building apps, leaning on AI tools to prototype things that used to require a whole team.\n\nThe reason we're writing about this: Ramon asks his students to believe a former athlete can start over in tech. It's a much easier ask when the guy running the program just did it.\n\nIf you're an athlete wondering what your next chapter looks like, come talk to him.",
+        "linkUrl": "/after-the-game",
+        "linkLabel": "Learn About Beyond the Game"
+      },
+      {
         "slug": "volunteer-with-bcc",
         "date": "2026-07-13",
         "category": "Announcement",
