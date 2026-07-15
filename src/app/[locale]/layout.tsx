@@ -63,10 +63,10 @@ export async function generateMetadata({
       type: "website",
       images: [
         {
-          url: "https://www.wearebcc.org/images/community-og.webp",
+          url: "https://www.wearebcc.org/images/community-og-v2.jpg",
           width: 1456,
           height: 816,
-          alt: "BCC Academy students in the classroom",
+          alt: "A Beyond Code Collective workshop in session at ATDC",
         },
       ],
     },
@@ -78,7 +78,7 @@ export async function generateMetadata({
       description: isEs
         ? "Beyond Code Collective ofrece recursos impulsados por personas para un mundo impulsado por la tecnología."
         : "Beyond Code Collective provides human-powered resources for a tech-driven world.",
-      images: ["https://www.wearebcc.org/images/community-og.webp"],
+      images: ["https://www.wearebcc.org/images/community-og-v2.jpg"],
     },
     alternates: {
       canonical: `https://www.wearebcc.org/${locale}`,
