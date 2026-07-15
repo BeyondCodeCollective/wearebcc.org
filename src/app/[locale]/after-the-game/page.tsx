@@ -3,9 +3,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CheckCircle, UsersThree, Path } from "@phosphor-icons/react";
+import { ArrowUpRight, CheckCircle, SealCheck, UsersThree, Path } from "@phosphor-icons/react";
 import { Nav } from "@/components/nav";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export default function AfterTheGame() {
   const t = useTranslations("atg");
@@ -52,6 +53,38 @@ export default function AfterTheGame() {
     stats.push({ stat: t(`problemStats.${si}.stat`), label: t(`problemStats.${si}.label`) });
     si++;
   }
+
+  // Read results stats array
+  const resultsStats: { stat: string; label: string }[] = [];
+  let ri = 0;
+  while (t.has(`resultsStats.${ri}.stat`)) {
+    resultsStats.push({
+      stat: t(`resultsStats.${ri}.stat`),
+      label: t(`resultsStats.${ri}.label`),
+    });
+    ri++;
+  }
+
+  const resultsCards = [
+    {
+      title: t("resultsCard1Title"),
+      slug: t("resultsCard1Slug"),
+      image: t("resultsCard1Image"),
+    },
+    {
+      title: t("resultsCard2Title"),
+      slug: t("resultsCard2Slug"),
+      image: t("resultsCard2Image"),
+    },
+  ];
+
+  const certCourses = [1, 2, 3].map((n) => ({
+    title: t(`comptiaCourse${n}Title`),
+    detail: t(`comptiaCourse${n}Detail`),
+    desc: t(`comptiaCourse${n}Desc`),
+    status: t(`comptiaCourse${n}Status`),
+    done: n < 3,
+  }));
 
   // Read program items
   const programItems: string[] = [];
@@ -218,6 +251,17 @@ export default function AfterTheGame() {
             <p className="mt-4 text-base leading-relaxed text-grey-3">
               {t("videoDescription")}
             </p>
+            <blockquote className="mt-8 border-l-2 border-cobalt pl-5">
+              <p className="text-base font-medium leading-relaxed text-true-black">
+                &ldquo;{t("quoteText")}&rdquo;
+              </p>
+              <cite
+                className="mt-3 block font-mono text-[10px] uppercase not-italic tracking-wider text-grey-3"
+                style={{ fontFamily: "var(--font-mono)" }}
+              >
+                {t("quoteAuthor")} · {t("quoteRole")}
+              </cite>
+            </blockquote>
           </div>
           <div className="relative aspect-[4/3] w-full overflow-hidden">
             <Image
@@ -229,6 +273,90 @@ export default function AfterTheGame() {
             />
           </div>
         </motion.div>
+      </section>
+
+      {/* Results — cohort 1 receipts */}
+      <section className="bg-true-black px-6 py-16 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <p
+              className="font-mono text-xs tracking-wider text-electric-green"
+              style={{ fontFamily: "var(--font-mono)" }}
+            >
+              [ {t("resultsLabel")} ]
+            </p>
+            <h2 className="mt-4 font-heading text-[clamp(1.75rem,4vw,3rem)] leading-[0.9] text-off-white">
+              {t("resultsHeadline1")}
+              <br />
+              <span className="text-electric-green">{t("resultsHeadline2")}</span>
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-off-white/70">
+              {t("resultsText")}
+            </p>
+          </motion.div>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            {resultsStats.map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 * i, duration: 0.5 }}
+                className="border border-off-white/10 bg-charcoal p-6"
+              >
+                <p className="font-heading text-4xl leading-none text-electric-green">
+                  {item.stat}
+                </p>
+                <p
+                  className="mt-2 font-mono text-[10px] uppercase tracking-wider text-off-white/50"
+                  style={{ fontFamily: "var(--font-mono)" }}
+                >
+                  {item.label}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+            {resultsCards.map((card, i) => (
+              <motion.div
+                key={card.slug}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 * i, duration: 0.6 }}
+              >
+                <Link href={`/news/${card.slug}`} className="group block">
+                  <div className="relative aspect-video w-full overflow-hidden">
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                      sizes="(min-width: 1024px) 50vw, 100vw"
+                    />
+                  </div>
+                  <p className="mt-4 font-heading text-xl leading-tight text-off-white">
+                    {card.title}
+                  </p>
+                  <p
+                    className="mt-2 inline-flex items-center gap-2 font-mono text-xs tracking-wider text-electric-green"
+                    style={{ fontFamily: "var(--font-mono)" }}
+                  >
+                    {t("resultsRead")}
+                    <ArrowUpRight size={14} weight="bold" />
+                  </p>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* The Program — checklist + image */}
@@ -355,6 +483,69 @@ export default function AfterTheGame() {
             <p className="mt-4 text-base leading-relaxed text-grey-3">
               {t("curriculumText")}
             </p>
+          </motion.div>
+
+          {/* Certification tracks */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="border-l-2 border-cobalt pl-6"
+          >
+            <div className="flex items-center gap-3">
+              <SealCheck size={28} weight="bold" className="text-cobalt" />
+              <p
+                className="font-mono text-xs tracking-wider text-cobalt"
+                style={{ fontFamily: "var(--font-mono)" }}
+              >
+                {t("comptiaLabel")}
+              </p>
+            </div>
+            <h3 className="mt-3 font-heading text-[clamp(1.5rem,3vw,2.25rem)] leading-[0.9] text-true-black">
+              {t("comptiaHeadline1")}
+              <br />
+              <span className="text-cobalt">{t("comptiaHeadline2")}</span>
+            </h3>
+            <p className="mt-4 text-base leading-relaxed text-grey-3">
+              {t("comptiaText")}
+            </p>
+
+            <div className="mt-8 grid gap-4 lg:grid-cols-3">
+              {certCourses.map((course, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 * i, duration: 0.5 }}
+                  className="flex flex-col bg-white p-6"
+                >
+                  <span
+                    className={`self-start px-2.5 py-1 font-mono text-[10px] tracking-wider ${
+                      course.done
+                        ? "bg-true-black text-electric-green"
+                        : "bg-cobalt text-off-white"
+                    }`}
+                    style={{ fontFamily: "var(--font-mono)" }}
+                  >
+                    {course.status}
+                  </span>
+                  <p className="mt-4 font-heading text-lg leading-tight text-true-black">
+                    {course.title}
+                  </p>
+                  <p
+                    className="mt-1 font-mono text-[10px] tracking-wider text-grey-3"
+                    style={{ fontFamily: "var(--font-mono)" }}
+                  >
+                    {course.detail}
+                  </p>
+                  <p className="mt-3 text-sm leading-relaxed text-grey-3">
+                    {course.desc}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
 
         </div>
