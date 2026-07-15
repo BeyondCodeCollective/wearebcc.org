@@ -21,5 +21,10 @@ export const config = {
   // extension, so bare paths like /partners or /code-along get a locale.
   // /decks/:path* is matched explicitly (despite the extension) so the
   // partner-gate cookie check above runs for gated static decks.
-  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)", "/decks/:path*"],
+  // icon/apple-icon are Next's extensionless metadata routes — the intl
+  // redirect must not touch them or the favicon 404s on every page.
+  matcher: [
+    "/((?!api|_next|_vercel|icon|apple-icon|.*\\..*).*)",
+    "/decks/:path*",
+  ],
 };
