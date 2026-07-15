@@ -206,14 +206,6 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
                     >
                       {t("afterTheGame")}
                     </Link>
-                    <Link
-                      href="/code-along"
-                      onClick={() => setInitiativesOpen(false)}
-                      className={dropdownLinkClass}
-                      style={{ fontFamily: "var(--font-mono)" }}
-                    >
-                      {t("codeAlong")}
-                    </Link>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -445,14 +437,6 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
                         style={{ fontFamily: "var(--font-mono)" }}
                       >
                         {t("afterTheGame")}
-                      </Link>
-                      <Link
-                        href="/code-along"
-                        onClick={() => setMobileOpen(false)}
-                        className={mobileSubLinkClass}
-                        style={{ fontFamily: "var(--font-mono)" }}
-                      >
-                        {t("codeAlong")}
                       </Link>
                     </div>
                   </motion.div>

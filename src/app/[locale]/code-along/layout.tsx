@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Code Along Beyond: Music | Beyond Code Collective",
   description:
     "Code Along Beyond: Music — Beyond Code Collective's free YouTube coding series launches Saturday, Aug 8, with support from Apple. Four episodes, one music playlist app, built from scratch.",
+  // Hidden for now — unlinked from nav/footer and kept out of search until
+  // the series is ready to relaunch.
+  robots: { index: false, follow: false },
   openGraph: {
     title: "Code Along Beyond: Music",
     description:
