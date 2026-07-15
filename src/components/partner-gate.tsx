@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Eye, EyeSlash, LockSimple } from "@phosphor-icons/react";
+import { useTranslations } from "next-intl";
 
 export const PARTNER_GATE_STORAGE_KEY = "bcc-partner-portal-unlocked";
 
@@ -13,6 +14,7 @@ export const PARTNER_GATE_STORAGE_KEY = "bcc-partner-portal-unlocked";
  * browser session.
  */
 export function PartnerGate({ onUnlock }: { onUnlock: () => void }) {
+  const t = useTranslations("partnerGate");
   const [password, setPassword] = useState("");
   const [revealed, setRevealed] = useState(false);
   const [error, setError] = useState(false);
@@ -56,23 +58,22 @@ export function PartnerGate({ onUnlock }: { onUnlock: () => void }) {
           className="mt-6 font-mono text-xs uppercase tracking-wider text-cobalt"
           style={{ fontFamily: "var(--font-mono)" }}
         >
-          [ Partners Only ]
+          {t("label")}
         </p>
         <h1 className="mt-3 font-heading text-4xl leading-[0.9] text-true-black">
-          PARTNER
+          {t("headline1")}
           <br />
-          ACCESS
+          {t("headline2")}
         </h1>
         <p className="mt-4 text-sm leading-relaxed text-grey-3">
-          This page is for Beyond Code Collective hiring partners. Enter the
-          access code you received from our team.
+          {t("intro")}
         </p>
         <div className="relative mt-6">
           <input
             type={revealed ? "text" : "password"}
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Access code"
+            placeholder={t("placeholder")}
             autoFocus
             className="w-full border border-true-black/20 bg-white py-3 pl-4 pr-12 font-mono text-sm tracking-wider outline-none focus:border-cobalt"
             style={{ fontFamily: "var(--font-mono)" }}
@@ -80,7 +81,7 @@ export function PartnerGate({ onUnlock }: { onUnlock: () => void }) {
           <button
             type="button"
             onClick={() => setRevealed((r) => !r)}
-            aria-label={revealed ? "Hide access code" : "Show access code"}
+            aria-label={revealed ? t("hide") : t("show")}
             aria-pressed={revealed}
             className="absolute inset-y-0 right-0 flex w-12 items-center justify-center text-true-black/40 transition-colors hover:text-cobalt"
           >
@@ -93,7 +94,7 @@ export function PartnerGate({ onUnlock }: { onUnlock: () => void }) {
         </div>
         {error ? (
           <p className="mt-2 text-sm text-orange">
-            That code didn&apos;t work. Please try again.
+            {t("error")}
           </p>
         ) : null}
         <button
@@ -102,17 +103,17 @@ export function PartnerGate({ onUnlock }: { onUnlock: () => void }) {
           className="mt-4 w-full bg-true-black px-6 py-4 font-mono text-xs uppercase tracking-wider text-off-white transition-colors hover:bg-cobalt disabled:opacity-50"
           style={{ fontFamily: "var(--font-mono)" }}
         >
-          {checking ? "Checking..." : "View Partner Page"}
+          {checking ? t("checking") : t("submit")}
         </button>
         <p className="mt-4 text-sm leading-relaxed text-grey-3">
-          Need access? Email{" "}
+          {t("needAccessPre")}{" "}
           <a
             href="mailto:catalyst@wearebcc.org"
             className="text-cobalt underline-offset-4 hover:underline"
           >
             catalyst@wearebcc.org
           </a>{" "}
-          and our team will send you a code.
+          {t("needAccessPost")}
         </p>
       </motion.form>
     </section>
