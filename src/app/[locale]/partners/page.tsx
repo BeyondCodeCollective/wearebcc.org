@@ -3,108 +3,13 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ShieldCheck, ArrowUpRight } from "@phosphor-icons/react";
-import { PartnerGate, PARTNER_GATE_STORAGE_KEY } from "@/components/partner-gate";
+import { useTranslations } from "next-intl";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
-
-const CREDENTIALS = [
-  "CompTIA Tech+",
-  "CompTIA Network+",
-  "CompTIA Security+ (SY0-701)",
-  "SOC-Analyst Capstone",
-  "Durable Skills Coaching",
-];
-
-const PILLARS = [
-  {
-    n: "01",
-    title: "STACKED CREDENTIALS",
-    text: "Tech+, Network+, and Security+ — industry-recognized proof that compounds, not a single bootcamp certificate.",
-  },
-  {
-    n: "02",
-    title: "HANDS-ON CAPSTONE",
-    text: "A completed SOC-analyst simulation demonstrates ability directly, even for candidates without prior security job history.",
-  },
-  {
-    n: "03",
-    title: "DURABLE SKILLS",
-    text: "Our career coaching curriculum builds the reliability, communication, and follow-through that make entry-level hires stick.",
-  },
-  {
-    n: "04",
-    title: "ONGOING SUPPORT",
-    text: "We stay engaged after the hire with wraparound support to protect retention.",
-  },
-];
-
-const ROLES = [
-  {
-    track: "Track · Operations",
-    title: "SOC ANALYST I",
-    text: "Security operations, SIEM monitoring, and alert triage — backed directly by the cohort's capstone. Multiple candidates name SOC work as their clear goal.",
-  },
-  {
-    track: "Track · Foundations",
-    title: "IT SUPPORT & HELP DESK",
-    text: "Service desk, desktop, and technical support — the proven on-ramp for candidates with Network+/Tech+ and strong transferable experience.",
-  },
-  {
-    track: "Track · Governance",
-    title: "GRC & COMPLIANCE",
-    text: "Governance, risk, IT audit, and compliance analysis — a natural fit for candidates coming from audit, Salesforce administration, and operations.",
-  },
-  {
-    track: "Track · Cloud & Automation",
-    title: "CLOUD & SECURITY AUTOMATION",
-    text: "Entry cloud security and DevSecOps-adjacent roles — including a QA-automation engineer bridging into security automation.",
-  },
-];
-
-const CALIBER = [
-  {
-    tag: "SOC · Forensics",
-    text: "Cybersecurity master's candidate, fluent in ServiceNow, Wireshark, and Azure — targeting SOC and digital-forensics roles.",
-  },
-  {
-    tag: "Security Leadership Track",
-    text: "Former Director of Systems Development from the nonprofit IT world, bringing management depth into a security pivot.",
-  },
-  {
-    tag: "Security Automation",
-    text: "QA automation engineer with a clear bridge story: from test automation into DevSecOps and security automation.",
-  },
-  {
-    tag: "GRC · Compliance",
-    text: "Salesforce administrator and consultant moving deliberately toward governance, risk, and compliance work.",
-  },
-  {
-    tag: "Security Operations",
-    text: "Military IT veteran seeking to stay in IT and security operations — a repeat, high-commitment participant.",
-  },
-  {
-    tag: "SOC · SIEM · GRC",
-    text: "Local-government data and audit analyst, ServiceNow user, targeting SOC, SIEM, and GRC pathways.",
-  },
-];
-
-const STEPS = [
-  {
-    n: "Step 01",
-    title: "INFORMATIONAL INTERVIEW",
-    text: "Spend 30 minutes with a vetted candidate. Your insights help prepare future cybersecurity professionals while introducing you to highly motivated career changers who are ready to make an immediate impact.",
-  },
-  {
-    n: "Step 02",
-    title: "PREVIEW AT DEMO DAY",
-    text: "Join us in early September to watch the cohort present their SOC-analyst capstones live.",
-  },
-  {
-    n: "Step 03",
-    title: "INTERVIEW IN OCTOBER",
-    text: "Commit to interview job-ready candidates matched to your open roles.",
-  },
-];
+import {
+  PartnerGate,
+  PARTNER_GATE_STORAGE_KEY,
+} from "@/components/partner-gate";
 
 const reveal = {
   initial: { opacity: 0, y: 30 },
@@ -131,6 +36,15 @@ function MonoLabel({
 }
 
 function CatalystContent() {
+  const t = useTranslations("partners");
+
+  const stats = t.raw("stats") as { stat: string; label: string }[];
+  const credentials = t.raw("credentials") as string[];
+  const pillars = t.raw("pillars") as { n: string; title: string; text: string }[];
+  const roles = t.raw("roles") as { track: string; title: string; text: string }[];
+  const caliber = t.raw("caliber") as { tag: string; text: string }[];
+  const steps = t.raw("steps") as { n: string; title: string; text: string }[];
+
   return (
     <>
       {/* Hero */}
@@ -143,25 +57,22 @@ function CatalystContent() {
           >
             <div className="flex items-center gap-2">
               <div className="h-2 w-2 animate-pulse rounded-full bg-electric-green" />
-              <MonoLabel className="text-electric-green">
-                Catalyst · Cybersecurity Cohort
-              </MonoLabel>
+              <MonoLabel className="text-electric-green">{t("badge")}</MonoLabel>
             </div>
             <h1 className="mt-6 font-heading text-[clamp(3rem,8vw,6rem)] leading-[0.85] text-off-white">
-              HIRE
+              {t("heroHeadline1")}
               <br />
-              <span className="text-electric-green">READY.</span>
+              <span className="text-electric-green">{t("heroHeadline2")}</span>
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-off-white/70 sm:text-lg">
-              A cohort of certified, screened, job-ready cybersecurity talent —
-              available to interview this October.
+              {t("heroText")}
             </p>
             <a
               href="mailto:catalyst@wearebcc.org"
               className="mt-8 inline-flex items-center gap-2 bg-cobalt px-6 py-4 font-mono text-xs uppercase tracking-wider text-off-white transition-colors hover:bg-off-white hover:text-true-black"
               style={{ fontFamily: "var(--font-mono)" }}
             >
-              Talk To Our Team
+              {t("talkCta")}
               <ArrowUpRight size={14} weight="bold" />
             </a>
           </motion.div>
@@ -174,7 +85,7 @@ function CatalystContent() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://beyondcode-catalyst.vercel.app/hero.jpg"
-              alt="Beyond Code Catalyst cohort collaborating"
+              alt={t("heroImageAlt")}
               className="h-full w-full object-cover"
             />
           </motion.div>
@@ -184,10 +95,7 @@ function CatalystContent() {
       {/* Stats bar */}
       <section className="border-t border-off-white/10 bg-true-black px-6 py-10 lg:px-8">
         <div className="mx-auto grid max-w-4xl grid-cols-2 gap-6">
-          {[
-            { stat: "15", label: "Vetted candidates in the inaugural cohort" },
-            { stat: "OCT", label: "Interview-ready · 2026 placement window" },
-          ].map((item, i) => (
+          {stats.map((item, i) => (
             <motion.div
               key={i}
               {...reveal}
@@ -212,22 +120,14 @@ function CatalystContent() {
       <section className="bg-off-white px-6 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-4xl">
           <motion.div {...reveal}>
-            <MonoLabel>[ The Gap ]</MonoLabel>
+            <MonoLabel>{t("gapLabel")}</MonoLabel>
             <h2 className="mt-4 font-heading text-[clamp(1.75rem,4.5vw,3rem)] leading-[0.92] text-true-black">
-              THERE ARE MORE OPEN CYBER ROLES THAN CREDENTIALED PEOPLE TO FILL
-              THEM.{" "}
-              <span className="text-cobalt">
-                WE&apos;VE SCREENED THE TALENT TO CLOSE THE GAP.
-              </span>
+              {t("gapHeadline1")}{" "}
+              <span className="text-cobalt">{t("gapHeadline2")}</span>
             </h2>
             <p className="mt-6 max-w-3xl text-base leading-relaxed text-grey-3 sm:text-lg">
-              Beyond Code&apos;s Cybersecurity cohort is a pre-vetted pipeline
-              of career-changers who hold stacked CompTIA industry credentials,
-              have completed a live SOC-analyst simulation, and bring extensive
-              work experience with transferable skills.{" "}
-              <strong className="text-true-black">
-                You get first access to proven talent.
-              </strong>
+              {t("gapText")}{" "}
+              <strong className="text-true-black">{t("gapStrong")}</strong>
             </p>
           </motion.div>
         </div>
@@ -237,19 +137,17 @@ function CatalystContent() {
       <section className="bg-grey-1 px-6 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-2">
           <motion.div {...reveal}>
-            <MonoLabel>[ Who You&apos;re Hiring ]</MonoLabel>
+            <MonoLabel>{t("whoLabel")}</MonoLabel>
             <h3 className="mt-4 font-heading text-3xl leading-[0.92] text-true-black sm:text-4xl">
-              CERTIFIED &amp;
+              {t("whoHeadline1")}
               <br />
-              SCREENED
+              {t("whoHeadline2")}
             </h3>
             <p className="mt-5 text-base leading-relaxed text-grey-3">
-              Every candidate enters your pipeline already holding a stack of
-              CompTIA credentials, with all of them finishing Security+
-              certification by Q4 2026.
+              {t("whoText1")}
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
-              {CREDENTIALS.map((c) => (
+              {credentials.map((c) => (
                 <span
                   key={c}
                   className="border border-true-black/30 bg-white px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-true-black"
@@ -260,9 +158,7 @@ function CatalystContent() {
               ))}
             </div>
             <p className="mt-6 text-base leading-relaxed text-grey-3">
-              This isn&apos;t first-time talent. They&apos;re bringing real
-              careers in systems administration, QA automation, IT leadership,
-              and government audit as they transition into tech careers.
+              {t("whoText2")}
             </p>
             <div className="mt-8 bg-true-black p-6">
               <div className="flex items-center gap-2">
@@ -272,31 +168,27 @@ function CatalystContent() {
                   className="text-electric-green"
                 />
                 <MonoLabel className="text-electric-green">
-                  Proof, Not Promise
+                  {t("proofLabel")}
                 </MonoLabel>
               </div>
               <h4 className="mt-3 font-heading text-xl text-off-white">
-                THEY&apos;VE DONE THE WORK
+                {t("proofHeadline")}
               </h4>
               <p className="mt-2 text-sm leading-relaxed text-off-white/70">
-                Every graduate completes a SOC-analyst simulation — triaging
-                real alerts in a SIEM lab, identifying the threat, and writing
-                an incident report. It&apos;s the closest thing to an
-                entry-level SOC workflow, and you can preview it before you
-                interview.
+                {t("proofText")}
               </p>
             </div>
           </motion.div>
 
           <motion.div {...reveal} transition={{ delay: 0.15, duration: 0.6 }}>
-            <MonoLabel>[ Why Catalyst Talent ]</MonoLabel>
+            <MonoLabel>{t("whyLabel")}</MonoLabel>
             <h3 className="mt-4 font-heading text-3xl leading-[0.92] text-true-black sm:text-4xl">
-              WHY THE
+              {t("whyHeadline1")}
               <br />
-              MODEL WORKS
+              {t("whyHeadline2")}
             </h3>
             <div className="mt-8 space-y-7">
-              {PILLARS.map((p) => (
+              {pillars.map((p) => (
                 <div key={p.n} className="flex gap-5">
                   <span className="font-heading text-3xl leading-none text-cobalt">
                     {p.n}
@@ -320,15 +212,15 @@ function CatalystContent() {
       <section className="bg-off-white px-6 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <motion.div {...reveal}>
-            <MonoLabel>[ Roles They&apos;re Ready For ]</MonoLabel>
+            <MonoLabel>{t("rolesLabel")}</MonoLabel>
             <h2 className="mt-4 font-heading text-3xl leading-[0.92] text-true-black sm:text-5xl">
-              FOUR TRACKS,
+              {t("rolesHeadline1")}
               <br />
-              JOB-READY NOW
+              {t("rolesHeadline2")}
             </h2>
           </motion.div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2">
-            {ROLES.map((r, i) => (
+            {roles.map((r, i) => (
               <motion.div
                 key={r.title}
                 {...reveal}
@@ -352,15 +244,15 @@ function CatalystContent() {
       <section className="bg-grey-1 px-6 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <motion.div {...reveal}>
-            <MonoLabel>[ A Preview Of The Room ]</MonoLabel>
+            <MonoLabel>{t("caliberLabel")}</MonoLabel>
             <h2 className="mt-4 font-heading text-3xl leading-[0.92] text-true-black sm:text-5xl">
-              THE CALIBER
+              {t("caliberHeadline1")}
               <br />
-              YOU&apos;LL MEET
+              {t("caliberHeadline2")}
             </h2>
           </motion.div>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {CALIBER.map((c, i) => (
+            {caliber.map((c, i) => (
               <motion.div
                 key={c.tag}
                 {...reveal}
@@ -378,8 +270,7 @@ function CatalystContent() {
             className="mt-8 font-mono text-xs tracking-wider text-grey-3"
             style={{ fontFamily: "var(--font-mono)" }}
           >
-            Anonymized snapshots from the confirmed cohort. Full candidate
-            profiles shared with committed hiring partners.
+            {t("caliberNote")}
           </p>
         </div>
       </section>
@@ -389,16 +280,16 @@ function CatalystContent() {
         <div className="mx-auto max-w-7xl">
           <motion.div {...reveal}>
             <MonoLabel className="text-electric-green">
-              [ How Partnership Works ]
+              {t("stepsLabel")}
             </MonoLabel>
             <h2 className="mt-4 font-heading text-3xl leading-[0.92] text-off-white sm:text-5xl">
-              THREE WAYS IN —
+              {t("stepsHeadline1")}
               <br />
-              START WHEREVER YOU LIKE
+              {t("stepsHeadline2")}
             </h2>
           </motion.div>
           <div className="mt-12 grid gap-10 sm:grid-cols-3">
-            {STEPS.map((s, i) => (
+            {steps.map((s, i) => (
               <motion.div
                 key={s.n}
                 {...reveal}
@@ -421,21 +312,12 @@ function CatalystContent() {
       <section className="bg-off-white px-6 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-4xl">
           <motion.div {...reveal}>
-            <MonoLabel>[ About Beyond Code ]</MonoLabel>
+            <MonoLabel>{t("aboutLabel")}</MonoLabel>
             <p className="mt-5 text-base leading-relaxed text-grey-3 sm:text-lg">
-              Beyond Code Collective is a nonprofit bridging the gap between
-              inspiration, training, and employment in tech. We connect
-              talent to accessible education, hands-on opportunities to build
-              with emerging technologies, and clear pathways to launch and grow
-              meaningful careers.
+              {t("aboutText1")}
             </p>
             <p className="mt-4 text-base leading-relaxed text-grey-3 sm:text-lg">
-              Designed for participants of all ages and backgrounds, Beyond Code
-              prepares people to thrive in a tech-powered world and achieve
-              lasting career mobility. Catalyst is our flagship workforce
-              program for adults — pairing market-relevant technical skills
-              with durable mindset coaching, employer partnerships, and
-              community.
+              {t("aboutText2")}
             </p>
           </motion.div>
           <motion.blockquote
@@ -444,16 +326,13 @@ function CatalystContent() {
             className="mt-12 bg-white p-8"
           >
             <p className="text-lg font-medium leading-relaxed text-true-black">
-              &ldquo;Catalyst is how we ensure a human stays in the loop. We
-              focus on building access to inspiration, to community, to early
-              skills, enabling talent to build meaningful careers and become
-              catalysts for change in the tech ecosystem.&rdquo;
+              &ldquo;{t("quoteText")}&rdquo;
             </p>
             <cite
               className="mt-5 block font-mono text-xs uppercase not-italic tracking-wider text-grey-3"
               style={{ fontFamily: "var(--font-mono)" }}
             >
-              Cristina Mancini · Founder &amp; CEO, Beyond Code Collective
+              {t("quoteAttribution")}
             </cite>
           </motion.blockquote>
         </div>
@@ -466,10 +345,8 @@ function CatalystContent() {
             {...reveal}
             className="max-w-xl font-heading text-3xl leading-[0.92] text-off-white sm:text-4xl"
           >
-            MEET THE TALENT THIS SUMMER.{" "}
-            <span className="text-electric-green">
-              HIRE BEFORE END OF YEAR.
-            </span>
+            {t("ctaHeadline1")}{" "}
+            <span className="text-electric-green">{t("ctaHeadline2")}</span>
           </motion.h2>
           <motion.div
             {...reveal}
@@ -477,7 +354,7 @@ function CatalystContent() {
             className="font-mono text-sm leading-relaxed text-off-white/70"
             style={{ fontFamily: "var(--font-mono)" }}
           >
-            Mica Le John · Executive Director
+            {t("ctaContact")}
             <br />
             <a
               href="mailto:mica@wearebcc.org"

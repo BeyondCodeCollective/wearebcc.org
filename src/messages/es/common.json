@@ -79,6 +79,98 @@
     "cta": "Ver la Serie",
     "close": "Cerrar"
   },
+  "partnerGate": {
+    "label": "[ Solo Para Socios ]",
+    "headline1": "ACCESO PARA",
+    "headline2": "SOCIOS",
+    "intro": "Esta página es para socios de contratación de Beyond Code Collective. Ingresa el código de acceso que recibiste de nuestro equipo.",
+    "placeholder": "Código de acceso",
+    "show": "Mostrar código de acceso",
+    "hide": "Ocultar código de acceso",
+    "error": "Ese código no funcionó. Inténtalo de nuevo.",
+    "checking": "Verificando...",
+    "submit": "Ver Página de Socios",
+    "needAccessPre": "¿Necesitas acceso? Escribe a",
+    "needAccessPost": "y nuestro equipo te enviará un código."
+  },
+  "partners": {
+    "badge": "Catalyst · Cohorte de Ciberseguridad",
+    "heroHeadline1": "CONTRATA",
+    "heroHeadline2": "TALENTO LISTO.",
+    "heroText": "Una cohorte de talento en ciberseguridad certificado, evaluado y listo para trabajar — disponible para entrevistas este octubre.",
+    "heroImageAlt": "Cohorte de Beyond Code Catalyst colaborando",
+    "talkCta": "Habla Con Nuestro Equipo",
+    "stats": [
+      { "stat": "15", "label": "Candidatos evaluados en la cohorte inaugural" },
+      { "stat": "OCT", "label": "Listos para entrevistas · ventana de colocación 2026" }
+    ],
+    "gapLabel": "[ La Brecha ]",
+    "gapHeadline1": "HAY MÁS PUESTOS ABIERTOS EN CIBERSEGURIDAD QUE PERSONAS ACREDITADAS PARA CUBRIRLOS.",
+    "gapHeadline2": "NOSOTROS YA EVALUAMOS EL TALENTO PARA CERRAR LA BRECHA.",
+    "gapText": "La cohorte de Ciberseguridad de Beyond Code es una cantera pre-evaluada de profesionales en transición que poseen credenciales acumuladas de CompTIA, completaron una simulación en vivo de analista SOC y aportan amplia experiencia laboral con habilidades transferibles.",
+    "gapStrong": "Obtienes acceso prioritario a talento comprobado.",
+    "whoLabel": "[ A Quién Contratas ]",
+    "whoHeadline1": "CERTIFICADOS Y",
+    "whoHeadline2": "EVALUADOS",
+    "whoText1": "Cada candidato entra a tu proceso con un conjunto de credenciales CompTIA, y todos completarán la certificación Security+ antes del cuarto trimestre de 2026.",
+    "credentials": [
+      "CompTIA Tech+",
+      "CompTIA Network+",
+      "CompTIA Security+ (SY0-701)",
+      "Capstone de Analista SOC",
+      "Coaching de Habilidades Duraderas"
+    ],
+    "whoText2": "No es talento sin experiencia. Traen carreras reales en administración de sistemas, automatización de QA, liderazgo de TI y auditoría gubernamental mientras hacen su transición a la tecnología.",
+    "proofLabel": "Pruebas, No Promesas",
+    "proofHeadline": "YA HICIERON EL TRABAJO",
+    "proofText": "Cada graduado completa una simulación de analista SOC — clasificando alertas reales en un laboratorio SIEM, identificando la amenaza y redactando un informe de incidente. Es lo más cercano a un flujo de trabajo SOC de nivel inicial, y puedes verlo antes de entrevistar.",
+    "whyLabel": "[ Por Qué el Talento Catalyst ]",
+    "whyHeadline1": "POR QUÉ",
+    "whyHeadline2": "FUNCIONA EL MODELO",
+    "pillars": [
+      { "n": "01", "title": "CREDENCIALES ACUMULADAS", "text": "Tech+, Network+ y Security+ — pruebas reconocidas por la industria que se acumulan, no un certificado único de bootcamp." },
+      { "n": "02", "title": "CAPSTONE PRÁCTICO", "text": "Una simulación completada de analista SOC demuestra la capacidad directamente, incluso para candidatos sin historial laboral previo en seguridad." },
+      { "n": "03", "title": "HABILIDADES DURADERAS", "text": "Nuestro currículo de coaching profesional construye la fiabilidad, la comunicación y la constancia que hacen que las contrataciones de nivel inicial permanezcan." },
+      { "n": "04", "title": "APOYO CONTINUO", "text": "Seguimos involucrados después de la contratación con apoyo integral para proteger la retención." }
+    ],
+    "rolesLabel": "[ Roles Para Los Que Están Listos ]",
+    "rolesHeadline1": "CUATRO RUTAS,",
+    "rolesHeadline2": "LISTOS PARA TRABAJAR",
+    "roles": [
+      { "track": "Ruta · Operaciones", "title": "ANALISTA SOC I", "text": "Operaciones de seguridad, monitoreo SIEM y clasificación de alertas — respaldado directamente por el capstone de la cohorte. Varios candidatos nombran el trabajo SOC como su meta clara." },
+      { "track": "Ruta · Fundamentos", "title": "SOPORTE DE TI Y MESA DE AYUDA", "text": "Mesa de servicio, soporte de escritorio y soporte técnico — la vía de entrada comprobada para candidatos con Network+/Tech+ y sólida experiencia transferible." },
+      { "track": "Ruta · Gobernanza", "title": "GRC Y CUMPLIMIENTO", "text": "Gobernanza, riesgo, auditoría de TI y análisis de cumplimiento — un encaje natural para candidatos que vienen de auditoría, administración de Salesforce y operaciones." },
+      { "track": "Ruta · Nube y Automatización", "title": "SEGURIDAD EN LA NUBE Y AUTOMATIZACIÓN", "text": "Roles de nivel inicial en seguridad de nube y adyacentes a DevSecOps — incluyendo una ingeniera de automatización de QA en transición hacia la automatización de seguridad." }
+    ],
+    "caliberLabel": "[ Un Vistazo a la Sala ]",
+    "caliberHeadline1": "EL CALIBRE",
+    "caliberHeadline2": "QUE CONOCERÁS",
+    "caliber": [
+      { "tag": "SOC · Forense", "text": "Estudiante de maestría en ciberseguridad, con dominio de ServiceNow, Wireshark y Azure — enfocado en roles de SOC y forense digital." },
+      { "tag": "Ruta de Liderazgo en Seguridad", "text": "Ex Director de Desarrollo de Sistemas del mundo de TI sin fines de lucro, aportando profundidad de gestión a su giro hacia la seguridad." },
+      { "tag": "Automatización de Seguridad", "text": "Ingeniera de automatización de QA con una historia de transición clara: de la automatización de pruebas a DevSecOps y la automatización de seguridad." },
+      { "tag": "GRC · Cumplimiento", "text": "Administradora y consultora de Salesforce avanzando deliberadamente hacia el trabajo de gobernanza, riesgo y cumplimiento." },
+      { "tag": "Operaciones de Seguridad", "text": "Veterano de TI militar que busca continuar en TI y operaciones de seguridad — un participante recurrente y de alto compromiso." },
+      { "tag": "SOC · SIEM · GRC", "text": "Analista de datos y auditoría de gobierno local, usuario de ServiceNow, enfocado en rutas de SOC, SIEM y GRC." }
+    ],
+    "caliberNote": "Perfiles anonimizados de la cohorte confirmada. Los perfiles completos de candidatos se comparten con socios de contratación comprometidos.",
+    "stepsLabel": "[ Cómo Funciona la Alianza ]",
+    "stepsHeadline1": "TRES FORMAS DE ENTRAR —",
+    "stepsHeadline2": "EMPIEZA DONDE QUIERAS",
+    "steps": [
+      { "n": "Paso 01", "title": "ENTREVISTA INFORMATIVA", "text": "Dedica 30 minutos a un candidato evaluado. Tus perspectivas ayudan a preparar a los futuros profesionales de ciberseguridad mientras conoces a personas en cambio de carrera altamente motivadas y listas para generar un impacto inmediato." },
+      { "n": "Paso 02", "title": "VISTA PREVIA EN EL DEMO DAY", "text": "Acompáñanos a principios de septiembre para ver a la cohorte presentar en vivo sus capstones de analista SOC." },
+      { "n": "Paso 03", "title": "ENTREVISTA EN OCTUBRE", "text": "Comprométete a entrevistar candidatos listos para trabajar, emparejados con tus vacantes." }
+    ],
+    "aboutLabel": "[ Sobre Beyond Code ]",
+    "aboutText1": "Beyond Code Collective es una organización sin fines de lucro que cierra la brecha entre la inspiración, la formación y el empleo en tecnología. Conectamos al talento con educación accesible, oportunidades prácticas para construir con tecnologías emergentes y caminos claros para lanzar y hacer crecer carreras significativas.",
+    "aboutText2": "Diseñado para participantes de todas las edades y orígenes, Beyond Code prepara a las personas para prosperar en un mundo impulsado por la tecnología y lograr movilidad profesional duradera. Catalyst es nuestro programa insignia de fuerza laboral para adultos — combinando habilidades técnicas relevantes para el mercado con coaching de mentalidad duradera, alianzas con empleadores y comunidad.",
+    "quoteText": "Catalyst es cómo garantizamos que un humano permanezca en el centro. Nos enfocamos en construir acceso a la inspiración, a la comunidad, a las habilidades tempranas, permitiendo que el talento construya carreras significativas y se convierta en catalizador de cambio en el ecosistema tecnológico.",
+    "quoteAttribution": "Cristina Mancini · Fundadora y CEO, Beyond Code Collective",
+    "ctaHeadline1": "CONOCE AL TALENTO ESTE VERANO.",
+    "ctaHeadline2": "CONTRATA ANTES DE FIN DE AÑO.",
+    "ctaContact": "Mica Le John · Directora Ejecutiva"
+  },
   "atg": {
     "back": "WEAREBCC.ORG",
     "nextCohort": "COHORTE 1 EN CURSO · SECURITY+ EN MARCHA",

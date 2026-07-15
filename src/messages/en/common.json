@@ -79,6 +79,98 @@
     "cta": "See the Series",
     "close": "Close"
   },
+  "partnerGate": {
+    "label": "[ Partners Only ]",
+    "headline1": "PARTNER",
+    "headline2": "ACCESS",
+    "intro": "This page is for Beyond Code Collective hiring partners. Enter the access code you received from our team.",
+    "placeholder": "Access code",
+    "show": "Show access code",
+    "hide": "Hide access code",
+    "error": "That code didn't work. Please try again.",
+    "checking": "Checking...",
+    "submit": "View Partner Page",
+    "needAccessPre": "Need access? Email",
+    "needAccessPost": "and our team will send you a code."
+  },
+  "partners": {
+    "badge": "Catalyst · Cybersecurity Cohort",
+    "heroHeadline1": "HIRE",
+    "heroHeadline2": "READY.",
+    "heroText": "A cohort of certified, screened, job-ready cybersecurity talent — available to interview this October.",
+    "heroImageAlt": "Beyond Code Catalyst cohort collaborating",
+    "talkCta": "Talk To Our Team",
+    "stats": [
+      { "stat": "15", "label": "Vetted candidates in the inaugural cohort" },
+      { "stat": "OCT", "label": "Interview-ready · 2026 placement window" }
+    ],
+    "gapLabel": "[ The Gap ]",
+    "gapHeadline1": "THERE ARE MORE OPEN CYBER ROLES THAN CREDENTIALED PEOPLE TO FILL THEM.",
+    "gapHeadline2": "WE'VE SCREENED THE TALENT TO CLOSE THE GAP.",
+    "gapText": "Beyond Code's Cybersecurity cohort is a pre-vetted pipeline of career-changers who hold stacked CompTIA industry credentials, have completed a live SOC-analyst simulation, and bring extensive work experience with transferable skills.",
+    "gapStrong": "You get first access to proven talent.",
+    "whoLabel": "[ Who You're Hiring ]",
+    "whoHeadline1": "CERTIFIED &",
+    "whoHeadline2": "SCREENED",
+    "whoText1": "Every candidate enters your pipeline already holding a stack of CompTIA credentials, with all of them finishing Security+ certification by Q4 2026.",
+    "credentials": [
+      "CompTIA Tech+",
+      "CompTIA Network+",
+      "CompTIA Security+ (SY0-701)",
+      "SOC-Analyst Capstone",
+      "Durable Skills Coaching"
+    ],
+    "whoText2": "This isn't first-time talent. They're bringing real careers in systems administration, QA automation, IT leadership, and government audit as they transition into tech careers.",
+    "proofLabel": "Proof, Not Promise",
+    "proofHeadline": "THEY'VE DONE THE WORK",
+    "proofText": "Every graduate completes a SOC-analyst simulation — triaging real alerts in a SIEM lab, identifying the threat, and writing an incident report. It's the closest thing to an entry-level SOC workflow, and you can preview it before you interview.",
+    "whyLabel": "[ Why Catalyst Talent ]",
+    "whyHeadline1": "WHY THE",
+    "whyHeadline2": "MODEL WORKS",
+    "pillars": [
+      { "n": "01", "title": "STACKED CREDENTIALS", "text": "Tech+, Network+, and Security+ — industry-recognized proof that compounds, not a single bootcamp certificate." },
+      { "n": "02", "title": "HANDS-ON CAPSTONE", "text": "A completed SOC-analyst simulation demonstrates ability directly, even for candidates without prior security job history." },
+      { "n": "03", "title": "DURABLE SKILLS", "text": "Our career coaching curriculum builds the reliability, communication, and follow-through that make entry-level hires stick." },
+      { "n": "04", "title": "ONGOING SUPPORT", "text": "We stay engaged after the hire with wraparound support to protect retention." }
+    ],
+    "rolesLabel": "[ Roles They're Ready For ]",
+    "rolesHeadline1": "FOUR TRACKS,",
+    "rolesHeadline2": "JOB-READY NOW",
+    "roles": [
+      { "track": "Track · Operations", "title": "SOC ANALYST I", "text": "Security operations, SIEM monitoring, and alert triage — backed directly by the cohort's capstone. Multiple candidates name SOC work as their clear goal." },
+      { "track": "Track · Foundations", "title": "IT SUPPORT & HELP DESK", "text": "Service desk, desktop, and technical support — the proven on-ramp for candidates with Network+/Tech+ and strong transferable experience." },
+      { "track": "Track · Governance", "title": "GRC & COMPLIANCE", "text": "Governance, risk, IT audit, and compliance analysis — a natural fit for candidates coming from audit, Salesforce administration, and operations." },
+      { "track": "Track · Cloud & Automation", "title": "CLOUD & SECURITY AUTOMATION", "text": "Entry cloud security and DevSecOps-adjacent roles — including a QA-automation engineer bridging into security automation." }
+    ],
+    "caliberLabel": "[ A Preview Of The Room ]",
+    "caliberHeadline1": "THE CALIBER",
+    "caliberHeadline2": "YOU'LL MEET",
+    "caliber": [
+      { "tag": "SOC · Forensics", "text": "Cybersecurity master's candidate, fluent in ServiceNow, Wireshark, and Azure — targeting SOC and digital-forensics roles." },
+      { "tag": "Security Leadership Track", "text": "Former Director of Systems Development from the nonprofit IT world, bringing management depth into a security pivot." },
+      { "tag": "Security Automation", "text": "QA automation engineer with a clear bridge story: from test automation into DevSecOps and security automation." },
+      { "tag": "GRC · Compliance", "text": "Salesforce administrator and consultant moving deliberately toward governance, risk, and compliance work." },
+      { "tag": "Security Operations", "text": "Military IT veteran seeking to stay in IT and security operations — a repeat, high-commitment participant." },
+      { "tag": "SOC · SIEM · GRC", "text": "Local-government data and audit analyst, ServiceNow user, targeting SOC, SIEM, and GRC pathways." }
+    ],
+    "caliberNote": "Anonymized snapshots from the confirmed cohort. Full candidate profiles shared with committed hiring partners.",
+    "stepsLabel": "[ How Partnership Works ]",
+    "stepsHeadline1": "THREE WAYS IN —",
+    "stepsHeadline2": "START WHEREVER YOU LIKE",
+    "steps": [
+      { "n": "Step 01", "title": "INFORMATIONAL INTERVIEW", "text": "Spend 30 minutes with a vetted candidate. Your insights help prepare future cybersecurity professionals while introducing you to highly motivated career changers who are ready to make an immediate impact." },
+      { "n": "Step 02", "title": "PREVIEW AT DEMO DAY", "text": "Join us in early September to watch the cohort present their SOC-analyst capstones live." },
+      { "n": "Step 03", "title": "INTERVIEW IN OCTOBER", "text": "Commit to interview job-ready candidates matched to your open roles." }
+    ],
+    "aboutLabel": "[ About Beyond Code ]",
+    "aboutText1": "Beyond Code Collective is a nonprofit bridging the gap between inspiration, training, and employment in tech. We connect talent to accessible education, hands-on opportunities to build with emerging technologies, and clear pathways to launch and grow meaningful careers.",
+    "aboutText2": "Designed for participants of all ages and backgrounds, Beyond Code prepares people to thrive in a tech-powered world and achieve lasting career mobility. Catalyst is our flagship workforce program for adults — pairing market-relevant technical skills with durable mindset coaching, employer partnerships, and community.",
+    "quoteText": "Catalyst is how we ensure a human stays in the loop. We focus on building access to inspiration, to community, to early skills, enabling talent to build meaningful careers and become catalysts for change in the tech ecosystem.",
+    "quoteAttribution": "Cristina Mancini · Founder & CEO, Beyond Code Collective",
+    "ctaHeadline1": "MEET THE TALENT THIS SUMMER.",
+    "ctaHeadline2": "HIRE BEFORE END OF YEAR.",
+    "ctaContact": "Mica Le John · Executive Director"
+  },
   "atg": {
     "back": "WEAREBCC.ORG",
     "nextCohort": "COHORT 1 IN SESSION · SECURITY+ UNDERWAY",
