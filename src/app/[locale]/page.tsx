@@ -1,5 +1,3 @@
-import { AnnouncementBanner } from "@/components/announcement-banner";
-import { LaunchOverlay } from "@/components/launch-overlay";
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
 import { About } from "@/components/about";
@@ -23,8 +21,6 @@ export default function Home() {
     <QuizProvider>
       <NewsletterProvider>
       <PartnershipsProvider>
-        <LaunchOverlay />
-        <AnnouncementBanner />
         <Nav />
         <main>
           <Hero />
