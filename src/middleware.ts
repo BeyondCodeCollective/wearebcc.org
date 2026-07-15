@@ -1,10 +1,25 @@
+import { NextRequest, NextResponse } from "next/server";
 import createMiddleware from "next-intl/middleware";
 import { routing } from "./i18n/routing";
 
-export default createMiddleware(routing);
+const intlMiddleware = createMiddleware(routing);
+
+export default function middleware(request: NextRequest) {
+  // Partner-only static decks: require the gate cookie set by
+  // /api/partner-gate, otherwise bounce to the gated viewer page.
+  if (request.nextUrl.pathname.startsWith("/decks/")) {
+    if (request.cookies.get("bcc-partner-gate")?.value === "1") {
+      return NextResponse.next();
+    }
+    return NextResponse.redirect(new URL("/rancho-cordova", request.url));
+  }
+  return intlMiddleware(request);
+}
 
 export const config = {
   // Match everything except API routes, Next internals, and files with an
   // extension, so bare paths like /partners or /code-along get a locale.
-  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)"],
+  // /decks/:path* is matched explicitly (despite the extension) so the
+  // partner-gate cookie check above runs for gated static decks.
+  matcher: ["/((?!api|_next|_vercel|.*\\..*).*)", "/decks/:path*"],
 };
