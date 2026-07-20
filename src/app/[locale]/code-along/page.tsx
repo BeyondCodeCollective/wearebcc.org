@@ -74,10 +74,11 @@ function TrailerEmbed({ title, comingSoon }: { title: string; comingSoon: string
 
   if (!TRAILER_ID) {
     return (
-      <div
-        className="relative aspect-video w-full overflow-hidden"
-        style={{ backgroundColor: VOID, boxShadow: `10px 10px 0 ${NEON}` }}
-      >
+      // The playlist card art is self-framed (neon border baked in), so it
+      // gets no decorative frame of its own — that would read as a double
+      // border. The trailer branch below keeps the frame: a YouTube
+      // thumbnail has no border of its own.
+      <div className="relative aspect-video w-full overflow-hidden">
         <Image
           src="/images/code-along/playlist-card-v3.jpg"
           alt={title}
