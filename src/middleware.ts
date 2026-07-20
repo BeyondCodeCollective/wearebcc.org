@@ -11,7 +11,12 @@ export default function middleware(request: NextRequest) {
     if (request.cookies.get("bcc-partner-gate")?.value === "1") {
       return NextResponse.next();
     }
-    return NextResponse.redirect(new URL("/rancho-cordova", request.url));
+    // Bounce to the viewer page that fronts this deck, so the gate a visitor
+    // lands on matches the deck they asked for.
+    const slug = request.nextUrl.pathname
+      .replace("/decks/", "")
+      .replace(/\.html$/, "");
+    return NextResponse.redirect(new URL(`/${slug}`, request.url));
   }
   return intlMiddleware(request);
 }
