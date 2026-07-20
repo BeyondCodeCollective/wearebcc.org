@@ -79,7 +79,7 @@ function TrailerEmbed({ title, comingSoon }: { title: string; comingSoon: string
         style={{ backgroundColor: VOID, boxShadow: `10px 10px 0 ${NEON}` }}
       >
         <Image
-          src="/images/code-along/playlist-card-v2.jpg"
+          src="/images/code-along/playlist-card-v3.jpg"
           alt={title}
           fill
           className="object-cover"
