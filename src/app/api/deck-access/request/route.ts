@@ -115,8 +115,19 @@ export async function POST(request: Request) {
       html,
     });
     if (error) {
-      console.error("deck-access/request: Resend error", error);
-      return NextResponse.json({ ok: false, error: "send_failed" }, { status: 502 });
+      console.error("deck-access/request: Resend error", JSON.stringify(error));
+      return NextResponse.json(
+        {
+          ok: false,
+          error: "send_failed",
+          // Surfaced outside production only, so a misconfigured sender is
+          // diagnosable on a preview without leaking provider detail publicly.
+          ...(process.env.VERCEL_ENV !== "production"
+            ? { detail: `${error.name}: ${error.message}` }
+            : {}),
+        },
+        { status: 502 },
+      );
     }
 
     return NextResponse.json({ ok: true });
