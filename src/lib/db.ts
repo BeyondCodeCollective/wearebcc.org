@@ -38,6 +38,33 @@ export async function ensureTables() {
   await sql`CREATE INDEX IF NOT EXISTS idx_completions_personality ON quiz_completions(personality_result)`;
   await sql`CREATE INDEX IF NOT EXISTS idx_completions_age ON quiz_completions(age_group)`;
 
+  // ─── Partner deck identity ──────────────────────────────────────
+  // One row per person who has ever verified an email against the decks.
+  await sql`
+    CREATE TABLE IF NOT EXISTS deck_viewers (
+      id SERIAL PRIMARY KEY,
+      email VARCHAR(320) UNIQUE NOT NULL,
+      first_seen_at TIMESTAMPTZ DEFAULT NOW(),
+      last_seen_at TIMESTAMPTZ DEFAULT NOW()
+    )
+  `;
+
+  // Short-lived one-time codes. Stored hashed: a leak of this table must not
+  // hand out deck access.
+  await sql`
+    CREATE TABLE IF NOT EXISTS deck_access_codes (
+      id SERIAL PRIMARY KEY,
+      email VARCHAR(320) NOT NULL,
+      code_hash VARCHAR(64) NOT NULL,
+      expires_at TIMESTAMPTZ NOT NULL,
+      consumed_at TIMESTAMPTZ,
+      attempts INTEGER DEFAULT 0,
+      created_at TIMESTAMPTZ DEFAULT NOW()
+    )
+  `;
+  await sql`CREATE INDEX IF NOT EXISTS idx_deck_codes_email ON deck_access_codes(email)`;
+  await sql`CREATE INDEX IF NOT EXISTS idx_deck_codes_created ON deck_access_codes(created_at)`;
+
   await sql`
     CREATE TABLE IF NOT EXISTS site_content (
       id SERIAL PRIMARY KEY,
