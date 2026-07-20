@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "The free coding series returns. Season launches Saturday, Aug 8 on YouTube.",
     images: [
       {
-        url: "https://www.wearebcc.org/images/code-along/playlist-card.jpg",
+        url: "https://www.wearebcc.org/images/code-along/playlist-card-v2.jpg",
         width: 854,
         height: 480,
         alt: "Code Along Season 1",
