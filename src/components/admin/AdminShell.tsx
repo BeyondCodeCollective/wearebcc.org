@@ -9,9 +9,11 @@ import {
   Check,
   SignOut,
   ChartBar,
+  LinkSimple,
   PencilSimple,
 } from "@phosphor-icons/react";
 import SectionEditor from "./SectionEditor";
+import DeckInvites from "./DeckInvites";
 import MetricCard from "@/components/dashboard/MetricCard";
 import FunnelChart from "@/components/dashboard/FunnelChart";
 import PersonalityBreakdown from "@/components/dashboard/PersonalityBreakdown";
@@ -90,7 +92,7 @@ const SECTION_GROUPS = [
 
 const ALL_SECTIONS = SECTION_GROUPS.flatMap((g) => g.sections);
 
-type Tab = "analytics" | "content";
+type Tab = "analytics" | "content" | "access";
 
 // ─── Helpers ──────────────────────────────────────────────────────
 
@@ -394,6 +396,18 @@ export default function AdminShell() {
                 <PencilSimple size={12} weight="bold" />
                 Content
               </button>
+              <button
+                onClick={() => setTab("access")}
+                className={`flex items-center gap-1.5 px-3 py-1 text-xs rounded transition-colors ${
+                  tab === "access"
+                    ? "bg-cobalt text-off-white"
+                    : "text-black/40 hover:text-black/70"
+                }`}
+                style={{ fontFamily: "var(--font-mono)" }}
+              >
+                <LinkSimple size={12} weight="bold" />
+                Access
+              </button>
             </div>
           </div>
           <div className="flex items-center gap-3">
@@ -672,6 +686,9 @@ export default function AdminShell() {
           </div>
         </>
       )}
+
+      {/* ─── Access Tab ────────────────────────────────────────── */}
+      {tab === "access" && <DeckInvites password={password} />}
     </div>
   );
 }
