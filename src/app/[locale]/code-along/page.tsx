@@ -319,10 +319,10 @@ export default function CodeAlong() {
               {t("premiereBadge")}
             </span>
             <Image
-              src="/images/code-along/logo.svg"
-              alt="Code Along"
-              width={773}
-              height={773}
+              src="/images/code-along/logo-music.png"
+              alt="Code Along Beyond: Music"
+              width={1080}
+              height={1080}
               className="mx-auto h-36 w-auto sm:h-44 lg:h-52"
               priority
             />
