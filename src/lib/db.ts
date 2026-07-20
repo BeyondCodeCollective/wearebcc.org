@@ -49,21 +49,29 @@ export async function ensureTables() {
     )
   `;
 
-  // Short-lived one-time codes. Stored hashed: a leak of this table must not
-  // hand out deck access.
+  // One invite per person we hand a link to. Stored hashed: a leak of this
+  // table must not hand out deck access. Reusable until revoked, so a partner
+  // opening the same link on their phone later still gets in.
   await sql`
-    CREATE TABLE IF NOT EXISTS deck_access_codes (
+    CREATE TABLE IF NOT EXISTS deck_invites (
       id SERIAL PRIMARY KEY,
+      token_hash VARCHAR(64) UNIQUE NOT NULL,
+      name VARCHAR(200) NOT NULL,
       email VARCHAR(320) NOT NULL,
-      code_hash VARCHAR(64) NOT NULL,
-      expires_at TIMESTAMPTZ NOT NULL,
-      consumed_at TIMESTAMPTZ,
-      attempts INTEGER DEFAULT 0,
-      created_at TIMESTAMPTZ DEFAULT NOW()
+      organization VARCHAR(200),
+      note TEXT,
+      created_at TIMESTAMPTZ DEFAULT NOW(),
+      revoked_at TIMESTAMPTZ,
+      last_used_at TIMESTAMPTZ,
+      use_count INTEGER DEFAULT 0
     )
   `;
-  await sql`CREATE INDEX IF NOT EXISTS idx_deck_codes_email ON deck_access_codes(email)`;
-  await sql`CREATE INDEX IF NOT EXISTS idx_deck_codes_created ON deck_access_codes(created_at)`;
+  await sql`CREATE INDEX IF NOT EXISTS idx_deck_invites_email ON deck_invites(email)`;
+
+  // Link a viewer row back to the invite that identified them.
+  await sql`ALTER TABLE deck_viewers ADD COLUMN IF NOT EXISTS name VARCHAR(200)`;
+  await sql`ALTER TABLE deck_viewers ADD COLUMN IF NOT EXISTS organization VARCHAR(200)`;
+  await sql`ALTER TABLE deck_viewers ADD COLUMN IF NOT EXISTS invite_id INTEGER`;
 
   await sql`
     CREATE TABLE IF NOT EXISTS site_content (

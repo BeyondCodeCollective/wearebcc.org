@@ -1,21 +1,20 @@
 /**
  * Identity for the partner decks.
  *
- * Replaces the old shared password. A viewer proves they control an email
- * address by entering a one-time code, and we hand back a signed cookie that
- * carries their viewer id. The cookie is verified in middleware before any
- * /decks/* asset is served, so it has to work on the edge runtime: everything
- * here uses Web Crypto, no node:crypto.
+ * Replaces the old shared password. Each partner gets their own invite link,
+ * created in /admin and sent by us. Opening it exchanges the invite for a
+ * signed cookie carrying that person's viewer id, so a deck view can be
+ * attributed to a named human.
+ *
+ * The cookie is verified in middleware before any /decks/* asset is served,
+ * so it has to work on the edge runtime: everything here uses Web Crypto,
+ * no node:crypto.
  */
 
 export const DECK_SESSION_COOKIE = "bcc-deck-session";
 
-/** How long a verified session lasts before the viewer signs in again. */
+/** How long a redeemed session lasts before the link must be opened again. */
 export const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
-/** How long a one-time code is accepted. */
-export const CODE_TTL_MS = 10 * 60 * 1000; // 10 minutes
-/** Wrong-code guesses allowed per issued code before it is burned. */
-export const MAX_CODE_ATTEMPTS = 5;
 
 export interface DeckSession {
   /** deck_viewers.id */
@@ -104,23 +103,20 @@ export async function verifySession(
   }
 }
 
-/** Six digits, uniform, from a CSPRNG. Rejection-samples to avoid modulo bias. */
-export function generateCode(): string {
-  const max = 1_000_000;
-  const limit = Math.floor(0xffffffff / max) * max;
-  const buf = new Uint32Array(1);
-  let n: number;
-  do {
-    crypto.getRandomValues(buf);
-    n = buf[0];
-  } while (n >= limit);
-  return String(n % max).padStart(6, "0");
+/**
+ * Invite token: 32 bytes of CSPRNG, base64url. This is the secret in the
+ * link we send a partner, so it has to be long enough that guessing is
+ * hopeless. Only its hash is stored.
+ */
+export function generateInviteToken(): string {
+  const buf = new Uint8Array(32);
+  crypto.getRandomValues(buf);
+  return b64urlEncode(buf);
 }
 
-/** Codes are stored hashed, so a database leak does not hand out access. */
-export async function hashCode(email: string, code: string): Promise<string> {
-  const sig = await hmac(`${normalizeEmail(email)}:${code}`);
-  return b64urlEncode(sig);
+/** Invites are stored hashed, so a database leak does not hand out access. */
+export async function hashInviteToken(token: string): Promise<string> {
+  return b64urlEncode(await hmac(`invite:${token}`));
 }
 
 export function normalizeEmail(email: string): string {

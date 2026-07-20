@@ -31,7 +31,9 @@ export const config = {
   // icon/apple-icon are Next's extensionless metadata routes — the intl
   // redirect must not touch them or the favicon 404s on every page.
   matcher: [
-    "/((?!api|_next|_vercel|icon|apple-icon|.*\\..*).*)",
+    // `invite` is a bare route handler, not a page: the intl redirect must not
+    // rewrite /invite/<token> to /en/invite/<token>, which would 404.
+    "/((?!api|_next|_vercel|icon|apple-icon|invite|.*\\..*).*)",
     "/decks/:path*",
   ],
 };
