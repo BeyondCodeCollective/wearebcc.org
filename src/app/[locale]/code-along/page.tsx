@@ -80,7 +80,7 @@ function TrailerEmbed({ title, comingSoon }: { title: string; comingSoon: string
       // thumbnail has no border of its own.
       <div className="relative aspect-video w-full overflow-hidden">
         <Image
-          src="/images/code-along/playlist-card-v3.jpg"
+          src="/images/code-along/playlist-card-v4.png"
           alt={title}
           fill
           className="object-cover"
