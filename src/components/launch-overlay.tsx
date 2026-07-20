@@ -53,7 +53,7 @@ export function LaunchOverlay() {
             </button>
 
             <Image
-              src="/images/code-along/playlist-card-v3.jpg"
+              src="/images/code-along/playlist-card-v4.png"
               alt="Code Along Beyond: Music"
               width={1708}
               height={960}
