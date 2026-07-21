@@ -32,7 +32,7 @@ export default function AfterTheGame() {
           email: email.trim(),
           phone: phone.trim(),
           segment: interest ? `ATG - ${interest}` : "ATG - General",
-          source: "after-the-game-landing",
+          source: "beyond-the-game-landing",
         }),
       });
 
@@ -102,7 +102,7 @@ export default function AfterTheGame() {
       <section className="relative px-6 pt-28 pb-16 lg:px-8 lg:pt-32 lg:pb-24">
         <Image
           src="/images/atg/atg-hero-panel.jpg"
-          alt="After The Game"
+          alt="Beyond The Game"
           fill
           className="object-cover object-center opacity-40"
           sizes="100vw"
@@ -126,10 +126,10 @@ export default function AfterTheGame() {
               </span>
             </div>
             <Image
-              src="/images/atg/atg-logo-white.png"
-              alt="After The Game"
-              width={400}
-              height={80}
+              src="/images/btg/btg-logo-white.png"
+              alt="Beyond The Game"
+              width={1043}
+              height={212}
               className="mx-auto h-12 w-auto sm:h-16 lg:h-20"
               priority
             />

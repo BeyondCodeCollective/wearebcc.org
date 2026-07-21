@@ -24,6 +24,16 @@ const nextConfig: NextConfig = {
         destination: "/beyond-code-centers",
         permanent: true,
       },
+      {
+        source: "/:locale/after-the-game",
+        destination: "/:locale/beyond-the-game",
+        permanent: true,
+      },
+      {
+        source: "/after-the-game",
+        destination: "/beyond-the-game",
+        permanent: true,
+      },
     ];
   },
 };

@@ -39,7 +39,7 @@ export const PILLARS = [
 
 export const INITIATIVES = [
   {
-    title: "After The Game",
+    title: "Beyond The Game",
     description:
       "A national, cohort-based workforce program for transitioning professional and NCAA student-athletes. Bridges the digital skill divide with technical leads teaching live classes, plus wraparound support from corporate readiness to job placement.",
     contact: "partnerships@wearebcc.org",
@@ -138,7 +138,7 @@ export const TEAM_LEADERSHIP = [
   },
   {
     name: "Ramon Clemente",
-    role: "Head of After The Game",
+    role: "Head of Beyond The Game",
     bio: "ramonClemente",
     image: "/images/council/ramon-clemente.jpg",
   },
