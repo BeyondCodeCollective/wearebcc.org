@@ -421,7 +421,7 @@ export default function AfterTheGame() {
                 className="font-mono text-[10px] tracking-wider text-grey-3"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
-                HEAD OF AFTER THE GAME
+                HEAD OF BEYOND THE GAME
               </p>
             </div>
           </motion.div>

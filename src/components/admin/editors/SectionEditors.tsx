@@ -330,7 +330,7 @@ export function ForgeEditor({ value, onChange }: { value: V; onChange: OnChange 
   );
 }
 
-// ─── AFTER THE GAME ───────────────────────────────────────────────
+// ─── BEYOND THE GAME ───────────────────────────────────────────────
 
 export function AtgEditor({ value, onChange }: { value: V; onChange: OnChange }) {
   return (
