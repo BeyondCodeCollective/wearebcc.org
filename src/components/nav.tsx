@@ -199,7 +199,7 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
                       {t("theForge")}
                     </Link>
                     <Link
-                      href="/after-the-game"
+                      href="/beyond-the-game"
                       onClick={() => setInitiativesOpen(false)}
                       className={dropdownLinkClass}
                       style={{ fontFamily: "var(--font-mono)" }}
@@ -431,7 +431,7 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
                         {t("theForge")}
                       </Link>
                       <Link
-                        href="/after-the-game"
+                        href="/beyond-the-game"
                         onClick={() => setMobileOpen(false)}
                         className={mobileSubLinkClass}
                         style={{ fontFamily: "var(--font-mono)" }}

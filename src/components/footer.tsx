@@ -12,7 +12,7 @@ export function Footer() {
 
   const initiativeLinks = [
     { key: "theForge", href: "beyond-code-centers" },
-    { key: "afterTheGame", href: "after-the-game" },
+    { key: "afterTheGame", href: "beyond-the-game" },
   ] as const;
 
   return (

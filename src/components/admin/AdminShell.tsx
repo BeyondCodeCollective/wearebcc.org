@@ -83,7 +83,7 @@ const SECTION_GROUPS = [
     label: "PROGRAMS",
     sections: [
       { key: "forge", label: "Beyond Code Centers" },
-      { key: "atg", label: "After The Game" },
+      { key: "atg", label: "Beyond The Game" },
     ],
   },
 ];
