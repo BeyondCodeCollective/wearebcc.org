@@ -193,7 +193,7 @@ export default function CatalystPage() {
         <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2">
           <motion.div {...reveal}>
             <MonoLabel>{t("gap.label")}</MonoLabel>
-            <h2 className="mt-4 font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.9] text-true-black">
+            <h2 className="mt-4 font-heading text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.9] text-true-black">
               {t("gap.headline1")}
               <br />
               <span className="text-cobalt">{t("gap.headline2")}</span>
@@ -226,7 +226,7 @@ export default function CatalystPage() {
             <MonoLabel className="text-electric-green">
               {t("program.label")}
             </MonoLabel>
-            <h2 className="mt-4 font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.9] text-off-white">
+            <h2 className="mt-4 font-heading text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.9] text-off-white">
               {t("program.headline")}
             </h2>
           </motion.div>
@@ -257,7 +257,7 @@ export default function CatalystPage() {
             <MonoLabel className="text-electric-green">
               {t("tracks.label")}
             </MonoLabel>
-            <h2 className="mt-4 font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.9] text-off-white">
+            <h2 className="mt-4 font-heading text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.9] text-off-white">
               {t("tracks.headline")}
             </h2>
           </motion.div>
@@ -303,7 +303,7 @@ export default function CatalystPage() {
         <div className="mx-auto max-w-6xl">
           <motion.div {...reveal}>
             <MonoLabel>{t("workshops.label")}</MonoLabel>
-            <h2 className="mt-4 font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.9] text-true-black">
+            <h2 className="mt-4 font-heading text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.9] text-true-black">
               {t("workshops.headline1")}
               <br />
               {t("workshops.headline2")}
@@ -353,7 +353,7 @@ export default function CatalystPage() {
             <MonoLabel className="text-electric-green">
               {t("verticals.label")}
             </MonoLabel>
-            <h2 className="mx-auto mt-4 max-w-3xl font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.9] text-off-white">
+            <h2 className="mx-auto mt-4 max-w-3xl font-heading text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.9] text-off-white">
               {t("verticals.headline1")}
               <br />
               <span className="text-electric-green">
@@ -392,7 +392,7 @@ export default function CatalystPage() {
             <MonoLabel className="text-electric-green">
               {t("results.label")}
             </MonoLabel>
-            <h2 className="mt-4 font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.9] text-off-white">
+            <h2 className="mt-4 font-heading text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.9] text-off-white">
               {t("results.headline")}
             </h2>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-off-white/60">
@@ -424,7 +424,7 @@ export default function CatalystPage() {
         <div className="mx-auto max-w-4xl">
           <motion.div {...reveal}>
             <MonoLabel>{t("stories.label")}</MonoLabel>
-            <h2 className="mt-4 font-heading text-[clamp(2rem,5vw,3.5rem)] leading-[0.9] text-true-black">
+            <h2 className="mt-4 font-heading text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.9] text-true-black">
               {t("stories.headline1")}
               <br />
               {t("stories.headline2")}
