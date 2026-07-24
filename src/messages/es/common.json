@@ -726,11 +726,15 @@
         {
           "badge": "Inscripción Abierta",
           "title": "MASS",
-          "text": "Un programa híbrido de ocho semanas de mentalidad y habilidades blandas: la base de habilidades duraderas que hace que la formación técnica se sostenga.",
+          "lead": "Tus habilidades técnicas te califican. El networking te abre la puerta. Y tu historia te consigue la oferta.",
+          "text": "MASS es un programa de coaching de ocho semanas que desarrolla la parte de tu carrera que ningún bootcamp técnico cubre por sí solo: cómo contar tu historia con confianza, hacer networking sin incomodidad, defender tu valor y pedir lo que mereces. Práctica real, en vivo, cada semana. Sin relleno.",
+          "stat": "El 80% de quienes reciben coaching reportan mayor confianza. Más del 70% mejora su desempeño laboral y su comunicación.",
+          "statSource": "Fuente: Institute of Coaching",
           "cta": "Ver Calendario e Inscribirse",
           "facilitator": {
-            "name": "Nombre de la Facilitadora",
-            "bio": "Una o dos frases sobre su trayectoria y por qué lidera MASS. Reemplaza con su biografía real.",
+            "name": "Angel Aviles",
+            "role": "Tu Coach",
+            "bio": "Actriz, luego estratega de marketing en tecnología, luego coach galardonada. Autora bestseller que ha guiado a miles y creó MASS porque vivió exactamente la brecha en la que hoy te encuentras.",
             "photo": "/images/catalyst/mass-facilitator.jpg"
           }
         },

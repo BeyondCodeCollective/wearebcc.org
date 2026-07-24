@@ -40,11 +40,14 @@ function MonoLabel({
 
 type Cell = { title: string; text: string };
 type Track = { title: string; text: string; tags: string[] };
-type Facilitator = { name: string; bio: string; photo: string };
+type Facilitator = { name: string; role?: string; bio: string; photo: string };
 type Card = {
   badge: string;
   title: string;
+  lead?: string;
   text: string;
+  stat?: string;
+  statSource?: string;
   cta: string;
   facilitator?: Facilitator;
 };
@@ -319,7 +322,7 @@ export default function CatalystPage() {
               {t("workshops.body")}
             </p>
           </motion.div>
-          <div className="mt-10 grid gap-4 md:grid-cols-3">
+          <div className="mt-10 grid items-start gap-4 md:grid-cols-3">
             {cards.map((card, i) => (
               <motion.div
                 key={i}
@@ -336,6 +339,11 @@ export default function CatalystPage() {
                 <h3 className="mt-5 font-heading text-2xl uppercase tracking-tight text-true-black">
                   {card.title}
                 </h3>
+                {card.lead && (
+                  <p className="mt-3 font-heading text-base leading-snug text-cobalt">
+                    {card.lead}
+                  </p>
+                )}
                 <p className="mt-3 text-sm leading-relaxed text-grey-3">
                   {card.text}
                 </p>
@@ -344,11 +352,19 @@ export default function CatalystPage() {
                     <Image
                       src={card.facilitator.photo}
                       alt={card.facilitator.name}
-                      width={48}
-                      height={48}
-                      className="h-12 w-12 shrink-0 rounded-full object-cover"
+                      width={56}
+                      height={56}
+                      className="h-14 w-14 shrink-0 rounded-full object-cover"
                     />
                     <div>
+                      {card.facilitator.role && (
+                        <p
+                          className="font-mono text-[10px] uppercase tracking-wider text-cobalt"
+                          style={{ fontFamily: "var(--font-mono)" }}
+                        >
+                          {card.facilitator.role}
+                        </p>
+                      )}
                       <p className="font-heading text-sm uppercase tracking-tight text-true-black">
                         {card.facilitator.name}
                       </p>
@@ -356,6 +372,21 @@ export default function CatalystPage() {
                         {card.facilitator.bio}
                       </p>
                     </div>
+                  </div>
+                )}
+                {card.stat && (
+                  <div className="mt-5 border-l-2 border-electric-green pl-3">
+                    <p className="text-xs leading-relaxed text-true-black">
+                      {card.stat}
+                    </p>
+                    {card.statSource && (
+                      <p
+                        className="mt-1 font-mono text-[10px] uppercase tracking-wider text-grey-3"
+                        style={{ fontFamily: "var(--font-mono)" }}
+                      >
+                        {card.statSource}
+                      </p>
+                    )}
                   </div>
                 )}
                 <a
