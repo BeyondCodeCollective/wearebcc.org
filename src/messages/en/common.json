@@ -101,8 +101,14 @@
     "heroImageAlt": "Beyond Code Catalyst cohort collaborating",
     "talkCta": "Talk To Our Team",
     "stats": [
-      { "stat": "15", "label": "Vetted candidates in the inaugural cohort" },
-      { "stat": "OCT", "label": "Interview-ready · 2026 placement window" }
+      {
+        "stat": "15",
+        "label": "Vetted candidates in the inaugural cohort"
+      },
+      {
+        "stat": "OCT",
+        "label": "Interview-ready · 2026 placement window"
+      }
     ],
     "gapLabel": "[ The Gap ]",
     "gapHeadline1": "THERE ARE MORE OPEN CYBER ROLES THAN CREDENTIALED PEOPLE TO FILL THEM.",
@@ -128,39 +134,101 @@
     "whyHeadline1": "WHY THE",
     "whyHeadline2": "MODEL WORKS",
     "pillars": [
-      { "n": "01", "title": "STACKED CREDENTIALS", "text": "Tech+, Network+, and Security+ — industry-recognized proof that compounds, not a single bootcamp certificate." },
-      { "n": "02", "title": "HANDS-ON CAPSTONE", "text": "A completed SOC-analyst simulation demonstrates ability directly, even for candidates without prior security job history." },
-      { "n": "03", "title": "DURABLE SKILLS", "text": "Our career coaching curriculum builds the reliability, communication, and follow-through that make entry-level hires stick." },
-      { "n": "04", "title": "ONGOING SUPPORT", "text": "We stay engaged after the hire with wraparound support to protect retention." }
+      {
+        "n": "01",
+        "title": "STACKED CREDENTIALS",
+        "text": "Tech+, Network+, and Security+ — industry-recognized proof that compounds, not a single bootcamp certificate."
+      },
+      {
+        "n": "02",
+        "title": "HANDS-ON CAPSTONE",
+        "text": "A completed SOC-analyst simulation demonstrates ability directly, even for candidates without prior security job history."
+      },
+      {
+        "n": "03",
+        "title": "DURABLE SKILLS",
+        "text": "Our career coaching curriculum builds the reliability, communication, and follow-through that make entry-level hires stick."
+      },
+      {
+        "n": "04",
+        "title": "ONGOING SUPPORT",
+        "text": "We stay engaged after the hire with wraparound support to protect retention."
+      }
     ],
     "rolesLabel": "[ Roles They're Ready For ]",
     "rolesHeadline1": "FOUR TRACKS,",
     "rolesHeadline2": "JOB-READY NOW",
     "roles": [
-      { "track": "Track · Operations", "title": "SOC ANALYST I", "text": "Security operations, SIEM monitoring, and alert triage — backed directly by the cohort's capstone. Multiple candidates name SOC work as their clear goal." },
-      { "track": "Track · Foundations", "title": "IT SUPPORT & HELP DESK", "text": "Service desk, desktop, and technical support — the proven on-ramp for candidates with Network+/Tech+ and strong transferable experience." },
-      { "track": "Track · Governance", "title": "GRC & COMPLIANCE", "text": "Governance, risk, IT audit, and compliance analysis — a natural fit for candidates coming from audit, Salesforce administration, and operations." },
-      { "track": "Track · Cloud & Automation", "title": "CLOUD & SECURITY AUTOMATION", "text": "Entry cloud security and DevSecOps-adjacent roles — including a QA-automation engineer bridging into security automation." }
+      {
+        "track": "Track · Operations",
+        "title": "SOC ANALYST I",
+        "text": "Security operations, SIEM monitoring, and alert triage — backed directly by the cohort's capstone. Multiple candidates name SOC work as their clear goal."
+      },
+      {
+        "track": "Track · Foundations",
+        "title": "IT SUPPORT & HELP DESK",
+        "text": "Service desk, desktop, and technical support — the proven on-ramp for candidates with Network+/Tech+ and strong transferable experience."
+      },
+      {
+        "track": "Track · Governance",
+        "title": "GRC & COMPLIANCE",
+        "text": "Governance, risk, IT audit, and compliance analysis — a natural fit for candidates coming from audit, Salesforce administration, and operations."
+      },
+      {
+        "track": "Track · Cloud & Automation",
+        "title": "CLOUD & SECURITY AUTOMATION",
+        "text": "Entry cloud security and DevSecOps-adjacent roles — including a QA-automation engineer bridging into security automation."
+      }
     ],
     "caliberLabel": "[ A Preview Of The Room ]",
     "caliberHeadline1": "THE CALIBER",
     "caliberHeadline2": "YOU'LL MEET",
     "caliber": [
-      { "tag": "SOC · Forensics", "text": "Cybersecurity master's candidate, fluent in ServiceNow, Wireshark, and Azure — targeting SOC and digital-forensics roles." },
-      { "tag": "Security Leadership Track", "text": "Former Director of Systems Development from the nonprofit IT world, bringing management depth into a security pivot." },
-      { "tag": "Security Automation", "text": "QA automation engineer with a clear bridge story: from test automation into DevSecOps and security automation." },
-      { "tag": "GRC · Compliance", "text": "Salesforce administrator and consultant moving deliberately toward governance, risk, and compliance work." },
-      { "tag": "Security Operations", "text": "Military IT veteran seeking to stay in IT and security operations — a repeat, high-commitment participant." },
-      { "tag": "SOC · SIEM · GRC", "text": "Local-government data and audit analyst, ServiceNow user, targeting SOC, SIEM, and GRC pathways." }
+      {
+        "tag": "SOC · Forensics",
+        "text": "Cybersecurity master's candidate, fluent in ServiceNow, Wireshark, and Azure — targeting SOC and digital-forensics roles."
+      },
+      {
+        "tag": "Security Leadership Track",
+        "text": "Former Director of Systems Development from the nonprofit IT world, bringing management depth into a security pivot."
+      },
+      {
+        "tag": "Security Automation",
+        "text": "QA automation engineer with a clear bridge story: from test automation into DevSecOps and security automation."
+      },
+      {
+        "tag": "GRC · Compliance",
+        "text": "Salesforce administrator and consultant moving deliberately toward governance, risk, and compliance work."
+      },
+      {
+        "tag": "Security Operations",
+        "text": "Military IT veteran seeking to stay in IT and security operations — a repeat, high-commitment participant."
+      },
+      {
+        "tag": "SOC · SIEM · GRC",
+        "text": "Local-government data and audit analyst, ServiceNow user, targeting SOC, SIEM, and GRC pathways."
+      }
     ],
     "caliberNote": "Anonymized snapshots from the confirmed cohort. Full candidate profiles shared with committed hiring partners.",
     "stepsLabel": "[ How Partnership Works ]",
     "stepsHeadline1": "THREE WAYS IN —",
     "stepsHeadline2": "START WHEREVER YOU LIKE",
     "steps": [
-      { "n": "Step 01", "title": "INFORMATIONAL INTERVIEW", "text": "Spend 30 minutes with a vetted candidate. Your insights help prepare future cybersecurity professionals while introducing you to highly motivated career changers who are ready to make an immediate impact." },
-      { "n": "Step 02", "title": "PREVIEW AT DEMO DAY", "text": "Join us in early September to watch the cohort present their SOC-analyst capstones live." },
-      { "n": "Step 03", "title": "INTERVIEW IN OCTOBER", "text": "Commit to interview job-ready candidates matched to your open roles." }
+      {
+        "n": "Step 01",
+        "title": "INFORMATIONAL INTERVIEW",
+        "text": "Spend 30 minutes with a vetted candidate. Your insights help prepare future cybersecurity professionals while introducing you to highly motivated career changers who are ready to make an immediate impact."
+      },
+      {
+        "n": "Step 02",
+        "title": "PREVIEW AT DEMO DAY",
+        "text": "Join us in early September to watch the cohort present their SOC-analyst capstones live."
+      },
+      {
+        "n": "Step 03",
+        "title": "INTERVIEW IN OCTOBER",
+        "text": "Commit to interview job-ready candidates matched to your open roles."
+      }
     ],
     "aboutLabel": "[ About Beyond Code ]",
     "aboutText1": "Beyond Code Collective is a nonprofit bridging the gap between inspiration, training, and employment in tech. We connect talent to accessible education, hands-on opportunities to build with emerging technologies, and clear pathways to launch and grow meaningful careers.",
@@ -552,5 +620,212 @@
     "careerChanger": "Career Changer",
     "employer": "Employer",
     "partnerDonor": "Partner / Donor"
+  },
+  "catalyst": {
+    "hero": {
+      "wordmark": "CATALYST",
+      "headline1": "FROM SKILL",
+      "headline2": "TO CAREER",
+      "body": "The workforce is changing. Catalyst develops the talent to match — an 8–12 week, cohort-based workforce program for adult learners ready to move into tech. No prior tech background required. You bring the drive; we bring the curriculum, the community, and the connections to real employers.",
+      "ctaPrimary": "Join The Next Cohort",
+      "ctaSecondary": "Partner With Catalyst"
+    },
+    "stats": [
+      {
+        "stat": "8–12 WK",
+        "label": "Cohort length"
+      },
+      {
+        "stat": "3",
+        "label": "Specialized tracks"
+      },
+      {
+        "stat": "18+",
+        "label": "Adult learners welcome"
+      },
+      {
+        "stat": "$0",
+        "label": "Cost to qualifying learners"
+      }
+    ],
+    "gap": {
+      "label": "The Gap",
+      "headline1": "THE MARKET MOVED.",
+      "headline2": "TRAINING DIDN'T.",
+      "body": "Employers are reorganizing roles around AI faster than training systems can adapt. Over 70% of mid-skill roles now require digital or AI fluency, and 39% of core skills will be outdated by 2030. Meanwhile, 1 in 4 adult learners cite cost and childcare as their top barriers to retraining. Catalyst is the bridge: a structured, measurable workforce program designed with employers and credentialing bodies, built around the realities of adult learners' lives.",
+      "imageAlt": "A Catalyst cohort session"
+    },
+    "program": {
+      "label": "The Program",
+      "headline": "WHY THE MODEL WORKS",
+      "cells": [
+        {
+          "title": "8–12 Week Core",
+          "text": "A cohort structure that respects adult learners' realities — jobs, families, and everything in between — without lowering the outcome."
+        },
+        {
+          "title": "Stackable Micro-Certifications",
+          "text": "Industry-recognized credentials that compound as careers evolve. Proof that stacks, not a single bootcamp certificate."
+        },
+        {
+          "title": "Employer-Aligned Curriculum",
+          "text": "Curriculum defined with partners around the roles they're actually filling, not the credentials of five years ago."
+        },
+        {
+          "title": "Wraparound Support",
+          "text": "Durable-skills coaching in communication, reliability, and follow-through, plus a community that stays engaged after the program ends."
+        }
+      ]
+    },
+    "tracks": {
+      "label": "Three Tracks",
+      "headline": "CHOOSE YOUR LANE",
+      "items": [
+        {
+          "title": "Placement",
+          "text": "Built-in connections to employers, interview prep, externship opportunities, and warm introductions across our hiring network open doors as you launch your search.",
+          "tags": [
+            "Employer Introductions",
+            "Interview Prep",
+            "Externships",
+            "Résumé Support"
+          ]
+        },
+        {
+          "title": "Build & Practice",
+          "text": "Project-based learning with mentor reviews, a structured build sprint, and a showcase day to put real work in front of real audiences.",
+          "tags": [
+            "Project-Based Learning",
+            "Mentor Reviews",
+            "Showcase Day"
+          ]
+        },
+        {
+          "title": "Entrepreneurship",
+          "text": "Business setup, client acquisition, and pricing fundamentals for self-directed builders taking AI implementation to small businesses.",
+          "tags": [
+            "Business Fundamentals",
+            "Client Acquisition",
+            "Go-To-Market"
+          ]
+        }
+      ]
+    },
+    "workshops": {
+      "label": "Upcoming Workshops + Labs",
+      "headline1": "START BEFORE",
+      "headline2": "THE COHORT STARTS",
+      "body": "Low-stakes entry points into the Catalyst world. Drop into a session, build a habit, meet the community. Sign up individually — no application needed.",
+      "cards": [
+        {
+          "badge": "Virtual · Weekly · Free",
+          "title": "Home For Summer",
+          "text": "Our summer workshop series: a low-stakes introduction to the emerging tech tools and ideas shaping the market. Working title — final name and schedule to come.",
+          "cta": "Get Notified"
+        },
+        {
+          "badge": "Enrolling Now",
+          "title": "MASS",
+          "text": "An eight-week hybrid mindset and soft-skills program — the durable-skills foundation that makes technical training stick.",
+          "cta": "View Calendar & Sign Up"
+        },
+        {
+          "badge": "In Partnership",
+          "title": "Virtual Labs",
+          "text": "Hands-on virtual lab sessions built with our partners, where you build with emerging tech alongside facilitators and your peers. Program name and dates announcing soon.",
+          "cta": "Get Notified"
+        }
+      ]
+    },
+    "verticals": {
+      "label": "The Verticals",
+      "headline1": "TRAIN IN THE VERTICALS",
+      "headline2": "EMPLOYERS ARE HIRING FOR",
+      "items": [
+        "Cybersecurity",
+        "IT + Help Desk",
+        "AI Fundamentals",
+        "Prototyping",
+        "AI Automations",
+        "Cloud"
+      ],
+      "caption": "Verticals vary by cohort, aligned to current employer hiring patterns."
+    },
+    "results": {
+      "label": "The Results",
+      "headline": "PROOF, NOT PROMISES",
+      "body": "Catalyst launched in 2026, and the results are already on the board.",
+      "stats": [
+        {
+          "stat": "90+",
+          "label": "Learners in the first cohorts"
+        },
+        {
+          "stat": "100%",
+          "label": "Complete a hands-on capstone"
+        },
+        {
+          "stat": "Q4",
+          "label": "First placement window"
+        }
+      ]
+    },
+    "stories": {
+      "label": "Hear From Our Community",
+      "headline1": "REAL STORIES,",
+      "headline2": "REAL IMPACT",
+      "items": [
+        {
+          "quote": "Pull a 1–2 sentence quote from a graduate about what the program unlocked for them.",
+          "name": "Participant Name",
+          "role": "Catalyst Graduate"
+        }
+      ]
+    },
+    "signup": {
+      "label": "Stay In The Loop",
+      "headline": "GET ON THE LIST",
+      "body": "Join the newsletter and be first to hear when cohort applications, workshops, and Labs open up.",
+      "firstName": "First name",
+      "email": "Email address",
+      "interestLabel": "I'm interested in…",
+      "interestOptions": [
+        "Joining a Catalyst cohort",
+        "Attending workshops & Labs",
+        "Hiring Catalyst graduates",
+        "Partnering with Catalyst"
+      ],
+      "submit": "Join The Newsletter",
+      "success": "You're on the list.",
+      "successBody": "We'll be in touch as cohorts and Labs open up.",
+      "error": "Something went wrong. Please try again."
+    },
+    "why": {
+      "label": "Why We Built Catalyst",
+      "quote": "Catalyst is how we ensure a human stays in the loop. We focus on building access — to inspiration, to community, to early skills — enabling talent to build meaningful careers and become catalysts for change in the tech ecosystem.",
+      "author": "Cristina Mancini",
+      "authorRole": "Founder & CEO, Beyond Code Collective"
+    },
+    "employers": {
+      "label": "For Employers & Partners",
+      "headline": "HIRE READY.",
+      "body": "There are more open roles than credentialed people to fill them. We've screened the talent to close the gap. Catalyst graduates arrive with stacked industry credentials, a completed hands-on capstone, and real transferable skills. You get first access to proven talent.",
+      "cards": [
+        {
+          "title1": "GET OUR GRADS",
+          "title2": "ON YOUR TEAM",
+          "text": "Host an informational interview, preview capstones at Demo Day, or interview job-ready candidates matched to your open roles. WIOA partnerships welcome.",
+          "cta": "catalyst@wearebcc.org",
+          "href": "mailto:catalyst@wearebcc.org"
+        },
+        {
+          "title1": "ALREADY A",
+          "title2": "HIRING PARTNER?",
+          "text": "Email us for your access code to the private partner page, where you'll find the cohort overview, candidate snapshots, and the placement calendar.",
+          "cta": "Email us for access",
+          "href": "mailto:catalyst@wearebcc.org?subject=Partner%20access%20code"
+        }
+      ]
+    }
   }
 }
