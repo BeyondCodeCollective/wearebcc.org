@@ -727,7 +727,12 @@
           "badge": "Enrolling Now",
           "title": "MASS",
           "text": "An eight-week hybrid mindset and soft-skills program — the durable-skills foundation that makes technical training stick.",
-          "cta": "View Calendar & Sign Up"
+          "cta": "View Calendar & Sign Up",
+          "facilitator": {
+            "name": "Facilitator Name",
+            "bio": "One or two sentences about her background and why she leads MASS. Replace with her real bio.",
+            "photo": "/images/catalyst/mass-facilitator.jpg"
+          }
         },
         {
           "badge": "In Partnership",

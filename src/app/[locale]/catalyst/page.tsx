@@ -40,7 +40,14 @@ function MonoLabel({
 
 type Cell = { title: string; text: string };
 type Track = { title: string; text: string; tags: string[] };
-type Card = { badge: string; title: string; text: string; cta: string };
+type Facilitator = { name: string; bio: string; photo: string };
+type Card = {
+  badge: string;
+  title: string;
+  text: string;
+  cta: string;
+  facilitator?: Facilitator;
+};
 type Stat = { stat: string; label: string };
 type Story = { quote: string; name: string; role: string };
 type EmployerCard = {
@@ -329,9 +336,28 @@ export default function CatalystPage() {
                 <h3 className="mt-5 font-heading text-2xl uppercase tracking-tight text-true-black">
                   {card.title}
                 </h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-grey-3">
+                <p className="mt-3 text-sm leading-relaxed text-grey-3">
                   {card.text}
                 </p>
+                {card.facilitator && (
+                  <div className="mt-5 flex items-start gap-3 border-t border-true-black/10 pt-5">
+                    <Image
+                      src={card.facilitator.photo}
+                      alt={card.facilitator.name}
+                      width={48}
+                      height={48}
+                      className="h-12 w-12 shrink-0 rounded-full object-cover"
+                    />
+                    <div>
+                      <p className="font-heading text-sm uppercase tracking-tight text-true-black">
+                        {card.facilitator.name}
+                      </p>
+                      <p className="mt-1 text-xs leading-relaxed text-grey-3">
+                        {card.facilitator.bio}
+                      </p>
+                    </div>
+                  </div>
+                )}
                 <a
                   href="#signup"
                   className="mt-6 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-cobalt transition-colors hover:text-true-black"

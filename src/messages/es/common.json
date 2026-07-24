@@ -727,7 +727,12 @@
           "badge": "Inscripción Abierta",
           "title": "MASS",
           "text": "Un programa híbrido de ocho semanas de mentalidad y habilidades blandas: la base de habilidades duraderas que hace que la formación técnica se sostenga.",
-          "cta": "Ver Calendario e Inscribirse"
+          "cta": "Ver Calendario e Inscribirse",
+          "facilitator": {
+            "name": "Nombre de la Facilitadora",
+            "bio": "Una o dos frases sobre su trayectoria y por qué lidera MASS. Reemplaza con su biografía real.",
+            "photo": "/images/catalyst/mass-facilitator.jpg"
+          }
         },
         {
           "badge": "En Alianza",
