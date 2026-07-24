@@ -209,7 +209,7 @@ export default function CatalystPage() {
             style={{ boxShadow: "12px 12px 0 #1D59FF" }}
           >
             <Image
-              src="/images/atg/atg-hero-panel.jpg"
+              src="/images/catalyst/gap.jpg"
               alt={t("gap.imageAlt")}
               fill
               className="object-cover"
