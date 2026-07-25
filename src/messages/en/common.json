@@ -788,9 +788,14 @@
       "headline2": "REAL IMPACT",
       "items": [
         {
-          "quote": "Pull a 1–2 sentence quote from a graduate about what the program unlocked for them.",
-          "name": "Participant Name",
-          "role": "Catalyst Graduate"
+          "quote": "Before Beyond Code Collective, I thought tech was out of reach for me. I was working in healthcare doing medical billing and coding, but I realized it wasn't what I wanted long-term. This program gave me the opportunity to refocus and pursue the technology path I always wanted.",
+          "name": "Londella",
+          "role": "Career Changer · Atlanta, GA"
+        },
+        {
+          "quote": "Before Beyond Code Collective, I thought tech was impossible to get my hands on. Now tech is at my fingertips. The birth of my son pushed me to take tech more seriously and just go for it. I wanted to provide for my family and dive into an interest I already had.",
+          "name": "Josh",
+          "role": "Learner · Atlanta, GA"
         }
       ]
     },
