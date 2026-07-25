@@ -184,7 +184,7 @@ export default function CatalystPage() {
               transition={{ delay: 0.08 * i, duration: 0.5 }}
               className="text-center"
             >
-              <p className="font-heading text-[clamp(1.75rem,5vw,3rem)] leading-none text-off-white">
+              <p className="font-heading text-[clamp(2rem,6vw,3.5rem)] leading-none text-electric-green">
                 {item.stat}
               </p>
               <p
@@ -280,7 +280,7 @@ export default function CatalystPage() {
                 className="flex flex-col border border-off-white/10 bg-true-black p-8"
               >
                 <p
-                  className="font-mono text-xs text-off-white/30"
+                  className="font-mono text-sm text-electric-green"
                   style={{ fontFamily: "var(--font-mono)" }}
                 >
                   0{i + 1}
