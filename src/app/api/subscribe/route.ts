@@ -37,6 +37,8 @@ type Lead = {
   company: string;
   segment: string;
   source: string;
+  /** Free text from the contact modal. Mailchimp has no merge field for it. */
+  message: string;
 };
 
 /**
@@ -51,9 +53,10 @@ async function persistLead(lead: Lead): Promise<number | null> {
   try {
     await ensureTables();
     const { rows } = await sql`
-      INSERT INTO subscribers (email, first_name, phone, company, segment, source)
+      INSERT INTO subscribers (email, first_name, phone, company, segment, source, message)
       VALUES (${lead.email}, ${lead.firstName || null}, ${lead.phone || null},
-              ${lead.company || null}, ${lead.segment || null}, ${lead.source})
+              ${lead.company || null}, ${lead.segment || null}, ${lead.source},
+              ${lead.message || null})
       RETURNING id
     `;
     return rows[0].id as number;
@@ -113,7 +116,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
   }
 
-  const { firstName, email, phone, segment, source, company } = body as Record<
+  const { firstName, email, phone, segment, source, company, message } = body as Record<
     string,
     string | undefined
   >;
@@ -140,10 +143,20 @@ export async function POST(request: NextRequest) {
     company: typeof company === "string" ? company.trim() : "",
     segment: typeof segment === "string" ? segment : "",
     source,
+    message: typeof message === "string" ? message.trim() : "",
   };
 
   // 1. Capture first. Never depends on a third party being up.
   const leadId = await persistLead(lead);
+
+  // Somebody wrote to us and is expecting a reply. Until these are surfaced in
+  // the admin or emailed out, the log is the only way anyone sees them.
+  if (lead.message) {
+    console.log(
+      `CONTACT_MESSAGE source=${lead.source} from=${lead.firstName} <${lead.email}> ` +
+        `stored=${leadId !== null ? `subscribers#${leadId}` : "LOG ONLY"}\n${lead.message}`,
+    );
+  }
 
   // 2. Then sync to Mailchimp. A failure here is ours to retry, not the
   //    visitor's to re-submit — they already gave us their address.

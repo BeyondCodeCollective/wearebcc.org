@@ -70,7 +70,12 @@ export async function ensureTables() {
       created_at TIMESTAMPTZ DEFAULT NOW()
     )
   `;
+  // The contact modal collects a written message. Mailchimp has no merge field
+  // that can hold one, so Postgres is the only place it can live.
+  await sql`ALTER TABLE subscribers ADD COLUMN IF NOT EXISTS message TEXT`;
   await sql`CREATE INDEX IF NOT EXISTS idx_subscribers_email ON subscribers(email)`;
+  // Contact messages are the rows a human actually needs to read.
+  await sql`CREATE INDEX IF NOT EXISTS idx_subscribers_messages ON subscribers(created_at) WHERE message IS NOT NULL`;
   await sql`CREATE INDEX IF NOT EXISTS idx_subscribers_created ON subscribers(created_at)`;
   // Partial index: the backfill only ever asks for the unsynced rows.
   await sql`CREATE INDEX IF NOT EXISTS idx_subscribers_unsynced ON subscribers(created_at) WHERE synced_to_mailchimp = FALSE`;
