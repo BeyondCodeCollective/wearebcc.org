@@ -721,7 +721,8 @@
           "badge": "Virtual · Semanal · Gratis",
           "title": "Home For Summer",
           "text": "Nuestra serie de talleres de verano: una introducción de bajo compromiso a las herramientas e ideas de tecnología emergente que están definiendo el mercado. Nombre provisional; nombre final y calendario por venir.",
-          "cta": "Avísenme"
+          "cta": "Avísenme",
+          "href": "https://bccacademy.io/bcc/home-for-summer"
         },
         {
           "badge": "Inscripción Abierta",
@@ -734,13 +735,15 @@
             "role": "Tu Coach",
             "bio": "Actriz, luego estratega de marketing en tecnología, luego coach galardonada. Autora bestseller que ha guiado a miles y creó MASS porque vivió exactamente la brecha en la que hoy te encuentras.",
             "photo": "/images/catalyst/mass-facilitator.jpg"
-          }
+          },
+          "href": "https://bccacademy.io/bcc/mass"
         },
         {
           "badge": "En Alianza",
           "title": "Virtual Labs",
           "text": "Sesiones prácticas de laboratorio virtual creadas con nuestros socios, donde construyes con tecnología emergente junto a facilitadores y tus pares. Nombre y fechas del programa muy pronto.",
-          "cta": "Avísenme"
+          "cta": "Avísenme",
+          "href": "https://bccacademy.io/bcc/virtual-labs"
         }
       ]
     },

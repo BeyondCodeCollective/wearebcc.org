@@ -50,6 +50,7 @@ type Card = {
   stat?: string;
   statSource?: string;
   cta: string;
+  href: string;
   facilitator?: Facilitator;
 };
 type Stat = { stat: string; label: string };
@@ -424,7 +425,9 @@ export default function CatalystPage() {
                   </div>
                 )}
                 <a
-                  href="#signup"
+                  href={card.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-6 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-cobalt transition-colors hover:text-true-black"
                   style={{ fontFamily: "var(--font-mono)" }}
                 >

@@ -721,7 +721,8 @@
           "badge": "Virtual · Weekly · Free",
           "title": "Home For Summer",
           "text": "Our summer workshop series: a low-stakes introduction to the emerging tech tools and ideas shaping the market. Working title — final name and schedule to come.",
-          "cta": "Get Notified"
+          "cta": "Get Notified",
+          "href": "https://bccacademy.io/bcc/home-for-summer"
         },
         {
           "badge": "Enrolling Now",
@@ -734,13 +735,15 @@
             "role": "Your Coach",
             "bio": "Actress, turned tech marketing strategist, turned award-winning coach. A bestselling author who has coached thousands and built MASS because she has lived the exact gap you're standing in.",
             "photo": "/images/catalyst/mass-facilitator.jpg"
-          }
+          },
+          "href": "https://bccacademy.io/bcc/mass"
         },
         {
           "badge": "In Partnership",
           "title": "Virtual Labs",
           "text": "Hands-on virtual lab sessions built with our partners, where you build with emerging tech alongside facilitators and your peers. Program name and dates announcing soon.",
-          "cta": "Get Notified"
+          "cta": "Get Notified",
+          "href": "https://bccacademy.io/bcc/virtual-labs"
         }
       ]
     },
