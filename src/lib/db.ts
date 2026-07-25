@@ -48,4 +48,30 @@ export async function ensureTables() {
     )
   `;
   await sql`CREATE UNIQUE INDEX IF NOT EXISTS idx_site_content_locale_ns ON site_content(locale, namespace)`;
+
+  // ─── Lead capture ───────────────────────────────────────────────
+  // Every form submission is written here BEFORE Mailchimp is called, so a
+  // Mailchimp outage costs us a sync, not the person. Append-only on purpose:
+  // one row per submission, never updated in place except to record sync
+  // state. A dead API key cost roughly two months of signups in 2026 because
+  // Mailchimp was the only place this data ever existed.
+  await sql`
+    CREATE TABLE IF NOT EXISTS subscribers (
+      id SERIAL PRIMARY KEY,
+      email VARCHAR(320) NOT NULL,
+      first_name VARCHAR(200),
+      phone VARCHAR(32),
+      company VARCHAR(200),
+      segment VARCHAR(200),
+      source VARCHAR(100) NOT NULL,
+      synced_to_mailchimp BOOLEAN DEFAULT FALSE,
+      sync_error TEXT,
+      synced_at TIMESTAMPTZ,
+      created_at TIMESTAMPTZ DEFAULT NOW()
+    )
+  `;
+  await sql`CREATE INDEX IF NOT EXISTS idx_subscribers_email ON subscribers(email)`;
+  await sql`CREATE INDEX IF NOT EXISTS idx_subscribers_created ON subscribers(created_at)`;
+  // Partial index: the backfill only ever asks for the unsynced rows.
+  await sql`CREATE INDEX IF NOT EXISTS idx_subscribers_unsynced ON subscribers(created_at) WHERE synced_to_mailchimp = FALSE`;
 }
