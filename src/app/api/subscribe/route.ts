@@ -4,6 +4,7 @@ const mailchimp = require("@mailchimp/mailchimp_marketing");
 import crypto from "crypto";
 import { sql } from "@vercel/postgres";
 import { ensureTables } from "@/lib/db";
+import { screen } from "@/lib/moderation";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -39,7 +40,37 @@ type Lead = {
   source: string;
   /** Free text from the contact modal. Mailchimp has no merge field for it. */
   message: string;
+  ipHash: string | null;
+  flagged: boolean;
+  flagReason: string | null;
 };
+
+/** Hash the caller's IP so abuse can be rate-limited without storing addresses. */
+function hashIp(request: NextRequest): string | null {
+  const raw =
+    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    request.headers.get("x-real-ip")?.trim();
+  if (!raw) return null;
+  const salt = process.env.IP_HASH_SALT || process.env.DASHBOARD_PASSWORD || "bcc";
+  return crypto.createHash("sha256").update(`${salt}:${raw}`).digest("hex");
+}
+
+/** Submissions allowed from one address per hour before we stop storing them. */
+const RATE_LIMIT_PER_HOUR = 6;
+
+async function isRateLimited(ipHash: string | null): Promise<boolean> {
+  if (!ipHash) return false;
+  try {
+    const { rows } = await sql`
+      SELECT COUNT(*)::int AS n FROM subscribers
+      WHERE ip_hash = ${ipHash} AND created_at > NOW() - INTERVAL '1 hour'
+    `;
+    return (rows[0]?.n ?? 0) >= RATE_LIMIT_PER_HOUR;
+  } catch {
+    // Never let the rate limiter be the reason a real lead is lost.
+    return false;
+  }
+}
 
 /**
  * Write the lead down before anything else can fail.
@@ -53,10 +84,12 @@ async function persistLead(lead: Lead): Promise<number | null> {
   try {
     await ensureTables();
     const { rows } = await sql`
-      INSERT INTO subscribers (email, first_name, phone, company, segment, source, message)
+      INSERT INTO subscribers (email, first_name, phone, company, segment, source,
+                               message, ip_hash, flagged, flag_reason)
       VALUES (${lead.email}, ${lead.firstName || null}, ${lead.phone || null},
               ${lead.company || null}, ${lead.segment || null}, ${lead.source},
-              ${lead.message || null})
+              ${lead.message || null}, ${lead.ipHash}, ${lead.flagged},
+              ${lead.flagReason})
       RETURNING id
     `;
     return rows[0].id as number;
@@ -64,7 +97,9 @@ async function persistLead(lead: Lead): Promise<number | null> {
     // Both stores are now failing. Log the address itself so the lead is at
     // least recoverable from the log, which is the last line of defence.
     console.error(
-      `LEAD_CAPTURE_FAILED source=${lead.source} email=${lead.email} name=${lead.firstName}`,
+      `LEAD_CAPTURE_FAILED source=${lead.source} email=${lead.email} ` +
+        // A flagged submission can carry abuse in the name field too.
+        `name=${lead.flagged ? "[flagged]" : lead.firstName}`,
       err,
     );
     return null;
@@ -116,10 +151,14 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
   }
 
-  const { firstName, email, phone, segment, source, company, message } = body as Record<
-    string,
-    string | undefined
-  >;
+  const { firstName, email, phone, segment, source, company, message, website } =
+    body as Record<string, string | undefined>;
+
+  // Honeypot: a field hidden from people and irresistible to bots. Answer 200
+  // so the bot records a success and does not come back to probe why it failed.
+  if (typeof website === "string" && website.trim() !== "") {
+    return NextResponse.json({ success: true }, { status: 200 });
+  }
 
   const hasEmail = !!email && typeof email === "string" && EMAIL_REGEX.test(email.trim());
   const hasPhone = !!phone && typeof phone === "string" && phone.trim().length >= 10;
@@ -136,6 +175,22 @@ export async function POST(request: NextRequest) {
     ? email!.trim().toLowerCase()
     : `phone-${phone!.trim().replace(/\D/g, "")}@placeholder.wearebcc.org`;
 
+  const ipHash = hashIp(request);
+
+  // One address flooding the form. Drop silently: a flooder must not be able
+  // to fill the table, and must not learn that they were stopped.
+  if (await isRateLimited(ipHash)) {
+    console.warn(`SUBSCRIBE_RATE_LIMITED source=${source}`);
+    return NextResponse.json({ success: true }, { status: 200 });
+  }
+
+  const screening = screen({
+    message: typeof message === "string" ? message : "",
+    firstName: typeof firstName === "string" ? firstName : "",
+    company: typeof company === "string" ? company : "",
+    segment: typeof segment === "string" ? segment : "",
+  });
+
   const lead: Lead = {
     email: cleanEmail,
     firstName: typeof firstName === "string" ? firstName.trim() : "",
@@ -144,10 +199,25 @@ export async function POST(request: NextRequest) {
     segment: typeof segment === "string" ? segment : "",
     source,
     message: typeof message === "string" ? message.trim() : "",
+    ipHash,
+    flagged: screening.blocked,
+    flagReason: screening.blocked ? screening.reasons.join(", ") : null,
   };
 
   // 1. Capture first. Never depends on a third party being up.
   const leadId = await persistLead(lead);
+
+  if (screening.blocked) {
+    // Reasons only. The text itself is deliberately never logged: the point of
+    // screening it is that nobody here has to read it.
+    console.warn(
+      `SUBSCRIBE_FLAGGED source=${lead.source} reasons=[${screening.reasons.join(", ")}] ` +
+        `stored=${leadId !== null ? `subscribers#${leadId}` : "DROPPED"}`,
+    );
+    // Same response an accepted submission gets. Never confirm to an abuser
+    // that they were filtered.
+    return NextResponse.json({ success: true }, { status: 200 });
+  }
 
   // Somebody wrote to us and is expecting a reply. Until these are surfaced in
   // the admin or emailed out, the log is the only way anyone sees them.
