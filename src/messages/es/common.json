@@ -101,8 +101,14 @@
     "heroImageAlt": "Cohorte de Beyond Code Catalyst colaborando",
     "talkCta": "Habla Con Nuestro Equipo",
     "stats": [
-      { "stat": "15", "label": "Candidatos evaluados en la cohorte inaugural" },
-      { "stat": "OCT", "label": "Listos para entrevistas · ventana de colocación 2026" }
+      {
+        "stat": "15",
+        "label": "Candidatos evaluados en la cohorte inaugural"
+      },
+      {
+        "stat": "OCT",
+        "label": "Listos para entrevistas · ventana de colocación 2026"
+      }
     ],
     "gapLabel": "[ La Brecha ]",
     "gapHeadline1": "HAY MÁS PUESTOS ABIERTOS EN CIBERSEGURIDAD QUE PERSONAS ACREDITADAS PARA CUBRIRLOS.",
@@ -128,39 +134,101 @@
     "whyHeadline1": "POR QUÉ",
     "whyHeadline2": "FUNCIONA EL MODELO",
     "pillars": [
-      { "n": "01", "title": "CREDENCIALES ACUMULADAS", "text": "Tech+, Network+ y Security+ — pruebas reconocidas por la industria que se acumulan, no un certificado único de bootcamp." },
-      { "n": "02", "title": "CAPSTONE PRÁCTICO", "text": "Una simulación completada de analista SOC demuestra la capacidad directamente, incluso para candidatos sin historial laboral previo en seguridad." },
-      { "n": "03", "title": "HABILIDADES DURADERAS", "text": "Nuestro currículo de coaching profesional construye la fiabilidad, la comunicación y la constancia que hacen que las contrataciones de nivel inicial permanezcan." },
-      { "n": "04", "title": "APOYO CONTINUO", "text": "Seguimos involucrados después de la contratación con apoyo integral para proteger la retención." }
+      {
+        "n": "01",
+        "title": "CREDENCIALES ACUMULADAS",
+        "text": "Tech+, Network+ y Security+ — pruebas reconocidas por la industria que se acumulan, no un certificado único de bootcamp."
+      },
+      {
+        "n": "02",
+        "title": "CAPSTONE PRÁCTICO",
+        "text": "Una simulación completada de analista SOC demuestra la capacidad directamente, incluso para candidatos sin historial laboral previo en seguridad."
+      },
+      {
+        "n": "03",
+        "title": "HABILIDADES DURADERAS",
+        "text": "Nuestro currículo de coaching profesional construye la fiabilidad, la comunicación y la constancia que hacen que las contrataciones de nivel inicial permanezcan."
+      },
+      {
+        "n": "04",
+        "title": "APOYO CONTINUO",
+        "text": "Seguimos involucrados después de la contratación con apoyo integral para proteger la retención."
+      }
     ],
     "rolesLabel": "[ Roles Para Los Que Están Listos ]",
     "rolesHeadline1": "CUATRO RUTAS,",
     "rolesHeadline2": "LISTOS PARA TRABAJAR",
     "roles": [
-      { "track": "Ruta · Operaciones", "title": "ANALISTA SOC I", "text": "Operaciones de seguridad, monitoreo SIEM y clasificación de alertas — respaldado directamente por el capstone de la cohorte. Varios candidatos nombran el trabajo SOC como su meta clara." },
-      { "track": "Ruta · Fundamentos", "title": "SOPORTE DE TI Y MESA DE AYUDA", "text": "Mesa de servicio, soporte de escritorio y soporte técnico — la vía de entrada comprobada para candidatos con Network+/Tech+ y sólida experiencia transferible." },
-      { "track": "Ruta · Gobernanza", "title": "GRC Y CUMPLIMIENTO", "text": "Gobernanza, riesgo, auditoría de TI y análisis de cumplimiento — un encaje natural para candidatos que vienen de auditoría, administración de Salesforce y operaciones." },
-      { "track": "Ruta · Nube y Automatización", "title": "SEGURIDAD EN LA NUBE Y AUTOMATIZACIÓN", "text": "Roles de nivel inicial en seguridad de nube y adyacentes a DevSecOps — incluyendo una ingeniera de automatización de QA en transición hacia la automatización de seguridad." }
+      {
+        "track": "Ruta · Operaciones",
+        "title": "ANALISTA SOC I",
+        "text": "Operaciones de seguridad, monitoreo SIEM y clasificación de alertas — respaldado directamente por el capstone de la cohorte. Varios candidatos nombran el trabajo SOC como su meta clara."
+      },
+      {
+        "track": "Ruta · Fundamentos",
+        "title": "SOPORTE DE TI Y MESA DE AYUDA",
+        "text": "Mesa de servicio, soporte de escritorio y soporte técnico — la vía de entrada comprobada para candidatos con Network+/Tech+ y sólida experiencia transferible."
+      },
+      {
+        "track": "Ruta · Gobernanza",
+        "title": "GRC Y CUMPLIMIENTO",
+        "text": "Gobernanza, riesgo, auditoría de TI y análisis de cumplimiento — un encaje natural para candidatos que vienen de auditoría, administración de Salesforce y operaciones."
+      },
+      {
+        "track": "Ruta · Nube y Automatización",
+        "title": "SEGURIDAD EN LA NUBE Y AUTOMATIZACIÓN",
+        "text": "Roles de nivel inicial en seguridad de nube y adyacentes a DevSecOps — incluyendo una ingeniera de automatización de QA en transición hacia la automatización de seguridad."
+      }
     ],
     "caliberLabel": "[ Un Vistazo a la Sala ]",
     "caliberHeadline1": "EL CALIBRE",
     "caliberHeadline2": "QUE CONOCERÁS",
     "caliber": [
-      { "tag": "SOC · Forense", "text": "Estudiante de maestría en ciberseguridad, con dominio de ServiceNow, Wireshark y Azure — enfocado en roles de SOC y forense digital." },
-      { "tag": "Ruta de Liderazgo en Seguridad", "text": "Ex Director de Desarrollo de Sistemas del mundo de TI sin fines de lucro, aportando profundidad de gestión a su giro hacia la seguridad." },
-      { "tag": "Automatización de Seguridad", "text": "Ingeniera de automatización de QA con una historia de transición clara: de la automatización de pruebas a DevSecOps y la automatización de seguridad." },
-      { "tag": "GRC · Cumplimiento", "text": "Administradora y consultora de Salesforce avanzando deliberadamente hacia el trabajo de gobernanza, riesgo y cumplimiento." },
-      { "tag": "Operaciones de Seguridad", "text": "Veterano de TI militar que busca continuar en TI y operaciones de seguridad — un participante recurrente y de alto compromiso." },
-      { "tag": "SOC · SIEM · GRC", "text": "Analista de datos y auditoría de gobierno local, usuario de ServiceNow, enfocado en rutas de SOC, SIEM y GRC." }
+      {
+        "tag": "SOC · Forense",
+        "text": "Estudiante de maestría en ciberseguridad, con dominio de ServiceNow, Wireshark y Azure — enfocado en roles de SOC y forense digital."
+      },
+      {
+        "tag": "Ruta de Liderazgo en Seguridad",
+        "text": "Ex Director de Desarrollo de Sistemas del mundo de TI sin fines de lucro, aportando profundidad de gestión a su giro hacia la seguridad."
+      },
+      {
+        "tag": "Automatización de Seguridad",
+        "text": "Ingeniera de automatización de QA con una historia de transición clara: de la automatización de pruebas a DevSecOps y la automatización de seguridad."
+      },
+      {
+        "tag": "GRC · Cumplimiento",
+        "text": "Administradora y consultora de Salesforce avanzando deliberadamente hacia el trabajo de gobernanza, riesgo y cumplimiento."
+      },
+      {
+        "tag": "Operaciones de Seguridad",
+        "text": "Veterano de TI militar que busca continuar en TI y operaciones de seguridad — un participante recurrente y de alto compromiso."
+      },
+      {
+        "tag": "SOC · SIEM · GRC",
+        "text": "Analista de datos y auditoría de gobierno local, usuario de ServiceNow, enfocado en rutas de SOC, SIEM y GRC."
+      }
     ],
     "caliberNote": "Perfiles anonimizados de la cohorte confirmada. Los perfiles completos de candidatos se comparten con socios de contratación comprometidos.",
     "stepsLabel": "[ Cómo Funciona la Alianza ]",
     "stepsHeadline1": "TRES FORMAS DE ENTRAR —",
     "stepsHeadline2": "EMPIEZA DONDE QUIERAS",
     "steps": [
-      { "n": "Paso 01", "title": "ENTREVISTA INFORMATIVA", "text": "Dedica 30 minutos a un candidato evaluado. Tus perspectivas ayudan a preparar a los futuros profesionales de ciberseguridad mientras conoces a personas en cambio de carrera altamente motivadas y listas para generar un impacto inmediato." },
-      { "n": "Paso 02", "title": "VISTA PREVIA EN EL DEMO DAY", "text": "Acompáñanos a principios de septiembre para ver a la cohorte presentar en vivo sus capstones de analista SOC." },
-      { "n": "Paso 03", "title": "ENTREVISTA EN OCTUBRE", "text": "Comprométete a entrevistar candidatos listos para trabajar, emparejados con tus vacantes." }
+      {
+        "n": "Paso 01",
+        "title": "ENTREVISTA INFORMATIVA",
+        "text": "Dedica 30 minutos a un candidato evaluado. Tus perspectivas ayudan a preparar a los futuros profesionales de ciberseguridad mientras conoces a personas en cambio de carrera altamente motivadas y listas para generar un impacto inmediato."
+      },
+      {
+        "n": "Paso 02",
+        "title": "VISTA PREVIA EN EL DEMO DAY",
+        "text": "Acompáñanos a principios de septiembre para ver a la cohorte presentar en vivo sus capstones de analista SOC."
+      },
+      {
+        "n": "Paso 03",
+        "title": "ENTREVISTA EN OCTUBRE",
+        "text": "Comprométete a entrevistar candidatos listos para trabajar, emparejados con tus vacantes."
+      }
     ],
     "aboutLabel": "[ Sobre Beyond Code ]",
     "aboutText1": "Beyond Code Collective es una organización sin fines de lucro que cierra la brecha entre la inspiración, la formación y el empleo en tecnología. Conectamos al talento con educación accesible, oportunidades prácticas para construir con tecnologías emergentes y caminos claros para lanzar y hacer crecer carreras significativas.",
@@ -369,17 +437,17 @@
     "initiative": "UNA INICIATIVA DE BEYOND CODE COLLECTIVE",
     "headline1": "DONDE LA INNOVACIÓN",
     "headline2": "SE ENCUENTRA CON LA COMUNIDAD",
-    "description": "The Forge es una red de centros intergeneracionales y específicos por ubicación que combinan educación tecnológica, participación comunitaria y desarrollo laboral bajo un mismo techo. Un verdadero “tercer lugar” que no es escuela ni trabajo, donde estudiantes de secundaria se sientan junto a profesionales de mitad de carrera y familias con sus hijos, mientras exploran la IA y la tecnología emergente juntos.",
+    "description": "Beyond Code Centers es una red de centros intergeneracionales y específicos por ubicación que combinan educación tecnológica, participación comunitaria y desarrollo laboral bajo un mismo techo. Un verdadero “tercer lugar” que no es escuela ni trabajo, donde estudiantes de secundaria se sientan junto a profesionales de mitad de carrera y familias con sus hijos, mientras exploran la IA y la tecnología emergente juntos.",
     "learnMore": "INSCRÍBETE A EVENTOS",
     "viewCalendar": "VER CALENDARIO COMPLETO",
     "eventbriteCta": "VER PRÓXIMOS EVENTOS",
-    "quoteText": "En Beyond Code, creemos que todos deberían tener un papel en dar forma a la tecnología del mañana. The Forge nos permite no solo dar a las personas acceso a herramientas, sino el apoyo comunitario y el espacio para explorar estas herramientas, para que estén empoderados para dar forma con confianza al futuro de la tecnología y el trabajo.",
+    "quoteText": "En Beyond Code, creemos que todos deberían tener un papel en dar forma a la tecnología del mañana. Beyond Code Centers nos permite no solo dar a las personas acceso a herramientas, sino el apoyo comunitario y el espacio para explorar estas herramientas, para que estén empoderados para dar forma con confianza al futuro de la tecnología y el trabajo.",
     "quoteAuthor": "Cristina Mancini",
     "quoteRole": "Fundadora y CEO, Beyond Code Collective",
-    "whatLabel": "¿QUÉ ES THE FORGE?",
+    "whatLabel": "¿QUÉ ES BEYOND CODE CENTERS?",
     "whatHeadline1": "UN TERCER LUGAR",
     "whatHeadline2": "PARA LA TECNOLOGÍA",
-    "whatText": "The Forge está diseñado para ser un espacio seguro para hacer preguntas sin miedo ni vergüenza. Cada centro The Forge ofrece programación culturalmente responsiva a su comunidad, sirviendo a estudiantes K-12 y adultos que buscan caminos hacia carreras impulsadas por la tecnología.",
+    "whatText": "Beyond Code Centers está diseñado para ser un espacio seguro para hacer preguntas sin miedo ni vergüenza. Cada Beyond Code Centers ofrece programación culturalmente responsiva a su comunidad, sirviendo a estudiantes K-12 y adultos que buscan caminos hacia carreras impulsadas por la tecnología.",
     "pillarsLabel": "EL MODELO",
     "pillarsHeadline1": "CONSTRUIDO PARA",
     "pillarsHeadline2": "TODOS",
@@ -403,7 +471,7 @@
     ],
     "programmingLabel": "PROGRAMACIÓN",
     "programmingHeadline1": "QUÉ SUCEDE",
-    "programmingHeadline2": "EN THE FORGE",
+    "programmingHeadline2": "EN BEYOND CODE CENTERS",
     "programmingTypes": [
       {
         "title": "Almuerzo y Aprendizaje",
@@ -452,24 +520,24 @@
       {
         "step": "03",
         "title": "Ven y Aprende",
-        "description": "Asiste en persona en The Forge. No se necesita preparación, solo ven con mente abierta."
+        "description": "Asiste en persona en Beyond Code Centers. No se necesita preparación, solo ven con mente abierta."
       }
     ],
-    "atlLabel": "THE FORGE: ATL",
+    "atlLabel": "BEYOND CODE CENTERS: ATL",
     "atlHeadline1": "PRIMERA RESIDENCIA",
     "atlHeadline2": "ATLANTA, GEORGIA",
-    "atlText": "The Forge: ATL está alojado dentro de North Star AI Labs en el Advanced Technology Development Center (ATDC) de Georgia Tech. Se ofrece programación gratuita dos días a la semana, desde marzo de 2026 hasta agosto de 2026.",
+    "atlText": "Beyond Code Centers: ATL está alojado dentro de North Star AI Labs en el Advanced Technology Development Center (ATDC) de Georgia Tech. Se ofrece programación gratuita dos días a la semana, desde marzo de 2026 hasta agosto de 2026.",
     "atlPartner": "En asociación con ATDC de Georgia Tech",
     "atlSchedule": "Dos días a la semana, programación gratuita",
     "atlDates": "Marzo 2026 – Agosto 2026",
     "atlLocation": "North Star AI Labs en Georgia Tech ATDC",
-    "galleryLabel": "THE FORGE EN ACCIÓN",
+    "galleryLabel": "BEYOND CODE CENTERS EN ACCIÓN",
     "galleryHeadline1": "NUESTRA",
     "galleryHeadline2": "COMUNIDAD",
     "openingLabel": "[07] EVENTO DE LANZAMIENTO",
     "openingHeadline1": "LA APERTURA",
-    "openingHeadline2": "DE THE FORGE",
-    "openingText": "The Forge celebró su evento de apertura el 9 de marzo, reuniendo a algunos de los principales educadores, tecnólogos y líderes comunitarios de Atlanta.",
+    "openingHeadline2": "DE BEYOND CODE CENTERS",
+    "openingText": "Beyond Code Centers celebró su evento de apertura el 9 de marzo, reuniendo a algunos de los principales educadores, tecnólogos y líderes comunitarios de Atlanta.",
     "panelists": [
       {
         "name": "Rep. Kim Schofield",
@@ -486,8 +554,8 @@
     ],
     "formLabel": "PARTICIPA",
     "formHeadline1": "ÚNETE A",
-    "formHeadline2": "THE FORGE",
-    "formDescription": "¿Interesado en asistir a The Forge: ATL, ser voluntario o asociarte? Regístrate y te mantendremos informado.",
+    "formHeadline2": "BEYOND CODE CENTERS",
+    "formDescription": "¿Interesado en asistir a Beyond Code Centers: ATL, ser voluntario o asociarte? Regístrate y te mantendremos informado.",
     "firstName": "Nombre",
     "email": "Correo electrónico",
     "phone": "Teléfono (opcional)",
@@ -500,7 +568,8 @@
     "submit": "PARTICIPA",
     "successTitle": "¡ESTÁS DENTRO!",
     "successMessage": "Estaremos en contacto con detalles de programación y actualizaciones.",
-    "error": "Algo salió mal"
+    "error": "Algo salió mal",
+    "wordmark": "Beyond Code Centers"
   },
   "team": {
     "back": "WEAREBCC.ORG",

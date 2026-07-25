@@ -101,8 +101,14 @@
     "heroImageAlt": "Beyond Code Catalyst cohort collaborating",
     "talkCta": "Talk To Our Team",
     "stats": [
-      { "stat": "15", "label": "Vetted candidates in the inaugural cohort" },
-      { "stat": "OCT", "label": "Interview-ready · 2026 placement window" }
+      {
+        "stat": "15",
+        "label": "Vetted candidates in the inaugural cohort"
+      },
+      {
+        "stat": "OCT",
+        "label": "Interview-ready · 2026 placement window"
+      }
     ],
     "gapLabel": "[ The Gap ]",
     "gapHeadline1": "THERE ARE MORE OPEN CYBER ROLES THAN CREDENTIALED PEOPLE TO FILL THEM.",
@@ -128,39 +134,101 @@
     "whyHeadline1": "WHY THE",
     "whyHeadline2": "MODEL WORKS",
     "pillars": [
-      { "n": "01", "title": "STACKED CREDENTIALS", "text": "Tech+, Network+, and Security+ — industry-recognized proof that compounds, not a single bootcamp certificate." },
-      { "n": "02", "title": "HANDS-ON CAPSTONE", "text": "A completed SOC-analyst simulation demonstrates ability directly, even for candidates without prior security job history." },
-      { "n": "03", "title": "DURABLE SKILLS", "text": "Our career coaching curriculum builds the reliability, communication, and follow-through that make entry-level hires stick." },
-      { "n": "04", "title": "ONGOING SUPPORT", "text": "We stay engaged after the hire with wraparound support to protect retention." }
+      {
+        "n": "01",
+        "title": "STACKED CREDENTIALS",
+        "text": "Tech+, Network+, and Security+ — industry-recognized proof that compounds, not a single bootcamp certificate."
+      },
+      {
+        "n": "02",
+        "title": "HANDS-ON CAPSTONE",
+        "text": "A completed SOC-analyst simulation demonstrates ability directly, even for candidates without prior security job history."
+      },
+      {
+        "n": "03",
+        "title": "DURABLE SKILLS",
+        "text": "Our career coaching curriculum builds the reliability, communication, and follow-through that make entry-level hires stick."
+      },
+      {
+        "n": "04",
+        "title": "ONGOING SUPPORT",
+        "text": "We stay engaged after the hire with wraparound support to protect retention."
+      }
     ],
     "rolesLabel": "[ Roles They're Ready For ]",
     "rolesHeadline1": "FOUR TRACKS,",
     "rolesHeadline2": "JOB-READY NOW",
     "roles": [
-      { "track": "Track · Operations", "title": "SOC ANALYST I", "text": "Security operations, SIEM monitoring, and alert triage — backed directly by the cohort's capstone. Multiple candidates name SOC work as their clear goal." },
-      { "track": "Track · Foundations", "title": "IT SUPPORT & HELP DESK", "text": "Service desk, desktop, and technical support — the proven on-ramp for candidates with Network+/Tech+ and strong transferable experience." },
-      { "track": "Track · Governance", "title": "GRC & COMPLIANCE", "text": "Governance, risk, IT audit, and compliance analysis — a natural fit for candidates coming from audit, Salesforce administration, and operations." },
-      { "track": "Track · Cloud & Automation", "title": "CLOUD & SECURITY AUTOMATION", "text": "Entry cloud security and DevSecOps-adjacent roles — including a QA-automation engineer bridging into security automation." }
+      {
+        "track": "Track · Operations",
+        "title": "SOC ANALYST I",
+        "text": "Security operations, SIEM monitoring, and alert triage — backed directly by the cohort's capstone. Multiple candidates name SOC work as their clear goal."
+      },
+      {
+        "track": "Track · Foundations",
+        "title": "IT SUPPORT & HELP DESK",
+        "text": "Service desk, desktop, and technical support — the proven on-ramp for candidates with Network+/Tech+ and strong transferable experience."
+      },
+      {
+        "track": "Track · Governance",
+        "title": "GRC & COMPLIANCE",
+        "text": "Governance, risk, IT audit, and compliance analysis — a natural fit for candidates coming from audit, Salesforce administration, and operations."
+      },
+      {
+        "track": "Track · Cloud & Automation",
+        "title": "CLOUD & SECURITY AUTOMATION",
+        "text": "Entry cloud security and DevSecOps-adjacent roles — including a QA-automation engineer bridging into security automation."
+      }
     ],
     "caliberLabel": "[ A Preview Of The Room ]",
     "caliberHeadline1": "THE CALIBER",
     "caliberHeadline2": "YOU'LL MEET",
     "caliber": [
-      { "tag": "SOC · Forensics", "text": "Cybersecurity master's candidate, fluent in ServiceNow, Wireshark, and Azure — targeting SOC and digital-forensics roles." },
-      { "tag": "Security Leadership Track", "text": "Former Director of Systems Development from the nonprofit IT world, bringing management depth into a security pivot." },
-      { "tag": "Security Automation", "text": "QA automation engineer with a clear bridge story: from test automation into DevSecOps and security automation." },
-      { "tag": "GRC · Compliance", "text": "Salesforce administrator and consultant moving deliberately toward governance, risk, and compliance work." },
-      { "tag": "Security Operations", "text": "Military IT veteran seeking to stay in IT and security operations — a repeat, high-commitment participant." },
-      { "tag": "SOC · SIEM · GRC", "text": "Local-government data and audit analyst, ServiceNow user, targeting SOC, SIEM, and GRC pathways." }
+      {
+        "tag": "SOC · Forensics",
+        "text": "Cybersecurity master's candidate, fluent in ServiceNow, Wireshark, and Azure — targeting SOC and digital-forensics roles."
+      },
+      {
+        "tag": "Security Leadership Track",
+        "text": "Former Director of Systems Development from the nonprofit IT world, bringing management depth into a security pivot."
+      },
+      {
+        "tag": "Security Automation",
+        "text": "QA automation engineer with a clear bridge story: from test automation into DevSecOps and security automation."
+      },
+      {
+        "tag": "GRC · Compliance",
+        "text": "Salesforce administrator and consultant moving deliberately toward governance, risk, and compliance work."
+      },
+      {
+        "tag": "Security Operations",
+        "text": "Military IT veteran seeking to stay in IT and security operations — a repeat, high-commitment participant."
+      },
+      {
+        "tag": "SOC · SIEM · GRC",
+        "text": "Local-government data and audit analyst, ServiceNow user, targeting SOC, SIEM, and GRC pathways."
+      }
     ],
     "caliberNote": "Anonymized snapshots from the confirmed cohort. Full candidate profiles shared with committed hiring partners.",
     "stepsLabel": "[ How Partnership Works ]",
     "stepsHeadline1": "THREE WAYS IN —",
     "stepsHeadline2": "START WHEREVER YOU LIKE",
     "steps": [
-      { "n": "Step 01", "title": "INFORMATIONAL INTERVIEW", "text": "Spend 30 minutes with a vetted candidate. Your insights help prepare future cybersecurity professionals while introducing you to highly motivated career changers who are ready to make an immediate impact." },
-      { "n": "Step 02", "title": "PREVIEW AT DEMO DAY", "text": "Join us in early September to watch the cohort present their SOC-analyst capstones live." },
-      { "n": "Step 03", "title": "INTERVIEW IN OCTOBER", "text": "Commit to interview job-ready candidates matched to your open roles." }
+      {
+        "n": "Step 01",
+        "title": "INFORMATIONAL INTERVIEW",
+        "text": "Spend 30 minutes with a vetted candidate. Your insights help prepare future cybersecurity professionals while introducing you to highly motivated career changers who are ready to make an immediate impact."
+      },
+      {
+        "n": "Step 02",
+        "title": "PREVIEW AT DEMO DAY",
+        "text": "Join us in early September to watch the cohort present their SOC-analyst capstones live."
+      },
+      {
+        "n": "Step 03",
+        "title": "INTERVIEW IN OCTOBER",
+        "text": "Commit to interview job-ready candidates matched to your open roles."
+      }
     ],
     "aboutLabel": "[ About Beyond Code ]",
     "aboutText1": "Beyond Code Collective is a nonprofit bridging the gap between inspiration, training, and employment in tech. We connect talent to accessible education, hands-on opportunities to build with emerging technologies, and clear pathways to launch and grow meaningful careers.",
@@ -369,17 +437,17 @@
     "initiative": "A BEYOND CODE COLLECTIVE INITIATIVE",
     "headline1": "WHERE INNOVATION",
     "headline2": "MEETS COMMUNITY",
-    "description": "The Forge is a network of intergenerational, site-specific hubs that blend technology education, community engagement, and workforce development under one roof. A true “third place” that is neither school nor work, where middle schoolers sit alongside mid-career professionals, and families with their kids, as they explore AI and emerging technology together.",
+    "description": "Beyond Code Centers is a network of intergenerational, site-specific hubs that blend technology education, community engagement, and workforce development under one roof. A true “third place” that is neither school nor work, where middle schoolers sit alongside mid-career professionals, and families with their kids, as they explore AI and emerging technology together.",
     "learnMore": "SIGN UP FOR EVENTS",
     "viewCalendar": "VIEW FULL CALENDAR",
     "eventbriteCta": "BROWSE UPCOMING EVENTS",
-    "quoteText": "At Beyond Code, we believe that everyone should have a role in shaping tomorrow’s technology. The Forge allows us to not only give people access to tools, but the community support and space to explore these tools, so they are empowered to confidently shape the future of technology and work.",
+    "quoteText": "At Beyond Code, we believe that everyone should have a role in shaping tomorrow’s technology. Beyond Code Centers allows us to not only give people access to tools, but the community support and space to explore these tools, so they are empowered to confidently shape the future of technology and work.",
     "quoteAuthor": "Cristina Mancini",
     "quoteRole": "Founder & CEO, Beyond Code Collective",
-    "whatLabel": "WHAT IS THE FORGE?",
+    "whatLabel": "WHAT IS BEYOND CODE CENTERS?",
     "whatHeadline1": "A THIRD PLACE",
     "whatHeadline2": "FOR TECH",
-    "whatText": "The Forge is designed to be a safe space to ask questions without fear or shame. Each The Forge center delivers culturally responsive programming to its community, serving K-12 students and adults seeking pathways into tech-driven careers.",
+    "whatText": "Beyond Code Centers is designed to be a safe space to ask questions without fear or shame. Each Beyond Code Centers location delivers culturally responsive programming to its community, serving K-12 students and adults seeking pathways into tech-driven careers.",
     "pillarsLabel": "THE MODEL",
     "pillarsHeadline1": "BUILT FOR",
     "pillarsHeadline2": "EVERYONE",
@@ -403,7 +471,7 @@
     ],
     "programmingLabel": "PROGRAMMING",
     "programmingHeadline1": "WHAT HAPPENS",
-    "programmingHeadline2": "AT THE FORGE",
+    "programmingHeadline2": "AT BEYOND CODE CENTERS",
     "programmingTypes": [
       {
         "title": "Lunch & Learn",
@@ -452,24 +520,24 @@
       {
         "step": "03",
         "title": "Show Up & Learn",
-        "description": "Show up in person at The Forge. No prep needed, just bring yourself and an open mind."
+        "description": "Show up in person at Beyond Code Centers. No prep needed, just bring yourself and an open mind."
       }
     ],
-    "atlLabel": "THE FORGE: ATL",
+    "atlLabel": "BEYOND CODE CENTERS: ATL",
     "atlHeadline1": "FIRST RESIDENCY",
     "atlHeadline2": "ATLANTA, GEORGIA",
-    "atlText": "The Forge: ATL is hosted within North Star AI Labs at Georgia Tech’s Advanced Technology Development Center (ATDC). Free programming is offered two days a week, running from March 2026 through August 2026.",
+    "atlText": "Beyond Code Centers: ATL is hosted within North Star AI Labs at Georgia Tech’s Advanced Technology Development Center (ATDC). Free programming is offered two days a week, running from March 2026 through August 2026.",
     "atlPartner": "Hosted at North Star AI Labs, Georgia Tech ATDC",
     "atlSchedule": "Two days a week, free programming",
     "atlDates": "March 2026 – August 2026",
     "atlLocation": "North Star AI Labs at Georgia Tech ATDC",
-    "galleryLabel": "THE FORGE IN ACTION",
+    "galleryLabel": "BEYOND CODE CENTERS IN ACTION",
     "galleryHeadline1": "OUR",
     "galleryHeadline2": "COMMUNITY",
     "openingLabel": "[07] LAUNCH EVENT",
-    "openingHeadline1": "THE FORGE",
+    "openingHeadline1": "BEYOND CODE CENTERS",
     "openingHeadline2": "OPENING",
-    "openingText": "The Forge hosted its opening event on March 9, convening some of Atlanta’s leading educators, technologists, and community leaders.",
+    "openingText": "Beyond Code Centers hosted its opening event on March 9, convening some of Atlanta’s leading educators, technologists, and community leaders.",
     "panelists": [
       {
         "name": "Rep. Kim Schofield",
@@ -486,8 +554,8 @@
     ],
     "formLabel": "GET INVOLVED",
     "formHeadline1": "JOIN THE",
-    "formHeadline2": "THE FORGE",
-    "formDescription": "Interested in attending The Forge: ATL, volunteering, or partnering? Sign up and we’ll keep you in the loop.",
+    "formHeadline2": "BEYOND CODE CENTERS",
+    "formDescription": "Interested in attending Beyond Code Centers: ATL, volunteering, or partnering? Sign up and we’ll keep you in the loop.",
     "firstName": "First Name",
     "email": "Email",
     "phone": "Phone (optional)",
@@ -500,7 +568,8 @@
     "submit": "GET INVOLVED",
     "successTitle": "YOU'RE IN",
     "successMessage": "We’ll be in touch with programming details and updates.",
-    "error": "Something went wrong"
+    "error": "Something went wrong",
+    "wordmark": "Beyond Code Centers"
   },
   "team": {
     "back": "WEAREBCC.ORG",

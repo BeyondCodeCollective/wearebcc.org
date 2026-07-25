@@ -13,8 +13,9 @@ const INITIATIVE_IMAGES = [
 ];
 
 const INITIATIVE_LOGOS: Record<string, { src: string; width: number; height: number }> = {
-  afterTheGame: { src: "/images/atg/atg-logo-white.png", width: 400, height: 50 },
-  forge: { src: "/images/forge/forge-logo-white.png", width: 400, height: 50 },
+  // Beyond The Game keeps a wordmark logo; Beyond Code Centers now renders as
+  // a plain Special Gothic title (no logo entry), retiring the old Forge mark.
+  afterTheGame: { src: "/images/btg/btg-logo-white.png", width: 1043, height: 212 },
 };
 
 const INITIATIVE_KEYS = ["afterTheGame", "forge", "catalysts"] as const;
