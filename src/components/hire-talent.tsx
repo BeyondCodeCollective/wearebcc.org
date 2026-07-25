@@ -18,6 +18,8 @@ const INTEREST_KEYS = [
 export function HireTalent() {
   const t = useTranslations("hireTalent");
   const [companyName, setCompanyName] = useState("");
+  // Honeypot: hidden from people, filled in by bots. See /api/subscribe.
+  const [website, setWebsite] = useState("");
   const [contactName, setContactName] = useState("");
   const [email, setEmail] = useState("");
   const [level, setLevel] = useState("");
@@ -40,6 +42,7 @@ export function HireTalent() {
           email: email.trim(),
           segment: `Employer - ${level}${interest ? ` - ${interest}` : ""}`,
           source: "hire-talent",
+          website,
           company: companyName.trim(),
         }),
       });
@@ -115,6 +118,17 @@ export function HireTalent() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+                {/* Honeypot input: hidden from people, filled in by bots. */}
+                <input
+                  type="text"
+                  name="website"
+                  value={website}
+                  onChange={(e) => setWebsite(e.target.value)}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  className="pointer-events-none absolute left-[-9999px] h-0 w-0 opacity-0"
+                />
                 <p
                   className="mb-2 font-mono text-xs tracking-wider text-off-white/40"
                   style={{ fontFamily: "var(--font-mono)" }}

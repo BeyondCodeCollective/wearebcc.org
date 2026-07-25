@@ -73,6 +73,14 @@ export async function ensureTables() {
   // The contact modal collects a written message. Mailchimp has no merge field
   // that can hold one, so Postgres is the only place it can live.
   await sql`ALTER TABLE subscribers ADD COLUMN IF NOT EXISTS message TEXT`;
+  // Abuse screening. Flagged rows are kept (a false positive must be
+  // recoverable) but stay out of Mailchimp, notifications, and logs.
+  await sql`ALTER TABLE subscribers ADD COLUMN IF NOT EXISTS flagged BOOLEAN DEFAULT FALSE`;
+  await sql`ALTER TABLE subscribers ADD COLUMN IF NOT EXISTS flag_reason TEXT`;
+  // Salted hash, never the address itself — enough to rate-limit one abuser
+  // without keeping a log of who visited the site.
+  await sql`ALTER TABLE subscribers ADD COLUMN IF NOT EXISTS ip_hash VARCHAR(64)`;
+  await sql`CREATE INDEX IF NOT EXISTS idx_subscribers_ip_recent ON subscribers(ip_hash, created_at)`;
   await sql`CREATE INDEX IF NOT EXISTS idx_subscribers_email ON subscribers(email)`;
   // Contact messages are the rows a human actually needs to read.
   await sql`CREATE INDEX IF NOT EXISTS idx_subscribers_messages ON subscribers(created_at) WHERE message IS NOT NULL`;

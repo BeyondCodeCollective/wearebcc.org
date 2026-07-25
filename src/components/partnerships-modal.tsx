@@ -37,6 +37,8 @@ const SEGMENT_KEYS = [
 export function PartnershipsProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const [firstName, setFirstName] = useState("");
+  // Honeypot: hidden from people, filled in by bots. See /api/subscribe.
+  const [website, setWebsite] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [segment, setSegment] = useState("");
@@ -88,6 +90,7 @@ export function PartnershipsProvider({ children }: { children: ReactNode }) {
           phone: phone.trim(),
           segment,
           source: "partnerships",
+          website,
         }),
       });
 
@@ -178,6 +181,17 @@ export function PartnershipsProvider({ children }: { children: ReactNode }) {
                     onSubmit={handleSubmit}
                     className="mt-8 flex flex-col gap-3"
                   >
+                    {/* Honeypot input: hidden from people, filled in by bots. */}
+                    <input
+                      type="text"
+                      name="website"
+                      value={website}
+                      onChange={(e) => setWebsite(e.target.value)}
+                      tabIndex={-1}
+                      autoComplete="off"
+                      aria-hidden="true"
+                      className="pointer-events-none absolute left-[-9999px] h-0 w-0 opacity-0"
+                    />
                     <input
                       type="text"
                       required
