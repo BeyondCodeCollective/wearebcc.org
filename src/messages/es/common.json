@@ -788,9 +788,14 @@
       "headline2": "IMPACTO REAL",
       "items": [
         {
-          "quote": "Coloca una cita de 1 o 2 frases de un graduado sobre lo que el programa le abrió.",
-          "name": "Nombre del Participante",
-          "role": "Graduado de Catalyst"
+          "quote": "Antes de Beyond Code Collective, pensaba que la tecnología estaba fuera de mi alcance. Trabajaba en salud haciendo facturación y codificación médica, pero me di cuenta de que no era lo que quería a largo plazo. Este programa me dio la oportunidad de reenfocarme y seguir el camino tecnológico que siempre quise.",
+          "name": "Londella",
+          "role": "Cambio de Carrera · Atlanta, GA"
+        },
+        {
+          "quote": "Antes de Beyond Code Collective, pensaba que era imposible acceder a la tecnología. Ahora la tecnología está al alcance de mis manos. El nacimiento de mi hijo me impulsó a tomar la tecnología más en serio y simplemente ir a por ello. Quería proveer para mi familia y sumergirme en un interés que ya tenía.",
+          "name": "Josh",
+          "role": "Aprendiz · Atlanta, GA"
         }
       ]
     },
