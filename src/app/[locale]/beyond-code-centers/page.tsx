@@ -24,21 +24,21 @@ import { Nav } from "@/components/nav";
 import { useTranslations } from "next-intl";
 
 const GALLERY_IMAGES = [
-  { src: "/images/forge/gallery-panel.jpg", alt: "The Forge panel discussion on stage" },
+  { src: "/images/forge/gallery-panel.jpg", alt: "Beyond Code Centers panel discussion on stage" },
   { src: "/images/forge/gallery-bottle.jpg", alt: "Community member with Beyond Code Collective water bottle" },
-  { src: "/images/forge/gallery-speaker.jpg", alt: "Panelist speaking at The Forge opening" },
+  { src: "/images/forge/gallery-speaker.jpg", alt: "Panelist speaking at Beyond Code Centers opening" },
   { src: "/images/forge/gallery-atdc.jpg", alt: "Attendees networking at Georgia Tech ATDC" },
-  { src: "/images/forge/gallery-pink.jpg", alt: "Community members laughing at The Forge" },
-  { src: "/images/forge/gallery-conversation.jpg", alt: "One-on-one conversation at The Forge" },
-  { src: "/images/forge/gallery-lounge.jpg", alt: "Community members in conversation at The Forge lounge" },
+  { src: "/images/forge/gallery-pink.jpg", alt: "Community members laughing at Beyond Code Centers" },
+  { src: "/images/forge/gallery-conversation.jpg", alt: "One-on-one conversation at Beyond Code Centers" },
+  { src: "/images/forge/gallery-lounge.jpg", alt: "Community members in conversation at Beyond Code Centers lounge" },
   { src: "/images/forge/gallery-notebooks.jpg", alt: "Beyond Code Collective branded notebooks" },
-  { src: "/images/forge/gallery-repkim.jpg", alt: "Rep Kim at The Forge step and repeat" },
-  { src: "/images/forge/gallery-catering.jpg", alt: "Catering spread at The Forge opening event" },
-  { src: "/images/forge/gallery-group4.jpg", alt: "Four attendees at The Forge step and repeat" },
-  { src: "/images/forge/gallery-panelists.jpg", alt: "Panelists in conversation on stage at The Forge" },
-  { src: "/images/forge/gallery-repkim-speaking.jpg", alt: "Rep Kim speaking at The Forge" },
-  { src: "/images/forge/gallery-team-steprepeat.jpg", alt: "The Forge team group photo at step and repeat" },
-  { src: "/images/forge/gallery-panelist-closeup.jpg", alt: "Panelist laughing during The Forge discussion" },
+  { src: "/images/forge/gallery-repkim.jpg", alt: "Rep Kim at Beyond Code Centers step and repeat" },
+  { src: "/images/forge/gallery-catering.jpg", alt: "Catering spread at Beyond Code Centers opening event" },
+  { src: "/images/forge/gallery-group4.jpg", alt: "Four attendees at Beyond Code Centers step and repeat" },
+  { src: "/images/forge/gallery-panelists.jpg", alt: "Panelists in conversation on stage at Beyond Code Centers" },
+  { src: "/images/forge/gallery-repkim-speaking.jpg", alt: "Rep Kim speaking at Beyond Code Centers" },
+  { src: "/images/forge/gallery-team-steprepeat.jpg", alt: "Beyond Code Centers team group photo at step and repeat" },
+  { src: "/images/forge/gallery-panelist-closeup.jpg", alt: "Panelist laughing during Beyond Code Centers discussion" },
   { src: "/images/forge/gallery-chairs.jpg", alt: "Director chairs with The Future of Tech Starts Here pillows" },
   { src: "/images/forge/gallery-checkin.jpg", alt: "Beyond Code Collective check-in at Georgia Tech ATDC" },
 ];
@@ -130,7 +130,7 @@ export default function TheForge() {
       <section className="relative min-h-[70vh] overflow-hidden bg-true-black">
         <Image
           src="/images/forge-hero-v2.jpg"
-          alt="The Forge event"
+          alt="Beyond Code Centers event"
           fill
           className="object-cover object-center opacity-70"
           sizes="100vw"
@@ -156,13 +156,9 @@ export default function TheForge() {
               transition={{ delay: 0.15, duration: 0.6 }}
               className="mt-4"
             >
-              <Image
-                src="/images/forge/forge-logo-white.png"
-                alt="The Forge"
-                width={400}
-                height={50}
-                className="h-10 w-auto sm:h-14 lg:h-16"
-              />
+              <h1 className="font-heading text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.85] text-off-white">
+                {t("wordmark")}
+              </h1>
             </motion.div>
 
             <motion.p
@@ -213,7 +209,7 @@ export default function TheForge() {
         </div>
       </section>
 
-      {/* ─── The The Forge: ATL — residency / programming / how it works ─── */}
+      {/* ─── Beyond Code Centers: ATL — residency / programming / how it works ─── */}
       <section id="programming" className="px-6 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-6xl">
           {/* Intro — two-column with image */}
@@ -249,7 +245,7 @@ export default function TheForge() {
             >
               <Image
                 src="/images/forge/residency-selfie-v2.jpg"
-                alt="Community members taking a selfie at The Forge"
+                alt="Community members taking a selfie at Beyond Code Centers"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"

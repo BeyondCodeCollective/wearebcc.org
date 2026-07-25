@@ -437,17 +437,17 @@
     "initiative": "UNA INICIATIVA DE BEYOND CODE COLLECTIVE",
     "headline1": "DONDE LA INNOVACIÓN",
     "headline2": "SE ENCUENTRA CON LA COMUNIDAD",
-    "description": "The Forge es una red de centros intergeneracionales y específicos por ubicación que combinan educación tecnológica, participación comunitaria y desarrollo laboral bajo un mismo techo. Un verdadero “tercer lugar” que no es escuela ni trabajo, donde estudiantes de secundaria se sientan junto a profesionales de mitad de carrera y familias con sus hijos, mientras exploran la IA y la tecnología emergente juntos.",
+    "description": "Beyond Code Centers es una red de centros intergeneracionales y específicos por ubicación que combinan educación tecnológica, participación comunitaria y desarrollo laboral bajo un mismo techo. Un verdadero “tercer lugar” que no es escuela ni trabajo, donde estudiantes de secundaria se sientan junto a profesionales de mitad de carrera y familias con sus hijos, mientras exploran la IA y la tecnología emergente juntos.",
     "learnMore": "INSCRÍBETE A EVENTOS",
     "viewCalendar": "VER CALENDARIO COMPLETO",
     "eventbriteCta": "VER PRÓXIMOS EVENTOS",
-    "quoteText": "En Beyond Code, creemos que todos deberían tener un papel en dar forma a la tecnología del mañana. The Forge nos permite no solo dar a las personas acceso a herramientas, sino el apoyo comunitario y el espacio para explorar estas herramientas, para que estén empoderados para dar forma con confianza al futuro de la tecnología y el trabajo.",
+    "quoteText": "En Beyond Code, creemos que todos deberían tener un papel en dar forma a la tecnología del mañana. Beyond Code Centers nos permite no solo dar a las personas acceso a herramientas, sino el apoyo comunitario y el espacio para explorar estas herramientas, para que estén empoderados para dar forma con confianza al futuro de la tecnología y el trabajo.",
     "quoteAuthor": "Cristina Mancini",
     "quoteRole": "Fundadora y CEO, Beyond Code Collective",
-    "whatLabel": "¿QUÉ ES THE FORGE?",
+    "whatLabel": "¿QUÉ ES BEYOND CODE CENTERS?",
     "whatHeadline1": "UN TERCER LUGAR",
     "whatHeadline2": "PARA LA TECNOLOGÍA",
-    "whatText": "The Forge está diseñado para ser un espacio seguro para hacer preguntas sin miedo ni vergüenza. Cada centro The Forge ofrece programación culturalmente responsiva a su comunidad, sirviendo a estudiantes K-12 y adultos que buscan caminos hacia carreras impulsadas por la tecnología.",
+    "whatText": "Beyond Code Centers está diseñado para ser un espacio seguro para hacer preguntas sin miedo ni vergüenza. Cada Beyond Code Centers ofrece programación culturalmente responsiva a su comunidad, sirviendo a estudiantes K-12 y adultos que buscan caminos hacia carreras impulsadas por la tecnología.",
     "pillarsLabel": "EL MODELO",
     "pillarsHeadline1": "CONSTRUIDO PARA",
     "pillarsHeadline2": "TODOS",
@@ -471,7 +471,7 @@
     ],
     "programmingLabel": "PROGRAMACIÓN",
     "programmingHeadline1": "QUÉ SUCEDE",
-    "programmingHeadline2": "EN THE FORGE",
+    "programmingHeadline2": "EN BEYOND CODE CENTERS",
     "programmingTypes": [
       {
         "title": "Almuerzo y Aprendizaje",
@@ -520,24 +520,24 @@
       {
         "step": "03",
         "title": "Ven y Aprende",
-        "description": "Asiste en persona en The Forge. No se necesita preparación, solo ven con mente abierta."
+        "description": "Asiste en persona en Beyond Code Centers. No se necesita preparación, solo ven con mente abierta."
       }
     ],
-    "atlLabel": "THE FORGE: ATL",
+    "atlLabel": "BEYOND CODE CENTERS: ATL",
     "atlHeadline1": "PRIMERA RESIDENCIA",
     "atlHeadline2": "ATLANTA, GEORGIA",
-    "atlText": "The Forge: ATL está alojado dentro de North Star AI Labs en el Advanced Technology Development Center (ATDC) de Georgia Tech. Se ofrece programación gratuita dos días a la semana, desde marzo de 2026 hasta agosto de 2026.",
+    "atlText": "Beyond Code Centers: ATL está alojado dentro de North Star AI Labs en el Advanced Technology Development Center (ATDC) de Georgia Tech. Se ofrece programación gratuita dos días a la semana, desde marzo de 2026 hasta agosto de 2026.",
     "atlPartner": "En asociación con ATDC de Georgia Tech",
     "atlSchedule": "Dos días a la semana, programación gratuita",
     "atlDates": "Marzo 2026 – Agosto 2026",
     "atlLocation": "North Star AI Labs en Georgia Tech ATDC",
-    "galleryLabel": "THE FORGE EN ACCIÓN",
+    "galleryLabel": "BEYOND CODE CENTERS EN ACCIÓN",
     "galleryHeadline1": "NUESTRA",
     "galleryHeadline2": "COMUNIDAD",
     "openingLabel": "[07] EVENTO DE LANZAMIENTO",
     "openingHeadline1": "LA APERTURA",
-    "openingHeadline2": "DE THE FORGE",
-    "openingText": "The Forge celebró su evento de apertura el 9 de marzo, reuniendo a algunos de los principales educadores, tecnólogos y líderes comunitarios de Atlanta.",
+    "openingHeadline2": "DE BEYOND CODE CENTERS",
+    "openingText": "Beyond Code Centers celebró su evento de apertura el 9 de marzo, reuniendo a algunos de los principales educadores, tecnólogos y líderes comunitarios de Atlanta.",
     "panelists": [
       {
         "name": "Rep. Kim Schofield",
@@ -554,8 +554,8 @@
     ],
     "formLabel": "PARTICIPA",
     "formHeadline1": "ÚNETE A",
-    "formHeadline2": "THE FORGE",
-    "formDescription": "¿Interesado en asistir a The Forge: ATL, ser voluntario o asociarte? Regístrate y te mantendremos informado.",
+    "formHeadline2": "BEYOND CODE CENTERS",
+    "formDescription": "¿Interesado en asistir a Beyond Code Centers: ATL, ser voluntario o asociarte? Regístrate y te mantendremos informado.",
     "firstName": "Nombre",
     "email": "Correo electrónico",
     "phone": "Teléfono (opcional)",
@@ -568,7 +568,8 @@
     "submit": "PARTICIPA",
     "successTitle": "¡ESTÁS DENTRO!",
     "successMessage": "Estaremos en contacto con detalles de programación y actualizaciones.",
-    "error": "Algo salió mal"
+    "error": "Algo salió mal",
+    "wordmark": "Beyond Code Centers"
   },
   "team": {
     "back": "WEAREBCC.ORG",
