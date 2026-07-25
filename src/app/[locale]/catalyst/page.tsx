@@ -13,6 +13,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
+import { useContact } from "@/components/contact-modal";
 
 const reveal = {
   initial: { opacity: 0, y: 30 },
@@ -58,11 +59,11 @@ type EmployerCard = {
   title2: string;
   text: string;
   cta: string;
-  href: string;
 };
 
 export default function CatalystPage() {
   const t = useTranslations("catalyst");
+  const { openContact } = useContact();
 
   const stats = t.raw("stats") as Stat[];
   const cells = t.raw("program.cells") as Cell[];
@@ -121,6 +122,39 @@ export default function CatalystPage() {
           style={{
             background:
               "radial-gradient(120% 80% at 50% -10%, rgba(29,89,255,0.35) 0%, rgba(47,47,47,0) 55%), linear-gradient(180deg, #2F2F2F 0%, #000000 100%)",
+          }}
+        />
+        {/* Ambient grid — thin lines drifting slowly upward, faded at the edges */}
+        <motion.div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, rgba(255,255,255,0.6) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.6) 1px, transparent 1px)",
+            backgroundSize: "52px 52px",
+            opacity: 0.08,
+            maskImage:
+              "radial-gradient(115% 85% at 50% 0%, #000 15%, transparent 65%)",
+            WebkitMaskImage:
+              "radial-gradient(115% 85% at 50% 0%, #000 15%, transparent 65%)",
+          }}
+          animate={{ backgroundPositionY: ["0px", "-52px"] }}
+          transition={{ duration: 9, repeat: Infinity, ease: "linear" }}
+        />
+        {/* A single soft neon beam sweeping down the hero, slowly */}
+        <motion.div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 h-48"
+          style={{
+            background:
+              "linear-gradient(to bottom, transparent, rgba(229,247,1,0.07), transparent)",
+          }}
+          animate={{ top: ["-20%", "120%"] }}
+          transition={{
+            duration: 7,
+            repeat: Infinity,
+            ease: "easeInOut",
+            repeatDelay: 2.5,
           }}
         />
         <div className="relative mx-auto max-w-5xl text-center">
@@ -659,14 +693,22 @@ export default function CatalystPage() {
                 <p className="mt-4 flex-1 text-sm leading-relaxed text-off-white/70">
                   {card.text}
                 </p>
-                <a
-                  href={card.href}
+                <button
+                  onClick={() =>
+                    openContact({
+                      segment:
+                        i === 0
+                          ? "Catalyst — Hire Grads"
+                          : "Catalyst — Partner Access",
+                      prefillMessage: t(`employers.cards.${i}.prefill`),
+                    })
+                  }
                   className="mt-6 inline-flex items-center gap-2 self-start font-mono text-xs uppercase tracking-wider text-electric-green transition-colors hover:text-off-white"
                   style={{ fontFamily: "var(--font-mono)" }}
                 >
                   {card.cta}
                   <ArrowUpRight size={13} weight="bold" />
-                </a>
+                </button>
               </motion.div>
             ))}
           </div>

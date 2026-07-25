@@ -823,14 +823,14 @@
           "title2": "GRADUADOS A TU EQUIPO",
           "text": "Organiza una entrevista informativa, conoce los capstones en el Demo Day o entrevista a candidatos listos para trabajar y alineados con tus vacantes. Alianzas WIOA bienvenidas.",
           "cta": "catalyst@wearebcc.org",
-          "href": "mailto:catalyst@wearebcc.org"
+          "prefill": "Me gustaría hablar sobre contratar a graduados de Catalyst para vacantes en mi empresa."
         },
         {
           "title1": "¿YA ERES",
           "title2": "SOCIO DE CONTRATACIÓN?",
           "text": "Escríbenos para obtener tu código de acceso a la página privada de socios, donde encontrarás el resumen de la cohorte, los perfiles de candidatos y el calendario de colocación.",
           "cta": "Escríbenos para acceder",
-          "href": "mailto:catalyst@wearebcc.org?subject=Acceso%20a%20la%20P%C3%A1gina%20de%20Socios%20de%20Catalyst&body=Hola%20equipo%20de%20Beyond%20Code%2C%0A%0AMe%20gustar%C3%ADa%20el%20c%C3%B3digo%20de%20acceso%20a%20la%20p%C3%A1gina%20de%20socios%20de%20Catalyst.%0A%0AMi%20correo%20de%20trabajo%3A%20%0A%0A%C2%A1Gracias%21"
+          "prefill": "Me gustaría el código de acceso a la página de socios de Catalyst."
         }
       ]
     }

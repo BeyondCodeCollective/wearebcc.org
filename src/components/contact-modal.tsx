@@ -11,8 +11,15 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 
+interface OpenContactOptions {
+  /** Mailchimp SEGMENT tag so we can tell what the enquiry was about. */
+  segment?: string;
+  /** Pre-filled message text (the visitor can still edit it). */
+  prefillMessage?: string;
+}
+
 interface ContactContextType {
-  openContact: () => void;
+  openContact: (options?: OpenContactOptions) => void;
   closeContact: () => void;
 }
 
@@ -33,11 +40,14 @@ export function ContactProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
+  const [segment, setSegment] = useState("Contact Form");
 
   const tc = useTranslations("contact");
   const tf = useTranslations("form");
 
-  const openContact = useCallback(() => {
+  const openContact = useCallback((options?: OpenContactOptions) => {
+    setSegment(options?.segment ?? "Contact Form");
+    if (options?.prefillMessage) setMessage(options.prefillMessage);
     setIsOpen(true);
     document.body.style.overflow = "hidden";
   }, []);
@@ -74,7 +84,7 @@ export function ContactProvider({ children }: { children: ReactNode }) {
           firstName: firstName.trim(),
           email: email.trim(),
           message: message.trim(),
-          segment: "Contact Form",
+          segment,
           source: "contact-modal",
         }),
       });
