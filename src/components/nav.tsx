@@ -191,6 +191,14 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
                     className="absolute left-0 top-full mt-2 min-w-[180px] border border-true-black/10 bg-off-white/95 backdrop-blur-md shadow-lg"
                   >
                     <Link
+                      href="/catalyst"
+                      onClick={() => setInitiativesOpen(false)}
+                      className={dropdownLinkClass}
+                      style={{ fontFamily: "var(--font-mono)" }}
+                    >
+                      {t("catalyst")}
+                    </Link>
+                    <Link
                       href="/beyond-code-centers"
                       onClick={() => setInitiativesOpen(false)}
                       className={dropdownLinkClass}
@@ -422,6 +430,14 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
                     className="overflow-hidden pl-4 pt-4"
                   >
                     <div className="flex flex-col gap-4 border-l-2 border-electric-green pl-4">
+                      <Link
+                        href="/catalyst"
+                        onClick={() => setMobileOpen(false)}
+                        className={mobileSubLinkClass}
+                        style={{ fontFamily: "var(--font-mono)" }}
+                      >
+                        {t("catalyst")}
+                      </Link>
                       <Link
                         href="/beyond-code-centers"
                         onClick={() => setMobileOpen(false)}
