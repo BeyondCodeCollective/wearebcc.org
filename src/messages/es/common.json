@@ -101,8 +101,14 @@
     "heroImageAlt": "Cohorte de Beyond Code Catalyst colaborando",
     "talkCta": "Habla Con Nuestro Equipo",
     "stats": [
-      { "stat": "15", "label": "Candidatos evaluados en la cohorte inaugural" },
-      { "stat": "OCT", "label": "Listos para entrevistas · ventana de colocación 2026" }
+      {
+        "stat": "15",
+        "label": "Candidatos evaluados en la cohorte inaugural"
+      },
+      {
+        "stat": "OCT",
+        "label": "Listos para entrevistas · ventana de colocación 2026"
+      }
     ],
     "gapLabel": "[ La Brecha ]",
     "gapHeadline1": "HAY MÁS PUESTOS ABIERTOS EN CIBERSEGURIDAD QUE PERSONAS ACREDITADAS PARA CUBRIRLOS.",
@@ -128,39 +134,101 @@
     "whyHeadline1": "POR QUÉ",
     "whyHeadline2": "FUNCIONA EL MODELO",
     "pillars": [
-      { "n": "01", "title": "CREDENCIALES ACUMULADAS", "text": "Tech+, Network+ y Security+ — pruebas reconocidas por la industria que se acumulan, no un certificado único de bootcamp." },
-      { "n": "02", "title": "CAPSTONE PRÁCTICO", "text": "Una simulación completada de analista SOC demuestra la capacidad directamente, incluso para candidatos sin historial laboral previo en seguridad." },
-      { "n": "03", "title": "HABILIDADES DURADERAS", "text": "Nuestro currículo de coaching profesional construye la fiabilidad, la comunicación y la constancia que hacen que las contrataciones de nivel inicial permanezcan." },
-      { "n": "04", "title": "APOYO CONTINUO", "text": "Seguimos involucrados después de la contratación con apoyo integral para proteger la retención." }
+      {
+        "n": "01",
+        "title": "CREDENCIALES ACUMULADAS",
+        "text": "Tech+, Network+ y Security+ — pruebas reconocidas por la industria que se acumulan, no un certificado único de bootcamp."
+      },
+      {
+        "n": "02",
+        "title": "CAPSTONE PRÁCTICO",
+        "text": "Una simulación completada de analista SOC demuestra la capacidad directamente, incluso para candidatos sin historial laboral previo en seguridad."
+      },
+      {
+        "n": "03",
+        "title": "HABILIDADES DURADERAS",
+        "text": "Nuestro currículo de coaching profesional construye la fiabilidad, la comunicación y la constancia que hacen que las contrataciones de nivel inicial permanezcan."
+      },
+      {
+        "n": "04",
+        "title": "APOYO CONTINUO",
+        "text": "Seguimos involucrados después de la contratación con apoyo integral para proteger la retención."
+      }
     ],
     "rolesLabel": "[ Roles Para Los Que Están Listos ]",
     "rolesHeadline1": "CUATRO RUTAS,",
     "rolesHeadline2": "LISTOS PARA TRABAJAR",
     "roles": [
-      { "track": "Ruta · Operaciones", "title": "ANALISTA SOC I", "text": "Operaciones de seguridad, monitoreo SIEM y clasificación de alertas — respaldado directamente por el capstone de la cohorte. Varios candidatos nombran el trabajo SOC como su meta clara." },
-      { "track": "Ruta · Fundamentos", "title": "SOPORTE DE TI Y MESA DE AYUDA", "text": "Mesa de servicio, soporte de escritorio y soporte técnico — la vía de entrada comprobada para candidatos con Network+/Tech+ y sólida experiencia transferible." },
-      { "track": "Ruta · Gobernanza", "title": "GRC Y CUMPLIMIENTO", "text": "Gobernanza, riesgo, auditoría de TI y análisis de cumplimiento — un encaje natural para candidatos que vienen de auditoría, administración de Salesforce y operaciones." },
-      { "track": "Ruta · Nube y Automatización", "title": "SEGURIDAD EN LA NUBE Y AUTOMATIZACIÓN", "text": "Roles de nivel inicial en seguridad de nube y adyacentes a DevSecOps — incluyendo una ingeniera de automatización de QA en transición hacia la automatización de seguridad." }
+      {
+        "track": "Ruta · Operaciones",
+        "title": "ANALISTA SOC I",
+        "text": "Operaciones de seguridad, monitoreo SIEM y clasificación de alertas — respaldado directamente por el capstone de la cohorte. Varios candidatos nombran el trabajo SOC como su meta clara."
+      },
+      {
+        "track": "Ruta · Fundamentos",
+        "title": "SOPORTE DE TI Y MESA DE AYUDA",
+        "text": "Mesa de servicio, soporte de escritorio y soporte técnico — la vía de entrada comprobada para candidatos con Network+/Tech+ y sólida experiencia transferible."
+      },
+      {
+        "track": "Ruta · Gobernanza",
+        "title": "GRC Y CUMPLIMIENTO",
+        "text": "Gobernanza, riesgo, auditoría de TI y análisis de cumplimiento — un encaje natural para candidatos que vienen de auditoría, administración de Salesforce y operaciones."
+      },
+      {
+        "track": "Ruta · Nube y Automatización",
+        "title": "SEGURIDAD EN LA NUBE Y AUTOMATIZACIÓN",
+        "text": "Roles de nivel inicial en seguridad de nube y adyacentes a DevSecOps — incluyendo una ingeniera de automatización de QA en transición hacia la automatización de seguridad."
+      }
     ],
     "caliberLabel": "[ Un Vistazo a la Sala ]",
     "caliberHeadline1": "EL CALIBRE",
     "caliberHeadline2": "QUE CONOCERÁS",
     "caliber": [
-      { "tag": "SOC · Forense", "text": "Estudiante de maestría en ciberseguridad, con dominio de ServiceNow, Wireshark y Azure — enfocado en roles de SOC y forense digital." },
-      { "tag": "Ruta de Liderazgo en Seguridad", "text": "Ex Director de Desarrollo de Sistemas del mundo de TI sin fines de lucro, aportando profundidad de gestión a su giro hacia la seguridad." },
-      { "tag": "Automatización de Seguridad", "text": "Ingeniera de automatización de QA con una historia de transición clara: de la automatización de pruebas a DevSecOps y la automatización de seguridad." },
-      { "tag": "GRC · Cumplimiento", "text": "Administradora y consultora de Salesforce avanzando deliberadamente hacia el trabajo de gobernanza, riesgo y cumplimiento." },
-      { "tag": "Operaciones de Seguridad", "text": "Veterano de TI militar que busca continuar en TI y operaciones de seguridad — un participante recurrente y de alto compromiso." },
-      { "tag": "SOC · SIEM · GRC", "text": "Analista de datos y auditoría de gobierno local, usuario de ServiceNow, enfocado en rutas de SOC, SIEM y GRC." }
+      {
+        "tag": "SOC · Forense",
+        "text": "Estudiante de maestría en ciberseguridad, con dominio de ServiceNow, Wireshark y Azure — enfocado en roles de SOC y forense digital."
+      },
+      {
+        "tag": "Ruta de Liderazgo en Seguridad",
+        "text": "Ex Director de Desarrollo de Sistemas del mundo de TI sin fines de lucro, aportando profundidad de gestión a su giro hacia la seguridad."
+      },
+      {
+        "tag": "Automatización de Seguridad",
+        "text": "Ingeniera de automatización de QA con una historia de transición clara: de la automatización de pruebas a DevSecOps y la automatización de seguridad."
+      },
+      {
+        "tag": "GRC · Cumplimiento",
+        "text": "Administradora y consultora de Salesforce avanzando deliberadamente hacia el trabajo de gobernanza, riesgo y cumplimiento."
+      },
+      {
+        "tag": "Operaciones de Seguridad",
+        "text": "Veterano de TI militar que busca continuar en TI y operaciones de seguridad — un participante recurrente y de alto compromiso."
+      },
+      {
+        "tag": "SOC · SIEM · GRC",
+        "text": "Analista de datos y auditoría de gobierno local, usuario de ServiceNow, enfocado en rutas de SOC, SIEM y GRC."
+      }
     ],
     "caliberNote": "Perfiles anonimizados de la cohorte confirmada. Los perfiles completos de candidatos se comparten con socios de contratación comprometidos.",
     "stepsLabel": "[ Cómo Funciona la Alianza ]",
     "stepsHeadline1": "TRES FORMAS DE ENTRAR —",
     "stepsHeadline2": "EMPIEZA DONDE QUIERAS",
     "steps": [
-      { "n": "Paso 01", "title": "ENTREVISTA INFORMATIVA", "text": "Dedica 30 minutos a un candidato evaluado. Tus perspectivas ayudan a preparar a los futuros profesionales de ciberseguridad mientras conoces a personas en cambio de carrera altamente motivadas y listas para generar un impacto inmediato." },
-      { "n": "Paso 02", "title": "VISTA PREVIA EN EL DEMO DAY", "text": "Acompáñanos a principios de septiembre para ver a la cohorte presentar en vivo sus capstones de analista SOC." },
-      { "n": "Paso 03", "title": "ENTREVISTA EN OCTUBRE", "text": "Comprométete a entrevistar candidatos listos para trabajar, emparejados con tus vacantes." }
+      {
+        "n": "Paso 01",
+        "title": "ENTREVISTA INFORMATIVA",
+        "text": "Dedica 30 minutos a un candidato evaluado. Tus perspectivas ayudan a preparar a los futuros profesionales de ciberseguridad mientras conoces a personas en cambio de carrera altamente motivadas y listas para generar un impacto inmediato."
+      },
+      {
+        "n": "Paso 02",
+        "title": "VISTA PREVIA EN EL DEMO DAY",
+        "text": "Acompáñanos a principios de septiembre para ver a la cohorte presentar en vivo sus capstones de analista SOC."
+      },
+      {
+        "n": "Paso 03",
+        "title": "ENTREVISTA EN OCTUBRE",
+        "text": "Comprométete a entrevistar candidatos listos para trabajar, emparejados con tus vacantes."
+      }
     ],
     "aboutLabel": "[ Sobre Beyond Code ]",
     "aboutText1": "Beyond Code Collective es una organización sin fines de lucro que cierra la brecha entre la inspiración, la formación y el empleo en tecnología. Conectamos al talento con educación accesible, oportunidades prácticas para construir con tecnologías emergentes y caminos claros para lanzar y hacer crecer carreras significativas.",
@@ -552,5 +620,222 @@
     "careerChanger": "Cambio de Carrera",
     "employer": "Empleador",
     "partnerDonor": "Socio / Donante"
+  },
+  "catalyst": {
+    "hero": {
+      "wordmark": "CATALYST",
+      "headline1": "DE LA HABILIDAD",
+      "headline2": "A LA CARRERA",
+      "body": "El mundo laboral está cambiando. Catalyst forma el talento a la altura: un programa de fuerza laboral basado en cohortes, de 8 a 12 semanas, para personas adultas listas para entrar en la tecnología. No se requiere experiencia previa. Tú pones el empuje; nosotros ponemos el plan de estudios, la comunidad y las conexiones con empleadores reales.",
+      "ctaPrimary": "Únete a la Próxima Cohorte",
+      "ctaSecondary": "Colabora con Catalyst"
+    },
+    "stats": [
+      {
+        "stat": "8–12 SEM",
+        "label": "Duración de la cohorte"
+      },
+      {
+        "stat": "3",
+        "label": "Rutas especializadas"
+      },
+      {
+        "stat": "18+",
+        "label": "Adultos bienvenidos"
+      },
+      {
+        "stat": "$0",
+        "label": "Costo para quienes califican"
+      }
+    ],
+    "gap": {
+      "label": "La Brecha",
+      "headline1": "EL MERCADO CAMBIÓ.",
+      "headline2": "LA FORMACIÓN NO.",
+      "body": "Los empleadores están reorganizando los puestos en torno a la IA más rápido de lo que los sistemas de formación pueden adaptarse. Más del 70% de los puestos de habilidad media ya requieren fluidez digital o en IA, y el 39% de las habilidades clave quedarán obsoletas para 2030. Mientras tanto, 1 de cada 4 personas adultas cita el costo y el cuidado infantil como sus mayores barreras para recapacitarse. Catalyst es el puente: un programa de fuerza laboral estructurado y medible, diseñado junto a empleadores y entidades certificadoras, en torno a la realidad de la vida adulta.",
+      "imageAlt": "Una sesión de la cohorte Catalyst"
+    },
+    "program": {
+      "label": "El Programa",
+      "headline": "POR QUÉ FUNCIONA EL MODELO",
+      "cells": [
+        {
+          "title": "Núcleo de 8 a 12 Semanas",
+          "text": "Una estructura de cohorte que respeta la realidad de las personas adultas — trabajo, familia y todo lo demás — sin bajar el resultado."
+        },
+        {
+          "title": "Microcertificaciones Acumulables",
+          "text": "Credenciales reconocidas por la industria que se acumulan a medida que evoluciona la carrera. Pruebas que se apilan, no un solo certificado de bootcamp."
+        },
+        {
+          "title": "Currículo Alineado con Empleadores",
+          "text": "Currículo definido con socios en torno a los puestos que realmente están cubriendo, no las credenciales de hace cinco años."
+        },
+        {
+          "title": "Apoyo Integral",
+          "text": "Coaching de habilidades duraderas en comunicación, fiabilidad y constancia, más una comunidad que sigue presente después del programa."
+        }
+      ]
+    },
+    "tracks": {
+      "label": "Tres Rutas",
+      "headline": "ELIGE TU CAMINO",
+      "items": [
+        {
+          "title": "Colocación",
+          "text": "Conexiones directas con empleadores, preparación para entrevistas, pasantías e introducciones cálidas en nuestra red de contratación que abren puertas al iniciar tu búsqueda.",
+          "tags": [
+            "Introducciones con Empleadores",
+            "Preparación de Entrevistas",
+            "Pasantías",
+            "Apoyo con el CV"
+          ]
+        },
+        {
+          "title": "Construir y Practicar",
+          "text": "Aprendizaje basado en proyectos con revisiones de mentores, un sprint de construcción estructurado y un día de exhibición para poner trabajo real ante audiencias reales.",
+          "tags": [
+            "Aprendizaje por Proyectos",
+            "Revisiones de Mentores",
+            "Día de Exhibición"
+          ]
+        },
+        {
+          "title": "Emprendimiento",
+          "text": "Puesta en marcha de un negocio, captación de clientes y fundamentos de precios para quienes llevan la implementación de IA a pequeñas empresas.",
+          "tags": [
+            "Fundamentos de Negocio",
+            "Captación de Clientes",
+            "Salida al Mercado"
+          ]
+        }
+      ]
+    },
+    "workshops": {
+      "label": "Próximos Talleres + Labs",
+      "headline1": "EMPIEZA ANTES DE",
+      "headline2": "QUE INICIE LA COHORTE",
+      "body": "Puntos de entrada de bajo compromiso al mundo Catalyst. Únete a una sesión, crea un hábito, conoce a la comunidad. Inscríbete de forma individual, sin solicitud.",
+      "cards": [
+        {
+          "badge": "Con NextEra Energy · 10–14 Ago · Gratis",
+          "title": "Home for the Summer",
+          "text": "Un intensivo virtual gratuito de una semana para universitarios y recién graduados (18–24), junto a NextEra Energy. Cierra la brecha entre el campus y el mundo laboral: herramientas de trabajo, IA en el trabajo y la confianza para presentarte listo.",
+          "cta": "Aplica Ahora",
+          "href": "https://bccacademy.io/bcc/home-for-summer"
+        },
+        {
+          "badge": "Inscripción Abierta",
+          "title": "MASS",
+          "lead": "Tus habilidades técnicas te califican. El networking te abre la puerta. Y tu historia te consigue la oferta.",
+          "text": "MASS es un programa de coaching de ocho semanas que desarrolla la parte de tu carrera que ningún bootcamp técnico cubre por sí solo: cómo contar tu historia con confianza, hacer networking sin incomodidad, defender tu valor y pedir lo que mereces. Práctica real, en vivo, cada semana. Sin relleno.",
+          "cta": "Ver Calendario e Inscribirse",
+          "facilitator": {
+            "name": "Angel Aviles",
+            "role": "Tu Coach",
+            "bio": "Actriz, luego estratega de marketing en tecnología, luego coach galardonada. Autora bestseller que ha guiado a miles y creó MASS porque vivió exactamente la brecha en la que hoy te encuentras.",
+            "photo": "/images/catalyst/mass-facilitator.jpg"
+          },
+          "href": "https://bccacademy.io/bcc/mass"
+        },
+        {
+          "badge": "En Alianza",
+          "title": "Virtual Labs",
+          "text": "Sesiones prácticas de laboratorio virtual creadas con nuestros socios, donde construyes con tecnología emergente junto a facilitadores y tus pares. Nombre y fechas del programa muy pronto.",
+          "cta": "Avísenme",
+          "href": "https://bccacademy.io/bcc/virtual-labs"
+        }
+      ]
+    },
+    "verticals": {
+      "label": "Las Verticales",
+      "headline1": "FÓRMATE EN LAS VERTICALES",
+      "headline2": "QUE LOS EMPLEADORES BUSCAN",
+      "items": [
+        "Ciberseguridad",
+        "TI + Mesa de Ayuda",
+        "Fundamentos de IA",
+        "Prototipado",
+        "Automatizaciones con IA",
+        "Nube"
+      ],
+      "caption": "Las verticales varían según la cohorte, alineadas a los patrones de contratación actuales."
+    },
+    "results": {
+      "label": "Los Resultados",
+      "headline": "PRUEBAS, NO PROMESAS",
+      "body": "Catalyst se lanzó en 2026, y los resultados ya están sobre la mesa.",
+      "stats": [
+        {
+          "stat": "90+",
+          "label": "Personas en las primeras cohortes"
+        },
+        {
+          "stat": "100%",
+          "label": "Completan un capstone práctico"
+        },
+        {
+          "stat": "Q4",
+          "label": "Primera ventana de colocación"
+        }
+      ]
+    },
+    "stories": {
+      "label": "Escucha a Nuestra Comunidad",
+      "headline1": "HISTORIAS REALES,",
+      "headline2": "IMPACTO REAL",
+      "items": [
+        {
+          "quote": "Coloca una cita de 1 o 2 frases de un graduado sobre lo que el programa le abrió.",
+          "name": "Nombre del Participante",
+          "role": "Graduado de Catalyst"
+        }
+      ]
+    },
+    "signup": {
+      "label": "Mantente al Tanto",
+      "headline": "ANÓTATE EN LA LISTA",
+      "body": "Únete al boletín y sé el primero en enterarte cuando abran las solicitudes de cohorte, los talleres y los Labs.",
+      "firstName": "Nombre",
+      "email": "Correo electrónico",
+      "interestLabel": "Me interesa…",
+      "interestOptions": [
+        "Unirme a una cohorte de Catalyst",
+        "Asistir a talleres y Labs",
+        "Contratar graduados de Catalyst",
+        "Colaborar con Catalyst"
+      ],
+      "submit": "Unirme al Boletín",
+      "success": "Estás en la lista.",
+      "successBody": "Te contactaremos cuando abran las cohortes y los Labs.",
+      "error": "Algo salió mal. Inténtalo de nuevo."
+    },
+    "why": {
+      "label": "Por Qué Creamos Catalyst",
+      "quote": "Catalyst es cómo aseguramos que una persona siga en el centro. Nos enfocamos en construir acceso — a la inspiración, a la comunidad, a las primeras habilidades — para que el talento construya carreras significativas y se vuelva catalizador del cambio en el ecosistema tecnológico.",
+      "author": "Cristina Mancini",
+      "authorRole": "Fundadora y CEO, Beyond Code Collective"
+    },
+    "employers": {
+      "label": "Para Empleadores y Socios",
+      "headline": "LISTOS PARA CONTRATAR.",
+      "body": "Hay más puestos abiertos que personas acreditadas para cubrirlos. Nosotros ya evaluamos el talento para cerrar la brecha. Los graduados de Catalyst llegan con credenciales de industria acumuladas, un capstone práctico completado y habilidades transferibles reales. Obtienes acceso prioritario a talento comprobado.",
+      "cards": [
+        {
+          "title1": "LLEVA A NUESTROS",
+          "title2": "GRADUADOS A TU EQUIPO",
+          "text": "Organiza una entrevista informativa, conoce los capstones en el Demo Day o entrevista a candidatos listos para trabajar y alineados con tus vacantes. Alianzas WIOA bienvenidas.",
+          "cta": "catalyst@wearebcc.org",
+          "prefill": "Me gustaría hablar sobre contratar a graduados de Catalyst para vacantes en mi empresa."
+        },
+        {
+          "title1": "¿YA ERES",
+          "title2": "SOCIO DE CONTRATACIÓN?",
+          "text": "Escríbenos para obtener tu código de acceso a la página privada de socios, donde encontrarás el resumen de la cohorte, los perfiles de candidatos y el calendario de colocación.",
+          "cta": "Escríbenos para acceder",
+          "prefill": "Me gustaría el código de acceso a la página de socios de Catalyst."
+        }
+      ]
+    }
   }
 }
