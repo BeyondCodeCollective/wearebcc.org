@@ -601,7 +601,7 @@ export default function AfterTheGame() {
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     disabled={loading}
-                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black placeholder:text-true-black/40 focus:border-cobalt focus:outline-none disabled:opacity-50"
+                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black placeholder:text-true-black/60 focus:border-cobalt focus:outline-none disabled:opacity-50"
                   />
                   <input
                     type="email"
@@ -610,7 +610,7 @@ export default function AfterTheGame() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     disabled={loading}
-                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black placeholder:text-true-black/40 focus:border-cobalt focus:outline-none disabled:opacity-50"
+                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black placeholder:text-true-black/60 focus:border-cobalt focus:outline-none disabled:opacity-50"
                   />
                   <input
                     type="tel"
@@ -618,7 +618,7 @@ export default function AfterTheGame() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     disabled={loading}
-                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black placeholder:text-true-black/40 focus:border-cobalt focus:outline-none disabled:opacity-50"
+                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black placeholder:text-true-black/60 focus:border-cobalt focus:outline-none disabled:opacity-50"
                   />
                   <select
                     value={interest}
@@ -662,13 +662,13 @@ export default function AfterTheGame() {
         <div className="mx-auto flex max-w-5xl items-center justify-between">
           <a
             href="/"
-            className="font-mono text-xs tracking-wider text-true-black/40 transition-colors hover:text-true-black"
+            className="font-mono text-xs tracking-wider text-true-black/60 transition-colors hover:text-true-black"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             {t("back")}
           </a>
           <p
-            className="font-mono text-xs tracking-wider text-true-black/30"
+            className="font-mono text-xs tracking-wider text-true-black/60"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             &copy; {new Date().getFullYear()} BEYOND CODE COLLECTIVE

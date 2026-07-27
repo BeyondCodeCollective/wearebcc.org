@@ -257,7 +257,7 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
                   locale === "en"
                     ? "bg-electric-green text-true-black font-semibold"
                     : useDark
-                    ? "text-true-black/40 hover:text-true-black/70"
+                    ? "text-true-black/60 hover:text-true-black"
                     : "text-off-white hover:text-off-white/80"
                 }`}
               >
@@ -271,7 +271,7 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
                   locale === "es"
                     ? "bg-electric-green text-true-black font-semibold"
                     : useDark
-                    ? "text-true-black/40 hover:text-true-black/70"
+                    ? "text-true-black/60 hover:text-true-black"
                     : "text-off-white hover:text-off-white/80"
                 }`}
               >
@@ -311,7 +311,7 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
                   locale === "en"
                     ? "bg-electric-green text-true-black font-semibold"
                     : useDark
-                    ? "text-true-black/40 hover:text-true-black/70"
+                    ? "text-true-black/60 hover:text-true-black"
                     : "text-off-white hover:text-off-white/80"
                 }`}
               >
@@ -325,7 +325,7 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
                   locale === "es"
                     ? "bg-electric-green text-true-black font-semibold"
                     : useDark
-                    ? "text-true-black/40 hover:text-true-black/70"
+                    ? "text-true-black/60 hover:text-true-black"
                     : "text-off-white hover:text-off-white/80"
                 }`}
               >

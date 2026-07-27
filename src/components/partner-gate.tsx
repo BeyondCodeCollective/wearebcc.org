@@ -83,7 +83,7 @@ export function PartnerGate({ onUnlock }: { onUnlock: () => void }) {
             onClick={() => setRevealed((r) => !r)}
             aria-label={revealed ? t("hide") : t("show")}
             aria-pressed={revealed}
-            className="absolute inset-y-0 right-0 flex w-12 items-center justify-center text-true-black/40 transition-colors hover:text-cobalt"
+            className="absolute inset-y-0 right-0 flex w-12 items-center justify-center text-true-black/60 transition-colors hover:text-cobalt"
           >
             {revealed ? (
               <EyeSlash size={18} weight="bold" />

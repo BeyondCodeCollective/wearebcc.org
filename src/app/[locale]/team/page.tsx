@@ -144,7 +144,7 @@ export default function Team() {
                       href={outlet.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-heading text-sm text-true-black/40 transition-colors hover:text-cobalt"
+                      className="font-heading text-sm text-true-black/60 transition-colors hover:text-cobalt"
                     >
                       {outlet.name}
                     </a>
@@ -400,13 +400,13 @@ export default function Team() {
         <div className="mx-auto flex max-w-5xl items-center justify-between">
           <a
             href="/"
-            className="font-mono text-xs tracking-wider text-true-black/40 transition-colors hover:text-true-black"
+            className="font-mono text-xs tracking-wider text-true-black/60 transition-colors hover:text-true-black"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             {t("back")}
           </a>
           <p
-            className="font-mono text-xs tracking-wider text-true-black/30"
+            className="font-mono text-xs tracking-wider text-true-black/60"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             &copy; {new Date().getFullYear()} BEYOND CODE COLLECTIVE
