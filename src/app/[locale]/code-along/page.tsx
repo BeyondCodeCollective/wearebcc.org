@@ -200,7 +200,7 @@ function EpisodeCard({
               <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-true-black/40">
                 <LockSimple size={24} weight="bold" className="text-off-white/80" />
                 <span
-                  className="font-mono text-[10px] tracking-wider text-off-white/80"
+                  className="font-mono text-xs tracking-wider text-off-white/80"
                   style={{ fontFamily: "var(--font-mono)" }}
                 >
                   {lockedLabel}
@@ -212,7 +212,7 @@ function EpisodeCard({
               style={{ backgroundColor: NEON }}
             >
               <span
-                className="font-mono text-[10px] tracking-wider uppercase"
+                className="font-mono text-xs tracking-wider uppercase"
                 style={{ fontFamily: "var(--font-mono)", color: VOID }}
               >
                 {label} {String(episode.num).padStart(2, "0")}
@@ -444,7 +444,7 @@ export default function CodeAlong() {
                     {String(value).padStart(2, "0")}
                   </p>
                   <p
-                    className="mt-1.5 font-mono text-[10px] tracking-wider uppercase text-off-white/50"
+                    className="mt-1.5 font-mono text-xs tracking-wider uppercase text-off-white/50"
                     style={{ fontFamily: "var(--font-mono)" }}
                   >
                     {unit}
@@ -698,7 +698,7 @@ export default function CodeAlong() {
                   {host.name}
                 </p>
                 <p
-                  className="mt-1 font-mono text-[10px] tracking-wider uppercase"
+                  className="mt-1 font-mono text-xs tracking-wider uppercase"
                   style={{ fontFamily: "var(--font-mono)", color: `${VOID}99` }}
                 >
                   {t("hostRole")}
@@ -738,7 +738,7 @@ export default function CodeAlong() {
                   {guest.name}
                 </p>
                 <p
-                  className="mt-1 font-mono text-[10px] tracking-wider uppercase"
+                  className="mt-1 font-mono text-xs tracking-wider uppercase"
                   style={{ fontFamily: "var(--font-mono)", color: `${VOID}99` }}
                 >
                   {t(guest.roleKey)}

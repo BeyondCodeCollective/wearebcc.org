@@ -198,7 +198,7 @@ export default function AfterTheGame() {
                 {item.stat}
               </p>
               <p
-                className="mt-1 font-mono text-[10px] tracking-wider text-off-white/50"
+                className="mt-1 font-mono text-xs tracking-wider text-off-white/50"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {item.label}
@@ -256,7 +256,7 @@ export default function AfterTheGame() {
                 &ldquo;{t("quoteText")}&rdquo;
               </p>
               <cite
-                className="mt-3 block font-mono text-[10px] uppercase not-italic tracking-wider text-grey-3"
+                className="mt-3 block font-mono text-xs uppercase not-italic tracking-wider text-grey-3"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {t("quoteAuthor")} · {t("quoteRole")}
@@ -314,7 +314,7 @@ export default function AfterTheGame() {
                   {item.stat}
                 </p>
                 <p
-                  className="mt-2 font-mono text-[10px] uppercase tracking-wider text-off-white/50"
+                  className="mt-2 font-mono text-xs uppercase tracking-wider text-off-white/75"
                   style={{ fontFamily: "var(--font-mono)" }}
                 >
                   {item.label}
@@ -418,7 +418,7 @@ export default function AfterTheGame() {
             <div className="mt-4">
               <p className="font-heading text-lg text-true-black">Ramón Clemente</p>
               <p
-                className="font-mono text-[10px] tracking-wider text-grey-3"
+                className="font-mono text-xs tracking-wider text-grey-3"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 HEAD OF BEYOND THE GAME
@@ -522,7 +522,7 @@ export default function AfterTheGame() {
                   className="flex flex-col bg-white p-6"
                 >
                   <span
-                    className={`self-start px-2.5 py-1 font-mono text-[10px] tracking-wider ${
+                    className={`self-start px-2.5 py-1 font-mono text-xs tracking-wider ${
                       course.done
                         ? "bg-true-black text-electric-green"
                         : "bg-cobalt text-off-white"
@@ -535,12 +535,12 @@ export default function AfterTheGame() {
                     {course.title}
                   </p>
                   <p
-                    className="mt-1 font-mono text-[10px] tracking-wider text-grey-3"
+                    className="mt-1 font-mono text-xs tracking-wider text-grey-3"
                     style={{ fontFamily: "var(--font-mono)" }}
                   >
                     {course.detail}
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-grey-3">
+                  <p className="mt-3 text-base leading-relaxed text-grey-3">
                     {course.desc}
                   </p>
                 </motion.div>

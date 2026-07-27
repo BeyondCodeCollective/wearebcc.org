@@ -99,7 +99,7 @@ export function Stats() {
                   suffix={stat.suffix}
                 />
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-off-white/60">
+              <p className="mt-3 text-base leading-relaxed text-off-white/85">
                 {stat.label}
               </p>
             </motion.div>

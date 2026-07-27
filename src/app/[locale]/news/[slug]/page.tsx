@@ -82,7 +82,7 @@ export default function NewsArticle() {
             className="mt-8"
           >
             <div
-              className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-wider"
+              className="flex items-center gap-3 font-mono text-xs uppercase tracking-wider"
               style={{ fontFamily: "var(--font-mono)" }}
             >
               <span className="bg-cobalt px-2.5 py-1 text-off-white">

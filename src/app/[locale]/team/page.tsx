@@ -54,7 +54,7 @@ export default function Team() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="mt-5 max-w-2xl text-sm leading-relaxed text-grey-3 sm:text-base"
+            className="mt-5 max-w-2xl text-base leading-relaxed text-grey-3 sm:text-base"
           >
             {t("heroDescription")}
           </motion.p>
@@ -114,7 +114,7 @@ export default function Team() {
                 {f("title")}
               </p>
 
-              <p className="mt-6 text-sm leading-relaxed text-grey-3 sm:text-base">
+              <p className="mt-6 text-base leading-relaxed text-grey-3 sm:text-base">
                 {f("bio")}
               </p>
 
@@ -183,12 +183,12 @@ export default function Team() {
                     {leader.name}
                   </p>
                   <p
-                    className="mt-2 font-mono text-[10px] tracking-wider text-cobalt"
+                    className="mt-2 font-mono text-xs tracking-wider text-cobalt"
                     style={{ fontFamily: "var(--font-mono)" }}
                   >
                     {leader.role.toUpperCase()}
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-grey-3">
+                  <p className="mt-3 text-base leading-relaxed text-grey-3">
                     {t(`leadershipBios.${leader.bio}`)}
                   </p>
                 </div>
@@ -240,7 +240,7 @@ export default function Team() {
               <br />
               <span className="text-cobalt">{t("councilHeadline2")}</span>
             </h2>
-            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-grey-3 sm:text-base">
+            <p className="mt-4 max-w-2xl text-base leading-relaxed text-grey-3 sm:text-base">
               {t("councilDescription")}
             </p>
           </motion.div>
@@ -270,7 +270,7 @@ export default function Team() {
                     {member.name}
                   </p>
                   <p
-                    className="mt-1 font-mono text-[10px] tracking-wider text-cobalt"
+                    className="mt-1 font-mono text-xs tracking-wider text-cobalt"
                     style={{ fontFamily: "var(--font-mono)" }}
                   >
                     {member.org.toUpperCase()}
@@ -306,7 +306,7 @@ export default function Team() {
                     {member.name}
                   </p>
                   <p
-                    className="mt-1 font-mono text-[10px] tracking-wider text-cobalt"
+                    className="mt-1 font-mono text-xs tracking-wider text-cobalt"
                     style={{ fontFamily: "var(--font-mono)" }}
                   >
                     {member.org.toUpperCase()}

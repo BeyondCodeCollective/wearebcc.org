@@ -75,7 +75,7 @@ export function LaunchOverlay() {
                 {t("description")}
               </p>
               <p
-                className="font-mono text-[11px] leading-relaxed tracking-wider text-charcoal/60"
+                className="font-mono text-xs leading-relaxed tracking-wider text-charcoal/60"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {t("credit")}

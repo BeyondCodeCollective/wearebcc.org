@@ -180,7 +180,7 @@ export default function CatalystPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25, duration: 0.6 }}
-            className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-off-white/70"
+            className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-off-white/90"
           >
             {t("hero.body")}
           </motion.p>
@@ -223,7 +223,7 @@ export default function CatalystPage() {
                 {item.stat}
               </p>
               <p
-                className="mt-2 font-mono text-[11px] uppercase tracking-wider text-off-white/50"
+                className="mt-2 font-mono text-xs uppercase tracking-wider text-off-white/75"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {item.label}
@@ -286,7 +286,7 @@ export default function CatalystPage() {
                 <h3 className="font-heading text-xl uppercase tracking-tight text-electric-green">
                   {c.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-off-white/60">
+                <p className="mt-3 text-base leading-relaxed text-off-white/85">
                   {c.text}
                 </p>
               </motion.div>
@@ -323,14 +323,14 @@ export default function CatalystPage() {
                 <h3 className="mt-4 font-heading text-2xl uppercase tracking-tight text-off-white">
                   {tr.title}
                 </h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-off-white/60">
+                <p className="mt-3 flex-1 text-base leading-relaxed text-off-white/85">
                   {tr.text}
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   {tr.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="border border-off-white/15 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-off-white/50"
+                      className="border border-off-white/15 px-2.5 py-1 font-mono text-xs uppercase tracking-wider text-off-white/75"
                       style={{ fontFamily: "var(--font-mono)" }}
                     >
                       {tag}
@@ -366,7 +366,7 @@ export default function CatalystPage() {
                 className="flex flex-col border border-true-black/10 bg-white p-8"
               >
                 <span
-                  className="self-start bg-cobalt px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-off-white"
+                  className="self-start bg-cobalt px-2.5 py-1 font-mono text-xs uppercase tracking-wider text-off-white"
                   style={{ fontFamily: "var(--font-mono)" }}
                 >
                   {card.badge}
@@ -379,7 +379,7 @@ export default function CatalystPage() {
                     {card.lead}
                   </p>
                 )}
-                <p className="mt-3 text-sm leading-relaxed text-grey-3">
+                <p className="mt-3 text-base leading-relaxed text-grey-3">
                   {card.text}
                 </p>
                 {card.facilitator && (
@@ -394,7 +394,7 @@ export default function CatalystPage() {
                     <div>
                       {card.facilitator.role && (
                         <p
-                          className="font-mono text-[11px] uppercase tracking-wider text-cobalt"
+                          className="font-mono text-xs uppercase tracking-wider text-cobalt"
                           style={{ fontFamily: "var(--font-mono)" }}
                         >
                           {card.facilitator.role}
@@ -416,7 +416,7 @@ export default function CatalystPage() {
                     </p>
                     {card.statSource && (
                       <p
-                        className="mt-1 font-mono text-[11px] uppercase tracking-wider text-grey-3"
+                        className="mt-1 font-mono text-xs uppercase tracking-wider text-grey-3"
                         style={{ fontFamily: "var(--font-mono)" }}
                       >
                         {card.statSource}
@@ -471,7 +471,7 @@ export default function CatalystPage() {
             ))}
           </motion.div>
           <p
-            className="mt-8 font-mono text-[11px] uppercase tracking-wider text-off-white/70"
+            className="mt-8 font-mono text-xs uppercase tracking-wider text-off-white/70"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             {t("verticals.caption")}
@@ -489,7 +489,7 @@ export default function CatalystPage() {
             <h2 className="mt-4 font-heading text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.9] text-off-white">
               {t("results.headline")}
             </h2>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-off-white/60">
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-off-white/85">
               {t("results.body")}
             </p>
           </motion.div>
@@ -504,7 +504,7 @@ export default function CatalystPage() {
                 <p className="font-heading text-[clamp(3rem,8vw,5rem)] leading-none text-electric-green">
                   {r.stat}
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-off-white/60">
+                <p className="mt-3 text-base leading-relaxed text-off-white/85">
                   {r.label}
                 </p>
               </motion.div>
@@ -661,7 +661,7 @@ export default function CatalystPage() {
             <blockquote className="mt-6 font-heading text-[clamp(1.5rem,3.5vw,2.5rem)] leading-tight text-off-white">
               {t("why.quote")}
             </blockquote>
-            <p className="mt-8 font-mono text-xs uppercase tracking-wider text-off-white/50" style={{ fontFamily: "var(--font-mono)" }}>
+            <p className="mt-8 font-mono text-xs uppercase tracking-wider text-off-white/75" style={{ fontFamily: "var(--font-mono)" }}>
               {t("why.author")} · {t("why.authorRole")}
             </p>
           </motion.div>
@@ -693,7 +693,7 @@ export default function CatalystPage() {
                   <br />
                   {card.title2}
                 </h3>
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-off-white/70">
+                <p className="mt-4 flex-1 text-base leading-relaxed text-off-white/85">
                   {card.text}
                 </p>
                 <button

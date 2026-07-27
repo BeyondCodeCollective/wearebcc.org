@@ -14,7 +14,7 @@ export function TrustBar() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="font-mono text-[10px] tracking-wider uppercase text-grey-3"
+          className="font-mono text-xs tracking-wider uppercase text-grey-3"
           style={{ fontFamily: "var(--font-mono)" }}
         >
           {t("label")}

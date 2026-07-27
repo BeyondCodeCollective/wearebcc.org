@@ -48,7 +48,7 @@ export function NewsCard({ post, index = 0 }: { post: NewsPost; index?: number }
             style={{ objectPosition: post.imagePosition || "center" }}
           />
           <span
-            className="absolute left-3 top-3 bg-true-black/85 px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider text-electric-green backdrop-blur-sm"
+            className="absolute left-3 top-3 bg-true-black/85 px-2.5 py-1 font-mono text-xs uppercase tracking-wider text-electric-green backdrop-blur-sm"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             {post.category}
@@ -58,7 +58,7 @@ export function NewsCard({ post, index = 0 }: { post: NewsPost; index?: number }
         {/* Body */}
         <div className="flex flex-1 flex-col pt-5">
           <p
-            className="font-mono text-[11px] uppercase tracking-wider text-grey-3"
+            className="font-mono text-xs uppercase tracking-wider text-grey-3"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             {formatNewsDate(post.date, locale)}
@@ -66,7 +66,7 @@ export function NewsCard({ post, index = 0 }: { post: NewsPost; index?: number }
           <h3 className="mt-2 font-heading text-2xl leading-[0.95] text-true-black transition-colors group-hover:text-cobalt">
             {post.title}
           </h3>
-          <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-grey-3">
+          <p className="mt-3 line-clamp-3 text-base leading-relaxed text-grey-3">
             {post.excerpt}
           </p>
           <span

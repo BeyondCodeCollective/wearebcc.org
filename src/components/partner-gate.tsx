@@ -65,7 +65,7 @@ export function PartnerGate({ onUnlock }: { onUnlock: () => void }) {
           <br />
           {t("headline2")}
         </h1>
-        <p className="mt-4 text-sm leading-relaxed text-grey-3">
+        <p className="mt-4 text-base leading-relaxed text-grey-3">
           {t("intro")}
         </p>
         <div className="relative mt-6">
@@ -105,7 +105,7 @@ export function PartnerGate({ onUnlock }: { onUnlock: () => void }) {
         >
           {checking ? t("checking") : t("submit")}
         </button>
-        <p className="mt-4 text-sm leading-relaxed text-grey-3">
+        <p className="mt-4 text-base leading-relaxed text-grey-3">
           {t("needAccessPre")}{" "}
           <a
             href="mailto:catalyst@wearebcc.org"
