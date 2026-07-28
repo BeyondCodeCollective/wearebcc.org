@@ -764,25 +764,6 @@
       ],
       "caption": "Las verticales varían según la cohorte, alineadas a los patrones de contratación actuales."
     },
-    "results": {
-      "label": "Los Resultados",
-      "headline": "PRUEBAS, NO PROMESAS",
-      "body": "Catalyst se lanzó en 2026, y los resultados ya están sobre la mesa.",
-      "stats": [
-        {
-          "stat": "90+",
-          "label": "Personas en las primeras cohortes"
-        },
-        {
-          "stat": "100%",
-          "label": "Completan un capstone práctico"
-        },
-        {
-          "stat": "Q4",
-          "label": "Primera ventana de colocación"
-        }
-      ]
-    },
     "stories": {
       "label": "Escucha a Nuestra Comunidad",
       "headline1": "HISTORIAS REALES,",
@@ -791,12 +772,14 @@
         {
           "quote": "Antes de Beyond Code Collective, pensaba que la tecnología estaba fuera de mi alcance. Trabajaba en salud haciendo facturación y codificación médica, pero me di cuenta de que no era lo que quería a largo plazo. Este programa me dio la oportunidad de reenfocarme y seguir el camino tecnológico que siempre quise.",
           "name": "Londella",
-          "role": "Cambio de Carrera · Atlanta, GA"
+          "role": "Cambio de Carrera · Atlanta, GA",
+          "image": "/images/testimonials/testimonial-01.jpg"
         },
         {
           "quote": "Antes de Beyond Code Collective, pensaba que era imposible acceder a la tecnología. Ahora la tecnología está al alcance de mis manos. El nacimiento de mi hijo me impulsó a tomar la tecnología más en serio y simplemente ir a por ello. Quería proveer para mi familia y sumergirme en un interés que ya tenía.",
           "name": "Josh",
-          "role": "Aprendiz · Atlanta, GA"
+          "role": "Aprendiz · Atlanta, GA",
+          "image": "/images/testimonials/testimonial-02.jpg"
         }
       ]
     },

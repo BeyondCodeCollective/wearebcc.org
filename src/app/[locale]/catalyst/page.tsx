@@ -54,7 +54,7 @@ type Card = {
   facilitator?: Facilitator;
 };
 type Stat = { stat: string; label: string };
-type Story = { quote: string; name: string; role: string };
+type Story = { quote: string; name: string; role: string; image?: string };
 type EmployerCard = {
   title1: string;
   title2: string;
@@ -71,7 +71,6 @@ export default function CatalystPage() {
   const tracks = t.raw("tracks.items") as Track[];
   const cards = t.raw("workshops.cards") as Card[];
   const verticals = t.raw("verticals.items") as string[];
-  const results = t.raw("results.stats") as Stat[];
   const stories = t.raw("stories.items") as Story[];
   const interestOptions = t.raw("signup.interestOptions") as string[];
   const employerCards = t.raw("employers.cards") as EmployerCard[];
@@ -481,40 +480,6 @@ export default function CatalystPage() {
         </div>
       </section>
 
-      {/* ── The Results ────────────────────────────────────── */}
-      <section className="bg-charcoal px-6 py-16 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-6xl">
-          <motion.div {...reveal}>
-            <MonoLabel className="text-electric-green">
-              {t("results.label")}
-            </MonoLabel>
-            <h2 className="mt-4 font-heading text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.9] text-off-white">
-              {t("results.headline")}
-            </h2>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-off-white/90">
-              {t("results.body")}
-            </p>
-          </motion.div>
-          <div className="mt-10 grid gap-8 sm:grid-cols-3">
-            {results.map((r, i) => (
-              <motion.div
-                key={i}
-                {...reveal}
-                transition={{ delay: 0.1 * i, duration: 0.5 }}
-                className="border-t border-off-white/15 pt-6"
-              >
-                <p className="font-heading text-[clamp(3rem,8vw,5rem)] leading-none text-electric-green">
-                  {r.stat}
-                </p>
-                <p className="mt-3 text-lg leading-relaxed text-off-white/90">
-                  {r.label}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── Real Stories ───────────────────────────────────── */}
       <section className="bg-off-white px-6 py-16 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-4xl">
@@ -540,11 +505,22 @@ export default function CatalystPage() {
                 <blockquote className="mt-5 font-heading text-xl leading-snug text-true-black lg:text-2xl">
                   {stories[story].quote}
                 </blockquote>
-                <figcaption
-                  className="mt-6 font-mono text-sm uppercase tracking-wider text-grey-3"
-                  style={{ fontFamily: "var(--font-mono)" }}
-                >
-                  {stories[story].name} · {stories[story].role}
+                <figcaption className="mt-6 flex items-center gap-4">
+                  {stories[story].image && (
+                    <Image
+                      src={stories[story].image}
+                      alt=""
+                      width={56}
+                      height={56}
+                      className="h-14 w-14 shrink-0 rounded-full object-cover"
+                    />
+                  )}
+                  <span
+                    className="font-mono text-sm uppercase tracking-wider text-grey-3"
+                    style={{ fontFamily: "var(--font-mono)" }}
+                  >
+                    {stories[story].name} · {stories[story].role}
+                  </span>
                 </figcaption>
               </motion.figure>
             </AnimatePresence>
