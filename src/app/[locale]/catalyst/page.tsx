@@ -24,14 +24,18 @@ const reveal = {
 
 function MonoLabel({
   children,
-  className = "text-cobalt",
+  // Dark cobalt, not cobalt: on the cream background the brighter blue is
+  // 5.26:1, which clears AA on paper but is hard work as letter-spaced
+  // uppercase mono. Dark cobalt is 13.67:1 and still on-brand. Dark sections
+  // pass text-electric-green explicitly, so this default only affects them.
+  className = "text-dark-cobalt",
 }: {
   children: React.ReactNode;
   className?: string;
 }) {
   return (
     <p
-      className={`font-mono text-sm uppercase tracking-wider ${className}`}
+      className={`font-mono text-base uppercase tracking-wider ${className}`}
       style={{ fontFamily: "var(--font-mono)" }}
     >
       [ {children} ]
