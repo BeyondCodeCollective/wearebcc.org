@@ -165,7 +165,10 @@ export default function CatalystPage() {
             transition={{ duration: 0.6 }}
             className="font-heading text-[clamp(4rem,16vw,11rem)] leading-[0.8] tracking-tight text-off-white"
           >
-            {t("hero.wordmark")}
+            {/* Stacked, like the BCC wordmark in the nav: "BEYOND CATALYST" on
+                one line would blow past the viewport at 16vw. */}
+            <span className="block">{t("hero.wordmarkTop")}</span>
+            <span className="block">{t("hero.wordmark")}</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
