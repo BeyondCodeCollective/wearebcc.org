@@ -625,10 +625,11 @@
   },
   "catalyst": {
     "hero": {
+      "wordmarkTop": "BEYOND",
       "wordmark": "CATALYST",
       "headline1": "DE LA HABILIDAD",
       "headline2": "A LA CARRERA",
-      "body": "El mundo laboral está cambiando. Catalyst forma el talento a la altura: un programa de fuerza laboral basado en cohortes, de 8 a 12 semanas, para personas adultas listas para entrar en la tecnología. No se requiere experiencia previa. Tú pones el empuje; nosotros ponemos el plan de estudios, la comunidad y las conexiones con empleadores reales.",
+      "body": "El mundo laboral está cambiando. Catalyst forma el talento a la altura: un programa de fuerza laboral basado en cohortes, de 8 a 12 semanas, para personas adultas listas para entrar en la tecnología. Cada sesión se imparte en vivo con una persona instructora, no una biblioteca de videos que recorres en soledad. Con humanos al frente. No se requiere experiencia previa. Tú pones el empuje; nosotros ponemos el plan de estudios, la comunidad y las conexiones con empleadores reales.",
       "ctaPrimary": "Únete a la Próxima Cohorte",
       "ctaSecondary": "Colabora con Catalyst"
     },

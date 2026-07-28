@@ -625,10 +625,11 @@
   },
   "catalyst": {
     "hero": {
+      "wordmarkTop": "BEYOND",
       "wordmark": "CATALYST",
       "headline1": "FROM SKILL",
       "headline2": "TO CAREER",
-      "body": "The workforce is changing. Catalyst develops the talent to match — an 8–12 week, cohort-based workforce program for adult learners ready to move into tech. No prior tech background required. You bring the drive; we bring the curriculum, the community, and the connections to real employers.",
+      "body": "The workforce is changing. Catalyst develops the talent to match: an 8–12 week, cohort-based workforce program for adult learners ready to move into tech. Every session is taught live by a real instructor, not a video library you work through alone. Human in the lead. No prior tech background required. You bring the drive; we bring the curriculum, the community, and the connections to real employers.",
       "ctaPrimary": "Join The Next Cohort",
       "ctaSecondary": "Partner With Catalyst"
     },
