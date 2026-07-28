@@ -106,7 +106,7 @@ function CatalystContent() {
                 {item.stat}
               </p>
               <p
-                className="mt-2 font-mono text-[10px] uppercase tracking-wider text-off-white/50"
+                className="mt-2 font-mono text-xs uppercase tracking-wider text-off-white/75"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {item.label}
@@ -150,7 +150,7 @@ function CatalystContent() {
               {credentials.map((c) => (
                 <span
                   key={c}
-                  className="border border-true-black/30 bg-white px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-true-black"
+                  className="border border-true-black/30 bg-white px-3 py-1.5 font-mono text-xs uppercase tracking-wider text-true-black"
                   style={{ fontFamily: "var(--font-mono)" }}
                 >
                   {c}
@@ -174,7 +174,7 @@ function CatalystContent() {
               <h4 className="mt-3 font-heading text-xl text-off-white">
                 {t("proofHeadline")}
               </h4>
-              <p className="mt-2 text-sm leading-relaxed text-off-white/70">
+              <p className="mt-2 text-base leading-relaxed text-off-white/85">
                 {t("proofText")}
               </p>
             </div>
@@ -197,7 +197,7 @@ function CatalystContent() {
                     <h4 className="font-heading text-lg text-true-black">
                       {p.title}
                     </h4>
-                    <p className="mt-1 text-sm leading-relaxed text-grey-3">
+                    <p className="mt-1 text-base leading-relaxed text-grey-3">
                       {p.text}
                     </p>
                   </div>
@@ -231,7 +231,7 @@ function CatalystContent() {
                 <h3 className="mt-2 font-heading text-2xl text-true-black">
                   {r.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-grey-3">
+                <p className="mt-3 text-base leading-relaxed text-grey-3">
                   {r.text}
                 </p>
               </motion.div>
@@ -260,7 +260,7 @@ function CatalystContent() {
                 className="bg-white p-6"
               >
                 <MonoLabel className="text-cobalt">{c.tag}</MonoLabel>
-                <p className="mt-3 text-sm leading-relaxed text-grey-3">
+                <p className="mt-3 text-base leading-relaxed text-grey-3">
                   {c.text}
                 </p>
               </motion.div>
@@ -299,7 +299,7 @@ function CatalystContent() {
                 <h3 className="mt-3 font-heading text-xl text-off-white">
                   {s.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-off-white/70">
+                <p className="mt-2 text-base leading-relaxed text-off-white/85">
                   {s.text}
                 </p>
               </motion.div>
@@ -351,7 +351,7 @@ function CatalystContent() {
           <motion.div
             {...reveal}
             transition={{ delay: 0.1, duration: 0.6 }}
-            className="font-mono text-sm leading-relaxed text-off-white/70"
+            className="font-mono text-base leading-relaxed text-off-white/85"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             {t("ctaContact")}

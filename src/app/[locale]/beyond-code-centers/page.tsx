@@ -264,7 +264,7 @@ export default function TheForge() {
               const content = (
                 <>
                   <div className="text-cobalt">{item.icon}</div>
-                  <p className={`mt-3 text-sm leading-relaxed text-grey-3 ${item.href ? "underline decoration-cobalt/30 underline-offset-2" : ""}`}>{item.text}</p>
+                  <p className={`mt-3 text-base leading-relaxed text-grey-3 ${item.href ? "underline decoration-cobalt/30 underline-offset-2" : ""}`}>{item.text}</p>
                 </>
               );
               return (
@@ -327,24 +327,24 @@ export default function TheForge() {
                   ][i]}
                   <h3 className="font-heading text-2xl text-true-black">{prog.title}</h3>
                 </div>
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-grey-3">
+                <p className="mt-4 flex-1 text-base leading-relaxed text-grey-3">
                   {prog.description}
                 </p>
                 <div className="mt-6 flex gap-4">
                   <span
-                    className="font-mono text-[10px] tracking-wider text-cobalt"
+                    className="font-mono text-xs tracking-wider text-cobalt"
                     style={{ fontFamily: "var(--font-mono)" }}
                   >
                     {prog.format}
                   </span>
                   <span
-                    className="font-mono text-[10px] tracking-wider text-grey-3"
+                    className="font-mono text-xs tracking-wider text-grey-3"
                     style={{ fontFamily: "var(--font-mono)" }}
                   >
                     {prog.audience}
                   </span>
                   <span
-                    className="font-mono text-[10px] tracking-wider uppercase text-cobalt"
+                    className="font-mono text-xs tracking-wider uppercase text-cobalt"
                     style={{ fontFamily: "var(--font-mono)" }}
                   >
                     {prog.price}
@@ -403,7 +403,7 @@ export default function TheForge() {
                 </div>
                 <p className="font-heading text-5xl text-cobalt/20">{step.step}</p>
                 <h4 className="mt-1 font-heading text-lg text-true-black">{step.title}</h4>
-                <p className="mt-2 text-sm leading-relaxed text-grey-3">{step.description}</p>
+                <p className="mt-2 text-base leading-relaxed text-grey-3">{step.description}</p>
                 {i < steps.length - 1 && (
                   <div className="absolute top-6 -right-3 hidden text-cobalt/30 lg:block">
                     <ArrowRight size={20} weight="bold" />
@@ -494,7 +494,7 @@ export default function TheForge() {
                   <div className="shrink-0 pt-0.5 text-cobalt">{pillarIcons[i]}</div>
                   <div>
                     <h3 className="font-heading text-lg text-off-white">{pillar.title}</h3>
-                    <p className="mt-1 text-sm leading-relaxed text-off-white/60">{pillar.description}</p>
+                    <p className="mt-1 text-base leading-relaxed text-off-white/85">{pillar.description}</p>
                   </div>
                 </motion.div>
               ))}
@@ -587,7 +587,7 @@ export default function TheForge() {
                     value={firstName}
                     onChange={(e) => setFirstName(e.target.value)}
                     disabled={loading}
-                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black placeholder:text-true-black/40 focus:border-cobalt focus:outline-none disabled:opacity-50"
+                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black placeholder:text-true-black/60 focus:border-cobalt focus:outline-none disabled:opacity-50"
                   />
                   <input
                     type="email"
@@ -596,7 +596,7 @@ export default function TheForge() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     disabled={loading}
-                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black placeholder:text-true-black/40 focus:border-cobalt focus:outline-none disabled:opacity-50"
+                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black placeholder:text-true-black/60 focus:border-cobalt focus:outline-none disabled:opacity-50"
                   />
                   <input
                     type="tel"
@@ -604,7 +604,7 @@ export default function TheForge() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                     disabled={loading}
-                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black placeholder:text-true-black/40 focus:border-cobalt focus:outline-none disabled:opacity-50"
+                    className="w-full border border-true-black/15 bg-white px-4 py-3 text-true-black placeholder:text-true-black/60 focus:border-cobalt focus:outline-none disabled:opacity-50"
                   />
                   <select
                     value={interest}
@@ -649,13 +649,13 @@ export default function TheForge() {
         <div className="mx-auto flex max-w-6xl items-center justify-between">
           <a
             href="/"
-            className="font-mono text-xs tracking-wider text-true-black/40 transition-colors hover:text-true-black"
+            className="font-mono text-xs tracking-wider text-true-black/60 transition-colors hover:text-true-black"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             {t("back")}
           </a>
           <p
-            className="font-mono text-xs tracking-wider text-true-black/30"
+            className="font-mono text-xs tracking-wider text-true-black/60"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             &copy; {new Date().getFullYear()} BEYOND CODE COLLECTIVE

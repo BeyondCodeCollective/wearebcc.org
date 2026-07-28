@@ -97,7 +97,7 @@ export function Founder() {
                     href={outlet.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-heading text-sm text-off-white/50 transition-colors hover:text-electric-green"
+                    className="font-heading text-base text-off-white/85 transition-colors hover:text-electric-green"
                   >
                     {outlet.name}
                   </a>

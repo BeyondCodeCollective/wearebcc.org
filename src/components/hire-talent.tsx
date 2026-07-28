@@ -97,7 +97,7 @@ export function HireTalent() {
                   <div className="mt-1 text-electric-green">
                     <ArrowRight size={16} weight="bold" />
                   </div>
-                  <p className="text-sm leading-relaxed text-off-white/60">{t(key)}</p>
+                  <p className="text-base leading-relaxed text-off-white/85">{t(key)}</p>
                 </div>
               ))}
             </motion.div>

@@ -36,7 +36,7 @@ export function News() {
               <br />
               {t("headline2")}
             </h2>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-grey-3">
+            <p className="mt-4 max-w-md text-base leading-relaxed text-grey-3">
               {t("subheading")}
             </p>
           </motion.div>

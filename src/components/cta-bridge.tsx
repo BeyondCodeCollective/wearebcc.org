@@ -44,7 +44,7 @@ export function CTABridge() {
           className="mt-16"
         >
           <p
-            className="text-center font-mono text-[10px] tracking-wider uppercase text-off-white/60 mb-6"
+            className="text-center font-mono text-xs tracking-wider uppercase text-off-white/60 mb-6"
             style={{ fontFamily: "var(--font-mono)" }}
           >
             {t("logoLabel")}

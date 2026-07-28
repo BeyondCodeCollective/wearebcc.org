@@ -91,7 +91,7 @@ export function Audience() {
                   {segments.map((seg) => (
                     <span
                       key={seg}
-                      className="bg-cobalt/8 px-2 py-1 font-mono text-[10px] tracking-wider uppercase text-cobalt"
+                      className="bg-cobalt/8 px-2 py-1 font-mono text-xs tracking-wider uppercase text-cobalt"
                       style={{ fontFamily: "var(--font-mono)" }}
                     >
                       {seg}

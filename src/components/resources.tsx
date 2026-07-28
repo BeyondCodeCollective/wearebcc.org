@@ -123,7 +123,7 @@ export function Resources() {
                       <h3 className="font-heading text-base text-off-white transition-colors group-hover:text-electric-green lg:text-lg">
                         {t(`items.${key}.title`)}
                       </h3>
-                      <p className="mt-1 text-sm leading-relaxed text-off-white/70">
+                      <p className="mt-1 text-base leading-relaxed text-off-white/85">
                         {t(`items.${key}.description`)}
                       </p>
                     </div>

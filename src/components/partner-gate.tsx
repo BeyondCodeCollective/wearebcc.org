@@ -65,7 +65,7 @@ export function PartnerGate({ onUnlock }: { onUnlock: () => void }) {
           <br />
           {t("headline2")}
         </h1>
-        <p className="mt-4 text-sm leading-relaxed text-grey-3">
+        <p className="mt-4 text-base leading-relaxed text-grey-3">
           {t("intro")}
         </p>
         <div className="relative mt-6">
@@ -83,7 +83,7 @@ export function PartnerGate({ onUnlock }: { onUnlock: () => void }) {
             onClick={() => setRevealed((r) => !r)}
             aria-label={revealed ? t("hide") : t("show")}
             aria-pressed={revealed}
-            className="absolute inset-y-0 right-0 flex w-12 items-center justify-center text-true-black/40 transition-colors hover:text-cobalt"
+            className="absolute inset-y-0 right-0 flex w-12 items-center justify-center text-true-black/60 transition-colors hover:text-cobalt"
           >
             {revealed ? (
               <EyeSlash size={18} weight="bold" />
@@ -105,7 +105,7 @@ export function PartnerGate({ onUnlock }: { onUnlock: () => void }) {
         >
           {checking ? t("checking") : t("submit")}
         </button>
-        <p className="mt-4 text-sm leading-relaxed text-grey-3">
+        <p className="mt-4 text-base leading-relaxed text-grey-3">
           {t("needAccessPre")}{" "}
           <a
             href="mailto:catalyst@wearebcc.org"

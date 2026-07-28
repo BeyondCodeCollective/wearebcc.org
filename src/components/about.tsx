@@ -62,7 +62,7 @@ export function About() {
               <h3 className="font-heading text-xl leading-tight text-true-black lg:text-2xl">
                 {t(`pillars.${key}.title`)}
               </h3>
-              <p className="mt-4 text-sm leading-relaxed text-grey-3 lg:text-base">
+              <p className="mt-4 text-base leading-relaxed text-grey-3 lg:text-base">
                 {t(`pillars.${key}.description`)}
               </p>
             </motion.div>

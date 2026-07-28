@@ -171,7 +171,7 @@ export function ContactProvider({ children }: { children: ReactNode }) {
                     <br />
                     {tc("headline2")}
                   </h2>
-                  <p className="mt-4 text-sm leading-relaxed text-off-white/60 lg:text-base">
+                  <p className="mt-4 text-base leading-relaxed text-off-white/85 lg:text-base">
                     {tc("description")}
                   </p>
 
