@@ -31,7 +31,7 @@ function MonoLabel({
 }) {
   return (
     <p
-      className={`font-mono text-xs uppercase tracking-wider ${className}`}
+      className={`font-mono text-sm uppercase tracking-wider ${className}`}
       style={{ fontFamily: "var(--font-mono)" }}
     >
       [ {children} ]
@@ -225,7 +225,7 @@ export default function CatalystPage() {
                 {item.stat}
               </p>
               <p
-                className="mt-2 font-mono text-xs uppercase tracking-wider text-off-white/75"
+                className="mt-2 font-mono text-base uppercase tracking-wider text-off-white/85"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {item.label}
@@ -396,7 +396,7 @@ export default function CatalystPage() {
                     <div>
                       {card.facilitator.role && (
                         <p
-                          className="font-mono text-xs uppercase tracking-wider text-cobalt"
+                          className="font-mono text-sm uppercase tracking-wider text-cobalt"
                           style={{ fontFamily: "var(--font-mono)" }}
                         >
                           {card.facilitator.role}
@@ -418,7 +418,7 @@ export default function CatalystPage() {
                     </p>
                     {card.statSource && (
                       <p
-                        className="mt-1 font-mono text-xs uppercase tracking-wider text-grey-3"
+                        className="mt-1 font-mono text-sm uppercase tracking-wider text-grey-3"
                         style={{ fontFamily: "var(--font-mono)" }}
                       >
                         {card.statSource}
@@ -430,7 +430,7 @@ export default function CatalystPage() {
                   href={card.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-wider text-cobalt transition-colors hover:text-true-black"
+                  className="mt-6 inline-flex items-center gap-1.5 font-mono text-sm uppercase tracking-wider text-cobalt transition-colors hover:text-true-black"
                   style={{ fontFamily: "var(--font-mono)" }}
                 >
                   {card.cta}
