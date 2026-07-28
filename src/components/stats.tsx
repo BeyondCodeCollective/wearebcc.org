@@ -76,7 +76,7 @@ export function Stats() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="font-mono text-xs tracking-wider uppercase text-electric-green"
+          className="font-mono text-base tracking-wider uppercase text-electric-green"
           style={{ fontFamily: "var(--font-mono)" }}
         >
           {t("label")}
