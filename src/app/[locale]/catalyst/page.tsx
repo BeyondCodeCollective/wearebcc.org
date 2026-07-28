@@ -243,7 +243,7 @@ export default function CatalystPage() {
               <br />
               <span className="text-cobalt">{t("gap.headline2")}</span>
             </h2>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-grey-3">
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-grey-3">
               {t("gap.body")}
             </p>
           </motion.div>
@@ -283,10 +283,10 @@ export default function CatalystPage() {
                 transition={{ delay: 0.08 * i, duration: 0.5 }}
                 className="bg-true-black p-8"
               >
-                <h3 className="font-heading text-xl uppercase tracking-tight text-electric-green">
+                <h3 className="font-heading text-2xl uppercase tracking-tight text-electric-green">
                   {c.title}
                 </h3>
-                <p className="mt-3 text-base leading-relaxed text-off-white/85">
+                <p className="mt-3 text-lg leading-relaxed text-off-white/90">
                   {c.text}
                 </p>
               </motion.div>
@@ -323,7 +323,7 @@ export default function CatalystPage() {
                 <h3 className="mt-4 font-heading text-2xl uppercase tracking-tight text-off-white">
                   {tr.title}
                 </h3>
-                <p className="mt-3 flex-1 text-base leading-relaxed text-off-white/85">
+                <p className="mt-3 flex-1 text-lg leading-relaxed text-off-white/90">
                   {tr.text}
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">
@@ -353,7 +353,7 @@ export default function CatalystPage() {
               <br />
               {t("workshops.headline2")}
             </h2>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-grey-3">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-grey-3">
               {t("workshops.body")}
             </p>
           </motion.div>
@@ -379,7 +379,7 @@ export default function CatalystPage() {
                     {card.lead}
                   </p>
                 )}
-                <p className="mt-3 text-base leading-relaxed text-grey-3">
+                <p className="mt-3 text-lg leading-relaxed text-grey-3">
                   {card.text}
                 </p>
                 {card.facilitator && (
@@ -403,7 +403,7 @@ export default function CatalystPage() {
                       <p className="font-heading text-sm uppercase tracking-tight text-true-black">
                         {card.facilitator.name}
                       </p>
-                      <p className="mt-1 text-xs leading-relaxed text-grey-3">
+                      <p className="mt-1 text-base leading-relaxed text-grey-3">
                         {card.facilitator.bio}
                       </p>
                     </div>
@@ -411,7 +411,7 @@ export default function CatalystPage() {
                 )}
                 {card.stat && (
                   <div className="mt-5 border-l-2 border-electric-green pl-3">
-                    <p className="text-xs leading-relaxed text-true-black">
+                    <p className="text-base leading-relaxed text-true-black">
                       {card.stat}
                     </p>
                     {card.statSource && (
@@ -471,8 +471,7 @@ export default function CatalystPage() {
             ))}
           </motion.div>
           <p
-            className="mt-8 font-mono text-xs uppercase tracking-wider text-off-white/70"
-            style={{ fontFamily: "var(--font-mono)" }}
+            className="mt-8 max-w-2xl text-lg leading-relaxed text-off-white/90"
           >
             {t("verticals.caption")}
           </p>
@@ -489,7 +488,7 @@ export default function CatalystPage() {
             <h2 className="mt-4 font-heading text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.9] text-off-white">
               {t("results.headline")}
             </h2>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-off-white/85">
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-off-white/90">
               {t("results.body")}
             </p>
           </motion.div>
@@ -504,7 +503,7 @@ export default function CatalystPage() {
                 <p className="font-heading text-[clamp(3rem,8vw,5rem)] leading-none text-electric-green">
                   {r.stat}
                 </p>
-                <p className="mt-3 text-base leading-relaxed text-off-white/85">
+                <p className="mt-3 text-lg leading-relaxed text-off-white/90">
                   {r.label}
                 </p>
               </motion.div>
@@ -539,7 +538,7 @@ export default function CatalystPage() {
                   {stories[story].quote}
                 </blockquote>
                 <figcaption
-                  className="mt-6 font-mono text-xs uppercase tracking-wider text-grey-3"
+                  className="mt-6 font-mono text-sm uppercase tracking-wider text-grey-3"
                   style={{ fontFamily: "var(--font-mono)" }}
                 >
                   {stories[story].name} · {stories[story].role}
@@ -661,7 +660,7 @@ export default function CatalystPage() {
             <blockquote className="mt-6 font-heading text-[clamp(1.5rem,3.5vw,2.5rem)] leading-tight text-off-white">
               {t("why.quote")}
             </blockquote>
-            <p className="mt-8 font-mono text-xs uppercase tracking-wider text-off-white/75" style={{ fontFamily: "var(--font-mono)" }}>
+            <p className="mt-8 font-mono text-sm uppercase tracking-wider text-off-white/85" style={{ fontFamily: "var(--font-mono)" }}>
               {t("why.author")} · {t("why.authorRole")}
             </p>
           </motion.div>
@@ -676,7 +675,7 @@ export default function CatalystPage() {
             <h2 className="mt-4 font-heading text-[clamp(2.5rem,7vw,5rem)] leading-[0.85] text-true-black">
               {t("employers.headline")}
             </h2>
-            <p className="mt-6 max-w-2xl text-base leading-relaxed text-grey-3">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-grey-3">
               {t("employers.body")}
             </p>
           </motion.div>
@@ -693,7 +692,7 @@ export default function CatalystPage() {
                   <br />
                   {card.title2}
                 </h3>
-                <p className="mt-4 flex-1 text-base leading-relaxed text-off-white/85">
+                <p className="mt-4 flex-1 text-lg leading-relaxed text-off-white/90">
                   {card.text}
                 </p>
                 <button
