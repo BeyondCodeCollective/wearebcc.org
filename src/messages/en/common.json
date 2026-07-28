@@ -4,7 +4,7 @@
     "aboutUs": "About Us",
     "team": "Team",
     "initiatives": "Initiatives",
-    "catalyst": "Catalyst",
+    "catalyst": "Beyond Catalyst",
     "theForge": "Beyond Code Centers",
     "afterTheGame": "Beyond The Game",
     "news": "News",
@@ -764,25 +764,6 @@
       ],
       "caption": "Verticals vary by cohort, aligned to current employer hiring patterns."
     },
-    "results": {
-      "label": "The Results",
-      "headline": "PROOF, NOT PROMISES",
-      "body": "Catalyst launched in 2026, and the results are already on the board.",
-      "stats": [
-        {
-          "stat": "90+",
-          "label": "Learners in the first cohorts"
-        },
-        {
-          "stat": "100%",
-          "label": "Complete a hands-on capstone"
-        },
-        {
-          "stat": "Q4",
-          "label": "First placement window"
-        }
-      ]
-    },
     "stories": {
       "label": "Hear From Our Community",
       "headline1": "REAL STORIES,",
@@ -791,12 +772,14 @@
         {
           "quote": "Before Beyond Code Collective, I thought tech was out of reach for me. I was working in healthcare doing medical billing and coding, but I realized it wasn't what I wanted long-term. This program gave me the opportunity to refocus and pursue the technology path I always wanted.",
           "name": "Londella",
-          "role": "Career Changer · Atlanta, GA"
+          "role": "Career Changer · Atlanta, GA",
+          "image": "/images/testimonials/testimonial-01.jpg"
         },
         {
           "quote": "Before Beyond Code Collective, I thought tech was impossible to get my hands on. Now tech is at my fingertips. The birth of my son pushed me to take tech more seriously and just go for it. I wanted to provide for my family and dive into an interest I already had.",
           "name": "Josh",
-          "role": "Learner · Atlanta, GA"
+          "role": "Learner · Atlanta, GA",
+          "image": "/images/testimonials/testimonial-02.jpg"
         }
       ]
     },
