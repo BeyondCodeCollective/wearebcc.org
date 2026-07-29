@@ -116,7 +116,7 @@
     "gapHeadline2": "WE'VE SCREENED THE TALENT TO CLOSE THE GAP.",
     "gapText": "Beyond Code's Cybersecurity cohort is a pre-vetted pipeline of career-changers who hold stacked CompTIA industry credentials, have completed a live SOC-analyst simulation, and bring extensive work experience with transferable skills.",
     "gapStrong": "You get first access to proven talent.",
-    "whoLabel": "[ Who You're Hiring ]",
+    "whoLabel": "[ Who's In The Cohort ]",
     "whoHeadline1": "CERTIFIED &",
     "whoHeadline2": "SCREENED",
     "whoText1": "Every candidate enters your pipeline already holding a stack of CompTIA credentials, with all of them finishing Security+ certification by Q4 2026.",
@@ -223,7 +223,7 @@
       {
         "n": "Step 02",
         "title": "PREVIEW AT DEMO DAY",
-        "text": "Join us in early September to watch the cohort present their SOC-analyst capstones live."
+        "text": "Join us in early Fall for graduation celebration or demo days."
       },
       {
         "n": "Step 03",
