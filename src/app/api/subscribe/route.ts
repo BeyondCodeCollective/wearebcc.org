@@ -5,6 +5,7 @@ import crypto from "crypto";
 import { sql } from "@vercel/postgres";
 import { ensureTables } from "@/lib/db";
 import { screen } from "@/lib/moderation";
+import { notifyInquiry, shouldNotify } from "@/lib/notify";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -219,8 +220,14 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: true }, { status: 200 });
   }
 
-  // Somebody wrote to us and is expecting a reply. Until these are surfaced in
-  // the admin or emailed out, the log is the only way anyone sees them.
+  // Somebody is expecting a reply, so tell a human. Only reached for
+  // submissions that cleared screening, so flagged abuse never lands in
+  // anyone's inbox. Awaited but never throws: the lead is already stored.
+  if (shouldNotify(lead)) {
+    await notifyInquiry(lead, leadId);
+  }
+
+  // Kept as a backstop for when notification is unconfigured or its send fails.
   if (lead.message) {
     console.log(
       `CONTACT_MESSAGE source=${lead.source} from=${lead.firstName} <${lead.email}> ` +
