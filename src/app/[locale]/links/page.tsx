@@ -79,20 +79,20 @@ export default function LinksPage() {
             <li key={item.href}>
               <a
                 href={item.href}
-                className="flex items-start justify-between gap-4 border border-off-white/70 p-5 transition-colors hover:border-electric-green hover:bg-off-white/10"
+                className="flex items-start justify-between gap-4 bg-off-white p-5 transition-transform hover:-translate-y-0.5"
               >
                 <span>
-                  <span className="block font-heading text-2xl uppercase leading-none text-off-white">
+                  <span className="block font-heading text-2xl uppercase leading-none text-true-black">
                     {item.label}
                   </span>
-                  <span className="mt-2 block text-base leading-relaxed text-off-white/90">
+                  <span className="mt-2 block text-base leading-relaxed text-true-black/70">
                     {item.blurb}
                   </span>
                 </span>
                 <ArrowUpRight
                   size={22}
                   weight="bold"
-                  className="mt-1 shrink-0 text-electric-green"
+                  className="mt-1 shrink-0 text-cobalt"
                 />
               </a>
             </li>
@@ -111,8 +111,18 @@ export default function LinksPage() {
           Support this work
         </a>
 
+        {/* Quiet on purpose. This is for whoever is holding the phone, not for
+            the visitor who just scanned their way here. */}
+        <a
+          href="/en/links/share"
+          className="mt-8 block text-center font-mono text-sm uppercase tracking-wider text-off-white/90 underline underline-offset-4 hover:text-electric-green"
+          style={{ fontFamily: "var(--font-mono)" }}
+        >
+          Show a QR code to share
+        </a>
+
         <p
-          className="mt-8 text-center font-mono text-sm uppercase tracking-wider text-off-white/90"
+          className="mt-4 text-center font-mono text-sm uppercase tracking-wider text-off-white/90"
           style={{ fontFamily: "var(--font-mono)" }}
         >
           wearebcc.org
