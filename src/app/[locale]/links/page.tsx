@@ -111,8 +111,18 @@ export default function LinksPage() {
           Support this work
         </a>
 
+        {/* Quiet on purpose. This is for whoever is holding the phone, not for
+            the visitor who just scanned their way here. */}
+        <a
+          href="/en/links/share"
+          className="mt-8 block text-center font-mono text-sm uppercase tracking-wider text-off-white/90 underline underline-offset-4 hover:text-electric-green"
+          style={{ fontFamily: "var(--font-mono)" }}
+        >
+          Show a QR code to share
+        </a>
+
         <p
-          className="mt-8 text-center font-mono text-sm uppercase tracking-wider text-off-white/90"
+          className="mt-4 text-center font-mono text-sm uppercase tracking-wider text-off-white/90"
           style={{ fontFamily: "var(--font-mono)" }}
         >
           wearebcc.org
