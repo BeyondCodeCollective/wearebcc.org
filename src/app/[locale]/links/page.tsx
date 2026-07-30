@@ -79,20 +79,20 @@ export default function LinksPage() {
             <li key={item.href}>
               <a
                 href={item.href}
-                className="flex items-start justify-between gap-4 border border-off-white/70 p-5 transition-colors hover:border-electric-green hover:bg-off-white/10"
+                className="flex items-start justify-between gap-4 bg-off-white p-5 transition-transform hover:-translate-y-0.5"
               >
                 <span>
-                  <span className="block font-heading text-2xl uppercase leading-none text-off-white">
+                  <span className="block font-heading text-2xl uppercase leading-none text-true-black">
                     {item.label}
                   </span>
-                  <span className="mt-2 block text-base leading-relaxed text-off-white/90">
+                  <span className="mt-2 block text-base leading-relaxed text-true-black/70">
                     {item.blurb}
                   </span>
                 </span>
                 <ArrowUpRight
                   size={22}
                   weight="bold"
-                  className="mt-1 shrink-0 text-electric-green"
+                  className="mt-1 shrink-0 text-cobalt"
                 />
               </a>
             </li>
