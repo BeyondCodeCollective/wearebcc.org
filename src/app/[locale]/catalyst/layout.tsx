@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const OG_IMAGE = "https://www.wearebcc.org/images/atg/atg-hero-panel.jpg";
+const OG_IMAGE = "https://www.wearebcc.org/images/catalyst/og-catalyst.jpg";
 
 const COPY = {
   en: {
@@ -45,7 +45,7 @@ export async function generateMetadata({
       url,
       siteName: "Beyond Code Collective",
       type: "website",
-      images: [{ url: OG_IMAGE, width: 1600, height: 1066, alt: c.imageAlt }],
+      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: c.imageAlt }],
     },
     twitter: {
       card: "summary_large_image",
