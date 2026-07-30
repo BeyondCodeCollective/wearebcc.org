@@ -242,7 +242,7 @@
   },
   "atg": {
     "back": "WEAREBCC.ORG",
-    "nextCohort": "COHORTE 1 EN CURSO · SECURITY+ EN MARCHA",
+    "nextCohort": "COHORTE 1 EN CURSO · NETWORK+ EN MARCHA",
     "initiative": "UN PROGRAMA ANCLA DE BEYOND CODE COLLECTIVE",
     "headline1": "DEL DEPORTE",
     "headline2": "A LA TECNOLOGÍA",
@@ -307,15 +307,15 @@
     "comptiaCourse2Title": "CompTIA Network+ (N10-009)",
     "comptiaCourse2Detail": "8 semanas • 2 sesiones/semana • 3 hrs/sesión",
     "comptiaCourse2Desc": "Conceptos centrales de redes, protocolos, principios de seguridad y metodologías de resolución de problemas. Experiencia práctica con hardware de redes, topologías y herramientas de diagnóstico. Prepara a los participantes para el examen CompTIA Network+.",
-    "comptiaCourse2Status": "COMPLETADO · COHORTE 1",
+    "comptiaCourse2Status": "EN CURSO",
     "comptiaCourse3Title": "CompTIA Security+ (SY0-701)",
     "comptiaCourse3Detail": "16 sesiones • 2 sesiones/semana • 3 hrs/sesión",
     "comptiaCourse3Desc": "Amenazas y vulnerabilidades, arquitectura de seguridad, operaciones de seguridad y gobernanza. La tercera credencial de la ruta — y la puerta de entrada a roles de SOC, GRC y operaciones de seguridad.",
-    "comptiaCourse3Status": "EN CURSO",
+    "comptiaCourse3Status": "PRÓXIMAMENTE",
     "resultsLabel": "LOS RESULTADOS",
     "resultsHeadline1": "PRUEBAS,",
     "resultsHeadline2": "NO PROMESAS",
-    "resultsText": "La primera cohorte de Beyond The Game completó su formación de Tech+ y Network+, y los resultados están sobre la mesa. Security+ está en marcha ahora mismo.",
+    "resultsText": "La primera cohorte de Beyond The Game completó su formación de Tech+, y los resultados están sobre la mesa. Network+ está en marcha ahora mismo.",
     "resultsStats": [
       {
         "stat": "700",
