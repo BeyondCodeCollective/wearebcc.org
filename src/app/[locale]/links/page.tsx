@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { Logo } from "@/components/ui/logo";
 import { SITE } from "@/lib/constants";
@@ -74,6 +75,32 @@ export default function LinksPage() {
           Everything we are building, in one place. Take a look at whichever one is yours.
         </p>
 
+        {/* Up here because the person holding the phone should not have to
+            scroll to find it mid-conversation. Tapping opens the full-screen
+            version for holding up across a table. */}
+        <a
+          href="/en/links/share"
+          className="mt-7 flex items-center gap-4 bg-off-white p-4 transition-transform hover:-translate-y-0.5"
+        >
+          <Image
+            src="/images/links/qr.png"
+            alt="QR code linking to this page"
+            width={780}
+            height={780}
+            priority
+            unoptimized
+            className="h-40 w-40 shrink-0"
+          />
+          <span>
+            <span className="block font-heading text-2xl uppercase leading-none text-true-black">
+              Scan to share
+            </span>
+            <span className="mt-2 block text-base leading-snug text-true-black/70">
+              Point a camera here, or tap to open it full screen.
+            </span>
+          </span>
+        </a>
+
         <ul className="mt-9 flex flex-col gap-3">
           {LINKS.map((item) => (
             <li key={item.href}>
@@ -111,18 +138,8 @@ export default function LinksPage() {
           Support this work
         </a>
 
-        {/* Quiet on purpose. This is for whoever is holding the phone, not for
-            the visitor who just scanned their way here. */}
-        <a
-          href="/en/links/share"
-          className="mt-8 block text-center font-mono text-sm uppercase tracking-wider text-off-white/90 underline underline-offset-4 hover:text-electric-green"
-          style={{ fontFamily: "var(--font-mono)" }}
-        >
-          Show a QR code to share
-        </a>
-
         <p
-          className="mt-4 text-center font-mono text-sm uppercase tracking-wider text-off-white/90"
+          className="mt-8 text-center font-mono text-sm uppercase tracking-wider text-off-white/90"
           style={{ fontFamily: "var(--font-mono)" }}
         >
           wearebcc.org
