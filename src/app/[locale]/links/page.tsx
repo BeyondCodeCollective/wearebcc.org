@@ -75,32 +75,6 @@ export default function LinksPage() {
           Everything we are building, in one place. Take a look at whichever one is yours.
         </p>
 
-        {/* Up here because the person holding the phone should not have to
-            scroll to find it mid-conversation. Tapping opens the full-screen
-            version for holding up across a table. */}
-        <a
-          href="/en/links/share"
-          className="mt-7 flex items-center gap-4 bg-off-white p-4 transition-transform hover:-translate-y-0.5"
-        >
-          <Image
-            src="/images/links/qr.png"
-            alt="QR code linking to this page"
-            width={780}
-            height={780}
-            priority
-            unoptimized
-            className="h-40 w-40 shrink-0"
-          />
-          <span>
-            <span className="block font-heading text-2xl uppercase leading-none text-true-black">
-              Scan to share
-            </span>
-            <span className="mt-2 block text-base leading-snug text-true-black/70">
-              Point a camera here, or tap to open it full screen.
-            </span>
-          </span>
-        </a>
-
         <ul className="mt-9 flex flex-col gap-3">
           {LINKS.map((item) => (
             <li key={item.href}>
@@ -125,6 +99,32 @@ export default function LinksPage() {
             </li>
           ))}
         </ul>
+
+        {/* Below the links: she scrolls through those while talking, and the
+            code is what she lands on at the end to hand the page over.
+            Tapping opens the full-screen version for holding up. */}
+        <a
+          href="/en/links/share"
+          className="mt-3 flex items-center gap-4 bg-off-white p-4 transition-transform hover:-translate-y-0.5"
+        >
+          <Image
+            src="/images/links/qr.png"
+            alt="QR code linking to this page"
+            width={780}
+            height={780}
+            priority
+            unoptimized
+            className="h-40 w-40 shrink-0"
+          />
+          <span>
+            <span className="block font-heading text-2xl uppercase leading-none text-true-black">
+              Scan to share
+            </span>
+            <span className="mt-2 block text-base leading-snug text-true-black/70">
+              Point a camera here, or tap to open it full screen.
+            </span>
+          </span>
+        </a>
 
         {/* Secondary on purpose. A QR that leads with "give us money" changes
             the conversation; someone who is already moved will still find it. */}
