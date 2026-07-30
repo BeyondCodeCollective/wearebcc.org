@@ -63,7 +63,7 @@ const LINKS: LinkItem[] = [
 
 export default function LinksPage() {
   return (
-    <main className="flex min-h-[100dvh] flex-col items-center bg-true-black px-6 py-14">
+    <main className="flex min-h-[100dvh] flex-col items-center bg-cobalt px-6 py-14">
       <div className="w-full max-w-md">
         <Logo variant="stacked" color="white" className="h-14 w-auto" />
 
@@ -79,13 +79,13 @@ export default function LinksPage() {
             <li key={item.href}>
               <a
                 href={item.href}
-                className="flex items-start justify-between gap-4 border border-off-white/25 p-5 transition-colors hover:border-electric-green hover:bg-off-white/5"
+                className="flex items-start justify-between gap-4 border border-off-white/70 p-5 transition-colors hover:border-electric-green hover:bg-off-white/10"
               >
                 <span>
                   <span className="block font-heading text-2xl uppercase leading-none text-off-white">
                     {item.label}
                   </span>
-                  <span className="mt-2 block text-base leading-relaxed text-off-white/75">
+                  <span className="mt-2 block text-base leading-relaxed text-off-white/90">
                     {item.blurb}
                   </span>
                 </span>
@@ -112,7 +112,7 @@ export default function LinksPage() {
         </a>
 
         <p
-          className="mt-8 text-center font-mono text-sm uppercase tracking-wider text-off-white/60"
+          className="mt-8 text-center font-mono text-sm uppercase tracking-wider text-off-white/90"
           style={{ fontFamily: "var(--font-mono)" }}
         >
           wearebcc.org
