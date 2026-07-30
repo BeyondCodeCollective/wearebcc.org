@@ -15,11 +15,39 @@ import { SITE } from "@/lib/constants";
  * compete with the real pages, but anyone with the code can reach it.
  */
 
+const OG_IMAGE = "https://www.wearebcc.org/images/community-og-v2.jpg";
+const TITLE = "Beyond Code Collective — Where to start";
+const DESCRIPTION =
+  "Catalyst, BCC Academy, Beyond The Game and Beyond Anything, in one place.";
+
 export const metadata: Metadata = {
-  title: "Beyond Code Collective — Where to start",
-  description:
-    "Catalyst, BCC Academy, Beyond The Game and Beyond Anything, in one place.",
+  title: TITLE,
+  description: DESCRIPTION,
   robots: { index: false, follow: false },
+  // noindex keeps it out of search; it does not stop a link preview. Without
+  // its own openGraph the page inherits the root card, which titles it "The
+  // Future Of Tech Starts Here" and points og:url at the homepage.
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "https://www.wearebcc.org/en/links",
+    siteName: "Beyond Code Collective",
+    type: "website",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1456,
+        height: 816,
+        alt: "A Beyond Code Collective workshop in session",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE],
+  },
 };
 
 type LinkItem = {
@@ -71,8 +99,18 @@ export default function LinksPage() {
         <h1 className="mt-8 font-heading text-[clamp(2.25rem,9vw,3rem)] leading-[0.9] text-off-white">
           Where to start
         </h1>
-        <p className="mt-3 text-base leading-relaxed text-off-white/85">
-          Everything we are building, in one place. Take a look at whichever one is yours.
+        <p className="mt-3 text-lg leading-relaxed text-off-white">
+          Four programs and the platform behind them. Open whichever one you came
+          for.
+        </p>
+        <p className="mt-2 text-lg leading-relaxed text-off-white">
+          Questions?{" "}
+          <a
+            href="mailto:partners@wearebcc.org"
+            className="underline underline-offset-4 hover:text-electric-green"
+          >
+            partners@wearebcc.org
+          </a>
         </p>
 
         <ul className="mt-9 flex flex-col gap-3">
