@@ -100,8 +100,7 @@ export default function LinksPage() {
           Where to start
         </h1>
         <p className="mt-3 text-lg leading-relaxed text-off-white">
-          Four programs and the platform behind them. Open whichever one you came
-          for.
+          Four programs and the platform behind them. Explore whichever one fits.
         </p>
         <p className="mt-2 text-lg leading-relaxed text-off-white">
           Questions?{" "}
