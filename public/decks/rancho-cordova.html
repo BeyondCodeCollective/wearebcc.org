@@ -707,15 +707,31 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
 @media (max-width:820px){.wall{flex-direction:column}.wtx{flex:1 1 auto;max-width:100%}.wgrid{grid-template-columns:repeat(3,1fr)}.wgrid.partners{grid-template-columns:repeat(2,1fr)}}
 
 /* === SLIDE 06: THE COMPLETION GAP === */
-.gap2{display:flex;align-items:stretch;gap:clamp(.8rem,2.4vw,2rem);margin-top:clamp(1rem,3vh,1.8rem);position:relative;z-index:2}
-.gap2 .side{flex:1 1 0;min-width:0}
-.gap2 .gn{font-family:var(--head);text-transform:uppercase;line-height:.85;font-size:clamp(3.4rem,11vw,9rem)}
-.gap2 .gl{font-family:var(--mono);font-weight:700;font-size:clamp(.875rem,1.3vw,1.1rem);letter-spacing:.12em;text-transform:uppercase;line-height:1.5;margin-top:.5em}
-.gap2 .them .gn{color:#9aa3b2}
-.gap2 .them .gl{color:#5b6472}
-.gap2 .us .gn{color:var(--blue)}
-.gap2 .vs{flex:0 0 auto;align-self:center;font-family:var(--mono);font-weight:700;font-size:clamp(.875rem,1.4vw,1.15rem);letter-spacing:.16em;text-transform:uppercase;color:#5b6472;padding:0 clamp(.2rem,1vw,.8rem)}
-@media (max-width:560px){.gap2{flex-direction:column;align-items:flex-start}.gap2 .side{width:100%;flex:0 0 auto}.gap2 .vs{align-self:flex-start;padding:0}}
+/* The completion gap, shown to scale. Stating 3-6% next to 75% asks the
+   room to do the arithmetic; drawing it does the work for them. */
+.gapbar{position:relative;z-index:2;margin-top:clamp(1rem,3vh,2rem);max-width:min(1040px,82%)}
+.gaprow{display:grid;grid-template-columns:clamp(150px,15vw,240px) 1fr auto;align-items:center;
+  gap:clamp(.8rem,1.8vw,1.8rem);padding:clamp(.5rem,1.4vh,.9rem) 0}
+.gaprow+.gaprow{border-top:2px solid rgba(0,0,0,.12)}
+.glab{font-family:var(--mono);font-weight:700;font-size:clamp(.875rem,1.05vw,1rem);
+  letter-spacing:.12em;text-transform:uppercase;color:#5b6472}
+.us .glab{color:#000}
+.gtrack{position:relative;height:clamp(18px,2.6vh,32px);background:rgba(0,0,0,.07)}
+.gtrack>i{position:absolute;left:0;top:0;bottom:0;transform:scaleX(0);transform-origin:left;
+  transition:transform .9s cubic-bezier(.2,.7,.2,1) .3s}
+.slide.on .gtrack>i{transform:scaleX(1)}
+.them .gtrack>i{background:rgba(0,0,0,.32)}
+.us .gtrack>i{background:var(--blue)}
+.gnum{font-family:var(--head);font-size:clamp(1.9rem,4.2vw,3.4rem);line-height:1;
+  text-align:right;min-width:4.2ch}
+.them .gnum{color:#5b6472}
+.us .gnum{color:var(--blue)}
+.gapcap{font-family:var(--mono);font-weight:700;font-size:clamp(.875rem,1vw,.95rem);
+  letter-spacing:.12em;text-transform:uppercase;color:#5b6472;margin-top:clamp(.6rem,1.6vh,1rem)}
+@media (prefers-reduced-motion:reduce){.gtrack>i{transition:none;transform:scaleX(1)}}
+@media (max-width:820px){.gapbar{max-width:100%}
+  .gaprow{grid-template-columns:1fr auto;gap:.6rem 1rem}
+  .glab{grid-column:1/-1}}.gap2 .side{width:100%;flex:0 0 auto}.gap2 .vs{align-self:flex-start;padding:0}}
 
 
 /* Platform slide: the device leads, the copy supports. */
@@ -904,10 +920,18 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
   <div class="sq tl"><b></b></div>
   <div class="sq br"><b></b></div>
   <div class="sq bl"><b></b></div>
-  <div class="gap2 reveal">
-    <div class="side them"><div class="gn">3-6%</div><div class="gl">Finish an online<br>course on their own</div></div>
-    <div class="vs">Inside our cohorts</div>
-    <div class="side us"><div class="gn">75%</div><div class="gl">Finish</div></div>
+  <div class="gapbar reveal">
+    <div class="gaprow them">
+      <div class="glab">On their own</div>
+      <div class="gtrack"><i style="width:6%"></i></div>
+      <div class="gnum">3-6%</div>
+    </div>
+    <div class="gaprow us">
+      <div class="glab">Inside our cohorts</div>
+      <div class="gtrack"><i style="width:75%"></i></div>
+      <div class="gnum">75%</div>
+    </div>
+    <div class="gapcap">Share who finish the course they start</div>
   </div>
   <div class="owner">Colour: Mica &middot; 1 slide</div>
   <div class="note"><b>Cristina</b> <i style="color:#E5F701;font-style:normal">[ COLOUR: MICA &middot; if she is in the room ]</i> Mica walks the numbers. Catalyst, Centers, platform. If she is not there, Cristina carries it. This slide answers the question the city will actually ask: four months in Atlanta, can you deliver here? The Black Girls Code lineage is the answer. Engagement numbers said honestly; placement and wages are the real test, which is why reporting is live. Jihan to confirm figures.</div>
