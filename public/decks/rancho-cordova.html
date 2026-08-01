@@ -148,6 +148,9 @@ h1{font-size:clamp(3rem,11vw,9rem)}
 h2{font-size:clamp(2.4rem,8vw,6rem)}
 .bignum{font-family:var(--head);color:var(--yellow);font-size:clamp(4rem,15vw,12rem);line-height:.9}
 .statrow{display:flex;gap:clamp(1.2rem,5vw,4rem);flex-wrap:wrap;margin-top:clamp(1rem,3vh,2rem)}
+/* Five stats read as 3 + 2, not 4 + an orphan. */
+.stat5{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,3vh,2rem) clamp(1.2rem,3vw,2.8rem)}
+@media (max-width:820px){.stat5{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .stat .n{font-family:var(--head);font-size:clamp(2.6rem,7.5vw,5.6rem);line-height:1;color:var(--yellow)}
 .stat .l{font-family:var(--mono);font-weight:700;font-size:clamp(.875rem,1.4vw,.875rem);letter-spacing:.14em;text-transform:uppercase;margin-top:.5em;color:#fff}
 .word{font-family:var(--head);text-transform:uppercase;font-size:clamp(1.5rem,4.2vw,3.2rem);line-height:1.05}
@@ -784,11 +787,7 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
   <h2 class="reveal">Your first downtown.<br><span class="ghost">Who runs it?</span></h2>
   <div class="mapsub" aria-hidden="true">
    <svg viewBox="0 0 700 520" xmlns="http://www.w3.org/2000/svg">
-     <!-- subtle street lines -->
-     <g stroke="#000" stroke-width="1.5" opacity=".10">
-       <path d="M80 0 V520"/><path d="M200 0 V520"/><path d="M330 0 V520"/><path d="M470 0 V520"/><path d="M600 0 V520"/>
-       <path d="M0 90 H700"/><path d="M0 210 H700"/><path d="M0 340 H700"/><path d="M0 450 H700"/>
-     </g>
+     <!-- no street grid: the slide grid behind this already reads as one -->
      <!-- river -->
      <path d="M-10 120 C 160 84, 330 150, 500 112 S 660 80, 710 108" fill="none" stroke="#1D59FF" stroke-width="8" opacity=".25"/>
      <!-- US-50 -->
@@ -806,7 +805,7 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
      <text x="600" y="182" font-family="Apercu Mono" font-weight="700" font-size="17" fill="#000" opacity=".5">FOLSOM</text>
    </svg>
   </div>
-  <div class="statrow reveal" style="position:relative;z-index:2;max-width:62%">
+  <div class="statrow stat5 reveal" style="position:relative;z-index:2;max-width:58%">
     <div class="stat"><div class="n">$1B+</div><div class="l">Dova investment</div></div>
     <div class="stat"><div class="n">37,000</div><div class="l">Jobs the district creates</div></div>
     <div class="stat"><div class="n">7,500</div><div class="l">Seat arena · fall 2027</div></div>
