@@ -778,15 +778,19 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
 .lxp .dev .base{width:100%}
 /* The screen cycles four real product views. 8s each, 32s round trip. */
 .gal{background:#fff}
-.gal .pane{position:absolute;inset:0;opacity:0;animation:galcycle 32s ease-in-out infinite}
+.gal .pane{position:absolute;inset:0;opacity:0;animation:galcycle 32s ease-in-out infinite;animation-play-state:paused}
+/* Hold on Human in the Lead until the slide is actually reached, then run. */
+.slide.on .gal .pane{animation-play-state:running}
 .gal .pane img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
 .gal .p1 img{object-position:left top}
 .gal .p2,.gal .p3{background:#f7f7f8}
 .gal .p2 img{object-fit:contain;object-position:center}
 .gal .p3 img{object-fit:contain;object-position:center}
-.gal .p1{animation-delay:0s}.gal .p2{animation-delay:8s}
+.gal .p1{animation-delay:0s;animation-name:galcycle1;opacity:1}.gal .p2{animation-delay:8s}
 .gal .p3{animation-delay:16s}.gal .p4{animation-delay:24s}
 @keyframes galcycle{0%{opacity:0}2%{opacity:1}23%{opacity:1}25%{opacity:0}100%{opacity:0}}
+/* Pane 1 opens the loop, so it starts opaque and fades back in at the seam. */
+@keyframes galcycle1{0%{opacity:1}23%{opacity:1}25%{opacity:0}97%{opacity:0}100%{opacity:1}}
 .gal .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:2.6em 1.4em 1em;
   background:linear-gradient(to top,rgba(0,0,0,.85),rgba(0,0,0,0));color:#fff;
   font-family:var(--mono);font-weight:700;font-size:clamp(.875rem,1.05vw,1rem);
