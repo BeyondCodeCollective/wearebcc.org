@@ -189,9 +189,20 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
 
 
 /* === SUBTLE TOP-RIGHT MAP (slide 2) === */
-.mapsub{position:absolute;top:0;right:0;width:min(58vw,760px);height:72%;z-index:0;pointer-events:none;overflow:hidden}
-.mapsub svg{width:100%;height:100%}
-@media (max-width:820px){.mapsub{opacity:.5;width:100%;height:50%}.statrow[style]{max-width:100%!important}}
+/* The map owns a column instead of floating over the slide. An overlay
+   could only ever avoid the stats at one window size. */
+.mapsplit{align-items:center;gap:clamp(1.2rem,3vw,3rem);margin-top:clamp(.8rem,2.4vh,1.6rem)}
+.mapsplit>.tx{flex:1 1 auto;min-width:0}
+.mapfig{flex:0 0 38%;max-width:38%;min-width:0;margin:0;aspect-ratio:700/520;align-self:center}
+.mapfig svg{width:100%;height:100%;display:block}
+.mapfig{position:relative}
+.mlab{position:absolute;max-width:100%;overflow:hidden;text-overflow:ellipsis;font-family:var(--mono);font-weight:700;font-size:clamp(.875rem,.95vw,1.05rem);
+  letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;line-height:1}
+.mlab.road{color:#1D59FF;opacity:.65}
+.mlab.dim{color:#000;opacity:.5}
+.mlab.here{color:#000}
+@media (max-width:820px){.mapfig{flex:0 0 auto;max-width:100%;width:100%;margin-top:1rem}}
+@media (max-width:820px){.statrow[style]{max-width:100%!important}}
 
 
 /* === V3 ADDITIONS === */
@@ -806,33 +817,33 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
 <section class="slide w">
   <span class="kicker reveal">The moment</span>
   <h2 class="reveal">Your first downtown.<br><span class="ghost">Who runs it?</span></h2>
-  <div class="mapsub" aria-hidden="true">
-   <svg viewBox="0 0 700 520" xmlns="http://www.w3.org/2000/svg">
-     <!-- no street grid: the slide grid behind this already reads as one -->
-     <!-- river -->
-     <path d="M-10 120 C 160 84, 330 150, 500 112 S 660 80, 710 108" fill="none" stroke="#1D59FF" stroke-width="8" opacity=".25"/>
-     <!-- US-50 -->
-     <path d="M-10 330 L 710 260" stroke="#1D59FF" stroke-width="7" opacity=".45"/>
-     <text x="30" y="318" font-family="Apercu Mono" font-weight="700" font-size="15" fill="#1D59FF" opacity=".6">US-50</text>
-     <!-- Sacramento -->
-     <rect x="60" y="352" width="16" height="16" fill="#000" opacity=".35"/>
-     <text x="42" y="394" font-family="Apercu Mono" font-weight="700" font-size="17" fill="#000" opacity=".55">SACRAMENTO</text>
-     <!-- Dova marker: the one loud element -->
-     <rect x="404" y="252" width="46" height="46" fill="#E5F701"/>
-     <rect x="417" y="265" width="20" height="20" fill="#000"/>
-     <text x="380" y="330" font-family="Apercu Mono" font-weight="700" font-size="15" fill="#000" opacity=".75">RANCHO CORDOVA · [ DOVA ]</text>
-     <!-- Folsom -->
-     <rect x="636" y="192" width="13" height="13" fill="#000" opacity=".3"/>
-     <text x="600" y="182" font-family="Apercu Mono" font-weight="700" font-size="17" fill="#000" opacity=".5">FOLSOM</text>
-   </svg>
-  </div>
-  <div class="statrow stat5 reveal" style="position:relative;z-index:2;max-width:58%">
+  <div class="row rowc mapsplit">
+    <div class="tx">
+  <div class="statrow stat5 reveal">
     <div class="stat"><div class="n">$1B+</div><div class="l">Dova investment</div></div>
     <div class="stat"><div class="n">37,000</div><div class="l">Jobs the district creates</div></div>
     <div class="stat"><div class="n">7,500</div><div class="l">Seat arena · fall 2027</div></div>
     <div class="stat"><div class="n">640</div><div class="l">Residences</div></div>
     <div class="stat"><div class="n">800+</div><div class="l">Hotel rooms</div></div>
   </div>
+    </div>
+    <figure class="mapfig reveal" aria-hidden="true">
+     <svg viewBox="0 0 700 520" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+     <!-- geometry only. labels are HTML so they keep the 14px floor at any column width. -->
+     <path d="M-10 120 C 160 84, 330 150, 500 112 S 660 80, 710 108" fill="none" stroke="#1D59FF" stroke-width="8" opacity=".25"/>
+     <path d="M-10 330 L 710 260" stroke="#1D59FF" stroke-width="7" opacity=".45"/>
+     <rect x="60" y="352" width="16" height="16" fill="#000" opacity=".35"/>
+     <rect x="404" y="252" width="46" height="46" fill="#E5F701"/>
+     <rect x="417" y="265" width="20" height="20" fill="#000"/>
+     <rect x="636" y="192" width="13" height="13" fill="#000" opacity=".3"/>
+     </svg>
+     <span class="mlab road" style="left:4%;top:57%">US-50</span>
+     <span class="mlab dim" style="left:9.7%;top:73%">Sacramento</span>
+     <span class="mlab here" style="left:61%;top:60%;transform:translateX(-50%)">Rancho Cordova &middot; [ Dova ]</span>
+     <span class="mlab dim" style="left:91.8%;top:30%;transform:translate(-100%,-100%)">Folsom</span>
+    </figure>
+  </div>
+
   <div class="sq tr"><b></b></div>
   <div class="sq tl"><b></b></div>
   <div class="sq br"><b></b></div>
