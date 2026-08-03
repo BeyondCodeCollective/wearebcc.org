@@ -94,6 +94,20 @@
     "needAccessPre": "Need access? Email",
     "needAccessPost": "and our team will send you a code."
   },
+  "overviewGate": {
+    "label": "[ Invite Only ]",
+    "headline1": "BEYOND CODE",
+    "headline2": "OVERVIEW",
+    "intro": "A look at what Beyond Code Collective is building. Enter the code you were sent to view the current version.",
+    "placeholder": "Access code",
+    "show": "Show access code",
+    "hide": "Hide access code",
+    "error": "That code didn't work. Please try again.",
+    "checking": "Checking...",
+    "submit": "View Overview",
+    "needAccessPre": "Need access? Email",
+    "needAccessPost": "and our team will send you a code."
+  },
   "partners": {
     "badge": "Catalyst · Cybersecurity Cohort",
     "heroHeadline1": "HIRE",

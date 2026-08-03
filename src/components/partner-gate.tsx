@@ -13,8 +13,21 @@ export const PARTNER_GATE_STORAGE_KEY = "bcc-partner-portal-unlocked";
  * gated static assets under /decks/), then remembers the unlock for the
  * browser session.
  */
-export function PartnerGate({ onUnlock }: { onUnlock: () => void }) {
-  const t = useTranslations("partnerGate");
+export function PartnerGate({
+  onUnlock,
+  endpoint = "/api/partner-gate",
+  storageKey = PARTNER_GATE_STORAGE_KEY,
+  namespace = "partnerGate",
+}: {
+  onUnlock: () => void;
+  /** Which gate to check against. Each gated area has its own password. */
+  endpoint?: string;
+  /** Session key for this gate, so unlocking one does not unlock another. */
+  storageKey?: string;
+  /** Copy namespace, so each gate can describe what it is guarding. */
+  namespace?: string;
+}) {
+  const t = useTranslations(namespace);
   const [password, setPassword] = useState("");
   const [revealed, setRevealed] = useState(false);
   const [error, setError] = useState(false);
@@ -25,13 +38,13 @@ export function PartnerGate({ onUnlock }: { onUnlock: () => void }) {
     setChecking(true);
     setError(false);
     try {
-      const res = await fetch("/api/partner-gate", {
+      const res = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ password }),
       });
       if (res.ok) {
-        sessionStorage.setItem(PARTNER_GATE_STORAGE_KEY, "1");
+        sessionStorage.setItem(storageKey, "1");
         onUnlock();
         return;
       }

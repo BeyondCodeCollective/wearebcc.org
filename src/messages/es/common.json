@@ -94,6 +94,20 @@
     "needAccessPre": "¿Necesitas acceso? Escribe a",
     "needAccessPost": "y nuestro equipo te enviará un código."
   },
+  "overviewGate": {
+    "label": "[ Solo Por Invitación ]",
+    "headline1": "RESUMEN DE",
+    "headline2": "BEYOND CODE",
+    "intro": "Una mirada a lo que está construyendo Beyond Code Collective. Ingresa el código que recibiste para ver la versión actual.",
+    "placeholder": "Código de acceso",
+    "show": "Mostrar código de acceso",
+    "hide": "Ocultar código de acceso",
+    "error": "Ese código no funcionó. Inténtalo de nuevo.",
+    "checking": "Verificando...",
+    "submit": "Ver Resumen",
+    "needAccessPre": "¿Necesitas acceso? Escribe a",
+    "needAccessPost": "y nuestro equipo te enviará un código."
+  },
   "partners": {
     "badge": "Catalyst · Cohorte de Ciberseguridad",
     "heroHeadline1": "CONTRATA",

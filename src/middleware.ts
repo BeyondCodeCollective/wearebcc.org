@@ -18,6 +18,15 @@ export default function middleware(request: NextRequest) {
       .replace(/\.html$/, "");
     return NextResponse.redirect(new URL(`/${slug}`, request.url));
   }
+  // The overview PDF: same idea, separate cookie, so the wider overview
+  // audience does not also get the partner decks.
+  if (request.nextUrl.pathname.startsWith("/overview/")) {
+    if (request.cookies.get("bcc-overview-gate")?.value === "1") {
+      return NextResponse.next();
+    }
+    return NextResponse.redirect(new URL("/beyond-overview", request.url));
+  }
+
   return intlMiddleware(request);
 }
 
@@ -31,5 +40,8 @@ export const config = {
   matcher: [
     "/((?!api|_next|_vercel|icon|apple-icon|.*\\..*).*)",
     "/decks/:path*",
+    // Matched explicitly despite the extension, so the cookie check above runs
+    // before the PDF is served.
+    "/overview/:path*",
   ],
 };
