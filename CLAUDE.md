@@ -1,5 +1,16 @@
 # CLAUDE.md — Creative Web Development Standards
 
+## Never claim "verified" without looking
+
+A check that does not test the thing being claimed is not verification.
+
+- **Never write "verified" for a visual claim without opening a rendered screenshot at that size and looking at it.** Say exactly what was checked ("no overflow at 8 widths"), never a broader word than the check earns.
+- **Responsive work requires a screenshot at 390px wide, read before saying anything about mobile.** An overflow measurement proves nothing about legibility, balance, or collapse.
+- **Emulated Chrome is not a phone.** iOS inflates text unless `-webkit-text-size-adjust:100%` is set, so a clean emulator can still be a broken device.
+- When asked whether something is actually true, re-test it directly. Do not answer from a previous run of a different check.
+
+This cost us: fifteen commits shipped claiming "verified across all 8 viewports" while the deck was unreadable on a real iPhone.
+
 ## Philosophy
 
 Every website we build should feel **designed**, not generated. The difference between "vibe coded" and "creative" is intentionality — every element earns its place, every animation has purpose, every color choice traces back to a system.
