@@ -878,6 +878,42 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
   .lxp .dev .lap{width:100%}
   .lxp .dev .scr{max-height:none;width:100%}
   .mapsplit>.tx{width:100%}
+
+  /* === PHONE = DOCUMENT, NOT A DECK ===
+     A projector wants fixed viewports, snap, and a persistent chrome bar.
+     A phone wants a page. Below 820 the deck stops being a nested scroll
+     container with snap and becomes ordinary flowing sections: one scrollbar,
+     each section as tall as its content, no forced empty screens. */
+  html,body{height:auto;overflow:visible}
+  .deck{height:auto;min-height:0;overflow:visible;scroll-snap-type:none}
+  .slide{height:auto;min-height:0;overflow:visible;scroll-snap-align:none;
+    padding-top:clamp(2.6rem,8vh,4rem);padding-bottom:clamp(2.6rem,8vh,4rem)}
+  .slide::before{background-size:52px 52px}
+  /* snap navigation and the projector footer are desktop affordances */
+  .dots{display:none}
+  .deckfoot{display:none}
+  /* The map SVG only draws in its middle band, so a 700x560 box leaves a dead
+     strip under it once it goes full width. */
+  .mapfig{aspect-ratio:700/400}
+  .mlab{font-size:.875rem}
+
+  /* Wayfinding. The fixed projector bar is gone, so each section carries its
+     own label at the top instead. .slide is a flex column, so the footer
+     markup can simply be ordered first. This also gives adjacent same-colour
+     sections a visible boundary, which background alternation alone does not. */
+  .foot{display:flex;position:static;order:-1;background:none;padding:0;
+    margin:0 0 clamp(1.2rem,3.5vh,2rem);gap:.8rem;align-items:baseline;
+    font-family:var(--mono);font-weight:700;text-transform:uppercase;
+    font-size:.875rem;letter-spacing:.14em}
+  .foot span:first-child{color:inherit;opacity:.55}
+  .foot span:last-child{display:block;margin-left:auto;color:var(--yellow);opacity:1}
+  .slide.w .foot span:last-child{color:var(--blue)}
+  /* the cover's footer is a byline, not a section label */
+  .deck>.slide:first-child .foot{display:none}
+  .confidential{position:static;order:98;margin-top:clamp(1.2rem,3.5vh,2rem);
+    left:auto;bottom:auto;opacity:.7}
+  .slide+.slide{border-top:2px solid rgba(255,255,255,.22)}
+  .slide.w+.slide,.slide+.slide.w{border-top-color:rgba(0,0,0,.14)}
   /* The hub label anchoring is a desktop-only trick. It is declared after the
      stacking rule, so on a phone it was re-absolutely-positioning the nodes on
      top of each other. Undo it here, last. */
