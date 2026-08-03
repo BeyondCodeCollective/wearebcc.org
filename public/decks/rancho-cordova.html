@@ -817,14 +817,6 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
 .lxp .dev{flex:1 1 auto;max-width:none;width:auto;min-width:0;align-items:center;justify-content:center}
 .lxp .dev .lap{width:100%}
 .lxp .dev .base{width:100%}
-/* Visible URL, not a "learn more". The room can type it; on the shared page it clicks. */
-.deeplink{display:inline-flex;align-items:baseline;margin-top:clamp(.9rem,2.4vh,1.4rem);
-  font-family:var(--mono);font-weight:700;font-size:clamp(.875rem,1.02vw,.95rem);letter-spacing:.1em;
-  text-transform:lowercase;color:var(--blue);text-decoration:none;border-bottom:2px solid var(--blue);
-  padding-bottom:.25em;transition:opacity .2s}
-.deeplink .arw{margin-right:.6em;text-transform:none}
-.deeplink:hover{opacity:.65}
-.slide:not(.w) .deeplink{color:var(--yellow);border-bottom-color:var(--yellow)}
 /* The screen cycles four real product views. 8s each, 32s round trip. */
 .gal{background:#fff}
 .gal .pane{position:absolute;inset:0;opacity:0;animation:galcycle 32s ease-in-out infinite;animation-play-state:paused}
@@ -1084,8 +1076,6 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
       <div class="stat"><div class="n">100%</div><div class="l">Finish their cohort</div></div>
       <div class="stat"><div class="n">66</div><div class="l">Certified</div></div>
     </div>
-    <a class="deeplink reveal" href="https://bccacademy.io/platform-features" target="_blank" rel="noopener">
-      <span class="arw">&rarr;</span>bccacademy.io/platform-features</a>
   </div>
   <div class="dev reveal">
     <div class="lap">
