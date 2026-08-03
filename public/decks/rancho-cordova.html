@@ -869,67 +869,143 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
 @media (min-width:821px) and (max-height:880px){h1{font-size:clamp(2.2rem,6.4vw,4.6rem)}h2{font-size:clamp(1.7rem,4.6vw,3.4rem)}.bignum{font-size:clamp(3rem,9vw,7rem)}.stat .n{font-size:clamp(2rem,5vw,3.6rem)}.mega .stat .n{font-size:clamp(2rem,5.4vw,4rem)}.statrow.mega{gap:clamp(.8rem,2.4vw,2rem)}.word{font-size:clamp(1.2rem,3vw,2.2rem)}.story p{font-size:clamp(1.1rem,2.4vw,1.7rem)}.bigq{font-size:clamp(1.6rem,4.4vw,3.2rem)}.slide{padding-top:clamp(1rem,3vh,2.2rem);padding-bottom:clamp(3.2rem,7vh,4.4rem)}.acard img{height:clamp(90px,14vh,140px)}.lgo{min-height:clamp(56px,8vh,84px)}h1{font-size:clamp(2rem,5.6vw,3.9rem)}.shot img,.ph img{max-height:min(40vh,300px)}.shot{border-width:6px}.chip{padding:.45em .8em}.story{margin-top:clamp(.5rem,1.5vh,1rem)}.bp svg,.iso svg,.net svg,.gchart svg{max-height:44vh}.pers .pimg{aspect-ratio:4/3}.pers .pfact{font-size:clamp(.875rem,1.15vw,.875rem);line-height:1.3}.pers .pname{font-size:clamp(.9rem,1.9vw,1.3rem)}}
 
 
-/* === PHONE OVERRIDES — must stay last: these tie on specificity with the
-   desktop .lxp rules above, so source order is what makes them win. === */
-@media (max-width:820px){
-  .lxp .row{align-items:stretch}
-  .lxp .tx{flex:0 0 auto;max-width:100%;width:100%}
-  .lxp .dev{width:100%;max-width:100%;flex:0 0 auto}
-  .lxp .dev .lap{width:100%}
-  .lxp .dev .scr{max-height:none;width:100%}
-  .mapsplit>.tx{width:100%}
+/* ============================================================================
+   MOBILE — a designed experience, not a squeezed desktop.
 
-  /* === PHONE = DOCUMENT, NOT A DECK ===
-     A projector wants fixed viewports, snap, and a persistent chrome bar.
-     A phone wants a page. Below 820 the deck stops being a nested scroll
-     container with snap and becomes ordinary flowing sections: one scrollbar,
-     each section as tall as its content, no forced empty screens. */
+   Must stay last in the sheet: many of these tie on specificity with the
+   desktop rules above, so source order is what makes them apply.
+
+   The system, and it is only four rules:
+     1. ONE GUTTER. Every block starts on the same left edge. Media is the only
+        thing allowed to break it, and only by going fully edge to edge.
+     2. ONE RHYTHM. Vertical space comes from --sp. Components do not invent
+        their own margins.
+     3. ONE SCALE. Type sizes are fixed here, not clamped per component, so a
+        heading is the same size on every section.
+     4. NO DESKTOP CHROME. Corner brackets, device bezels, laptop feet and
+        decorative offsets are projector jewellery. On a phone they are just
+        things that fail to line up.
+   ========================================================================= */
+@media (max-width:820px){
+
+  :root{--g:22px;--sp:1.5rem;--sp-lg:2.25rem}
+
+  /* ---- 1. document flow ---- */
   html,body{height:auto;overflow:visible}
   .deck{height:auto;min-height:0;overflow:visible;scroll-snap-type:none}
+  /* stays a flex column so .foot can be ordered to the top of its section */
   .slide{height:auto;min-height:0;overflow:visible;scroll-snap-align:none;
-    padding-top:clamp(2.6rem,8vh,4rem);padding-bottom:clamp(2.6rem,8vh,4rem)}
-  .slide::before{background-size:52px 52px}
-  /* snap navigation and the projector footer are desktop affordances */
-  .dots{display:none}
-  .deckfoot{display:none}
-  /* The map SVG only draws in its middle band, so a 700x560 box leaves a dead
-     strip under it once it goes full width. */
-  .mapfig{aspect-ratio:700/400}
-  .mlab{font-size:.875rem}
+    display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;
+    padding:var(--sp-lg) var(--g) calc(var(--sp-lg) + .5rem)}
+  .slide::before{background-size:56px 56px}
+  .dots,.deckfoot{display:none}
 
-  /* Wayfinding. The fixed projector bar is gone, so each section carries its
-     own label at the top instead. .slide is a flex column, so the footer
-     markup can simply be ordered first. This also gives adjacent same-colour
-     sections a visible boundary, which background alternation alone does not. */
+  /* ---- 2. one gutter: nothing nests its own indent ---- */
+  .slide>*,.slide .row,.slide .row>*{max-width:100%!important;width:auto;
+    margin-left:0;margin-right:0;float:none}
+  .row,.rowc,.mapsplit,.eco,.ppl-grid,.wall{display:block!important}
+  .row>*+*,.eco>*+*{margin-top:var(--sp)}
+
+  /* ---- 3. one rhythm ---- */
+  .slide>*+*,.tx>*+*{margin-top:var(--sp)}
+  .kicker+h1,.kicker+h2,.foot+.kicker{margin-top:.75rem}
+  h1+*,h2+*{margin-top:1rem}
+
+  /* ---- 4. one type scale ---- */
+  h1{font-size:2.5rem;line-height:.95;margin:0}
+  h2{font-size:2rem;line-height:1;margin:0}
+  .kicker{font-size:.875rem;letter-spacing:.14em;padding:.5em .8em}
+  p.lede,.lede{font-size:1.0625rem;line-height:1.5;max-width:none}
+  .caption,.cue,.ppl-sub,.ppl-foot,.stat2,.wrule{font-size:1rem;line-height:1.45}
+  .stat .n,.ostat .on,.gnum{font-size:1.75rem;line-height:1}
+  .stat .l,.ostat .ol,.glab,.gapcap{font-size:.8125rem;letter-spacing:.1em}
+  .ohero .on{font-size:3rem}
+  .bignum{font-size:3.25rem}
+
+  /* ---- 5. media goes full bleed, and loses its jewellery ---- */
+  .pcard,.pcard.wide,.pcard.press,.dev,.mapfig,.eco .feat,.gal,.ph,.shot,.map,
+  .arenafig,.bio .bpic{margin-left:calc(var(--g) * -1);margin-right:calc(var(--g) * -1);
+    width:calc(100% + var(--g) * 2);max-width:none!important;flex:0 0 auto}
+  .pcard::before,.pcard::after,.pcard i::before,.pcard i::after,
+  .sq,.parrow{display:none!important}
+  .dev .base,.dev .foot2,.pcard.press .masthead{display:none}
+  .dev .scr,.pcard .frame,.eco .feat,.gal{border:0!important;outline:0!important;
+    max-height:none;aspect-ratio:auto}
+  .dev .scr{height:auto;aspect-ratio:16/10}
+  .pcard .frame{aspect-ratio:4/3}
+  .pcard.press .frame{aspect-ratio:3/4}
+  .pcard .plabel,.gal .cap{font-size:.8125rem;letter-spacing:.08em}
+  .pcard .plabel{padding:0 var(--g);margin-top:.7em;opacity:.75}
+  .gal .cap{background:rgba(0,0,0,.86);padding:.7em var(--g);line-height:1.35}
+  .lap{width:100%}
+
+  /* ---- 6. grids: two up, never more ---- */
+  .statrow,.stat5,.facts4,.orow,.g3,.g2,.grid,.agrid,.lgrid,.trio,.ppl-grid{
+    display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:var(--sp) 1rem;margin-top:var(--sp)}
+  .wgrid{grid-template-columns:repeat(3,1fr)}
+  .wgrid.partners{grid-template-columns:repeat(2,1fr)}
+  .stat,.ostat{flex:none;min-width:0}
+  .ppl-grid{grid-template-columns:1fr;gap:var(--sp-lg)}
+  .trio{grid-template-columns:1fr;gap:var(--sp)}
+  .tcard{display:grid;grid-template-columns:64px 1fr;gap:1rem;align-items:start}
+  .tpic{flex:none;width:64px;aspect-ratio:1/1;border-width:2px}
+  .tpic.mark{width:64px;aspect-ratio:1/1;padding:.4em}
+
+  /* ---- 7. everything reads left; no stray centring ---- */
+  .slide,.slide .caption,.net2,.lede,.ppl-sub,.ppl-foot,.bigq,.thanks,
+  .slide.title .tpane{text-align:left!important}
+  .net2 .nd,.net2 .core{margin:0!important;text-align:left!important}
+  /* a hub diagram cannot be a diagram at 393px, so the four rails become a
+     ruled list with the qualifier subordinate to its rail */
+  .net2{display:grid!important;gap:0;justify-items:stretch}
+  .net2 .core{justify-self:start;margin-bottom:var(--sp)}
+  .net2 .nd{border-top:2px solid rgba(255,255,255,.22);padding:.85rem 0;width:100%}
+  .net2 .nd:last-child{border-bottom:2px solid rgba(255,255,255,.22)}
+  .net2 .nd .t{font-size:1.25rem;line-height:1.05}
+  .net2 .nd small{font-size:.8125rem;opacity:.55;margin-top:.35em}
+  .net2 .nd br{display:none}
+
+  /* ---- 8. section wayfinding, from markup that already exists ---- */
   .foot{display:flex;position:static;order:-1;background:none;padding:0;
-    margin:0 0 clamp(1.2rem,3.5vh,2rem);gap:.8rem;align-items:baseline;
+    margin:0 0 var(--sp);gap:.8rem;align-items:baseline;
     font-family:var(--mono);font-weight:700;text-transform:uppercase;
-    font-size:.875rem;letter-spacing:.14em}
-  .foot span:first-child{color:inherit;opacity:.55}
+    font-size:.8125rem;letter-spacing:.14em}
+  .foot span:first-child{opacity:.5}
   .foot span:last-child{display:block;margin-left:auto;color:var(--yellow);opacity:1}
   .slide.w .foot span:last-child{color:var(--blue)}
-  /* the cover's footer is a byline, not a section label */
   .deck>.slide:first-child .foot{display:none}
-  .confidential{position:static;order:98;margin-top:clamp(1.2rem,3.5vh,2rem);
-    left:auto;bottom:auto;opacity:.7}
-  .slide+.slide{border-top:2px solid rgba(255,255,255,.22)}
-  .slide.w+.slide,.slide+.slide.w{border-top-color:rgba(0,0,0,.14)}
-  /* The hub label anchoring is a desktop-only trick. It is declared after the
-     stacking rule, so on a phone it was re-absolutely-positioning the nodes on
-     top of each other. Undo it here, last. */
+  .slide+.slide{border-top:2px solid rgba(255,255,255,.2)}
+  .slide.w+.slide,.slide+.slide.w{border-top-color:rgba(0,0,0,.12)}
+  .confidential{position:static;left:auto;bottom:auto;margin-top:var(--sp);opacity:.7}
+  .wordmark{position:static;font-size:2.75rem;line-height:.92;margin:0 0 var(--sp)}
+
+  /* ---- 9. per-section corrections the system cannot know ---- */
+  .mapfig{aspect-ratio:16/10;max-height:none}
+  .mlab{font-size:.8125rem}
+  .net2 svg{display:none}
+  .slide.on .net2 .nd,.slide.on .net2 .core{animation:none;opacity:1;transform:none}
   .net2 .nd,.net2 .n-top,.net2 .n-right,.net2 .n-bot,.net2 .n-left{
-    position:static;transform:none;text-align:center;max-width:100%;margin:0 auto}
-  .net2 .nd small{white-space:normal}
-  /* .slide.on .net2 .n-left is 0,3,0 and re-enables the anchored transforms,
-     so the reset has to match that weight. */
-  .slide.on .net2 .nd,.slide.on .net2 .n-top,.slide.on .net2 .n-right,
-  .slide.on .net2 .n-bot,.slide.on .net2 .n-left,.slide.on .net2 .core{
-    animation:none;opacity:1;transform:none}
-  /* At phone width the caption wraps to two lines and a gradient is not enough
-     ground to read it against, so it becomes a solid bar. */
-  .gal .cap{background:rgba(0,0,0,.86);padding:.7em .9em;line-height:1.35;letter-spacing:.06em}
-  .pcard.press{max-width:100%;flex:0 0 auto;width:100%}
-  .pcard.wide{max-width:100%;width:100%}
+    position:static;transform:none}
+  .fw .layer{padding:1rem}
+  .bio{display:block}
+  .bio .btext{columns:1;font-size:1rem;line-height:1.55}
+  .bio .bpic img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+  .bio .bname{padding:0 var(--g);margin-top:.7em}
+  .bio .brole{padding:0 var(--g)}
+  .story-slot.filled{max-width:none}
+  .gapbar{max-width:none}
+  .gaprow{grid-template-columns:1fr auto;gap:.5rem .8rem}
+  .glab{grid-column:1/-1}
+  .ownline{max-width:none}
+  /* the cover pane and the closing slide carried their own padding and
+     centring, which put them off the gutter every other section shares */
+  /* both panes carry inline padding/centring, which outranks the sheet */
+  .tpane,.ipane{display:block!important;height:auto!important;padding:0!important;
+    align-items:stretch!important;justify-content:flex-start!important}
+  .slide.title{display:block;padding:var(--sp-lg) var(--g)}
+  .thanks,.thanks h1,.thanks p,.slide:last-child h1,.slide:last-child p{
+    text-align:left!important;margin-left:0;margin-right:0;max-width:none}
 }
 </style>
 </head>
