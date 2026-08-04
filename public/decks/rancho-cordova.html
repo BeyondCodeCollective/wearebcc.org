@@ -853,7 +853,8 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
 .gal .cap i{font-style:normal;color:var(--yellow)}
 @media (prefers-reduced-motion:reduce){.gal .pane{animation:none}.gal .p1{opacity:1}}
 .lxp .facts4{flex-direction:row;flex-wrap:wrap;gap:clamp(.5rem,1.4vh,.9rem) clamp(.8rem,1.6vw,1.4rem)}
-.lxp .facts4 .stat{flex:0 0 calc(50% - 1.4rem)}
+.lxp .facts4 .stat{flex:0 0 auto}
+.lxp .facts4{grid-template-columns:repeat(3,minmax(0,1fr));display:grid}
 .lxp .dev .scr{height:auto;width:100%;max-height:calc(100dvh - 12rem);aspect-ratio:16/10}
 
 /* Full-colour marks need a light chip to survive the blue. */
@@ -1275,7 +1276,6 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
     <div class="statrow facts4 reveal">
       <div class="stat"><div class="n">5</div><div class="l">Organizations</div></div>
       <div class="stat"><div class="n">12</div><div class="l">Active tracks</div></div>
-      <div class="stat"><div class="n">100%</div><div class="l">Finish their cohort</div></div>
       <div class="stat"><div class="n">66</div><div class="l">Certified</div></div>
     </div>
     <div class="ownline reveal">
@@ -1301,7 +1301,7 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
   <div class="owner">Fonz owns &middot; BCC Academy &middot; slides 24&ndash;27</div>
   <div class="note"><b>Fonz</b> <i style="color:#E5F701;font-style:normal">[ THREE POINTS ]</i>
     <b>1. We do not sell courses. We run cohorts and prove they worked.</b> Say it out loud as: &ldquo;BCC Academy is a cohort program platform. It runs your program, from enrollment to certificates, and proves it worked to your funders.&rdquo; <i style="color:#E5F701;font-style:normal">[ NEVER SAY LXP OR LMS ]</i> Those words put us in a feature checklist against Canvas, Thinkific and TalentLMS, where content delivery, our weakest slice, gets compared on price. And nobody outside edtech knows what LXP means; a workforce board director has never heard it. &ldquo;Cohort program platform&rdquo; names the buyer&rsquo;s actual job, they run programs not courses, and it sets the right comparison: a spreadsheet, a Google Form, a Zoom account and a part-time coordinator. Product name stays BCC Academy; only the descriptor changed. The screen behind me is a real learner's course, real attendance, real survey movement.
-    <b>2. It is live, not a proposal.</b> Five organizations, twelve active tracks, sixty-six certified. We are not asking Rancho Cordova to fund a build. We are asking them to join something already running.
+    <b>2. It is live, not a proposal.</b> Five organizations, twelve active tracks, sixty-six certified. <i style="color:#E5F701;font-style:normal">[ IF ASKED HOW YOU KNOW PEOPLE ENGAGE ]</i> 84% average attendance across our cohorts, tracked per session, 37 learners. That number is deliberately spoken and not printed: attendance is an input, and 84% printed also says 16% did not show. We are not asking Rancho Cordova to fund a build. We are asking them to join something already running.
     <b>3. Ownership is the point.</b> A funder eventually asks &ldquo;did the students actually grow?&rdquo; You can only answer that if you own the platform. Rented software gives you seat counts and logins; it cannot tell you whether anyone changed. <b>4. Speed. Training does not wait for a building.</b> One-click enrollment, one day to launch a cohort, same-day verifiable credentials. An agreement signed this quarter means residents training this quarter.
     <i style="color:#E5F701;font-style:normal">[ IF ASKED ]</i> 100% finish is out of the cohorts that have completed. Have the n ready.</div>
   <div class="foot"><span>bccacademy.io</span><span>10</span></div>
