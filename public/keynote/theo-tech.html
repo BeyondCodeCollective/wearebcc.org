@@ -135,6 +135,9 @@ p.lede.wide{max-width:68ch}
 .pts.titles .p b{font-size:clamp(1.5rem,2.5vw,3rem);line-height:1.05;margin:0}
 .era.spaced{margin-top:clamp(1.1rem,3vh,2rem)}
 .cthread.asrule.botrule{margin-top:auto;padding-top:clamp(.7rem,1.8vh,1.1rem)}
+/* Only one rule between blocks: when the thread sits next to a rule-line,
+   the rule-line draws the line and the thread just carries the glyphs. */
+.rule-line + .cthread.asrule,.cthread.asrule + .rule-line{border-top:0;padding-top:.35em}
 
 /* --- Slide 2 eras --- */
 .row2{display:grid;grid-template-columns:0.85fr 1.15fr;gap:clamp(1.4rem,4vw,4rem);align-items:start}
