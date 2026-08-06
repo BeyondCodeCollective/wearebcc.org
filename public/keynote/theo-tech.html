@@ -71,8 +71,10 @@ p.lede.wide{max-width:68ch}
 
 /* --- Title lockup --- */
 .lockup{display:flex;align-items:center;gap:clamp(1rem,2.6vw,2.4rem);margin:clamp(1rem,3vh,2rem) 0}
-.lockup .lg{height:clamp(28px,4.2vh,58px);width:auto;max-width:100%;display:block;object-fit:contain}
-.lockup .bcc{height:clamp(18px,2.6vh,34px)}
+/* Both marks are all-caps wordmarks tight to their caps, so one shared height
+   is what makes them read as an even pair. BCC is the wider lockup (15.6:1 vs
+   10:1), so the shared height is set by what fits, not by either mark. */
+.lockup .lg{height:clamp(20px,3vh,38px);width:auto;max-width:100%;display:block;object-fit:contain}
 .lockup .amp{font-family:var(--head);font-weight:900;font-size:clamp(1.4rem,2.6vw,2.4rem);color:var(--blk);opacity:.55}
 
 
