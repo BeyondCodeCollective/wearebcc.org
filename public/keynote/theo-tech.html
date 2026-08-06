@@ -134,7 +134,10 @@ p.lede.wide{max-width:68ch}
 .pts.titles{gap:clamp(1.1rem,3.2vh,2.2rem);justify-content:center}
 .pts.titles .p b{font-size:clamp(1.5rem,2.5vw,3rem);line-height:1.05;margin:0}
 .era.spaced{margin-top:clamp(1.1rem,3vh,2rem)}
-.cthread.asrule.botrule{margin-top:auto;padding-top:clamp(.7rem,1.8vh,1.1rem)}
+/* .pushdown sends the closing rule and everything after it to the foot of
+   the slide, so the rule does not sit tight under the last item. */
+.rule-line.pushdown{margin-top:auto}
+.cthread.asrule.botrule{padding-top:clamp(.7rem,1.8vh,1.1rem)}
 /* Only one rule between blocks: when the thread sits next to a rule-line,
    the rule-line draws the line and the thread just carries the glyphs. */
 .rule-line + .cthread.asrule,.cthread.asrule + .rule-line{border-top:0;padding-top:.35em}
@@ -305,10 +308,12 @@ p.lede.wide{max-width:68ch}
   .urls .u{font-size:1rem;word-break:break-all}
 
   /* wayfinding, from markup that already exists */
-  .foot{display:flex;order:-1;margin:0 0 var(--sp);gap:.8rem;align-items:baseline;
+  /* The kicker already names the section, so the header carries only the
+     number. Showing both repeated every title verbatim. */
+  .foot{display:flex;order:-1;margin:0 0 calc(var(--sp) * .6);gap:.8rem;align-items:baseline;
     font-family:var(--mono);font-weight:700;text-transform:uppercase;font-size:.8125rem;letter-spacing:.14em}
-  .foot span:first-child{opacity:.55}
-  .foot span:last-child{margin-left:auto;color:var(--org);opacity:1}
+  .foot span:first-child{display:none}
+  .foot span:last-child{margin-left:0;color:var(--org);opacity:.85}
   .s-org .foot span:last-child{color:var(--blk)}
   .deck>.slide:first-child .foot{display:none}
 }
@@ -453,7 +458,7 @@ p.lede.wide{max-width:68ch}
     <li><span class="qn">03</span><div><b>Does it tell the truth?</b><p>Would we gladly disclose that AI helped make this? If not, why not?</p></div></li>
     <li><span class="qn">04</span><div><b>Does it return time to what only humans can do?</b><p>Presence, relationship, formation, or does it quietly replace them?</p></div></li>
   </ol>
-  <div class="rule-line">Four yeses &rarr; proceed. Any no &rarr; pause, redesign, or decline.</div>
+  <div class="rule-line pushdown">Four yeses &rarr; proceed. Any no &rarr; pause, redesign, or decline.</div>
   <div class="cthread asrule botrule" aria-hidden="true"><span class="gr">!!!!</span><span class="mg">==</span><span class="pc">(-_-)</span><span class="og">}}}</span><span class="yl">[:]</span><span class="tl">***</span><span class="ll">(^_^)</span><span class="pk">////</span><span class="gr">:)</span><span class="mg">0000</span><span class="pc">&lt;</span><span class="og">&gt;</span><span class="yl">!!!!</span><span class="tl">==</span><span class="ll">(-_-)</span><span class="pk">}}}</span><span class="gr">[:]</span><span class="mg">***</span><span class="pc">(^_^)</span><span class="og">////</span><span class="yl">:)</span><span class="tl">0000</span><span class="ll">&lt;</span><span class="pk">&gt;</span><span class="gr">!!!!</span><span class="mg">==</span></div>
   <div class="foot"><span>A discernment framework</span><span>09</span></div>
 </section>
