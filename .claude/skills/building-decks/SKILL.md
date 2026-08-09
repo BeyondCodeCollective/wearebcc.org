@@ -9,12 +9,14 @@ A deck is **one HTML file**. Fonts, images, logos and QR codes are base64-embedd
 so it renders with no network. Conference wifi fails; a deck that needs a CDN can
 fail in the room.
 
-Two reference implementations ship with this skill's home repo:
+Two decks built this way, as reference:
 
-- `public/decks/rancho-cordova.html` — partner pitch, BCC skin, 19 slides
-- `public/keynote/theo-tech.html` — conference keynote, BGC skin, 13 slides
+- **Conference keynote**, BGC skin, 13 slides — https://www.wearebcc.org/en/theo-tech
+- **Partner pitch**, BCC skin, 19 slides — https://www.wearebcc.org/en/rancho-cordova
+  (password-gated; ask Fonz for access)
 
-Read one before building. They are the spec.
+Open the keynote, resize the window past 820px, and watch it change modes.
+`assets/starter.html` is that architecture with nothing in it — start there.
 
 ## Order of work
 
