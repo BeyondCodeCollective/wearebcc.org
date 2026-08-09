@@ -4,6 +4,12 @@ Never invent a logo, approximate a brand colour, or substitute a similar font.
 Find the real assets first. If they do not exist, say so and use a text wordmark
 in the deck's own type rather than guessing at a mark.
 
+## Already bundled
+
+`fonts/` ships the BCC and BGC faces as woff2, and `scripts/embed-font.py`
+writes the `@font-face` rules with the base64 already inlined. Use those two
+skins as-is; the section below is for adding a third brand.
+
 ## Setting up a new brand
 
 1. **Find the brand folder.** Look for `Branding/`, `Fonts/`, `Brand Images/`,

@@ -1,0 +1,7 @@
+{
+  "name": "building-decks-skill",
+  "private": true,
+  "type": "module",
+  "description": "Vendored so verify.mjs runs with no install step. If playwright-core is missing, run: npm install playwright-core",
+  "dependencies": { "playwright-core": "*" }
+}

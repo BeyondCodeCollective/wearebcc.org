@@ -47,6 +47,25 @@ loses. This broke two slides twice before it was understood.
 legible, balanced, or collapsed. **Open the screenshot and look at it** before
 saying anything is done.
 
+## Fonts
+
+BCC and BGC faces ship as woff2 in `fonts/` **in the internal skill zip only**.
+They are licensed commercial faces and are not in the public repo, so a copy
+installed from a clone will not have them. Ask Fonz for the zip, or point the
+script at your own licensed copies. Emit paste-ready `@font-face`
+rules with the font already base64-embedded:
+
+```bash
+python3 scripts/embed-font.py bgc     # Patika + Goga + Apercu Mono
+python3 scripts/embed-font.py bcc     # Special Gothic + Goga + Apercu Mono
+python3 scripts/embed-font.py         # list every bundled face
+```
+
+Embed only the weights the deck uses. Each face costs ~47KB base64.
+
+For a brand not bundled here, find the real files and convert them —
+`references/brands.md`. Never substitute a lookalike.
+
 ## Projector legibility
 
 Decks get projected into rooms where people sit at the back.

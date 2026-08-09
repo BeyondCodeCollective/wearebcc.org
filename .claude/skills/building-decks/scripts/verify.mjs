@@ -9,12 +9,39 @@
  * nothing collapsed. Open the screenshots and look at them before saying a
  * deck is done.
  */
-import { chromium } from 'playwright-core';
 import { existsSync, mkdirSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { resolve, dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const CHROME = process.env.CHROME_PATH
-  || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const HERE = dirname(fileURLToPath(import.meta.url));
+
+// playwright-core is vendored next to this skill, so there is no install step.
+// Fall back to a system copy, then explain if neither is there.
+let chromium;
+try {
+  ({ chromium } = await import('playwright-core'));
+} catch {
+  try {
+    ({ chromium } = await import(join(HERE, '..', 'node_modules', 'playwright-core', 'index.mjs')));
+  } catch {
+    console.error('playwright-core not found. From the skill folder run:  npm install playwright-core');
+    process.exit(2);
+  }
+}
+
+// Any Chromium build works; we never download one, we drive an installed browser.
+const CANDIDATES = [
+  process.env.CHROME_PATH,
+  '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+  '/Applications/Chromium.app/Contents/MacOS/Chromium',
+  '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
+  '/Applications/Brave Browser.app/Contents/MacOS/Brave Browser',
+  '/usr/bin/google-chrome',
+  '/usr/bin/chromium',
+  '/usr/bin/chromium-browser',
+  'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+].filter(Boolean);
+const CHROME = CANDIDATES.find(p => existsSync(p));
 
 const VIEWPORTS = [
   ['desktop',   1920, 1080],
@@ -33,8 +60,9 @@ if (!file) { console.error('usage: node verify.mjs path/to/deck.html [--shots]')
 if (!existsSync(file)) { console.error(`not found: ${file}`); process.exit(2); }
 const url = 'file://' + resolve(file);
 
-if (!existsSync(CHROME)) {
-  console.error(`Chrome not found at ${CHROME}. Set CHROME_PATH to your browser binary.`);
+if (!CHROME) {
+  console.error('No Chromium-based browser found. Install Chrome, or set CHROME_PATH to a browser binary.');
+  console.error('Looked in:\n  ' + CANDIDATES.join('\n  '));
   process.exit(2);
 }
 
