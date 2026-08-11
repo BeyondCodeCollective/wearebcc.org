@@ -804,6 +804,7 @@
       "body": "Únete al boletín y sé el primero en enterarte cuando abran las solicitudes de cohorte, los talleres y los Labs.",
       "firstName": "Nombre",
       "email": "Correo electrónico",
+      "zip": "Código postal (opcional)",
       "interestLabel": "Me interesa…",
       "interestOptions": [
         "Unirme a una cohorte de Catalyst",

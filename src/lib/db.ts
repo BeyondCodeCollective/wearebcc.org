@@ -73,6 +73,9 @@ export async function ensureTables() {
   // The contact modal collects a written message. Mailchimp has no merge field
   // that can hold one, so Postgres is the only place it can live.
   await sql`ALTER TABLE subscribers ADD COLUMN IF NOT EXISTS message TEXT`;
+  // Zip, not state: five characters, rolls up to state anyway, and it is
+  // what grant reporting actually asks for.
+  await sql`ALTER TABLE subscribers ADD COLUMN IF NOT EXISTS zip VARCHAR(16)`;
   // Abuse screening. Flagged rows are kept (a false positive must be
   // recoverable) but stay out of Mailchimp, notifications, and logs.
   await sql`ALTER TABLE subscribers ADD COLUMN IF NOT EXISTS flagged BOOLEAN DEFAULT FALSE`;

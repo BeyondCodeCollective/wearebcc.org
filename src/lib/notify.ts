@@ -27,6 +27,7 @@ export type Inquiry = {
   company: string;
   segment: string;
   source: string;
+  zip: string;
   message: string;
 };
 
@@ -80,6 +81,7 @@ export async function notifyInquiry(lead: Inquiry, subscriberId: number | null) 
     ["Phone", lead.phone],
     ["Company", lead.company],
     ["Interest", lead.segment],
+    ["Zip", lead.zip],
     ["Source", lead.source],
   ].filter(([, v]) => v);
 

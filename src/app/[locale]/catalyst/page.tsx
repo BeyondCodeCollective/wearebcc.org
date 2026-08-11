@@ -84,6 +84,7 @@ export default function CatalystPage() {
   // Signup form
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
+  const [zip, setZip] = useState("");
   const [interest, setInterest] = useState(interestOptions[0]);
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -100,6 +101,7 @@ export default function CatalystPage() {
         body: JSON.stringify({
           firstName,
           email,
+          zip,
           segment: interest,
           source: "catalyst-landing",
         }),
@@ -606,6 +608,19 @@ export default function CatalystPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t("signup.email")}
                 required
+                className="w-full border border-off-white/20 bg-dark-cobalt px-4 py-3 text-sm text-off-white placeholder:text-off-white/60 outline-none focus:border-electric-green"
+              />
+              {/* Optional: geography is useful for cohort planning and grant
+                  reporting, but requiring it would cost signups at the moment
+                  somebody is interested. inputMode opens the number pad. */}
+              <input
+                type="text"
+                value={zip}
+                onChange={(e) => setZip(e.target.value.replace(/\D/g, "").slice(0, 5))}
+                placeholder={t("signup.zip")}
+                inputMode="numeric"
+                autoComplete="postal-code"
+                maxLength={5}
                 className="w-full border border-off-white/20 bg-dark-cobalt px-4 py-3 text-sm text-off-white placeholder:text-off-white/60 outline-none focus:border-electric-green"
               />
               <select

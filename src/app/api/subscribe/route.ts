@@ -39,6 +39,7 @@ type Lead = {
   company: string;
   segment: string;
   source: string;
+  zip: string;
   /** Free text from the contact modal. Mailchimp has no merge field for it. */
   message: string;
   ipHash: string | null;
@@ -86,11 +87,11 @@ async function persistLead(lead: Lead): Promise<number | null> {
     await ensureTables();
     const { rows } = await sql`
       INSERT INTO subscribers (email, first_name, phone, company, segment, source,
-                               message, ip_hash, flagged, flag_reason)
+                               message, ip_hash, flagged, flag_reason, zip)
       VALUES (${lead.email}, ${lead.firstName || null}, ${lead.phone || null},
               ${lead.company || null}, ${lead.segment || null}, ${lead.source},
               ${lead.message || null}, ${lead.ipHash}, ${lead.flagged},
-              ${lead.flagReason})
+              ${lead.flagReason}, ${lead.zip || null})
       RETURNING id
     `;
     return rows[0].id as number;
@@ -152,7 +153,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
   }
 
-  const { firstName, email, phone, segment, source, company, message, website } =
+  const { firstName, email, phone, segment, source, company, message, website, zip } =
     body as Record<string, string | undefined>;
 
   // Honeypot: a field hidden from people and irresistible to bots. Answer 200
@@ -199,6 +200,8 @@ export async function POST(request: NextRequest) {
     company: typeof company === "string" ? company.trim() : "",
     segment: typeof segment === "string" ? segment : "",
     source,
+    // Digits only, capped at 10 so ZIP+4 fits and nothing else does.
+    zip: typeof zip === "string" ? zip.replace(/\D/g, "").slice(0, 10) : "",
     message: typeof message === "string" ? message.trim() : "",
     ipHash,
     flagged: screening.blocked,
@@ -250,6 +253,7 @@ export async function POST(request: NextRequest) {
           PHONE: lead.phone,
           SOURCE: lead.source,
           SEGMENT: lead.segment,
+          ...(lead.zip ? { ZIP: lead.zip } : {}),
           ...(lead.company ? { COMPANY: lead.company } : {}),
         },
       },

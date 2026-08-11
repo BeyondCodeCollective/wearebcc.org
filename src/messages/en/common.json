@@ -804,6 +804,7 @@
       "body": "Join the newsletter and be first to hear when cohort applications, workshops, and Labs open up.",
       "firstName": "First name",
       "email": "Email address",
+      "zip": "Zip code (optional)",
       "interestLabel": "I'm interested in…",
       "interestOptions": [
         "Joining a Catalyst cohort",
