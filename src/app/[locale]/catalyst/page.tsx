@@ -252,6 +252,11 @@ export default function CatalystPage() {
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-grey-3">
               {t("gap.body")}
             </p>
+            {/* Its own paragraph: this is the turn from problem to answer, and
+                it was buried at the end of the statistics. */}
+            <p className="mt-5 max-w-xl text-lg leading-relaxed text-true-black">
+              {t("gap.bridge")}
+            </p>
           </motion.div>
           <motion.div
             {...reveal}
@@ -477,7 +482,7 @@ export default function CatalystPage() {
             ))}
           </motion.div>
           <p
-            className="mt-8 max-w-2xl text-lg leading-relaxed text-off-white/90"
+            className="mx-auto mt-8 max-w-2xl text-center text-lg italic leading-relaxed text-off-white/75"
           >
             {t("verticals.caption")}
           </p>

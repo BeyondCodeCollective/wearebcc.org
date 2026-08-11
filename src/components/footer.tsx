@@ -11,6 +11,8 @@ export function Footer() {
   const locale = useLocale();
 
   const initiativeLinks = [
+    // Same order as the nav dropdown, so the two lists agree.
+    { key: "catalyst", href: "catalyst" },
     { key: "theForge", href: "beyond-code-centers" },
     { key: "afterTheGame", href: "beyond-the-game" },
   ] as const;

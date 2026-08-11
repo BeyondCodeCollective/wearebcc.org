@@ -662,15 +662,16 @@
       },
       {
         "stat": "$0",
-        "label": "Cost to qualifying learners"
+        "label": "Tuition, 100% partner-funded"
       }
     ],
     "gap": {
       "label": "The Gap",
       "headline1": "THE MARKET MOVED.",
       "headline2": "TRAINING DIDN'T.",
-      "body": "Employers are reorganizing roles around AI faster than training systems can adapt. Over 70% of mid-skill roles now require digital or AI fluency, and 39% of core skills will be outdated by 2030. Meanwhile, 1 in 4 adult learners cite cost and childcare as their top barriers to retraining. Catalyst is the bridge: a structured, measurable workforce program designed with employers and credentialing bodies, built around the realities of adult learners' lives.",
-      "imageAlt": "A Catalyst cohort session"
+      "body": "Employers are reorganizing roles around AI faster than training systems can adapt. Over 70% of mid-skill roles now require digital or AI fluency, and 39% of core skills will be outdated by 2030. Meanwhile, 1 in 4 adult learners cite cost and childcare as their top barriers to retraining.",
+      "imageAlt": "A Catalyst cohort session",
+      "bridge": "Catalyst is the bridge: a structured, measurable workforce program designed with employers and credentialing bodies, built around the realities of adult learners' lives."
     },
     "program": {
       "label": "The Program",
@@ -732,7 +733,7 @@
       "label": "Upcoming Workshops + Labs",
       "headline1": "START BEFORE",
       "headline2": "THE COHORT STARTS",
-      "body": "Low-stakes entry points into the Catalyst world. Drop into a session, build a habit, meet the community. Sign up individually — no application needed.",
+      "body": "Low-stakes entry points into the Catalyst world. Drop into a session, build a habit, meet the community. Sign up individually — no application needed. Paid for by partners, free of charge to participants.",
       "cards": [
         {
           "badge": "With NextEra Energy · Aug 10–14 · Free",

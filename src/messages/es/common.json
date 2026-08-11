@@ -662,15 +662,16 @@
       },
       {
         "stat": "$0",
-        "label": "Costo para quienes califican"
+        "label": "Matrícula, 100% financiada por socios"
       }
     ],
     "gap": {
       "label": "La Brecha",
       "headline1": "EL MERCADO CAMBIÓ.",
       "headline2": "LA FORMACIÓN NO.",
-      "body": "Los empleadores están reorganizando los puestos en torno a la IA más rápido de lo que los sistemas de formación pueden adaptarse. Más del 70% de los puestos de habilidad media ya requieren fluidez digital o en IA, y el 39% de las habilidades clave quedarán obsoletas para 2030. Mientras tanto, 1 de cada 4 personas adultas cita el costo y el cuidado infantil como sus mayores barreras para recapacitarse. Catalyst es el puente: un programa de fuerza laboral estructurado y medible, diseñado junto a empleadores y entidades certificadoras, en torno a la realidad de la vida adulta.",
-      "imageAlt": "Una sesión de la cohorte Catalyst"
+      "body": "Los empleadores están reorganizando sus puestos en torno a la IA más rápido de lo que los sistemas de formación pueden adaptarse. Más del 70% de los puestos de habilidad media ya requieren fluidez digital o en IA, y el 39% de las habilidades básicas quedarán obsoletas para 2030. Mientras tanto, 1 de cada 4 personas adultas señala el costo y el cuidado infantil como sus principales barreras para recapacitarse.",
+      "imageAlt": "Una sesión de la cohorte Catalyst",
+      "bridge": "Catalyst es el puente: un programa de fuerza laboral estructurado y medible, diseñado junto a empleadores y entidades certificadoras, en torno a la realidad de la vida adulta."
     },
     "program": {
       "label": "El Programa",
@@ -732,7 +733,7 @@
       "label": "Próximos Talleres + Labs",
       "headline1": "EMPIEZA ANTES DE",
       "headline2": "QUE INICIE LA COHORTE",
-      "body": "Puntos de entrada de bajo compromiso al mundo Catalyst. Únete a una sesión, crea un hábito, conoce a la comunidad. Inscríbete de forma individual, sin solicitud.",
+      "body": "Puntos de entrada de bajo compromiso al mundo Catalyst. Únete a una sesión, crea un hábito, conoce a la comunidad. Inscríbete de forma individual, sin solicitud. Financiado por socios, sin costo para quienes participan.",
       "cards": [
         {
           "badge": "Con NextEra Energy · 10–14 Ago · Gratis",
