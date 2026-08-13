@@ -150,6 +150,16 @@ h2{font-size:clamp(2.4rem,8vw,6rem)}
 .stat .l{font-family:var(--mono);font-weight:700;font-size:clamp(.875rem,1.4vw,.875rem);letter-spacing:.14em;text-transform:uppercase;margin-top:.5em;color:#fff}
 .word{font-family:var(--head);text-transform:uppercase;font-size:clamp(1.5rem,4.2vw,3.2rem);line-height:1.05}
 .word .yl{color:var(--yellow)}
+/* Visible URL, not a "learn more". The room can note it down; on the shared
+   page it clicks. Only ever point at something that opens without a login. */
+.deeplink{display:inline-flex;align-items:baseline;align-self:center;
+  margin-top:clamp(.7rem,2vh,1.1rem);font-family:var(--mono);font-weight:700;
+  font-size:clamp(.95rem,1.15vw,1.1rem);letter-spacing:.08em;text-transform:uppercase;
+  color:var(--yellow);text-decoration:none;border-bottom:2px solid var(--yellow);
+  padding-bottom:.25em;transition:opacity .2s}
+.deeplink .arw{margin-right:.7em}
+.deeplink:hover{opacity:.7}
+.slide.w .deeplink{color:var(--blue);border-bottom-color:var(--blue)}
 .chips{display:flex;flex-wrap:wrap;gap:clamp(.5rem,1.4vw,1rem);margin-top:clamp(1rem,3vh,1.8rem)}
 .chip{font-family:var(--mono);font-weight:700;font-size:clamp(.875rem,1.6vw,1.05rem);letter-spacing:.08em;text-transform:uppercase;border:3px solid var(--yellow);color:var(--yellow);padding:.55em 1em}
 .chip.fill{background:var(--yellow);color:#000;border-color:var(--yellow)}
@@ -544,6 +554,8 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
 .rmap{position:relative;z-index:2;margin-top:clamp(1rem,3.4vh,2rem);padding-top:clamp(1.4rem,3.6vh,2.4rem)}
 .rmap::before{content:"";position:absolute;left:0;right:0;top:clamp(1.4rem,3.6vh,2.4rem);height:6px;background:var(--yellow)}
 .tlrow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(.4rem,1.2vw,.9rem)}
+.tl5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.tl3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .tlstep{position:relative;padding-top:clamp(1.7rem,4vh,2.5rem);min-width:0}
 .tlstep::before{content:"";position:absolute;left:0;top:calc(-1 * clamp(.2rem,.5vh,.35rem));width:clamp(15px,1.9vw,22px);height:clamp(15px,1.9vw,22px);background:#fff;border:5px solid var(--yellow)}
 .tlstep.now::before{background:var(--yellow)}
@@ -767,6 +779,17 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
 .slide.w .kicker{background:var(--blue);color:#fff}
 .dots button{box-shadow:0 0 0 1px rgba(0,0,0,.4)}
 .net2 .nd small{opacity:.85}
+
+/* The column count used to be an inline style on the element, which beats
+   every stylesheet rule, so both earlier attempts to stack this on phones
+   silently lost. It is a class now, and this stacks it. */
+@media (max-width:820px){
+  .tlrow,.tl5,.tl3{grid-template-columns:1fr;row-gap:clamp(.9rem,2.6vh,1.4rem)}
+  .tlstep{padding-top:0;padding-left:clamp(1.7rem,7vw,2.4rem)}
+  .tlstep::before{top:.1em;left:0}
+  .tlstep .twhen{opacity:.7}
+}
+}
 </style>
 </head>
 <body>
@@ -835,7 +858,7 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
   <span class="kicker reveal">How it works</span>
   <h2 class="reveal">Five pillars,<br><span class="yl">one path.</span></h2>
   <div class="rmap reveal">
-    <div class="tlrow" style="grid-template-columns:repeat(5,minmax(0,1fr))">
+    <div class="tlrow tl5">
       <div class="tlstep now"><div class="tnum">[ 01 ]</div><div class="tname">Advisory</div><div class="twhen">Clarify direction first</div></div>
       <div class="tlstep"><div class="tnum">[ 02 ]</div><div class="tname">Foundations</div><div class="twhen">Shared workforce + digital core</div></div>
       <div class="tlstep"><div class="tnum">[ 03 ]</div><div class="tname">Specialization</div><div class="twhen">Interest-aligned technical track</div></div>
@@ -875,7 +898,7 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
   <span class="kicker reveal">The credentials</span>
   <h2 class="reveal">CompTIA certified,<br><span class="yl">stacked in sequence.</span></h2>
   <div class="rmap reveal">
-    <div class="tlrow" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+    <div class="tlrow tl3">
       <div class="tlstep"><div class="tnum">[ 01 · Complete ]</div><div class="tname">Tech+ Foundations</div><div class="twhen">7 weeks · Cohort 1 finished</div></div>
       <div class="tlstep now"><div class="tnum">[ 02 · In progress ]</div><div class="tname">Network+</div><div class="twhen">8 weeks · Running now</div><div class="tlbadge">Live</div></div>
       <div class="tlstep"><div class="tnum">[ 03 · Up next ]</div><div class="tname">Security+</div><div class="twhen">16 sessions</div></div>
@@ -976,6 +999,8 @@ h2{font-size:clamp(1.8rem,9vw,2.6rem)}
   <div class="tpane" style="display:flex;flex-direction:column;justify-content:center;align-items:center;height:100%">
     <h1 class="reveal" style="text-align:center;font-size:clamp(2.6rem,10vw,8rem)">Partner<br><span class="yl">with us.</span></h1>
     <p class="lede reveal" style="text-align:center;margin-top:clamp(1rem,3vh,1.6rem)">wearebcc.org/en/beyond-the-game</p>
+    <a class="deeplink reveal" href="https://beyond-code-afterthegame.vercel.app/" target="_blank" rel="noopener">
+      <span class="arw">&rarr;</span>The foundation one-sheet</a>
     <div class="chips reveal" style="justify-content:center">
       <span class="chip">Join the waitlist</span>
       <span class="chip">Ramon Clemente · Head of Beyond The Game</span>
