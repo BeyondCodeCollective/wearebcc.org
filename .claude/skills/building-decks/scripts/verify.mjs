@@ -9,7 +9,7 @@
  * nothing collapsed. Open the screenshots and look at them before saying a
  * deck is done.
  */
-import { existsSync, mkdirSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync } from 'node:fs';
 import { resolve, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -59,6 +59,7 @@ const wantShots = process.argv.includes('--shots');
 if (!file) { console.error('usage: node verify.mjs path/to/deck.html [--shots]'); process.exit(2); }
 if (!existsSync(file)) { console.error(`not found: ${file}`); process.exit(2); }
 const url = 'file://' + resolve(file);
+let cssFail = false;
 
 if (!CHROME) {
   console.error('No Chromium-based browser found. Install Chrome, or set CHROME_PATH to a browser binary.');
@@ -66,7 +67,25 @@ if (!CHROME) {
   process.exit(2);
 }
 
+// An unbalanced brace makes the CSS parser discard everything after it, which
+// looks exactly like "my rule didn't apply". Cheap to check, silent to miss.
+{
+  const src = readFileSync(file, 'utf8');
+  const blocks = [...src.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)];
+  blocks.forEach((m, i) => {
+    const css = m[1];
+    const open = (css.match(/\{/g) || []).length;
+    const close = (css.match(/\}/g) || []).length;
+    if (open !== close) {
+      console.log(`FAIL  style block ${i + 1}: ${open} { vs ${close} } — everything after the`);
+      console.log('        imbalance is discarded by the parser.');
+      cssFail = true;
+    }
+  });
+}
+
 let fail = 0;
+let modeFail = false;
 const browser = await chromium.launch({ executablePath: CHROME });
 
 for (const [name, width, height] of VIEWPORTS) {
@@ -86,7 +105,10 @@ for (const [name, width, height] of VIEWPORTS) {
 
   const r = await page.evaluate(() => {
     const de = document.documentElement;
-    const out = { docW: de.scrollWidth, innerW: window.innerWidth, slides: [], hidden: 0, edges: [] };
+    const deck = document.querySelector('.deck');
+    const out = { docW: de.scrollWidth, innerW: window.innerWidth, slides: [], hidden: 0, edges: [],
+      snap: deck ? getComputedStyle(deck).scrollSnapType : 'none',
+      bodyOverflow: getComputedStyle(document.body).overflowY };
     document.querySelectorAll('.reveal').forEach(e => {
       if (parseFloat(getComputedStyle(e).opacity) < 0.9) out.hidden++;
     });
@@ -104,6 +126,15 @@ for (const [name, width, height] of VIEWPORTS) {
     });
     return out;
   });
+
+  // A deck must stop being a deck below 820. If it is still a nested scroll
+  // container with snap on a phone, no amount of styling makes it read right.
+  if (mobile && (r.snap !== 'none' || r.bodyOverflow === 'hidden')) {
+    modeFail = true;
+    console.log(`FAIL  ${name.padEnd(10)} still in projector mode on a phone`);
+    console.log(`        .deck snap=${r.snap}  body overflow=${r.bodyOverflow}`);
+    console.log('        fix:  node scripts/ensure-mobile.mjs <deck.html>');
+  }
 
   const bad = r.docW > r.innerW || r.slides.length;
   if (bad) fail++;
@@ -127,8 +158,10 @@ for (const [name, width, height] of VIEWPORTS) {
 }
 
 await browser.close();
+if (modeFail) fail++;
+if (cssFail) fail++;
 console.log(fail
-  ? `\n${fail} viewport(s) with problems.`
-  : '\nNo overflow, no collapsed reveals, gutters consistent.');
+  ? `\n${fail} problem(s).` + (modeFail ? '\nThis deck has no mobile document mode. That is the big one.' : '')
+  : '\nNo overflow, no collapsed reveals, gutters consistent, mobile mode present, CSS balanced.');
 console.log('This is not a design review. Open the screenshots and look at them.');
 process.exit(fail ? 1 : 0);

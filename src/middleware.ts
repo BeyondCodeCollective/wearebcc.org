@@ -4,10 +4,33 @@ import { routing } from "./i18n/routing";
 
 const intlMiddleware = createMiddleware(routing);
 
+const BTG_DECK = "/decks/beyond-the-game_2026-08.html";
+
+// Decks that are shareable with no gate at all. Everything else under /decks
+// is partner-only. Add a path here ONLY when the deck is cleared to be public:
+// there is no second check behind this, and no gate page fronting it.
+const UNGATED_DECKS = new Set([BTG_DECK]);
+
 export default function middleware(request: NextRequest) {
+  // The Beyond the Game deck is shared as /beyond-the-game-deck. Rewritten, not
+  // redirected, so the clean path is what stays in the address bar. Handled here
+  // rather than in next.config because middleware runs before config rewrites,
+  // so the intl locale redirect would otherwise claim the path first.
+  const bare = request.nextUrl.pathname.replace(/^\/(en|es)(?=\/|$)/, "");
+  if (bare === "/beyond-the-game-deck") {
+    return NextResponse.rewrite(new URL(BTG_DECK, request.url));
+  }
+  // The dated path the filename used to imply, for links already sent.
+  if (bare === "/beyond-the-game_2026-08") {
+    return NextResponse.redirect(new URL("/beyond-the-game-deck", request.url));
+  }
+
   // Partner-only static decks: require the gate cookie set by
   // /api/partner-gate, otherwise bounce to the gated viewer page.
   if (request.nextUrl.pathname.startsWith("/decks/")) {
+    if (UNGATED_DECKS.has(request.nextUrl.pathname)) {
+      return NextResponse.next();
+    }
     if (request.cookies.get("bcc-partner-gate")?.value === "1") {
       return NextResponse.next();
     }

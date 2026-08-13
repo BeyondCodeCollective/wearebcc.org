@@ -20,8 +20,12 @@ Open the keynote, resize the window past 820px, and watch it change modes.
 
 ## Order of work
 
-1. **Get the content first.** If restyling a PDF, read every page before writing
-   any CSS. If starting fresh, get the slide list agreed before designing.
+1. **Get the content first, from wherever it lives.** This skill does not
+   source content. If it is in Notion, a Google Doc, a PDF, or a CMS, use the
+   skill or connector that fetches it and read all of it before writing any
+   CSS. If there is no source, agree the slide list with the user first.
+   **Never invent slide content, numbers, or names** — see
+   `references/content-rules.md`.
 2. **Inventory the brand.** Fonts, logos, colour tokens, photography. Never
    invent a logo or approximate a brand colour.
    → `references/brands.md`
@@ -30,7 +34,7 @@ Open the keynote, resize the window past 820px, and watch it change modes.
 4. **Verify.** `scripts/verify.mjs`, then open screenshots and look at them.
 5. **Iterate on real feedback**, re-verifying every pass.
 
-## The three things that will bite you
+## The five things that will bite you
 
 **1. Phone and projector need different layouts, not one flexible one.**
 Ship both modes and switch at 820px. Projector gets fixed viewports and scroll
@@ -47,12 +51,24 @@ loses. This broke two slides twice before it was understood.
 legible, balanced, or collapsed. **Open the screenshot and look at it** before
 saying anything is done.
 
-## Fonts
+**4. Source order only breaks ties. It cannot beat higher specificity.**
+Gotcha 2 is necessary, not sufficient. A deck that styles `.slide.title` (0,2,0)
+beats a mobile `.slide` (0,1,0) no matter how late the block sits, so the slide
+keeps its `display:grid` and its `padding:0` and the mobile rules appear to do
+nothing. Write the block's slide rules as `.slide.slide` — same 0,2,0 weight,
+and it needs no ancestor, so it still works in decks that have no `.deck`
+wrapper. Note the corollary for fixed-canvas decks: `aspect-ratio` pins height
+independently of `height:auto`, so document mode also needs `aspect-ratio:auto`.
 
-BCC and BGC faces ship as woff2 in `fonts/` **in the internal skill zip only**.
-They are licensed commercial faces and are not in the public repo, so a copy
-installed from a clone will not have them. Ask Fonz for the zip, or point the
-script at your own licensed copies. Emit paste-ready `@font-face`
+**5. One unbalanced brace silently discards the rest of the stylesheet.**
+It presents exactly as "my rule did not apply", and it is invisible in a diff.
+`verify.mjs` now counts braces per `<style>` block and fails on a mismatch. This
+caught a live partner deck where a stray `}` closed a media query early and had
+been leaking two mobile rules onto desktop.
+
+## Fonts are bundled
+
+BCC and BGC faces ship in `fonts/` as woff2. Emit paste-ready `@font-face`
 rules with the font already base64-embedded:
 
 ```bash
@@ -115,6 +131,19 @@ import cv2
 data,_,_ = cv2.QRCodeDetector().detectAndDecode(cv2.imread('/tmp/deckshots/13.png'))
 assert data == 'https://expected-url.example'
 ```
+
+## Composing with other skills
+
+This skill owns one seam: **content in, deck out.** It deliberately does not
+fetch, and it does not decide what the deck should say.
+
+- A content skill (Notion, Drive, a CMS reader) hands over the material.
+- This skill turns it into slides, on brand, verified.
+
+So "build a deck from the Q3 board page in Notion" should fire both: the
+content skill pulls the page, this one builds the deck. If the material arrives
+as structured sections, map one section to one slide and keep the source's own
+headings — do not re-summarise content someone already wrote deliberately.
 
 ## Reference files
 
