@@ -273,6 +273,17 @@ h2{font-size:clamp(1.55rem,7.65vw,2.2rem)}
 .bigq{font-family:var(--head);text-transform:uppercase;font-size:clamp(1.7rem,5.45vw,3.9rem);line-height:1.02;max-width:14em;position:relative;z-index:2}
 .bigq .yl{color:var(--blue)}
 
+/* Slide 02 stacks three display-scale blocks in one column, so the headline,
+   the stats and the quote all shouted at once. Give the headline the lead, drop
+   the quote to a supporting size, and open the vertical rhythm between them. */
+.slide.s-why h2{margin-bottom:0}
+.slide.s-why .statrow{margin-top:clamp(1.5rem,4.6vh,2.8rem);gap:clamp(1.5rem,4vw,3.4rem)}
+.slide.s-why .stat .n{font-size:clamp(1.9rem,4.4vw,3.2rem)}
+.slide.s-why .stat .l{opacity:.72}
+.slide.s-why .bigq{margin-top:clamp(1.5rem,4.6vh,2.8rem);font-size:clamp(1.2rem,2.5vw,1.95rem);
+  line-height:1.2;max-width:24em}
+.slide.s-why .who-badge{margin-top:clamp(.8rem,2.2vh,1.2rem)}
+
 
 /* === PORTRAIT VIDEO SLOT (slide 16) === */
 .vid.vert{aspect-ratio:9/16;height:min(50vh,430px);width:auto;flex:0 0 auto;max-width:40vw;align-self:center;overflow:hidden}
@@ -850,7 +861,7 @@ h2{font-size:clamp(1.55rem,7.65vw,2.2rem)}
   <div class="note"><b>Open</b> Beyond The Game. A national cohort program moving transitioning athletes into technology careers. Open on the athlete, not the org.</div>
   <div class="foot"><span>wearebcc.org/beyond-the-game</span><span>Ramon Clemente · Head of Beyond The Game</span></div>
 </section>
-<section class="slide w">
+<section class="slide w s-why">
   <div class="row rowc"><div class="tx">
     <span class="kicker reveal">Why now</span>
     <h2 class="reveal">The career ends<br><span class="ghost">before the life does.</span></h2>
@@ -859,7 +870,7 @@ h2{font-size:clamp(1.55rem,7.65vw,2.2rem)}
       <div class="stat"><div class="n">4.5</div><div class="l">Years · average<br>NBA career</div></div>
       <div class="stat"><div class="n">5</div><div class="l">Years · average<br>MLB career</div></div>
     </div>
-    <div class="bigq reveal" style="margin-top:clamp(.9rem,2.6vh,1.5rem)">“Nobody prepares you for the emotion at the end. What comes after, you can prepare for.”</div>
+    <div class="bigq reveal">“Nobody prepares you for the emotion at the end. What comes after, you can prepare for.”</div>
     <div class="who-badge reveal">Ramon Clemente · Head of Beyond The Game</div>
   </div>
     <div class="pcard reveal"><i></i><div class="frame"><img alt="Basketball players sitting on the bench, heads down" style="display:block;width:100%;height:100%;object-fit:cover" src="/images/btg/bench-waiting.jpg"></div></div>
