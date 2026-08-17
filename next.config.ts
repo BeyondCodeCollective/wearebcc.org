@@ -23,6 +23,20 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      // headers() matches the INCOMING path, and /beyond-the-game-deck is a
+      // middleware rewrite, so the rule above never covered it. Without this the
+      // shared deck URL was served cacheable while the /decks/ path it rewrites
+      // to was no-store, which is exactly the setup where someone reloads and
+      // still sees yesterday's slide.
+      {
+        source: "/beyond-the-game-deck",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "no-store, max-age=0, must-revalidate",
+          },
+        ],
+      },
     ];
   },
   async redirects() {
