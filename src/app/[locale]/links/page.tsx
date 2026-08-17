@@ -72,7 +72,7 @@ const LINKS: LinkItem[] = [
   {
     label: "Beyond The Game",
     blurb: "Tech careers for athletes, on and off the field.",
-    href: "https://www.wearebcc.org/en/beyond-the-game?src=links",
+    href: "https://www.wearebcc.org/beyond-the-game-deck?src=links",
   },
   {
     label: "Beyond Anything",
