@@ -106,7 +106,7 @@ for (const [name, width, height] of VIEWPORTS) {
   const r = await page.evaluate(() => {
     const de = document.documentElement;
     const deck = document.querySelector('.deck');
-    const out = { docW: de.scrollWidth, innerW: window.innerWidth, slides: [], hidden: 0, edges: [],
+    const out = { docW: de.scrollWidth, innerW: window.innerWidth, slides: [], hidden: 0, edges: [], clipped: [],
       snap: deck ? getComputedStyle(deck).scrollSnapType : 'none',
       bodyOverflow: getComputedStyle(document.body).overflowY };
     document.querySelectorAll('.reveal').forEach(e => {
@@ -123,6 +123,14 @@ for (const [name, width, height] of VIEWPORTS) {
         if (b.width > 8 && b.height > 4) L.add(Math.round(b.left - sr.left));
       });
       if (L.size > 3) out.edges.push(`slide ${i + 1}: ${L.size} left edges (${[...L].sort((a, b) => a - b).join(', ')})`);
+      // scrollWidth only sees overflow to the RIGHT. Content pushed off the LEFT
+      // edge is clipped with no scrollbar and no measurement, so look for it.
+      s.querySelectorAll('*').forEach(e => {
+        const b = e.getBoundingClientRect();
+        if (b.width > 8 && b.height > 4 && b.left < sr.left - 2 && getComputedStyle(e).position !== 'fixed') {
+          out.clipped.push(`slide ${i + 1}: ${e.tagName.toLowerCase()}.${(e.className || '').toString().split(' ')[0]} starts ${Math.round(sr.left - b.left)}px off the left edge`);
+        }
+      });
     });
     return out;
   });
@@ -143,6 +151,10 @@ for (const [name, width, height] of VIEWPORTS) {
   if (r.hidden) { fail++; console.log(`        ${r.hidden} .reveal element(s) never became visible`); }
   // gutter check is mobile-only; desktop layouts are legitimately multi-column
   if (mobile) r.edges.forEach(e => console.log(`        gutter: ${e}`));
+  if (mobile && r.clipped.length) {
+    fail++;
+    [...new Set(r.clipped)].slice(0, 6).forEach(c => console.log(`        clipped: ${c}`));
+  }
 
   if (wantShots && name === 'desktop') {
     mkdirSync('/tmp/deckshots', { recursive: true });
