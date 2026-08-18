@@ -370,7 +370,13 @@ export default function CatalystPage() {
               {t("workshops.body")}
             </p>
           </motion.div>
-          <div className="mt-10 grid items-start gap-4 md:grid-cols-3">
+          {/* Columns follow the card count: with a workshop retired, three
+              columns would leave a hole where the third card was. */}
+          <div
+            className={`mt-10 grid items-start gap-4 ${
+              cards.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3"
+            }`}
+          >
             {cards.map((card, i) => (
               <motion.div
                 key={i}
