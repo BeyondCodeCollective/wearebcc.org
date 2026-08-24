@@ -4,6 +4,14 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
+  // The /sandbox index lists whatever sits in public/sandbox by reading the
+  // filesystem at request time. On Vercel, public/ is served from the CDN but
+  // is NOT in the serverless function's filesystem unless traced in — without
+  // this the deployed index renders "Nothing here yet" while the files
+  // themselves serve fine.
+  outputFileTracingIncludes: {
+    "/[locale]/sandbox": ["./public/sandbox/**/*"],
+  },
   images: {
     remotePatterns: [
       {
@@ -34,6 +42,23 @@ const nextConfig: NextConfig = {
           {
             key: "Cache-Control",
             value: "no-store, max-age=0, must-revalidate",
+          },
+        ],
+      },
+      // Sandbox files are working documents that get replaced under the same
+      // filename, so the same no-store rule as /decks applies. X-Robots-Tag
+      // is the static-file equivalent of the index page's noindex: unlisted,
+      // not secret.
+      {
+        source: "/sandbox/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "no-store, max-age=0, must-revalidate",
+          },
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
           },
         ],
       },
