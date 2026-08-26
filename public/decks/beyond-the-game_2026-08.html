@@ -515,6 +515,140 @@
   @media (max-width:520px){
     .footer .f-mid{gap:.8cqw}
   }
+
+  /* =====================================================
+     DOCUMENT MODE — phones and small tablets scroll the
+     deck as an ordinary page; the 16:9 stage is desktop-only.
+     Keep this block LAST: ties on specificity go to source order.
+  ===================================================== */
+  @media (max-width:820px){
+    html,body{height:auto}
+    body{display:block;overflow:visible;background:var(--blue)}
+    .stage{width:100%;height:auto;container-type:normal;overflow:visible}
+    .progress,.rail,.footer,.w5-rail,.w5-foot{display:none}
+    .slide{position:static;inset:auto;height:auto;opacity:1;visibility:visible;transform:none;
+      transition:none;display:flex;flex-direction:column;align-items:flex-start;
+      padding:2.2rem 1.25rem 2.6rem;border-bottom:5px solid var(--ink)}
+    .slide__bottom{margin-top:1.6rem}
+
+    /* shared type */
+    .eyebrow{font-size:.72rem;letter-spacing:.22em;padding:.45em .8em}
+    .h1,.h1.sm{font-size:2.15rem;margin-top:.9rem}
+    .lead{font-size:.98rem;max-width:100%}
+    .mono{font-size:.72rem}
+    .note{font-size:.9rem;max-width:100%;padding-top:.9rem}
+    .chip-line{font-size:.68rem;letter-spacing:.16em;padding:.55em .9em}
+
+    /* 01 · cover art */
+    .s-title{padding:0;border-bottom-width:5px}
+    .s-title .cover{position:static;width:100%;height:auto;object-fit:contain}
+
+    /* 02 · why now */
+    .why-grid{width:100%;margin-top:.4rem}
+    .stats2{gap:1.4rem;margin-top:1.2rem}
+    .stat2 .n{font-size:2.1rem}
+    .stat2 .c{font-size:.62rem;margin-top:.4rem}
+    .timeline{margin-top:1.4rem;width:100%}
+    .tl-labels{flex-direction:column;gap:.25em;font-size:.66rem}
+    .tl-track{height:.75rem;margin-top:.5rem}
+    .tl-axis{font-size:.6rem;margin-top:.4rem}
+    .quote2{font-size:1.05rem;margin-top:1.4rem;max-width:100%}
+    .attrib{font-size:.68rem}
+    .why-carla{position:static;height:auto;max-height:24rem;align-self:flex-end;margin-top:1.4rem;filter:none}
+
+    /* 03 · first student */
+    .student-body{max-width:100%;margin-top:1rem}
+    .s-student .bigquote{font-size:1.22rem;max-width:100%}
+    .student-attrib{font-size:.68rem;margin-top:1rem}
+    .s-student .narr{font-size:.95rem;max-width:100%;margin-top:1.2rem}
+    .student-credit{max-width:100%;font-size:.66rem;margin-top:1.6rem}
+    .portrait__frame--video{position:relative;right:auto;bottom:auto;width:min(72vw,320px);height:auto;aspect-ratio:9/16;
+      align-self:center;margin-top:1.5rem;box-shadow:none}
+    .video-cap{font-size:.6rem;padding:.5rem .6rem}
+
+    /* 04 · why we exist */
+    .s-exist .body{max-width:100%;margin-top:1.1rem;gap:1.2rem}
+    .s-exist .problem{font-size:1rem;max-width:100%}
+    .s-exist .kicker{font-size:.95rem}
+    .s-exist .pframe{position:relative;right:auto;top:auto;bottom:auto;width:min(62vw,280px);aspect-ratio:2/3;align-self:center;margin-top:1.8rem}
+
+    /* 05 · pillars (white) */
+    .w5-nodes{display:none}
+    .w5-pillars{grid-template-columns:1fr;gap:1.3rem;margin-top:1.4rem;width:100%}
+    .pw-no{font-size:.68rem}
+    .pw-name{font-size:1.15rem;margin-top:.35rem}
+    .pw-desc{font-size:.7rem;margin-top:.35rem}
+    .w5-note{max-width:100%;font-size:.95rem;margin-top:1.6rem;padding-top:0}
+    .w5h{margin-top:.9rem}
+
+    /* 06 · structure */
+    .s-structure .grid{grid-template-columns:1fr;gap:2rem;margin-top:1.4rem;width:100%}
+    .col-h{font-size:.7rem;margin-bottom:1rem}
+    .shape{gap:1.1rem 1.2rem}
+    .shape__k{font-size:1.25rem}
+    .shape__v{font-size:.85rem;margin-top:.3rem}
+    .wrap-list{gap:1.1rem}
+    .wrap-item{padding-left:.8rem}
+    .wrap-item h4{font-size:.78rem}
+    .wrap-item p{font-size:.85rem;margin-top:.3rem}
+
+    /* 07 · credentials (white) */
+    .w7-nodes{display:none}
+    .w7-steps{grid-template-columns:1fr;gap:1.4rem;margin-top:1.4rem;width:100%}
+    .w7-tag{font-size:.68rem}
+    .w7-name{font-size:1.35rem;margin-top:.35rem}
+    .w7-meta{font-size:.7rem;margin-top:.35rem}
+    .w7-live{font-size:.62rem;padding:.35em .8em;margin-top:.5rem}
+    .w7-note{max-width:100%;font-size:.95rem;margin-top:1.6rem;padding-top:0}
+
+    /* 08 · value loop */
+    .loop2{width:100%;height:auto;display:flex;flex-direction:column;gap:.7rem;margin:1.4rem 0 0}
+    .loop2__lh,.loop2__lv{display:none}
+    .loop2 .nd{max-width:100%;text-align:left;padding:.9rem 1rem;border:1px solid var(--line)}
+    .loop2 .nd-k{font-size:.75rem}
+    .loop2 .nd-v{font-size:.9rem;margin-top:.25rem}
+    .core2{font-size:1.3rem;padding:.8rem 1rem;text-align:center;order:-1;align-self:flex-start}
+
+    /* 09 · proof */
+    .proof-body{max-width:100%;margin-top:1rem}
+    .proof-sub{font-size:1rem}
+    .proof-p{font-size:.95rem;max-width:100%;margin-top:1rem}
+    .s-proof .chip-line{margin-top:1.2rem}
+    .s-proof .pframe{position:relative;right:auto;top:auto;width:min(62vw,280px);align-self:center;margin-top:1.8rem}
+
+    /* 10 · press */
+    .press-grid{grid-template-columns:1fr;gap:1.8rem;margin-top:1.2rem;width:100%}
+    .clip-card{max-height:none;align-self:stretch}
+    .clip-card img{height:auto;object-fit:contain}
+    .press-right .pframe{width:min(46vw,210px);margin-left:.4rem;margin-top:.4rem}
+    .press-rule{margin-top:1.4rem}
+    .s-press .press-lines{font-size:1.15rem;margin-top:1.1rem}
+    .press-para{font-size:.9rem;max-width:100%;margin-top:1rem}
+    .press-close{font-size:1.05rem;margin-top:1.1rem}
+
+    /* 11 · invitation (white) */
+    .inv-grid{grid-template-columns:1fr;gap:2rem;margin-top:1.4rem;width:100%}
+    .inv-h{font-size:.7rem}
+    .inv-rule{height:2px;margin-top:.6rem;margin-bottom:1.2rem}
+    .inv-ways{gap:1.2rem}
+    .inv-way{gap:.7rem}
+    .inv-way .no{font-size:.72rem}
+    .inv-way p{font-size:.9rem}
+    .inv-gets{gap:1.2rem}
+    .inv-get{grid-template-columns:1fr;gap:.25rem}
+    .inv-get h4{font-size:1.1rem}
+    .inv-get p{font-size:.85rem}
+    .inv-note{font-size:.9rem;margin-top:1.4rem;max-width:100%}
+
+    /* 12 · close */
+    .s-close{justify-content:flex-start;border-bottom:none}
+    .s-close .big{font-size:3.2rem}
+    .s-close .url{font-size:.95rem;margin-top:1.6rem;gap:.6rem}
+    .s-close .url .arw{width:1.8rem;height:1.8rem;flex:0 0 auto}
+    .cta-row{flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}
+    .cta{font-size:.78rem;padding:.9em 1.4em}
+  }
+
 </style>
 
 <div class="stage" id="stage" tabindex="0" aria-label="Beyond The Game &#8212; slide deck. Use arrow keys to navigate.">
@@ -772,6 +906,7 @@
     stage.classList.toggle('img-active', slides[i].classList.contains('slide--img'));
     stage.classList.toggle('own-active', slides[i].classList.contains('slide--own'));
   }
+  var docMode = window.matchMedia('(max-width:820px)');
   function next(){ go(i+1); }
   function prev(){ go(i-1); }
 
@@ -780,6 +915,7 @@
 
   // click to advance (left third = back, rest = next); ignore links/buttons
   stage.addEventListener('click', function(e){
+    if(docMode.matches) return;
     if(e.target.closest('a,button,video')) return;
     var r = stage.getBoundingClientRect();
     ((e.clientX - r.left) < r.width*0.32) ? prev() : next();
@@ -787,6 +923,7 @@
 
   // keyboard
   window.addEventListener('keydown', function(e){
+    if(docMode.matches) return;
     if(e.key==='ArrowRight' || e.key==='PageDown' || e.key===' '){ e.preventDefault(); next(); }
     else if(e.key==='ArrowLeft' || e.key==='PageUp'){ e.preventDefault(); prev(); }
     else if(e.key==='Home'){ e.preventDefault(); go(0); }
@@ -796,6 +933,7 @@
   // wheel (debounced)
   var wheelLock = false;
   stage.addEventListener('wheel', function(e){
+    if(docMode.matches) return;
     if(Math.abs(e.deltaY) < 12 && Math.abs(e.deltaX) < 12) return;
     if(wheelLock) return;
     wheelLock = true;
@@ -807,6 +945,7 @@
   var tx=0, ty=0;
   stage.addEventListener('touchstart', function(e){ tx=e.touches[0].clientX; ty=e.touches[0].clientY; }, {passive:true});
   stage.addEventListener('touchend', function(e){
+    if(docMode.matches) return;
     var dx = e.changedTouches[0].clientX - tx;
     var dy = e.changedTouches[0].clientY - ty;
     if(Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)){ dx < 0 ? next() : prev(); }
