@@ -100,9 +100,34 @@ export default async function LocaleLayout({
   const { locale } = await params;
   const messages = await getMessages();
 
+  // Organization schema: ties "BCC" the acronym to the full name, the logo,
+  // the social profiles and the founder in Google's knowledge graph.
+  const orgJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Beyond Code Collective",
+    alternateName: "BCC",
+    url: "https://www.wearebcc.org",
+    logo: "https://www.wearebcc.org/images/bcc-logo-stacked-black.png",
+    sameAs: [
+      "https://www.instagram.com/beyondcodecollective",
+      "https://www.linkedin.com/company/beyond-code-collective",
+    ],
+    founder: {
+      "@type": "Person",
+      name: "Cristina Mancini",
+      jobTitle: "Founder & CEO",
+      url: "https://www.wearebcc.org/en/team",
+    },
+  };
+
   return (
     <html lang={locale} className={spaceMono.variable}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ContactProvider>{children}</ContactProvider>
           <Analytics />

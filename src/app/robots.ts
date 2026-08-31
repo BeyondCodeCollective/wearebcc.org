@@ -12,5 +12,6 @@ export default function robots(): MetadataRoute.Robots {
       disallow: ["/api/", "/admin", "/dashboard"],
     },
     host: "https://www.wearebcc.org",
+    sitemap: "https://www.wearebcc.org/sitemap.xml",
   };
 }
