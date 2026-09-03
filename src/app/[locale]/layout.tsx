@@ -28,6 +28,9 @@ export async function generateMetadata({
   const isEs = locale === "es";
 
   return {
+    verification: {
+      google: "_IH1JCySoi50kYTQvWLwwXaiCCt9BWRcLd4i2IGVKpM",
+    },
     title: isEs
       ? "Beyond Code Collective — El Futuro De La Tecnología Comienza Aquí"
       : "Beyond Code Collective — The Future Of Tech Starts Here",
