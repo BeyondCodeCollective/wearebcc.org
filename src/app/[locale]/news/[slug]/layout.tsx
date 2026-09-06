@@ -42,10 +42,59 @@ export async function generateMetadata({
   };
 }
 
-export default function NewsArticleLayout({
+/**
+ * Article schema. Gives Google the headline, date, image and — for bylined
+ * posts — the author as a Person, which is what connects a writer's name to
+ * the piece in search results.
+ */
+export default async function NewsArticleLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string; slug: string }>;
 }) {
-  return children;
+  const { locale, slug } = await params;
+  const messages = (await getMessages({ locale })) as {
+    news?: { items?: unknown };
+  };
+  const post = normalizeNews(messages.news?.items).find((p) => p.slug === slug);
+
+  const publisher = {
+    "@type": "Organization",
+    name: "Beyond Code Collective",
+    alternateName: "BCC",
+    url: SITE_URL,
+    logo: `${SITE_URL}/images/bcc-logo-stacked-black.png`,
+  };
+
+  const jsonLd = post && {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: post.title,
+    description: post.excerpt,
+    image: post.image.startsWith("http")
+      ? post.image
+      : `${SITE_URL}${post.image}`,
+    datePublished: post.date,
+    dateModified: post.date,
+    inLanguage: locale,
+    mainEntityOfPage: `${SITE_URL}/${locale}/news/${slug}`,
+    author: post.author
+      ? { "@type": "Person", name: post.author }
+      : publisher,
+    publisher,
+  };
+
+  return (
+    <>
+      {jsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
+      {children}
+    </>
+  );
 }

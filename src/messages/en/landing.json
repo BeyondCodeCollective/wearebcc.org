@@ -261,6 +261,17 @@
     "emptyState": "No updates yet — check back soon.",
     "items": [
       {
+        "slug": "forward-deployed-engineering-is-the-future",
+        "date": "2026-09-06",
+        "category": "Announcement",
+        "title": "Forward Deployed Engineering Is the Future, and We're Building for It",
+        "excerpt": "Fonz Morris on why the forward deployed engineer — part consultant, part product manager, part software engineer — has become one of the most valuable roles in tech, and what Beyond Code Collective is building to open that door.",
+        "image": "/images/community/community-03.jpg",
+        "imageAlt": "A Beyond Code Collective cohort together in the studio",
+        "body": "Every company can buy the same models now. Intelligence itself is close to a commodity. What separates a company getting real value from AI from one that isn't is no longer which model they licensed. It's whether anyone actually got it working inside the business. That last mile is a job, and it has a name: forward deployed engineer.\n\nThe shortest definition I know is a customer-facing software engineer. An FDE sits with the people doing the work, finds the real bottleneck behind the stated problem, and builds working software in the customer's environment. Not a slide deck. Not a demo. Something that runs on Monday morning.\n\nThe role started at Palantir, where it was dismissed for years as consulting that couldn't scale. It is now being hired at OpenAI, Anthropic, Microsoft, Databricks, and across the startup ecosystem, and it commands some of the strongest compensation in the industry.\n\nHere is the part that matters for us. The hardest skill in this job isn't writing code. It's judgment: knowing which step of a workflow should be ordinary software, which one genuinely needs a model, and which one should stay with a human being. Right behind judgment is evaluation, proving the thing actually works against real historical cases, and that takes almost no code at all.\n\nBoth of those are teachable. Both reward people who have worked real jobs in real industries and know how the work actually gets done, which describes a lot of the people we serve. Domain knowledge is not a consolation prize in this role. It is the moat.\n\nThat's why I'm excited to help build a forward deployed engineering track at Beyond Code Collective. Most FDE postings ask for years of prior experience, so the on-ramp is the piece that's missing. We intend to build it.\n\n— Fonz Morris, Beyond Code Collective",
+        "author": "Fonz Morris"
+      },
+      {
         "slug": "kleon-penn-passes-comptia-tech-plus",
         "date": "2026-07-14",
         "category": "Spotlight",

@@ -261,6 +261,17 @@
     "emptyState": "Aún no hay novedades — vuelve pronto.",
     "items": [
       {
+        "slug": "forward-deployed-engineering-is-the-future",
+        "date": "2026-09-06",
+        "category": "Announcement",
+        "title": "La ingeniería desplegada en campo es el futuro, y lo estamos construyendo",
+        "excerpt": "Fonz Morris explica por qué el forward deployed engineer — parte consultor, parte gerente de producto, parte ingeniero de software — se ha convertido en uno de los roles más valiosos de la tecnología, y qué está construyendo Beyond Code Collective para abrir esa puerta.",
+        "image": "/images/community/community-03.jpg",
+        "imageAlt": "Una cohorte de Beyond Code Collective reunida en el estudio",
+        "body": "Hoy cualquier empresa puede comprar los mismos modelos. La inteligencia ya es casi un producto básico. Lo que separa a una empresa que obtiene valor real de la IA de una que no lo logra ya no es qué modelo licenció. Es si alguien realmente lo hizo funcionar dentro del negocio. Esa última milla es un trabajo, y tiene nombre: forward deployed engineer.\n\nLa definición más corta que conozco es: un ingeniero de software que trabaja de cara al cliente. Un FDE se sienta junto a las personas que hacen el trabajo, encuentra el cuello de botella real detrás del problema declarado y construye software que funciona en el entorno del cliente. No una presentación. No un demo. Algo que funciona el lunes por la mañana.\n\nEl rol nació en Palantir, donde durante años se descartó como consultoría que no podía escalar. Hoy se contrata en OpenAI, Anthropic, Microsoft, Databricks y en todo el ecosistema de startups, y ofrece una de las compensaciones más altas de la industria.\n\nAquí está la parte que nos importa. La habilidad más difícil de este trabajo no es escribir código. Es el criterio: saber qué paso de un flujo de trabajo debe ser software común, cuál necesita de verdad un modelo y cuál debe quedarse con una persona. Justo después del criterio viene la evaluación, comprobar que la solución realmente funciona con casos históricos reales, y eso casi no requiere código.\n\nAmbas cosas se pueden enseñar. Ambas premian a quienes han tenido trabajos reales en industrias reales y saben cómo se hacen las cosas, que describe a muchas de las personas a las que servimos. El conocimiento del sector no es un premio de consolación en este rol. Es la ventaja.\n\nPor eso me entusiasma ayudar a construir un programa de forward deployed engineering en Beyond Code Collective. La mayoría de las vacantes de FDE piden años de experiencia previa, así que la rampa de entrada es la pieza que falta. Nuestra intención es construirla.\n\n— Fonz Morris, Beyond Code Collective",
+        "author": "Fonz Morris"
+      },
+      {
         "slug": "kleon-penn-passes-comptia-tech-plus",
         "date": "2026-07-14",
         "category": "Historia Destacada",

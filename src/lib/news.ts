@@ -7,6 +7,8 @@ export interface NewsPost {
   image: string;
   imageAlt: string;
   body: string;
+  /** Bylined author. Omitted for posts written as the organization. */
+  author?: string;
   linkUrl?: string;
   linkLabel?: string;
   links?: { label: string; url: string; description?: string }[];
