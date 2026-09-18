@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { LockSimple, Play, YoutubeLogo } from "@phosphor-icons/react";
@@ -13,22 +13,22 @@ const SIGNAL = "#91c0d1";
 const MINT = "#edfefa";
 const NEON = "#F4FF70"; // sampled from the host-circle ring art
 
-// Code Along streams on the Black Girls Code channel.
-const CHANNEL_URL: string | null = "https://www.youtube.com/@blackgirlscode";
-const SUBSCRIBE_URL = "https://www.youtube.com/@blackgirlscode?sub_confirmation=1";
+// Code Along streams on the Beyond Code Collective channel.
+const CHANNEL_URL: string | null = "https://www.youtube.com/@BeyondCodeCollective";
+const SUBSCRIBE_URL = "https://www.youtube.com/@BeyondCodeCollective?sub_confirmation=1";
 
 // Set to the final trailer's YouTube ID when it's ready — until then the
 // trailer section shows a "coming soon" placeholder.
-const TRAILER_ID: string | null = null;
+const TRAILER_ID: string | null = "Lnt0XMFkbBc";
 
 // Season launches Saturday, September 12, 2026 (noon ET). Drop each episode's YouTube ID
 // here as it goes live — cards flip from locked stills to playable embeds.
 const PREMIERE_DATE = new Date("2026-09-12T12:00:00-04:00");
-const EPISODES: { num: number; thumb: string; youtubeId: string | null }[] = [
-  { num: 1, thumb: "/images/code-along/ep-1.jpg", youtubeId: null },
-  { num: 2, thumb: "/images/code-along/ep-2.jpg", youtubeId: null },
-  { num: 3, thumb: "/images/code-along/ep-3.jpg", youtubeId: null },
-  { num: 4, thumb: "/images/code-along/ep-4.jpg", youtubeId: null },
+const EPISODES: { num: number; thumb: string; youtubeId: string | null; date: string }[] = [
+  { num: 1, thumb: "/images/code-along/ep-1.jpg", youtubeId: "eBKPc2M7Zwo", date: "09.12" },
+  { num: 2, thumb: "/images/code-along/ep-2.jpg", youtubeId: null, date: "09.19" },
+  { num: 3, thumb: "/images/code-along/ep-3.jpg", youtubeId: null, date: "09.26" },
+  { num: 4, thumb: "/images/code-along/ep-4.jpg", youtubeId: null, date: "10.03" },
 ];
 
 const HOSTS = [
@@ -49,25 +49,6 @@ const GUESTS = [
   },
 ] as const;
 
-function useCountdown(target: Date) {
-  const [now, setNow] = useState<Date | null>(null);
-
-  useEffect(() => {
-    setNow(new Date());
-    const id = setInterval(() => setNow(new Date()), 1000);
-    return () => clearInterval(id);
-  }, []);
-
-  if (!now) return null;
-  const diff = Math.max(0, target.getTime() - now.getTime());
-  return {
-    days: Math.floor(diff / 86_400_000),
-    hours: Math.floor(diff / 3_600_000) % 24,
-    minutes: Math.floor(diff / 60_000) % 60,
-    seconds: Math.floor(diff / 1_000) % 60,
-    live: diff === 0,
-  };
-}
 
 function TrailerEmbed({ title, comingSoon }: { title: string; comingSoon: string }) {
   const [playing, setPlaying] = useState(false);
@@ -142,13 +123,11 @@ function EpisodeCard({
   episode,
   title,
   label,
-  lockedLabel,
   index,
 }: {
   episode: (typeof EPISODES)[number];
   title: string;
   label: string;
-  lockedLabel: string;
   index: number;
 }) {
   const [playing, setPlaying] = useState(false);
@@ -203,7 +182,7 @@ function EpisodeCard({
                   className="font-mono text-xs tracking-wider text-off-white/80"
                   style={{ fontFamily: "var(--font-mono)" }}
                 >
-                  {lockedLabel}
+                  COMING {episode.date}
                 </span>
               </div>
             )}
@@ -215,7 +194,7 @@ function EpisodeCard({
                 className="font-mono text-xs tracking-wider uppercase"
                 style={{ fontFamily: "var(--font-mono)", color: VOID }}
               >
-                {label} {String(episode.num).padStart(2, "0")}
+                {label} {String(episode.num).padStart(2, "0")} · {episode.date}
               </span>
             </div>
           </>
@@ -233,7 +212,6 @@ function EpisodeCard({
 
 export default function CodeAlong() {
   const t = useTranslations("codeAlong");
-  const countdown = useCountdown(PREMIERE_DATE);
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
@@ -274,15 +252,6 @@ export default function CodeAlong() {
     stats.push({ stat: t(`stats.${si}.stat`), label: t(`stats.${si}.label`) });
     si++;
   }
-
-  const countdownUnits = countdown
-    ? ([
-        [countdown.days, t("days")],
-        [countdown.hours, t("hours")],
-        [countdown.minutes, t("minutes")],
-        [countdown.seconds, t("seconds")],
-      ] as const)
-    : null;
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: MINT }}>
@@ -421,48 +390,6 @@ export default function CodeAlong() {
         </div>
       </section>
 
-      {/* Countdown band — the one dark brand moment */}
-      <section
-        className="px-6 py-10 lg:px-8"
-        style={{ backgroundColor: VOID }}
-      >
-        <div className="mx-auto flex max-w-4xl flex-col items-center gap-5 sm:flex-row sm:justify-between">
-          <p
-            className="font-mono text-xs tracking-wider uppercase"
-            style={{ fontFamily: "var(--font-mono)", color: MINT }}
-          >
-            {t("countdownLabel")}
-          </p>
-          <div className="flex gap-6 sm:gap-10" aria-live="off">
-            {countdownUnits ? (
-              countdownUnits.map(([value, unit]) => (
-                <div key={unit} className="text-center">
-                  <p
-                    className="font-heading text-4xl leading-none tabular-nums sm:text-5xl"
-                    style={{ color: NEON }}
-                  >
-                    {String(value).padStart(2, "0")}
-                  </p>
-                  <p
-                    className="mt-1.5 font-mono text-xs tracking-wider uppercase text-off-white/50"
-                    style={{ fontFamily: "var(--font-mono)" }}
-                  >
-                    {unit}
-                  </p>
-                </div>
-              ))
-            ) : (
-              <p
-                className="font-heading text-4xl leading-none sm:text-5xl"
-                style={{ color: NEON }}
-              >
-                08.08
-              </p>
-            )}
-          </div>
-        </div>
-      </section>
-
       {/* Trailer — shows a coming-soon placeholder until TRAILER_ID is set */}
       <section
         className="px-6 py-16 lg:px-8 lg:py-24"
@@ -497,6 +424,27 @@ export default function CodeAlong() {
               className="mt-10"
             >
               <TrailerEmbed title={t("trailerHeadline")} comingSoon={t("trailerComingSoon")} />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="mt-8 text-center"
+            >
+              <a
+                href={SUBSCRIBE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-5 py-3 font-mono text-xs tracking-wider uppercase transition-opacity hover:opacity-85"
+                style={{
+                  fontFamily: "var(--font-mono)",
+                  backgroundColor: VOID,
+                  color: NEON,
+                }}
+              >
+                {t("subscribeCta")} &rarr;
+              </a>
             </motion.div>
         </div>
       </section>
@@ -573,7 +521,6 @@ export default function CodeAlong() {
                 episode={episode}
                 title={t(`episodeTitles.${i}`)}
                 label={t("episode")}
-                lockedLabel={t("lockedLabel")}
                 index={i}
               />
             ))}
