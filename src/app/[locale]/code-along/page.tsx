@@ -26,7 +26,7 @@ const TRAILER_ID: string | null = "Lnt0XMFkbBc";
 const PREMIERE_DATE = new Date("2026-09-12T12:00:00-04:00");
 const EPISODES: { num: number; thumb: string; youtubeId: string | null; date: string }[] = [
   { num: 1, thumb: "/images/code-along/ep-1.jpg", youtubeId: "eBKPc2M7Zwo", date: "09.12" },
-  { num: 2, thumb: "/images/code-along/ep-2.jpg", youtubeId: null, date: "09.19" },
+  { num: 2, thumb: "/images/code-along/ep-2.jpg", youtubeId: "GCTxKNXo4uQ", date: "09.19" },
   { num: 3, thumb: "/images/code-along/ep-3.jpg", youtubeId: null, date: "09.26" },
   { num: 4, thumb: "/images/code-along/ep-4.jpg", youtubeId: null, date: "10.03" },
 ];
