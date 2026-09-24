@@ -8,6 +8,7 @@ import { getMessages } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { ContactProvider } from "@/components/contact-modal";
 import "../globals.css";
+import { AnalyticsListener } from "@/components/analytics-listener";
 
 const spaceMono = Space_Mono({
   variable: "--font-space-mono",
@@ -139,6 +140,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider locale={locale} messages={clientMessages}>
           <ContactProvider>{children}</ContactProvider>
           <Analytics />
+          <AnalyticsListener />
           <SpeedInsights />
         </NextIntlClientProvider>
         <GoogleAnalytics gaId="G-KJF6CKFSTP" />

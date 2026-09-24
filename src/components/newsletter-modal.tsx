@@ -10,6 +10,7 @@ import {
 } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { track } from "@/lib/ga";
 
 interface NewsletterContextType {
   openNewsletter: () => void;
@@ -101,6 +102,7 @@ export function NewsletterProvider({ children }: { children: ReactNode }) {
       }
 
       setSubmitted(true);
+      track("newsletter_signup", { source: "newsletter-modal" });
     } catch (err) {
       setError(
         err instanceof Error ? err.message : tf("somethingWentWrong")

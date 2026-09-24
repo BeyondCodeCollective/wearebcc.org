@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { LockSimple, Play, YoutubeLogo } from "@phosphor-icons/react";
 import { Nav } from "@/components/nav";
 import { useTranslations } from "next-intl";
+import { track } from "@/lib/ga";
 
 // Code Along brand palette (from the S6 brand board)
 const VOID = "#081526";
@@ -16,20 +17,23 @@ const NEON = "#F4FF70"; // sampled from the host-circle ring art
 // Code Along streams on the Beyond Code Collective channel.
 const CHANNEL_URL: string | null = "https://www.youtube.com/@BeyondCodeCollective";
 const SUBSCRIBE_URL = "https://www.youtube.com/@BeyondCodeCollective?sub_confirmation=1";
+const PLAYLIST_ID = "PLFTeSfUZ5rlQ";
+const PLAYLIST_URL = `https://www.youtube.com/playlist?list=${PLAYLIST_ID}`;
 
 // Set to the final trailer's YouTube ID when it's ready — until then the
 // trailer section shows a "coming soon" placeholder.
 const TRAILER_ID: string | null = "Lnt0XMFkbBc";
 
-// Season launches Saturday, September 12, 2026 (noon ET). Drop each episode's YouTube ID
-// here as it goes live — cards flip from locked stills to playable embeds.
-const PREMIERE_DATE = new Date("2026-09-12T12:00:00-04:00");
+// Drop each episode's YouTube ID here as it goes live — cards flip from locked
+// stills to playable embeds, and the newest one becomes the featured video.
 const EPISODES: { num: number; thumb: string; youtubeId: string | null; date: string }[] = [
   { num: 1, thumb: "/images/code-along/ep-1.jpg", youtubeId: "eBKPc2M7Zwo", date: "09.12" },
   { num: 2, thumb: "/images/code-along/ep-2.jpg", youtubeId: "GCTxKNXo4uQ", date: "09.19" },
   { num: 3, thumb: "/images/code-along/ep-3.jpg", youtubeId: null, date: "09.26" },
   { num: 4, thumb: "/images/code-along/ep-4.jpg", youtubeId: null, date: "10.03" },
 ];
+const LATEST_EPISODE = [...EPISODES].reverse().find((e) => e.youtubeId);
+const FEATURED_ID = LATEST_EPISODE?.youtubeId ?? TRAILER_ID;
 
 const HOSTS = [
   { img: "/images/code-along/host-2.png", name: "Destiney Williams" },
@@ -53,7 +57,7 @@ const GUESTS = [
 function TrailerEmbed({ title, comingSoon }: { title: string; comingSoon: string }) {
   const [playing, setPlaying] = useState(false);
 
-  if (!TRAILER_ID) {
+  if (!FEATURED_ID) {
     return (
       // The playlist card art is self-framed (neon border baked in), so it
       // gets no decorative frame of its own — that would read as a double
@@ -85,7 +89,7 @@ function TrailerEmbed({ title, comingSoon }: { title: string; comingSoon: string
     >
       {playing ? (
         <iframe
-          src={`https://www.youtube-nocookie.com/embed/${TRAILER_ID}?autoplay=1`}
+          src={`https://www.youtube-nocookie.com/embed/${FEATURED_ID}?autoplay=1`}
           title={title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
@@ -93,12 +97,15 @@ function TrailerEmbed({ title, comingSoon }: { title: string; comingSoon: string
         />
       ) : (
         <button
-          onClick={() => setPlaying(true)}
+          onClick={() => {
+            setPlaying(true);
+            track("code_along_watch", { placement: "featured", video_id: FEATURED_ID });
+          }}
           aria-label={title}
           className="absolute inset-0"
         >
           <Image
-            src={`https://i.ytimg.com/vi/${TRAILER_ID}/hqdefault.jpg`}
+            src={`https://i.ytimg.com/vi/${FEATURED_ID}/hqdefault.jpg`}
             alt={title}
             fill
             unoptimized
@@ -123,11 +130,13 @@ function EpisodeCard({
   episode,
   title,
   label,
+  linkLabel,
   index,
 }: {
   episode: (typeof EPISODES)[number];
   title: string;
   label: string;
+  linkLabel: string;
   index: number;
 }) {
   const [playing, setPlaying] = useState(false);
@@ -164,7 +173,10 @@ function EpisodeCard({
             />
             {episode.youtubeId ? (
               <button
-                onClick={() => setPlaying(true)}
+                onClick={() => {
+                  setPlaying(true);
+                  track("code_along_watch", { placement: "episode_card", video_id: episode.youtubeId });
+                }}
                 aria-label={`Play ${label} ${episode.num}`}
                 className="absolute inset-0 flex items-center justify-center"
               >
@@ -206,12 +218,33 @@ function EpisodeCard({
       >
         {title}
       </p>
+      <a
+        href={
+          episode.youtubeId
+            ? `https://www.youtube.com/watch?v=${episode.youtubeId}&list=${PLAYLIST_ID}`
+            : PLAYLIST_URL
+        }
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => {
+          if (episode.youtubeId) {
+            track("code_along_watch", { placement: "episode_link", video_id: episode.youtubeId });
+          }
+        }}
+        className="mt-2 inline-block font-mono text-xs tracking-wider uppercase underline underline-offset-4 transition-opacity hover:opacity-70"
+        style={{ fontFamily: "var(--font-mono)", color: VOID }}
+      >
+        {linkLabel} &rarr;
+      </a>
     </motion.div>
   );
 }
 
 export default function CodeAlong() {
   const t = useTranslations("codeAlong");
+  const featuredTitle = LATEST_EPISODE
+    ? t(`episodeTitles.${LATEST_EPISODE.num - 1}`)
+    : t("trailerHeadline");
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
@@ -238,6 +271,7 @@ export default function CodeAlong() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "Failed to subscribe");
       setSubmitted(true);
+      track("newsletter_signup", { source: "code-along-landing" });
     } catch (err) {
       setError(err instanceof Error ? err.message : t("error"));
     } finally {
@@ -390,7 +424,7 @@ export default function CodeAlong() {
         </div>
       </section>
 
-      {/* Trailer — shows a coming-soon placeholder until TRAILER_ID is set */}
+      {/* Featured video — newest published episode, falling back to the trailer */}
       <section
         className="px-6 py-16 lg:px-8 lg:py-24"
         style={{ backgroundColor: SIGNAL }}
@@ -407,13 +441,15 @@ export default function CodeAlong() {
                 className="font-mono text-xs tracking-wider"
                 style={{ fontFamily: "var(--font-mono)", color: `${VOID}99` }}
               >
-                {t("trailerLabel")}
+                {LATEST_EPISODE
+                  ? t("latestLabel", { num: String(LATEST_EPISODE.num).padStart(2, "0") })
+                  : t("trailerLabel")}
               </p>
               <h2
                 className="mt-4 font-heading text-[clamp(1.75rem,4vw,3rem)] leading-[0.9]"
                 style={{ color: VOID }}
               >
-                {t("trailerHeadline")}
+                {featuredTitle}
               </h2>
             </motion.div>
             <motion.div
@@ -423,7 +459,7 @@ export default function CodeAlong() {
               transition={{ delay: 0.15, duration: 0.6 }}
               className="mt-10"
             >
-              <TrailerEmbed title={t("trailerHeadline")} comingSoon={t("trailerComingSoon")} />
+              <TrailerEmbed title={featuredTitle} comingSoon={t("trailerComingSoon")} />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -521,6 +557,9 @@ export default function CodeAlong() {
                 episode={episode}
                 title={t(`episodeTitles.${i}`)}
                 label={t("episode")}
+                linkLabel={
+                  episode.youtubeId ? t("watchEpisode") : t("playlistCta", { date: episode.date })
+                }
                 index={i}
               />
             ))}
@@ -726,7 +765,7 @@ export default function CodeAlong() {
         </motion.div>
       </section>
 
-      {/* Notify signup — neon closer */}
+      {/* Email list signup — neon closer */}
       <section
         id="notify"
         className="px-6 py-16 lg:px-8 lg:py-24"

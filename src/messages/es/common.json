@@ -68,13 +68,13 @@
   },
   "banner": {
     "title": "Code Along Beyond: Music",
-    "description": "la temporada se estrena el sábado 12 de septiembre. Cuatro episodios, una app de playlists, gratis para todas las edades.",
+    "description": "ya disponible. Cuatro episodios, una app de playlists, gratis para todas las edades.",
     "cta": "Conoce Más"
   },
   "launchOverlay": {
     "badge": "Nueva Serie",
     "title": "Code Along Beyond: Music",
-    "description": "En la primera temporada de Code Along Beyond, los coanfitriones Destiney Williams y Daniel Ray crean una app de playlists de música desde cero, y builders de todas las edades programan junto a ellos. Cuatro episodios, gratis en YouTube, sin experiencia necesaria. La temporada se estrena el sábado 12 de septiembre.",
+    "description": "En la primera temporada de Code Along Beyond, los coanfitriones Destiney Williams y Daniel Ray crean una app de playlists de música desde cero, y builders de todas las edades programan junto a ellos. Cuatro episodios, gratis en YouTube, sin experiencia necesaria. Nuevos episodios cada sábado.",
     "credit": "Creado con el apoyo de Apple.",
     "sponsor": "Con el apoyo de Apple.",
     "cta": "Ver la Serie",
@@ -380,7 +380,7 @@
     "poweredBy": "PRESENTADO POR BEYOND CODE COLLECTIVE · CON EL APOYO DE APPLE",
     "description": "Code Along es la academia de programación gratuita en video creada por Beyond Code Collective: proyectos reales, construidos paso a paso, con presentadores que programan contigo. Esta temporada: crea tu propia app de playlists de música con el apoyo de Apple.",
     "episodesCta": "VER LOS EPISODIOS",
-    "countdownLabel": "LA TEMPORADA SE ESTRENA EL SÁBADO 12 DE SEPTIEMBRE",
+    "countdownLabel": "NUEVOS EPISODIOS CADA SÁBADO",
     "days": "DÍAS",
     "hours": "HRS",
     "minutes": "MIN",
@@ -409,10 +409,10 @@
     "formDescription": "Destiney y Daniel están construyendo una app de playlists desde cero, un episodio a la vez. Déjanos tu correo y te avisaremos el día que salga cada uno.",
     "firstName": "Nombre",
     "email": "Correo electrónico",
-    "submit": "AVÍSAME",
+    "submit": "ÚNETE A LA LISTA",
     "submitting": "ENVIANDO...",
     "successTitle": "ESTÁS EN LA LISTA",
-    "successMessage": "Te enviaremos un correo en cuanto salga la Temporada 1.",
+    "successMessage": "Te enviaremos un correo cada vez que salga un episodio nuevo.",
     "error": "Algo salió mal. Inténtalo de nuevo.",
     "stats": [
       {
@@ -442,10 +442,13 @@
     "subscribeCta": "SUSCRÍBETE EN YOUTUBE",
     "trailerLabel": "ADELANTO",
     "trailerHeadline": "CODE ALONG BEYOND\nMIRA EN YOUTUBE",
-    "trailerComingSoon": "LANZAMIENTO 12 SEPT.",
+    "trailerComingSoon": "PRÓXIMAMENTE",
     "guestsLabel": "CON INVITADAS ESPECIALES",
     "guestRoleInfluencer": "INVITADA ESPECIAL · EPISODIOS 1–3",
-    "guestRoleModel": "MODELO A SEGUIR · EPISODIO 4"
+    "guestRoleModel": "MODELO A SEGUIR · EPISODIO 4",
+    "latestLabel": "YA DISPONIBLE · EPISODIO {num}",
+    "watchEpisode": "Ver en YouTube",
+    "playlistCta": "Estreno {date} · Ver la playlist"
   },
   "forge": {
     "back": "WEAREBCC.ORG",

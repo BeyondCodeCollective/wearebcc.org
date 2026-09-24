@@ -22,6 +22,7 @@ import {
 } from "@phosphor-icons/react";
 import { Nav } from "@/components/nav";
 import { useTranslations } from "next-intl";
+import { track } from "@/lib/ga";
 
 const GALLERY_IMAGES = [
   { src: "/images/forge/gallery-panel.jpg", alt: "Beyond Code Centers panel discussion on stage" },
@@ -76,6 +77,7 @@ export default function TheForge() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "Failed to subscribe");
       setSubmitted(true);
+      track("newsletter_signup", { source: "the-forge-landing" });
     } catch (err) {
       setError(err instanceof Error ? err.message : t("error"));
     } finally {

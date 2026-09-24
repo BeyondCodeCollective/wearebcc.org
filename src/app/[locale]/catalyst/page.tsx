@@ -14,6 +14,7 @@ import Image from "next/image";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { useContact } from "@/components/contact-modal";
+import { track } from "@/lib/ga";
 
 const reveal = {
   initial: { opacity: 0, y: 30 },
@@ -108,6 +109,7 @@ export default function CatalystPage() {
       });
       if (res.ok) {
         setSubmitted(true);
+        track("newsletter_signup", { source: "catalyst-landing" });
         return;
       }
       setFormError(true);
