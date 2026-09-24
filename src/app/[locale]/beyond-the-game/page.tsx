@@ -7,6 +7,7 @@ import { ArrowUpRight, CheckCircle, SealCheck, UsersThree, Path } from "@phospho
 import { Nav } from "@/components/nav";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
+import { track } from "@/lib/ga";
 
 export default function AfterTheGame() {
   const t = useTranslations("atg");
@@ -39,6 +40,7 @@ export default function AfterTheGame() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "Failed to subscribe");
       setSubmitted(true);
+      track("newsletter_signup", { source: "beyond-the-game-landing" });
     } catch (err) {
       setError(err instanceof Error ? err.message : t("error"));
     } finally {

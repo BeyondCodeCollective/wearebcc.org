@@ -10,11 +10,11 @@ export async function generateMetadata({
   return {
   title: "Code Along Beyond: Music | Beyond Code Collective",
   description:
-    "Code Along Beyond: Music — Beyond Code Collective's free YouTube coding series launches Saturday, Sept 12, with support from Apple. Four episodes, one music playlist app, built from scratch.",
+    "Code Along Beyond: Music — Beyond Code Collective's free YouTube coding series, with support from Apple. New episodes weekly: one music playlist app, built from scratch.",
   openGraph: {
     title: "Code Along Beyond: Music",
     description:
-      "The free coding series returns. Season launches Saturday, Sept 12 on YouTube.",
+      "The free coding series is back. New episodes streaming now on YouTube.",
     images: [
       {
         url: "https://www.wearebcc.org/images/code-along/playlist-card-og-v4.jpg",
