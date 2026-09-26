@@ -840,5 +840,19 @@
         }
       ]
     }
+  },
+  "boardGate": {
+    "label": "[ Solo Para la Junta ]",
+    "headline1": "INFORME",
+    "headline2": "DE LA JUNTA",
+    "intro": "Este informe es para la Junta Directiva de Beyond Code Collective. Ingresa el código de acceso que recibiste de nuestro equipo.",
+    "placeholder": "Código de acceso",
+    "show": "Mostrar código de acceso",
+    "hide": "Ocultar código de acceso",
+    "error": "Ese código no funcionó. Inténtalo de nuevo.",
+    "checking": "Verificando...",
+    "submit": "Ver Informe",
+    "needAccessPre": "¿Necesitas acceso? Escribe a",
+    "needAccessPost": "y nuestro equipo te enviará un código."
   }
 }
