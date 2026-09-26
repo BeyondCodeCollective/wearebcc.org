@@ -27,6 +27,14 @@ export default function middleware(request: NextRequest) {
 
   // Partner-only static decks: require the gate cookie set by
   // /api/partner-gate, otherwise bounce to the gated viewer page.
+  // Board reports have their own gate: the partner cookie must never open them.
+  if (request.nextUrl.pathname.startsWith("/decks/board/")) {
+    if (request.cookies.get("bcc-board-gate")?.value === "1") {
+      return NextResponse.next();
+    }
+    const deck = request.nextUrl.pathname.split("/")[3] ?? "";
+    return NextResponse.redirect(new URL(`/board/${deck}`, request.url));
+  }
   if (request.nextUrl.pathname.startsWith("/decks/")) {
     if (UNGATED_DECKS.has(request.nextUrl.pathname)) {
       return NextResponse.next();

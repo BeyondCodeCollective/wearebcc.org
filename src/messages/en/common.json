@@ -840,5 +840,19 @@
         }
       ]
     }
+  },
+  "boardGate": {
+    "label": "[ Board Only ]",
+    "headline1": "BOARD",
+    "headline2": "REPORT",
+    "intro": "This report is for the Beyond Code Collective Board of Directors. Enter the access code you received from our team.",
+    "placeholder": "Access code",
+    "show": "Show access code",
+    "hide": "Hide access code",
+    "error": "That code didn't work. Please try again.",
+    "checking": "Checking...",
+    "submit": "View Board Report",
+    "needAccessPre": "Need access? Email",
+    "needAccessPost": "and our team will send you a code."
   }
 }
