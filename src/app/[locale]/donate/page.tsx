@@ -9,6 +9,7 @@ import {
 import { ArrowDown, ArrowUpRight, Play } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import Script from "next/script";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { track } from "@/lib/ga";
@@ -18,6 +19,9 @@ import {
   DONATE_VIDEO_POSTER,
   DONATE_VIDEO_SRC,
 } from "@/lib/constants";
+
+// Donorbox web component: sizes itself to the form, unlike a fixed-height iframe.
+const DboxWidget = "dbox-widget" as unknown as React.ElementType;
 
 const reveal = {
   initial: { opacity: 0, y: 30 },
@@ -366,14 +370,16 @@ export default function DonatePage() {
               transition={{ delay: 0.15, duration: 0.6 }}
               className="lg:col-span-7"
             >
-              <div className="mx-auto w-full max-w-lg bg-off-white p-2 sm:p-4">
-                <iframe
-                  src={`https://donorbox.org/embed/${DONATE_CAMPAIGN}`}
-                  title={t("give.frameTitle")}
-                  name="donorbox"
-                  allow="payment"
-                  loading="lazy"
-                  className="h-[900px] w-full border-0 sm:h-[800px]"
+              <div className="mx-auto w-full max-w-lg">
+                <DboxWidget
+                  campaign={DONATE_CAMPAIGN}
+                  type="donation_form"
+                  enable-auto-scroll="true"
+                />
+                <Script
+                  src="https://donorbox.org/widgets.js"
+                  type="module"
+                  strategy="afterInteractive"
                 />
               </div>
             </motion.div>
