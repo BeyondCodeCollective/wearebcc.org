@@ -54,6 +54,7 @@ type Card = {
   text: string;
   stat?: string;
   statSource?: string;
+  dates?: string[];
   cta: string;
   href: string;
   facilitator?: Facilitator;
@@ -429,6 +430,19 @@ export default function CatalystPage() {
                       </p>
                     </div>
                   </div>
+                )}
+                {card.dates && (
+                  <ul className="mt-5 space-y-1.5">
+                    {card.dates.map((d) => (
+                      <li
+                        key={d}
+                        className="font-mono text-sm uppercase tracking-wider text-true-black"
+                        style={{ fontFamily: "var(--font-mono)" }}
+                      >
+                        {d}
+                      </li>
+                    ))}
+                  </ul>
                 )}
                 {card.stat && (
                   <div className="mt-5 border-l-2 border-electric-green pl-3">

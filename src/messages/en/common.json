@@ -755,8 +755,12 @@
         {
           "badge": "In Partnership",
           "title": "Virtual Labs",
-          "text": "Hands-on virtual lab sessions built with our partners, where you build with emerging tech alongside facilitators and your peers. Program name and dates announcing soon.",
+          "text": "Hands-on virtual lab sessions built with our partners, where you build with emerging tech alongside facilitators and your peers. Join one of the upcoming sessions below.",
           "cta": "Get Notified",
+          "dates": [
+            "Wednesday, October 14, 2026 | 2-3:30pm EST",
+            "Thursday, November 19, 2026 | 6-7:30pm EST"
+          ],
           "href": "https://bccacademy.io/bcc/catalyst-labs"
         }
       ]
