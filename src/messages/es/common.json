@@ -655,8 +655,14 @@
       ],
       "ctaPrimary": "Guarda un asiento",
       "ctaSecondary": "Mira el año",
-      "photoAlt1": "Estudiantes con sudaderas azul marino de Beyond Code escuchando durante una sesión",
-      "photoAlt2": "Un cojín que dice The Future of Tech Starts Here"
+      "photoAlts": [
+        "Una mentora se inclina sobre dos niños que trabajan en una laptop",
+        "Un adolescente sonriente con camiseta y credencial de Beyond Code Collective junto a una ventana luminosa",
+        "Niños riendo con un mentor frente a un mural colorido",
+        "Un niño levanta la vista de su laptop durante una sesión",
+        "Un salón amplio de estudiantes con laptops mientras un mentor camina entre ellos",
+        "Una cohorte completa con camisetas de Beyond Code Collective posando junto a una baranda en un jardín"
+      ]
     },
     "seat": {
       "quote": "Gratis significa que alguien guardó ese asiento antes de que llegara quien se sentó en él.",

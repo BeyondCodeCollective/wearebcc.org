@@ -655,8 +655,14 @@
       ],
       "ctaPrimary": "Hold a seat",
       "ctaSecondary": "Watch the year",
-      "photoAlt1": "Students in navy Beyond Code sweatshirts listening during a session",
-      "photoAlt2": "A cushion reading The Future of Tech Starts Here"
+      "photoAlts": [
+        "A mentor leans over two boys working at a laptop",
+        "A smiling teen in a Beyond Code Collective tee and lanyard by a bright window",
+        "Boys laughing with a mentor in front of a colorful mural",
+        "A boy looks up from his laptop during a session",
+        "A wide room of learners on laptops while a mentor walks through",
+        "A full cohort in Beyond Code Collective tees posing along a garden railing"
+      ]
     },
     "seat": {
       "quote": "Free means somebody held that seat before the person who sat in it arrived.",

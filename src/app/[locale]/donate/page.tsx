@@ -23,6 +23,82 @@ const reveal = {
 
 type Fact = { n: string; t: string };
 
+const HERO_PHOTOS = [
+  { src: "/images/donate/hero-1.jpg", pos: "50% 35%" },
+  { src: "/images/donate/hero-2.jpg", pos: "78% 50%" },
+  { src: "/images/donate/hero-3.jpg", pos: "42% 50%" },
+  { src: "/images/donate/hero-4.jpg", pos: "66% 40%" },
+  { src: "/images/donate/hero-5.jpg", pos: "50% 50%" },
+  { src: "/images/donate/hero-6.jpg", pos: "50% 62%" },
+];
+
+/** Crossfading photo stage. Ticks below are the progress bar and the controls. */
+function HeroStage({
+  photos,
+}: {
+  photos: { src: string; pos: string; alt: string }[];
+}) {
+  const reduce = useReducedMotion();
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    if (reduce) return;
+    const id = setInterval(
+      () => setActive((n) => (n + 1) % photos.length),
+      5200
+    );
+    return () => clearInterval(id);
+  }, [reduce, photos.length, active]);
+
+  return (
+    <div className="lg:col-span-6">
+      <div className="relative aspect-[4/3] w-full overflow-hidden bg-dark-cobalt">
+        {photos.map((p, i) => (
+          <motion.div
+            key={p.src}
+            initial={false}
+            animate={{ opacity: i === active ? 1 : 0 }}
+            transition={{ duration: reduce ? 0 : 1.1, ease: "easeInOut" }}
+            className="absolute inset-0"
+            aria-hidden={i !== active}
+          >
+            <Image
+              src={p.src}
+              alt={p.alt}
+              fill
+              priority={i === 0}
+              quality={88}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+              style={{ objectPosition: p.pos }}
+            />
+          </motion.div>
+        ))}
+      </div>
+      <div className="mt-3 flex gap-2">
+        {photos.map((p, i) => (
+          <button
+            key={p.src}
+            type="button"
+            onClick={() => setActive(i)}
+            aria-label={`${i + 1} / ${photos.length}`}
+            aria-current={i === active}
+            className="group flex-1 py-2"
+          >
+            <span
+              className={`block h-1 transition-colors ${
+                i === active
+                  ? "bg-electric-green"
+                  : "bg-off-white/30 group-hover:bg-off-white/60"
+              }`}
+            />
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 /** Cycles the people a seat is held for. Static first item under reduced motion. */
 function SeatHolder({ holders }: { holders: string[] }) {
   const reduce = useReducedMotion();
@@ -130,6 +206,8 @@ function FactRow({ n, t, dark }: Fact & { dark?: boolean }) {
 export default function DonatePage() {
   const t = useTranslations("donate");
   const holders = t.raw("hero.holders") as string[];
+  const alts = t.raw("hero.photoAlts") as string[];
+  const photos = HERO_PHOTOS.map((p, i) => ({ ...p, alt: alts[i] }));
   const ledger = t.raw("proof.ledger") as Fact[];
 
   return (
@@ -139,7 +217,7 @@ export default function DonatePage() {
         {/* ── Hero ─────────────────────────────────────────── */}
         <section className="relative overflow-hidden bg-true-black px-6 pb-20 pt-32 lg:px-8 lg:pb-28 lg:pt-40">
           <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-12">
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-6">
               <motion.h1
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -189,38 +267,7 @@ export default function DonatePage() {
               </motion.div>
             </div>
 
-            {/* Tilted photo pair; the larger one bleeds toward the page edge */}
-            <div className="relative mx-auto h-[26rem] w-full max-w-md sm:h-[32rem] lg:col-span-5 lg:mx-0 lg:h-[36rem] lg:max-w-none">
-              <motion.div
-                initial={{ opacity: 0, rotate: 0, y: 30 }}
-                animate={{ opacity: 1, rotate: -4, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute left-0 top-0 h-[68%] w-[78%] overflow-hidden"
-              >
-                <Image
-                  src="/images/community/community-02.jpg"
-                  alt={t("hero.photoAlt1")}
-                  fill
-                  sizes="(min-width: 1024px) 28vw, 70vw"
-                  className="object-cover"
-                  priority
-                />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, rotate: 0, y: 30 }}
-                animate={{ opacity: 1, rotate: 5, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute bottom-0 right-0 h-[58%] w-[66%] overflow-hidden border-4 border-electric-green lg:-mr-10"
-              >
-                <Image
-                  src="/images/community/community-04.jpg"
-                  alt={t("hero.photoAlt2")}
-                  fill
-                  sizes="(min-width: 1024px) 24vw, 60vw"
-                  className="object-cover"
-                />
-              </motion.div>
-            </div>
+            <HeroStage photos={photos} />
           </div>
         </section>
 
