@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, usePathname, Link } from "@/i18n/navigation";
 import { GlobeSimple, CaretDown } from "@phosphor-icons/react";
-import { SITE } from "@/lib/constants";
 import { Logo } from "./ui/logo";
 import { useContact } from "./contact-modal";
 
@@ -290,15 +289,13 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
               </div>
             </div>
 
-            <a
-              href={SITE.donateUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/donate"
               className="bg-electric-green px-6 py-3 font-mono text-xs tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80"
               style={{ fontFamily: "var(--font-mono)" }}
             >
               {t("donate")}
-            </a>
+            </Link>
           </div>
 
           {/* Mobile: language toggle + hamburger */}
@@ -541,15 +538,13 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
               </div>
             </div>
 
-            <a
-              href={SITE.donateUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/donate"
               className="mt-4 bg-electric-green px-8 py-4 font-mono text-sm tracking-wider uppercase text-true-black"
               style={{ fontFamily: "var(--font-mono)" }}
             >
               {t("donate")}
-            </a>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

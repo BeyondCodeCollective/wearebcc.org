@@ -640,6 +640,106 @@
     "employer": "Employer",
     "partnerDonor": "Partner / Donor"
   },
+  "donate": {
+    "hero": {
+      "line1": "WHO'S CODING",
+      "line2": "YOUR FUTURE?",
+      "lead": "Every seat in a Beyond Code room is free. Somebody held this one for",
+      "holders": [
+        "a 17-year-old",
+        "a 71-year-old",
+        "a career changer",
+        "a former pro athlete",
+        "a grandparent handed a phone and no instruction",
+        "a worker whose job is being rewritten by AI"
+      ],
+      "ctaPrimary": "Hold a seat",
+      "ctaSecondary": "Watch the year",
+      "photoAlt1": "Students in navy Beyond Code sweatshirts listening during a session",
+      "photoAlt2": "A cushion reading The Future of Tech Starts Here"
+    },
+    "seat": {
+      "quote": "Free means somebody held that seat before the person who sat in it arrived.",
+      "body": "A 17-year-old and a 71-year-old learn AI at the same table. A former pro athlete studies for a certification next to a career changer. No one needs a prerequisite to sit down, and every session has a live teacher."
+    },
+    "video": {
+      "headline": "THE YEAR, IN ONE WATCH",
+      "body": "A look back at who sat down this year, and what they built once they did.",
+      "soonTitle": "Our year-end video lands here",
+      "soonBody": "Check back soon.",
+      "play": "Play the year-end video",
+      "iframeTitle": "Beyond Code Collective year-end video"
+    },
+    "middle": {
+      "headline1": "TECH'S MIDDLE",
+      "headline2": "IS STARVED",
+      "body": "Tech has a well-funded front end and a starved middle. There is real money to introduce kids to code and real money to place credentialed engineers. Almost everyone else sits in between.",
+      "front": "Intro to code",
+      "back": "Placed engineers",
+      "funded": "Funded",
+      "mid": "The middle",
+      "midNote": "Beyond Code Collective",
+      "people": [
+        "The career changer",
+        "The out-of-school 19-year-old",
+        "The worker whose job is being quietly rewritten by AI",
+        "The grandparent handed a phone and no instruction"
+      ],
+      "close": "Four generations, one table, built with each community rather than dropped into it.",
+      "photoAlt": "A full room of Beyond Code students and mentors posing together"
+    },
+    "proof": {
+      "big": "100%",
+      "bigLabel": "of Center learners taught what they learned to someone else.",
+      "ledgerTitle": "What a seat has done",
+      "ledger": [
+        {
+          "n": "460+",
+          "t": "learners served across programs"
+        },
+        {
+          "n": "145",
+          "t": "adults completed the Catalyst workforce program"
+        },
+        {
+          "n": "81.8%",
+          "t": "CompTIA certification pass rate among Catalyst participants"
+        },
+        {
+          "n": "80%",
+          "t": "of Center learners reported more confidence with technology"
+        }
+      ],
+      "momentTitle": "Why now",
+      "moment": [
+        {
+          "n": "27%",
+          "t": "of U.S. workers worry technology could make their job obsolete, double 2017"
+        },
+        {
+          "n": "2 in 3",
+          "t": "workers say AI has already changed their job"
+        },
+        {
+          "n": "1 in 3",
+          "t": "say their employer offers AI training"
+        }
+      ]
+    },
+    "give": {
+      "headline1": "HOLD",
+      "headline2": "A SEAT",
+      "body": "Every seat in a Beyond Code room is free. Your gift holds the next one.",
+      "trust": "Beyond Code Collective is a 501(c)(3) nonprofit. EIN 45-4930539. Gifts are tax-deductible to the extent allowed by law.",
+      "frameTitle": "Donation form",
+      "fallback": "Form not loading? Give on Donorbox"
+    },
+    "close": {
+      "headline": "THE ROOM IS OPEN",
+      "cta": "Hold a seat",
+      "photoAlt": "A speaker addressing a packed room at a Beyond Code event"
+    }
+  },
   "catalyst": {
     "hero": {
       "wordmarkTop": "BEYOND",

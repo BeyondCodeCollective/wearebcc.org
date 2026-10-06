@@ -640,6 +640,106 @@
     "employer": "Empleador",
     "partnerDonor": "Socio / Donante"
   },
+  "donate": {
+    "hero": {
+      "line1": "¿QUIÉN PROGRAMA",
+      "line2": "TU FUTURO?",
+      "lead": "Cada asiento en un salón de Beyond Code es gratis. Alguien guardó este para",
+      "holders": [
+        "una persona de 17 años",
+        "una persona de 71 años",
+        "alguien que cambia de carrera",
+        "un exatleta profesional",
+        "una abuela o abuelo con un teléfono y sin instrucciones",
+        "alguien cuyo trabajo está siendo reescrito por la IA"
+      ],
+      "ctaPrimary": "Guarda un asiento",
+      "ctaSecondary": "Mira el año",
+      "photoAlt1": "Estudiantes con sudaderas azul marino de Beyond Code escuchando durante una sesión",
+      "photoAlt2": "Un cojín que dice The Future of Tech Starts Here"
+    },
+    "seat": {
+      "quote": "Gratis significa que alguien guardó ese asiento antes de que llegara quien se sentó en él.",
+      "body": "Una persona de 17 años y otra de 71 aprenden IA en la misma mesa. Un exatleta profesional estudia para una certificación junto a alguien que cambia de carrera. Nadie necesita un requisito previo para sentarse, y cada sesión tiene un instructor en vivo."
+    },
+    "video": {
+      "headline": "EL AÑO, EN UN VIDEO",
+      "body": "Un vistazo a quiénes se sentaron este año y lo que construyeron al hacerlo.",
+      "soonTitle": "Nuestro video de fin de año llega aquí",
+      "soonBody": "Vuelve pronto.",
+      "play": "Reproducir el video de fin de año",
+      "iframeTitle": "Video de fin de año de Beyond Code Collective"
+    },
+    "middle": {
+      "headline1": "EL MEDIO",
+      "headline2": "DE LA TECNOLOGÍA",
+      "body": "La tecnología tiene un frente bien financiado y un medio desatendido. Hay dinero real para presentar el código a los niños y para colocar a ingenieros certificados. Casi todos los demás están en el medio.",
+      "front": "Introducción al código",
+      "back": "Ingenieros colocados",
+      "funded": "Financiado",
+      "mid": "El medio",
+      "midNote": "Beyond Code Collective",
+      "people": [
+        "Quien cambia de carrera",
+        "Quien tiene 19 años y está fuera de la escuela",
+        "Quien ve su trabajo reescrito en silencio por la IA",
+        "Quien recibe un teléfono sin instrucciones"
+      ],
+      "close": "Cuatro generaciones, una mesa, construida con cada comunidad en lugar de dejarla caer sobre ella.",
+      "photoAlt": "Un salón lleno de estudiantes y mentores de Beyond Code posando juntos"
+    },
+    "proof": {
+      "big": "100%",
+      "bigLabel": "de quienes aprenden en los Centros le enseñaron lo aprendido a otra persona.",
+      "ledgerTitle": "Lo que ha hecho un asiento",
+      "ledger": [
+        {
+          "n": "460+",
+          "t": "estudiantes atendidos en todos los programas"
+        },
+        {
+          "n": "145",
+          "t": "adultos completaron el programa laboral Catalyst"
+        },
+        {
+          "n": "81.8%",
+          "t": "tasa de aprobación de CompTIA entre participantes de Catalyst"
+        },
+        {
+          "n": "80%",
+          "t": "de quienes aprenden en los Centros ganaron más confianza con la tecnología"
+        }
+      ],
+      "momentTitle": "Por qué ahora",
+      "moment": [
+        {
+          "n": "27%",
+          "t": "de los trabajadores de EE. UU. teme que la tecnología deje obsoleto su empleo, el doble que en 2017"
+        },
+        {
+          "n": "2 de 3",
+          "t": "trabajadores dicen que la IA ya cambió su trabajo"
+        },
+        {
+          "n": "1 de 3",
+          "t": "dice que su empleador ofrece capacitación en IA"
+        }
+      ]
+    },
+    "give": {
+      "headline1": "GUARDA",
+      "headline2": "UN ASIENTO",
+      "body": "Cada asiento en un salón de Beyond Code es gratis. Tu donación guarda el siguiente.",
+      "trust": "Beyond Code Collective es una organización sin fines de lucro 501(c)(3). EIN 45-4930539. Las donaciones son deducibles de impuestos en la medida permitida por la ley.",
+      "frameTitle": "Formulario de donación",
+      "fallback": "¿No carga el formulario? Dona en Donorbox"
+    },
+    "close": {
+      "headline": "EL SALÓN ESTÁ ABIERTO",
+      "cta": "Guarda un asiento",
+      "photoAlt": "Una persona hablando ante un salón lleno en un evento de Beyond Code"
+    }
+  },
   "catalyst": {
     "hero": {
       "wordmarkTop": "BEYOND",

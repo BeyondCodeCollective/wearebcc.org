@@ -6,6 +6,10 @@ export const SITE = {
   donateUrl: "https://donorbox.org/beyondcodecollective",
 } as const;
 
+/** YouTube video id for the year-end video on /donate. Empty shows a "coming soon" state. */
+export const DONATE_VIDEO_ID = "";
+export const DONATE_CAMPAIGN = "bcc-whos-coding-your-future";
+
 export const NAV_LINKS = [
   { label: "About", href: "#about" },
   { label: "Initiatives", href: "#initiatives" },

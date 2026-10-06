@@ -12,6 +12,7 @@ const PAGES = [
   "",
   "/team",
   "/catalyst",
+  "/donate",
   "/news",
   "/quiz",
   "/beyond-code-centers",
