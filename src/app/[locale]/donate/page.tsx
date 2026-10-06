@@ -334,75 +334,60 @@ export default function DonatePage() {
 
         {/* ── Give ─────────────────────────────────────────── */}
         <section id="give" className="bg-cobalt px-6 py-16 lg:px-8 lg:py-24">
-          <div className="mx-auto grid max-w-7xl gap-x-12 gap-y-10 lg:grid-cols-12 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-y-8">
-            {/* DOM order is headline, ticket, supporting text so the form sits
-                right under the headline on phones; lg pins the columns. */}
-            <motion.h2
-              {...reveal}
-              className="font-heading text-[clamp(3.25rem,9vw,6rem)] leading-[0.86] text-off-white lg:col-span-5 lg:row-start-1"
-            >
-              {t("give.headline1")}
-              <br />
-              <span className="text-electric-green">{t("give.headline2")}</span>
-            </motion.h2>
-
-            <motion.div
-              {...reveal}
-              transition={{ delay: 0.15, duration: 0.6 }}
-              className="lg:col-span-7 lg:col-start-6 lg:row-span-2 lg:row-start-1"
-            >
-              {/* Seat ticket: stub on top, perforated tear line, form below */}
-              <div className="mx-auto w-full max-w-[473px] bg-off-white lg:ml-auto lg:mr-0">
-                <div className="relative flex items-start justify-between gap-6 px-5 py-5 text-true-black">
-                  <p
-                    className="whitespace-nowrap font-mono text-xs uppercase tracking-wider"
-                    style={{ fontFamily: "var(--font-mono)" }}
-                  >
-                    {t("give.stubLeft")}
-                  </p>
-                  <p
-                    className="hidden text-right font-mono text-xs uppercase tracking-wider sm:block"
-                    style={{ fontFamily: "var(--font-mono)" }}
-                  >
-                    {t("give.stubRight")}
-                  </p>
-                  <span
-                    aria-hidden="true"
-                    className="absolute -bottom-3.5 -left-3.5 z-10 h-7 w-7 rounded-full bg-cobalt"
-                  />
-                  <span
-                    aria-hidden="true"
-                    className="absolute -bottom-3.5 -right-3.5 z-10 h-7 w-7 rounded-full bg-cobalt"
-                  />
-                </div>
-                <div className="mx-4 border-t-2 border-dashed border-true-black/30" />
-                <div className="px-0 pb-0 pt-3 sm:px-6 sm:pb-6 sm:pt-4">
-                  <DboxWidget
-                    campaign={DONATE_CAMPAIGN}
-                    type="donation_form"
-                    enable-auto-scroll="true"
-                  />
-                  <Script
-                    src="https://donorbox.org/widgets.js"
-                    type="module"
-                    strategy="afterInteractive"
-                  />
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              {...reveal}
-              transition={{ delay: 0.1, duration: 0.6 }}
-              className="lg:col-span-5 lg:row-start-2"
-            >
-              <p className="max-w-md font-heading text-[clamp(1.5rem,2.6vw,2rem)] normal-case leading-tight tracking-tight text-off-white">
+          {/* One ticket: text is the stub, form is the main half, split by a
+              perforated tear line. Notches are cobalt circles on the tear line.
+              DOM order (text, form, legal) keeps the form high on phones. */}
+          <motion.div
+            {...reveal}
+            className="relative mx-auto grid max-w-6xl bg-off-white lg:grid-cols-[5fr_7fr] lg:grid-rows-[1fr_auto]"
+          >
+            <div className="p-6 sm:p-10 lg:col-start-1 lg:row-start-1 lg:p-12 lg:pr-14">
+              <h2 className="font-heading text-[clamp(3.25rem,9vw,6rem)] leading-[0.86] text-true-black">
+                {t("give.headline1")}
+                <br />
+                <span className="text-cobalt">{t("give.headline2")}</span>
+              </h2>
+              <p className="mt-8 max-w-md font-heading text-[clamp(1.5rem,2.6vw,2rem)] normal-case leading-tight tracking-tight text-true-black">
                 {t("seat.quote")}
               </p>
-              <p className="mt-5 max-w-sm text-lg leading-relaxed text-off-white">
+              <p className="mt-5 max-w-sm text-lg leading-relaxed text-true-black/85">
                 {t("give.body")}
               </p>
-              <p className="mt-8 max-w-sm text-sm leading-relaxed text-off-white/90">
+            </div>
+
+            <div className="relative border-y-2 border-dashed border-true-black/30 bg-white p-0 sm:p-8 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:flex lg:justify-center lg:border-y-0 lg:border-l-2 lg:p-10">
+              <span
+                aria-hidden="true"
+                className="absolute -left-3.5 -top-3.5 z-10 h-7 w-7 rounded-full bg-cobalt"
+              />
+              <span
+                aria-hidden="true"
+                className="absolute -right-3.5 -top-3.5 z-10 h-7 w-7 rounded-full bg-cobalt lg:-bottom-3.5 lg:-left-3.5 lg:right-auto lg:top-auto"
+              />
+              <span
+                aria-hidden="true"
+                className="absolute -bottom-3.5 -left-3.5 z-10 h-7 w-7 rounded-full bg-cobalt lg:hidden"
+              />
+              <span
+                aria-hidden="true"
+                className="absolute -bottom-3.5 -right-3.5 z-10 h-7 w-7 rounded-full bg-cobalt lg:hidden"
+              />
+              <div className="w-full max-w-[425px]">
+                <DboxWidget
+                  campaign={DONATE_CAMPAIGN}
+                  type="donation_form"
+                  enable-auto-scroll="true"
+                />
+                <Script
+                  src="https://donorbox.org/widgets.js"
+                  type="module"
+                  strategy="afterInteractive"
+                />
+              </div>
+            </div>
+
+            <div className="p-6 sm:p-10 lg:col-start-1 lg:row-start-2 lg:self-end lg:p-12 lg:pr-14 lg:pt-0">
+              <p className="max-w-sm text-sm leading-relaxed text-grey-3">
                 {t("give.trust")}
               </p>
               <a
@@ -412,23 +397,14 @@ export default function DonatePage() {
                 onClick={() =>
                   track("donate_click", { source: "donate-fallback" })
                 }
-                className="mt-6 inline-flex items-center gap-1.5 font-mono text-sm uppercase tracking-wider text-electric-green underline-offset-4 hover:underline"
+                className="mt-5 inline-flex items-center gap-1.5 font-mono text-sm uppercase tracking-wider text-dark-cobalt underline-offset-4 hover:underline"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {t("give.fallback")}
                 <ArrowUpRight size={14} weight="bold" />
               </a>
-              <div className="relative mt-14 hidden aspect-[3/4] w-56 -rotate-3 overflow-hidden border-4 border-off-white lg:block">
-                <Image
-                  src="/images/community/community-04.jpg"
-                  alt={t("give.photoAlt")}
-                  fill
-                  sizes="224px"
-                  className="object-cover"
-                />
-              </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </section>
 
         {/* ── Year-end video ───────────────────────────────── */}
