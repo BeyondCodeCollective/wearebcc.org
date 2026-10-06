@@ -1,11 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import {
-  AnimatePresence,
-  motion,
-  useReducedMotion,
-} from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowDown, ArrowUpRight, Play } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -60,8 +56,11 @@ function HeroStage({
     if (reduce || !allLoaded) return;
     const id = setInterval(
       () =>
-        setShown((s) => ({ active: (s.active + 1) % photos.length, prev: s.active })),
-      5200
+        setShown((s) => ({
+          active: (s.active + 1) % photos.length,
+          prev: s.active,
+        })),
+      5200,
     );
     return () => clearInterval(id);
   }, [reduce, allLoaded, photos.length, active]);
@@ -309,7 +308,9 @@ export default function DonatePage() {
               >
                 <a
                   href="#give"
-                  onClick={() => track("donate_click", { source: "donate-hero" })}
+                  onClick={() =>
+                    track("donate_click", { source: "donate-hero" })
+                  }
                   className="inline-flex items-center justify-center gap-2 bg-electric-green px-7 py-4 font-mono text-xs uppercase tracking-wider text-true-black transition-transform hover:-translate-y-0.5"
                   style={{ fontFamily: "var(--font-mono)" }}
                 >
@@ -333,17 +334,69 @@ export default function DonatePage() {
 
         {/* ── Give ─────────────────────────────────────────── */}
         <section id="give" className="bg-cobalt px-6 py-16 lg:px-8 lg:py-24">
-          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12">
+          <div className="mx-auto grid max-w-7xl gap-x-12 gap-y-10 lg:grid-cols-12 lg:grid-rows-[auto_1fr] lg:items-start lg:gap-y-8">
+            {/* DOM order is headline, ticket, supporting text so the form sits
+                right under the headline on phones; lg pins the columns. */}
+            <motion.h2
+              {...reveal}
+              className="font-heading text-[clamp(3.25rem,9vw,6rem)] leading-[0.86] text-off-white lg:col-span-5 lg:row-start-1"
+            >
+              {t("give.headline1")}
+              <br />
+              <span className="text-electric-green">{t("give.headline2")}</span>
+            </motion.h2>
+
             <motion.div
               {...reveal}
-              className="lg:col-span-5 lg:sticky lg:top-32 lg:self-start"
+              transition={{ delay: 0.15, duration: 0.6 }}
+              className="lg:col-span-7 lg:col-start-6 lg:row-span-2 lg:row-start-1"
             >
-              <h2 className="font-heading text-[clamp(3.25rem,9vw,6rem)] leading-[0.86] text-off-white">
-                {t("give.headline1")}
-                <br />
-                <span className="text-electric-green">{t("give.headline2")}</span>
-              </h2>
-              <p className="mt-8 max-w-md font-heading text-[clamp(1.5rem,2.6vw,2rem)] normal-case leading-tight tracking-tight text-off-white">
+              {/* Seat ticket: stub on top, perforated tear line, form below */}
+              <div className="mx-auto w-full max-w-[473px] bg-off-white lg:ml-auto lg:mr-0">
+                <div className="relative flex items-start justify-between gap-6 px-5 py-5 text-true-black">
+                  <p
+                    className="whitespace-nowrap font-mono text-xs uppercase tracking-wider"
+                    style={{ fontFamily: "var(--font-mono)" }}
+                  >
+                    {t("give.stubLeft")}
+                  </p>
+                  <p
+                    className="hidden text-right font-mono text-xs uppercase tracking-wider sm:block"
+                    style={{ fontFamily: "var(--font-mono)" }}
+                  >
+                    {t("give.stubRight")}
+                  </p>
+                  <span
+                    aria-hidden="true"
+                    className="absolute -bottom-3.5 -left-3.5 z-10 h-7 w-7 rounded-full bg-cobalt"
+                  />
+                  <span
+                    aria-hidden="true"
+                    className="absolute -bottom-3.5 -right-3.5 z-10 h-7 w-7 rounded-full bg-cobalt"
+                  />
+                </div>
+                <div className="mx-4 border-t-2 border-dashed border-true-black/30" />
+                <div className="px-0 pb-0 pt-3 sm:px-6 sm:pb-6 sm:pt-4">
+                  <DboxWidget
+                    campaign={DONATE_CAMPAIGN}
+                    type="donation_form"
+                    enable-auto-scroll="true"
+                  />
+                  <Script
+                    src="https://donorbox.org/widgets.js"
+                    type="module"
+                    strategy="afterInteractive"
+                  />
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              {...reveal}
+              transition={{ delay: 0.1, duration: 0.6 }}
+              className="lg:col-span-5 lg:row-start-2"
+            >
+              <p className="max-w-md font-heading text-[clamp(1.5rem,2.6vw,2rem)] normal-case leading-tight tracking-tight text-off-white">
                 {t("seat.quote")}
               </p>
               <p className="mt-5 max-w-sm text-lg leading-relaxed text-off-white">
@@ -356,30 +409,22 @@ export default function DonatePage() {
                 href={`https://donorbox.org/${DONATE_CAMPAIGN}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => track("donate_click", { source: "donate-fallback" })}
+                onClick={() =>
+                  track("donate_click", { source: "donate-fallback" })
+                }
                 className="mt-6 inline-flex items-center gap-1.5 font-mono text-sm uppercase tracking-wider text-electric-green underline-offset-4 hover:underline"
                 style={{ fontFamily: "var(--font-mono)" }}
               >
                 {t("give.fallback")}
                 <ArrowUpRight size={14} weight="bold" />
               </a>
-            </motion.div>
-
-            <motion.div
-              {...reveal}
-              transition={{ delay: 0.15, duration: 0.6 }}
-              className="lg:col-span-7"
-            >
-              <div className="mx-auto w-full max-w-lg">
-                <DboxWidget
-                  campaign={DONATE_CAMPAIGN}
-                  type="donation_form"
-                  enable-auto-scroll="true"
-                />
-                <Script
-                  src="https://donorbox.org/widgets.js"
-                  type="module"
-                  strategy="afterInteractive"
+              <div className="relative mt-14 hidden aspect-[3/4] w-56 -rotate-3 overflow-hidden border-4 border-off-white lg:block">
+                <Image
+                  src="/images/community/community-04.jpg"
+                  alt={t("give.photoAlt")}
+                  fill
+                  sizes="224px"
+                  className="object-cover"
                 />
               </div>
             </motion.div>
@@ -387,7 +432,10 @@ export default function DonatePage() {
         </section>
 
         {/* ── Year-end video ───────────────────────────────── */}
-        <section id="video" className="bg-true-black px-6 py-20 lg:px-8 lg:py-28">
+        <section
+          id="video"
+          className="bg-true-black px-6 py-20 lg:px-8 lg:py-28"
+        >
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12 lg:items-end">
             <motion.div {...reveal} className="lg:col-span-8">
               <VideoSlot
@@ -428,7 +476,9 @@ export default function DonatePage() {
               transition={{ delay: 0.15, duration: 0.6 }}
               className="text-true-black lg:col-span-6"
             >
-              <h2 className="font-heading text-2xl">{t("proof.ledgerTitle")}</h2>
+              <h2 className="font-heading text-2xl">
+                {t("proof.ledgerTitle")}
+              </h2>
               <dl className="mt-4">
                 {ledger.map((f) => (
                   <FactRow key={f.n} {...f} />
