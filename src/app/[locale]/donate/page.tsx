@@ -38,7 +38,11 @@ function HeroStage({
   photos: { src: string; pos: string; alt: string }[];
 }) {
   const reduce = useReducedMotion();
-  const [active, setActive] = useState(0);
+  // `prev` stays fully opaque underneath while `active` fades in on top. Fading
+  // both at once dips through the dark background and reads as a flicker.
+  const [{ active, prev }, setShown] = useState({ active: 0, prev: -1 });
+  const go = (i: number) =>
+    setShown((s) => (i === s.active ? s : { active: i, prev: s.active }));
   const [loaded, setLoaded] = useState(0);
   const allLoaded = loaded >= photos.length;
 
@@ -46,7 +50,8 @@ function HeroStage({
   useEffect(() => {
     if (reduce || !allLoaded) return;
     const id = setInterval(
-      () => setActive((n) => (n + 1) % photos.length),
+      () =>
+        setShown((s) => ({ active: (s.active + 1) % photos.length, prev: s.active })),
       5200
     );
     return () => clearInterval(id);
@@ -59,9 +64,14 @@ function HeroStage({
           <motion.div
             key={p.src}
             initial={false}
-            animate={{ opacity: i === active ? 1 : 0 }}
-            transition={{ duration: reduce ? 0 : 1.1, ease: "easeInOut" }}
-            className="absolute inset-0"
+            animate={{ opacity: i === active || i === prev ? 1 : 0 }}
+            transition={
+              i === active && !reduce
+                ? { duration: 1.1, ease: "easeInOut" }
+                : { duration: 0 }
+            }
+            className="absolute inset-0 will-change-[opacity]"
+            style={{ zIndex: i === active ? 2 : i === prev ? 1 : 0 }}
             aria-hidden={i !== active}
           >
             <Image
@@ -84,7 +94,7 @@ function HeroStage({
           <button
             key={p.src}
             type="button"
-            onClick={() => setActive(i)}
+            onClick={() => go(i)}
             aria-label={`${i + 1} / ${photos.length}`}
             aria-current={i === active}
             className="group flex-1 py-2"
