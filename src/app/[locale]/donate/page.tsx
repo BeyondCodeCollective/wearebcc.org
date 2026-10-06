@@ -25,11 +25,10 @@ type Fact = { n: string; t: string };
 
 const HERO_PHOTOS = [
   { src: "/images/donate/hero-1.jpg", pos: "50% 35%" },
-  { src: "/images/donate/hero-2.jpg", pos: "78% 50%" },
-  { src: "/images/donate/hero-3.jpg", pos: "42% 50%" },
-  { src: "/images/donate/hero-4.jpg", pos: "66% 40%" },
-  { src: "/images/donate/hero-5.jpg", pos: "50% 50%" },
-  { src: "/images/donate/hero-6.jpg", pos: "50% 62%" },
+  { src: "/images/donate/hero-2.jpg", pos: "50% 25%" },
+  { src: "/images/donate/hero-3.jpg", pos: "50% 28%" },
+  { src: "/images/donate/hero-4.jpg", pos: "50% 30%" },
+  { src: "/images/donate/hero-5.jpg", pos: "50% 28%" },
 ];
 
 /** Crossfading photo stage. Ticks below are the progress bar and the controls. */
@@ -40,19 +39,22 @@ function HeroStage({
 }) {
   const reduce = useReducedMotion();
   const [active, setActive] = useState(0);
+  const [loaded, setLoaded] = useState(0);
+  const allLoaded = loaded >= photos.length;
 
+  // Wait for every photo before rotating, so a slow image never pops in mid-fade.
   useEffect(() => {
-    if (reduce) return;
+    if (reduce || !allLoaded) return;
     const id = setInterval(
       () => setActive((n) => (n + 1) % photos.length),
       5200
     );
     return () => clearInterval(id);
-  }, [reduce, photos.length, active]);
+  }, [reduce, allLoaded, photos.length, active]);
 
   return (
-    <div className="lg:col-span-6">
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-dark-cobalt">
+    <div className="mx-auto w-full max-w-sm sm:max-w-md lg:col-span-5 lg:mx-0 lg:ml-auto lg:max-w-none">
+      <div className="relative aspect-[4/5] w-full overflow-hidden bg-dark-cobalt">
         {photos.map((p, i) => (
           <motion.div
             key={p.src}
@@ -67,8 +69,10 @@ function HeroStage({
               alt={p.alt}
               fill
               priority={i === 0}
+              loading="eager"
               quality={88}
-              sizes="(min-width: 1024px) 50vw, 100vw"
+              onLoad={() => setLoaded((n) => n + 1)}
+              sizes="(min-width: 1024px) 40vw, 90vw"
               className="object-cover"
               style={{ objectPosition: p.pos }}
             />
@@ -111,7 +115,7 @@ function SeatHolder({ holders }: { holders: string[] }) {
   }, [reduce, holders.length]);
 
   return (
-    <span className="relative block min-h-[2.6em] sm:min-h-[1.6em]">
+    <span className="relative block h-[2.5em] text-[clamp(1.5rem,3.2vw,2.25rem)] leading-tight">
       <AnimatePresence mode="wait">
         <motion.span
           key={i}
@@ -119,7 +123,7 @@ function SeatHolder({ holders }: { holders: string[] }) {
           animate={{ opacity: 1, y: 0 }}
           exit={reduce ? undefined : { opacity: 0, y: -14 }}
           transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-          className="block font-heading text-[clamp(1.5rem,3.2vw,2.25rem)] normal-case leading-tight tracking-tight text-off-white"
+          className="block font-heading normal-case tracking-tight text-off-white"
           aria-live="polite"
         >
           {holders[i]}.
@@ -217,7 +221,7 @@ export default function DonatePage() {
         {/* ── Hero ─────────────────────────────────────────── */}
         <section className="relative overflow-hidden bg-true-black px-6 pb-20 pt-32 lg:px-8 lg:pb-28 lg:pt-40">
           <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-12">
-            <div className="lg:col-span-6">
+            <div className="lg:col-span-7">
               <motion.h1
                 initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -376,6 +380,23 @@ export default function DonatePage() {
           </div>
         </section>
 
+        {/* ── Banner ───────────────────────────────────────── */}
+        <section className="bg-true-black px-6 py-12 lg:px-8 lg:py-16">
+          <a
+            href="#give"
+            onClick={() => track("donate_click", { source: "donate-banner" })}
+            className="mx-auto block max-w-6xl transition-opacity hover:opacity-90"
+          >
+            <Image
+              src="/images/donate/banner.webp"
+              alt={t("banner.alt")}
+              width={2400}
+              height={880}
+              sizes="(min-width: 1152px) 1152px, 100vw"
+              className="h-auto w-full"
+            />
+          </a>
+        </section>
       </main>
       <Footer />
     </>

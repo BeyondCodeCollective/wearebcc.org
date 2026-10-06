@@ -656,12 +656,11 @@
       "ctaPrimary": "Hold a seat",
       "ctaSecondary": "Watch the year",
       "photoAlts": [
-        "A mentor leans over two boys working at a laptop",
-        "A smiling teen in a Beyond Code Collective tee and lanyard by a bright window",
-        "Boys laughing with a mentor in front of a colorful mural",
-        "A boy looks up from his laptop during a session",
-        "A wide room of learners on laptops while a mentor walks through",
-        "A full cohort in Beyond Code Collective tees posing along a garden railing"
+        "A smiling speaker holding a microphone in front of a Beyond Code Collective banner",
+        "A smiling woman in a bright pink cardigan, resting on a cane, against a brown backdrop",
+        "Two smiling women standing side by side in front of a bright window",
+        "A woman smiles over her shoulder while working at a desk in a creative studio",
+        "A smiling woman on a phone call at her desk with a laughing toddler on her lap"
       ]
     },
     "seat": {
@@ -731,6 +730,9 @@
           "t": "say their employer offers AI training"
         }
       ]
+    },
+    "banner": {
+      "alt": "Who's coding your future? All of us. Starting with you. Donate now at wearebcc.org"
     },
     "give": {
       "headline1": "HOLD",
