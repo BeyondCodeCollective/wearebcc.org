@@ -8,6 +8,9 @@ export const SITE = {
 
 /** YouTube video id for the year-end video on /donate. Empty shows a "coming soon" state. */
 export const DONATE_VIDEO_ID = "";
+/** Self-hosted year-end video (1080p MP4). Takes priority over the YouTube id. */
+export const DONATE_VIDEO_SRC = "/video/donate-eoy.mp4";
+export const DONATE_VIDEO_POSTER = "/images/donate/eoy-poster.jpg";
 export const DONATE_CAMPAIGN = "bcc-whos-coding-your-future";
 
 export const NAV_LINKS = [

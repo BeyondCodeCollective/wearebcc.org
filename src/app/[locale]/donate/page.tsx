@@ -12,7 +12,12 @@ import Image from "next/image";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { track } from "@/lib/ga";
-import { DONATE_CAMPAIGN, DONATE_VIDEO_ID } from "@/lib/constants";
+import {
+  DONATE_CAMPAIGN,
+  DONATE_VIDEO_ID,
+  DONATE_VIDEO_POSTER,
+  DONATE_VIDEO_SRC,
+} from "@/lib/constants";
 
 const reveal = {
   initial: { opacity: 0, y: 30 },
@@ -61,17 +66,17 @@ function HeroStage({
     <div className="mx-auto w-full max-w-sm sm:max-w-md lg:col-span-5 lg:mx-0 lg:ml-auto lg:max-w-none">
       <div className="relative aspect-[4/5] w-full overflow-hidden bg-dark-cobalt">
         {photos.map((p, i) => (
-          <motion.div
+          <div
             key={p.src}
-            initial={false}
-            animate={{ opacity: i === active || i === prev ? 1 : 0 }}
-            transition={
-              i === active && !reduce
-                ? { duration: 1.1, ease: "easeInOut" }
-                : { duration: 0 }
-            }
-            className="absolute inset-0 will-change-[opacity]"
-            style={{ zIndex: i === active ? 2 : i === prev ? 1 : 0 }}
+            className="absolute inset-0"
+            style={{
+              opacity: i === active || i === prev ? 1 : 0,
+              zIndex: i === active ? 2 : i === prev ? 1 : 0,
+              // Plain CSS transition: the incoming photo fades in over the
+              // outgoing one, which stays opaque underneath until it is covered.
+              transition:
+                i === active && !reduce ? "opacity 1100ms ease-in-out" : "none",
+            }}
             aria-hidden={i !== active}
           >
             <Image
@@ -86,7 +91,7 @@ function HeroStage({
               className="object-cover"
               style={{ objectPosition: p.pos }}
             />
-          </motion.div>
+          </div>
         ))}
       </div>
       <div className="mt-3 flex gap-2">
@@ -156,6 +161,43 @@ function VideoSlot({
   iframeTitle: string;
 }) {
   const [playing, setPlaying] = useState(false);
+
+  if (DONATE_VIDEO_SRC) {
+    return (
+      <div className="relative aspect-video w-full overflow-hidden bg-true-black">
+        {playing ? (
+          <video
+            src={DONATE_VIDEO_SRC}
+            poster={DONATE_VIDEO_POSTER}
+            title={iframeTitle}
+            controls
+            autoPlay
+            playsInline
+            preload="metadata"
+            className="absolute inset-0 h-full w-full bg-true-black"
+          />
+        ) : (
+          <button
+            type="button"
+            onClick={() => setPlaying(true)}
+            aria-label={play}
+            className="group absolute inset-0 h-full w-full"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={DONATE_VIDEO_POSTER}
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+            <span className="absolute inset-0 bg-true-black/20 transition-colors group-hover:bg-true-black/0" />
+            <span className="absolute left-1/2 top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-electric-green text-true-black transition-transform group-hover:scale-110">
+              <Play size={32} weight="fill" />
+            </span>
+          </button>
+        )}
+      </div>
+    );
+  }
 
   if (!DONATE_VIDEO_ID) {
     return (
