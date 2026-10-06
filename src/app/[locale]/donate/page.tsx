@@ -6,7 +6,7 @@ import {
   motion,
   useReducedMotion,
 } from "framer-motion";
-import { Armchair, ArrowDown, ArrowUpRight, Play } from "@phosphor-icons/react";
+import { ArrowDown, ArrowUpRight, Play } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Nav } from "@/components/nav";
@@ -50,30 +50,6 @@ function SeatHolder({ holders }: { holders: string[] }) {
         </motion.span>
       </AnimatePresence>
     </span>
-  );
-}
-
-/** Marquee of seat holders; stands still under reduced motion. */
-function Ticker({ items }: { items: string[] }) {
-  const reduce = useReducedMotion();
-  const row = [...items, ...items];
-  return (
-    <div className="overflow-hidden bg-electric-green py-4" aria-hidden="true">
-      <motion.div
-        className="flex w-max items-center gap-8 whitespace-nowrap"
-        animate={reduce ? undefined : { x: ["0%", "-50%"] }}
-        transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
-      >
-        {row.map((item, idx) => (
-          <span key={idx} className="flex items-center gap-8">
-            <span className="font-heading text-xl text-true-black sm:text-2xl">
-              {item}
-            </span>
-            <Armchair size={26} weight="bold" className="text-true-black" />
-          </span>
-        ))}
-      </motion.div>
-    </div>
   );
 }
 
@@ -154,9 +130,7 @@ function FactRow({ n, t, dark }: Fact & { dark?: boolean }) {
 export default function DonatePage() {
   const t = useTranslations("donate");
   const holders = t.raw("hero.holders") as string[];
-  const people = t.raw("middle.people") as string[];
   const ledger = t.raw("proof.ledger") as Fact[];
-  const moment = t.raw("proof.moment") as Fact[];
 
   return (
     <>
@@ -250,181 +224,8 @@ export default function DonatePage() {
           </div>
         </section>
 
-        <Ticker items={holders} />
-
-        {/* ── One sentence ─────────────────────────────────── */}
-        <section className="bg-cobalt px-6 py-24 lg:px-8 lg:py-36">
-          <div className="mx-auto max-w-6xl">
-            <motion.p
-              {...reveal}
-              className="max-w-5xl font-heading text-[clamp(2.25rem,6.5vw,5rem)] normal-case leading-[0.98] tracking-tight text-off-white"
-            >
-              {t("seat.quote")}
-            </motion.p>
-            <motion.p
-              {...reveal}
-              transition={{ delay: 0.15, duration: 0.6 }}
-              className="mt-10 max-w-xl text-lg leading-relaxed text-off-white lg:ml-auto"
-            >
-              {t("seat.body")}
-            </motion.p>
-          </div>
-        </section>
-
-        {/* ── Year-end video ───────────────────────────────── */}
-        <section id="video" className="bg-true-black px-6 py-20 lg:px-8 lg:py-28">
-          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12 lg:items-end">
-            <motion.div {...reveal} className="lg:col-span-8">
-              <VideoSlot
-                soonTitle={t("video.soonTitle")}
-                soonBody={t("video.soonBody")}
-                play={t("video.play")}
-                iframeTitle={t("video.iframeTitle")}
-              />
-            </motion.div>
-            <motion.div
-              {...reveal}
-              transition={{ delay: 0.15, duration: 0.6 }}
-              className="lg:col-span-4"
-            >
-              <h2 className="font-heading text-[clamp(2.25rem,5vw,4rem)] leading-[0.9] text-electric-green">
-                {t("video.headline")}
-              </h2>
-              <p className="mt-5 max-w-sm text-lg leading-relaxed text-off-white/90">
-                {t("video.body")}
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* ── The middle ───────────────────────────────────── */}
-        <section className="bg-off-white px-6 py-20 lg:px-8 lg:py-32">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-10 lg:grid-cols-12">
-              <motion.h2
-                {...reveal}
-                className="font-heading text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.88] text-true-black lg:col-span-7"
-              >
-                {t("middle.headline1")}
-                <br />
-                <span className="text-cobalt">{t("middle.headline2")}</span>
-              </motion.h2>
-              <motion.p
-                {...reveal}
-                transition={{ delay: 0.15, duration: 0.6 }}
-                className="text-lg leading-relaxed text-true-black lg:col-span-5 lg:pt-3"
-              >
-                {t("middle.body")}
-              </motion.p>
-            </div>
-
-            {/* The funding gap, drawn: two funded ends, one starved middle */}
-            <motion.div
-              {...reveal}
-              className="mt-14 grid grid-cols-1 gap-2 sm:grid-cols-[1fr_3fr_1fr]"
-            >
-              <div className="flex flex-col justify-between border border-true-black/30 p-5">
-                <p className="font-heading text-lg leading-tight text-true-black">
-                  {t("middle.front")}
-                </p>
-                <p
-                  className="mt-6 font-mono text-xs uppercase tracking-wider text-grey-3"
-                  style={{ fontFamily: "var(--font-mono)" }}
-                >
-                  {t("middle.funded")}
-                </p>
-              </div>
-              <div className="flex flex-col justify-between bg-true-black p-6 sm:p-8">
-                <p
-                  className="font-mono text-xs uppercase tracking-wider text-electric-green"
-                  style={{ fontFamily: "var(--font-mono)" }}
-                >
-                  {t("middle.midNote")}
-                </p>
-                <p className="mt-10 font-heading text-[clamp(2.5rem,6vw,4.5rem)] leading-[0.9] text-electric-green">
-                  {t("middle.mid")}
-                </p>
-              </div>
-              <div className="flex flex-col justify-between border border-true-black/30 p-5">
-                <p className="font-heading text-lg leading-tight text-true-black">
-                  {t("middle.back")}
-                </p>
-                <p
-                  className="mt-6 font-mono text-xs uppercase tracking-wider text-grey-3"
-                  style={{ fontFamily: "var(--font-mono)" }}
-                >
-                  {t("middle.funded")}
-                </p>
-              </div>
-            </motion.div>
-
-            <div className="mt-16 grid gap-10 lg:grid-cols-12 lg:items-start">
-              <motion.ul {...reveal} className="lg:col-span-6">
-                {people.map((p) => (
-                  <li
-                    key={p}
-                    className="border-t border-true-black/25 py-4 font-heading text-[clamp(1.25rem,2.4vw,1.75rem)] normal-case leading-tight tracking-tight text-true-black last:border-b"
-                  >
-                    {p}
-                  </li>
-                ))}
-                <li className="pt-6 text-lg leading-relaxed text-true-black">
-                  {t("middle.close")}
-                </li>
-              </motion.ul>
-              <motion.div
-                {...reveal}
-                transition={{ delay: 0.15, duration: 0.6 }}
-                className="relative aspect-[4/3] overflow-hidden lg:col-span-6 lg:-mr-8 xl:-mr-24"
-              >
-                <Image
-                  src="/images/community/community-03.jpg"
-                  alt={t("middle.photoAlt")}
-                  fill
-                  sizes="(min-width: 1024px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── Proof ────────────────────────────────────────── */}
-        <section className="bg-electric-green px-6 py-20 lg:px-8 lg:py-32">
-          <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-12">
-            <motion.div {...reveal} className="lg:col-span-6">
-              <p className="font-heading text-[clamp(5rem,20vw,12rem)] leading-[0.8] text-true-black">
-                {t("proof.big")}
-              </p>
-              <p className="mt-6 max-w-sm font-heading text-[clamp(1.5rem,3vw,2.25rem)] normal-case leading-tight tracking-tight text-true-black">
-                {t("proof.bigLabel")}
-              </p>
-            </motion.div>
-            <motion.div
-              {...reveal}
-              transition={{ delay: 0.15, duration: 0.6 }}
-              className="text-true-black lg:col-span-6"
-            >
-              <h2 className="font-heading text-2xl">{t("proof.ledgerTitle")}</h2>
-              <dl className="mt-4">
-                {ledger.map((f) => (
-                  <FactRow key={f.n} {...f} />
-                ))}
-              </dl>
-              <h2 className="mt-12 font-heading text-2xl">
-                {t("proof.momentTitle")}
-              </h2>
-              <dl className="mt-4">
-                {moment.map((f) => (
-                  <FactRow key={f.n} {...f} />
-                ))}
-              </dl>
-            </motion.div>
-          </div>
-        </section>
-
         {/* ── Give ─────────────────────────────────────────── */}
-        <section id="give" className="bg-cobalt px-6 py-20 lg:px-8 lg:py-32">
+        <section id="give" className="bg-cobalt px-6 py-16 lg:px-8 lg:py-24">
           <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12">
             <motion.div
               {...reveal}
@@ -435,7 +236,10 @@ export default function DonatePage() {
                 <br />
                 <span className="text-electric-green">{t("give.headline2")}</span>
               </h2>
-              <p className="mt-8 max-w-sm text-lg leading-relaxed text-off-white">
+              <p className="mt-8 max-w-md font-heading text-[clamp(1.5rem,2.6vw,2rem)] normal-case leading-tight tracking-tight text-off-white">
+                {t("seat.quote")}
+              </p>
+              <p className="mt-5 max-w-sm text-lg leading-relaxed text-off-white">
                 {t("give.body")}
               </p>
               <p className="mt-8 max-w-sm text-sm leading-relaxed text-off-white/90">
@@ -466,37 +270,65 @@ export default function DonatePage() {
                   name="donorbox"
                   allow="payment"
                   loading="lazy"
-                  className="h-[960px] w-full border-0 sm:h-[900px]"
+                  className="h-[900px] w-full border-0 sm:h-[800px]"
                 />
               </div>
             </motion.div>
           </div>
         </section>
 
-        {/* ── Close ────────────────────────────────────────── */}
-        <section className="relative overflow-hidden bg-true-black">
-          <Image
-            src="/images/community/community-06.jpg"
-            alt={t("close.photoAlt")}
-            fill
-            sizes="100vw"
-            className="object-cover opacity-35"
-          />
-          <div className="relative mx-auto flex max-w-7xl flex-col items-start gap-8 px-6 py-28 lg:px-8 lg:py-40">
-            <h2 className="font-heading text-[clamp(3rem,10vw,6rem)] leading-[0.86] text-electric-green">
-              {t("close.headline")}
-            </h2>
-            <a
-              href="#give"
-              onClick={() => track("donate_click", { source: "donate-close" })}
-              className="inline-flex items-center gap-2 bg-electric-green px-7 py-4 font-mono text-xs uppercase tracking-wider text-true-black transition-transform hover:-translate-y-0.5"
-              style={{ fontFamily: "var(--font-mono)" }}
+        {/* ── Year-end video ───────────────────────────────── */}
+        <section id="video" className="bg-true-black px-6 py-20 lg:px-8 lg:py-28">
+          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-12 lg:items-end">
+            <motion.div {...reveal} className="lg:col-span-8">
+              <VideoSlot
+                soonTitle={t("video.soonTitle")}
+                soonBody={t("video.soonBody")}
+                play={t("video.play")}
+                iframeTitle={t("video.iframeTitle")}
+              />
+            </motion.div>
+            <motion.div
+              {...reveal}
+              transition={{ delay: 0.15, duration: 0.6 }}
+              className="lg:col-span-4"
             >
-              {t("close.cta")}
-              <ArrowDown size={14} weight="bold" />
-            </a>
+              <h2 className="font-heading text-[clamp(2.25rem,5vw,4rem)] leading-[0.9] text-electric-green">
+                {t("video.headline")}
+              </h2>
+              <p className="mt-5 max-w-sm text-lg leading-relaxed text-off-white/90">
+                {t("video.body")}
+              </p>
+            </motion.div>
           </div>
         </section>
+
+        {/* ── Proof ────────────────────────────────────────── */}
+        <section className="bg-electric-green px-6 py-20 lg:px-8 lg:py-32">
+          <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-12">
+            <motion.div {...reveal} className="lg:col-span-6">
+              <p className="font-heading text-[clamp(5rem,20vw,12rem)] leading-[0.8] text-true-black">
+                {t("proof.big")}
+              </p>
+              <p className="mt-6 max-w-sm font-heading text-[clamp(1.5rem,3vw,2.25rem)] normal-case leading-tight tracking-tight text-true-black">
+                {t("proof.bigLabel")}
+              </p>
+            </motion.div>
+            <motion.div
+              {...reveal}
+              transition={{ delay: 0.15, duration: 0.6 }}
+              className="text-true-black lg:col-span-6"
+            >
+              <h2 className="font-heading text-2xl">{t("proof.ledgerTitle")}</h2>
+              <dl className="mt-4">
+                {ledger.map((f) => (
+                  <FactRow key={f.n} {...f} />
+                ))}
+              </dl>
+            </motion.div>
+          </div>
+        </section>
+
       </main>
       <Footer />
     </>
