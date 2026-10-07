@@ -261,6 +261,18 @@
     "emptyState": "Aún no hay novedades — vuelve pronto.",
     "items": [
       {
+        "slug": "theres-a-seat-for-you",
+        "date": "2026-10-08",
+        "category": "Announcement",
+        "title": "Hay un lugar para ti",
+        "excerpt": "Lo que nos enseñaron seis meses de mantener una puerta abierta, y cuatro maneras de cruzarla.",
+        "image": "/images/news/theres-a-seat-for-you.png",
+        "imageAlt": "Beyond Code Collective. Hay un lugar para ti, sobre una cuadrícula de asientos con uno resaltado en verde.",
+        "body": "Cuando fundamos Beyond Code Collective™, nos hicimos una sola pregunta: ¿quién está programando tu futuro? Seis meses después, puedo decirte cómo se ve la respuesta. Se ve como una sala llena. Aquí te cuento por qué la construimos y cómo encontrar tu lugar en ella.\n\nEn este momento, en algún lugar, una sala está decidiendo cómo será tu trabajo el próximo año. Qué aprenderá tu hijo. Qué dirá la oferta de empleo. Qué preguntas acertará la máquina y cuáles no.\n\nNo te invitaron. Casi a nadie lo invitaron. Las herramientas llegaron antes que la invitación.\n\nAsí que construimos una sala.\n\nEn ella, una persona de 71 años y otra de 17 se sientan a la misma mesa y hacen la misma pregunta. Un hombre con diecisiete temporadas de baloncesto profesional guía la sala para los atletas que dan el mismo paso, y una madre de dos hijos, en plena búsqueda de empleo, también tiene su lugar. Nadie necesita requisitos previos. Nadie es tratado con condescendencia. “No sé qué es esto” abre la conversación.\n\nSeis meses manteniendo esa puerta abierta nos enseñaron algo. La gente llega. Se queda. Y luego enseña lo que aprendió a alguien más. Lo que cambió para ellos fue una sala que esperaba algo de ellos.\n\nLa tecnología es la herramienta. Tú eres el poder.\n\nCómo fueron los primeros seis meses\n\nMás de 485 estudiantes atendidos entre nuestro Centro de Atlanta y Catalyst Labs, en cinco meses. Más de 310 residentes de Atlanta atendidos en los primeros cuatro meses de nuestra residencia. 175 personas completaron Catalyst Labs. Estudiantes en 16 estados y territorios de EE. UU. y 1 provincia de Canadá. (Fuente: Informe de 6 meses de Beyond Code Collective, septiembre de 2026.)\n\nCuatro maneras de entrar\n\nToma un asiento. Empieza a aprender con nosotros. Code Along Beyond es gratis en YouTube si quieres comenzar a tu ritmo, y Catalyst Labs es donde construyes junto a otras personas.\n\nCode Along Beyond: https://www.youtube.com/@codealongyoutube\nCatalyst Labs: https://www.wearebcc.org/es/catalyst\n\nDona una hora. Haz una entrevista de práctica, habla con un grupo o ofrece una entrevista informativa. Una hora de tu vida laboral vale para quien cambia de carrera más de lo que imaginas. Cómo participar: https://www.wearebcc.org/es/news/volunteer-with-bcc\n\nTrae la sala. Si tu empresa, universidad, liga o ciudad quiere un programa o Centro de Beyond Code, escríbenos a partnerships@wearebcc.org. Construimos con las comunidades, junto a quienes viven en ellas.\n\nGuarda un lugar. Todos nuestros programas son gratuitos para quienes participan. Una donación lo mantiene así para la siguiente persona.\n\nSea cual sea tu puerta, está abierta.\n\n¿Quién está programando tu futuro? Todos nosotros. Empezando por ti.\n\nHay un lugar para ti.\n\nCristina Mancini\nFundadora y CEO, Beyond Code Collective",
+        "linkUrl": "https://www.wearebcc.org/es/donate",
+        "linkLabel": "Guarda un lugar: dona hoy"
+      },
+      {
         "slug": "code-along-beyond-music-launch",
         "date": "2026-09-10",
         "category": "Announcement",

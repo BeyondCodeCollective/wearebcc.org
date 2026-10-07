@@ -261,6 +261,18 @@
     "emptyState": "No updates yet — check back soon.",
     "items": [
       {
+        "slug": "theres-a-seat-for-you",
+        "date": "2026-10-08",
+        "category": "Announcement",
+        "title": "There's a Seat for You",
+        "excerpt": "What six months of holding a door open taught us, and four ways to walk through it.",
+        "image": "/images/news/theres-a-seat-for-you.png",
+        "imageAlt": "Beyond Code Collective. There's a seat for you, over a grid of seats with one highlighted in green.",
+        "body": "When we started Beyond Code Collective™, we asked one question: who's coding your future? Six months in, I can tell you what the answer looks like. It looks like a full room. Here's why we built it, and how to find your seat in it.\n\nSomewhere right now, a room is deciding what your work looks like next year. What your kid learns. What your job posting says. Which questions the machine gets right and which ones it gets wrong.\n\nYou weren't invited. Almost nobody was. The tools arrived before the invitation did.\n\nSo we built a room.\n\nIn it, a 71-year-old and a 17-year-old sit at the same table and ask the same question. A man with seventeen seasons of professional basketball behind him leads the room for athletes making the same move, and a parent of two in the middle of a job search has a seat too. Nobody needs a prerequisite. Nobody gets talked down to. “I don't know what this is” opens the conversation.\n\nSix months of holding that door open taught us something. People show up. They stay. Then they teach what they learned to someone else. The thing that changed for them was a room that expected something of them.\n\nTech is the tool. You are the power.\n\nWhat the first six months looked like\n\n485+ learners served across our Atlanta Center and Catalyst Labs, in five months. 310+ Atlanta residents served in the first four months of our residency. 175 Catalyst Labs completions. Learners in 16 U.S. states and territories and 1 Canadian province. (Source: Beyond Code Collective 6-Month Report, September 2026.)\n\nFour ways in\n\nTake a seat. Start learning with us. Code Along Beyond is free on YouTube if you want to begin on your own time, and Catalyst Labs is where you build alongside other people.\n\nCode Along Beyond: https://www.youtube.com/@codealongyoutube\nCatalyst Labs: https://www.wearebcc.org/en/catalyst\n\nGive an hour. Run a mock interview, speak to a cohort, or host an informational interview. An hour of your working life is worth more to someone changing careers than you'd guess. Learn how: https://www.wearebcc.org/en/news/volunteer-with-bcc\n\nBring the room. If your company, campus, league, or city wants a Beyond Code program or Center, write to us at partnerships@wearebcc.org. We build with communities, alongside the people who live there.\n\nHold a seat. Every program we run is free to the people in it. A gift keeps it that way for the next person.\n\nWhichever door is yours, it's open.\n\nWho's coding your future? All of us. Starting with you.\n\nThere's a seat for you.\n\nCristina Mancini\nFounder and CEO, Beyond Code Collective",
+        "linkUrl": "https://www.wearebcc.org/en/donate",
+        "linkLabel": "Hold a seat: give today"
+      },
+      {
         "slug": "code-along-beyond-music-launch",
         "date": "2026-09-10",
         "category": "Announcement",
