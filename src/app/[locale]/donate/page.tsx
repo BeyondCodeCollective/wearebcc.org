@@ -29,10 +29,14 @@ const reveal = {
 type Fact = { n: string; t: string };
 
 const HERO_PHOTOS = [
-  { src: "/images/donate/hero-1.jpg", pos: "50% 25%" },
-  { src: "/images/donate/hero-2.jpg", pos: "50% 28%" },
-  { src: "/images/donate/hero-3.jpg", pos: "50% 30%" },
+  { src: "/images/donate/hero-1.jpg", pos: "50% 30%" },
+  { src: "/images/donate/hero-2.jpg", pos: "50% 25%" },
+  { src: "/images/donate/hero-3.jpg", pos: "50% 25%" },
   { src: "/images/donate/hero-4.jpg", pos: "50% 28%" },
+  { src: "/images/donate/hero-5.jpg", pos: "50% 30%" },
+  { src: "/images/donate/hero-6.jpg", pos: "50% 30%" },
+  { src: "/images/donate/hero-7.jpg", pos: "50% 35%" },
+  { src: "/images/donate/hero-8.jpg", pos: "50% 28%" },
 ];
 
 /** Crossfading photo stage. Ticks below are the progress bar and the controls. */
