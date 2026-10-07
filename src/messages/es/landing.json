@@ -261,6 +261,18 @@
     "emptyState": "Aún no hay novedades — vuelve pronto.",
     "items": [
       {
+        "slug": "code-along-beyond-music-launch",
+        "date": "2026-09-10",
+        "category": "Announcement",
+        "title": "Code Along Beyond: Music Lanza Este Sábado Con Apple",
+        "excerpt": "Una nueva temporada de educación en programación gratuita y práctica lanza el 12 de septiembre. Construye una app personalizada de música con Swift, Xcode e Apple Intelligence—sin experiencia previa necesaria.",
+        "image": "/images/news/code-along-beyond-music.png",
+        "imageAlt": "Code Along Beyond: Music Estreno de Temporada el 12 de Septiembre",
+        "body": "A medida que las tecnologías emergentes transforman cómo trabajamos y creamos, el acceso a la educación tecnológica se ha vuelto inseparable de la oportunidad económica. Por eso Beyond Code Collective expande su compromiso con la educación tecnológica gratuita y culturalmente arraigada a través de Code Along Beyond: Music, que lanza este sábado, 12 de septiembre, con apoyo de Apple.\n\nCode Along Beyond: Music es la nueva temporada de Code Along, la academia de programación gratuita y basada en video de Beyond Code Collective que llega a casi 200,000 aprendices en todo el mundo. A partir del 12 de septiembre, nuevos episodios se estrenan semanalmente en YouTube, guiando a los aprendices en la construcción de una app personalizada de música usando Swift, Xcode e Apple Intelligence. Los coanfitriones Destiney Williams y Daniel Ray lideran la experiencia práctica, con apariciones de la creadora de contenido Jalaiah Harmon y la líder en STEM Dra. Fernanda Sulantay Vargas.\n\nCada episodio incorpora música que combina con sus temas—con canciones de The BoykinZ, Frak the Person y Erick Sermon. Esto refleja una creencia central detrás de la temporada: la tecnología es inseparable de la cultura.\n\nCode Along ha construido algo extraordinario en tres años. La academia ahora sirve a 182,000 suscriptores globales, ha generado más de 11.5 millones de visualizaciones, y superó 189,000 horas de tiempo de visualización. En 2025, la anfitriona Kalani Jules recibió el Young Artist Award for Best Performance in a Streaming Series. Ese impulso continúa en esta temporada, que expande oportunidades para aprendices de todas las edades de explorar programación, inteligencia artificial, creatividad y desarrollo de apps a través de experiencias prácticas y atractivas.\n\n\"Ahora más que nunca, la gente corre el riesgo de quedarse atrás en la revolución tecnológica, no porque les falte habilidad o talento, sino porque no se ven a sí mismos en ella,\" dijo Cristina Mancini, Fundadora de Beyond Code Collective. \"A través de Code Along Beyond, estamos ayudando a más aprendices a pasar de ser consumidores de tecnología a creadores con la confianza para moldear el futuro.\"\n\nLa temporada lanza el sábado, 12 de septiembre. Todos los episodios son gratuitos en YouTube, sin experiencia previa en programación requerida.",
+        "linkUrl": "https://www.youtube.com/@codealongyoutube",
+        "linkLabel": "Ver Code Along Beyond en YouTube"
+      },
+      {
         "slug": "forward-deployed-engineering-is-the-future",
         "date": "2026-09-06",
         "category": "Announcement",

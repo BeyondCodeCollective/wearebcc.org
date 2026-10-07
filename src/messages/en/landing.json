@@ -261,6 +261,18 @@
     "emptyState": "No updates yet — check back soon.",
     "items": [
       {
+        "slug": "code-along-beyond-music-launch",
+        "date": "2026-09-10",
+        "category": "Announcement",
+        "title": "Code Along Beyond: Music Launches This Saturday With Apple",
+        "excerpt": "A new season of free, hands-on coding education launches September 12. Build a custom playlist app with Swift, Xcode, and Apple Intelligence—no experience required.",
+        "image": "/images/news/code-along-beyond-music.png",
+        "imageAlt": "Code Along Beyond: Music Season Premiere on September 12",
+        "body": "As emerging technologies reshape how we work and create, access to technology education has become inseparable from economic opportunity. That's why Beyond Code Collective is expanding its commitment to free, culturally grounded tech education through Code Along Beyond: Music, launching this Saturday, September 12, with support from Apple.\n\nCode Along Beyond: Music is the latest season of Code Along, Beyond Code Collective's free, video-based coding academy that reaches nearly 200,000 learners globally. Beginning September 12, new episodes premiere weekly on YouTube, guiding learners through building a custom playlist app using Swift, Xcode, and Apple Intelligence. Cohosts Destiney Williams and Daniel Ray lead the hands-on experience, with guest appearances from content creator Jalaiah Harmon and STEM leader Dr. Fernanda Sulantay Vargas.\n\nEach episode weaves in music that matches its themes—featuring tracks from The BoykinZ, Frak the Person, and Erick Sermon. This reflects a core belief behind the season: technology is inseparable from culture.\n\nCode Along has built something remarkable over three years. The academy now serves 182,000 global subscribers, has generated over 11.5 million views, and surpassed 189,000 hours of watch time. In 2025, host Kalani Jules received the Young Artist Award for Best Performance in a Streaming Series. That momentum carries into this season, which expands opportunities for learners of all ages to explore coding, artificial intelligence, creativity, and app development through engaging, hands-on experiences.\n\n\"More than ever, people are at risk of being left behind in the technology revolution, not because they lack the ability or talent, but because they don't see themselves in it,\" said Cristina Mancini, Founder of Beyond Code Collective. \"Through Code Along Beyond, we're supporting more learners to move from consumers of technology to creators with the confidence to shape what's next.\"\n\nThe season launches Saturday, September 12. All episodes are free on YouTube, with no prior coding experience needed.",
+        "linkUrl": "https://www.youtube.com/@codealongyoutube",
+        "linkLabel": "Watch Code Along Beyond on YouTube"
+      },
+      {
         "slug": "forward-deployed-engineering-is-the-future",
         "date": "2026-09-06",
         "category": "Announcement",
