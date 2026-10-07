@@ -1,61 +1,37 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { X } from "@phosphor-icons/react";
+import { ArrowRight } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
+import { track } from "@/lib/ga";
 
+// Internal tools keep their own header, so the bar stays off them.
+const HIDDEN_ON = ["/admin", "/dashboard"];
+
+/**
+ * Slim donate bar pinned to the top of every public page. It is 36px tall to
+ * match the `top-[36px]` offset the nav is already built around.
+ */
 export function AnnouncementBanner() {
   const t = useTranslations("banner");
-  const [dismissed, setDismissed] = useState(false);
+  const pathname = usePathname();
 
-  if (dismissed) return null;
+  if (HIDDEN_ON.some((p) => pathname.startsWith(p))) return null;
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ height: 0, opacity: 0 }}
-        animate={{ height: "auto", opacity: 1 }}
-        exit={{ height: 0, opacity: 0 }}
-        transition={{ duration: 0.3 }}
-        className="fixed top-0 left-0 right-0 z-[60] bg-cobalt"
+    <div className="fixed left-0 right-0 top-0 z-[60] flex h-9 items-center justify-center bg-electric-green px-4">
+      <Link
+        href="/donate"
+        onClick={() => track("donate_click", { source: "banner" })}
+        className="group flex items-center gap-2 font-mono text-[11px] tracking-wider text-true-black sm:text-xs"
+        style={{ fontFamily: "var(--font-mono)" }}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-center gap-4 px-6 py-2.5 lg:px-8">
-          <Link
-            href="/code-along"
-            className="flex items-center gap-3 text-center"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-electric-green/60" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-electric-green" />
-            </span>
-            <span
-              className="font-mono text-xs tracking-wider text-off-white sm:text-sm"
-              style={{ fontFamily: "var(--font-mono)" }}
-            >
-              <strong>{t("title")}</strong>
-              <span className="hidden sm:inline">
-                {" "}
-                {t("description")}
-              </span>{" "}
-              <span className="underline underline-offset-2">{t("cta")}</span>
-            </span>
-          </Link>
-          <button
-            onClick={() => setDismissed(true)}
-            className="absolute right-4 flex-shrink-0 p-1 text-off-white/50 transition-colors hover:text-off-white lg:right-8"
-            aria-label="Dismiss"
-          >
-            <X size={14} weight="bold" />
-          </button>
-        </div>
-      </motion.div>
-    </AnimatePresence>
+        <span className="font-bold">{t("title")}</span>
+        <span className="underline underline-offset-2 group-hover:no-underline">
+          {t("cta")}
+        </span>
+        <ArrowRight size={12} weight="bold" aria-hidden="true" />
+      </Link>
+    </div>
   );
-}
-
-/** Spacer to offset fixed banner height */
-export function AnnouncementBannerSpacer() {
-  return <div className="h-[36px]" />;
 }

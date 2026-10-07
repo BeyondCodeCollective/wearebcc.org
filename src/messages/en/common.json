@@ -67,9 +67,8 @@
     "send": "Send Message →"
   },
   "banner": {
-    "title": "Code Along Beyond: Music",
-    "description": "now streaming. Four episodes, one playlist app, free for all ages.",
-    "cta": "Learn More"
+    "title": "Who's coding your future?",
+    "cta": "Hold a seat"
   },
   "launchOverlay": {
     "badge": "New Series",

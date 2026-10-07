@@ -9,6 +9,7 @@ import { routing } from "@/i18n/routing";
 import { ContactProvider } from "@/components/contact-modal";
 import "../globals.css";
 import { AnalyticsListener } from "@/components/analytics-listener";
+import { AnnouncementBanner } from "@/components/announcement-banner";
 
 const spaceMono = Space_Mono({
   variable: "--font-space-mono",
@@ -138,6 +139,7 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
         />
         <NextIntlClientProvider locale={locale} messages={clientMessages}>
+          <AnnouncementBanner />
           <ContactProvider>{children}</ContactProvider>
           <Analytics />
           <AnalyticsListener />
