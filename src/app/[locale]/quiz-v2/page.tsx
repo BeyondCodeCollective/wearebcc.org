@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
 import SaveResultsCard from "@/components/quiz/SaveResultsCard";
 import { generateSessionId, trackEvent } from "@/lib/analytics";
+import { track } from "@/lib/ga";
 import {
   Wrench,
   ChartBar,
@@ -747,8 +748,11 @@ function ResultsScreen({
           salary: career.salary,
           courses: pathwayItems,
         }),
-      }).then(() => {
+      }).then((res) => {
         trackEvent(sessionId, "quiz-v2", "results_email_sent", {}, locale);
+        if (res.ok) {
+          track("quiz_email_submit", { form_location: "quiz-results-email", quiz_step: "results", quiz_result: personalityKey });
+        }
       }).catch(() => { /* silent fail */ });
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -1196,6 +1200,10 @@ export default function GuidanceQuiz() {
         phone: contact.type === "phone" ? contact.value : "",
         source: "quiz-lead-capture",
       }),
+    }).then((res) => {
+      if (res.ok && contact.type === "email") {
+        track("quiz_email_submit", { form_location: "quiz-lead-capture", quiz_step: "capture" });
+      }
     }).catch(() => {});
   };
 
@@ -1214,6 +1222,7 @@ export default function GuidanceQuiz() {
       const updatedScores = { ...Object.fromEntries(entries), [personality]: (scores[personality] || 0) + 1 };
       const winner = (Object.entries(updatedScores) as [PersonalityKey, number][]).reduce((a, b) => (b[1] > a[1] ? b : a))[0];
       trackEvent(sessionId, QV, "quiz_completed", { personality_result: winner }, locale);
+      track("quiz_complete", { quiz_result: winner });
       setScreen("loading");
       setTimeout(() => setScreen("results"), 2800);
     }

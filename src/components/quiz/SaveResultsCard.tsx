@@ -6,6 +6,7 @@ import { useLocale } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { Envelope, Lock, Check } from "@phosphor-icons/react";
 import { trackEvent } from "@/lib/analytics";
+import { track } from "@/lib/ga";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -62,6 +63,7 @@ export default function SaveResultsCard({
       });
       if (res.ok) {
         setStatus("success");
+        track("quiz_email_submit", { form_location: "quiz-save-results", quiz_step: "results", quiz_result: personalityKey });
         if (sessionId) {
           trackEvent(sessionId, tNamespace, "save_results_email", {}, locale);
         }

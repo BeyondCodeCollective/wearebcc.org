@@ -312,7 +312,7 @@ export default function DonatePage() {
                 <a
                   href="#give"
                   onClick={() =>
-                    track("donate_click", { source: "donate-hero" })
+                    track("donate_click", { source: "donate-hero", click_location: "donate-hero" })
                   }
                   className="inline-flex items-center justify-center gap-2 bg-electric-green px-7 py-4 font-mono text-xs uppercase tracking-wider text-true-black transition-transform hover:-translate-y-0.5"
                   style={{ fontFamily: "var(--font-mono)" }}
@@ -398,7 +398,7 @@ export default function DonatePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() =>
-                  track("donate_click", { source: "donate-fallback" })
+                  track("donate_click", { source: "donate-fallback", click_location: "donate-fallback" })
                 }
                 className="mt-5 inline-flex items-center gap-1.5 font-mono text-sm uppercase tracking-wider text-dark-cobalt underline-offset-4 hover:underline"
                 style={{ fontFamily: "var(--font-mono)" }}
@@ -471,7 +471,7 @@ export default function DonatePage() {
         <section className="bg-true-black px-6 py-12 lg:px-8 lg:py-16">
           <a
             href="#give"
-            onClick={() => track("donate_click", { source: "donate-banner" })}
+            onClick={() => track("donate_click", { source: "donate-banner", click_location: "donate-banner" })}
             className="mx-auto block max-w-6xl transition-opacity hover:opacity-90"
           >
             <Image

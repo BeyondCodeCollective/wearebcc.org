@@ -22,7 +22,7 @@ export function AnnouncementBanner() {
     <div className="fixed left-0 right-0 top-0 z-[60] flex h-[var(--banner-h)] items-center justify-center bg-electric-green px-4">
       <Link
         href="/donate"
-        onClick={() => track("donate_click", { source: "banner" })}
+        onClick={() => track("donate_click", { source: "banner", click_location: "announcement-banner" })}
         className="group flex items-center gap-2 font-mono text-xs tracking-wider text-true-black sm:text-sm"
         style={{ fontFamily: "var(--font-mono)" }}
       >

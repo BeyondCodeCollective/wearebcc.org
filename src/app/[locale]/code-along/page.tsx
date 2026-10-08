@@ -32,6 +32,11 @@ const EPISODES: { num: number; thumb: string; youtubeId: string | null; date: st
   { num: 3, thumb: "/images/code-along/ep-3.jpg", youtubeId: null, date: "09.26" },
   { num: 4, thumb: "/images/code-along/ep-4.jpg", youtubeId: null, date: "10.03" },
 ];
+// Episodes carry a number but no title, so the number is the episode name. The trailer has none.
+function episodeParams(videoId: string | null) {
+  const ep = EPISODES.find((e) => e.youtubeId === videoId);
+  return ep ? { episode_number: ep.num } : {};
+}
 const LATEST_EPISODE = [...EPISODES].reverse().find((e) => e.youtubeId);
 const FEATURED_ID = LATEST_EPISODE?.youtubeId ?? TRAILER_ID;
 
@@ -99,7 +104,7 @@ function TrailerEmbed({ title, comingSoon }: { title: string; comingSoon: string
         <button
           onClick={() => {
             setPlaying(true);
-            track("code_along_watch", { placement: "featured", video_id: FEATURED_ID });
+            track("code_along_watch", { placement: "featured", click_location: "featured", video_id: FEATURED_ID, ...episodeParams(FEATURED_ID) });
           }}
           aria-label={title}
           className="absolute inset-0"
@@ -175,7 +180,7 @@ function EpisodeCard({
               <button
                 onClick={() => {
                   setPlaying(true);
-                  track("code_along_watch", { placement: "episode_card", video_id: episode.youtubeId });
+                  track("code_along_watch", { placement: "episode_card", click_location: "episode_card", video_id: episode.youtubeId, episode_number: episode.num });
                 }}
                 aria-label={`Play ${label} ${episode.num}`}
                 className="absolute inset-0 flex items-center justify-center"
@@ -228,7 +233,7 @@ function EpisodeCard({
         rel="noopener noreferrer"
         onClick={() => {
           if (episode.youtubeId) {
-            track("code_along_watch", { placement: "episode_link", video_id: episode.youtubeId });
+            track("code_along_watch", { placement: "episode_link", click_location: "episode_link", video_id: episode.youtubeId, episode_number: episode.num });
           }
         }}
         className="mt-2 inline-block font-mono text-xs tracking-wider uppercase underline underline-offset-4 transition-opacity hover:opacity-70"

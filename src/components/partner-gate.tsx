@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Eye, EyeSlash, LockSimple } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
+import { track } from "@/lib/ga";
 
 export const PARTNER_GATE_STORAGE_KEY = "bcc-partner-portal-unlocked";
 
@@ -45,6 +46,7 @@ export function PartnerGate({
       });
       if (res.ok) {
         sessionStorage.setItem(storageKey, "1");
+        track("partner_gate_unlock", { form_location: storageKey });
         onUnlock();
         return;
       }
