@@ -3,6 +3,12 @@
 export type GAEvent =
   | "newsletter_signup"
   | "program_interest"
+  | "contact_submit"
+  | "partner_inquiry"
+  | "hire_talent_inquiry"
+  | "partner_gate_unlock"
+  | "quiz_email_submit"
+  | "quiz_complete"
   | "donate_click"
   | "code_along_watch";
 

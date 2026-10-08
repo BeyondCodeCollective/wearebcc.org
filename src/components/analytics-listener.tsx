@@ -16,7 +16,7 @@ export function AnalyticsListener() {
         return;
       }
       if (url.hostname.endsWith("donorbox.org")) {
-        track("donate_click", { link_url: link.href, page_path: window.location.pathname });
+        track("donate_click", { click_location: "donorbox-link", link_url: link.href, page_path: window.location.pathname });
       }
     }
     document.addEventListener("click", onClick, { capture: true });

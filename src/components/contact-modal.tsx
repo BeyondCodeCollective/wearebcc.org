@@ -10,6 +10,7 @@ import {
 } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { track } from "@/lib/ga";
 
 interface OpenContactOptions {
   /** Mailchimp SEGMENT tag so we can tell what the enquiry was about. */
@@ -99,6 +100,7 @@ export function ContactProvider({ children }: { children: ReactNode }) {
       }
 
       setSubmitted(true);
+      track("contact_submit", { form_location: "contact-modal" });
     } catch (err) {
       setError(
         err instanceof Error ? err.message : tf("somethingWentWrong")

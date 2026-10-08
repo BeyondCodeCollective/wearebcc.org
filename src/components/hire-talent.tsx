@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Briefcase, ArrowRight } from "@phosphor-icons/react";
 import { useTranslations } from "next-intl";
+import { track } from "@/lib/ga";
 
 const LEVEL_KEYS = ["junior", "mid", "senior", "mixed"] as const;
 const INTEREST_KEYS = [
@@ -50,6 +51,7 @@ export function HireTalent() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "Failed to submit");
       setSubmitted(true);
+      track("hire_talent_inquiry", { form_location: "hire-talent" });
     } catch (err) {
       setError(err instanceof Error ? err.message : t("error"));
     } finally {

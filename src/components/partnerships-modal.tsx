@@ -10,6 +10,7 @@ import {
 } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { track } from "@/lib/ga";
 
 interface PartnershipsContextType {
   openPartnerships: () => void;
@@ -101,6 +102,8 @@ export function PartnershipsProvider({ children }: { children: ReactNode }) {
       }
 
       setSubmitted(true);
+      const partnerType = SEGMENT_KEYS.find((key) => ts(key) === segment);
+      track("partner_inquiry", { form_location: "partnerships-modal", ...(partnerType ? { partner_type: partnerType } : {}) });
     } catch (err) {
       setError(
         err instanceof Error ? err.message : tf("somethingWentWrong")
