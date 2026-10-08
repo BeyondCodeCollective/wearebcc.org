@@ -102,7 +102,7 @@ export function NewsletterProvider({ children }: { children: ReactNode }) {
       }
 
       setSubmitted(true);
-      track("newsletter_signup", { source: "newsletter-modal" });
+      track("newsletter_signup", { source: "newsletter-modal", form_location: "newsletter-modal" });
     } catch (err) {
       setError(
         err instanceof Error ? err.message : tf("somethingWentWrong")
