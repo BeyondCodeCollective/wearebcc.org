@@ -40,7 +40,8 @@ export default function AfterTheGame() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "Failed to subscribe");
       setSubmitted(true);
-      track("newsletter_signup", { source: "beyond-the-game-landing" });
+      track("newsletter_signup", { source: "beyond-the-game-landing", form_location: "beyond-the-game-landing" });
+      track("program_interest", { program: "Beyond the Game" });
     } catch (err) {
       setError(err instanceof Error ? err.message : t("error"));
     } finally {

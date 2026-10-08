@@ -77,7 +77,8 @@ export default function TheForge() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "Failed to subscribe");
       setSubmitted(true);
-      track("newsletter_signup", { source: "the-forge-landing" });
+      track("newsletter_signup", { source: "the-forge-landing", form_location: "the-forge-landing" });
+      track("program_interest", { program: "The Forge" });
     } catch (err) {
       setError(err instanceof Error ? err.message : t("error"));
     } finally {

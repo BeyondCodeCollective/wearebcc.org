@@ -110,7 +110,8 @@ export default function CatalystPage() {
       });
       if (res.ok) {
         setSubmitted(true);
-        track("newsletter_signup", { source: "catalyst-landing" });
+        track("newsletter_signup", { source: "catalyst-landing", form_location: "catalyst-landing" });
+        track("program_interest", { program: "Catalyst" });
         return;
       }
       setFormError(true);

@@ -271,7 +271,7 @@ export default function CodeAlong() {
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || "Failed to subscribe");
       setSubmitted(true);
-      track("newsletter_signup", { source: "code-along-landing" });
+      track("newsletter_signup", { source: "code-along-landing", form_location: "code-along-landing" });
     } catch (err) {
       setError(err instanceof Error ? err.message : t("error"));
     } finally {
