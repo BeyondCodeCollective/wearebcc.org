@@ -15,12 +15,22 @@ export function Footer() {
     { key: "catalyst", href: "catalyst" },
     { key: "theForge", href: "beyond-code-centers" },
     { key: "afterTheGame", href: "beyond-the-game" },
+    { key: "codeAlong", href: "code-along" },
+  ] as const;
+
+  // The header dropdowns are buttons that only render their links once opened,
+  // so a crawler that does not click sees almost no site navigation. These
+  // plain links give every main page a crawlable path from every page.
+  const aboutLinks = [
+    { key: "team", href: "team" },
+    { key: "news", href: "news" },
+    { key: "donate", href: "donate" },
   ] as const;
 
   return (
     <footer className="bg-true-black px-6 py-16 lg:px-8 lg:py-20">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-8 md:grid-cols-4 md:gap-12">
+        <div className="grid gap-8 md:grid-cols-5 md:gap-12">
           {/* Logo & tagline */}
           <div>
             <Logo
@@ -46,6 +56,27 @@ export function Footer() {
             </p>
             <div className="mt-3 flex flex-col gap-2">
               {initiativeLinks.map(({ key, href }) => (
+                <a
+                  key={key}
+                  href={`/${locale}/${href}`}
+                  className="text-sm text-off-white/70 transition-colors hover:text-off-white"
+                >
+                  {tNav(key)}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* About */}
+          <div>
+            <p
+              className="font-mono text-xs tracking-wider text-off-white/60"
+              style={{ fontFamily: "var(--font-mono)" }}
+            >
+              {tNav("about")}
+            </p>
+            <div className="mt-3 flex flex-col gap-2">
+              {aboutLinks.map(({ key, href }) => (
                 <a
                   key={key}
                   href={`/${locale}/${href}`}
