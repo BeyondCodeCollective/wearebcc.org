@@ -37,7 +37,7 @@ export default function PrivacyNoticePage() {
             >
               PRIVACY NOTICE
             </h1>
-            <p className="mt-4 text-sm text-grey-3">Last Updated: March 2026</p>
+            <p className="mt-4 text-sm text-grey-3">Last Updated: October 2026</p>
           </header>
 
           <div className="legal-content space-y-8 text-base leading-relaxed text-charcoal">
@@ -276,6 +276,19 @@ export default function PrivacyNoticePage() {
                 web browser you use, but this does not prevent the use of other analytics tools. To
                 learn more about Google Analytics cookies, visit Google Analytics Cookie Usage on
                 Websites.
+              </p>
+
+              <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">
+                Advertising Pixels
+              </h3>
+              <p>
+                We use the Meta Pixel, provided by Meta Platforms, Inc., on our Site. The Meta Pixel
+                collects information about how you use our Site, such as the pages you visit and when
+                you subscribe to our newsletter, and shares it with Meta. We use this information to
+                measure the results of our ads and to show our programs to people who may be
+                interested in them. Meta may use this information under its own privacy policy. You
+                can opt out of interest-based advertising through your Meta ad settings or through the
+                opt out pages listed below.
               </p>
 
               <h3 className="mt-6 mb-3 text-sm font-bold text-true-black">
