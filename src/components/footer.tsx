@@ -142,9 +142,12 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-16 flex flex-col gap-4 border-t border-off-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-xs text-off-white/60">
-            &copy; {new Date().getFullYear()} {t("copyright")}
-          </p>
+          <div className="flex flex-col gap-1">
+            <p className="text-xs text-off-white/60">
+              &copy; {new Date().getFullYear()} {t("copyright")}
+            </p>
+            <p className="text-xs text-off-white/60">{t("nonprofitStatement")}</p>
+          </div>
           <div className="flex gap-6">
             <a
               href={`/${locale}/privacy`}
