@@ -191,7 +191,6 @@ export function ResourcesEditor({ value, onChange }: { value: V; onChange: OnCha
         keys={[
           { key: "onePager", displayName: "BCC One-Pager" },
           { key: "forgeOverview", displayName: "The Forge Overview" },
-          { key: "brandFlipbook", displayName: "Brand Flipbook" },
         ]}
         fields={[
           { key: "title", label: "Title", type: "string" },

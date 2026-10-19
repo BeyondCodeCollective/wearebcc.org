@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { RESOURCES, FEATURED_VIDEO } from "@/lib/constants";
 
-const RESOURCE_KEYS = ["onePager", "forgeOverview", "brandFlipbook"] as const;
+const RESOURCE_KEYS = ["onePager", "forgeOverview"] as const;
 
 function DownloadIcon() {
   return (

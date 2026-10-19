@@ -114,14 +114,6 @@ export const RESOURCES = [
     href: "https://www.wearebcc.org/beyond-code-centers",
     external: true as const,
   },
-  {
-    title: "Brand Flipbook",
-    description:
-      "Our visual identity, brand story, and the design language behind Beyond Code Collective.",
-    type: "LINK" as const,
-    href: "https://www.flipsnack.com/5AA5E76F8D6/beyondcode",
-    external: true as const,
-  },
 ] as const;
 
 export const FEATURED_VIDEO = {
