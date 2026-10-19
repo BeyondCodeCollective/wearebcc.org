@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Space_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { NextIntlClientProvider } from "next-intl";
+import { notFound } from "next/navigation";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { ContactProvider } from "@/components/contact-modal";
@@ -95,6 +96,10 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  // Root-level paths that are not locales (/ads.txt, /apple-touch-icon.png, /humans.txt ...) are
+  // routed here by Next because the middleware skips anything with a dot. Without this check they
+  // returned a 500 instead of a 404, which crawlers and site reviews read as a broken site.
+  if (!hasLocale(routing.locales, locale)) notFound();
   const messages = await getMessages();
 
   // next-intl serializes every message into the client payload, so a draft
