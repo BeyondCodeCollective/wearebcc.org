@@ -92,7 +92,7 @@
       {
         "value": "3",
         "suffix": "+",
-        "label": "Initiatives Building Pathways to Quality Careers — And More Coming Soon"
+        "label": "Initiatives Building Pathways to Quality Careers"
       },
       {
         "value": "ALL",
@@ -186,10 +186,6 @@
       "forgeOverview": {
         "title": "Beyond Code Centers Overview",
         "description": "Details on our place-based tech hubs blending education, workforce development, and community engagement."
-      },
-      "brandFlipbook": {
-        "title": "Brand Flipbook",
-        "description": "Our visual identity, brand story, and the design language behind Beyond Code Collective."
       }
     }
   },

@@ -92,7 +92,7 @@
       {
         "value": "3",
         "suffix": "+",
-        "label": "Iniciativas Construyendo Caminos hacia Carreras de Calidad — Y Más Próximamente"
+        "label": "Iniciativas Construyendo Caminos hacia Carreras de Calidad"
       },
       {
         "value": "TODAS",
@@ -186,10 +186,6 @@
       "forgeOverview": {
         "title": "Resumen de Beyond Code Centers",
         "description": "Detalles sobre nuestros centros tecnológicos presenciales que combinan educación, desarrollo laboral y participación comunitaria."
-      },
-      "brandFlipbook": {
-        "title": "Flipbook de Marca",
-        "description": "Nuestra identidad visual, historia de marca y el lenguaje de diseño detrás de Beyond Code Collective."
       }
     }
   },
