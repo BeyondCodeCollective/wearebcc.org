@@ -98,6 +98,15 @@ export const CONTACT = {
   partnerships: "partnerships@wearebcc.org",
 } as const;
 
+// Shown in the footer. Kept separate from CONTACT, which the footer renders
+// as a list of mailto links.
+export const ORG_ADDRESS = {
+  street: "1736 Franklin St., 10th Floor",
+  cityStateZip: "Oakland, CA 94612, USA",
+  phone: "(510) 398-0880",
+  phoneHref: "tel:+15103980880",
+} as const;
+
 export const RESOURCES = [
   {
     title: "Beyond Code Collective One-Pager",
