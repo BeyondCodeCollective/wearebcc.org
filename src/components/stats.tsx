@@ -15,7 +15,8 @@ function AnimatedNumber({
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true });
-  const [display, setDisplay] = useState("0");
+  // Start at the real value so server-rendered HTML and crawlers see the true number.
+  const [display, setDisplay] = useState(value);
 
   useEffect(() => {
     if (!isInView) return;
@@ -26,6 +27,12 @@ function AnimatedNumber({
       return;
     }
 
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setDisplay(value);
+      return;
+    }
+
+    setDisplay("0");
     let current = 0;
     const target = numericValue;
     const duration = 1500;
