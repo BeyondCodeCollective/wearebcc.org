@@ -77,6 +77,7 @@ export function Resources() {
               <iframe
                 src={FEATURED_VIDEO.embedUrl}
                 title={FEATURED_VIDEO.title}
+                loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="absolute inset-0 h-full w-full"
