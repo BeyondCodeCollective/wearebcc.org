@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { CONTACT, ORG_ADDRESS } from "@/lib/constants";
 import { ContactProvider } from "@/components/contact-modal";
 import "../globals.css";
 import { AnalyticsListener } from "@/components/analytics-listener";
@@ -118,11 +119,24 @@ export default async function LocaleLayout({
   // the social profiles and the founder in Google's knowledge graph.
   const orgJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": ["Organization", "NGO"],
     name: "Beyond Code Collective",
     alternateName: "BCC",
     url: "https://www.wearebcc.org",
     logo: "https://www.wearebcc.org/images/bcc-logo-stacked-black.png",
+    // Identity details Google can match against the nonprofit registration.
+    taxID: "45-4930539",
+    nonprofitStatus: "Nonprofit501c3",
+    telephone: ORG_ADDRESS.phoneE164,
+    email: CONTACT.info,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: ORG_ADDRESS.street,
+      addressLocality: "Oakland",
+      addressRegion: "CA",
+      postalCode: "94612",
+      addressCountry: "US",
+    },
     sameAs: [
       "https://www.instagram.com/beyondcodecollective",
       "https://www.linkedin.com/company/beyond-code-collective",
