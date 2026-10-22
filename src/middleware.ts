@@ -62,6 +62,19 @@ export default function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL("/beyond-overview", request.url));
   }
 
+  // Serve English at "/" with a 200 instead of a 307 to /en. Ad platforms and
+  // crawlers treat a redirecting landing URL as a destination mismatch, and
+  // Google Ad Grants disallow a submitted domain that redirects. /en stays the
+  // canonical URL (see page metadata), so this is not duplicate content. A
+  // visitor who has already chosen Spanish (NEXT_LOCALE cookie) still goes
+  // through the intl middleware and lands on /es.
+  if (
+    request.nextUrl.pathname === "/" &&
+    request.cookies.get("NEXT_LOCALE")?.value !== "es"
+  ) {
+    return NextResponse.rewrite(new URL("/en", request.url));
+  }
+
   return intlMiddleware(request);
 }
 

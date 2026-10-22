@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import { InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
-import { SITE, CONTACT } from "@/lib/constants";
+import { SITE, CONTACT, ORG_ADDRESS } from "@/lib/constants";
 import { Logo } from "./ui/logo";
 
 export function Footer() {
@@ -147,6 +147,15 @@ export function Footer() {
               &copy; {new Date().getFullYear()} {t("copyright")}
             </p>
             <p className="text-xs text-off-white/60">{t("nonprofitStatement")}</p>
+            <address className="text-xs not-italic text-off-white/60">
+              {ORG_ADDRESS.street}, {ORG_ADDRESS.cityStateZip} &middot;{" "}
+              <a
+                href={ORG_ADDRESS.phoneHref}
+                className="transition-colors hover:text-off-white"
+              >
+                {ORG_ADDRESS.phone}
+              </a>
+            </address>
           </div>
           <div className="flex gap-6">
             <a
