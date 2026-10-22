@@ -87,7 +87,9 @@
       {
         "value": "77",
         "suffix": "%",
-        "label": "De Empleadores Planean Capacitar Equipos en Tecnologías Emergentes"
+        "label": "De Empleadores Planean Capacitar a su Personal para Trabajar con IA para 2030",
+        "source": "Foro Económico Mundial, Future of Jobs Report 2025",
+        "sourceUrl": "https://cn.weforum.org/publications/the-future-of-jobs-report-2025/in-full/4-workforce-strategies"
       },
       {
         "value": "3",
@@ -102,7 +104,9 @@
       {
         "value": "60",
         "suffix": "%",
-        "label": "De Las Organizaciones Reportan una Brecha Crítica en Alfabetización de IA y Datos"
+        "label": "De Líderes Empresariales Reportan una Brecha de Habilidades en Datos",
+        "source": "DataCamp y YouGov, 2026 State of Data & AI Literacy Report",
+        "sourceUrl": "https://www.datacamp.com/blog/the-state-of-data-and-ai-literacy-in-2026-definitions-statistics-and-the-ai-skills-gap"
       }
     ]
   },

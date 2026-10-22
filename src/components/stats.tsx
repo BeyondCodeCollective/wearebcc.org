@@ -65,13 +65,22 @@ function AnimatedNumber({
 export function Stats() {
   const t = useTranslations("stats");
 
-  const items: { value: string; suffix: string; prefix?: string; label: string }[] = [];
+  const items: {
+    value: string;
+    suffix: string;
+    prefix?: string;
+    label: string;
+    source?: string;
+    sourceUrl?: string;
+  }[] = [];
   let idx = 0;
   while (t.has(`items.${idx}.value`)) {
     items.push({
       value: t(`items.${idx}.value`),
       suffix: t(`items.${idx}.suffix`),
       label: t(`items.${idx}.label`),
+      source: t.has(`items.${idx}.source`) ? t(`items.${idx}.source`) : undefined,
+      sourceUrl: t.has(`items.${idx}.sourceUrl`) ? t(`items.${idx}.sourceUrl`) : undefined,
     });
     idx++;
   }
@@ -109,6 +118,22 @@ export function Stats() {
               <p className="mt-3 text-base leading-relaxed text-off-white/85">
                 {stat.label}
               </p>
+              {stat.source && (
+                <p className="mt-2 text-xs leading-relaxed text-off-white/60">
+                  {stat.sourceUrl ? (
+                    <a
+                      href={stat.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline underline-offset-2 transition-colors hover:text-off-white"
+                    >
+                      {stat.source}
+                    </a>
+                  ) : (
+                    stat.source
+                  )}
+                </p>
+              )}
             </motion.div>
           ))}
         </div>
