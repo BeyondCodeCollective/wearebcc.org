@@ -87,7 +87,9 @@
       {
         "value": "77",
         "suffix": "%",
-        "label": "Of Employers Intend to Upskill Teams for Emerging Tech"
+        "label": "Of Employers Plan to Upskill Workers to Work Alongside AI by 2030",
+        "source": "World Economic Forum, Future of Jobs Report 2025",
+        "sourceUrl": "https://cn.weforum.org/publications/the-future-of-jobs-report-2025/in-full/4-workforce-strategies"
       },
       {
         "value": "3",
@@ -102,7 +104,9 @@
       {
         "value": "60",
         "suffix": "%",
-        "label": "Of Organizations Report a Critical AI & Data Literacy Gap"
+        "label": "Of Enterprise Leaders Report a Data Skills Gap",
+        "source": "DataCamp and YouGov, 2026 State of Data & AI Literacy Report",
+        "sourceUrl": "https://www.datacamp.com/blog/the-state-of-data-and-ai-literacy-in-2026-definitions-statistics-and-the-ai-skills-gap"
       }
     ]
   },
