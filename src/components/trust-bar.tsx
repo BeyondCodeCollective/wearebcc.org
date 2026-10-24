@@ -30,6 +30,8 @@ export function TrustBar() {
                 <img
                   src={logo.src}
                   alt={logo.name}
+                  loading="lazy"
+                  decoding="async"
                   className="h-5 w-auto opacity-30 transition-opacity hover:opacity-100 sm:h-7"
                   style={{ filter: "brightness(0)" }}
                 />

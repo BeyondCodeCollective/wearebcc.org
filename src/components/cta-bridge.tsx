@@ -56,6 +56,8 @@ export function CTABridge() {
                   <img
                     src={logo.src}
                     alt={logo.name}
+                    loading="lazy"
+                    decoding="async"
                     className={`h-5 w-auto opacity-30 transition-opacity hover:opacity-80 sm:h-7${logo.invert ? " invert" : ""}`}
                     style={logo.invert ? { filter: "brightness(0) invert(1)" } : undefined}
                   />

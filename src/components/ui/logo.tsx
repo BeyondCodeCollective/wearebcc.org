@@ -4,10 +4,13 @@ export function Logo({
   variant = "stacked",
   color = "black",
   className = "",
+  loading = "eager",
 }: {
   variant?: "stacked" | "horizontal";
   color?: "black" | "white";
   className?: string;
+  /** Use "lazy" for logos below the fold (footer) so they are not preloaded. */
+  loading?: "eager" | "lazy";
 }) {
   if (variant === "horizontal") {
     return (
@@ -20,6 +23,7 @@ export function Logo({
         alt="Beyond Code Collective"
         className={className}
         draggable={false}
+        loading={loading}
       />
     );
   }
@@ -35,6 +39,7 @@ export function Logo({
       alt="Beyond Code Collective"
       className={className}
       draggable={false}
+      loading={loading}
     />
   );
 }

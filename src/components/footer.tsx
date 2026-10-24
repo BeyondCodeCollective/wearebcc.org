@@ -37,6 +37,7 @@ export function Footer() {
               variant="horizontal"
               color="white"
               className="h-5 w-auto sm:h-6"
+              loading="lazy"
             />
             <p
               className="mt-3 font-mono text-xs tracking-wider text-off-white/60"
