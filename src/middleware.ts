@@ -24,6 +24,10 @@ export default function middleware(request: NextRequest) {
   if (bare === "/impact-report") {
     return NextResponse.rewrite(new URL("/impact-report.html", request.url));
   }
+  // The Field Ready program page is a public static page, shared as /field-ready.
+  if (bare === "/field-ready") {
+    return NextResponse.rewrite(new URL("/field-ready.html", request.url));
+  }
   // The dated path the filename used to imply, for links already sent.
   if (bare === "/beyond-the-game_2026-08") {
     return NextResponse.redirect(new URL("/beyond-the-game-deck", request.url));
