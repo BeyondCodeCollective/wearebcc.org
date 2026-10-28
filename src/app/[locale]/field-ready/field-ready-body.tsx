@@ -1,19 +1,20 @@
 "use client";
 
 import { useEffect } from "react";
-import { FIELD_READY_HTML } from "./content";
+import { FIELD_READY_HTML, FIELD_READY_STRINGS } from "./content";
 
 type DataLayerWindow = Window & { dataLayer?: unknown[] };
 
-export function FieldReadyBody() {
+export function FieldReadyBody({ locale }: { locale: "en" | "es" }) {
   useEffect(() => {
+    const t = FIELD_READY_STRINGS[locale];
     const video = document.getElementById("hero-video") as HTMLVideoElement | null;
     const toggle = document.getElementById("vid-toggle") as HTMLButtonElement | null;
     const sync = () => {
       if (!video || !toggle) return;
       const paused = video.paused;
-      toggle.textContent = paused ? "Play" : "Pause";
-      toggle.setAttribute("aria-label", paused ? "Play background video" : "Pause background video");
+      toggle.textContent = paused ? t.play : t.pause;
+      toggle.setAttribute("aria-label", paused ? t.playLabel : t.pauseLabel);
       toggle.setAttribute("aria-pressed", paused ? "true" : "false");
     };
     const onToggle = () => {
@@ -49,17 +50,17 @@ export function FieldReadyBody() {
       const zip = field("zip").value.trim();
       const age = field("age").value;
       if (!first) {
-        say("Please add your first name.", false);
+        say(t.needName, false);
         field("first").focus();
         return;
       }
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        say("Please enter a valid email address.", false);
+        say(t.needEmail, false);
         field("email").focus();
         return;
       }
       if (button) button.disabled = true;
-      say("Sending...", false);
+      say(t.sending, false);
       try {
         const res = await fetch("/api/subscribe", {
           method: "POST",
@@ -80,9 +81,9 @@ export function FieldReadyBody() {
           form: "field-ready",
         });
         form.reset();
-        say("You're on the list. We'll email you when the first cohort opens.", true);
+        say(t.done, true);
       } catch {
-        say("Something went wrong. Please try again.", false);
+        say(t.error, false);
       } finally {
         if (button) button.disabled = false;
       }
@@ -95,7 +96,7 @@ export function FieldReadyBody() {
       video?.removeEventListener("play", sync);
       video?.removeEventListener("pause", sync);
     };
-  }, []);
+  }, [locale]);
 
-  return <div dangerouslySetInnerHTML={{ __html: FIELD_READY_HTML }} />;
+  return <div dangerouslySetInnerHTML={{ __html: FIELD_READY_HTML[locale] }} />;
 }

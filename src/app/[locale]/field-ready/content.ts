@@ -1,6 +1,6 @@
-// Static markup for the Field Ready program page (from the design mockup).
+// Static markup (English; Spanish lives in content-es.ts) for the Field Ready program page (from the design mockup).
 // Trusted, first-party content: rendered with dangerouslySetInnerHTML.
-export const FIELD_READY_HTML = `<section class="hero cream"><video class="hero-video" id="hero-video" src="/field-ready/hero.mp4" poster="/field-ready/hero-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"></video><div class="hero-scrim" aria-hidden="true"></div><button type="button" class="vid-toggle" id="vid-toggle" aria-label="Pause background video" aria-pressed="false">Pause</button><div class="wrap">
+const FIELD_READY_HTML_EN = `<section class="hero cream"><video class="hero-video" id="hero-video" src="/field-ready/hero.mp4" poster="/field-ready/hero-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"></video><div class="hero-scrim" aria-hidden="true"></div><button type="button" class="vid-toggle" id="vid-toggle" aria-label="Pause background video" aria-pressed="false">Pause</button><div class="wrap">
   <h1>Field<br><span>Ready.</span></h1>
   <p class="sub">An eight-week program that trains anyone, in any function, to think clearly with AI in the room, listen for the real problem, build something that helps, and prove it works.</p>
   <p class="sub2">Field Ready is free of charge to learners, thanks to our funders and partners.</p>
@@ -146,3 +146,32 @@ export const FIELD_READY_HTML = `<section class="hero cream"><video class="hero-
 </div></section>
 
 `;
+
+import { FIELD_READY_HTML_ES } from "./content-es";
+
+export const FIELD_READY_HTML = { en: FIELD_READY_HTML_EN, es: FIELD_READY_HTML_ES } as const;
+
+export const FIELD_READY_STRINGS = {
+  en: {
+    play: "Play",
+    pause: "Pause",
+    playLabel: "Play background video",
+    pauseLabel: "Pause background video",
+    needName: "Please add your first name.",
+    needEmail: "Please enter a valid email address.",
+    sending: "Sending...",
+    done: "You're on the list. We'll email you when the first cohort opens.",
+    error: "Something went wrong. Please try again.",
+  },
+  es: {
+    play: "Reproducir",
+    pause: "Pausar",
+    playLabel: "Reproducir el video de fondo",
+    pauseLabel: "Pausar el video de fondo",
+    needName: "Por favor, escribe tu nombre.",
+    needEmail: "Por favor, escribe un correo electrónico válido.",
+    sending: "Enviando...",
+    done: "Estás en la lista. Te escribiremos cuando abra la primera cohorte.",
+    error: "Algo salió mal. Por favor, inténtalo de nuevo.",
+  },
+} as const;

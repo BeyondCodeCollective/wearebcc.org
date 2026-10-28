@@ -2,7 +2,12 @@ import { Nav } from "@/components/nav";
 import { FieldReadyBody } from "./field-ready-body";
 import "./field-ready.css";
 
-export default function FieldReadyPage() {
+export default async function FieldReadyPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   return (
     <>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +19,7 @@ export default function FieldReadyPage() {
       />
       <Nav variant="light" />
       <main className="fr">
-        <FieldReadyBody />
+        <FieldReadyBody locale={locale === "es" ? "es" : "en"} />
       </main>
     </>
   );
