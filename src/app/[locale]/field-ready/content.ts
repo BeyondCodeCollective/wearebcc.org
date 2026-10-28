@@ -1,4 +1,4 @@
-// Static markup (English; Spanish lives in content-es.ts) for the Field Ready program page (from the design mockup).
+// Static markup (English only) for the Field Ready program page (from the design mockup).
 // Trusted, first-party content: rendered with dangerouslySetInnerHTML.
 const FIELD_READY_HTML_EN = `<section class="hero cream"><video class="hero-video" id="hero-video" src="/field-ready/hero.mp4" poster="/field-ready/hero-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"></video><div class="hero-scrim" aria-hidden="true"></div><button type="button" class="vid-toggle" id="vid-toggle" aria-label="Pause background video" aria-pressed="false">Pause</button><div class="wrap">
   <h1>Field<br><span>Ready.</span></h1>
@@ -147,31 +147,16 @@ const FIELD_READY_HTML_EN = `<section class="hero cream"><video class="hero-vide
 
 `;
 
-import { FIELD_READY_HTML_ES } from "./content-es";
-
-export const FIELD_READY_HTML = { en: FIELD_READY_HTML_EN, es: FIELD_READY_HTML_ES } as const;
+export const FIELD_READY_HTML = FIELD_READY_HTML_EN;
 
 export const FIELD_READY_STRINGS = {
-  en: {
-    play: "Play",
-    pause: "Pause",
-    playLabel: "Play background video",
-    pauseLabel: "Pause background video",
-    needName: "Please add your first name.",
-    needEmail: "Please enter a valid email address.",
-    sending: "Sending...",
-    done: "You're on the list. We'll email you when the first cohort opens.",
-    error: "Something went wrong. Please try again.",
-  },
-  es: {
-    play: "Reproducir",
-    pause: "Pausar",
-    playLabel: "Reproducir el video de fondo",
-    pauseLabel: "Pausar el video de fondo",
-    needName: "Por favor, escribe tu nombre.",
-    needEmail: "Por favor, escribe un correo electrónico válido.",
-    sending: "Enviando...",
-    done: "Ya estás en la lista. Te escribiremos cuando abra la primera generación.",
-    error: "Algo salió mal. Por favor, inténtalo de nuevo.",
-  },
+  play: "Play",
+  pause: "Pause",
+  playLabel: "Play background video",
+  pauseLabel: "Pause background video",
+  needName: "Please add your first name.",
+  needEmail: "Please enter a valid email address.",
+  sending: "Sending...",
+  done: "You're on the list. We'll email you when the first cohort opens.",
+  error: "Something went wrong. Please try again.",
 } as const;

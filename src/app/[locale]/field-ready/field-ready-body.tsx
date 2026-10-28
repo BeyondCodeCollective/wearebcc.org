@@ -5,9 +5,9 @@ import { FIELD_READY_HTML, FIELD_READY_STRINGS } from "./content";
 
 type DataLayerWindow = Window & { dataLayer?: unknown[] };
 
-export function FieldReadyBody({ locale }: { locale: "en" | "es" }) {
+export function FieldReadyBody() {
   useEffect(() => {
-    const t = FIELD_READY_STRINGS[locale];
+    const t = FIELD_READY_STRINGS;
     const video = document.getElementById("hero-video") as HTMLVideoElement | null;
     const toggle = document.getElementById("vid-toggle") as HTMLButtonElement | null;
     const sync = () => {
@@ -96,7 +96,7 @@ export function FieldReadyBody({ locale }: { locale: "en" | "es" }) {
       video?.removeEventListener("play", sync);
       video?.removeEventListener("pause", sync);
     };
-  }, [locale]);
+  }, []);
 
-  return <div dangerouslySetInnerHTML={{ __html: FIELD_READY_HTML[locale] }} />;
+  return <div dangerouslySetInnerHTML={{ __html: FIELD_READY_HTML }} />;
 }
