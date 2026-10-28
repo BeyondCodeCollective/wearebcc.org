@@ -8,9 +8,27 @@ type DataLayerWindow = Window & { dataLayer?: unknown[] };
 export function FieldReadyBody() {
   useEffect(() => {
     const video = document.getElementById("hero-video") as HTMLVideoElement | null;
-    if (video && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      video.removeAttribute("autoplay");
-      video.pause();
+    const toggle = document.getElementById("vid-toggle") as HTMLButtonElement | null;
+    const sync = () => {
+      if (!video || !toggle) return;
+      const paused = video.paused;
+      toggle.textContent = paused ? "Play" : "Pause";
+      toggle.setAttribute("aria-label", paused ? "Play background video" : "Pause background video");
+      toggle.setAttribute("aria-pressed", paused ? "true" : "false");
+    };
+    const onToggle = () => {
+      if (!video) return;
+      if (video.paused) void video.play().catch(() => {});
+      else video.pause();
+    };
+    if (video && toggle) {
+      video.muted = true;
+      video.addEventListener("play", sync);
+      video.addEventListener("pause", sync);
+      toggle.addEventListener("click", onToggle);
+      // Some browsers (iOS Low Power Mode) refuse autoplay: the button then reads "Play".
+      void video.play().catch(sync);
+      sync();
     }
 
     const form = document.getElementById("signup-form") as HTMLFormElement | null;
@@ -71,7 +89,12 @@ export function FieldReadyBody() {
     };
 
     form.addEventListener("submit", onSubmit);
-    return () => form.removeEventListener("submit", onSubmit);
+    return () => {
+      form.removeEventListener("submit", onSubmit);
+      toggle?.removeEventListener("click", onToggle);
+      video?.removeEventListener("play", sync);
+      video?.removeEventListener("pause", sync);
+    };
   }, []);
 
   return <div dangerouslySetInnerHTML={{ __html: FIELD_READY_HTML }} />;

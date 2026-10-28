@@ -177,3 +177,8 @@
 
 /* Room for the fixed donate bar and site nav above the hero. */
 .fr{padding-top:calc(var(--banner-h) + 64px)}
+
+/* Pause / play control for the hero video (autoplays; this lets people stop it). */
+.fr .vid-toggle{position:absolute;z-index:2;right:16px;bottom:16px;font:400 11px/1 var(--mono);text-transform:uppercase;letter-spacing:.06em;padding:10px 12px;border:0;border-radius:0;background:var(--cream);color:var(--navy);box-shadow:inset 0 0 0 1px var(--navy);cursor:pointer}
+.fr .vid-toggle:hover{background:var(--navy);color:var(--cream)}
+@media(max-width:860px){.fr .vid-toggle{top:12px;right:12px;bottom:auto}}

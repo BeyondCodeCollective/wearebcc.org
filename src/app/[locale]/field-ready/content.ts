@@ -1,6 +1,6 @@
 // Static markup for the Field Ready program page (from the design mockup).
 // Trusted, first-party content: rendered with dangerouslySetInnerHTML.
-export const FIELD_READY_HTML = `<section class="hero cream"><video class="hero-video" id="hero-video" src="/field-ready/hero.mp4" poster="/field-ready/hero-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"></video><div class="hero-scrim" aria-hidden="true"></div><div class="wrap">
+export const FIELD_READY_HTML = `<section class="hero cream"><video class="hero-video" id="hero-video" src="/field-ready/hero.mp4" poster="/field-ready/hero-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"></video><div class="hero-scrim" aria-hidden="true"></div><button type="button" class="vid-toggle" id="vid-toggle" aria-label="Pause background video" aria-pressed="false">Pause</button><div class="wrap">
   <h1>Field<br><span>Ready.</span></h1>
   <p class="sub">An eight-week program that trains anyone, in any function, to think clearly with AI in the room, listen for the real problem, build something that helps, and prove it works.</p>
   <p class="sub2">Field Ready is free of charge to learners, thanks to our funders and partners.</p>
