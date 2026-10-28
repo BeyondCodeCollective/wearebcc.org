@@ -2,7 +2,7 @@
 // Form option values stay in English so Mailchimp segments match across locales.
 export const FIELD_READY_HTML_ES = `<section class="hero cream"><video class="hero-video" id="hero-video" src="/field-ready/hero.mp4" poster="/field-ready/hero-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"></video><div class="hero-scrim" aria-hidden="true"></div><button type="button" class="vid-toggle" id="vid-toggle" aria-label="Pausar el video de fondo" aria-pressed="false">Pausar</button><div class="wrap">
   <h1>Field<br><span>Ready.</span></h1>
-  <p class="sub">Un programa de ocho semanas que enseña a cualquier persona, en cualquier área, a pensar con claridad con la IA en la sala, escuchar el problema real, crear algo que ayude y demostrar que funciona.</p>
+  <p class="sub">Un programa de ocho semanas que enseña a cualquier persona, en cualquier área, a pensar con claridad con la IA en la sala, escuchar el problema real, construir algo que ayude y demostrar que funciona.</p>
   <p class="sub2">Field Ready es gratis para quienes aprenden, gracias a nuestros financiadores y aliados.</p>
   <div class="cta-row">
     <a class="btn" href="#join">Únete a la lista de espera →</a>
