@@ -167,6 +167,9 @@
 .fr .join .hint[data-on="true"]{color:var(--lime)}
 
 /* employers */
+.fr .emp-photo{margin:0 0 20px}
+.fr .emp-photo img{display:block;width:100%;aspect-ratio:100/46;object-fit:cover;object-position:center 12%}
+@media(max-width:640px){.fr .emp-photo img{aspect-ratio:4/3}}
 .fr .emp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .fr .emp .card{background:var(--gray);color:var(--navy)}
 .fr .emp .card p{color:var(--navy)}

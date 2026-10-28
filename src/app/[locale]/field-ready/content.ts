@@ -137,6 +137,7 @@ const FIELD_READY_HTML_EN = `<section class="hero cream"><video class="hero-vide
     <h2>Partner with us.</h2>
     <p>Bring Field Ready to your team or your community. We can build a custom Field Ready for your people, localize it for your region, and connect you with graduates who arrive with working projects built on real problems from real workplaces.</p>
   </div>
+  <figure class="emp-photo"><img src="/field-ready/partner.jpg" alt="Five colleagues of different ages gather around a laptop, a woman pointing at the screen while the others look on." width="2400" height="1600"></figure>
   <div class="emp">
     <div class="card"><div class="label">Employers</div><h3>Build a Field Ready for your team</h3><p>We work with you to shape Field Ready around your people, your tools, and the problems your team is facing. And if you're hiring, talk with us about our graduates.</p></div>
     <div class="card"><div class="label">Workforce boards and agencies</div><h3>Localize it for your region</h3><p>We adapt Field Ready to your learners, your local labor market, and your goals, and run it alongside you.</p></div>
