@@ -171,7 +171,7 @@ export const FIELD_READY_STRINGS = {
     needName: "Por favor, escribe tu nombre.",
     needEmail: "Por favor, escribe un correo electrónico válido.",
     sending: "Enviando...",
-    done: "Estás en la lista. Te escribiremos cuando abra la primera cohorte.",
+    done: "Ya estás en la lista. Te escribiremos cuando abra la primera generación.",
     error: "Algo salió mal. Por favor, inténtalo de nuevo.",
   },
 } as const;

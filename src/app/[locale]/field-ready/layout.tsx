@@ -9,7 +9,7 @@ const COPY = {
   es: {
     title: "Field Ready | Beyond Code Collective",
     description:
-      "Field Ready es un programa gratuito de ocho semanas que enseña a cualquier persona, en cualquier área, a pensar con claridad con la IA, escuchar el problema real, crear algo que ayude y demostrar que funciona. Súmate a la lista de espera.",
+      "Field Ready es un programa gratuito de ocho semanas que enseña a cualquier persona, en cualquier área, a pensar con claridad con la IA, escuchar el problema real, construir algo que ayude y demostrar que funciona. Únete a la lista de espera.",
   },
 } as const;
 const OG_IMAGE = "https://www.wearebcc.org/field-ready/hero-poster.jpg";
