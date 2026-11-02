@@ -144,6 +144,15 @@
           "Cohort-Based",
           "Career Transition"
         ]
+      },
+      "fieldReady": {
+        "title": "Field Ready",
+        "description": "A free eight-week program that trains anyone, in any function, to think clearly with AI, listen for the real problem, build something that helps, and prove it works. Live kickoffs, self-guided content, and a small pod of peers.",
+        "tags": [
+          "Free",
+          "8 Weeks",
+          "Any Role"
+        ]
       }
     }
   },

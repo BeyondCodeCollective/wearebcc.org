@@ -144,6 +144,15 @@
           "Basado en Cohortes",
           "Transición de Carrera"
         ]
+      },
+      "fieldReady": {
+        "title": "Field Ready",
+        "description": "Un programa gratuito de ocho semanas que enseña a cualquier persona, en cualquier área, a pensar con claridad con la IA, escuchar el problema real, construir algo que ayude y demostrar que funciona. Sesiones de inicio en vivo, contenido a tu ritmo y un grupo pequeño de compañeros.",
+        "tags": [
+          "Gratis",
+          "8 Semanas",
+          "Cualquier Área"
+        ]
       }
     }
   },

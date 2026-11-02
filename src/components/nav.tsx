@@ -221,6 +221,14 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
                     >
                       {t("codeAlong")}
                     </Link>
+                    <Link
+                      href="/field-ready"
+                      onClick={() => setInitiativesOpen(false)}
+                      className={dropdownLinkClass}
+                      style={{ fontFamily: "var(--font-mono)" }}
+                    >
+                      {t("fieldReady")}
+                    </Link>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -466,6 +474,14 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
                         style={{ fontFamily: "var(--font-mono)" }}
                       >
                         {t("codeAlong")}
+                      </Link>
+                      <Link
+                        href="/field-ready"
+                        onClick={() => setMobileOpen(false)}
+                        className={mobileSubLinkClass}
+                        style={{ fontFamily: "var(--font-mono)" }}
+                      >
+                        {t("fieldReady")}
                       </Link>
                     </div>
                   </motion.div>

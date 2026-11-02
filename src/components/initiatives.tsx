@@ -6,11 +6,19 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { usePartnerships } from "./partnerships-modal";
 
-const INITIATIVE_IMAGES = [
-  "/images/initiatives/after-the-game.jpg",
-  "/images/initiatives/forge.jpg",
-  "/images/initiatives/catalysts.jpg",
-];
+const INITIATIVE_IMAGES: Record<string, string> = {
+  afterTheGame: "/images/initiatives/after-the-game.jpg",
+  forge: "/images/initiatives/forge.jpg",
+  catalysts: "/images/initiatives/catalysts.jpg",
+  fieldReady: "/field-ready/picnic.jpg",
+};
+
+const INITIATIVE_HREFS: Record<string, string> = {
+  afterTheGame: "/beyond-the-game",
+  forge: "/beyond-code-centers",
+  catalysts: "/catalyst",
+  fieldReady: "/field-ready",
+};
 
 const INITIATIVE_LOGOS: Record<string, { src: string; width: number; height: number }> = {
   // Beyond The Game keeps a wordmark logo; Beyond Code Centers now renders as
@@ -18,7 +26,7 @@ const INITIATIVE_LOGOS: Record<string, { src: string; width: number; height: num
   afterTheGame: { src: "/images/btg/btg-logo-white.png", width: 1043, height: 212 },
 };
 
-const INITIATIVE_KEYS = ["afterTheGame", "forge", "catalysts"] as const;
+const INITIATIVE_KEYS = ["afterTheGame", "forge", "catalysts", "fieldReady"] as const;
 
 export function Initiatives() {
   const { openPartnerships } = usePartnerships();
@@ -90,7 +98,7 @@ export function Initiatives() {
                   }`}
                 >
                   <Image
-                    src={INITIATIVE_IMAGES[i]}
+                    src={INITIATIVE_IMAGES[key]}
                     alt={t(`items.${key}.title`)}
                     fill
                     className="object-cover"
@@ -131,15 +139,9 @@ export function Initiatives() {
                   </div>
 
                   <div className="mt-8">
-                    {key === "afterTheGame" || key === "forge" || key === "catalysts" ? (
+                    {INITIATIVE_HREFS[key] ? (
                       <Link
-                        href={
-                          key === "afterTheGame"
-                            ? "/beyond-the-game"
-                            : key === "catalysts"
-                              ? "/catalyst"
-                              : "/beyond-code-centers"
-                        }
+                        href={INITIATIVE_HREFS[key]}
                         className="inline-flex items-center justify-center gap-2 bg-electric-green px-6 py-3 font-mono text-xs tracking-wider uppercase text-true-black transition-colors hover:bg-electric-green/80"
                         style={{ fontFamily: "var(--font-mono)" }}
                       >
