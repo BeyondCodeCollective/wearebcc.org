@@ -23,6 +23,7 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
   const initiativesRef = useRef<HTMLDivElement>(null);
   const t = useTranslations("nav");
   const locale = useLocale();
+  const impactHref = locale === "es" ? "/es/impact-report" : "/impact-report";
   const router = useRouter();
   const pathname = usePathname();
   const { openContact } = useContact();
@@ -117,7 +118,7 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
           </a>
 
           {/* Desktop nav */}
-          <div className="hidden items-center gap-8 md:flex">
+          <div className="hidden items-center gap-4 md:flex lg:gap-8">
             {/* About dropdown */}
             <div
               ref={aboutRef}
@@ -242,6 +243,15 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
             >
               {t("news")}
             </Link>
+
+            {/* Impact Report: static page served by middleware, so a plain link (full page load) */}
+            <a
+              href={impactHref}
+              className={`whitespace-nowrap font-mono text-xs tracking-wider uppercase transition-colors ${textColor}`}
+              style={{ fontFamily: "var(--font-mono)" }}
+            >
+              {t("impactReport")}
+            </a>
 
             {/* Rest of nav links */}
             {NAV_KEYS.map((link) => (
@@ -497,6 +507,15 @@ export function Nav({ variant = "dark" }: { variant?: "dark" | "light" } = {}) {
             >
               {t("news")}
             </Link>
+
+            {/* Impact Report: static page served by middleware, so a plain link (full page load) */}
+            <a
+              href={impactHref}
+              onClick={() => setMobileOpen(false)}
+              className="font-heading text-3xl text-off-white transition-colors hover:text-electric-green"
+            >
+              {t("impactReport")}
+            </a>
 
             {/* Rest of nav links */}
             {NAV_KEYS.map((link) => (
