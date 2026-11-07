@@ -101,8 +101,8 @@ export const CONTACT = {
 // Shown in the footer. Kept separate from CONTACT, which the footer renders
 // as a list of mailto links.
 export const ORG_ADDRESS = {
-  street: "1736 Franklin St., 10th Floor",
-  cityStateZip: "Oakland, CA 94612, USA",
+  street: "1714 Franklin Street, Suite 100",
+  cityStateZip: "Oakland, CA 94612",
   phone: "(510) 398-0880",
   phoneE164: "+1-510-398-0880",
   phoneHref: "tel:+15103980880",
