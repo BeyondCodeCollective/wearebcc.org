@@ -82,33 +82,92 @@
     }
   },
   "stats": {
-    "label": "More Opportunity. More Impact.",
+    "label": "Real People. Real Results.",
     "items": [
       {
-        "value": "77",
-        "suffix": "%",
-        "label": "Of Employers Plan to Upskill Workers to Work Alongside AI by 2030",
-        "source": "World Economic Forum, Future of Jobs Report 2025",
-        "sourceUrl": "https://cn.weforum.org/publications/the-future-of-jobs-report-2025/in-full/4-workforce-strategies"
-      },
-      {
-        "value": "3",
+        "value": "485",
         "suffix": "+",
-        "label": "Initiatives Building Pathways to Quality Careers"
+        "label": "Learners Served in Our First Six Months"
       },
       {
-        "value": "ALL",
-        "suffix": "",
-        "label": "Ages and Backgrounds Welcome — From K-12 to Career Changers"
-      },
-      {
-        "value": "60",
+        "value": "100",
         "suffix": "%",
-        "label": "Of Enterprise Leaders Report a Data Skills Gap",
-        "source": "DataCamp and YouGov, 2026 State of Data & AI Literacy Report",
-        "sourceUrl": "https://www.datacamp.com/blog/the-state-of-data-and-ai-literacy-in-2026-definitions-statistics-and-the-ai-skills-gap"
+        "label": "Of Beyond Center Learners Taught What They Learned to Someone Else. The Best Way to Learn Is to Teach."
+      },
+      {
+        "value": "2.3",
+        "suffix": "M",
+        "label": "Views of Code Along Beyond in Its First Month"
       }
     ]
+  },
+  "upcoming": {
+    "label": "[ NOVEMBER – JANUARY ]",
+    "headline1": "WHAT'S",
+    "headline2": "UPCOMING",
+    "description": "Labs, workshops, and events from Beyond Code Collective, November through January.",
+    "months": {
+      "nov": "November",
+      "dec": "December",
+      "jan": "January"
+    },
+    "tags": {
+      "open": "Open to the public",
+      "invite": "Invite only"
+    },
+    "events": {
+      "dialoguesMorey": {
+        "day": "9",
+        "title": "Beyond Code Dialogues: Dr. José Morey",
+        "meta": "LinkedIn Live · Virtual · 1 PM ET",
+        "description": "Mica Le John in conversation with Dr. José Morey, physician, former IBM Watson Health and NASA advisor.",
+        "cta": "Watch on LinkedIn"
+      },
+      "dialoguesBoyd": {
+        "day": "18",
+        "title": "Beyond Code Dialogues: Brian Boyd",
+        "meta": "LinkedIn Live · Virtual · 11 AM–12 PM ET",
+        "description": "A live conversation with Brian Boyd of the UNC Frank Porter Graham Child Development Institute."
+      },
+      "musicLab": {
+        "day": "19",
+        "title": "Beyond the Music Field Ready Lab",
+        "meta": "Atlanta · In person",
+        "description": "A Field Ready Lab for the Beyond the Music community."
+      },
+      "catalystLab": {
+        "day": "19",
+        "title": "Catalyst Lab: AI and Entrepreneurship",
+        "meta": "Virtual",
+        "description": "A live online lab on using AI to start and grow something of your own.",
+        "cta": "Reserve a Spot"
+      },
+      "olderAdultLab": {
+        "day": "2",
+        "title": "Older Adult AI Lab",
+        "meta": "New York · In person",
+        "description": "An introduction to AI for older adults, hosted with Hudson Guild."
+      },
+      "githubSchools": {
+        "day": "4",
+        "title": "GitHub × Microsoft · Atlanta Schools",
+        "meta": "Metro Atlanta · In person · 10am–2pm",
+        "description": "Short AI info sessions and hands-on demos for students and educators, with GitHub and Microsoft."
+      },
+      "fieldReadyLab": {
+        "day": "10",
+        "title": "Field Ready Lab",
+        "meta": "Virtual",
+        "note": "Date to be confirmed",
+        "description": "A free, hands-on introduction to Field Ready. You leave with something you built.",
+        "cta": "Join the Waitlist"
+      }
+    },
+    "january": {
+      "title": "More dates coming in January",
+      "description": "We are finalizing our January schedule. Join the Field Ready list to hear first.",
+      "cta": "Join the List"
+    }
   },
   "initiatives": {
     "headline1": "INFINITE",
