@@ -1,5 +1,11 @@
 # CLAUDE.md — Creative Web Development Standards
 
+## Where to work
+
+- Open sessions inside this repo folder (`/Users/fonz.morris/dev/bcc/wearebcc.org`), never a parent folder like `~/dev`.
+- One feature, one branch. For a second session running in parallel, use a git worktree under `~/dev/bcc/worktrees`.
+- Never clone a second copy of this repo. Copies drift, strand commits that never reach GitHub, and get mistaken for the real repo.
+
 ## Never claim "verified" without looking
 
 A check that does not test the thing being claimed is not verification.
