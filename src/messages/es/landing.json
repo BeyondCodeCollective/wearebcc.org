@@ -82,33 +82,92 @@
     }
   },
   "stats": {
-    "label": "Más Oportunidad. Más Impacto.",
+    "label": "Personas Reales. Resultados Reales.",
     "items": [
       {
-        "value": "77",
-        "suffix": "%",
-        "label": "De Empleadores Planean Capacitar a su Personal para Trabajar con IA para 2030",
-        "source": "Foro Económico Mundial, Future of Jobs Report 2025",
-        "sourceUrl": "https://cn.weforum.org/publications/the-future-of-jobs-report-2025/in-full/4-workforce-strategies"
-      },
-      {
-        "value": "3",
+        "value": "485",
         "suffix": "+",
-        "label": "Iniciativas Construyendo Caminos hacia Carreras de Calidad"
+        "label": "Personas Atendidas en Nuestros Primeros Seis Meses"
       },
       {
-        "value": "TODAS",
-        "suffix": "",
-        "label": "Las Edades y Orígenes Son Bienvenidos — Desde K-12 hasta Cambio de Carrera"
-      },
-      {
-        "value": "60",
+        "value": "100",
         "suffix": "%",
-        "label": "De Líderes Empresariales Reportan una Brecha de Habilidades en Datos",
-        "source": "DataCamp y YouGov, 2026 State of Data & AI Literacy Report",
-        "sourceUrl": "https://www.datacamp.com/blog/the-state-of-data-and-ai-literacy-in-2026-definitions-statistics-and-the-ai-skills-gap"
+        "label": "De Quienes Aprendieron en un Beyond Center Enseñaron lo Aprendido a Alguien Más. La Mejor Manera de Aprender Es Enseñar."
+      },
+      {
+        "value": "2.3",
+        "suffix": "M",
+        "label": "De Vistas de Code Along Beyond en su Primer Mes"
       }
     ]
+  },
+  "upcoming": {
+    "label": "[ NOVIEMBRE – ENERO ]",
+    "headline1": "PRÓXIMOS",
+    "headline2": "EVENTOS",
+    "description": "Laboratorios, talleres y eventos de Beyond Code Collective, de noviembre a enero.",
+    "months": {
+      "nov": "Noviembre",
+      "dec": "Diciembre",
+      "jan": "Enero"
+    },
+    "tags": {
+      "open": "Abierto al público",
+      "invite": "Solo con invitación"
+    },
+    "events": {
+      "dialoguesMorey": {
+        "day": "9",
+        "title": "Beyond Code Dialogues: Dr. José Morey",
+        "meta": "LinkedIn Live · Virtual · 1 p. m. ET",
+        "description": "Mica Le John conversa con el Dr. José Morey, médico, exasesor de IBM Watson Health y de la NASA.",
+        "cta": "Ver en LinkedIn"
+      },
+      "dialoguesBoyd": {
+        "day": "18",
+        "title": "Beyond Code Dialogues: Brian Boyd",
+        "meta": "LinkedIn Live · Virtual · 11 a. m.–12 p. m. ET",
+        "description": "Una conversación en vivo con Brian Boyd, del Instituto de Desarrollo Infantil Frank Porter Graham de la UNC."
+      },
+      "musicLab": {
+        "day": "19",
+        "title": "Laboratorio Field Ready de Beyond the Music",
+        "meta": "Atlanta · Presencial",
+        "description": "Un laboratorio Field Ready para la comunidad de Beyond the Music."
+      },
+      "catalystLab": {
+        "day": "19",
+        "title": "Catalyst Lab: IA y Emprendimiento",
+        "meta": "Virtual",
+        "description": "Un laboratorio en línea y en vivo sobre cómo usar la IA para iniciar y hacer crecer algo propio.",
+        "cta": "Reserva tu Lugar"
+      },
+      "olderAdultLab": {
+        "day": "2",
+        "title": "Laboratorio de IA para Personas Mayores",
+        "meta": "Nueva York · Presencial",
+        "description": "Una introducción a la IA para personas mayores, en colaboración con Hudson Guild."
+      },
+      "githubSchools": {
+        "day": "4",
+        "title": "GitHub × Microsoft · Escuelas de Atlanta",
+        "meta": "Área metropolitana de Atlanta · Presencial · 10 a. m.–2 p. m.",
+        "description": "Sesiones informativas breves y demostraciones prácticas de IA para estudiantes y docentes, con GitHub y Microsoft."
+      },
+      "fieldReadyLab": {
+        "day": "10",
+        "title": "Laboratorio Field Ready",
+        "meta": "Virtual",
+        "note": "Fecha por confirmar",
+        "description": "Una introducción gratuita y práctica a Field Ready. Terminas con algo que tú construiste.",
+        "cta": "Únete a la Lista de Espera"
+      }
+    },
+    "january": {
+      "title": "Más fechas en enero",
+      "description": "Estamos definiendo nuestro calendario de enero. Únete a la lista de Field Ready para enterarte primero.",
+      "cta": "Únete a la Lista"
+    }
   },
   "initiatives": {
     "headline1": "POSIBILIDADES",

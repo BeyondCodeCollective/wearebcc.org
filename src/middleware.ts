@@ -20,9 +20,13 @@ export default function middleware(request: NextRequest) {
   if (bare === "/beyond-the-game-deck") {
     return NextResponse.rewrite(new URL(BTG_DECK, request.url));
   }
-  // The six month impact report is a public static page, shared as /impact-report.
+  // The six month impact report is a public static page, shared as /impact-report
+  // (Spanish at /es/impact-report).
   if (bare === "/impact-report") {
-    return NextResponse.rewrite(new URL("/impact-report.html", request.url));
+    const es = /^\/es(?=\/|$)/.test(request.nextUrl.pathname);
+    return NextResponse.rewrite(
+      new URL(es ? "/impact-report-es.html" : "/impact-report.html", request.url),
+    );
   }
   // The dated path the filename used to imply, for links already sent.
   if (bare === "/beyond-the-game_2026-08") {

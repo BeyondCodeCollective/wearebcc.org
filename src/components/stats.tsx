@@ -21,7 +21,7 @@ function AnimatedNumber({
   useEffect(() => {
     if (!isInView) return;
 
-    const numericValue = parseInt(value);
+    const numericValue = parseFloat(value);
     if (isNaN(numericValue)) {
       setDisplay(value);
       return;
@@ -32,7 +32,11 @@ function AnimatedNumber({
       return;
     }
 
-    setDisplay("0");
+    // Keep the decimals of values like "2.3" so the count lands on the real number.
+    const decimals = value.includes(".") ? value.split(".")[1].length : 0;
+    const format = (n: number) => n.toFixed(decimals);
+
+    setDisplay(format(0));
     let current = 0;
     const target = numericValue;
     const duration = 1500;
@@ -43,10 +47,11 @@ function AnimatedNumber({
     const timer = setInterval(() => {
       current += increment;
       if (current >= target) {
-        setDisplay(String(target));
+        setDisplay(format(target));
         clearInterval(timer);
       } else {
-        setDisplay(String(Math.floor(current)));
+        const factor = 10 ** decimals;
+        setDisplay(format(Math.floor(current * factor) / factor));
       }
     }, stepTime);
 
@@ -98,7 +103,7 @@ export function Stats() {
           {t("label")}
         </motion.p>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className={`mt-12 grid gap-8 sm:grid-cols-2 ${items.length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-4"}`}>
           {items.map((stat, i) => (
             <motion.div
               key={i}

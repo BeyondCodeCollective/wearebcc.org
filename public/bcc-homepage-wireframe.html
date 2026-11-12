@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>BCC Homepage Wireframe</title></head><body>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap">
+<style>
+/* Layout: brand-true homepage. Calendar is the second block on cobalt, programs laid out as audience lanes, proof on black, partner band on electric green. Single light theme by brand choice. */
+@font-face{font-family:"Special Gothic";src:url("/fonts/SpecialGothicCondensedOne-Regular.ttf") format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"GT America";src:url("/fonts/GT-America-Standard-Regular.ttf") format("truetype");font-weight:400;font-display:swap}
+:root{
+  --cobalt:#1D59FF; --green:#E5F701; --black:#000; --off:#FFFDF7; --dark-cobalt:#012966; --grey1:#ECECEC; --grey2:#D8D8D8; --grey3:#646464; --orange:#FF4C00;
+  --h:"Special Gothic","Impact","Arial Narrow",sans-serif; --b:"GT America","Inter",system-ui,sans-serif; --m:"Space Mono",ui-monospace,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--off);color:var(--black);font-family:var(--b);line-height:1.5;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+h1,h2,h3,p{margin:0}
+.h{font-family:var(--h);text-transform:uppercase;letter-spacing:-.02em;line-height:.9;font-weight:400}
+.m{font:400 12px var(--m);text-transform:uppercase;letter-spacing:-.01em}
+.in{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.band{padding-block:clamp(48px,7vw,96px)}
+a{color:inherit}
+.btn{display:inline-flex;align-items:center;gap:8px;font:400 13px var(--m);text-transform:uppercase;padding:14px 22px;border:2px solid var(--black);background:var(--black);color:var(--off);text-decoration:none;cursor:pointer;transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--black)}
+.btn.ghost{background:transparent;color:var(--black)}
+.btn.g{background:var(--green);color:var(--black);border-color:var(--black)}
+.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--off);border-bottom:2px solid var(--black)}
+.nav .in{display:flex;align-items:center;gap:28px;height:72px}
+.nav img{width:260px;height:auto;display:block}
+.nav nav{display:flex;gap:26px;margin-left:12px}
+.nav nav a{font:400 12px var(--m);text-transform:uppercase;text-decoration:none}
+.nav nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.nav .sp{flex:1}
+.nav .lang{font:400 12px var(--m)}
+.burger{display:none}
+@media (max-width:900px){.nav nav,.nav .lang{display:none}.burger{display:block;width:26px;height:2px;background:var(--black);box-shadow:0 8px 0 var(--black),0 -8px 0 var(--black)}.nav .btn{padding:9px 11px;font-size:11px}.nav .in{gap:12px}.nav img{width:min(180px,44vw)}}
+
+/* hero */
+.hero{padding-block:clamp(36px,5vw,72px) 0}
+.hero .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(24px,4vw,56px);align-items:end}
+.hero .tag{color:var(--cobalt);margin-bottom:18px;display:block}
+.hero h1{font-size:clamp(56px,10.5vw,150px)}
+.hero h1 em{font-style:normal;color:var(--cobalt)}
+.hero p.l{font-size:clamp(17px,1.5vw,20px);max-width:46ch;margin-top:22px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero figure{margin:0;border:2px solid var(--black);aspect-ratio:4/5;overflow:hidden;background:var(--grey2)}
+.hero figure img{width:100%;height:100%;object-fit:cover;display:block}
+.next{margin-top:clamp(28px,4vw,48px);border-top:2px solid var(--black);border-bottom:2px solid var(--black);background:var(--green)}
+.next .in{display:flex;gap:20px;align-items:center;padding-block:14px;flex-wrap:wrap}
+.next .dot{width:10px;height:10px;border-radius:50%;background:var(--black);animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.next .dot{animation:none}}
+.next b{font-weight:400;font-size:18px}
+.next a{margin-left:auto}
+@media (max-width:760px){.hero .grid{grid-template-columns:1fr}.hero figure{aspect-ratio:16/10}.next a{margin-left:0}}
+
+/* calendar */
+.cal{background:var(--cobalt);color:var(--off)}
+.cal .top{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.cal .lab{color:var(--green);display:block;margin-bottom:14px}
+.cal h2{font-size:clamp(52px,8vw,112px)}
+.cal h2 span{color:var(--green)}
+.filt{display:flex;gap:8px;flex-wrap:wrap}
+.filt button{font:400 12px var(--m);text-transform:uppercase;padding:9px 14px;border:2px solid var(--off);background:transparent;color:var(--off);cursor:pointer}
+.filt button[aria-pressed="true"]{background:var(--green);color:var(--black);border-color:var(--green)}
+#list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.month{grid-column:1/-1;font:400 12px var(--m);text-transform:uppercase;color:var(--green);border-bottom:2px solid var(--off);padding-bottom:8px;margin-top:22px}
+.month:first-child{margin-top:0}
+.ev{aspect-ratio:1/1;background:var(--off);color:var(--black);border:2px solid var(--black);padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0;transition:transform .2s,box-shadow .2s}
+.ev:hover{transform:translate(-3px,-3px);box-shadow:5px 5px 0 var(--black)}
+.ev.inv{background:var(--dark-cobalt);color:var(--off);border-color:var(--off)}
+.ev.inv:hover{box-shadow:5px 5px 0 var(--off)}
+.ev .dt{display:flex;align-items:baseline;gap:10px}
+.ev .d{font-family:var(--h);font-size:68px;line-height:.8;color:var(--cobalt)}
+.ev.inv .d{color:var(--green)}
+.ev .w{font:400 12px var(--m);text-transform:uppercase}
+.ev h3{font-family:var(--h);font-size:clamp(22px,1.9vw,27px);text-transform:uppercase;letter-spacing:-.02em;line-height:.95;font-weight:400;margin-top:auto}
+.ev .meta{font:400 11px var(--m);text-transform:uppercase;opacity:.85}
+.tags{display:flex;gap:5px;flex-wrap:wrap}
+.tg{font:400 10px var(--m);text-transform:uppercase;padding:2px 6px;border:1.5px solid currentColor}
+.tg.open{background:var(--green);color:var(--black);border-color:var(--black)}
+.tg.live{background:var(--black);color:var(--green);border-color:var(--black)}
+.ev.inv .tg.live{background:var(--green);color:var(--black);border-color:var(--green)}
+.ev .btn{padding:10px 12px;font-size:11px;justify-content:center;margin-top:4px}
+.ev.inv .btn{background:var(--off);color:var(--black);border-color:var(--off)}
+.ev .btn.dim{background:transparent;color:inherit;border-color:currentColor;opacity:.6;cursor:default}
+.ev .btn.dim:hover{transform:none;box-shadow:none}
+.ev .none{font:400 11px var(--m);text-transform:uppercase;opacity:.7;padding:10px 0}
+.ev[hidden],.month[hidden]{display:none}
+@media (max-width:1100px){#list{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:820px){#list{grid-template-columns:repeat(2,minmax(0,1fr))}.ev .d{font-size:60px}}
+@media (max-width:520px){#list{grid-template-columns:1fr}.ev{aspect-ratio:auto;min-height:260px}}
+
+/* programs */
+.pg h2{font-size:clamp(48px,7vw,96px)}
+.pg .sub{max-width:52ch;margin-top:16px;font-size:18px}
+.lane{display:grid;grid-template-columns:240px 1fr;gap:32px;padding-block:36px;border-top:2px solid var(--black);margin-top:36px}
+.lane:first-of-type{margin-top:44px}
+.lane .who h3{font-size:clamp(34px,3.6vw,48px)}
+.lane .who .m{display:block;margin-top:10px;color:var(--grey3)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{border:2px solid var(--black);background:var(--off);display:flex;flex-direction:column;min-width:0}
+.card .im{aspect-ratio:3/2;background:var(--cobalt);overflow:hidden;border-bottom:2px solid var(--black);position:relative}
+.card .im img{width:100%;height:100%;object-fit:cover;display:block}
+.card .im.sw{display:grid;place-items:center;font-family:var(--h);font-size:44px;color:var(--green);text-transform:uppercase;padding:12px;text-align:center;line-height:.9}
+.card .bd{padding:16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h4{font-family:var(--h);font-size:30px;text-transform:uppercase;letter-spacing:-.02em;line-height:.95;margin:0;font-weight:400}
+.card p{font-size:14px;color:#333}
+.facts{display:flex;gap:6px;flex-wrap:wrap}
+.facts span{font:400 11px var(--m);text-transform:uppercase;border:1.5px solid var(--black);padding:2px 7px}
+.card .btn{margin-top:auto;justify-content:center}
+.flag{position:absolute;top:10px;left:10px;background:var(--orange);color:#fff;font:400 11px var(--m);text-transform:uppercase;padding:3px 8px;border:2px solid var(--black)}
+@media (max-width:900px){.lane{grid-template-columns:1fr;gap:18px}}
+
+/* proof */
+.proof{background:var(--black);color:var(--off)}
+.proof .lab{color:var(--green);display:block;margin-bottom:28px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.stats>div{border-top:2px solid var(--green);padding-top:14px}
+.stats b{display:block;font-family:var(--h);font-size:clamp(64px,8vw,112px);line-height:.9;font-weight:400;color:var(--green)}
+.stats span{display:block;margin-top:10px;max-width:30ch}
+@media (max-width:760px){.stats{grid-template-columns:1fr}}
+
+/* partner */
+.partner{background:var(--green);border-top:2px solid var(--black);border-bottom:2px solid var(--black)}
+.partner .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.pc{border:2px solid var(--black);background:var(--off);padding:28px;display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.pc h3{font-size:clamp(34px,4vw,52px)}
+.partner h2{font-size:clamp(48px,7vw,96px);margin-bottom:28px}
+@media (max-width:760px){.partner .grid{grid-template-columns:1fr}}
+
+footer{background:var(--black);color:var(--off);padding-block:48px}
+footer .grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px;font-size:14px}
+footer h5{font:400 12px var(--m);text-transform:uppercase;color:var(--green);margin:0 0 10px}
+footer a{display:block;text-decoration:none;margin-bottom:6px;opacity:.9}
+footer img{width:240px;max-width:100%;height:auto;margin-bottom:14px}
+@media (max-width:760px){footer .grid{grid-template-columns:1fr 1fr}footer .grid>div:first-child{grid-column:1/-1}}
+.note{background:#fff3cd;border-bottom:2px solid var(--black);font:400 12px var(--m);padding:8px 0;text-transform:uppercase}
+
+/* WIREFRAME OVERRIDES: remove all color, keep layout and type */
+:root{--cobalt:#e4e6ea;--green:#fff;--dark-cobalt:#c9ced6;--off:#fff;--orange:#8a919c;--wf:#e4e6ea;--wf2:#d3d7dd;--wfm:#6b7280;--wfi:#111}
+body{background:#fff;color:var(--wfi)}
+.hero .tag,.hero h1 em{color:var(--wfm)}
+.next{background:var(--wf)}.next .dot{background:var(--wfi)}
+.btn.g{background:#fff;color:var(--wfi);border-color:var(--wfi)}
+.cal{background:var(--wf);color:var(--wfi)}
+.cal .lab,.cal h2 span{color:var(--wfm)}
+.filt button{border-color:var(--wfi);color:var(--wfi);background:transparent}
+.filt button[aria-pressed="true"]{background:var(--wfi);color:#fff;border-color:var(--wfi)}
+.month{color:var(--wfi);border-bottom-color:var(--wfi)}
+.ev{background:#fff;color:var(--wfi);border-color:var(--wfi)}
+.ev .d{color:var(--wfi)}
+.ev.inv{background:var(--wf2);color:var(--wfi);border:2px dashed var(--wfi)}
+.ev.inv .d{color:var(--wfi)}
+.ev:hover,.ev.inv:hover{box-shadow:5px 5px 0 var(--wfi)}
+.tg{border-color:var(--wfi);color:var(--wfi)}
+.tg.open{background:var(--wfi);color:#fff;border-color:var(--wfi)}
+.tg.live{background:#fff;color:var(--wfi);border-color:var(--wfi)}
+.proof{background:var(--wf);color:var(--wfi)}.proof .lab{color:var(--wfm)}
+.stats>div{border-top-color:var(--wfi)}.stats b{color:var(--wfi)}
+.partner{background:var(--wf)}
+footer{background:var(--wf);color:var(--wfi)}footer h5{color:var(--wfm)}
+footer .m{border-color:var(--wfi)!important}
+.card .im,.card .im.sw{background:var(--wf2);color:var(--wfm)}
+.card .im.sw{font-size:30px}
+.flag{background:#fff;color:var(--wfi);border:2px dashed var(--wfi)}
+.pg [style*="color:var(--cobalt)"]{color:var(--wfm)!important}
+.note{background:var(--wf)}
+.ph{background:var(--wf2);border:2px solid var(--wfi);display:grid;place-items:center;color:var(--wfm);font:400 12px var(--m);text-transform:uppercase;text-align:center;padding:8px;width:100%;height:100%;min-height:60px}
+.hero figure{border:2px solid var(--wfi);background:var(--wf2)}
+.logo-ph{display:inline-grid;place-items:center;width:170px;height:30px;background:var(--wf2);border:1.5px solid var(--wfi);font:400 11px var(--m);color:var(--wfm)}
+.nav img+*{display:none}
+.signup{background:#fff;border-top:2px solid var(--wfi);border-bottom:2px solid var(--wfi)}
+.signup h2{font-size:clamp(40px,6vw,80px)}
+.signup p{margin-top:12px;font-size:18px;max-width:52ch}
+.signup form{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap;max-width:620px}
+.signup input{flex:1 1 240px;min-width:0;font:400 14px var(--b);padding:14px 16px;border:2px solid var(--wfi);background:#fff;color:var(--wfi)}
+.proof.band{padding-block:clamp(32px,4vw,48px)}
+.proof .stats b{font-size:clamp(40px,5vw,64px)}
+
+/* POLISH: calmer and easier to scan. No offset shadows, no chip clutter, no eyebrows. */
+:root{--wfm:#555c68}
+.btn,.ev{transition:opacity .15s,background .15s}
+.btn:hover,.ev:hover,.ev.inv:hover{transform:none;box-shadow:none}
+.btn:hover{opacity:.8}
+.ev .btn.dim:hover{opacity:.6}
+.tags{gap:0}
+.tg,.tg.open,.tg.live{border:0;padding:0;background:none;color:#3f4652;font-size:11px}
+.tg+.tg::before,.facts span+span::before{content:"\00a0·\00a0"}
+.facts{gap:0;color:#3f4652}
+.facts span{border:0;padding:0}
+.card .im{aspect-ratio:16/9}
+.card p{color:#3f4652}
+.cards{gap:20px}
+.lane{padding-block:44px}
+.proof h2{font-size:clamp(36px,4vw,56px);margin-bottom:28px}
+.filt button:hover{background:#fff}
+.filt button[aria-pressed="true"]:hover{background:var(--wfi)}
+::selection{background:var(--wfi);color:#fff}
+.next .dot{animation:none}
+.note{text-transform:none}
+@media (max-width:520px){.ev{min-height:0}.ev h3{margin-top:6px}}
+</style>
+
+<div class="note"><div class="in">Wireframe for team review. Not live. Grayscale on purpose. Hero line, program descriptors and flagged names are placeholders.</div></div>
+
+<header class="nav"><div class="in">
+  <a href="#"><img src="img/bcc-logo-horizontal-black.png" alt="Beyond Code Collective"></a>
+  <nav aria-label="Main"><a href="#programs">Programs</a><a href="#upcoming">Events</a><a href="#impact">Impact</a><a href="#about">About</a><a href="#partner">Hire &amp; Partner</a></nav>
+  <span class="sp"></span><span class="lang">EN | ES</span>
+  <a class="btn g" href="#signup">Sign up</a><span class="burger" aria-hidden="true"></span>
+</div></header>
+
+<main>
+<section class="hero"><div class="in">
+  <div class="grid">
+    <div>
+      <h1 class="h">Learn AI.<br><em>Build what helps.</em></h1>
+      <p class="l">Free programs, live sessions and community for people who are ready to work with AI, whatever their job or background.</p>
+      <div class="ctas"><a class="btn" href="#signup">Sign up →</a></div>
+    </div>
+    <figure><img src="img/hero-main.jpg" alt="Beyond learners working together"></figure>
+  </div>
+</div>
+<div class="next"><div class="in"><span class="dot" aria-hidden="true"></span><span class="m">Next up</span><b>Mon Nov 9 · LinkedIn Live with Dr. José Morey · 1 PM ET</b><a class="btn" href="https://www.linkedin.com/events/7521236923525500928">Save my spot →</a></div></div>
+</section>
+
+<section class="cal band" id="upcoming"><div class="in">
+  <div class="top">
+    <div><h2 class="h">What's<br><span>upcoming</span></h2></div>
+    <div class="filt" role="group" aria-label="Filter events">
+      <button type="button" data-f="all" aria-pressed="true">All</button>
+      <button type="button" data-f="virtual" aria-pressed="false">Virtual</button>
+      <button type="button" data-f="inperson" aria-pressed="false">In person</button>
+      <button type="button" data-f="live" aria-pressed="false">LinkedIn Live</button>
+      <button type="button" data-f="open" aria-pressed="false">Open to the public</button>
+      <button type="button" data-f="invite" aria-pressed="false">Invite only</button>
+    </div>
+  </div>
+  <div id="list"></div>
+</div></section>
+
+<section class="pg band" id="programs"><div class="in">
+  <h2 class="h">Find your program</h2>
+  <p class="sub">Pick the line that sounds like you, then sign up.</p>
+
+  <div class="lane"><div class="who"><h3 class="h">I want to build</h3><span class="m">3 programs</span></div>
+    <div class="cards">
+      <article class="card"><div class="im"><img src="img/desk.jpg" alt="A learner working at a desk"><span class="flag">Name under review</span></div><div class="bd"><h4>Field Ready</h4><p>An 8-week course that teaches people in any role to work with AI.</p><div class="facts"><span>Any role</span><span>8 weeks</span><span>Free</span><span>Starts Jan</span></div><a class="btn" href="#">Join the waitlist →</a></div></article>
+      <article class="card"><div class="im"><img src="img/catalysts.jpg" alt="Catalyst Lab session"></div><div class="bd"><h4>Catalyst Labs</h4><p>Live online workshops, one topic per session.</p><div class="facts"><span>Everyone</span><span>1 session</span><span>Next: Nov 19</span></div><a class="btn" href="https://bccacademy.io/bcc/catalyst-labs">Reserve a spot →</a></div></article>
+      <article class="card"><div class="im"><img src="img/code-along.jpg" alt="Code Along Beyond"></div><div class="bd"><h4>Code Along Beyond</h4><p>Follow-along video lessons you do at your own pace.</p><div class="facts"><span>Everyone</span><span>Self-paced</span><span>Free</span></div><a class="btn" href="#">Start watching →</a></div></article>
+    </div></div>
+
+  <div class="lane"><div class="who"><h3 class="h">Career conversations</h3><span class="m">2 series</span></div>
+    <div class="cards">
+      <article class="card"><div class="im sw" style="background:var(--wf2)">Beyond Code Dialogues</div><div class="bd"><h4>Beyond Code Dialogues</h4><p>Our team interviews the builders, multi-hyphenates and thinkers shaping our world.</p><div class="facts"><span>LinkedIn Live</span><span>Free</span><span>Nov 9 · Nov 18</span></div><a class="btn" href="https://www.linkedin.com/events/7521236923525500928">Watch on LinkedIn →</a></div></article>
+      <article class="card"><div class="im sw" style="background:var(--wf2)">AMAs</div><div class="bd"><h4>AMAs with Linda</h4><p>Ask-me-anything sessions. Details to come from Mica.</p><div class="facts"><span>Virtual</span><span>Free</span><span>Dates TBA</span></div><a class="btn" href="#">Learn more →</a></div></article>
+    </div></div>
+
+  <div class="lane"><div class="who"><h3 class="h">I want to learn in person</h3><span class="m">2 programs</span></div>
+    <div class="cards">
+      <article class="card"><div class="im sw">Beyond Center</div><div class="bd"><h4>Beyond Center</h4><p>Hands-on learning in person. Highlights from Atlanta, with LA and New York coming next.</p><div class="facts"><span>Atlanta</span><span>LA soon</span><span>NY soon</span></div><a class="btn" href="https://wearebcc.org/beyond-code-centers">See the Centers →</a></div></article>
+      <article class="card"><div class="im sw">Older Adult AI Lab</div><div class="bd"><h4>Older Adult AI Lab</h4><p>An introduction to AI for older adults, hosted with Hudson Guild.</p><div class="facts"><span>Older adults</span><span>New York</span><span>Dec 2</span></div><a class="btn" href="#">Learn more →</a></div></article>
+    </div></div>
+
+  <div class="lane"><div class="who"><h3 class="h">I'm in music or sports</h3><span class="m">2 programs</span></div>
+    <div class="cards">
+      <article class="card"><div class="im"><img src="img/after-the-game.jpg" alt="Athlete"></div><div class="bd"><h4>Beyond the Game</h4><p>Descriptor to confirm with the program lead.</p><div class="facts"><span>Athletes</span></div><a class="btn" href="https://wearebcc.org/beyond-the-game">Learn more →</a></div></article>
+      <article class="card"><div class="im sw">Beyond the Music</div><div class="bd"><h4>Beyond the Music</h4><p>Descriptor to confirm with the program lead.</p><div class="facts"><span>Musicians</span><span>Nov 19 lab</span></div><a class="btn" href="https://www.instagram.com/beyondcodecollective">Watch on Instagram →</a></div></article>
+    </div></div>
+</div></section>
+<section class="signup band" id="signup"><div class="in">
+  <h2 class="h">Not sure where to start?</h2>
+  <p>Get on the list and we will point you to the right program.</p>
+  <form onsubmit="return false"><input type="email" placeholder="Email address" aria-label="Email address"><button class="btn" type="submit">Sign up →</button></form>
+</div></section>
+
+<section class="proof band" id="impact"><div class="in">
+  <h2 class="h">Real people. Real results.</h2>
+  <div class="stats">
+    <div><b>485+</b><span>Learners served in our first six months</span></div>
+    <div><b>100%</b><span>Of Beyond Center learners taught what they learned to someone else</span></div>
+    <div><b>2.3M</b><span>Views of Code Along Beyond in its first month</span></div>
+  </div>
+</div></section>
+
+<section class="partner band" id="partner"><div class="in">
+  <h2 class="h">Hire, partner<br>or fund</h2>
+  <div class="grid">
+    <div class="pc"><h3 class="h">Hire graduates</h3><p>Meet learners who have built working projects on real problems.</p><a class="btn" href="#">Talk to us →</a></div>
+    <div class="pc"><h3 class="h">Partner with us</h3><p>Bring a program to your team, school or community.</p><a class="btn" href="#">Partner with us →</a></div>
+  </div>
+</div></section>
+</main>
+
+<footer id="about"><div class="in"><div class="grid">
+  <div><img src="img/bcc-logo-horizontal-white.png" alt="Beyond Code Collective"><p style="max-width:36ch;opacity:.9">Stay in the loop. New programs and events, in your inbox.</p><p class="m" style="margin-top:12px;border:2px solid var(--off);padding:12px;max-width:340px;opacity:.8">Email address · Subscribe</p></div>
+  <div><h5>Programs</h5><a href="#programs">Build</a><a href="#programs">Career conversations</a><a href="#programs">In person</a><a href="#programs">Music &amp; sports</a></div>
+  <div><h5>Explore</h5><a href="#upcoming">Events</a><a href="#impact">Impact report</a><a href="#">News</a><a href="#">Resources</a></div>
+  <div><h5>Beyond</h5><a href="#">About</a><a href="#">Team</a><a href="#">Contact</a></div>
+</div></div></footer>
+
+<script>
+(function(){
+  var E=[
+    {m:'November',d:9,w:'Mon',t:['virtual','live','open'],h:'Beyond Code Dialogues: Dr. José Morey',meta:'LinkedIn Live · 1 PM ET',p:'Mica in conversation with Dr. José Morey, physician, former IBM Watson Health, NASA advisor and founder of Ad Astra Media.',cta:'Save my spot →',href:'https://www.linkedin.com/events/7521236923525500928'},
+    {m:'November',d:18,w:'Wed',t:['virtual','live','open'],h:'Beyond Code Dialogues: Brian Boyd',meta:'LinkedIn Live · 11 AM–12 PM ET',p:'A live conversation with Brian Boyd of the UNC Frank Porter Graham Child Development Institute.',cta:'Save my spot →',href:'#',dim:1},
+    {m:'November',d:19,w:'Thu',t:['inperson','invite'],h:'Beyond the Music Field Ready Lab',meta:'Atlanta · In person',p:'x',cta:'Request an invite →',href:'#'},
+    {m:'November',d:19,w:'Thu',t:['virtual','open'],h:'Catalyst Lab: AI and Entrepreneurship',meta:'Virtual',p:'A live online lab on using AI to start and grow something of your own.',cta:'Reserve a spot →',href:'https://bccacademy.io/bcc/catalyst-labs'},
+    {m:'December',d:2,w:'Wed',t:['inperson','invite'],h:'Older Adult AI Lab',meta:'New York · In person',p:'x',cta:'Request an invite →',href:'#'},
+    {m:'December',d:4,w:'Fri',t:['inperson','invite'],h:'GitHub × Microsoft · Atlanta Schools',meta:'Metro Atlanta · In person · 10 AM–2 PM',p:'x',cta:'Request an invite →',href:'#'},
+    {m:'December',d:10,w:'Thu',t:['virtual','open'],h:'Field Ready Lab',meta:'Virtual · Date to be confirmed',p:'A free, hands-on introduction to Field Ready. You leave with something you built.',cta:'Join the waitlist →',href:'#'},
+    {m:'January',d:0,w:'',t:['open'],h:'More dates coming in January',meta:'',p:'We are finalizing the January schedule. Join the list to hear first.',cta:'Join the list →',href:'#'}
+  ];
+  var L={virtual:'Virtual',inperson:'In person',live:'LinkedIn Live',open:'Open to the public',invite:'Invite only'};
+  var list=document.getElementById('list'),cur='';
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+  var html='';
+  E.forEach(function(e){
+    if(e.m!==cur){cur=e.m;html+='<div class="month">'+e.m+'</div>'}
+    var inv=e.t.indexOf('invite')>-1;
+    var tg=e.t.filter(function(x){return x!=='live'&&(x!=='open'||!inv)}).map(function(x){return '<span class="tg '+x+'">'+L[x]+'</span>'}).join('');
+    html+='<article class="ev'+(inv?' inv':'')+'" data-t="'+e.t.join(' ')+'"><div class="dt"><div class="d">'+(e.d||'JAN')+'</div><div class="w">'+(e.d?e.m.slice(0,3)+' · '+e.w:'TBA')+'</div></div><div class="tags">'+tg+'</div><h3>'+esc(e.h)+'</h3>'+
+      (e.meta?'<div class="meta">'+esc(e.meta)+'</div>':'')+
+      (e.cta?'<a class="btn'+(e.dim?' dim':'')+'" href="'+e.href+'">'+esc(e.cta)+'</a>':'<div class="none">Invite only</div>')+'</article>';
+  });
+  list.innerHTML=html;
+  var btns=document.querySelectorAll('.filt button');
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+    var f=b.getAttribute('data-f');
+    list.querySelectorAll('.ev').forEach(function(el){el.hidden=!(f==='all'||el.getAttribute('data-t').split(' ').indexOf(f)>-1)});
+    var seen={};
+    list.querySelectorAll('.month').forEach(function(m){var n=m.nextElementSibling,any=false;while(n&&n.classList.contains('ev')){if(!n.hidden)any=true;n=n.nextElementSibling}m.hidden=!any});
+  })});
+})();
+</script>
+<script>
+document.querySelectorAll('img').forEach(function(i){
+  var a=i.getAttribute('alt')||'image',el=document.createElement('div');
+  if(/logo|Beyond Code Collective$/i.test(i.getAttribute('src')||'')){el=document.createElement('span');el.className='logo-ph';el.textContent='LOGO'}
+  else{el.className='ph';el.textContent='Image: '+a}
+  i.replaceWith(el)});
+</script>
+</body></html>

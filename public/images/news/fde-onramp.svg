@@ -1,0 +1,35 @@
+<svg width="1125" height="2436" viewBox="0 0 1125 2436" xmlns="http://www.w3.org/2000/svg">
+  <!-- Black background -->
+  <rect width="1125" height="2436" fill="#000000"/>
+
+  <!-- Status bar: time and icons -->
+  <text x="60" y="90" font-family="-apple-system, BlinkMacSystemFont" font-size="48" font-weight="400" fill="#FFFFFF">9:41</text>
+  <text x="1040" y="90" font-family="-apple-system, BlinkMacSystemFont" font-size="48" font-weight="400" fill="#FFFFFF" text-anchor="end">📶 📡 🔋</text>
+
+  <!-- Header: Notes back button and menu -->
+  <text x="80" y="200" font-family="-apple-system, BlinkMacSystemFont" font-size="56" font-weight="600" fill="#FFCC00">&lt; Notes</text>
+  <text x="1040" y="200" font-family="-apple-system, BlinkMacSystemFont" font-size="56" fill="#FFFFFF" text-anchor="end">•••</text>
+
+  <!-- Main headline -->
+  <text x="80" y="420" font-family="-apple-system, BlinkMacSystemFont" font-size="88" font-weight="600" fill="#FFFFFF">
+    <tspan x="80" dy="0">The jobs</tspan>
+    <tspan x="80" dy="110">are there.</tspan>
+  </text>
+
+  <!-- Bullet point 1 -->
+  <text x="80" y="800" font-family="-apple-system, BlinkMacSystemFont" font-size="48" fill="#FFCC00">✓</text>
+  <text x="180" y="820" font-family="-apple-system, BlinkMacSystemFont" font-size="52" font-weight="400" fill="#FFFFFF">The on-ramp</text>
+  <text x="180" y="900" font-family="-apple-system, BlinkMacSystemFont" font-size="52" font-weight="400" fill="#FFFFFF">isn't.</text>
+
+  <!-- Supporting text -->
+  <text x="80" y="1250" font-family="-apple-system, BlinkMacSystemFont" font-size="48" font-weight="400" fill="#FFFFFF">
+    <tspan x="80" dy="0">That's what</tspan>
+    <tspan x="80" dy="60">we're building.</tspan>
+  </text>
+
+  <!-- Footer icons -->
+  <text x="150" y="2360" font-family="-apple-system, BlinkMacSystemFont" font-size="56" fill="#FFCC00" text-anchor="middle">☰</text>
+  <text x="562" y="2360" font-family="-apple-system, BlinkMacSystemFont" font-size="56" fill="#FFCC00" text-anchor="middle">📷</text>
+  <text x="750" y="2360" font-family="-apple-system, BlinkMacSystemFont" font-size="56" fill="#FFCC00" text-anchor="middle">👤</text>
+  <text x="980" y="2360" font-family="-apple-system, BlinkMacSystemFont" font-size="56" fill="#FFCC00" text-anchor="middle">✎</text>
+</svg>
