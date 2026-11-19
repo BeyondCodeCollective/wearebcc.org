@@ -20,6 +20,15 @@ export default function middleware(request: NextRequest) {
   if (bare === "/beyond-the-game-deck") {
     return NextResponse.rewrite(new URL(BTG_DECK, request.url));
   }
+  // Instagram link-in-bio landing page (static), shared as /join; /ig is the short link.
+  if (bare === "/join") {
+    return NextResponse.rewrite(new URL("/join/index.html", request.url));
+  }
+  if (bare === "/ig") {
+    return NextResponse.redirect(
+      new URL("/join?utm_source=instagram&utm_medium=social&utm_campaign=linkinbio", request.url),
+    );
+  }
   // The six month impact report is a public static page, shared as /impact-report.
   if (bare === "/impact-report") {
     return NextResponse.rewrite(new URL("/impact-report.html", request.url));
