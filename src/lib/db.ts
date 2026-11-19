@@ -83,6 +83,11 @@ export async function ensureTables() {
   // Salted hash, never the address itself — enough to rate-limit one abuser
   // without keeping a log of who visited the site.
   await sql`ALTER TABLE subscribers ADD COLUMN IF NOT EXISTS ip_hash VARCHAR(64)`;
+  // Campaign attribution and texting consent, kept apart from `source`.
+  await sql`ALTER TABLE subscribers ADD COLUMN IF NOT EXISTS utm_source VARCHAR(100)`;
+  await sql`ALTER TABLE subscribers ADD COLUMN IF NOT EXISTS utm_medium VARCHAR(100)`;
+  await sql`ALTER TABLE subscribers ADD COLUMN IF NOT EXISTS utm_campaign VARCHAR(100)`;
+  await sql`ALTER TABLE subscribers ADD COLUMN IF NOT EXISTS sms_consent BOOLEAN DEFAULT FALSE`;
   await sql`CREATE INDEX IF NOT EXISTS idx_subscribers_ip_recent ON subscribers(ip_hash, created_at)`;
   await sql`CREATE INDEX IF NOT EXISTS idx_subscribers_email ON subscribers(email)`;
   // Contact messages are the rows a human actually needs to read.
