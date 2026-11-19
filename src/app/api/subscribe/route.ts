@@ -40,6 +40,11 @@ type Lead = {
   segment: string;
   source: string;
   zip: string;
+  utmSource: string;
+  utmMedium: string;
+  utmCampaign: string;
+  /** True only when a phone was given and the visitor ticked the texting box. */
+  smsConsent: boolean;
   /** Free text from the contact modal. Mailchimp has no merge field for it. */
   message: string;
   ipHash: string | null;
@@ -87,11 +92,14 @@ async function persistLead(lead: Lead): Promise<number | null> {
     await ensureTables();
     const { rows } = await sql`
       INSERT INTO subscribers (email, first_name, phone, company, segment, source,
-                               message, ip_hash, flagged, flag_reason, zip)
+                               message, ip_hash, flagged, flag_reason, zip,
+                               utm_source, utm_medium, utm_campaign, sms_consent)
       VALUES (${lead.email}, ${lead.firstName || null}, ${lead.phone || null},
               ${lead.company || null}, ${lead.segment || null}, ${lead.source},
               ${lead.message || null}, ${lead.ipHash}, ${lead.flagged},
-              ${lead.flagReason}, ${lead.zip || null})
+              ${lead.flagReason}, ${lead.zip || null},
+              ${lead.utmSource || null}, ${lead.utmMedium || null},
+              ${lead.utmCampaign || null}, ${lead.smsConsent})
       RETURNING id
     `;
     return rows[0].id as number;
@@ -155,6 +163,8 @@ export async function POST(request: NextRequest) {
 
   const { firstName, email, phone, segment, source, company, message, website, zip } =
     body as Record<string, string | undefined>;
+  const { utmSource, utmMedium, utmCampaign, smsConsent } = body as Record<string, unknown>;
+  const utm = (v: unknown) => (typeof v === "string" ? v.trim().slice(0, 100) : "");
 
   // Honeypot: a field hidden from people and irresistible to bots. Answer 200
   // so the bot records a success and does not come back to probe why it failed.
@@ -202,6 +212,10 @@ export async function POST(request: NextRequest) {
     source,
     // Digits only, capped at 10 so ZIP+4 fits and nothing else does.
     zip: typeof zip === "string" ? zip.replace(/\D/g, "").slice(0, 10) : "",
+    utmSource: utm(utmSource),
+    utmMedium: utm(utmMedium),
+    utmCampaign: utm(utmCampaign),
+    smsConsent: hasPhone && smsConsent === true,
     message: typeof message === "string" ? message.trim() : "",
     ipHash,
     flagged: screening.blocked,
