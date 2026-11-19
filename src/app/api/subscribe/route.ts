@@ -267,8 +267,6 @@ export async function POST(request: NextRequest) {
           PHONE: lead.phone,
           SOURCE: lead.source,
           SEGMENT: lead.segment,
-          // SMS Phone Number column: only people who ticked the texting box.
-          ...(lead.smsConsent && lead.phone ? { SMSPHONE: lead.phone } : {}),
           ...(lead.zip ? { ZIP: lead.zip } : {}),
           ...(lead.company ? { COMPANY: lead.company } : {}),
         },
