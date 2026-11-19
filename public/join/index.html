@@ -493,7 +493,6 @@ footer { padding: 40px var(--gutter) 28px; }
     var pv = phone.value.trim();
 
     if (!ev && !pv) { return fail('Add an email address or a mobile number to sign up.', email); }
-    if (!ev && pv) { return fail('Add your email too so we can save your spot. We’ll still text you updates.', email); }
     if (ev && !validEmail(ev)) { return fail('That email address looks incomplete. Check it and try again.', email); }
     if (pv && !validPhone(pv)) { return fail('Enter a 10-digit US mobile number, or start with + for other countries.', phone); }
     if (pv && !consent.checked) { return fail('Check the box to get text updates, or clear the mobile number to sign up by email only.', consent); }
