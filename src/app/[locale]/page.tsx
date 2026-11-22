@@ -17,6 +17,8 @@ import { Footer } from "@/components/footer";
 import { QuizProvider } from "@/components/quiz-modal";
 import { NewsletterProvider } from "@/components/newsletter-modal";
 import { PartnershipsProvider } from "@/components/partnerships-modal";
+import { Home as HomeV01 } from "@/v01/pages/Home";
+import { home as homeV01 } from "@/v01/content/home";
 
 export async function generateMetadata({
   params,
@@ -27,7 +29,17 @@ export async function generateMetadata({
   return { alternates: pageAlternates(locale, "") };
 }
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  // v0.1: English gets the new Home, built from src/v01. Spanish keeps the
+  // current Home below, unchanged, until the new design has Spanish copy.
+  if (locale === "en") return <HomeV01 content={homeV01} />;
+
   return (
     <QuizProvider>
       <NewsletterProvider>

@@ -1,0 +1,558 @@
+{
+  "name": "Beyond Code Collective",
+  "version": 1,
+  "color": {
+    "themes": [
+      {
+        "id": "light",
+        "name": "Light"
+      }
+    ],
+    "tokens": [
+      {
+        "name": "bcc-true-black",
+        "value": "rgb(0, 0, 0)",
+        "usage": "Logo, statement slides, display type, body text on Paper Cream (20.6:1)."
+      },
+      {
+        "name": "bcc-cream",
+        "value": "rgb(255, 253, 247)",
+        "usage": "Primary light surface — the brand's paper. Never pure white."
+      },
+      {
+        "name": "bcc-cream-warm",
+        "value": "rgb(254, 249, 237)",
+        "usage": "Warmer alternate light surface for photo-heavy or editorial pages."
+      },
+      {
+        "name": "bcc-off-white",
+        "value": "rgb(255, 250, 250)",
+        "usage": "Rarely-used off-white variant; prefer bcc-cream for surfaces."
+      },
+      {
+        "name": "bcc-white",
+        "value": "rgb(255, 255, 255)",
+        "usage": "Card fill (bg-card) where a surface needs to sit above Paper Cream."
+      },
+      {
+        "name": "bcc-cobalt",
+        "value": "rgb(0, 72, 255)",
+        "usage": "Primary accent — links, primary CTAs, use-case fields. 6.1:1 on Paper Cream; Paper Cream on Cobalt is also 6.1:1."
+      },
+      {
+        "name": "bcc-dark-cobalt",
+        "value": "rgb(1, 41, 102)",
+        "usage": "Shadowed/pressed variant of Cobalt for statement backgrounds."
+      },
+      {
+        "name": "bcc-cobalt-tint",
+        "value": "rgb(29, 89, 255)",
+        "usage": "Lighter Cobalt tint for hover states and tinted fields."
+      },
+      {
+        "name": "bcc-sky",
+        "value": "rgb(168, 219, 255)",
+        "usage": "Soft blue accent used sparingly, mostly as strokes — not a text color."
+      },
+      {
+        "name": "bcc-crimson",
+        "value": "rgb(87, 0, 0)",
+        "usage": "Dark red editorial/serif tone and data-heading color; statement backgrounds (Paper Cream reads 14.7:1 on it)."
+      },
+      {
+        "name": "bcc-red-warning",
+        "value": "rgb(255, 0, 0)",
+        "usage": "Red-zone / do-not markers. On Paper Cream this is 3.9:1 — use at 19px+ bold or 24px+, or as an icon/marker rather than small body text."
+      },
+      {
+        "name": "bcc-red-warm",
+        "value": "rgb(202, 76, 59)",
+        "usage": "Warm secondary red for editorial accents distinct from the warning red."
+      },
+      {
+        "name": "bcc-lemon",
+        "value": "rgb(229, 247, 1)",
+        "usage": "Lemon Lime — high-visibility 'Infinite Possibilities' callouts and poster fields. Pair with true-black text (17.6:1), never used as text itself."
+      },
+      {
+        "name": "bcc-forest",
+        "value": "rgb(25, 63, 15)",
+        "usage": "Deep forest green counterpoint field for posters and use-case blocks (Paper Cream reads 11.7:1 on it)."
+      },
+      {
+        "name": "bcc-orange",
+        "value": "rgb(255, 76, 0)",
+        "usage": "Secondary accent orange; use sparingly, never alongside another accent."
+      },
+      {
+        "name": "bcc-orange-2",
+        "value": "rgb(255, 73, 1)",
+        "usage": "Near-duplicate of bcc-orange kept for source fidelity; prefer bcc-orange for new work."
+      },
+      {
+        "name": "bcc-peach",
+        "value": "rgb(255, 227, 215)",
+        "usage": "Soft peach tint for large, quiet fields behind editorial imagery."
+      },
+      {
+        "name": "bcc-peach-soft",
+        "value": "rgb(255, 203, 181)",
+        "usage": "Deeper peach tint, a step warmer than bcc-peach."
+      },
+      {
+        "name": "bcc-gray-900",
+        "value": "rgb(24, 24, 24)",
+        "usage": "Near-black dark surface (bg-ink-2), slightly softer than true black."
+      },
+      {
+        "name": "bcc-gray-850",
+        "value": "rgb(28, 26, 26)",
+        "usage": "Dark neutral between gray-900 and gray-800 for layered dark surfaces."
+      },
+      {
+        "name": "bcc-gray-800",
+        "value": "rgb(30, 30, 30)",
+        "usage": "Dark neutral for raised elements on a black ground."
+      },
+      {
+        "name": "bcc-gray-700",
+        "value": "rgb(45, 45, 45)",
+        "usage": "Secondary text (fg2) on Paper Cream — 13.5:1 — and stroke-medium."
+      },
+      {
+        "name": "bcc-gray-600",
+        "value": "rgb(57, 57, 57)",
+        "usage": "Mid-dark neutral for borders or muted dark-mode text."
+      },
+      {
+        "name": "bcc-gray-500",
+        "value": "rgb(100, 100, 100)",
+        "usage": "Mid-gray neutral, between gray-600 and gray-400."
+      },
+      {
+        "name": "bcc-gray-400",
+        "value": "rgb(107, 107, 107)",
+        "usage": "Tertiary text (fg3) on Paper Cream — 5.2:1, meets body-text contrast."
+      },
+      {
+        "name": "bcc-gray-300",
+        "value": "rgb(148, 148, 148)",
+        "usage": "stroke-hairline; also muted text on dark grounds (6.9:1 on true-black)."
+      },
+      {
+        "name": "bcc-gray-250",
+        "value": "rgb(152, 152, 152)",
+        "usage": "Near-duplicate of gray-300 kept for source fidelity."
+      },
+      {
+        "name": "bcc-gray-200",
+        "value": "rgb(216, 216, 216)",
+        "usage": "stroke-soft — quiet dividers and card borders, not for text."
+      },
+      {
+        "name": "bcc-gray-100",
+        "value": "rgb(236, 236, 236)",
+        "usage": "bg-muted — quiet fill for inactive UI, not for text."
+      },
+      {
+        "name": "fg1",
+        "value": "{bcc-true-black}",
+        "usage": "Primary text and icons on Paper Cream or white surfaces."
+      },
+      {
+        "name": "fg2",
+        "value": "{bcc-gray-700}",
+        "usage": "Secondary text on Paper Cream or white surfaces — captions, metadata."
+      },
+      {
+        "name": "fg3",
+        "value": "{bcc-gray-400}",
+        "usage": "Tertiary text on Paper Cream or white surfaces — timestamps, helper text."
+      },
+      {
+        "name": "fg-inverse",
+        "value": "{bcc-cream}",
+        "usage": "Text and icons on ink, Forest, or Crimson grounds."
+      },
+      {
+        "name": "fg-accent",
+        "value": "{bcc-cobalt}",
+        "usage": "Links and accent text on Paper Cream or white surfaces."
+      },
+      {
+        "name": "fg-warning",
+        "value": "{bcc-red-warning}",
+        "usage": "Warning/do-not text — see bcc-red-warning's note on contrast at small sizes."
+      },
+      {
+        "name": "bg-paper",
+        "value": "{bcc-cream}",
+        "usage": "Default light surface for nearly every content page."
+      },
+      {
+        "name": "bg-paper-warm",
+        "value": "{bcc-cream-warm}",
+        "usage": "Alternate light surface for imagery-forward sections."
+      },
+      {
+        "name": "bg-ink",
+        "value": "{bcc-true-black}",
+        "usage": "Default dark surface — section openers, statement pages, the BuilderCallout band."
+      },
+      {
+        "name": "bg-ink-2",
+        "value": "{bcc-gray-900}",
+        "usage": "Secondary dark surface, one step off true black, for layered dark UI."
+      },
+      {
+        "name": "bg-card",
+        "value": "{bcc-white}",
+        "usage": "Card fill where a surface needs to read as raised above Paper Cream."
+      },
+      {
+        "name": "bg-muted",
+        "value": "{bcc-gray-100}",
+        "usage": "Quiet fill for inactive or secondary UI elements."
+      },
+      {
+        "name": "bg-cobalt",
+        "value": "{bcc-cobalt}",
+        "usage": "Cobalt statement/poster field."
+      },
+      {
+        "name": "bg-dark-cobalt",
+        "value": "{bcc-dark-cobalt}",
+        "usage": "Shadowed Cobalt statement field."
+      },
+      {
+        "name": "bg-lemon",
+        "value": "{bcc-lemon}",
+        "usage": "Lemon Lime statement/poster field — pair with true-black text."
+      },
+      {
+        "name": "bg-forest",
+        "value": "{bcc-forest}",
+        "usage": "Forest statement/poster field — pair with Lemon or Paper Cream text."
+      },
+      {
+        "name": "bg-crimson",
+        "value": "{bcc-crimson}",
+        "usage": "Crimson statement field for editorial/serif-toned moments."
+      },
+      {
+        "name": "stroke-strong",
+        "value": "{bcc-true-black}",
+        "usage": "High-emphasis borders — primary buttons, focus rings."
+      },
+      {
+        "name": "stroke-medium",
+        "value": "{bcc-gray-700}",
+        "usage": "Standard control borders (inputs, ghost buttons)."
+      },
+      {
+        "name": "stroke-soft",
+        "value": "{bcc-gray-200}",
+        "usage": "Quiet card and section dividers."
+      },
+      {
+        "name": "stroke-hairline",
+        "value": "{bcc-gray-300}",
+        "usage": "Decorative hairline rules — not a meaning-carrying control border."
+      }
+    ]
+  },
+  "type": {
+    "fonts": [
+      {
+        "family": "Special Gothic Condensed",
+        "file": "fonts/SpecialGothic_Condensed-Regular.ttf",
+        "weight": "400",
+        "style": "normal"
+      },
+      {
+        "family": "Special Gothic Condensed",
+        "file": "fonts/SpecialGothic_Condensed-Medium.ttf",
+        "weight": "500",
+        "style": "normal"
+      },
+      {
+        "family": "Special Gothic Condensed",
+        "file": "fonts/SpecialGothic_Condensed-SemiBold.ttf",
+        "weight": "600",
+        "style": "normal"
+      },
+      {
+        "family": "Special Gothic Condensed",
+        "file": "fonts/SpecialGothic_Condensed-Bold.ttf",
+        "weight": "700",
+        "style": "normal"
+      },
+      {
+        "family": "GT Standard",
+        "file": "fonts/GT-Standard-L-Standard-Regular.woff2",
+        "weight": "400",
+        "style": "normal"
+      },
+      {
+        "family": "GT Standard",
+        "file": "fonts/GT-Standard-L-Standard-Regular-Oblique.woff2",
+        "weight": "400",
+        "style": "italic"
+      },
+      {
+        "family": "GT Standard",
+        "file": "fonts/GT-Standard-M-Standard-Regular.woff2",
+        "weight": "500",
+        "style": "normal"
+      },
+      {
+        "family": "GT Standard",
+        "file": "fonts/GT-Standard-M-Standard-Regular-Oblique.woff2",
+        "weight": "500",
+        "style": "italic"
+      },
+      {
+        "family": "GT Standard",
+        "file": "fonts/GT-Standard-S-Standard-Regular.woff2",
+        "weight": "700",
+        "style": "normal"
+      },
+      {
+        "family": "GT Standard",
+        "file": "fonts/GT-Standard-S-Standard-Regular-Oblique.woff2",
+        "weight": "700",
+        "style": "italic"
+      },
+      {
+        "family": "GT Standard Mono",
+        "file": "fonts/GT-Standard-Mono-Standard-Medium.woff2",
+        "weight": "400 700",
+        "style": "normal"
+      },
+      {
+        "family": "GT Standard Mono",
+        "file": "fonts/GT-Standard-Mono-Standard-Medium-Oblique.woff2",
+        "weight": "400 700",
+        "style": "italic"
+      }
+    ],
+    "families": {
+      "display": "\"Special Gothic Condensed\", \"Arial Narrow\", sans-serif",
+      "sans": "\"GT Standard\", \"Helvetica Neue\", Arial, sans-serif",
+      "mono": "\"GT Standard Mono\", \"Menlo\", \"Courier New\", monospace"
+    },
+    "groups": [
+      {
+        "name": "Display",
+        "family": "display",
+        "note": "Special Gothic Condensed, bold weight, all-caps. Very tight leading — hero statements and titles.",
+        "styles": [
+          {
+            "name": "display-xl",
+            "fontSize": "148px",
+            "lineHeight": "0.88",
+            "letterSpacing": "-0.02em",
+            "fontWeight": 700,
+            "usage": "Statement-slide hero type."
+          },
+          {
+            "name": "display-lg",
+            "fontSize": "96px",
+            "lineHeight": "0.85",
+            "letterSpacing": "-0.02em",
+            "fontWeight": 700,
+            "usage": "h1 — page/slide headline."
+          },
+          {
+            "name": "display-md",
+            "fontSize": "88px",
+            "lineHeight": "1.18",
+            "letterSpacing": "0",
+            "fontWeight": 700,
+            "usage": "h2 — section headline."
+          },
+          {
+            "name": "display-sm",
+            "fontSize": "48px",
+            "lineHeight": "1",
+            "letterSpacing": "-0.01em",
+            "fontWeight": 700,
+            "usage": "h3 — subsection headline."
+          },
+          {
+            "name": "title",
+            "fontSize": "30px",
+            "lineHeight": "26px",
+            "fontWeight": 700,
+            "usage": "h4 / slide title — set in uppercase."
+          }
+        ]
+      },
+      {
+        "name": "Body",
+        "family": "sans",
+        "note": "GT Standard — the workhorse sans for all running copy.",
+        "styles": [
+          {
+            "name": "body-lg",
+            "fontSize": "20px",
+            "lineHeight": "1.4",
+            "fontWeight": 400,
+            "usage": "Lead paragraphs and hero support copy."
+          },
+          {
+            "name": "body",
+            "fontSize": "16px",
+            "lineHeight": "1.45",
+            "fontWeight": 400,
+            "usage": "Default body copy."
+          },
+          {
+            "name": "body-sm",
+            "fontSize": "14px",
+            "lineHeight": "1.45",
+            "fontWeight": 400,
+            "usage": "Captions, footnotes, meta text."
+          }
+        ]
+      },
+      {
+        "name": "Mono",
+        "family": "mono",
+        "note": "GT Standard Mono — eyebrows, S-codes, the bottom meta strip, and [bracketed] labels, always uppercase.",
+        "styles": [
+          {
+            "name": "mono-lg",
+            "fontSize": "34px",
+            "lineHeight": "1.08",
+            "fontWeight": 500,
+            "usage": "Large mono statement numerals."
+          },
+          {
+            "name": "mono",
+            "fontSize": "18px",
+            "lineHeight": "1.08",
+            "letterSpacing": "0.02em",
+            "fontWeight": 500,
+            "usage": "Eyebrows and section labels — set uppercase."
+          },
+          {
+            "name": "mono-sm",
+            "fontSize": "14px",
+            "lineHeight": "1.1",
+            "letterSpacing": "0.02em",
+            "fontWeight": 500,
+            "usage": "Page numbers and the meta strip — set uppercase."
+          }
+        ]
+      }
+    ]
+  },
+  "spacing": {
+    "tokens": [
+      {
+        "name": "space-1",
+        "value": "4px",
+        "usage": "Tightest gaps — icon-to-label, inline chip padding."
+      },
+      {
+        "name": "space-2",
+        "value": "8px",
+        "usage": "Compact gaps within a control."
+      },
+      {
+        "name": "space-3",
+        "value": "12px",
+        "usage": "Gaps between small clustered elements (form rows, button groups)."
+      },
+      {
+        "name": "space-4",
+        "value": "16px",
+        "usage": "Default inline gap and small card padding."
+      },
+      {
+        "name": "space-5",
+        "value": "24px",
+        "usage": "Stack gaps between related blocks of copy."
+      },
+      {
+        "name": "space-6",
+        "value": "32px",
+        "usage": "Gaps between grid items (pillar cards, poster blocks)."
+      },
+      {
+        "name": "space-7",
+        "value": "40px",
+        "usage": "Page/slide margin — the base padding on every container."
+      },
+      {
+        "name": "space-8",
+        "value": "56px",
+        "usage": "Section-to-section spacing on content pages."
+      },
+      {
+        "name": "space-9",
+        "value": "80px",
+        "usage": "Large top/bottom padding on hero and pillar sections."
+      },
+      {
+        "name": "space-10",
+        "value": "120px",
+        "usage": "Widest section padding — poster and callout bands."
+      }
+    ]
+  },
+  "radius": {
+    "tokens": [
+      {
+        "name": "radius-0",
+        "value": "0px",
+        "usage": "Square corners — the default for photos, buttons, and small chips."
+      },
+      {
+        "name": "radius-xs",
+        "value": "2px",
+        "usage": "Buttons and small chips."
+      },
+      {
+        "name": "radius-sm",
+        "value": "4px",
+        "usage": "Photos, inputs, and poster blocks in applied UI."
+      },
+      {
+        "name": "radius-md",
+        "value": "12px",
+        "usage": "Nested cards inside a large slide or container."
+      },
+      {
+        "name": "radius-lg",
+        "value": "20px",
+        "usage": "The signature slide/card radius — deck chrome and top-level containers."
+      },
+      {
+        "name": "radius-xl",
+        "value": "32px",
+        "usage": "Large-format containers that want an even softer edge than radius-lg."
+      }
+    ]
+  },
+  "shadow": {
+    "tokens": [
+      {
+        "name": "shadow-inset-soft",
+        "value": "inset 0 4px 4px 0 rgba(0,0,0,0.25)",
+        "usage": "The stamped, printed-paper depth on poster blocks. The system otherwise avoids shadows."
+      },
+      {
+        "name": "shadow-card",
+        "value": "0 1px 0 0 rgba(0,0,0,0.08)",
+        "usage": "The only outer shadow in the system — a 1px hairline lift, used sparingly."
+      }
+    ]
+  },
+  "meta": {
+    "source": "upload",
+    "note": "Distilled from the BCC Brand Guidelines V.01 (Feb 02 2026) — a Figma brand deck, no shipped product UI.",
+    "synced": "2026-09-22"
+  }
+}

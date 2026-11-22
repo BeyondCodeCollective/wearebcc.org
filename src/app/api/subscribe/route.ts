@@ -161,7 +161,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
   }
 
-  const { firstName, email, phone, segment, source, company, message, website, zip } =
+  const { firstName, email, phone, segment, source, company, message, website, zip, city, language } =
     body as Record<string, string | undefined>;
   const { utmSource, utmMedium, utmCampaign, smsConsent } = body as Record<string, unknown>;
   const utm = (v: unknown) => (typeof v === "string" ? v.trim().slice(0, 100) : "");
@@ -196,8 +196,22 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: true }, { status: 200 });
   }
 
+  // City and preferred language have no column or Mailchimp field of their
+  // own. They ride in the free-text message column, after anything the
+  // visitor wrote, so nothing needs a migration. They are not a message, so
+  // they must not page a human: see ownMessage below.
+  const ownMessage = typeof message === "string" ? message.trim() : "";
+  const short = (v: unknown) => (typeof v === "string" ? v.trim().slice(0, 80) : "");
+  const details = [
+    short(city) && `City: ${short(city)}`,
+    short(language) && `Language: ${short(language)}`,
+  ]
+    .filter(Boolean)
+    .join(". ");
+  const storedMessage = [ownMessage, details].filter(Boolean).join("\n\n");
+
   const screening = screen({
-    message: typeof message === "string" ? message : "",
+    message: storedMessage,
     firstName: typeof firstName === "string" ? firstName : "",
     company: typeof company === "string" ? company : "",
     segment: typeof segment === "string" ? segment : "",
@@ -216,7 +230,7 @@ export async function POST(request: NextRequest) {
     utmMedium: utm(utmMedium),
     utmCampaign: utm(utmCampaign),
     smsConsent: hasPhone && smsConsent === true,
-    message: typeof message === "string" ? message.trim() : "",
+    message: storedMessage,
     ipHash,
     flagged: screening.blocked,
     flagReason: screening.blocked ? screening.reasons.join(", ") : null,
@@ -240,12 +254,12 @@ export async function POST(request: NextRequest) {
   // Somebody is expecting a reply, so tell a human. Only reached for
   // submissions that cleared screening, so flagged abuse never lands in
   // anyone's inbox. Awaited but never throws: the lead is already stored.
-  if (shouldNotify(lead)) {
+  if (shouldNotify({ ...lead, message: ownMessage })) {
     await notifyInquiry(lead, leadId);
   }
 
   // Kept as a backstop for when notification is unconfigured or its send fails.
-  if (lead.message) {
+  if (ownMessage) {
     console.log(
       `CONTACT_MESSAGE source=${lead.source} from=${lead.firstName} <${lead.email}> ` +
         `stored=${leadId !== null ? `subscribers#${leadId}` : "LOG ONLY"}\n${lead.message}`,

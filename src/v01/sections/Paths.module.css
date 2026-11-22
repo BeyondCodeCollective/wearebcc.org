@@ -1,0 +1,86 @@
+.headline {
+  font-size: var(--text-h2);
+}
+
+.lede {
+  max-width: var(--measure);
+  margin-top: var(--space-4);
+  color: var(--surface-fg2);
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-body-lg);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: var(--space-4);
+  margin-top: var(--stack-head);
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  height: 100%;
+  padding: var(--space-4) var(--space-4) var(--space-5);
+  border-radius: var(--radius-sm);
+  background: var(--surface-bg);
+  box-shadow: var(--shadow-inset-soft);
+  color: var(--surface-fg);
+  text-decoration: none;
+}
+
+.card:hover {
+  filter: brightness(0.94);
+}
+
+.photo {
+  height: 220px;
+  border-radius: var(--radius-xs);
+}
+
+.text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-5);
+  padding-top: var(--space-2);
+}
+
+/* A poster with no photo keeps its words at the foot, in line with its neighbors. */
+.bare {
+  justify-content: flex-end;
+  min-height: 11rem;
+}
+
+.title {
+  font-size: var(--text-poster);
+  line-height: var(--leading-poster);
+}
+
+.titleHighlight {
+  color: var(--surface-highlight);
+}
+
+.line {
+  display: block;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-mono-sm);
+}
+
+@media (min-width: 640px) {
+  .cards {
+    gap: var(--space-5);
+  }
+
+  .card {
+    padding: calc(var(--space-4) + var(--space-1)) calc(var(--space-4) + var(--space-1)) var(--space-5);
+  }
+}

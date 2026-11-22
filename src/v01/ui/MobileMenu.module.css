@@ -1,0 +1,117 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-width: var(--control-h);
+  min-height: var(--control-h);
+  padding: 0 var(--space-3);
+  border: var(--rule) solid var(--surface-rule);
+  border-radius: var(--radius-xs);
+  background: transparent;
+  color: var(--surface-fg);
+  cursor: pointer;
+}
+
+.toggle[aria-expanded="true"] {
+  background: var(--surface-fg);
+  color: var(--surface-bg);
+}
+
+/* Anchored to the header, which is the nearest positioned ancestor. */
+.panel {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  max-height: calc(100dvh - 9rem);
+  padding: var(--space-2) var(--gutter) var(--space-6);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border-block: var(--rule) solid var(--surface-rule);
+  background: var(--surface-bg);
+  box-shadow: var(--shadow-menu);
+}
+
+.panel[hidden] {
+  display: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.entry {
+  border-bottom: var(--rule) solid var(--surface-rule);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: var(--control-h-xl);
+  font-size: var(--text-title);
+  text-decoration: none;
+  cursor: pointer;
+  list-style: none;
+}
+
+.heading::-webkit-details-marker {
+  display: none;
+}
+
+.caret {
+  flex: none;
+  transition: transform var(--dur) var(--ease-out);
+}
+
+.group[open] .caret {
+  transform: rotate(180deg);
+}
+
+.children {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--space-4);
+  list-style: none;
+}
+
+.child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-2) 0;
+  text-decoration: none;
+}
+
+.childTitle {
+  font-size: var(--text-menu);
+}
+
+.childText {
+  color: var(--surface-fg2);
+  font-size: var(--text-caption);
+  line-height: 1.35;
+}
+
+.languages {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding-top: var(--space-4);
+  font-size: var(--text-mono);
+}
+
+.language {
+  display: inline-flex;
+  align-items: center;
+  min-width: var(--control-h);
+  min-height: var(--control-h);
+  text-decoration: none;
+}
+
+.language[aria-current="true"] {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

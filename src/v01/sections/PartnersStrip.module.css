@@ -1,0 +1,38 @@
+.strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4) var(--space-7);
+  padding-block: var(--space-7);
+}
+
+.label {
+  font-size: var(--text-mono-sm);
+}
+
+.logos {
+  display: grid;
+  flex: 1 1 30rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 132px), 1fr));
+  gap: var(--space-3);
+  list-style: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  border: var(--rule) solid var(--surface-rule);
+  border-radius: var(--radius-xs);
+}
+
+.image {
+  width: auto;
+  max-width: 80%;
+  height: auto;
+  max-height: var(--logo-h);
+  object-fit: contain;
+  /* Logos with a white box behind them sit clean on the paper color. */
+  mix-blend-mode: multiply;
+}

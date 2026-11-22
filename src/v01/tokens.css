@@ -1,0 +1,346 @@
+/*
+ * Beyond Code Collective design system, v0.1.
+ * Source of truth: docs/design/v0-1/tokens.source.json (Brand Guidelines V.01).
+ *
+ * Everything here is scoped to .v01, so pages outside src/v01 are unaffected.
+ * Components read these variables only: no raw hex, font size or font name
+ * belongs in a component or its stylesheet.
+ */
+
+/*
+ * Faces. Both point at files already in public/fonts. The family names are
+ * private to v0.1 so they cannot collide with the old site's faces.
+ * The display file is a single weight, so it is declared across 400 to 700:
+ * the design asks for 700 and the browser must not synthesise a fake bold.
+ */
+@font-face {
+  font-family: "BCC Display";
+  src: url("/fonts/SpecialGothicCondensedOne-Regular.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
+ * Body face. The design uses GT Standard, which has no confirmed web licence.
+ * To swap it in: point this src at the GT Standard file. Nothing else changes,
+ * because every component reads --font-sans.
+ */
+@font-face {
+  font-family: "BCC Sans";
+  src: url("/fonts/GT-America-Standard-Regular.ttf") format("truetype");
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+.v01 {
+  /* Color: brand palette */
+  --bcc-true-black: rgb(0 0 0);
+  --bcc-cream: rgb(255 253 247);
+  --bcc-cream-warm: rgb(254 249 237);
+  --bcc-off-white: rgb(255 250 250);
+  --bcc-white: rgb(255 255 255);
+  --bcc-cobalt: rgb(0 72 255);
+  --bcc-dark-cobalt: rgb(1 41 102);
+  --bcc-cobalt-tint: rgb(29 89 255);
+  --bcc-sky: rgb(168 219 255);
+  --bcc-crimson: rgb(87 0 0);
+  --bcc-red-warning: rgb(255 0 0);
+  --bcc-red-warm: rgb(202 76 59);
+  --bcc-lemon: rgb(229 247 1);
+  --bcc-forest: rgb(25 63 15);
+  --bcc-orange: rgb(255 76 0);
+  --bcc-peach: rgb(255 227 215);
+  --bcc-peach-soft: rgb(255 203 181);
+  --bcc-gray-900: rgb(24 24 24);
+  --bcc-gray-850: rgb(28 26 26);
+  --bcc-gray-800: rgb(30 30 30);
+  --bcc-gray-700: rgb(45 45 45);
+  --bcc-gray-600: rgb(57 57 57);
+  --bcc-gray-500: rgb(100 100 100);
+  --bcc-gray-400: rgb(107 107 107);
+  --bcc-gray-300: rgb(148 148 148);
+  --bcc-gray-200: rgb(216 216 216);
+  --bcc-gray-100: rgb(236 236 236);
+
+  /* Color: semantic */
+  --fg1: var(--bcc-true-black);
+  --fg2: var(--bcc-gray-700);
+  --fg3: var(--bcc-gray-400);
+  --fg-inverse: var(--bcc-cream);
+  --fg-accent: var(--bcc-cobalt);
+  --fg-warning: var(--bcc-red-warning);
+  --bg-paper: var(--bcc-cream);
+  --bg-paper-warm: var(--bcc-cream-warm);
+  --bg-ink: var(--bcc-true-black);
+  --bg-ink-2: var(--bcc-gray-900);
+  --bg-card: var(--bcc-white);
+  --bg-muted: var(--bcc-gray-100);
+  --bg-cobalt: var(--bcc-cobalt);
+  --bg-dark-cobalt: var(--bcc-dark-cobalt);
+  --bg-lemon: var(--bcc-lemon);
+  --bg-forest: var(--bcc-forest);
+  --bg-crimson: var(--bcc-crimson);
+  --bg-peach: var(--bcc-peach);
+  --stroke-strong: var(--bcc-true-black);
+  --stroke-medium: var(--bcc-gray-700);
+  --stroke-soft: var(--bcc-gray-200);
+  --stroke-hairline: var(--bcc-gray-300);
+  --scrim-photo: rgb(0 0 0 / 0.1);
+
+  /* Type: families. --font-mono stands in for GT Standard Mono with the mono
+     the site already loads (Space Mono, set on <html> by the root layout). */
+  --font-display: "BCC Display", "Arial Narrow", sans-serif;
+  --font-sans: "BCC Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-space-mono), Menlo, "Courier New", monospace;
+
+  /* Type: display sizes, fluid between phone and 1440 */
+  --text-hero: clamp(3.75rem, 13.2vw, 12.5rem);
+  --text-statement: clamp(3rem, 7.2vw, 6.5rem);
+  --text-h2: clamp(2.75rem, 6.1vw, 5.5rem);
+  --text-poster: clamp(3rem, 4.4vw, 4rem);
+  --text-program: clamp(2.5rem, 4.4vw, 4rem);
+  --text-stat: clamp(2.125rem, 4.7vw, 4.25rem);
+  --text-sentence: clamp(2.5rem, 5.4vw, 5.25rem);
+  --text-film: clamp(3rem, 6vw, 6rem);
+  --text-display-sm: 3rem;
+  --text-title: 1.875rem;
+  --text-title-sm: 1.75rem;
+  --text-menu: 1.375rem;
+
+  /* Type: body sizes */
+  --text-quote: clamp(1.375rem, 2.4vw, 2.125rem);
+  --text-subhead: 1.375rem;
+  --text-body-lg: 1.25rem;
+  --text-body-md: 1.125rem;
+  --text-body: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-caption: 0.8125rem;
+
+  /* Type: mono sizes, always uppercase */
+  --text-mono-lg: 0.9375rem;
+  --text-mono-md: 0.875rem;
+  --text-mono: 0.8125rem;
+  --text-mono-sm: 0.75rem;
+  --text-mono-xs: 0.6875rem;
+
+  /* Type: leading, tracking, weight */
+  --leading-hero: 0.85;
+  --leading-poster: 0.88;
+  --leading-display: 0.9;
+  --leading-stat: 0.95;
+  --leading-title: 1;
+  --leading-links: 1.5;
+  --leading-sentence: 1.35;
+  --leading-quote: 1.2;
+  --leading-body-lg: 1.4;
+  --leading-body: 1.45;
+  --leading-mono: 1.2;
+  --leading-tags: 1.7;
+  --tracking-display: -0.02em;
+  --tracking-title: -0.01em;
+  --tracking-mono: 0.04em;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+
+  /* Spacing: the brand scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 40px;
+  --space-8: 56px;
+  --space-9: 80px;
+  --space-10: 120px;
+
+  /* Layout: page rhythm taken from the Home design */
+  --gutter: clamp(20px, 2.8vw, 40px);
+  --section-pad-sm: clamp(2.5rem, 4vw, 3rem);
+  --section-pad-tight: clamp(3rem, 5vw, 4rem);
+  --section-pad-md: clamp(3.5rem, 5.5vw, 4.5rem);
+  --section-pad: clamp(3.5rem, 6vw, 5rem);
+  --section-pad-lg: clamp(4rem, 7vw, 6rem);
+  --stack-head: clamp(2rem, 4vw, 3rem);
+  --measure: 40rem;
+  --control-h: 44px;
+  --control-h-md: 48px;
+  --control-h-lg: 52px;
+  --control-h-xl: 60px;
+  --rule: 1px;
+  --rule-heavy: 4px;
+
+  /* Radius */
+  --radius-0: 0px;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+
+  /* Shadow. --shadow-menu is the one the Home design adds for dropdowns. */
+  --shadow-inset-soft: inset 0 4px 4px 0 rgb(0 0 0 / 0.25);
+  --shadow-card: 0 1px 0 0 rgb(0 0 0 / 0.08);
+  --shadow-menu: 0 18px 40px -18px rgb(0 0 0 / 0.35);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 150ms;
+  --dur: 200ms;
+}
+
+/*
+ * Surfaces. A surface sets the ground and everything that has to change with
+ * it: text, rules, the highlight color and the focus ring. The Section
+ * wrapper applies these through data-surface.
+ */
+.v01,
+.v01 [data-surface="paper"] {
+  --surface-bg: var(--bg-paper);
+  --surface-fg: var(--fg1);
+  --surface-fg2: var(--fg2);
+  --surface-fg3: var(--fg3);
+  --surface-rule: var(--stroke-strong);
+  --surface-rule-soft: var(--stroke-soft);
+  --surface-highlight: var(--fg-accent);
+  --surface-link-hover: var(--fg-accent);
+  --focus-ring: var(--bcc-cobalt);
+  --surface-hover-opacity: 1;
+}
+
+.v01 [data-surface="paper-warm"] {
+  --surface-bg: var(--bg-paper-warm);
+  --surface-fg: var(--fg1);
+  --surface-fg2: var(--fg2);
+  --surface-fg3: var(--fg3);
+  --surface-rule: var(--stroke-strong);
+  --surface-rule-soft: var(--stroke-soft);
+  --surface-highlight: var(--fg-accent);
+  --surface-link-hover: var(--fg-accent);
+  --focus-ring: var(--bcc-cobalt);
+  --surface-hover-opacity: 1;
+}
+
+.v01 [data-surface="peach"] {
+  --surface-bg: var(--bg-peach);
+  --surface-fg: var(--fg1);
+  --surface-fg2: var(--fg2);
+  --surface-fg3: var(--fg2);
+  --surface-rule: var(--stroke-strong);
+  --surface-rule-soft: var(--stroke-strong);
+  --surface-highlight: var(--fg-accent);
+  --surface-link-hover: var(--fg-accent);
+  --focus-ring: var(--bcc-cobalt);
+  --surface-hover-opacity: 1;
+}
+
+.v01 [data-surface="lemon"] {
+  --surface-bg: var(--bg-lemon);
+  --surface-fg: var(--fg1);
+  --surface-fg2: var(--fg1);
+  --surface-fg3: var(--fg2);
+  --surface-rule: var(--stroke-strong);
+  --surface-rule-soft: var(--stroke-strong);
+  --surface-highlight: var(--fg1);
+  --surface-link-hover: var(--fg1);
+  --focus-ring: var(--bcc-true-black);
+  --surface-hover-opacity: 1;
+}
+
+.v01 [data-surface="ink"],
+.v01 [data-surface="cobalt"],
+.v01 [data-surface="forest"],
+.v01 [data-surface="crimson"] {
+  --surface-fg: var(--fg-inverse);
+  --surface-fg2: var(--fg-inverse);
+  --surface-fg3: var(--bcc-gray-300);
+  --surface-rule: var(--fg-inverse);
+  --surface-rule-soft: color-mix(in srgb, var(--fg-inverse) 40%, transparent);
+  --surface-highlight: var(--bcc-lemon);
+  --surface-link-hover: var(--fg-inverse);
+  --focus-ring: var(--bcc-lemon);
+  --surface-hover-opacity: 0.72;
+}
+
+.v01 [data-surface="ink"] {
+  --surface-bg: var(--bg-ink);
+}
+
+.v01 [data-surface="cobalt"] {
+  --surface-bg: var(--bg-cobalt);
+  --surface-fg3: var(--fg-inverse);
+}
+
+.v01 [data-surface="forest"] {
+  --surface-bg: var(--bg-forest);
+  --surface-fg3: var(--fg-inverse);
+}
+
+.v01 [data-surface="crimson"] {
+  --surface-bg: var(--bg-crimson);
+  --surface-fg3: var(--fg-inverse);
+}
+
+/* Base: only what the design sets on its root, and only inside .v01. */
+.v01 {
+  background: var(--surface-bg);
+  color: var(--surface-fg);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+  /* iOS inflates text unless this is set: an emulator will not show it. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overflow-x: clip;
+}
+
+.v01 *,
+.v01 *::before,
+.v01 *::after {
+  box-sizing: border-box;
+}
+
+/* :where keeps these at low specificity so a component class always wins. */
+:where(.v01) a {
+  color: inherit;
+}
+
+:where(.v01) a,
+:where(.v01) button {
+  transition:
+    background-color var(--dur-fast) linear,
+    border-color var(--dur-fast) linear,
+    color var(--dur-fast) linear,
+    opacity var(--dur-fast) linear,
+    filter var(--dur-fast) linear,
+    transform var(--dur-fast) var(--ease-out);
+}
+
+.v01 ::selection {
+  background: var(--bcc-lemon);
+  color: var(--bcc-true-black);
+}
+
+.v01 :focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+/* The old site sets a 120px scroll offset for its fixed nav. This header is
+   not fixed, so anchors only need to clear the site-wide donate bar. */
+.v01 [id] {
+  scroll-margin-top: calc(var(--banner-h, 0px) - 104px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v01 *,
+  .v01 *::before,
+  .v01 *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

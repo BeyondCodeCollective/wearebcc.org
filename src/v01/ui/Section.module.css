@@ -1,0 +1,34 @@
+/* The one section wrapper: surface colors and page gutters. */
+.section {
+  background: var(--surface-bg);
+  color: var(--surface-fg);
+  padding-inline: var(--gutter);
+}
+
+.flush {
+  padding-inline: 0;
+}
+
+.padSm {
+  padding-block: var(--section-pad-sm);
+}
+
+.padMd {
+  padding-block: var(--section-pad-md);
+}
+
+.padDefault {
+  padding-block: var(--section-pad);
+}
+
+.padLg {
+  padding-block: var(--section-pad-lg) var(--section-pad-tight);
+}
+
+.ruleTop {
+  border-top: var(--rule) solid var(--surface-rule);
+}
+
+.ruleBottomSoft {
+  border-bottom: var(--rule) solid var(--surface-rule-soft);
+}

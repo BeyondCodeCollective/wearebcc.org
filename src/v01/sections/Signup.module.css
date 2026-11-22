@@ -1,0 +1,139 @@
+.inner {
+  position: relative;
+  padding-bottom: var(--space-8);
+}
+
+.sentence {
+  max-width: 80rem;
+  font-size: var(--text-sentence);
+  line-height: var(--leading-sentence);
+  text-wrap: wrap;
+}
+
+.field {
+  display: inline-block;
+  max-width: 100%;
+  min-height: 1.2em;
+  padding: 0 var(--space-2);
+  border: 0;
+  border-bottom: var(--rule-heavy) solid var(--surface-rule);
+  border-radius: 0;
+  background: transparent;
+  color: var(--surface-highlight);
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: 1;
+  vertical-align: baseline;
+  caret-color: var(--surface-highlight);
+}
+
+.field::placeholder {
+  color: color-mix(in srgb, var(--surface-fg) 56%, transparent);
+  opacity: 1;
+}
+
+.field:focus-visible {
+  outline-offset: 4px;
+}
+
+.name {
+  width: 8em;
+}
+
+.city {
+  width: 5em;
+}
+
+.email {
+  width: min(9em, calc(100% - 0.4em));
+}
+
+/* A field and the punctuation that follows it never part at a line break. */
+.keep {
+  white-space: nowrap;
+}
+
+.choice {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: baseline;
+}
+
+.select {
+  padding-right: 0.7em;
+  appearance: none;
+  field-sizing: content;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.select option {
+  color: var(--fg1);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+}
+
+.caret {
+  position: absolute;
+  top: 50%;
+  right: 0.1em;
+  width: 0.4em;
+  height: 0.4em;
+  color: var(--surface-fg);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4) var(--space-5);
+  margin-top: var(--space-7);
+}
+
+.note {
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+}
+
+.error {
+  flex-basis: 100%;
+  color: var(--fg-warning);
+  font-weight: var(--weight-medium);
+}
+
+.done {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.doneTitle {
+  font-size: var(--text-sentence);
+  line-height: var(--leading-display);
+}
+
+.doneBody {
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-body-lg);
+}
+
+.trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.sticker {
+  position: absolute;
+  right: 0;
+  bottom: calc(var(--space-10) * -1);
+  z-index: 1;
+  width: clamp(140px, 18vw, 260px);
+  height: auto;
+  pointer-events: none;
+}

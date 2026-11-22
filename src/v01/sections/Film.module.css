@@ -1,0 +1,69 @@
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-6) var(--space-7);
+}
+
+.copy {
+  display: flex;
+  flex: 1 1 20rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.headline {
+  font-size: var(--text-film);
+}
+
+.body {
+  max-width: 25rem;
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-body-lg);
+}
+
+.label {
+  color: var(--surface-fg3);
+  font-size: var(--text-mono-sm);
+}
+
+.play {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  border-radius: var(--radius-xs);
+  background: var(--bg-lemon);
+  color: var(--fg1);
+}
+
+.play:hover {
+  filter: brightness(0.94);
+}
+
+.play:active {
+  transform: translateY(1px);
+}
+
+/* With a poster the film takes the wide column and the button sits on it. */
+.stage {
+  position: relative;
+  flex: 2 1 32rem;
+  min-height: clamp(260px, 50vw, 480px);
+}
+
+.poster {
+  position: absolute;
+  inset: 0;
+  border-radius: 0;
+}
+
+.stage .play {
+  position: absolute;
+  bottom: var(--space-6);
+  left: var(--space-6);
+}
