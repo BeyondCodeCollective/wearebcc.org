@@ -10,18 +10,41 @@
   font-size: var(--text-mono-sm);
 }
 
-.logos {
-  display: grid;
+/* The window the ticker slides behind. min-width 0 lets it shrink inside the flex row. */
+.viewport {
   flex: 1 1 30rem;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 132px), 1fr));
+  min-width: 0;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: ticker 44s linear infinite;
+  will-change: transform;
+}
+
+.viewport:hover .track,
+.viewport:focus-within .track {
+  animation-play-state: paused;
+}
+
+/* Each list ends with the same gap that sits between logos, so one list is exactly half the track. */
+.logos {
+  display: flex;
+  flex: none;
+  align-items: center;
   gap: var(--space-3);
+  padding-inline-end: var(--space-3);
   list-style: none;
 }
 
 .logo {
   display: flex;
+  flex: none;
   align-items: center;
   justify-content: center;
+  width: 160px;
   height: 64px;
   border: var(--rule) solid var(--surface-rule);
   border-radius: var(--radius-xs);
@@ -35,4 +58,36 @@
   object-fit: contain;
   /* Logos with a white box behind them sit clean on the paper color. */
   mix-blend-mode: multiply;
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    width: 128px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    width: auto;
+    animation: none;
+  }
+
+  .logos {
+    flex-wrap: wrap;
+    padding-inline-end: 0;
+  }
+
+  .copy {
+    display: none;
+  }
 }

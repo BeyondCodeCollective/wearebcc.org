@@ -4,6 +4,7 @@ import type { CodeAlongHeroContent } from "../../content/codeAlong.types";
 import { cx } from "../../lib/cx";
 import p from "../../ui/primitives.module.css";
 import { Section } from "../../ui/Section";
+import { Emphasis } from "./Emphasis";
 import { Badge, CtaButton, Frame, Marked } from "./parts";
 import s from "./Hero.module.css";
 import t from "./tone.module.css";
@@ -36,7 +37,9 @@ export function Hero({ content }: Props) {
         <h1 className={cx(p.display, s.headline)}>
           <Marked parts={content.headline} />
         </h1>
-        <p className={cx(p.mono, s.credit)}>{content.credit}</p>
+        <p className={s.credit}>
+          <Emphasis text={content.credit} emphasis={content.creditEmphasis} className={s.apple} />
+        </p>
         <div className={s.lede}>
           {content.lede.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>

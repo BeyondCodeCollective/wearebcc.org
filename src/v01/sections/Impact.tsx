@@ -24,6 +24,7 @@ export function Impact({ content, id }: Props) {
       </ul>
 
       <figure className={s.quote}>
+        <p className={cx(p.mono, s.label)}>{quote.label}</p>
         {quote.image && <Photo image={quote.image} sizes="220px" className={s.portrait} />}
         <blockquote className={s.words}>{quote.text}</blockquote>
         <figcaption className={cx(p.mono, s.caption)}>

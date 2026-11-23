@@ -16,7 +16,10 @@ const IMG = "/images/v01";
 export const routes = {
   home: "/en", // S-Home
   top: "#top",
-  programs: "/en/programs", // S-Programs
+  /** The all-programs page is gone: programs now means the programs section of Home. */
+  homePrograms: "/en#programs", // S-Home, programs section
+  /** Static page served by a middleware rewrite: plain same-site link, no locale prefix. */
+  impactReport: "/impact-report",
   events: "/en/events", // S-Events
   signup: "/en/sign-up", // S-Signup
   story: "/en/about", // S-About
@@ -61,14 +64,13 @@ export function siteHeader(opts: HeaderOptions = {}): HeaderContent {
     nav: [
       {
         label: "Programs",
-        href: routes.programs,
+        href: routes.homePrograms,
         children: [
           { title: "Beyond Ready", description: "8 weeks to work with AI in any role", href: routes.beyondReady },
           { title: "Beyond Labs", description: "One free live workshop, one topic", href: routes.events },
           { title: "Beyond Centers", description: "Learn in person, every generation", href: routes.centers },
           { title: "Beyond the Game", description: "For athletes moving into tech", href: routes.beyondTheGame },
           { title: "Code Along Beyond", description: "Free video lessons on YouTube", href: routes.codeAlong },
-          { title: "All programs", description: "See every way in", href: routes.programs },
         ],
       },
       { label: "Events", href: routes.events },
@@ -119,21 +121,11 @@ export function siteFooter(opts: FooterOptions = {}): FooterContent {
     navLabel: "Footer",
     columns: [
       {
-        title: "Programs",
-        links: [
-          { label: "Build", href: routes.programs },
-          { label: "Career conversations", href: routes.programs },
-          { label: "In person", href: routes.programs },
-          { label: "Music and sports", href: routes.programs },
-        ],
-      },
-      {
         title: "Explore",
         links: [
           { label: "Events", href: routes.events },
-          { label: "Impact report", href: routes.impact },
+          { label: "Impact report", href: routes.impactReport },
           { label: "News", href: routes.news },
-          { label: "Resources", href: routes.news },
         ],
       },
       {

@@ -165,7 +165,6 @@ export type Program = {
 
 export type ProgramsContent = {
   headline: string;
-  all: LinkRef;
   promise: { title: string; note: string; body: string };
   programs: Program[];
   more: { label: string; links: LinkRef[] };
@@ -174,7 +173,7 @@ export type ProgramsContent = {
 export type ImpactContent = {
   headline: string;
   stats: { value: string; text: string }[];
-  quote: { text: string; attribution: string; link: LinkRef; image?: ImageRef };
+  quote: { label: string; text: string; attribution: string; link: LinkRef; image?: ImageRef };
 };
 
 export type FilmContent = {

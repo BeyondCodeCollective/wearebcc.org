@@ -6,6 +6,7 @@ import { cx } from "../../lib/cx";
 import { subscribe } from "../../lib/subscribe";
 import p from "../../ui/primitives.module.css";
 import { Section } from "../../ui/Section";
+import { Emphasis } from "./Emphasis";
 import { Badge } from "./parts";
 import parts from "./parts.module.css";
 import s from "./BeFirst.module.css";
@@ -72,7 +73,9 @@ export function BeFirst({ content }: Props) {
           )}
           {state === "error" && <p className={s.error}>{content.messages.error}</p>}
         </div>
-        <p className={cx(p.mono, s.fine)}>{content.fine}</p>
+        <p className={cx(p.mono, s.fine)}>
+          <Emphasis text={content.fine} emphasis={content.fineEmphasis} className={s.apple} />
+        </p>
       </div>
     </Section>
   );

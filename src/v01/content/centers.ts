@@ -13,7 +13,7 @@ export const centers: CentersPageContent = {
   hero: {
     breadcrumb: [
       { label: "Home", href: routes.home },
-      { label: "Programs", href: routes.programs },
+      { label: "Programs", href: routes.homePrograms },
       { label: "Beyond Centers" },
     ],
     headline: [{ text: "One room." }, { text: "Every generation.", highlight: true }],

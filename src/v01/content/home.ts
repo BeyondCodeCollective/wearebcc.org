@@ -39,7 +39,7 @@ export const home: HomeContent = {
       subscribe: { endpoint: "/api/subscribe", source: "home-v01-hero" },
       messages: formMessages,
     },
-    cta: { label: "Find your program", href: to.programs },
+    cta: { label: "Find your program", href: to.homePrograms },
     image: {
       src: `${IMG}/team-table.jpg`,
       alt: "A diverse team of colleagues meeting around a wooden table in a bright office",
@@ -74,7 +74,7 @@ export const home: HomeContent = {
       {
         title: ["I want", "to build."],
         cta: "See programs",
-        href: to.programs,
+        href: to.homePrograms,
         surface: "cobalt",
         image: { src: `${IMG}/cathy.jpg`, alt: "Cathy, smiling in a bright pink cardigan", position: "center 8%" },
       },
@@ -207,7 +207,6 @@ export const home: HomeContent = {
 
   programs: {
     headline: "Start here.",
-    all: { label: "All nine programs", href: to.programs },
     promise: {
       title: "Free to learners",
       note: "Thanks to our partners",
@@ -257,7 +256,7 @@ export const home: HomeContent = {
         { label: "Beyond Code Dialogues", href: to.events },
         { label: "ASK ME ANYTHING", href: to.events },
         { label: "Beyond the Game", href: to.beyondTheGame },
-        { label: "Beyond the Music", href: to.programs },
+        { label: "Beyond the Music", href: to.events },
       ],
     },
   },
@@ -270,6 +269,8 @@ export const home: HomeContent = {
       { value: "2.3M", text: "views of Code Along Beyond in its first month." },
     ],
     quote: {
+      // NOT IN DESIGN: label so the quote reads as a testimonial (Mica, 2026-11-23).
+      label: "From our learners",
       text: "[ This program has given me confidence in ways I did not think were even possible ]",
       attribution: "TY, HOME FOR THE SUMMER PROGRAM",
       link: { label: "Meet more builders", href: to.impact },

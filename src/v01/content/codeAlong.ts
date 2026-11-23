@@ -17,13 +17,15 @@ export const codeAlong: CodeAlongPageContent = {
     breadcrumbLabel: "Breadcrumb",
     breadcrumb: [
       { label: "Home", href: routes.home },
-      { label: "Programs", href: routes.programs },
+      { label: "Programs", href: routes.homePrograms },
       { label: "Code Along Beyond" },
     ],
     badge: "Season airing now",
     logo: { src: `${IMG}/ca-logo-music.png`, alt: "Code Along Beyond: Music", size: 240 },
     headline: [{ text: "Code Along " }, { text: "Beyond: Music", mark: true }],
     credit: "Powered by Beyond Code Collective · With support from Apple",
+    // NOT IN DESIGN: Apple is set larger and bolder (Mica, 2026-11-23).
+    creditEmphasis: "Apple",
     lede: [
       "Code Along is the free, video-based coding academy created by Beyond Code Collective: real projects, built step by step, with hosts who code right alongside you.",
       "This season: build your own music playlist app, with support from Apple.",
@@ -145,6 +147,8 @@ export const codeAlong: CodeAlongPageContent = {
     placeholder: "you@example.com",
     submit: "Join the list",
     fine: "Season 1 is powered by Beyond Code Collective, with support from Apple",
+    // NOT IN DESIGN: Apple is set heavier (Mica, 2026-11-23).
+    fineEmphasis: "Apple",
     subscribe: { endpoint: "/api/subscribe", source: "codeAlong-v01" },
     // NOT IN DESIGN: the design has no success or error state. Reused from Home.
     messages: home.hero.form.messages,

@@ -10,6 +10,8 @@ export type CodeAlongHeroContent = {
   logo: { src: string; alt: string; size: number };
   headline: MarkedText;
   credit: string;
+  /** The phrase in the credit that is set loudest. */
+  creditEmphasis: string;
   /** Two paragraphs: the design separates them with a blank line. */
   lede: string[];
   primaryCta: LinkRef;
@@ -80,6 +82,8 @@ export type BeFirstContent = {
   placeholder: string;
   submit: string;
   fine: string;
+  /** The phrase in the fine print that is set heavier. */
+  fineEmphasis: string;
   subscribe: SubscribeConfig;
   messages: FormMessages;
 };

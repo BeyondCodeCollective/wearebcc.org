@@ -13,7 +13,7 @@ export const beyondReady: BeyondReadyPageContent = {
     breadcrumb: {
       links: [
         { label: "Home", href: routes.home },
-        { label: "Programs", href: routes.programs },
+        { label: "Programs", href: routes.homePrograms },
       ],
       current: "Beyond Ready",
     },

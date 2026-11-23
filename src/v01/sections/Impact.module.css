@@ -30,6 +30,11 @@
   border-top: var(--rule) solid var(--surface-rule-soft);
 }
 
+.label {
+  flex: 1 1 100%;
+  font-size: var(--text-mono-sm);
+}
+
 .portrait {
   flex: none;
   width: 220px;

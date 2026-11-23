@@ -1,6 +1,0 @@
-/* Fluid display sizes only this page uses. */
-.page {
-  --programs-h1: clamp(4rem, 9vw, 8.75rem);
-  --programs-row-title: clamp(1.875rem, 2.8vw, 2.625rem);
-  --programs-unsure: clamp(2.75rem, 5vw, 4.75rem);
-}

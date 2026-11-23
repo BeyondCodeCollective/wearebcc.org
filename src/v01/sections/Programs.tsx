@@ -1,4 +1,3 @@
-import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import type { ProgramsContent } from "../content/types";
 import { cx } from "../lib/cx";
 import { Photo } from "../ui/Photo";
@@ -19,10 +18,6 @@ export function Programs({ content, id, now }: Props) {
     <Section id={id} rule="top">
       <div className={s.head}>
         <h2 className={cx(p.display, s.headline)}>{content.headline}</h2>
-        <a href={content.all.href} className={p.arrowLink}>
-          {content.all.label}
-          <ArrowRight size={16} weight="bold" aria-hidden="true" />
-        </a>
       </div>
 
       <div className={s.promise}>
