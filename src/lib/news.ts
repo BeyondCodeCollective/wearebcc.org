@@ -19,6 +19,20 @@ export interface NewsPost {
   linkLabel?: string;
   links?: { label: string; url: string; description?: string }[];
   imagePosition?: string;
+  /**
+   * A short film that goes with the post. The v0.1 Article page plays it in
+   * the card under the story. Files live in /public.
+   */
+  video?: {
+    src: string;
+    /** The still shown before the film plays. */
+    poster: string;
+    /** Two lines; the second is set in the highlight color. */
+    headline: string[];
+    body: string;
+    /** Running time as shown, for example "0:47". */
+    duration?: string;
+  };
 }
 
 /**
