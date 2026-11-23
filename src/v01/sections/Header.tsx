@@ -37,7 +37,10 @@ export function Header({ content }: Props) {
           <ul className={s.navList}>
             {content.nav.map((item) => (
               <li key={item.label} className={s.item}>
-                <a href={item.href} className={s.link} aria-haspopup={item.children ? "true" : undefined}>
+                <a href={item.href} className={s.link}
+                  aria-haspopup={item.children ? "true" : undefined}
+                  aria-current={item.current ? "page" : undefined}
+                >
                   {item.label}
                   {item.children && <CaretDown size={12} weight="bold" aria-hidden="true" className={s.caret} />}
                 </a>

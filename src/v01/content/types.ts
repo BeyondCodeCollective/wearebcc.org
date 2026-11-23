@@ -4,6 +4,7 @@ export type Surface =
   | "paper"
   | "paper-warm"
   | "ink"
+  | "navy"
   | "cobalt"
   | "lemon"
   | "forest"
@@ -39,6 +40,8 @@ export type NavChild = { title: string; description: string; href: string };
 export type NavItem = {
   label: string;
   href: string;
+  /** True on the page this item leads to. */
+  current?: boolean;
   children?: NavChild[];
 };
 
@@ -221,6 +224,12 @@ export type FooterContent = {
   navLabel: string;
   columns: { title: string; links: LinkRef[] }[];
   legal: string[];
+};
+
+/** What every v0.1 page carries besides its own sections. */
+export type PageChrome = {
+  header: HeaderContent;
+  footer: FooterContent;
 };
 
 export type HomeContent = {

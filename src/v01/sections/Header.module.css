@@ -74,6 +74,11 @@
   color: var(--surface-link-hover);
 }
 
+.link[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
 .caret {
   transition: transform var(--dur) var(--ease-out);
 }

@@ -1,21 +1,15 @@
-import { Nav } from "@/components/nav";
-import { FieldReadyBody } from "./field-ready-body";
-import "./field-ready.css";
+import LegacyPage from "./legacy-page";
+import { BeyondReadyPage } from "@/v01/pages/BeyondReady";
+import { beyondReady } from "@/v01/content/beyondReady";
 
-export default function FieldReadyPage() {
-  return (
-    <>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-      {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-      <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&family=Special+Gothic+Condensed+One&display=swap"
-        rel="stylesheet"
-      />
-      <Nav variant="light" />
-      <main className="fr">
-        <FieldReadyBody />
-      </main>
-    </>
-  );
+type Props = { params: Promise<{ locale: string }> };
+
+export default async function Page({ params }: Props) {
+  const { locale } = await params;
+
+  // v0.1: English gets the new page, built from src/v01. Spanish keeps the
+  // current page in legacy-page.tsx, unchanged, until the new design has Spanish copy.
+  if (locale === "en") return <BeyondReadyPage content={beyondReady} />;
+
+  return <LegacyPage />;
 }

@@ -1,0 +1,16 @@
+import type { PartnerPageContent } from "../content/partner.types";
+import { PageShell } from "../ui/PageShell";
+import { Section } from "../ui/Section";
+
+type Props = { content: PartnerPageContent };
+
+/** Partner, v0.1. Sections in the order of the design. All copy comes in as content. */
+export function PartnerPage({ content }: Props) {
+  return (
+    <PageShell header={content.header} footer={content.footer}>
+      <Section>
+        <h1>Partner</h1>
+      </Section>
+    </PageShell>
+  );
+}

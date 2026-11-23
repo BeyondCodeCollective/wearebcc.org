@@ -1,3 +1,4 @@
+import { routes, siteFooter, siteHeader } from "./site";
 import type { FormMessages, HomeContent } from "./types";
 
 /**
@@ -11,27 +12,8 @@ import type { FormMessages, HomeContent } from "./types";
 
 const IMG = "/images/v01";
 
-/**
- * Link targets. The design links to S-*.dc.html pages. Each maps to the
- * closest route this site has today. "#..." means a section of this page.
- */
-const to = {
-  top: "#top",
-  programs: "#programs", // S-Programs: no programs index yet
-  events: "#events", // S-Events: no events page yet
-  signup: "#signup", // S-Signup: no sign-up page yet
-  story: "#about", // S-About: no about page yet
-  team: "/en/team", // S-About, where the link is about people
-  impact: "/impact-report", // S-Impact
-  news: "/en/news", // S-News
-  partner: "/en/partners", // S-Partner
-  donate: "/en/donate", // S-Donate
-  beyondReady: "/en/field-ready", // S-BeyondReady
-  centers: "/en/beyond-code-centers", // S-Centers
-  beyondTheGame: "/en/beyond-the-game", // S-BeyondTheGame
-  codeAlong: "/en/code-along", // S-CodeAlong
-  spanish: "/es",
-} as const;
+/** Link targets. The design links to S-*.dc.html pages: the route map says where each one lives. */
+const to = routes;
 
 /** NOT IN DESIGN: the design has no success or error state. Lines reused from the existing site. */
 const formMessages: FormMessages = {
@@ -44,58 +26,7 @@ const formMessages: FormMessages = {
 const EASTERN = "America/New_York";
 
 export const home: HomeContent = {
-  header: {
-    strip: [
-      "Beyond Code Collective™ · Human-powered resources for a tech-driven world",
-      "Free programs · Live sessions · Community",
-    ],
-    logo: { src: `${IMG}/bcc-logo-horizontal.svg`, width: 1047, height: 84 },
-    homeLabel: "Beyond Code Collective, home",
-    homeHref: to.top,
-    navLabel: "Primary",
-    menuLabel: "Menu",
-    nav: [
-      {
-        label: "Programs",
-        href: to.programs,
-        children: [
-          { title: "Beyond Ready", description: "8 weeks to work with AI in any role", href: to.beyondReady },
-          { title: "Beyond Labs", description: "One free live workshop, one topic", href: to.events },
-          { title: "Beyond Centers", description: "Learn in person, every generation", href: to.centers },
-          { title: "Beyond the Game", description: "For athletes moving into tech", href: to.beyondTheGame },
-          { title: "Code Along Beyond", description: "Free video lessons on YouTube", href: to.codeAlong },
-          { title: "All programs", description: "See every way in", href: to.programs },
-        ],
-      },
-      { label: "Events", href: to.events },
-      { label: "Impact", href: to.impact },
-      {
-        label: "About",
-        href: to.story,
-        children: [
-          { title: "Our story", description: "Why we exist and what we do", href: to.story },
-          { title: "Team", description: "The people behind Beyond Code", href: to.team },
-          { title: "Impact", description: "Results so far", href: to.impact },
-          { title: "News", description: "Stories and updates", href: to.news },
-        ],
-      },
-      {
-        label: "Hire & partner",
-        href: to.partner,
-        children: [
-          { title: "Hire graduates", description: "Meet builders ready for work", href: to.partner },
-          { title: "Bring a program", description: "Run Beyond Ready for your people", href: to.partner },
-          { title: "Fund the work", description: "Keep every seat free", href: to.donate },
-          { title: "Contact us", description: "Tell us what you need", href: to.partner },
-        ],
-      },
-    ],
-    languages: [
-      { code: "EN", lang: "en", href: to.top, current: true },
-      { code: "ES", lang: "es", href: to.spanish },
-    ],
-    cta: { label: "Sign up", href: to.signup },
-  },
+  header: siteHeader({ homeHref: to.top }),
 
   hero: {
     headline: [{ text: "Free AI skills" }, { text: "for every generation.", highlight: true }],
@@ -440,39 +371,5 @@ export const home: HomeContent = {
     sticker: undefined,
   },
 
-  footer: {
-    logo: { src: `${IMG}/bcc-logo-horizontal.svg`, alt: "Beyond Code Collective", width: 1047, height: 84 },
-    tagline: "Human-powered resources for a tech-driven world.",
-    navLabel: "Footer",
-    columns: [
-      {
-        title: "Programs",
-        links: [
-          { label: "Build", href: to.programs },
-          { label: "Career conversations", href: to.programs },
-          { label: "In person", href: to.programs },
-          { label: "Music and sports", href: to.programs },
-        ],
-      },
-      {
-        title: "Explore",
-        links: [
-          { label: "Events", href: to.events },
-          { label: "Impact report", href: to.impact },
-          { label: "News", href: to.news },
-          { label: "Resources", href: to.news },
-        ],
-      },
-      {
-        title: "Beyond",
-        links: [
-          { label: "About", href: to.story },
-          { label: "Team", href: to.team },
-          { label: "Contact", href: to.partner },
-          { label: "Instagram", href: "https://www.instagram.com/beyondcodecollective", external: true },
-        ],
-      },
-    ],
-    legal: ["© 2026 Beyond Code Collective", "[wearebcc.org]"],
-  },
+  footer: siteFooter(),
 };
