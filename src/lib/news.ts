@@ -64,6 +64,26 @@ export function newsParagraphs(body: string): string[] {
     .filter(Boolean);
 }
 
+/** A run of paragraph text, or a link inside it. */
+export type NewsInline = string | { label: string; href: string };
+
+/**
+ * Split a paragraph into text and links. A link is written [label](url) in
+ * the post body, where the url is https://, http:// or a path on this site.
+ */
+export function newsInline(paragraph: string): NewsInline[] {
+  const parts: NewsInline[] = [];
+  const link = /\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]*)\)/g;
+  let last = 0;
+  for (const match of paragraph.matchAll(link)) {
+    if (match.index > last) parts.push(paragraph.slice(last, match.index));
+    parts.push({ label: match[1], href: match[2] });
+    last = match.index + match[0].length;
+  }
+  if (last < paragraph.length) parts.push(paragraph.slice(last));
+  return parts;
+}
+
 /** Format an ISO (YYYY-MM-DD) date for display in the active locale. */
 export function formatNewsDate(date: string, locale: string): string {
   const d = new Date(`${date}T00:00:00`);

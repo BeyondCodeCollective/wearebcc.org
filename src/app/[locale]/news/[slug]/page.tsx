@@ -12,6 +12,7 @@ import { NewsVideo } from "@/components/news-video";
 import {
   normalizeNews,
   newsParagraphs,
+  newsInline,
   formatNewsDate,
 } from "@/lib/news";
 import { Link } from "@/i18n/navigation";
@@ -53,7 +54,11 @@ export default function NewsArticle() {
     );
   }
 
-  const paragraphs = newsParagraphs(post.body);
+  // The excerpt already sits under the headline. When a post opens with the
+  // same sentence, show it once.
+  const paragraphs = newsParagraphs(post.body).filter(
+    (para, i) => !(i === 0 && para.trim() === post.excerpt.trim())
+  );
 
   return (
     <div className="min-h-screen bg-off-white">
@@ -148,7 +153,22 @@ export default function NewsArticle() {
                 key={i}
                 className="text-lg leading-relaxed text-true-black/80"
               >
-                {para}
+                {newsInline(para).map((part, j) =>
+                  typeof part === "string" ? (
+                    part
+                  ) : (
+                    <a
+                      key={j}
+                      href={part.href}
+                      {...(/^https?:/i.test(part.href)
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
+                      className="text-cobalt underline underline-offset-4 transition-colors hover:text-true-black"
+                    >
+                      {part.label}
+                    </a>
+                  )
+                )}
               </p>
             ))}
           </div>
