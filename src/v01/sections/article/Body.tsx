@@ -20,7 +20,20 @@ export function Body({ post, share }: Props) {
           <div className={s.text}>
             {post.paragraphs.map((paragraph, index) => (
               <p key={index} className={s.paragraph}>
-                {paragraph}
+                {paragraph.map((part, at) =>
+                  typeof part === "string" ? (
+                    part
+                  ) : (
+                    <a
+                      key={at}
+                      href={part.href}
+                      className={s.inline}
+                      {...(/^https?:/i.test(part.href) ? { target: "_blank", rel: "noopener" } : {})}
+                    >
+                      {part.label}
+                    </a>
+                  ),
+                )}
               </p>
             ))}
           </div>

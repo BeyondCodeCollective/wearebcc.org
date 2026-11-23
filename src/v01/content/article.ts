@@ -1,4 +1,4 @@
-import { newsParagraphs, type NewsPost } from "@/lib/news";
+import { newsInline, newsParagraphs, type NewsPost } from "@/lib/news";
 import type { ArticleLink, ArticlePageContent } from "./article.types";
 import { postCard } from "./newsPosts";
 import { routes, siteFooter, siteHeader } from "./site";
@@ -49,7 +49,7 @@ export function buildArticle(post: NewsPost, others: NewsPost[]): ArticlePageCon
       ...postCard(post),
       readTime: `${minutes} min read`,
       author: post.author,
-      paragraphs: newsParagraphs(post.body),
+      paragraphs: newsParagraphs(post.body).map(newsInline),
       links,
     },
     share: {

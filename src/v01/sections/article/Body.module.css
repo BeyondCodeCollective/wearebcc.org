@@ -53,6 +53,17 @@
   color: var(--surface-highlight);
 }
 
+.inline {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: var(--rule);
+  text-underline-offset: 0.2em;
+}
+
+.inline:hover {
+  color: var(--surface-link-hover);
+}
+
 .links {
   display: flex;
   flex-direction: column;

@@ -1,3 +1,4 @@
+import type { NewsInline } from "@/lib/news";
 import type { PageChrome } from "./types";
 import type { BreadcrumbContent, PostCard } from "./news.types";
 
@@ -10,7 +11,8 @@ export type ArticlePageContent = PageChrome & {
     /** For example "3 min read". */
     readTime: string;
     author?: string;
-    paragraphs: string[];
+    /** Each paragraph as runs of text and links. */
+    paragraphs: NewsInline[][];
     /** Link list and external link from the post, in that order. */
     links: ArticleLink[];
   };
