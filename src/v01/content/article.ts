@@ -10,8 +10,8 @@ const SITE_URL = "https://www.wearebcc.org";
  * link lives here. Copy is taken exactly from docs/design/v0-1/S-Article-lnqw.dc.html.
  *
  * Hidden from the design: the pull quote (a placeholder, and posts have no
- * quote field), the "[Sport · years played]" line, the "Video PLAYER" card of
- * the second variant. NOT IN DESIGN: "Link copied", the post's own link list.
+ * quote field), the "[Sport · years played]" line, the "Video PLAYER" headline of
+ * the second variant (its card is built, and shows for posts that carry a video). NOT IN DESIGN: "Link copied", the post's own link list.
  * The closing card's photo and the corner stamp are /_blob files that could not
  * be retrieved, so the card has no photo yet.
  */
@@ -61,6 +61,19 @@ export function buildArticle(post: NewsPost, others: NewsPost[]): ArticlePageCon
       // Instagram has no share URL: it points at the organization's profile.
       instagram: { label: "Instagram", href: "https://www.instagram.com/beyondcodecollective" },
       copy: { label: "Copy link", copied: "Link copied", url },
+    },
+    video: post.video && {
+      src: post.video.src,
+      poster: post.video.poster,
+      headline: post.video.headline,
+      body: post.video.body,
+      // NOT IN DESIGN: the play button's words and the Instagram link. The design's card
+      // links to a program page; this one follows the post's sign-off, "Join us on socials".
+      play: {
+        label: post.video.duration ? `Play video · ${post.video.duration}` : "Play video",
+        ariaLabel: `Play video: ${post.video.body}`,
+      },
+      cta: { label: "Follow along on Instagram", href: "https://www.instagram.com/beyondcodecollective" },
     },
     closing: {
       headline: ["Your next chapter", "starts here."],

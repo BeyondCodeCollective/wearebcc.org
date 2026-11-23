@@ -4,6 +4,7 @@ import { ClosingCard } from "../sections/article/ClosingCard";
 import { Hero } from "../sections/article/Hero";
 import { KeepReading } from "../sections/article/KeepReading";
 import { ReadingProgress } from "../sections/article/ReadingProgress";
+import { VideoCard } from "../sections/article/VideoCard";
 import { PageShell } from "../ui/PageShell";
 import s from "./Article.module.css";
 
@@ -16,7 +17,7 @@ export function ArticlePage({ content }: Props) {
       <ReadingProgress />
       <Hero breadcrumb={content.breadcrumb} post={content.post} />
       <Body post={content.post} share={content.share} />
-      <ClosingCard content={content.closing} />
+      {content.video ? <VideoCard content={content.video} /> : <ClosingCard content={content.closing} />}
       <KeepReading content={content.more} />
     </PageShell>
   );

@@ -1,0 +1,127 @@
+.section {
+  padding-bottom: var(--section-pad-lg);
+}
+
+.card {
+  display: grid;
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: var(--surface-bg);
+  color: var(--surface-fg);
+}
+
+/* The film is 9:16. On a phone it fills the card; wider than that it stops growing. */
+.frame {
+  position: relative;
+  width: min(100%, 26rem);
+  margin-inline: auto;
+  aspect-ratio: 9 / 16;
+  background: var(--bcc-forest-deep);
+}
+
+.video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter var(--dur) linear;
+}
+
+.frame:has(.start:hover) .video {
+  filter: brightness(0.94);
+}
+
+/* The whole still is the play button; the lemon cue is what says so. */
+.start {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: var(--space-4);
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.start:focus-visible {
+  outline-offset: -6px;
+}
+
+.cue {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--control-h-md);
+  padding: 0 var(--space-5) 0 var(--space-4);
+  border-radius: var(--radius-xs);
+  background: var(--bcc-lemon);
+  color: var(--bcc-true-black);
+  white-space: nowrap;
+  transition: transform var(--dur) var(--ease-out);
+}
+
+.start:hover .cue {
+  transform: translateY(-2px);
+}
+
+.start:active .cue {
+  transform: translateY(1px);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 18px;
+  min-width: 0;
+  padding: var(--space-6) var(--space-5);
+}
+
+.headline {
+  margin: 0;
+  font-size: var(--text-h2);
+  line-height: 0.86;
+  overflow-wrap: anywhere;
+}
+
+.highlight {
+  color: var(--surface-highlight);
+}
+
+.body {
+  max-width: 28.75rem;
+  margin: 0;
+  font-size: var(--text-19);
+  color: color-mix(in srgb, var(--surface-fg) 90%, transparent);
+  text-wrap: pretty;
+}
+
+@media (min-width: 600px) {
+  .card {
+    grid-template-columns: clamp(15rem, 30vw, 23rem) minmax(0, 1fr);
+  }
+
+  .frame {
+    width: 100%;
+  }
+}
+
+@media (min-width: 900px) {
+  .copy {
+    padding: 48px;
+  }
+
+  .headline {
+    font-size: var(--text-film);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .video,
+  .cue {
+    transition: none;
+  }
+}

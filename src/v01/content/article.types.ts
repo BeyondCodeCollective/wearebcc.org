@@ -20,6 +20,15 @@ export type ArticlePageContent = PageChrome & {
     instagram: { label: string; href: string };
     copy: { label: string; copied: string; url: string };
   };
+  /** The post's film. When a post has one, its card takes the place of the closing card. */
+  video?: {
+    src: string;
+    poster: string;
+    headline: string[];
+    body: string;
+    play: { label: string; ariaLabel: string };
+    cta: { label: string; href: string };
+  };
   closing: {
     headline: string[];
     body: string;
