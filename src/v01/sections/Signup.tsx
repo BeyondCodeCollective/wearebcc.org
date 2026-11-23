@@ -13,6 +13,34 @@ import s from "./Signup.module.css";
 type Props = { content: SignupContent; id?: string };
 
 /**
+ * A choice set into the sentence. The value shows in the display type while the
+ * real select lies invisibly over it at body size. The native list opens at the
+ * control's own font size, so a select set in the sentence type filled the screen.
+ */
+function Choice({ id, name, options }: { id: string; name: string; options: string[] }) {
+  const [value, setValue] = useState(options[0] ?? "");
+  return (
+    <span className={s.choice}>
+      <span className={cx(s.field, s.value)} aria-hidden="true">
+        {value}
+      </span>
+      <select
+        id={id}
+        name={name}
+        value={value}
+        onChange={(event) => setValue(event.target.value)}
+        className={s.select}
+      >
+        {options.map((option) => (
+          <option key={option}>{option}</option>
+        ))}
+      </select>
+      <CaretDown weight="bold" aria-hidden="true" className={s.caret} />
+    </span>
+  );
+}
+
+/**
  * Sign-up written as one sentence with the fields set into it.
  * Posts to the endpoint named in its content.
  */
@@ -61,14 +89,7 @@ export function Signup({ content, id }: Props) {
               <label htmlFor={field("interest")} className={p.srOnly}>
                 {t.interest.label}
               </label>
-              <span className={s.choice}>
-                <select id={field("interest")} name="interest" className={cx(s.field, s.select)}>
-                  {t.interest.options.map((option) => (
-                    <option key={option}>{option}</option>
-                  ))}
-                </select>
-                <CaretDown weight="bold" aria-hidden="true" className={s.caret} />
-              </span>{" "}
+              <Choice id={field("interest")} name="interest" options={t.interest.options} />{" "}
               {t.place}{" "}
               <label htmlFor={field("city")} className={p.srOnly}>
                 {t.city.label}
@@ -88,14 +109,7 @@ export function Signup({ content, id }: Props) {
               <label htmlFor={field("language")} className={p.srOnly}>
                 {t.language.label}
               </label>
-              <span className={s.choice}>
-                <select id={field("language")} name="language" className={cx(s.field, s.select)}>
-                  {t.language.options.map((option) => (
-                    <option key={option}>{option}</option>
-                  ))}
-                </select>
-                <CaretDown weight="bold" aria-hidden="true" className={s.caret} />
-              </span>{" "}
+              <Choice id={field("language")} name="language" options={t.language.options} />{" "}
               {t.at}{" "}
               <label htmlFor={field("email")} className={p.srOnly}>
                 {t.email.label}

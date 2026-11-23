@@ -12,12 +12,12 @@
 }
 
 .headline {
-  font-size: var(--text-statement);
+  font-size: var(--text-h2);
 }
 
 .intro {
-  max-width: 30rem;
-  font-size: var(--text-24);
+  max-width: 23.75rem;
+  font-size: var(--text-19);
   line-height: var(--leading-body);
 }
 
@@ -32,8 +32,8 @@
 }
 
 .address {
-  max-width: 30rem;
-  font-size: var(--text-19);
+  max-width: 23.75rem;
+  font-size: var(--text-15);
   line-height: var(--leading-body);
 }
 
@@ -63,19 +63,19 @@
 }
 
 .label {
-  font-size: var(--text-mono-sm);
+  font-size: var(--text-mono-xs);
 }
 
 .control {
   width: 100%;
-  height: var(--control-h-xl);
-  padding: 0 var(--space-5);
+  height: var(--control-h-lg);
+  padding: 0 var(--space-4);
   border: var(--rule) solid var(--surface-rule);
   border-radius: var(--radius-xs);
   background: transparent;
   color: var(--surface-fg);
   font-family: inherit;
-  font-size: var(--text-body-lg);
+  font-size: var(--text-body);
 }
 
 .control::placeholder {
@@ -84,15 +84,9 @@
 }
 
 .message {
-  height: 11rem;
-  padding: var(--space-4) var(--space-5);
+  height: 8.25rem;
+  padding: var(--space-3) var(--space-4);
   resize: vertical;
-}
-
-.form .submit {
-  min-height: var(--control-h-xl);
-  padding-inline: var(--space-8);
-  font-size: var(--text-body-sm);
 }
 
 .formWrap {

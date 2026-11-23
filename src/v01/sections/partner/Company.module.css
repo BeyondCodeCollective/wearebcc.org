@@ -26,16 +26,38 @@
   color: color-mix(in srgb, var(--surface-fg) 80%, transparent);
 }
 
+/* The window the ticker slides behind. */
+.viewport {
+  margin-top: var(--space-7);
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: ticker 54s linear infinite;
+  will-change: transform;
+}
+
+.viewport:hover .track,
+.viewport:focus-within .track {
+  animation-play-state: paused;
+}
+
+/* Each list ends with the gap that sits between tiles, so one list is exactly half the track. */
 .logos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr));
+  display: flex;
+  flex: none;
   gap: var(--space-3);
-  margin: var(--space-7) 0 0;
+  margin: 0;
   padding: 0;
+  padding-inline-end: var(--space-3);
   list-style: none;
 }
 
 .logo {
+  flex: none;
+  width: 12.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,13 +76,41 @@
   object-fit: contain;
 }
 
-/* Two to a row on a phone, so nine logos do not stack into nine full-width bars. */
-@media (max-width: 559px) {
-  .logos {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+@keyframes ticker {
+  from {
+    transform: translateX(0);
   }
 
-  .logo:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 559px) {
+  .logo {
+    width: 10rem;
+  }
+}
+
+/* Without motion: the still grid, one copy. */
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    width: auto;
+    animation: none;
+  }
+
+  .logos {
+    display: grid;
+    flex: 1;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+    padding-inline-end: 0;
+  }
+
+  .logo {
+    width: auto;
+  }
+
+  .copy {
+    display: none;
   }
 }

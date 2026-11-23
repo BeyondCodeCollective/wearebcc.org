@@ -126,7 +126,7 @@ export function Contact({ content }: Props) {
           </div>
           <button
             type="submit"
-            className={cx(p.button, p.ink, p.lg, s.submit)}
+            className={cx(p.button, p.ink, p.lg)}
             aria-busy={state === "sending"}
             disabled={state === "sending"}
           >
