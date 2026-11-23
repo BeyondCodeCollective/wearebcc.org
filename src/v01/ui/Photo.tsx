@@ -15,6 +15,10 @@ type Props = {
 };
 
 export function Photo({ image, sizes, shade, priority, className }: Props) {
+  // Photos uploaded with a news post live on another host, which the image
+  // optimizer is not set up to fetch. Those load directly, as the old pages do.
+  const remote = /^https?:\/\//.test(image.src);
+
   return (
     <div className={cx(p.photo, shade && p.shade, className)}>
       <Image
@@ -23,6 +27,7 @@ export function Photo({ image, sizes, shade, priority, className }: Props) {
         fill
         sizes={sizes}
         priority={priority}
+        unoptimized={remote}
         style={{ objectPosition: image.position }}
       />
     </div>
