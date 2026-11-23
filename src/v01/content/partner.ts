@@ -128,7 +128,13 @@ export const partner: PartnerPageContent = {
       },
       message: { id: "p-msg", name: "message", label: "Message" },
       submit: "Send",
-      mailto: { to: "partnerships@wearebcc.org", subjectPrefix: "Partnerships: " },
+      subscribe: { endpoint: "/api/subscribe", source: "partner-v01" },
+      // NOT IN DESIGN: the design shows no sent or failed state for this form.
+      messages: {
+        success: "Message sent.",
+        successBody: "The partnerships team will reply by email.",
+        error: "Something went wrong. Please try again, or email partnerships@wearebcc.org.",
+      },
     },
   },
 };

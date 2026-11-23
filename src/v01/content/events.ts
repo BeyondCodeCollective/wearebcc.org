@@ -66,9 +66,9 @@ const sessions: SessionEvent[] = [
     id: "beyond-ready-lab-2026-12-14",
     ...timing("beyond-ready-lab-2026-12-14"),
     title: "Beyond Ready Lab",
-    // The design's list row has a typo ("progrmam"). Kept as designed.
+    // The design's list row has a typo ("progrmam"), corrected here.
     description:
-      "A live online lab for learners really to gain applied AI skills and learn about the Beyond Ready progrmam.",
+      "A live online lab for learners really to gain applied AI skills and learn about the Beyond Ready program.",
     meta: ["[Virtual]", "[12:00 PM ET]"],
     image: { src: `${IMG}/field-ready.jpg`, alt: "", position: "center 25%" },
     signup: { label: "Save my free seat", href: to.signup },

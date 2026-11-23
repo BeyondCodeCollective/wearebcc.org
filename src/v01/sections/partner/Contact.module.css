@@ -39,11 +39,9 @@
 
 .form {
   display: flex;
-  flex: 1 1 32.5rem;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-4);
-  max-width: 47.5rem;
   min-width: 0;
 }
 
@@ -90,3 +88,39 @@
   padding: var(--space-3) var(--space-4);
   resize: vertical;
 }
+
+.formWrap {
+  display: flex;
+  flex: 1 1 32.5rem;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 47.5rem;
+  min-width: 0;
+}
+
+/* Honeypot: off screen for people, still in the form for bots. */
+.trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.done {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-block: var(--space-4);
+  border-block: var(--rule) solid var(--surface-rule);
+}
+
+.doneTitle {
+  font-size: var(--text-title);
+}
+
+.error {
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-medium);
+}
+

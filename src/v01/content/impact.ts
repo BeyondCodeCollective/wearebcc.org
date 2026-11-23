@@ -7,8 +7,7 @@ const IMG = "/images/v01";
  * Impact, v0.1. Every word and link on the page lives here.
  * Copy is taken exactly from docs/design/v0-1/S-Impact-w1jf.dc.html.
  *
- * Copy kept as the design has it, for the team to confirm:
- * - "steos" in the Beyond the Game story looks like "steps".
+ * One typo in the design is corrected: "steos" in the Beyond the Game story reads "steps".
  * The stories carry months ("Mar–Aug 2026", "Sep–Oct 2026") as plain text. They are not events and
  * nothing hides after them, but the dates are not confirmed.
  *
@@ -62,7 +61,7 @@ export const impact: ImpactPageContent = {
         imageSide: "left",
         meta: "Beyond the Game · Cohort 1",
         title: "The Beyond the Game cohort",
-        body: "A group of athletes leaving their sport took their first steos into tech. Kleon Penn passed CompTIA Tech+ on his first try; Carla Cortijo Sánchez built an app using AI; the cohort’s head, Ramon Clemente, earned two IT certifications alongside them.",
+        body: "A group of athletes leaving their sport took their first steps into tech. Kleon Penn passed CompTIA Tech+ on his first try; Carla Cortijo Sánchez built an app using AI; the cohort’s head, Ramon Clemente, earned two IT certifications alongside them.",
         link: { label: "See Beyond the Game", href: routes.beyondTheGame },
       },
       {

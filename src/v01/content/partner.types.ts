@@ -1,4 +1,4 @@
-import type { ImageRef, LinkRef, LogoRef, PageChrome } from "./types";
+import type { FormMessages, ImageRef, LinkRef, LogoRef, PageChrome, SubscribeConfig } from "./types";
 
 export type AudienceKey = "employer" | "team" | "board" | "campus" | "funder";
 
@@ -51,8 +51,9 @@ export type PartnerPageContent = PageChrome & {
       want: { id: string; name: string; label: string; options: string[] };
       message: ContactField;
       submit: string;
-      /** The design has no backend for this form. Send opens the visitor's mail app, addressed here. */
-      mailto: { to: string; subjectPrefix: string };
+      /** Where the inquiry posts. The server stores it, tells the team and adds the contact to Mailchimp. */
+      subscribe: SubscribeConfig;
+      messages: FormMessages;
     };
   };
 };

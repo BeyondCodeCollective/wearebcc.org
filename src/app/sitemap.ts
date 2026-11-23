@@ -5,7 +5,7 @@ const BASE = "https://www.wearebcc.org";
 const LOCALES = ["en", "es"] as const;
 
 // Indexable marketing surfaces only. Anything carrying robots noindex
-// (platform, partners, rancho-cordova, theo-tech, links) stays
+// (platform, Spanish partners, rancho-cordova, theo-tech, links) stays
 // out: listing a noindex URL in the sitemap just asks Google to crawl a page
 // it is then told to drop. Gated pages and app surfaces stay out too.
 const PAGES = [
@@ -22,6 +22,10 @@ const PAGES = [
   "/terms",
 ];
 
+// v0.1 pages that exist, or are indexable, in English only. Spanish has no
+// version of the first five, and Spanish /partners is still the gated preview.
+const ENGLISH_ONLY_PAGES = ["/programs", "/events", "/about", "/sign-up", "/impact", "/partners"];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const newsItems = (landing.news?.items ?? []) as {
     slug?: string;
@@ -35,7 +39,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .map((p) => `/news/${p.slug}`),
   ];
 
-  return paths.flatMap((path) =>
+  const englishOnly = ENGLISH_ONLY_PAGES.map((path) => ({
+    url: `${BASE}/en${path}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
+  const bothLocales = paths.flatMap((path) =>
     LOCALES.map((locale) => ({
       url: `${BASE}/${locale}${path}`,
       lastModified: new Date(),
@@ -48,4 +59,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     })),
   );
+
+  return [...bothLocales, ...englishOnly];
 }

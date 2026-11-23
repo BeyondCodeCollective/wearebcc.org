@@ -7,6 +7,10 @@ export type SubscribeFields = {
   segment?: string;
   city?: string;
   language?: string;
+  zip?: string;
+  company?: string;
+  /** A written inquiry. The server stores it and passes it to the team. */
+  message?: string;
   /** Honeypot. People never fill it in: the server drops anything that does. */
   website?: string;
 };
