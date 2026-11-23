@@ -8,11 +8,14 @@ import s from "./Header.module.css";
 
 type Props = { content: HeaderContent };
 
-/** Site header for v0.1 pages: utility strip, logo, primary nav, language, sign-up. */
+/**
+ * Site header for v0.1 pages: utility strip, then the bar with logo, primary
+ * nav, language and sign-up. The strip scrolls away; the bar stays in view.
+ */
 export function Header({ content }: Props) {
   return (
-    <header className={s.header} data-surface="paper">
-      <div className={cx(p.mono, s.strip)}>
+    <>
+      <div className={cx(p.mono, s.strip)} data-surface="paper">
         {content.strip.map((line, index) => (
           <p key={line} className={index > 0 ? s.stripExtra : undefined}>
             {line}
@@ -20,6 +23,7 @@ export function Header({ content }: Props) {
         ))}
       </div>
 
+      <header className={s.header} data-surface="paper">
       <div className={s.bar}>
         <a href={content.homeHref} aria-label={content.homeLabel} className={s.logo}>
           <Image
@@ -95,6 +99,7 @@ export function Header({ content }: Props) {
           </div>
         </div>
       </div>
-    </header>
+      </header>
+    </>
   );
 }

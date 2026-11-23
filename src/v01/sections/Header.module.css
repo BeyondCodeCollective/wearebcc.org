@@ -1,5 +1,7 @@
+/* The bar stays under the site-wide donate bar as the page scrolls. */
 .header {
-  position: relative;
+  position: sticky;
+  top: var(--banner-h, 0px);
   z-index: 50;
   background: var(--surface-bg);
   color: var(--surface-fg);
@@ -12,6 +14,7 @@
   gap: var(--space-1) var(--space-5);
   padding: var(--space-2) var(--gutter);
   border-bottom: var(--rule) solid var(--surface-rule-soft);
+  background: var(--surface-bg);
   color: var(--surface-fg2);
   font-size: var(--text-mono-xs);
 }

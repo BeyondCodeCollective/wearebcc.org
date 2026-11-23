@@ -6,7 +6,7 @@
   .track {
     display: block;
     position: sticky;
-    top: 0;
+    top: calc(var(--banner-h, 0px) + var(--header-h));
     z-index: 2;
     height: 6px;
     background: color-mix(in srgb, var(--bcc-true-black) 8%, transparent);

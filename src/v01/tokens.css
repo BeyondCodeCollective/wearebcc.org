@@ -367,10 +367,21 @@
   outline-offset: 3px;
 }
 
-/* The old site sets a 120px scroll offset for its fixed nav. This header is
-   not fixed, so anchors only need to clear the site-wide donate bar. */
+/* Height of the header bar, which stays in view under the donate bar. */
+.v01 {
+  --header-h: 61px;
+}
+
+@media (min-width: 1120px) {
+  .v01 {
+    --header-h: 72px;
+  }
+}
+
+/* The old site sets a 120px scroll offset for its fixed nav. Here anchors
+   clear the donate bar and the header bar, with a little air. */
 .v01 [id] {
-  scroll-margin-top: calc(var(--banner-h, 0px) - 104px);
+  scroll-margin-top: calc(var(--banner-h, 0px) + var(--header-h) + 16px - 120px);
 }
 
 @media (prefers-reduced-motion: reduce) {
