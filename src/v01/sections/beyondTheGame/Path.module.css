@@ -45,7 +45,7 @@
 }
 
 .dotUpcoming {
-  fill: var(--bcc-forest-deep);
+  fill: var(--bcc-cobalt);
   stroke: color-mix(in srgb, var(--bcc-cream) 50%, transparent);
   stroke-width: 4;
   stroke-dasharray: 6 6;

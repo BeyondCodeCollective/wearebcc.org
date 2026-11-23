@@ -48,12 +48,12 @@
 }
 
 .stage:hover {
-  border-color: var(--bg-forest);
+  border-color: var(--bg-cobalt);
 }
 
 .stage[aria-pressed="true"] {
-  border-color: var(--bg-forest);
-  background: var(--bg-forest);
+  border-color: var(--bg-cobalt);
+  background: var(--bg-cobalt);
   color: var(--bcc-lemon);
 }
 

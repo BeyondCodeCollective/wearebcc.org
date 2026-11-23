@@ -8,12 +8,12 @@ import s from "./Apply.module.css";
 
 type Props = { content: BeyondTheGameApplyContent; id?: string };
 
-/** The apply card on deep green, then the line for teams that want to sponsor a cohort. */
+/** The apply card on cobalt, then the line for teams that want to sponsor a cohort. */
 export function Apply({ content, id }: Props) {
   const { cta } = content.aside;
 
   return (
-    <Section id={id} surface="forest" pad="none" className={cx(s.section, d.deep)}>
+    <Section id={id} surface="cobalt" pad="none" className={cx(s.section, d.deep)}>
       <div className={s.card}>
         <div className={s.main} data-surface="lemon">
           <h2 className={cx(p.display, s.headline)}>

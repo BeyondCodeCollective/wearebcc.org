@@ -9,10 +9,10 @@ import s from "./Hero.module.css";
 
 type Props = { content: BeyondTheGameHeroContent };
 
-/** The deep green opener: headline, the ask, and the before and after pair. */
+/** The cobalt opener: headline, the ask, and the before and after pair. */
 export function Hero({ content }: Props) {
   return (
-    <Section surface="forest" pad="none" className={cx(s.hero, d.deep)}>
+    <Section surface="cobalt" pad="none" className={cx(s.hero, d.deep)}>
       <div className={s.bar}>
         <nav aria-label="Breadcrumb" className={cx(p.mono, s.crumbs)}>
           {content.breadcrumb.links.map((link) => (

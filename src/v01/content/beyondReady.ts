@@ -146,9 +146,20 @@ export const beyondReady: BeyondReadyPageContent = {
         answer: "Nothing. Beyond Ready is free to learners, supported by our partners and funders.",
         open: true,
       },
-      { question: "Do I need a tech background?" },
-      { question: "How much time does it take?" },
-      { question: "Do I get a certificate?" },
+      // NOT IN DESIGN: these three answers. The first two restate facts from this page; the
+      // certificate was confirmed by Fonz on 2026-11-23.
+      {
+        question: "Do I need a tech background?",
+        answer: "No. Beyond Ready is built for any role. You bring a real task from the job you already have, and we start from there.",
+      },
+      {
+        question: "How much time does it take?",
+        answer: "Eight weeks, at three or more hours a week. Each week has a 60 minute live kickoff, self-guided units, time with your pod of five, and optional office hours.",
+      },
+      {
+        question: "Do I get a certificate?",
+        answer: "Yes. Finish the eight weeks and you earn a Beyond Ready certificate of completion.",
+      },
     ],
   },
 

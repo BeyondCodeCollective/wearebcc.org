@@ -23,6 +23,7 @@
   gap: 10px;
   min-width: 0;
   padding: var(--space-4);
+  container-type: inline-size;
 }
 
 .then {
@@ -41,7 +42,8 @@
 }
 
 .cellValue {
-  font-size: clamp(var(--text-24), 3.1vw, var(--text-44));
+  /* Sized from the cell, so the longest word ("Entrepreneurship") stays on one line. */
+  font-size: clamp(1rem, 14.5cqi, var(--text-44));
   line-height: 0.9;
   overflow-wrap: anywhere;
 }

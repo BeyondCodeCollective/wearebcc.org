@@ -105,8 +105,9 @@ export const beyondTheGame: BeyondTheGamePageContent = {
     groupLabel: "Choose a learner story",
     thenLabel: "Then",
     nowLabel: "Now",
-    // Carla is left out: her photo, quote, last name and story are all placeholders in the design.
-    // Kleon's quote is a placeholder too, so it is left out until the words exist.
+    // Both quotes are placeholders in the design, so they are left out until the words exist.
+    // NOT IN DESIGN: Carla's line. Her story is a placeholder there, so this one is written from
+    // the facts on the Impact page. Her photo is the cutout made for the August deck.
     learners: [
       {
         key: "kleon",
@@ -121,6 +122,20 @@ export const beyondTheGame: BeyondTheGamePageContent = {
         name: "Kleon Penn",
         text: "came through Beyond the Game’s first cohort after 15 years in basketball and is building a career in cybersecurity, starting with CompTIA Network+.",
         link: { label: "Read Kleon’s story", href: routes.home },
+      },
+      {
+        key: "carla",
+        label: "Carla",
+        then: "Basketball",
+        now: "Entrepreneurship",
+        image: {
+          src: "/images/btg/carla-portrait.webp",
+          alt: "Carla Cortijo Sánchez in her Puerto Rico jersey, holding a basketball",
+          position: "center 8%",
+        },
+        name: "Carla Cortijo Sánchez",
+        text: "came through Beyond the Game’s first cohort after her years in basketball and built an app using AI on her way into entrepreneurship.",
+        link: { label: "Read Carla’s story", href: routes.impact },
       },
     ],
   },

@@ -49,7 +49,7 @@ export function StagePicker({ content, id }: Props) {
           <p className={cx(p.display, s.answerHead)}>{current.head}</p>
           <p className={s.answerBody}>{current.body}</p>
         </div>
-        <div className={cx(s.start, d.deep)} data-surface="forest">
+        <div className={cx(s.start, d.deep)} data-surface="cobalt">
           <span className={cx(p.mono, s.startLabel)}>{content.startLabel}</span>
           <p className={cx(p.display, s.startText)}>{current.start}</p>
           <a href={content.cta.href} className={p.arrowLink}>

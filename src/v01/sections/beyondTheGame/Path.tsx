@@ -12,7 +12,7 @@ export function Path({ content, id }: Props) {
   const lastIndex = content.steps.length - 1;
 
   return (
-    <Section id={id} surface="forest" pad="none" className={cx(s.section, d.deep)}>
+    <Section id={id} surface="cobalt" pad="none" className={cx(s.section, d.deep)}>
       <div className={s.head}>
         <h2 className={cx(p.display, s.headline)}>
           {content.headline.map((line, index) => (
