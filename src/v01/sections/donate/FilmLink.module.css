@@ -1,0 +1,67 @@
+.link {
+  position: relative;
+  display: block;
+  min-height: clamp(26rem, 43vw, 38.75rem);
+  overflow: hidden;
+  color: var(--bcc-cream);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--bcc-cream);
+}
+
+.image {
+  object-fit: cover;
+  transition: filter var(--dur) linear;
+}
+
+.link:hover .image {
+  filter: brightness(0.94);
+}
+
+/* The design fades black out to the right. Flat token wash instead, so the headline stays legible. */
+.fade {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in srgb, var(--bcc-true-black) 35%, transparent);
+}
+
+.copy {
+  position: absolute;
+  bottom: var(--space-6);
+  left: var(--gutter);
+  right: var(--gutter);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-5);
+}
+
+.headline {
+  font-size: var(--donate-video);
+  line-height: 0.86;
+}
+
+.cue {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--bcc-lemon);
+  color: var(--fg1);
+}
+
+@media (min-width: 760px) {
+  .copy {
+    bottom: var(--space-8);
+  }
+}

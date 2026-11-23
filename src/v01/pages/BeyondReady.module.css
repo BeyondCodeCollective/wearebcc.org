@@ -1,0 +1,10 @@
+/*
+ * Fluid display sizes only this page uses. They match no shared type token,
+ * so each is declared once here, in rem.
+ */
+.page {
+  --br-title: clamp(6rem, 10vw, 9.375rem);
+  --br-lead: clamp(2.5rem, 5.6vw, 5.5rem);
+  --br-claim: clamp(2.5rem, 4vw, 3.75rem);
+  --br-ready: clamp(4rem, 8.4vw, 8rem);
+}

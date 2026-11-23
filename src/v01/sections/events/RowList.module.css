@@ -1,0 +1,15 @@
+.list {
+  border-bottom: var(--rule) solid var(--surface-rule);
+}
+
+@media (min-width: 1120px) {
+  .list {
+    display: grid;
+    grid-template-columns: 9rem 96px minmax(0, 2fr) minmax(0, 1fr) auto;
+    column-gap: var(--space-6);
+  }
+
+  .list > * {
+    grid-column: 1 / -1;
+  }
+}

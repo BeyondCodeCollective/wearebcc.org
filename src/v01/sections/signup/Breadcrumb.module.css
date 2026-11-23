@@ -1,0 +1,14 @@
+.crumb {
+  padding-top: var(--section-pad-sm);
+  padding-bottom: var(--space-5);
+  font-size: var(--text-mono-sm);
+  color: color-mix(in srgb, var(--surface-fg) 85%, transparent);
+}
+
+.crumb a {
+  color: inherit;
+}
+
+.crumb a:hover {
+  color: var(--surface-link-hover);
+}

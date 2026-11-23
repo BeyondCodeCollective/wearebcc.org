@@ -1,0 +1,134 @@
+.hero {
+  padding-block: var(--space-6) var(--section-pad-lg);
+}
+
+.crumbs {
+  font-size: var(--text-mono-sm);
+  color: var(--surface-fg2);
+}
+
+.crumbs a {
+  color: inherit;
+}
+
+.layout {
+  display: grid;
+  gap: var(--space-7) var(--space-8);
+  margin-top: var(--space-6);
+}
+
+.cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-7);
+  min-height: 30rem;
+  padding: var(--space-6) var(--space-5) var(--space-5);
+  background-color: var(--surface-bg);
+  color: var(--surface-fg);
+  border-radius: var(--radius-sm) var(--radius-lg) var(--radius-lg) var(--radius-sm);
+  box-shadow:
+    inset 14px 0 0 color-mix(in srgb, var(--bcc-true-black) 18%, transparent),
+    0 32px 60px -28px color-mix(in srgb, var(--bcc-dark-cobalt) 80%, transparent);
+}
+
+.coverTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.coverMeta {
+  font-size: var(--text-mono-xs);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--br-title);
+  line-height: 0.8;
+  letter-spacing: -0.03em;
+}
+
+.facts {
+  margin: 0;
+}
+
+.fact {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: 9px;
+  border-top: var(--rule) solid color-mix(in srgb, var(--surface-fg) 30%, transparent);
+}
+
+.factLabel {
+  font-size: var(--text-mono-sm);
+  color: color-mix(in srgb, var(--surface-fg) 80%, transparent);
+}
+
+.factValue {
+  margin: 0;
+  font-size: var(--text-24);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-6);
+  min-width: 0;
+  padding-top: var(--space-2);
+}
+
+.claim {
+  margin: 0;
+  font-size: var(--br-lead);
+  line-height: var(--leading-display);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 33.75rem;
+}
+
+.lede {
+  margin: 0;
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-body);
+  color: var(--surface-fg2);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) 22px;
+}
+
+.photo {
+  width: 100%;
+  height: clamp(13rem, 24vw, 20rem);
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 28.75rem) minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .cover {
+    min-height: 38.75rem;
+    padding: 36px 34px 30px;
+  }
+
+  .factValue {
+    font-size: var(--text-title-sm);
+  }
+}

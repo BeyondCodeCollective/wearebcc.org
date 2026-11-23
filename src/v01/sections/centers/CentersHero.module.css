@@ -1,0 +1,56 @@
+.hero {
+  padding-block: var(--space-7) var(--section-pad-tight);
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-5) var(--space-8);
+  margin-top: var(--space-5);
+}
+
+.headline {
+  font-size: var(--centers-h1);
+  line-height: 0.84;
+}
+
+.line {
+  display: block;
+}
+
+.highlight {
+  color: var(--surface-highlight);
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 26.25rem;
+}
+
+.lede {
+  color: color-mix(in srgb, var(--surface-fg) 90%, transparent);
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-body);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.lemon {
+  border-color: var(--bcc-lemon);
+  background: var(--bcc-lemon);
+  color: var(--fg1);
+}
+
+.lemon:hover {
+  border-color: var(--bcc-cream);
+  background: var(--bcc-cream);
+}

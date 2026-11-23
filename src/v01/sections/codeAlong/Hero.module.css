@@ -1,0 +1,65 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  text-align: center;
+}
+
+.trail {
+  align-self: flex-start;
+  font-size: var(--text-mono-sm);
+  text-align: left;
+  color: color-mix(in srgb, var(--surface-fg) 85%, transparent);
+}
+
+.trail a {
+  color: inherit;
+}
+
+.trail a:hover {
+  color: var(--surface-link-hover);
+}
+
+.logo {
+  display: block;
+  width: min(240px, 62vw);
+  height: auto;
+  margin-inline: auto;
+}
+
+.headline {
+  font-size: var(--text-statement);
+  line-height: 1.05;
+}
+
+.credit {
+  font-size: var(--text-mono-sm);
+}
+
+.lede {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 40rem;
+  font-size: var(--text-19);
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.still {
+  width: 100%;
+  max-width: 61.25rem;
+  margin-top: var(--space-5);
+}
+
+.stillPhoto {
+  height: clamp(15rem, 53vw, 32.5rem);
+}

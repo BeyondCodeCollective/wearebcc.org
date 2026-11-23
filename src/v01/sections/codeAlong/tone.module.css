@@ -1,0 +1,41 @@
+/* Grounds that are not Section surfaces: the Code Along palette. */
+:global(.v01) .mint[data-surface],
+:global(.v01) .sky[data-surface],
+:global(.v01) .night[data-surface],
+:global(.v01) .cream[data-surface],
+:global(.v01) .lemon[data-surface] {
+  --surface-fg: var(--bcc-navy);
+  --surface-fg2: var(--bcc-navy);
+  --surface-fg3: var(--bcc-navy);
+  --surface-rule: var(--bcc-navy);
+  --surface-rule-soft: color-mix(in srgb, var(--bcc-navy) 40%, transparent);
+  --surface-highlight: var(--bcc-lemon-soft);
+  --surface-link-hover: var(--bcc-navy);
+  --focus-ring: var(--bcc-navy);
+  --surface-hover-opacity: 0.86;
+}
+
+:global(.v01) .mint[data-surface] {
+  --surface-bg: var(--bcc-mint);
+}
+
+:global(.v01) .sky[data-surface] {
+  --surface-bg: var(--bcc-sky-muted);
+}
+
+:global(.v01) .cream[data-surface] {
+  --surface-bg: var(--bg-paper);
+}
+
+:global(.v01) .lemon[data-surface] {
+  --surface-bg: var(--bcc-lemon-soft);
+}
+
+:global(.v01) .night[data-surface] {
+  --surface-bg: var(--bcc-navy);
+  --surface-fg: var(--bcc-mint);
+  --surface-fg2: var(--bcc-mint);
+  --surface-fg3: var(--bcc-mint);
+  --surface-rule: var(--bcc-sky-muted);
+  --focus-ring: var(--bcc-lemon-soft);
+}

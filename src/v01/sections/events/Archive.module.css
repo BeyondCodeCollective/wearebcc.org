@@ -1,0 +1,11 @@
+.section {
+  padding-block: var(--section-pad-md);
+}
+
+.headline {
+  font-size: var(--archive-h2);
+}
+
+.list {
+  margin-top: var(--space-5);
+}

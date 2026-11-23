@@ -1,0 +1,50 @@
+.wrap {
+  padding-bottom: var(--section-pad);
+}
+
+.grid {
+  display: grid;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  min-height: 17.5rem;
+  padding: clamp(1.5rem, 3.3vw, 3rem);
+  background: var(--surface-bg);
+  color: var(--surface-fg);
+  text-decoration: none;
+}
+
+.tile:hover {
+  color: var(--surface-fg);
+}
+
+.tile:hover .link {
+  color: var(--surface-link-hover);
+}
+
+.headline {
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  line-height: 0.86;
+}
+
+.line {
+  display: inline;
+}
+
+.link {
+  align-self: flex-start;
+}
+
+@media (min-width: 760px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tile {
+    min-height: 23.75rem;
+  }
+}

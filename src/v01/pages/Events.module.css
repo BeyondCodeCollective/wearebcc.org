@@ -1,0 +1,5 @@
+/* Fluid display sizes only this page uses. */
+.page {
+  --events-h1: clamp(4rem, 10vw, 9.75rem);
+  --archive-h2: clamp(2.5rem, 5vw, 4.5rem);
+}

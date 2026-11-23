@@ -1,0 +1,4 @@
+/* Fluid display size only this page uses: the featured post's headline. */
+.page {
+  --news-feature: clamp(4rem, 9vw, 9rem);
+}

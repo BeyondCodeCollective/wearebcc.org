@@ -1,0 +1,23 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.headline {
+  font-size: var(--text-sentence);
+  line-height: 1;
+}
+
+.lede {
+  max-width: 40rem;
+  font-size: var(--text-body-md);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.cta {
+  margin-top: var(--space-5);
+}

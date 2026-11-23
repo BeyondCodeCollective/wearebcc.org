@@ -1,0 +1,5 @@
+/* Fluid display sizes only About uses. */
+.page {
+  --about-statement: clamp(3.5rem, 6.6vw, 7rem);
+  --about-name: clamp(2.25rem, 3.6vw, 3.375rem);
+}

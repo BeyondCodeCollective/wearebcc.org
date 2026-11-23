@@ -1,0 +1,12 @@
+.trail {
+  font-size: var(--text-mono-sm);
+  color: color-mix(in srgb, var(--surface-fg) 85%, transparent);
+}
+
+.trail a {
+  color: inherit;
+}
+
+.trail a:hover {
+  color: var(--surface-link-hover);
+}

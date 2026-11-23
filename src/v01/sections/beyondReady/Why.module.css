@@ -1,0 +1,33 @@
+.section {
+  padding-block: var(--section-pad-lg);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 62.5rem;
+  min-width: 0;
+}
+
+.headline {
+  margin: 0;
+  font-size: var(--text-statement);
+}
+
+.claim {
+  margin: 0;
+  font-size: var(--br-claim);
+  line-height: 0.95;
+}
+
+.accent {
+  color: var(--surface-highlight);
+}
+
+.body {
+  max-width: 37.5rem;
+  margin: 0;
+  font-size: var(--text-19);
+  line-height: var(--leading-body);
+}

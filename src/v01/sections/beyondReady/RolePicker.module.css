@@ -1,0 +1,137 @@
+.section {
+  padding-block: var(--section-pad-lg);
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4) var(--space-7);
+}
+
+.headline {
+  margin: 0;
+  font-size: var(--text-statement);
+}
+
+.intro {
+  max-width: 26.25rem;
+  margin: 0;
+  font-size: var(--text-19);
+  line-height: var(--leading-body);
+  color: var(--surface-fg2);
+}
+
+.roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: var(--space-7);
+}
+
+.role {
+  min-height: var(--control-h-lg);
+  padding: 0 var(--space-4);
+  border: var(--rule) solid var(--surface-rule);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--surface-fg);
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: var(--text-26);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-display);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.role:hover {
+  background: color-mix(in srgb, var(--bcc-cobalt) 8%, transparent);
+}
+
+.role[aria-pressed="true"] {
+  background: var(--bg-ink);
+  color: var(--fg-inverse);
+}
+
+.result {
+  display: grid;
+  margin-top: var(--space-5);
+  border: var(--rule) solid var(--surface-rule);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  animation: swap 360ms var(--ease-out);
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: var(--space-5);
+}
+
+.build {
+  background-color: var(--surface-bg);
+  color: var(--surface-fg);
+}
+
+.cellLabel {
+  font-size: var(--text-mono-sm);
+  color: var(--surface-fg3);
+}
+
+.buildLabel {
+  color: color-mix(in srgb, var(--surface-fg) 80%, transparent);
+}
+
+.cellText {
+  margin: 0;
+  font-size: clamp(var(--text-36), 3.6vw, var(--text-52));
+  line-height: 0.95;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--control-h-lg);
+  background: var(--bg-lemon);
+  color: var(--fg1);
+}
+
+.arrow svg {
+  transform: rotate(90deg);
+}
+
+@keyframes swap {
+  from {
+    opacity: 0.2;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .result {
+    grid-template-columns: minmax(0, 1fr) 72px minmax(0, 1fr);
+  }
+
+  .cell {
+    padding: var(--space-6);
+  }
+
+  .arrow svg {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .result {
+    animation: none;
+  }
+}

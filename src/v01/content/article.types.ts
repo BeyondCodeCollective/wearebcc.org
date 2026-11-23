@@ -1,6 +1,30 @@
 import type { PageChrome } from "./types";
+import type { BreadcrumbContent, PostCard } from "./news.types";
+
+export type ArticleLink = { label: string; description?: string; href: string; external: boolean };
 
 /** Content for the Article page. Its sections take these types as props and nothing else. */
 export type ArticlePageContent = PageChrome & {
-  // One field per design section, in page order.
+  breadcrumb: BreadcrumbContent;
+  post: PostCard & {
+    /** For example "3 min read". */
+    readTime: string;
+    author?: string;
+    paragraphs: string[];
+    /** Link list and external link from the post, in that order. */
+    links: ArticleLink[];
+  };
+  share: {
+    label: string;
+    linkedin: { label: string; href: string };
+    instagram: { label: string; href: string };
+    copy: { label: string; copied: string; url: string };
+  };
+  closing: {
+    headline: string[];
+    body: string;
+    cta: { label: string; href: string };
+    image?: PostCard["image"];
+  };
+  more: { headline: string; posts: PostCard[] };
 };

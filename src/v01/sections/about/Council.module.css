@@ -1,0 +1,46 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding-block: var(--section-pad-lg);
+}
+
+.headline {
+  font-size: var(--text-h2);
+}
+
+.lede {
+  color: var(--surface-fg2);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px var(--space-4);
+  list-style: none;
+}
+
+.member {
+  font-size: var(--about-name);
+  line-height: 1.12;
+  text-wrap: wrap;
+}
+
+.affiliation {
+  font-family: var(--font-sans);
+  font-size: var(--text-body-md);
+  letter-spacing: 0;
+  text-transform: none;
+  vertical-align: middle;
+  color: var(--surface-fg2);
+}
+
+@media (min-width: 700px) {
+  .list {
+    column-gap: 2.25rem;
+  }
+
+  .member {
+    white-space: nowrap;
+  }
+}

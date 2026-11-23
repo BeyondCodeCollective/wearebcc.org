@@ -1,0 +1,4 @@
+/* Fluid display size only this page uses: the article headline. */
+.page {
+  --article-title: clamp(3.25rem, 7.6vw, 7.5rem);
+}

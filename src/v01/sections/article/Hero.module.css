@@ -1,0 +1,45 @@
+.layout {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  order: 2;
+}
+
+.meta {
+  font-size: var(--text-15);
+}
+
+.headline {
+  font-size: var(--article-title);
+  line-height: 0.84;
+  overflow-wrap: anywhere;
+}
+
+.photo {
+  order: 1;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: var(--space-7) var(--space-8);
+    align-items: end;
+  }
+
+  .copy {
+    order: 1;
+  }
+
+  .photo {
+    order: 2;
+    aspect-ratio: auto;
+    height: 560px;
+  }
+}

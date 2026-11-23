@@ -1,0 +1,14 @@
+.statement {
+  max-width: 75rem;
+  font-size: var(--donate-statement);
+  line-height: 0.95;
+  text-wrap: pretty;
+}
+
+.cobalt {
+  color: var(--fg-accent);
+}
+
+.forest {
+  color: var(--bg-forest);
+}

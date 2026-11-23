@@ -1,0 +1,191 @@
+.section {
+  padding-block: var(--space-6) var(--space-7);
+}
+
+.figure {
+  position: relative;
+  max-width: 87.5rem;
+  margin-inline: auto;
+}
+
+/* Phones and tablets: the drawing is cropped to its middle, so the hub stays large. */
+.stage {
+  position: relative;
+  max-width: 40rem;
+  margin-inline: auto;
+  aspect-ratio: 1 / 0.971;
+  overflow: hidden;
+}
+
+.art {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  aspect-ratio: 1400 / 680;
+  container-type: inline-size;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.line line {
+  stroke: var(--surface-fg);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.hub {
+  fill: var(--bg-cobalt);
+}
+
+.passedDot {
+  fill: var(--bg-forest);
+}
+
+.reachDot {
+  fill: var(--bg-crimson);
+}
+
+.node circle {
+  fill: var(--bg-lemon);
+  stroke: var(--surface-fg);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.label {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  line-height: 0.9;
+  text-wrap: balance;
+}
+
+.label span {
+  display: block;
+}
+
+.hubLabel {
+  width: 15.7%;
+  color: var(--bcc-cream);
+  font-size: var(--net-hub-label);
+}
+
+.hubValue {
+  font-size: var(--net-hub-value);
+}
+
+.passedLabel {
+  width: 10%;
+  color: var(--bcc-lemon);
+  font-size: var(--net-passed-label);
+  line-height: 0.95;
+}
+
+.passedValue {
+  font-size: var(--net-passed-value);
+}
+
+.reachLabel {
+  width: 10%;
+  color: var(--bcc-cream);
+  font-size: var(--net-reach-label);
+  line-height: 0.95;
+}
+
+.reachValue {
+  font-size: var(--net-reach-value);
+}
+
+.captions {
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+  list-style: none;
+}
+
+.caption {
+  padding-top: var(--space-3);
+  border-top: var(--rule-heavy) solid var(--caption-color);
+}
+
+.cobalt {
+  --caption-color: var(--fg-accent);
+}
+
+.forest {
+  --caption-color: var(--bg-forest);
+}
+
+.ink {
+  --caption-color: var(--fg1);
+}
+
+.captionTitle {
+  font-size: var(--text-34);
+  line-height: 0.95;
+  color: var(--caption-color);
+}
+
+.captionBody {
+  margin-top: var(--space-2);
+  line-height: var(--leading-body);
+  color: var(--surface-fg2);
+}
+
+@media (min-width: 640px) {
+  .captions {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Desktop: the whole drawing, with the captions laid around it as in the design. */
+@media (min-width: 1280px) {
+  .stage {
+    max-width: none;
+    aspect-ratio: 1400 / 680;
+    overflow: visible;
+  }
+
+  .art {
+    left: 0;
+    width: 100%;
+  }
+
+  .captions {
+    display: block;
+    margin-top: 0;
+  }
+
+  .caption {
+    position: absolute;
+    width: clamp(13rem, 21vw, 18rem);
+    padding-top: 0;
+    border-top: 0;
+    transform: translateX(-50%);
+  }
+
+  .caption1 {
+    left: 16.79%;
+    top: 13.2%;
+  }
+
+  .caption2 {
+    left: 83.21%;
+    top: 27.9%;
+  }
+
+  .caption3 {
+    left: 16.79%;
+    top: 69.1%;
+  }
+}

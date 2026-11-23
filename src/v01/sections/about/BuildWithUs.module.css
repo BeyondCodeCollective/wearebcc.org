@@ -1,0 +1,18 @@
+.section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.75rem var(--space-8);
+  padding-block: var(--section-pad-lg);
+}
+
+.headline {
+  font-size: var(--text-h2);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}

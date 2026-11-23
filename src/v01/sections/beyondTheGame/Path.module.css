@@ -1,0 +1,145 @@
+.section {
+  padding-block: var(--section-pad-lg);
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4) var(--space-7);
+}
+
+.headline {
+  margin: 0;
+  font-size: var(--text-statement);
+}
+
+.intro {
+  max-width: 26.25rem;
+  margin: 0;
+  font-size: var(--text-19);
+  line-height: var(--leading-body);
+}
+
+.route {
+  display: none;
+  margin-top: var(--space-6);
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.line {
+  fill: none;
+  stroke: var(--bcc-lemon);
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.dot {
+  fill: var(--bcc-lemon);
+}
+
+.dotUpcoming {
+  fill: var(--bcc-forest-deep);
+  stroke: color-mix(in srgb, var(--bcc-cream) 50%, transparent);
+  stroke-width: 4;
+  stroke-dasharray: 6 6;
+}
+
+.num,
+.numUpcoming {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+}
+
+.num {
+  fill: var(--bcc-true-black);
+}
+
+.numUpcoming {
+  fill: var(--bcc-cream);
+}
+
+.steps {
+  display: grid;
+  gap: var(--space-5);
+  margin: var(--space-6) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.upcoming {
+  opacity: 0.6;
+}
+
+.badge {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bcc-lemon);
+  color: var(--fg1);
+  font-size: var(--text-26);
+  line-height: 1;
+}
+
+.badgeUpcoming {
+  border: 3px dashed color-mix(in srgb, var(--surface-fg) 50%, transparent);
+  background: transparent;
+  color: var(--surface-fg);
+}
+
+.stepText {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.kicker {
+  font-size: var(--text-title-sm);
+  line-height: 1;
+  color: var(--surface-highlight);
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(var(--text-title), 2.6vw, var(--text-40));
+  line-height: 0.95;
+}
+
+.body {
+  margin: 0;
+  font-size: var(--text-17);
+  line-height: var(--leading-body);
+  color: color-mix(in srgb, var(--surface-fg) 85%, transparent);
+}
+
+@media (min-width: 900px) {
+  .route {
+    display: block;
+  }
+
+  .steps {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-6);
+    margin-top: var(--space-2);
+  }
+
+  .badge {
+    display: none;
+  }
+}

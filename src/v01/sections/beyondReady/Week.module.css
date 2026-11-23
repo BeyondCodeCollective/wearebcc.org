@@ -1,0 +1,126 @@
+.section {
+  padding-block: var(--section-pad-lg);
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4) var(--space-7);
+  margin-bottom: var(--space-7);
+}
+
+.headline {
+  margin: 0;
+  font-size: var(--text-statement);
+}
+
+.intro {
+  max-width: 26.25rem;
+  margin: 0;
+  font-size: var(--text-19);
+  line-height: var(--leading-body);
+  color: var(--surface-fg2);
+}
+
+.week {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: var(--rule) solid var(--surface-rule);
+  border-radius: var(--radius-sm);
+  background: var(--bg-paper-warm);
+}
+
+.day {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-3);
+  padding: var(--space-3);
+}
+
+.day + .day {
+  border-top: var(--rule) solid color-mix(in srgb, var(--surface-fg) 20%, transparent);
+}
+
+.dayName {
+  padding-top: var(--space-3);
+  font-size: var(--text-mono-sm);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--space-3);
+  border: var(--rule) solid var(--bcc-true-black);
+  border-radius: 3px;
+}
+
+.cobalt {
+  background: var(--bg-cobalt);
+  color: var(--fg-inverse);
+}
+
+.paper {
+  background: var(--bg-paper);
+  color: var(--fg1);
+}
+
+.ink {
+  background: var(--bg-ink);
+  color: var(--fg-inverse);
+}
+
+.lemon {
+  background: var(--bg-lemon);
+  color: var(--fg1);
+}
+
+.cardTitle {
+  font-size: var(--text-24);
+  line-height: 0.95;
+}
+
+.cardNote {
+  font-size: var(--text-body-sm);
+  line-height: 1.35;
+}
+
+.off {
+  padding-top: var(--space-3);
+  font-size: var(--text-15);
+  color: var(--surface-fg3);
+}
+
+.closing {
+  margin: var(--space-5) 0 0;
+  font-size: var(--text-17);
+  color: var(--surface-fg2);
+}
+
+@media (min-width: 900px) {
+  .week {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+
+  .day {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    min-height: 15rem;
+    padding: 14px 12px;
+  }
+
+  .day + .day {
+    border-top: 0;
+    border-left: var(--rule) solid color-mix(in srgb, var(--surface-fg) 20%, transparent);
+  }
+
+  .dayName,
+  .off {
+    padding-top: 0;
+  }
+}

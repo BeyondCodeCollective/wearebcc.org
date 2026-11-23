@@ -1,0 +1,101 @@
+/* Small pieces every Code Along section reuses. */
+.badge {
+  display: inline-block;
+  padding: var(--space-2) var(--space-3);
+  background: var(--badge-bg, var(--bcc-lemon-soft));
+  color: var(--badge-fg, var(--bcc-navy));
+  font-size: var(--text-mono-sm);
+  line-height: 14px;
+}
+
+.badgeNavy {
+  --badge-bg: var(--bcc-navy);
+  --badge-fg: var(--bcc-lemon-soft);
+}
+
+.badgeMint {
+  --badge-bg: var(--bcc-mint);
+  --badge-fg: var(--bcc-navy);
+}
+
+.mark {
+  padding-inline: 10px;
+  background: var(--bcc-lemon-soft);
+  color: var(--bcc-navy);
+}
+
+/* Square-cornered buttons on the Code Along palette. */
+.cta {
+  min-height: var(--control-h-lg);
+  padding-inline: 26px;
+  border-radius: var(--radius-0);
+}
+
+.solid {
+  background: var(--bcc-navy);
+  border-color: var(--bcc-navy);
+  color: var(--bcc-lemon-soft);
+}
+
+.solid:hover {
+  background: var(--bg-cobalt);
+  border-color: var(--bg-cobalt);
+  color: var(--bcc-lemon-soft);
+}
+
+.outline {
+  background: transparent;
+  border-color: var(--bcc-navy);
+  color: var(--bcc-navy);
+}
+
+.outline:hover {
+  background: var(--bcc-navy);
+  color: var(--bcc-lemon-soft);
+}
+
+/* Photo with a flat block of color offset behind it. */
+.frame {
+  position: relative;
+  padding: 0 12px 12px 0;
+}
+
+.frame::before {
+  content: "";
+  position: absolute;
+  inset: 12px 0 0 12px;
+  background: var(--frame-shadow);
+}
+
+.frame .photo {
+  position: relative;
+  border-radius: var(--radius-0);
+}
+
+.shadowSky {
+  --frame-shadow: var(--bcc-sky-muted);
+}
+
+.shadowLemon {
+  --frame-shadow: var(--bcc-lemon-soft);
+}
+
+.play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-56%, -56%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--bcc-lemon-soft);
+  color: var(--bcc-navy);
+  transition: filter var(--dur-fast) linear;
+}
+
+a:hover .play {
+  filter: brightness(0.94);
+}

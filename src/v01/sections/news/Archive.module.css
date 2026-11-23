@@ -1,0 +1,112 @@
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-5) var(--space-7);
+}
+
+.headline {
+  font-size: var(--text-h2);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.chip {
+  min-height: var(--control-h-md);
+  padding: 0 18px;
+  border: var(--rule) solid var(--surface-rule);
+  border-radius: var(--radius-xl);
+  background: transparent;
+  color: var(--surface-fg);
+  font-size: var(--text-mono-sm);
+  cursor: pointer;
+}
+
+.chip:hover {
+  box-shadow: inset 0 0 0 var(--rule) var(--surface-rule);
+}
+
+.chip:active {
+  transform: translateY(1px);
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--surface-fg);
+  color: var(--surface-bg);
+}
+
+.list {
+  margin: var(--space-7) 0 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: var(--rule) solid var(--surface-rule);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 96px;
+  grid-template-areas:
+    "meta thumb"
+    "title title";
+  align-items: center;
+  gap: var(--space-4) var(--space-5);
+  padding: var(--space-5) 0;
+  border-top: var(--rule) solid var(--surface-rule);
+  color: inherit;
+  text-decoration: none;
+  transition: background-color var(--dur-fast) linear;
+}
+
+.row:hover {
+  color: inherit;
+  background-color: color-mix(in srgb, var(--bcc-lemon) 35%, transparent);
+}
+
+.meta {
+  grid-area: meta;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: var(--text-body-sm);
+}
+
+.category {
+  color: var(--surface-fg3);
+}
+
+.title {
+  grid-area: title;
+  font-size: var(--text-program);
+  line-height: 0.9;
+  overflow-wrap: anywhere;
+}
+
+.thumb {
+  grid-area: thumb;
+  width: 96px;
+  height: 72px;
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-7);
+}
+
+@media (min-width: 900px) {
+  .row {
+    grid-template-columns: 160px minmax(0, 1fr) 160px;
+    grid-template-areas: "meta title thumb";
+    gap: var(--space-5) var(--space-7);
+  }
+
+  .thumb {
+    width: 160px;
+    height: 110px;
+  }
+}

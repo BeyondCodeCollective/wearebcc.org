@@ -1,0 +1,122 @@
+.section {
+  padding-bottom: var(--section-pad-lg);
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-7) var(--space-9);
+}
+
+.intro {
+  display: flex;
+  flex: 1 1 22rem;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.headline {
+  font-size: var(--text-h2);
+}
+
+.line {
+  display: block;
+}
+
+.body {
+  max-width: 26.25rem;
+  font-size: var(--text-19);
+  line-height: var(--leading-body);
+}
+
+.formWrap {
+  flex: 1 1 32rem;
+  min-width: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-4);
+  max-width: 47.5rem;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.label {
+  font-size: var(--text-mono-xs);
+}
+
+.input {
+  width: 100%;
+  height: var(--control-h-lg);
+  padding: 0 var(--space-4);
+  border: var(--rule) solid var(--surface-rule);
+  border-radius: var(--radius-xs);
+  background: transparent;
+  color: var(--surface-fg);
+  font-family: var(--font-sans);
+  font-size: var(--text-body);
+}
+
+.input::placeholder {
+  color: color-mix(in srgb, var(--surface-fg) 58%, transparent);
+  opacity: 1;
+}
+
+.choice {
+  position: relative;
+  display: block;
+}
+
+.select {
+  padding-right: var(--space-7);
+  appearance: none;
+  cursor: pointer;
+}
+
+.caret {
+  position: absolute;
+  top: 50%;
+  right: var(--space-4);
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.done {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-block: var(--space-4);
+  border-block: var(--rule) solid var(--surface-rule);
+}
+
+.doneTitle {
+  font-size: var(--text-title);
+}
+
+.error {
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-medium);
+}

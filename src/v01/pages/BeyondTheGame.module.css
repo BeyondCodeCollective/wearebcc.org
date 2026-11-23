@@ -1,0 +1,8 @@
+/*
+ * Fluid display sizes only this page uses. They match no shared type token,
+ * so each is declared once here, in rem.
+ */
+.page {
+  --btg-title: clamp(4.5rem, 10.5vw, 10.5rem);
+  --btg-chapter: clamp(3.75rem, 8vw, 7.5rem);
+}

@@ -1,0 +1,8 @@
+/* Fluid display sizes only this page uses. */
+.page {
+  --centers-h1: clamp(4rem, 10vw, 9.75rem);
+  --centers-city: clamp(3.5rem, 11vw, 11rem);
+  --centers-stat: clamp(5rem, 14vw, 13.75rem);
+  --centers-quote: clamp(2rem, 4.8vw, 4.5rem);
+  --centers-bring: clamp(2.5rem, 4vw, 3.5rem);
+}

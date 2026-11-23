@@ -1,0 +1,38 @@
+/*
+ * The design's grid paper: lines drawn by a mask over a flat tint, so the
+ * pattern needs no gradient. The tint sits behind the section's content.
+ */
+.grid,
+.gridDark {
+  position: relative;
+  isolation: isolate;
+}
+
+.grid::before,
+.gridDark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28'%3E%3Cpath d='M0 0h28v1H0zM0 0h1v28H0z' fill='black'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28'%3E%3Cpath d='M0 0h28v1H0zM0 0h1v28H0z' fill='black'/%3E%3C/svg%3E");
+  -webkit-mask-size: 28px 28px;
+  mask-size: 28px 28px;
+}
+
+.grid::before {
+  background-color: color-mix(in srgb, var(--bcc-cobalt) 9%, transparent);
+}
+
+.gridDark::before {
+  background-color: color-mix(in srgb, var(--bcc-cream) 12%, transparent);
+}
+
+/* The highlighter stroke: a lemon band across the lower part of the text, kept on every wrapped line. */
+.hl {
+  padding: 0 var(--space-1);
+  box-shadow: inset 0 -0.3em 0 var(--bcc-lemon);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}

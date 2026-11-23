@@ -1,0 +1,114 @@
+.hero {
+  padding-block: var(--section-pad-sm);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-5);
+}
+
+.crumb {
+  font-size: var(--text-mono-sm);
+  color: color-mix(in srgb, var(--surface-fg) 85%, transparent);
+}
+
+.crumb a {
+  color: inherit;
+}
+
+.headline {
+  font-size: var(--text-h2);
+  line-height: 0.92;
+  text-wrap: wrap;
+}
+
+.line {
+  display: block;
+}
+
+.lede {
+  max-width: 28.75rem;
+  font-size: var(--text-body-lg);
+  line-height: 1.55;
+  color: var(--surface-fg2);
+}
+
+.mission {
+  max-width: 28.75rem;
+  line-height: 1.55;
+  color: var(--surface-fg2);
+}
+
+.mission strong {
+  font-weight: var(--weight-medium);
+  color: var(--surface-fg);
+}
+
+/* The collage keeps the design's proportions and scales with its column. */
+.collage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.pic {
+  position: absolute;
+  box-shadow: 0 24px 50px -24px color-mix(in srgb, var(--bcc-crimson) 45%, transparent);
+  border-radius: var(--radius-sm);
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+}
+
+.pic1 {
+  left: 8%;
+  top: 4%;
+  width: 64%;
+  height: 59%;
+  transform: rotate(-2deg);
+}
+
+.pic2 {
+  right: 0;
+  top: 0;
+  width: 30%;
+  height: 47%;
+  transform: rotate(3deg);
+}
+
+.pic3 {
+  left: 0;
+  bottom: 0;
+  width: 46%;
+  height: 41%;
+  transform: rotate(2deg);
+}
+
+.pic4 {
+  right: 6%;
+  bottom: 2%;
+  width: 40%;
+  height: 47%;
+  transform: rotate(-3deg);
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: var(--space-7) 4rem;
+  }
+
+  .collage {
+    aspect-ratio: 1.09 / 1;
+  }
+}

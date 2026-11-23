@@ -1,0 +1,90 @@
+.section {
+  padding-block: var(--section-pad-lg);
+}
+
+.group {
+  max-width: 73.75rem;
+  margin-inline: auto;
+}
+
+.view {
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  transition: transform 700ms var(--ease-out);
+}
+
+.slide {
+  flex: 0 0 100%;
+  margin: 0;
+  padding: 0 var(--space-3);
+}
+
+.quote {
+  margin: 0;
+  font-size: var(--impact-quote);
+  line-height: 0.9;
+  text-align: center;
+}
+
+.caption {
+  margin: var(--space-5) 0 0;
+  font-size: var(--text-15);
+  text-align: center;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: var(--space-6);
+}
+
+.dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--control-h);
+  height: var(--control-h);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mark {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--surface-fg);
+  border-radius: 50%;
+  background: transparent;
+  transition:
+    background-color 200ms linear,
+    border-color 200ms linear,
+    transform 200ms linear;
+}
+
+.dot:hover .mark {
+  background: color-mix(in srgb, var(--surface-fg) 40%, transparent);
+}
+
+.dot[aria-checked="true"] .mark {
+  border-color: var(--surface-highlight);
+  background: var(--surface-highlight);
+  transform: scale(1.3);
+}
+
+.dot:focus-visible {
+  outline: 2px solid var(--surface-highlight);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track,
+  .mark {
+    transition: none;
+  }
+}

@@ -1,0 +1,39 @@
+.section {
+  border-bottom: var(--rule) solid var(--surface-rule);
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--space-4) var(--space-3);
+  border-left: var(--rule) solid color-mix(in srgb, var(--surface-fg) 20%, transparent);
+}
+
+.label,
+.note {
+  font-size: var(--text-mono-xs);
+}
+
+.note {
+  line-height: 1.3;
+}
+
+.value {
+  font-size: clamp(var(--text-32), 3.2vw, var(--text-46));
+  line-height: 0.9;
+}
+
+@media (min-width: 900px) {
+  .item {
+    padding: 20px 22px;
+  }
+}

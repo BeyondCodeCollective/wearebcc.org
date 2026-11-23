@@ -1,0 +1,5 @@
+/* Fluid display sizes only this page uses. */
+.page {
+  --ca-stat: clamp(7.5rem, 20vw, 18.75rem);
+  --ca-stat-caption: clamp(1.875rem, 3.4vw, 3rem);
+}

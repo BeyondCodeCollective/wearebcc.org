@@ -1,0 +1,4 @@
+/* The sentence form is shared with Home. This page's design sets its fields in capitals. */
+.form :is(input, select) {
+  text-transform: uppercase;
+}

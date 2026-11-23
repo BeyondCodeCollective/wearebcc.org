@@ -1,0 +1,153 @@
+.section {
+  padding-block: var(--section-pad-lg);
+}
+
+.layout {
+  display: grid;
+  align-items: center;
+  gap: var(--space-8) var(--space-9);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+}
+
+.headline {
+  margin: 0;
+  font-size: var(--text-h2);
+}
+
+.intro {
+  max-width: 28.75rem;
+  margin: 0;
+  font-size: var(--text-19);
+  line-height: var(--leading-body);
+  color: var(--surface-fg2);
+}
+
+.list {
+  display: grid;
+  gap: var(--space-4) var(--space-5);
+  max-width: 47.5rem;
+  margin: 0;
+}
+
+.skill {
+  display: grid;
+  gap: var(--space-1) var(--space-5);
+  padding-top: var(--space-3);
+  border-top: var(--rule) solid var(--surface-rule-soft);
+}
+
+.name {
+  font-size: var(--text-title);
+  letter-spacing: var(--tracking-display);
+  color: var(--surface-highlight);
+}
+
+.body {
+  margin: 0;
+  font-size: var(--text-17);
+  line-height: 1.4;
+}
+
+.loopWrap {
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.loop {
+  position: relative;
+  width: 100%;
+  max-width: 36.25rem;
+  aspect-ratio: 1;
+  container-type: inline-size;
+  color: var(--surface-highlight);
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.center,
+.node {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 0.95;
+  letter-spacing: var(--tracking-display);
+}
+
+.center {
+  left: 33.62%;
+  top: 33.62%;
+  width: 32.76%;
+  height: 32.76%;
+  padding: 3%;
+  background: var(--bg-lemon);
+  color: var(--fg1);
+  font-size: 4.5cqw;
+  line-height: 1;
+}
+
+.node {
+  width: 22.76%;
+  height: 22.76%;
+  padding: 2%;
+  background: var(--bg-cobalt);
+  color: var(--fg-inverse);
+  border: 0.69cqw solid var(--bcc-cream);
+  font-size: 4.14cqw;
+}
+
+.node0 {
+  left: 38.62%;
+  top: 4.14%;
+}
+
+.node1 {
+  left: 71.38%;
+  top: 27.93%;
+}
+
+.node2 {
+  left: 58.97%;
+  top: 66.55%;
+}
+
+.node3 {
+  left: 18.28%;
+  top: 66.55%;
+}
+
+.node4 {
+  left: 5.86%;
+  top: 27.93%;
+}
+
+@media (min-width: 600px) {
+  .skill {
+    grid-template-columns: 12.5rem minmax(0, 1fr);
+    align-items: baseline;
+    border-top: 0;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .layout {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  }
+}

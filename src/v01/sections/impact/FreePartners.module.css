@@ -1,0 +1,77 @@
+.section {
+  padding-block: var(--section-pad-lg);
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4) var(--space-7);
+}
+
+.headline {
+  font-size: var(--text-h2);
+}
+
+.line {
+  display: block;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.asideTitle {
+  font-size: var(--text-title);
+  line-height: 1;
+}
+
+.asideNote {
+  font-size: var(--text-mono-xs);
+  line-height: 1.4;
+  white-space: nowrap;
+  color: var(--surface-fg3);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+  gap: var(--space-3);
+  margin-top: var(--space-7);
+  list-style: none;
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 76px;
+  padding: 0 var(--space-3);
+  border: var(--rule) solid var(--surface-rule);
+  border-radius: var(--radius-xs);
+  text-align: center;
+}
+
+.name {
+  font-size: var(--text-24);
+  line-height: 1;
+}
+
+.logo {
+  width: auto;
+  max-width: 80%;
+  height: auto;
+  max-height: min(var(--logo-h), 100% - var(--space-3));
+  object-fit: contain;
+  /* Logos with a white box behind them sit clean on the lemon ground. */
+  mix-blend-mode: multiply;
+}
+
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr));
+  }
+}

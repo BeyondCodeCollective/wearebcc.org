@@ -1,0 +1,116 @@
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "date thumb"
+    "body body"
+    "tags tags"
+    "cta cta";
+  align-items: center;
+  gap: var(--space-3) var(--space-5);
+  padding-block: var(--space-5);
+  border-top: var(--rule) solid var(--surface-rule);
+  transition: background-color var(--dur-fast) linear;
+}
+
+.row:hover {
+  background-color: color-mix(in srgb, var(--bg-cobalt) 6%, transparent);
+}
+
+.date {
+  grid-area: date;
+}
+
+.eyebrow {
+  color: var(--surface-fg2);
+  font-size: var(--text-mono-sm);
+  line-height: var(--leading-mono);
+}
+
+.day {
+  margin-top: var(--space-1);
+  font-size: var(--text-52);
+  line-height: 0.88;
+  white-space: nowrap;
+}
+
+.thumb {
+  grid-area: thumb;
+  width: 72px;
+  height: 72px;
+}
+
+.body {
+  grid-area: body;
+  min-width: 0;
+}
+
+.title {
+  font-size: var(--text-24);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-quote);
+}
+
+.text {
+  margin-top: var(--space-1);
+  color: var(--surface-fg2);
+  text-wrap: pretty;
+}
+
+.tags {
+  grid-area: tags;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--space-2);
+  font-size: var(--text-mono-sm);
+  line-height: var(--leading-tags);
+}
+
+.tag {
+  white-space: nowrap;
+}
+
+.cta {
+  grid-area: cta;
+  justify-self: start;
+  padding-inline: 22px;
+}
+
+@media (min-width: 700px) {
+  .row {
+    grid-template-columns: 9rem 96px minmax(0, 1fr) auto;
+    grid-template-areas:
+      "date thumb body cta"
+      "date thumb tags cta";
+    column-gap: var(--space-6);
+  }
+
+  .thumb {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+/* Wide: one shared grid, so every row's columns line up. */
+@media (min-width: 1120px) {
+  .row {
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    grid-template-areas: "date thumb body tags cta";
+    column-gap: var(--space-6);
+  }
+
+  .cta {
+    justify-self: end;
+  }
+
+  .fixed {
+    width: 177px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .row {
+    transition: none;
+  }
+}

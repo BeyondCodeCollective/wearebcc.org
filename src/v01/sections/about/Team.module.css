@@ -1,0 +1,103 @@
+.section {
+  padding-block: var(--section-pad-lg);
+  scroll-margin-top: var(--space-9);
+}
+
+.headline {
+  font-size: var(--text-h2);
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+  margin: var(--space-5) 0 0;
+  padding: var(--space-6) var(--space-4) var(--space-7);
+  list-style: none;
+  overflow-x: auto;
+}
+
+.fly {
+  flex: none;
+  width: 16.25rem;
+  transform: rotate(var(--tilt));
+  transition: transform 300ms var(--ease-out);
+}
+
+.fly:hover,
+.fly:focus-within {
+  transform: rotate(0deg) translateY(calc(var(--space-1) * -1.5));
+}
+
+.card {
+  border-radius: var(--radius-sm);
+  box-shadow: 0 14px 24px -12px color-mix(in srgb, var(--bcc-true-black) 45%, transparent);
+}
+
+/* The design's flyer peach is a step warmer than the page peach surface. */
+.row .card.peachWarm {
+  --surface-bg: var(--bcc-peach-warm);
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-4) 22px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: inherit;
+}
+
+.photo {
+  height: 20rem;
+  width: 100%;
+}
+
+.name {
+  font-size: var(--text-title);
+  line-height: 0.95;
+  letter-spacing: var(--tracking-display);
+  text-wrap: wrap;
+}
+
+.role {
+  font-size: var(--text-mono-sm);
+}
+
+.controls {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+}
+
+.arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--control-h-md);
+  height: var(--control-h-md);
+  border: var(--rule) solid var(--surface-fg);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--surface-fg);
+  cursor: pointer;
+}
+
+.arrow:hover {
+  background: var(--surface-fg);
+  color: var(--surface-bg);
+}
+
+.arrow:active {
+  transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fly {
+    transition: none;
+  }
+}

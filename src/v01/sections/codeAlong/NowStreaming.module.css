@@ -1,0 +1,23 @@
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  text-align: center;
+}
+
+.headline {
+  font-size: var(--text-poster);
+  line-height: 1;
+}
+
+.play {
+  display: block;
+  width: 100%;
+  max-width: 67.5rem;
+  color: inherit;
+}
+
+.photo {
+  height: clamp(15rem, 52vw, 35rem);
+}

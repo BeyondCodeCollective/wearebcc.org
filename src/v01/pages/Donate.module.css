@@ -1,0 +1,6 @@
+/* Fluid display sizes only this page uses, declared once. */
+.page {
+  --donate-h1: clamp(4rem, 7vw, 7rem);
+  --donate-statement: clamp(2.75rem, 5vw, 5rem);
+  --donate-video: clamp(3.5rem, 7vw, 7rem);
+}
