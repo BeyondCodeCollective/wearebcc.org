@@ -8,6 +8,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { Nav } from "@/components/nav";
 import { Footer } from "@/components/footer";
 import { NewsCard } from "@/components/news-card";
+import { NewsVideo } from "@/components/news-video";
 import {
   normalizeNews,
   newsParagraphs,
@@ -101,30 +102,42 @@ export default function NewsArticle() {
           </motion.header>
         </div>
 
-        {/* Hero image */}
+        {/* Hero: the post's film when it has one, otherwise its image */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className={`mx-auto mt-10 ${isPortrait ? "max-w-md" : "max-w-5xl"}`}
+          className={`mx-auto mt-10 ${
+            post.video ? "max-w-sm" : isPortrait ? "max-w-md" : "max-w-5xl"
+          }`}
         >
-          <div
-            className={`relative w-full overflow-hidden bg-grey-1 ${
-              isPortrait ? "aspect-[4/5]" : "aspect-[16/9]"
-            }`}
-          >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={post.image}
-              alt={post.imageAlt || post.title}
-              onLoad={(e) => {
-                const img = e.currentTarget;
-                setIsPortrait(img.naturalHeight > img.naturalWidth);
-              }}
-              className="h-full w-full object-cover"
-              style={{ objectPosition: post.imagePosition || "center" }}
+          {post.video ? (
+            <NewsVideo
+              src={post.video.src}
+              poster={post.video.poster}
+              title={post.video.body}
+              playLabel={t("playVideo")}
+              duration={post.video.duration}
             />
-          </div>
+          ) : (
+            <div
+              className={`relative w-full overflow-hidden bg-grey-1 ${
+                isPortrait ? "aspect-[4/5]" : "aspect-[16/9]"
+              }`}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={post.image}
+                alt={post.imageAlt || post.title}
+                onLoad={(e) => {
+                  const img = e.currentTarget;
+                  setIsPortrait(img.naturalHeight > img.naturalWidth);
+                }}
+                className="h-full w-full object-cover"
+                style={{ objectPosition: post.imagePosition || "center" }}
+              />
+            </div>
+          )}
         </motion.div>
 
         {/* Body */}
