@@ -3,6 +3,7 @@ import type { CentersHeroContent } from "../../content/centers.types";
 import { cx } from "../../lib/cx";
 import p from "../../ui/primitives.module.css";
 import { Section } from "../../ui/Section";
+import { Sticker } from "../../ui/Sticker";
 import { Breadcrumb } from "../programs/Breadcrumb";
 import s from "./CentersHero.module.css";
 
@@ -12,6 +13,7 @@ type Props = { content: CentersHeroContent };
 export function CentersHero({ content }: Props) {
   return (
     <Section id="top" surface="forest" pad="none" className={s.hero}>
+      <Sticker sticker={content.sticker} className={s.sticker} />
       <Breadcrumb items={content.breadcrumb} />
       <div className={s.head}>
         <h1 className={cx(p.display, s.headline)}>

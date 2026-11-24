@@ -1,5 +1,6 @@
 import { DONATE_CAMPAIGN } from "@/lib/constants";
 import type { DonatePageContent } from "./donate.types";
+import { stickers } from "./stickers";
 import { routes, siteFooter, siteHeader } from "./site";
 
 const IMG = "/images/v01";
@@ -43,6 +44,7 @@ export const donate: DonatePageContent = {
   },
 
   statement: {
+    sticker: stickers.loop,
     segments: [
       { text: "our community's support has already held " },
       { text: "510+ learners", tone: "cobalt" },

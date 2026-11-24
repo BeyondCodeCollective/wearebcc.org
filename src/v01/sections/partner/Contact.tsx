@@ -6,6 +6,7 @@ import { cx } from "../../lib/cx";
 import { subscribe } from "../../lib/subscribe";
 import p from "../../ui/primitives.module.css";
 import { Section } from "../../ui/Section";
+import { Sticker } from "../../ui/Sticker";
 import s from "./Contact.module.css";
 
 type Props = { content: PartnerPageContent["contact"] };
@@ -36,7 +37,8 @@ export function Contact({ content }: Props) {
   }
 
   return (
-    <Section id={content.id} surface="lemon" pad="lg">
+    <Section id={content.id} surface="lemon" pad="lg" className={s.section}>
+      <Sticker sticker={content.sticker} className={s.sticker} />
       <div className={s.layout}>
         <div className={s.copy}>
           <h2 className={cx(p.display, s.headline)}>

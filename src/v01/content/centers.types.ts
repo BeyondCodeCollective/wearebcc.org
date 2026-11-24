@@ -1,5 +1,5 @@
 import type { BreadcrumbItem } from "./programs.types";
-import type { FormMessages, ImageRef, LinkRef, PageChrome, SubscribeConfig } from "./types";
+import type { FormMessages, ImageRef, LinkRef, PageChrome, StickerRef, SubscribeConfig } from "./types";
 
 export type CentersHeroContent = {
   breadcrumb: BreadcrumbItem[];
@@ -7,6 +7,7 @@ export type CentersHeroContent = {
   lede: string;
   primary: LinkRef;
   secondary: LinkRef;
+  sticker: StickerRef;
 };
 
 export type CenterCity = {
@@ -41,6 +42,7 @@ export type CentersQuoteContent = { image: ImageRef; text: string; attribution: 
 
 export type CentersJoinContent = {
   id: string;
+  sticker: StickerRef;
   headline: string[];
   body: string;
   email: { label: string; placeholder: string };

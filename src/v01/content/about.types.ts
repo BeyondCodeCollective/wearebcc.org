@@ -1,4 +1,4 @@
-import type { ImageRef, LinkRef, PageChrome, Surface } from "./types";
+import type { ImageRef, LinkRef, PageChrome, StickerRef, Surface } from "./types";
 
 export type Breadcrumb = { homeLabel: string; homeHref: string; current: string };
 
@@ -11,6 +11,7 @@ export type AboutHeroContent = {
   link: LinkRef;
   /** Four photos, in the order of the collage slots. */
   photos: [ImageRef, ImageRef, ImageRef, ImageRef];
+  sticker: StickerRef;
 };
 
 export type FounderContent = {
@@ -45,6 +46,7 @@ export type WhyHereContent = {
   columns: { title: string; body: string }[];
   image: ImageRef;
   badge: { title: string; note: string };
+  sticker: StickerRef;
 };
 
 export type TeamTone = "peach-warm" | "lemon" | "forest" | "cream" | "crimson";
@@ -93,6 +95,7 @@ export type ReportContent = {
   /** Adds a blank line between the paragraphs. */
   spaced?: boolean;
   cta: LinkRef;
+  sticker?: StickerRef;
 };
 
 export type BuildWithUsContent = {

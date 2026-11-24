@@ -7,6 +7,7 @@ import { cx } from "../../lib/cx";
 import { subscribe, type SubscribeFields } from "../../lib/subscribe";
 import p from "../../ui/primitives.module.css";
 import { Section } from "../../ui/Section";
+import { Sticker } from "../../ui/Sticker";
 import s from "./JoinForm.module.css";
 
 type Props = { content: CentersJoinContent };
@@ -36,6 +37,7 @@ export function JoinForm({ content }: Props) {
 
   return (
     <Section id={content.id} surface="lemon" pad="lg" className={s.section}>
+      <Sticker sticker={content.sticker} className={s.sticker} />
       <div className={s.layout}>
         <div className={s.intro}>
           <h2 className={cx(p.display, s.headline)}>

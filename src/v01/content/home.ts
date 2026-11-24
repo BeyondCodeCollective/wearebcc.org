@@ -360,8 +360,7 @@ export const home: HomeContent = {
     note: "We never share your details. Unsubscribe any time.",
     subscribe: { endpoint: "/api/subscribe", source: "home-v01" },
     messages: formMessages,
-    // MISSING FILE: decorative sticker that overlaps the footer, 260px wide.
-    sticker: undefined,
+    sticker: { src: `${IMG}/stickers/arrows.png`, alt: "" },
   },
 
   footer: siteFooter(),

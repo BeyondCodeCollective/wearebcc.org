@@ -1,4 +1,4 @@
-import type { ImageRef, LinkRef, PageChrome } from "./types";
+import type { ImageRef, LinkRef, PageChrome, StickerRef } from "./types";
 
 /** One paragraph of an expandable row: running text with optional links, or fixed lines. */
 export type WayParagraph = { text: (string | LinkRef)[] } | { lines: string[] };
@@ -23,6 +23,7 @@ export type DonatePageContent = PageChrome & {
   };
   statement: {
     segments: { text: string; tone?: "cobalt" | "forest" }[];
+    sticker: StickerRef;
   };
   video: {
     href: string;

@@ -1,4 +1,5 @@
 import type { PartnerPageContent } from "./partner.types";
+import { stickers } from "./stickers";
 import { routes, siteFooter, siteHeader } from "./site";
 
 const IMG = "/images/v01";
@@ -10,7 +11,6 @@ const IMG = "/images/v01";
  * Not from the design: the Send button. The design has no backend for the contact
  * form, so Send opens the visitor's mail app with the fields filled in, addressed to
  * the partnerships address the design prints.
- * MISSING FILE (/_blob/ in the design): the decorative sticker on the contact section.
  */
 export const partner: PartnerPageContent = {
   header: siteHeader({ current: "Hire & partner" }),
@@ -103,6 +103,7 @@ export const partner: PartnerPageContent = {
 
   contact: {
     id: "contact",
+    sticker: stickers.brackets,
     headline: ["Tell us what", "you need."],
     intro: [
       "We route it to the right person. Or email ",

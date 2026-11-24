@@ -3,6 +3,7 @@ import { cx } from "../../lib/cx";
 import { Photo } from "../../ui/Photo";
 import p from "../../ui/primitives.module.css";
 import { Section } from "../../ui/Section";
+import { Sticker } from "../../ui/Sticker";
 import s from "./WhyHere.module.css";
 
 type Props = { content: WhyHereContent };
@@ -13,6 +14,7 @@ export function WhyHere({ content }: Props) {
 
   return (
     <Section surface="paper-warm" pad="none" className={s.section}>
+      <Sticker sticker={content.sticker} className={s.sticker} />
       <h2 className={cx(p.mono, s.label)}>{content.label}</h2>
       <p className={cx(p.display, s.statement)}>
         {statement.before} <span className={s.highlight}>{statement.highlight}</span> {statement.after}

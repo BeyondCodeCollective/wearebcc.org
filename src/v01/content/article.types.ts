@@ -1,5 +1,5 @@
 import type { NewsInline } from "@/lib/news";
-import type { PageChrome } from "./types";
+import type { PageChrome, StickerRef } from "./types";
 import type { BreadcrumbContent, PostCard } from "./news.types";
 
 export type ArticleLink = { label: string; description?: string; href: string; external: boolean };
@@ -7,6 +7,7 @@ export type ArticleLink = { label: string; description?: string; href: string; e
 /** Content for the Article page. Its sections take these types as props and nothing else. */
 export type ArticlePageContent = PageChrome & {
   breadcrumb: BreadcrumbContent;
+  sticker: StickerRef;
   post: PostCard & {
     /** For example "3 min read". */
     readTime: string;

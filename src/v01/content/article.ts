@@ -1,6 +1,7 @@
 import { newsInline, newsParagraphs, type NewsPost } from "@/lib/news";
 import type { ArticleLink, ArticlePageContent } from "./article.types";
 import { postCard } from "./newsPosts";
+import { stickers } from "./stickers";
 import { routes, siteFooter, siteHeader } from "./site";
 
 const SITE_URL = "https://www.wearebcc.org";
@@ -37,6 +38,7 @@ export function buildArticle(post: NewsPost, others: NewsPost[]): ArticlePageCon
   return {
     header: siteHeader({ spanishHref: `/es/news/${post.slug}` }),
     footer: siteFooter(),
+    sticker: stickers.brackets,
     breadcrumb: {
       label: "Breadcrumb",
       items: [
@@ -79,8 +81,7 @@ export function buildArticle(post: NewsPost, others: NewsPost[]): ArticlePageCon
       headline: ["Your next chapter", "starts here."],
       body: "Join a free live Beyond Lab or a Beyond Code Dialogues conversation, and see what you can build next.",
       cta: { label: "See upcoming events", href: routes.events },
-      // MISSING FILE: /_blob photo (the Future Cod3rs camp image), 360px tall.
-      image: undefined,
+      image: { src: "/images/v01/street-group.jpg", alt: "" },
     },
     more: { headline: "Keep reading.", posts: others.slice(0, 3).map(postCard) },
   };

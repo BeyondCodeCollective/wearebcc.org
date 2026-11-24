@@ -12,3 +12,20 @@
 .forest {
   color: var(--bg-forest);
 }
+
+.section {
+  position: relative;
+}
+
+.sticker {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .sticker {
+    display: block;
+    bottom: calc(var(--space-8) * -1);
+    right: calc(var(--gutter) + var(--space-4) + var(--space-3));
+    width: clamp(100px, 9.7vw, 140px);
+  }
+}

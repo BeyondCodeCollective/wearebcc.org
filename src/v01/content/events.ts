@@ -1,5 +1,6 @@
 import type { EventsPageContent, SessionEvent } from "./events.types";
 import { home } from "./home";
+import { stickers } from "./stickers";
 import { routes, siteFooter, siteHeader } from "./site";
 
 /**
@@ -57,8 +58,7 @@ const sessions: SessionEvent[] = [
     title: "Beyond Lab",
     description: "A live online workshop on AI and entrepreneurship.",
     meta: ["[Virtual]", "[Open to the public]"],
-    // MISSING FILE: the design's thumbnail is a /_blob/ image that could not be retrieved.
-    image: undefined,
+    image: { src: `${IMG}/labs.jpg`, alt: "", position: "center 20%" },
     signup: { label: "Save my free seat", href: to.signup },
     flyer: { tone: "lemon", tilt: 2, text: "A live online workshop on AI and entrepreneurship." },
   },
@@ -85,8 +85,7 @@ const sessions: SessionEvent[] = [
     title: "Beyond Lab",
     description: "A live online workshop on AI and entrepreneurship.",
     meta: ["[Virtual]", "[6:00–7:30 PM ET]"],
-    // MISSING FILE: the design's thumbnail is a /_blob/ image that could not be retrieved.
-    image: undefined,
+    image: { src: `${IMG}/labs.jpg`, alt: "", position: "center 20%" },
     signup: { label: "Save my free seat", href: to.signup },
     flyer: { tone: "peach", tilt: 1.5, text: "A live online workshop on AI and entrepreneurship." },
   },
@@ -126,6 +125,7 @@ export const events: EventsPageContent = {
   },
   sessions,
   list: {
+    sticker: stickers.arrows,
     filterLabel: "Filter events",
     filters: home.events.filters,
     // NOT IN DESIGN: the design has no empty state. Reused from Home.
@@ -153,8 +153,7 @@ export const events: EventsPageContent = {
         description: "A lab for musicians. [Descriptor to confirm]",
         meta: ["[Musicians]", "[Virtual]"],
         dateLabel: { eyebrow: "Thu", value: "Nov 19" },
-        // MISSING FILE: a /_blob/ image that could not be retrieved.
-        image: undefined,
+        image: { src: `${IMG}/studio-desk.jpg`, alt: "" },
         cta: { label: "Read the story", href: to.news },
         hidden: "Description still carries the design note [Descriptor to confirm].",
       },

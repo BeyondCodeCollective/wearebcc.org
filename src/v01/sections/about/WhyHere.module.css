@@ -1,4 +1,5 @@
 .section {
+  position: relative;
   padding-block: var(--section-pad-lg);
 }
 
@@ -93,5 +94,18 @@
 
   .badge {
     left: calc(var(--space-5) * -0.8333);
+  }
+}
+
+.sticker {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .sticker {
+    display: block;
+    top: var(--space-8);
+    right: calc(var(--gutter) + var(--space-2));
+    width: clamp(72px, 7.6vw, 110px);
   }
 }

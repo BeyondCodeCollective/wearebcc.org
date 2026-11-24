@@ -43,3 +43,21 @@
     height: 560px;
   }
 }
+
+.section {
+  position: relative;
+}
+
+.sticker {
+  top: var(--space-4);
+  right: var(--gutter);
+  width: 56px;
+}
+
+@media (min-width: 900px) {
+  .sticker {
+    top: var(--space-6);
+    right: var(--gutter);
+    width: clamp(72px, 8.3vw, 120px);
+  }
+}

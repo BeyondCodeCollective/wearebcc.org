@@ -8,6 +8,7 @@ import { dayLabel, isUpcoming } from "../../lib/time";
 import { useNow } from "../../lib/useNow";
 import p from "../../ui/primitives.module.css";
 import { Section } from "../../ui/Section";
+import { Sticker } from "../../ui/Sticker";
 import { EventRow } from "./EventRow";
 import s from "./EventList.module.css";
 import l from "./RowList.module.css";
@@ -26,6 +27,7 @@ export function EventList({ content, sessions, now }: Props) {
 
   return (
     <Section id="list" surface="paper-warm" pad="none" className={s.section}>
+      <Sticker sticker={content.sticker} className={s.sticker} />
       <div role="group" aria-label={content.filterLabel} className={s.filters}>
         {content.filters.map((option) => (
           <button

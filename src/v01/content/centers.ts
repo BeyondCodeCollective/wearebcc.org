@@ -1,4 +1,5 @@
 import type { CentersPageContent } from "./centers.types";
+import { stickers } from "./stickers";
 import { routes, siteFooter, siteHeader } from "./site";
 
 const IMG = "/images/v01";
@@ -11,6 +12,7 @@ export const centers: CentersPageContent = {
   header: siteHeader({ spanishHref: "/es/beyond-code-centers" }),
   footer: siteFooter(),
   hero: {
+    sticker: stickers.globe,
     breadcrumb: [
       { label: "Home", href: routes.home },
       { label: "Programs", href: routes.homePrograms },
@@ -79,6 +81,7 @@ export const centers: CentersPageContent = {
   },
   join: {
     id: "join",
+    sticker: stickers.loop,
     headline: ["Pull up", "a chair."],
     body: "Tell us what you’re looking for and we’ll send dates near you.",
     email: { label: "Email address", placeholder: "you@example.com" },

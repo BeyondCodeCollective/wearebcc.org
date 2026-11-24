@@ -3,15 +3,21 @@ import { cx } from "../../lib/cx";
 import { Photo } from "../../ui/Photo";
 import p from "../../ui/primitives.module.css";
 import { Section } from "../../ui/Section";
+import { Sticker } from "../../ui/Sticker";
 import { Breadcrumb } from "../news/Breadcrumb";
 import s from "./Hero.module.css";
 
-type Props = { breadcrumb: ArticlePageContent["breadcrumb"]; post: ArticlePageContent["post"] };
+type Props = {
+  breadcrumb: ArticlePageContent["breadcrumb"];
+  post: ArticlePageContent["post"];
+  sticker: ArticlePageContent["sticker"];
+};
 
 /** Breadcrumb, byline row and headline beside the post's photo. */
-export function Hero({ breadcrumb, post }: Props) {
+export function Hero({ breadcrumb, post, sticker }: Props) {
   return (
-    <Section id="top-story" pad="sm">
+    <Section id="top-story" pad="sm" className={s.section}>
+      <Sticker sticker={sticker} className={s.sticker} />
       <div className={s.layout}>
         <div className={s.copy}>
           <Breadcrumb content={breadcrumb} />

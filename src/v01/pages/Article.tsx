@@ -15,7 +15,7 @@ export function ArticlePage({ content }: Props) {
   return (
     <PageShell header={content.header} footer={content.footer} className={s.page}>
       <ReadingProgress />
-      <Hero breadcrumb={content.breadcrumb} post={content.post} />
+      <Hero breadcrumb={content.breadcrumb} post={content.post} sticker={content.sticker} />
       <Body post={content.post} share={content.share} />
       {content.video ? <VideoCard content={content.video} /> : <ClosingCard content={content.closing} />}
       <KeepReading content={content.more} />

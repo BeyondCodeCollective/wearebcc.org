@@ -149,3 +149,11 @@
   height: auto;
   pointer-events: none;
 }
+
+/* On a phone the footer wordmark sits right under the section edge, so the sticker stays inside the section. */
+@media (max-width: 600px) {
+  .sticker {
+    bottom: var(--space-2);
+    width: 120px;
+  }
+}

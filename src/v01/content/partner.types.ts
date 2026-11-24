@@ -1,4 +1,4 @@
-import type { FormMessages, ImageRef, LinkRef, LogoRef, PageChrome, SubscribeConfig } from "./types";
+import type { FormMessages, ImageRef, LinkRef, LogoRef, PageChrome, StickerRef, SubscribeConfig } from "./types";
 
 export type AudienceKey = "employer" | "team" | "board" | "campus" | "funder";
 
@@ -40,6 +40,7 @@ export type PartnerPageContent = PageChrome & {
   };
   contact: {
     id: string;
+    sticker: StickerRef;
     headline: string[];
     intro: RichText;
     address: string[];

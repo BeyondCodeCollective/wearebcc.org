@@ -1,4 +1,5 @@
 .hero {
+  position: relative;
   padding-block: var(--section-pad-sm);
 }
 
@@ -110,5 +111,18 @@
 
   .collage {
     aspect-ratio: 1.09 / 1;
+  }
+}
+
+.sticker {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .sticker {
+    display: block;
+    top: calc(var(--space-9) + var(--space-8));
+    left: 43%;
+    width: clamp(64px, 6.9vw, 100px);
   }
 }

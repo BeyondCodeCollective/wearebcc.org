@@ -19,6 +19,13 @@ export type ImageRef = {
   position?: string;
 };
 
+/** A decorative sticker. Width and height are the file's own size, for next/image. */
+export type StickerRef = {
+  src: string;
+  width: number;
+  height: number;
+};
+
 export type LogoRef = {
   src: string;
   alt: string;

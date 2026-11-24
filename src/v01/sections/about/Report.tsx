@@ -2,6 +2,7 @@ import type { ReportContent } from "../../content/about.types";
 import { cx } from "../../lib/cx";
 import p from "../../ui/primitives.module.css";
 import { Section } from "../../ui/Section";
+import { Sticker } from "../../ui/Sticker";
 import s from "./Report.module.css";
 
 type Props = { content: ReportContent };
@@ -12,6 +13,7 @@ export function Report({ content }: Props) {
 
   return (
     <Section id={content.id} pad="none" className={s.section}>
+      {content.sticker && <Sticker sticker={content.sticker} className={s.sticker} />}
       <div className={s.grid}>
         <div className={s.cover} data-surface="cobalt" aria-hidden="true">
           <span className={s.coverSmall}>{content.coverTop}</span>

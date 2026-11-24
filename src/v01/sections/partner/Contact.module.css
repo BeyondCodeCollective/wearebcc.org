@@ -124,3 +124,19 @@
   font-weight: var(--weight-medium);
 }
 
+.section {
+  position: relative;
+}
+
+.sticker {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .sticker {
+    display: block;
+    top: calc(var(--space-8) * -1);
+    right: calc(var(--gutter) + var(--space-5));
+    width: clamp(80px, 9vw, 130px);
+  }
+}

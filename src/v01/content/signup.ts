@@ -54,8 +54,7 @@ export const signup: SignupPageContent = {
     note: "We never share your details. Unsubscribe any time.",
     subscribe: { endpoint: "/api/subscribe", source: "signup-v01" },
     messages: formMessages,
-    // MISSING FILE: decorative sticker, 260px wide, a /_blob/ image in the design.
-    sticker: undefined,
+    sticker: { src: "/images/v01/stickers/arrows.png", alt: "" },
   },
 
   next: {

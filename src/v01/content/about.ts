@@ -1,4 +1,5 @@
 import type { AboutPageContent } from "./about.types";
+import { stickers } from "./stickers";
 import { routes, siteFooter, siteHeader } from "./site";
 
 const IMG = "/images/v01";
@@ -15,6 +16,7 @@ export const about: AboutPageContent = {
   footer: siteFooter(),
 
   hero: {
+    sticker: stickers.bolt,
     breadcrumb: { homeLabel: "Home", homeHref: routes.home, current: "About" },
     headline: ["Pull up a chair.", "There’s room", "for everyone."],
     lede: "Beyond Code Collective is where grandparents, parents, teens and career-changers learn side by side. Free, in person and online, and always with people who have your back.",
@@ -99,6 +101,7 @@ export const about: AboutPageContent = {
   },
 
   whyHere: {
+    sticker: stickers.brackets,
     label: "[ Why we’re here ]",
     statement: {
       before: "We teach people how to",
@@ -272,6 +275,7 @@ export const about: AboutPageContent = {
   // The design's "#" download link points at the six-month report already in /public.
   report: {
     id: "report",
+    sticker: stickers.infiniteOptions,
     coverTop: "Beyond Code Collective · 2026",
     coverTitle: ["There’s a", "seat for you."],
     coverBottom: "Six-month report",

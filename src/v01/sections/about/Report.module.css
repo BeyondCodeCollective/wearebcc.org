@@ -1,4 +1,5 @@
 .section {
+  position: relative;
   padding-block: var(--section-pad-lg);
 }
 
@@ -66,5 +67,18 @@
 @media (min-width: 700px) {
   .cover {
     margin-inline: 0;
+  }
+}
+
+.sticker {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .sticker {
+    display: block;
+    top: calc(var(--space-6) + var(--space-4));
+    right: calc(var(--gutter) + var(--space-5));
+    width: clamp(100px, 11.8vw, 170px);
   }
 }

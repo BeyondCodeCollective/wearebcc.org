@@ -1,4 +1,5 @@
 .hero {
+  position: relative;
   padding-block: var(--space-7) var(--section-pad-tight);
 }
 
@@ -53,4 +54,18 @@
 .lemon:hover {
   border-color: var(--bcc-cream);
   background: var(--bcc-cream);
+}
+
+.sticker {
+  top: var(--space-3);
+  right: var(--gutter);
+  width: 64px;
+}
+
+@media (min-width: 900px) {
+  .sticker {
+    top: var(--space-3);
+    right: var(--gutter);
+    width: clamp(100px, 9.7vw, 140px);
+  }
 }

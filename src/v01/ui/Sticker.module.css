@@ -1,0 +1,6 @@
+.sticker {
+  position: absolute;
+  z-index: 2;
+  height: auto;
+  pointer-events: none;
+}

@@ -1,4 +1,4 @@
-import type { EventTag, HomeEvent, ImageRef, LinkRef } from "./types";
+import type { EventTag, HomeEvent, ImageRef, LinkRef, StickerRef } from "./types";
 import type { PageChrome, SubscribeConfig, FormMessages } from "./types";
 
 export type FlyerTone = "green" | "cobalt" | "lemon" | "crimson" | "peach";
@@ -33,6 +33,7 @@ export type EventListContent = {
   filterLabel: string;
   filters: { id: "all" | EventTag; label: string }[];
   empty: { text: string; reset: string };
+  sticker: StickerRef;
 };
 
 export type PastEvent = {

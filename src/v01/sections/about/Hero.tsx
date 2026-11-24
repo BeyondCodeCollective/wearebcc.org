@@ -4,6 +4,7 @@ import { cx } from "../../lib/cx";
 import { Photo } from "../../ui/Photo";
 import p from "../../ui/primitives.module.css";
 import { Section } from "../../ui/Section";
+import { Sticker } from "../../ui/Sticker";
 import s from "./Hero.module.css";
 
 type Props = { content: AboutHeroContent };
@@ -45,6 +46,7 @@ export function Hero({ content }: Props) {
           ))}
         </div>
       </div>
+      <Sticker sticker={content.sticker} className={s.sticker} />
     </Section>
   );
 }
