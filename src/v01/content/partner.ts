@@ -10,8 +10,8 @@ const IMG = "/images/v01";
  * Not from the design: the Send button. The design has no backend for the contact
  * form, so Send opens the visitor's mail app with the fields filled in, addressed to
  * the partnerships address the design prints.
- * MISSING FILES (/_blob/ in the design): the "Hire our graduates" and "Keep every seat free"
- * photos, and the decorative sticker on the contact section.
+ * MISSING FILES (/_blob/ in the design): the "Keep every seat free" photo, and the
+ * decorative sticker on the contact section.
  */
 export const partner: PartnerPageContent = {
   header: siteHeader({ current: "Hire & partner" }),
@@ -61,8 +61,7 @@ export const partner: PartnerPageContent = {
         body: "Connect with multi-hyphenate, highly skilled people who know how to build and iterate with AI.",
         // NOT IN DESIGN as a destination: the design links every CTA to the in-page contact form.
         cta: { label: "Talk to our talent team", href: "#contact" },
-        // MISSING FILE: /_blob/d4331474f5fb8832cc037cfa79165884, alt "", position "center 30%".
-        image: undefined,
+        image: { src: `${IMG}/hire.jpg`, alt: "", position: "center 30%" },
       },
       {
         key: "team",

@@ -60,11 +60,10 @@ export const home: HomeContent = {
   about: {
     headline: "AI is reshaping work.",
     headlineHighlight: "Navigate it with us.",
-    label: "[Our mission]",
-    body: "To build intergenerational access in the technologies of today and tomorrow.",
+    // NOT IN DESIGN: the design sets "[Our mission]" as a label over the sentence. Mica asked for one line (2026-11-23).
+    body: "Our mission: to build intergenerational access in the technologies of today and tomorrow.",
     link: { label: "About Beyond Code", href: to.team },
-    // MISSING FILE: "A group of builders gathered close together, laughing", position "center 30%".
-    image: undefined,
+    image: { src: `${IMG}/mission.jpg`, alt: "A group of builders gathered close together, laughing", position: "center 30%" },
   },
 
   paths: {
@@ -96,7 +95,8 @@ export const home: HomeContent = {
         href: to.centers,
         surface: "forest",
         // MISSING FILE: "Four people leaning in and reaching toward the camera on a city street", position "center 35%".
-        image: undefined,
+        // STAND-IN: a Beyond Centers photo, until Mica sends the real one (2026-11-23).
+        image: { src: `${IMG}/centers-teens.jpg`, alt: "A group of teens standing together in a hallway", position: "center 35%" },
       },
       {
         title: ["I’m in", "music or", "sports."],
@@ -104,7 +104,8 @@ export const home: HomeContent = {
         href: to.beyondTheGame,
         surface: "crimson",
         // MISSING FILE: "A builder leaning on a desk in a sunlit studio workspace", position "center 30%".
-        image: undefined,
+        // STAND-IN: the headphones photo, until Mica sends the real one (2026-11-23).
+        image: { src: `${IMG}/headphones.jpg`, alt: "A woman listening to music on headphones outdoors", position: "center 30%" },
       },
     ],
   },
@@ -234,8 +235,7 @@ export const home: HomeContent = {
           { label: "[Next: Nov 19]", hideAfter: "2026-11-20T00:00:00-05:00" },
         ],
         cta: { label: "Save my free seat", href: "https://bccacademy.io/bcc/catalyst-labs", external: true },
-        // MISSING FILE: "A person seated in a chair by a city window, hands folded", position "center 15%".
-        image: undefined,
+        image: { src: `${IMG}/labs.jpg`, alt: "A person seated in a chair by a city window, hands folded", position: "center 15%" },
       },
       {
         title: "Beyond Centers",
@@ -313,8 +313,7 @@ export const home: HomeContent = {
         title: "HIRE",
         body: "Meet learners who have built working projects on real problems. Talk with us about hiring our graduates and finding the right fit for your organization.",
         cta: { label: "Talk to us", href: to.partner },
-        // MISSING FILE: "A builder at work at a desk", position "center 22%".
-        image: undefined,
+        image: { src: `${IMG}/hire.jpg`, alt: "A builder at a desk, smiling over her shoulder", position: "center 22%" },
       },
       {
         label: "[WORKFORCE BOARDS AND EMPLOYERS]",
@@ -333,7 +332,8 @@ export const home: HomeContent = {
         body: "Help keep these programs free for the builders who show up, so they can stay focused on the future with no cost standing in their way.",
         cta: { label: "Fund a program", href: to.donate },
         // MISSING FILE: "Builders lying in a circle, looking up", position "center".
-        image: undefined,
+        // STAND-IN: an About page photo, until Mica sends the real one (2026-11-23).
+        image: { src: `${IMG}/about-why-here.jpg`, alt: "Two builders smiling at a table during a session", position: "center" },
       },
     ],
   },

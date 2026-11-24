@@ -105,7 +105,8 @@ export type NextUpContent = Timed & {
 export type AboutContent = {
   headline: string;
   headlineHighlight: string;
-  label: string;
+  /** A small label over the body. Home leaves it out. */
+  label?: string;
   body: string;
   link: LinkRef;
   image?: ImageRef;

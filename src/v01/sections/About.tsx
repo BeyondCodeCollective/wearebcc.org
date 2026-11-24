@@ -18,7 +18,7 @@ export function About({ content, id }: Props) {
 
   const mission = (
     <div className={s.mission}>
-      <p className={p.mono}>{content.label}</p>
+      {content.label ? <p className={p.mono}>{content.label}</p> : null}
       <p className={s.body}>{content.body}</p>
       <a href={content.link.href} className={p.arrowLink}>
         {content.link.label}
