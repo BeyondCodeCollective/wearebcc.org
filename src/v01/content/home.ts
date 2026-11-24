@@ -273,7 +273,8 @@ export const home: HomeContent = {
       label: "From our learners",
       text: "[ This program has given me confidence in ways I did not think were even possible ]",
       attribution: "TY, HOME FOR THE SUMMER PROGRAM",
-      link: { label: "Meet more builders", href: to.impact },
+      // NOT IN DESIGN: goes to the impact report while the Impact page is hidden (Mica, 2026-11-23).
+      link: { label: "Read the impact report", href: to.impactReport },
       // MISSING FILE: "A builder seated with a laptop on their knees", position "center 40%".
       image: undefined,
     },

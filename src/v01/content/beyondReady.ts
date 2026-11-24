@@ -146,11 +146,11 @@ export const beyondReady: BeyondReadyPageContent = {
         answer: "Nothing. Beyond Ready is free to learners, supported by our partners and funders.",
         open: true,
       },
-      // NOT IN DESIGN: these three answers. The first two restate facts from this page; the
-      // certificate was confirmed by Fonz on 2026-11-23.
+      // NOT IN DESIGN: these three answers. The first is Mica's wording (2026-11-23), the second
+      // restates facts from this page; the certificate was confirmed by Fonz on 2026-11-23.
       {
         question: "Do I need a tech background?",
-        answer: "No. Beyond Ready is built for any role. You bring a real task from the job you already have, and we start from there.",
+        answer: "No. Beyond Ready is built for any role. You’ll create a capstone around real work, whether that’s a task from your current job or a project that shows the skills for a job you want. We start from wherever you are.",
       },
       {
         question: "How much time does it take?",

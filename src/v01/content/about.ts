@@ -8,7 +8,6 @@ const IMG = "/images/v01";
  * Copy is taken exactly from docs/design/v0-1/S-About-yep3.dc.html.
  *
  * Copy kept as the design has it, for the team to confirm:
- * - "ORPORATE DEVELOPMENT" (Kenya Lloyd's role) looks like a missing "C".
  * - "Linda Ackha-Mensah" may be a misspelling of "Ackah" (her LinkedIn URL says ackah).
  */
 export const about: AboutPageContent = {
@@ -188,7 +187,7 @@ export const about: AboutPageContent = {
     },
     {
       name: "Kenya Lloyd",
-      role: "ORPORATE DEVELOPMENT",
+      role: "CORPORATE DEVELOPMENT",
       href: "https://www.linkedin.com/in/kenya-lloyd-mba-99b5903/",
       linkLabel: "Kenya Lloyd on LinkedIn",
       image: { src: `${IMG}/team-kenya.jpg`, alt: "Kenya Lloyd", position: "center 20%" },

@@ -1,0 +1,7 @@
+/* Holds a screen until the report has drawn and reported its own height. */
+.frame {
+  display: block;
+  width: 100%;
+  height: 100svh;
+  border: 0;
+}

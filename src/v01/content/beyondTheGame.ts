@@ -135,7 +135,7 @@ export const beyondTheGame: BeyondTheGamePageContent = {
         },
         name: "Carla Cortijo Sánchez",
         text: "came through Beyond the Game’s first cohort after her years in basketball and built an app using AI on her way into entrepreneurship.",
-        link: { label: "Read Carla’s story", href: routes.impact },
+        link: { label: "Read Carla’s story", href: routes.home },
       },
     ],
   },

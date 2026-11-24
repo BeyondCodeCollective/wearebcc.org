@@ -29,9 +29,10 @@ export default function middleware(request: NextRequest) {
       new URL("/join?utm_source=instagram&utm_medium=social&utm_campaign=linkinbio", request.url),
     );
   }
-  // The six month impact report is a public static page, shared as /impact-report.
+  // The six month impact report is shared as /impact-report: the site page that
+  // frames the static report (/impact-report.html) in the site header and footer.
   if (bare === "/impact-report") {
-    return NextResponse.rewrite(new URL("/impact-report.html", request.url));
+    return NextResponse.rewrite(new URL("/en/impact-report", request.url));
   }
   // The dated path the filename used to imply, for links already sent.
   if (bare === "/beyond-the-game_2026-08") {

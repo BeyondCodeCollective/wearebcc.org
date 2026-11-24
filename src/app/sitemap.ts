@@ -24,7 +24,7 @@ const PAGES = [
 
 // v0.1 pages that exist, or are indexable, in English only. Spanish has no
 // version of the first four, and Spanish /partners is still the gated preview.
-const ENGLISH_ONLY_PAGES = ["/events", "/about", "/sign-up", "/impact", "/partners"];
+const ENGLISH_ONLY_PAGES = ["/events", "/about", "/sign-up", "/partners"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const newsItems = (landing.news?.items ?? []) as {

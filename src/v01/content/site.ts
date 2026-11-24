@@ -18,12 +18,13 @@ export const routes = {
   top: "#top",
   /** The all-programs page is gone: programs now means the programs section of Home. */
   homePrograms: "/en#programs", // S-Home, programs section
-  /** Static page served by a middleware rewrite: plain same-site link, no locale prefix. */
+  /** The six month report inside the site frame: a middleware rewrite, so no locale prefix. */
   impactReport: "/impact-report",
   events: "/en/events", // S-Events
   signup: "/en/sign-up", // S-Signup
   story: "/en/about", // S-About
   team: "/en/about#team", // S-About, where the link is about people
+  /** Hidden for now (Mica, 2026-11-23): the route sends people to the impact report. */
   impact: "/en/impact", // S-Impact
   news: "/en/news", // S-News
   partner: "/en/partners", // S-Partner
@@ -67,34 +68,25 @@ export function siteHeader(opts: HeaderOptions = {}): HeaderContent {
         href: routes.homePrograms,
         children: [
           { title: "Beyond Ready", description: "8 weeks to work with AI in any role", href: routes.beyondReady },
-          { title: "Beyond Labs", description: "One free live workshop, one topic", href: routes.events },
           { title: "Beyond Centers", description: "Learn in person, every generation", href: routes.centers },
           { title: "Beyond the Game", description: "For athletes moving into tech", href: routes.beyondTheGame },
           { title: "Code Along Beyond", description: "Free video lessons on YouTube", href: routes.codeAlong },
         ],
       },
       { label: "Events", href: routes.events },
-      { label: "Impact", href: routes.impact },
+      { label: "Impact", href: routes.impactReport },
       {
         label: "About",
         href: routes.story,
         children: [
           { title: "Our story", description: "Why we exist and what we do", href: routes.story },
           { title: "Team", description: "The people behind Beyond Code", href: routes.team },
-          { title: "Impact", description: "Results so far", href: routes.impact },
+          { title: "Impact", description: "Results so far", href: routes.impactReport },
           { title: "News", description: "Stories and updates", href: routes.news },
         ],
       },
-      {
-        label: "Hire & partner",
-        href: routes.partner,
-        children: [
-          { title: "Hire graduates", description: "Meet builders ready for work", href: routes.partner },
-          { title: "Bring a program", description: "Run Beyond Ready for your people", href: routes.partner },
-          { title: "Fund the work", description: "Keep every seat free", href: routes.donate },
-          { title: "Contact us", description: "Tell us what you need", href: routes.partner },
-        ],
-      },
+      // NOT IN DESIGN: a plain link. Its menu items nearly all led to this one page (Mica, 2026-11-23).
+      { label: "Hire & partner", href: routes.partner },
     ],
     languages: [
       { code: "EN", lang: "en", href: routes.top, current: true },
@@ -135,6 +127,7 @@ export function siteFooter(opts: FooterOptions = {}): FooterContent {
           { label: "Team", href: routes.team },
           { label: "Contact", href: routes.partner },
           { label: "Instagram", href: "https://www.instagram.com/beyondcodecollective", external: true },
+          { label: "LinkedIn", href: "https://www.linkedin.com/company/beyond-code-collective", external: true },
         ],
       },
     ],
