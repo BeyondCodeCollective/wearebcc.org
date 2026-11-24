@@ -101,7 +101,7 @@ export const home: HomeContent = {
         cta: "See programs",
         href: to.beyondTheGame,
         surface: "crimson",
-        image: { src: `${IMG}/studio-desk.jpg`, alt: "A builder leaning on a desk in a sunlit studio workspace", position: "center 30%" },
+        image: { src: `${IMG}/kleon.jpg`, alt: "Kleon Penn in his purple basketball jersey", position: "center 4%" },
       },
     ],
   },
