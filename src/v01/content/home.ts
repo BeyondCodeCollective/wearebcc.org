@@ -94,18 +94,14 @@ export const home: HomeContent = {
         cta: "See programs",
         href: to.centers,
         surface: "forest",
-        // MISSING FILE: "Four people leaning in and reaching toward the camera on a city street", position "center 35%".
-        // STAND-IN: a Beyond Centers photo, until Mica sends the real one (2026-11-23).
-        image: { src: `${IMG}/centers-teens.jpg`, alt: "A group of teens standing together in a hallway", position: "center 35%" },
+        image: { src: `${IMG}/street-group.jpg`, alt: "Four people leaning in and reaching toward the camera on a city street", position: "center 35%" },
       },
       {
         title: ["I’m in", "music or", "sports."],
         cta: "See programs",
         href: to.beyondTheGame,
         surface: "crimson",
-        // MISSING FILE: "A builder leaning on a desk in a sunlit studio workspace", position "center 30%".
-        // STAND-IN: the headphones photo, until Mica sends the real one (2026-11-23).
-        image: { src: `${IMG}/headphones.jpg`, alt: "A woman listening to music on headphones outdoors", position: "center 30%" },
+        image: { src: `${IMG}/studio-desk.jpg`, alt: "A builder leaning on a desk in a sunlit studio workspace", position: "center 30%" },
       },
     ],
   },
@@ -159,8 +155,7 @@ export const home: HomeContent = {
         timeTbd: true,
         tags: ["virtual", "open"],
         meta: ["[Virtual]", "[Open to the public]"],
-        // MISSING FILE: decorative thumbnail, position "center 20%".
-        image: undefined,
+        image: { src: `${IMG}/labs.jpg`, alt: "", position: "center 20%" },
         signup: { label: "Save my free seat", href: to.signup },
       },
       {
@@ -183,8 +178,7 @@ export const home: HomeContent = {
         timeZone: EASTERN,
         tags: ["virtual"],
         meta: ["[Virtual]", "[6:00–7:30 PM ET]"],
-        // MISSING FILE: decorative thumbnail, position "center 20%".
-        image: undefined,
+        image: { src: `${IMG}/labs.jpg`, alt: "", position: "center 20%" },
         signup: { label: "Save my free seat", href: to.signup },
       },
       {
@@ -275,8 +269,7 @@ export const home: HomeContent = {
       attribution: "TY, HOME FOR THE SUMMER PROGRAM",
       // NOT IN DESIGN: goes to the impact report while the Impact page is hidden (Mica, 2026-11-23).
       link: { label: "Read the impact report", href: to.impactReport },
-      // MISSING FILE: "A builder seated with a laptop on their knees", position "center 40%".
-      image: undefined,
+      image: { src: `${IMG}/laptop-knees.jpg`, alt: "A builder seated with a laptop on their knees", position: "center 40%" },
     },
   },
 
@@ -331,9 +324,7 @@ export const home: HomeContent = {
         title: "Fund the work",
         body: "Help keep these programs free for the builders who show up, so they can stay focused on the future with no cost standing in their way.",
         cta: { label: "Fund a program", href: to.donate },
-        // MISSING FILE: "Builders lying in a circle, looking up", position "center".
-        // STAND-IN: an About page photo, until Mica sends the real one (2026-11-23).
-        image: { src: `${IMG}/about-why-here.jpg`, alt: "Two builders smiling at a table during a session", position: "center" },
+        image: { src: `${IMG}/circle-looking-up.jpg`, alt: "Builders lying in a circle, looking up", position: "center" },
       },
     ],
   },
