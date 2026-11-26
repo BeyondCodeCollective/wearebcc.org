@@ -29,16 +29,15 @@ export function CentersHero({ content }: Props) {
             <a href={content.primary.href} className={cx(p.button, s.lemon, p.lg)}>
               {content.primary.label}
             </a>
+            {content.host && (
+              <a href={content.host.href} className={cx(p.button, p.ghost, p.lg)}>
+                {content.host.label}
+              </a>
+            )}
             <a href={content.secondary.href} className={p.arrowLink}>
               {content.secondary.label}
               <ArrowRight size={16} weight="bold" aria-hidden="true" />
             </a>
-            {content.host && (
-              <a href={content.host.href} className={p.arrowLink}>
-                {content.host.label}
-                <ArrowRight size={16} weight="bold" aria-hidden="true" />
-              </a>
-            )}
           </div>
         </div>
       </div>

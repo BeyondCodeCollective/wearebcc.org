@@ -32,7 +32,7 @@ export const donate: DonatePageContent = {
       "Beyond Code Collective is a 501(c)(3) nonprofit. EIN 39-4554736. Gifts are tax-deductible to the extent allowed by law.",
     // NOT IN DESIGN: the design links to "#". This is the page the current site falls back to.
     fallback: {
-      label: "Prefer Donorbox? Give there ↗",
+      label: "Prefer Donorbox? Give there",
       href: `https://donorbox.org/${DONATE_CAMPAIGN}`,
       external: true,
     },

@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import Script from "next/script";
 import type { ElementType } from "react";
 import type { DonatePageContent } from "../../content/donate.types";
@@ -14,6 +15,10 @@ const DboxWidget = "dbox-widget" as unknown as ElementType;
 /** The page opener on cobalt: the pitch on one side, the live donation form on a ticket stub. */
 export function GiveHero({ content }: Props) {
   const { breadcrumb, donorbox } = content;
+  // The arrow stays glued to the last word so it never wraps onto a line by itself.
+  const fallbackWords = content.fallback.label.split(" ");
+  const fallbackLast = fallbackWords.pop();
+  const fallbackLead = fallbackWords.join(" ");
   return (
     <Section id="give" surface="cobalt" pad="none">
       <div className={s.inner}>
@@ -39,7 +44,11 @@ export function GiveHero({ content }: Props) {
             <div className={s.legal}>
               <p className={s.trust}>{content.trust}</p>
               <a href={content.fallback.href} target="_blank" rel="noopener" className={cx(p.mono, s.fallback)}>
-                {content.fallback.label}
+                {fallbackLead}{" "}
+                <span className={s.nowrap}>
+                  {fallbackLast}
+                  <ArrowUpRight size={14} weight="bold" aria-hidden="true" />
+                </span>
               </a>
             </div>
           </div>

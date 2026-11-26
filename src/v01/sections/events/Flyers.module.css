@@ -30,7 +30,8 @@
 
 .fly {
   flex: none;
-  width: 300px;
+  /* On narrow phones the card leaves room for its tilt, so its edge and button never clip. */
+  width: min(300px, calc(100vw - 2 * var(--gutter) - 2 * var(--space-4) - 12px));
   display: flex;
   flex-direction: column;
   gap: var(--space-3);

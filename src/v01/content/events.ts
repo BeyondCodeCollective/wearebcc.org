@@ -43,7 +43,7 @@ const sessions: SessionEvent[] = [
       lead: "Up next",
       rest: ": Dr. Brian Boyd, Executive Director, Frank Porter Graham Institute at University of North Carolina-Chapel Hill.",
     },
-    meta: ["[LinkedIn Live]", "[Virtual]", "[Open to the public]"],
+    meta: ["[Streamed on LinkedIn]", "[Virtual]", "[Open to the public]"],
     image: { src: `${IMG}/dialogues-boyd.jpg`, alt: "Dr. Brian Boyd", position: "center 20%" },
     signup: { label: "Save my free seat", href: to.signup },
     flyer: {
