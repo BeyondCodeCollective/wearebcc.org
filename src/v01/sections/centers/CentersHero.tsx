@@ -30,7 +30,7 @@ export function CentersHero({ content }: Props) {
               {content.primary.label}
             </a>
             {content.host && (
-              <a href={content.host.href} className={cx(p.button, p.ghost, p.lg)}>
+              <a href={content.host.href} className={cx(p.button, s.outline, p.lg)}>
                 {content.host.label}
               </a>
             )}

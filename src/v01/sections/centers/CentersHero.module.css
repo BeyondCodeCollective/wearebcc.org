@@ -56,6 +56,19 @@
   background: var(--bcc-cream);
 }
 
+/* Secondary action on forest: a heavy cream outline with a light wash so it reads as a button. */
+.outline {
+  border: 2px solid var(--bcc-cream);
+  background: color-mix(in srgb, var(--bcc-cream) 14%, transparent);
+  color: var(--bcc-cream);
+}
+
+.outline:hover {
+  border-color: var(--bcc-cream);
+  background: var(--bcc-cream);
+  color: var(--fg1);
+}
+
 .sticker {
   position: static;
   align-self: flex-end;

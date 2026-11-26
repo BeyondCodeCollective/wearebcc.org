@@ -8,6 +8,7 @@ import { dayLabel, isUpcoming } from "../lib/time";
 import { useNow } from "../lib/useNow";
 import { Photo } from "../ui/Photo";
 import p from "../ui/primitives.module.css";
+import { FilterSelect } from "../ui/FilterSelect";
 import { Section } from "../ui/Section";
 import s from "./Events.module.css";
 
@@ -48,6 +49,13 @@ export function Events({ content, id, now }: Props) {
             </button>
           ))}
         </div>
+        <FilterSelect
+          label="Show"
+          options={content.filters}
+          value={filter}
+          onChange={setFilter}
+          className={s.select}
+        />
       </div>
       <p className={cx(p.mono, s.note)}>{content.note}</p>
 

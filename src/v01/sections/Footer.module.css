@@ -65,7 +65,7 @@
   gap: var(--space-2) var(--space-5);
   padding-top: var(--space-4);
   border-top: var(--rule) solid var(--surface-rule-soft);
-  color: color-mix(in srgb, var(--surface-fg) 62%, transparent);
+  color: color-mix(in srgb, var(--surface-fg) 88%, transparent);
   font-size: var(--text-mono-xs);
   line-height: 1.3;
 }

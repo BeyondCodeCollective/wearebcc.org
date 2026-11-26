@@ -154,8 +154,8 @@
   --text-mono-lg: 1.125rem;
   --text-mono-md: 1.0625rem;
   --text-mono: 1rem;
-  --text-mono-sm: 1rem;
-  --text-mono-xs: 0.9375rem;
+  --text-mono-sm: 1.0625rem;
+  --text-mono-xs: 1rem;
 
   /* Type: leading, tracking, weight */
   --leading-hero: 0.85;

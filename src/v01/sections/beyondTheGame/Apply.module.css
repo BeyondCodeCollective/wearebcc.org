@@ -60,6 +60,13 @@
   color: var(--fg1);
 }
 
+/* The aside column is narrow: let the label wrap instead of running past the card edge. */
+.aside .lemon {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+}
+
 .lemon:hover {
   border-color: var(--bcc-cream);
   background: var(--bcc-cream);
@@ -89,7 +96,7 @@
 
 @media (min-width: 900px) {
   .card {
-    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   }
 
   .main {

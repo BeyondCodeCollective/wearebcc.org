@@ -9,6 +9,20 @@
   gap: var(--space-2);
 }
 
+.select {
+  display: none;
+}
+
+@media (max-width: 699px) {
+  .filters {
+    display: none;
+  }
+
+  .select {
+    display: flex;
+  }
+}
+
 .chip {
   min-height: var(--control-h-md);
   padding: 0 18px;

@@ -1,0 +1,42 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.label {
+  flex: none;
+  font-size: var(--text-mono-sm);
+}
+
+.field {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.select {
+  width: 100%;
+  min-height: var(--control-h-md);
+  padding: 0 calc(var(--space-4) + 24px) 0 var(--space-4);
+  border: var(--rule) solid var(--surface-rule);
+  border-radius: var(--radius-xs);
+  background: transparent;
+  color: var(--surface-fg);
+  font-size: var(--text-mono-sm);
+  appearance: none;
+  cursor: pointer;
+}
+
+.select:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.caret {
+  position: absolute;
+  top: 50%;
+  right: var(--space-4);
+  transform: translateY(-50%);
+  pointer-events: none;
+}

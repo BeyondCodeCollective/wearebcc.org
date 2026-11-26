@@ -23,7 +23,7 @@
 .note {
   font-size: var(--text-mono-xs);
   white-space: nowrap;
-  color: color-mix(in srgb, var(--surface-fg) 80%, transparent);
+  color: var(--surface-fg);
 }
 
 /* The window the ticker slides behind. */

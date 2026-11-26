@@ -7,6 +7,7 @@ import { cx } from "../../lib/cx";
 import { dayLabel, isUpcoming } from "../../lib/time";
 import { useNow } from "../../lib/useNow";
 import p from "../../ui/primitives.module.css";
+import { FilterSelect } from "../../ui/FilterSelect";
 import { Section } from "../../ui/Section";
 import { Sticker } from "../../ui/Sticker";
 import { EventRow } from "./EventRow";
@@ -41,6 +42,13 @@ export function EventList({ content, sessions, now }: Props) {
           </button>
         ))}
       </div>
+      <FilterSelect
+        label="Show"
+        options={content.filters}
+        value={filter}
+        onChange={setFilter}
+        className={s.select}
+      />
 
       <div className={cx(l.list, s.list)}>
         {shown.map((event) => (
