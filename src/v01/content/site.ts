@@ -93,6 +93,9 @@ export function siteHeader(opts: HeaderOptions = {}): HeaderContent {
       { code: "ES", lang: "es", href: opts.spanishHref ?? routes.spanish },
     ],
     cta: { label: "Sign up", href: routes.signup },
+    // NOT IN DESIGN: phone visitors could not find Programs, Events or Spanish behind Menu (rerun, 2026-11-25).
+    phoneNav: ["Programs", "Events"],
+    phoneNavLabel: "Sections",
     quickLinks: [
       { label: "Donate", href: routes.donate },
       { label: "Volunteer", href: articleRoute("volunteer-with-bcc") },
@@ -116,12 +119,23 @@ export function siteFooter(opts: FooterOptions = {}): FooterContent {
     tagline: "Human-powered resources for a tech-driven world.",
     navLabel: "Footer",
     columns: [
+      // NOT IN DESIGN: Programs and the Support column were added after visitors missed Donate, Hire and Contact here (rerun, 2026-11-25).
       {
         title: "Explore",
         links: [
+          { label: "Programs", href: routes.homePrograms },
           { label: "Events", href: routes.events },
           { label: "Impact report", href: routes.impactReport },
           { label: "News", href: routes.news },
+        ],
+      },
+      {
+        title: "Support",
+        links: [
+          { label: "Donate", href: routes.donate },
+          { label: "Hire & partner", href: routes.partner },
+          { label: "Volunteer", href: articleRoute("volunteer-with-bcc") },
+          { label: "Contact us", href: `${routes.partner}#contact` },
         ],
       },
       {
@@ -129,8 +143,6 @@ export function siteFooter(opts: FooterOptions = {}): FooterContent {
         links: [
           { label: "About", href: routes.story },
           { label: "Team", href: routes.team },
-          { label: "Volunteer", href: articleRoute("volunteer-with-bcc") },
-          { label: "Contact us", href: `${routes.partner}#contact` },
           { label: "Instagram", href: "https://www.instagram.com/beyondcodecollective", external: true },
           { label: "LinkedIn", href: "https://www.linkedin.com/company/beyond-code-collective", external: true },
         ],

@@ -11,6 +11,8 @@ type Props = { content: HeaderContent };
 /**
  * Site header for v0.1 pages: utility strip, then the bar with logo, primary
  * nav, language and sign-up. The strip scrolls away; the bar stays in view.
+ * Below desktop the strip is hidden and a slim row under the bar keeps
+ * Programs, Events and the language switch in view.
  */
 export function Header({ content }: Props) {
   return (
@@ -100,6 +102,44 @@ export function Header({ content }: Props) {
           </div>
         </div>
       </div>
+
+      {content.phoneNav && (
+        <div className={cx(p.mono, s.sub)}>
+          <nav aria-label={content.phoneNavLabel}>
+            <ul className={s.subList}>
+              {content.nav
+                .filter((item) => content.phoneNav!.includes(item.label))
+                .map((item) => (
+                  <li key={item.label}>
+                    <a href={item.href} className={s.subLink} aria-current={item.current ? "page" : undefined}>
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </nav>
+          <div className={s.subLanguages}>
+            {content.languages.map((language, index) => (
+              <span key={language.code}>
+                {index > 0 && (
+                  <span aria-hidden="true" className={s.divider}>
+                    |
+                  </span>
+                )}
+                <a
+                  href={language.href}
+                  lang={language.lang}
+                  hrefLang={language.current ? undefined : language.lang}
+                  aria-current={language.current ? "true" : undefined}
+                  className={s.subLink}
+                >
+                  {language.code}
+                </a>
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
       </header>
     </>
   );

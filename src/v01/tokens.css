@@ -151,11 +151,11 @@
   --text-112: 7rem;
 
   /* Type: mono sizes, always uppercase */
-  --text-mono-lg: 0.9375rem;
-  --text-mono-md: 0.875rem;
-  --text-mono: 0.8125rem;
-  --text-mono-sm: 0.75rem;
-  --text-mono-xs: 0.75rem;
+  --text-mono-lg: 1rem;
+  --text-mono-md: 0.9375rem;
+  --text-mono: 0.875rem;
+  --text-mono-sm: 0.8125rem;
+  --text-mono-xs: 0.8125rem;
 
   /* Type: leading, tracking, weight */
   --leading-hero: 0.85;
@@ -367,9 +367,10 @@
   outline-offset: 3px;
 }
 
-/* Height of the header bar, which stays in view under the donate bar. */
+/* Height of the header, which stays in view under the donate bar. Below
+   1120px it is the bar plus the Programs, Events and language row. */
 .v01 {
-  --header-h: 61px;
+  --header-h: 93px;
 }
 
 @media (min-width: 1120px) {

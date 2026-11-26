@@ -7,7 +7,7 @@ import s from "./Footer.module.css";
 
 type Props = { content: FooterContent };
 
-/** Site footer for v0.1 pages: brand line, three link columns, legal bar. */
+/** Site footer for v0.1 pages: brand line, link columns, legal bar. */
 export function Footer({ content }: Props) {
   return (
     <Section as="footer" pad="none">

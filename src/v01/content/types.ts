@@ -71,6 +71,9 @@ export type HeaderContent = {
   cta: LinkRef;
   /** Direct links shown first in the open mobile menu. */
   quickLinks?: LinkRef[];
+  /** Primary nav labels kept in view under the bar on small screens, beside the language switch. */
+  phoneNav?: string[];
+  phoneNavLabel?: string;
 };
 
 /** How a form reaches the server. Kept as data so the block has no fixed URL. */
