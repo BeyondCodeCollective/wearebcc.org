@@ -236,14 +236,17 @@
 }
 
 
+/* The second strip line joins only where both fit on one row at the larger mono size. */
+@media (min-width: 1280px) {
+  .stripExtra {
+    display: block;
+  }
+}
+
 /* The strip only shows where the full nav does, so small screens keep two bars. */
 @media (min-width: 1120px) {
   .strip {
     display: flex;
-  }
-
-  .stripExtra {
-    display: block;
   }
 
   .bar {

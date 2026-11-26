@@ -7,6 +7,8 @@ export type CentersHeroContent = {
   lede: string;
   primary: LinkRef;
   secondary: LinkRef;
+  /** A third, quieter way in: for groups that want to host. */
+  host?: LinkRef;
   sticker: StickerRef;
 };
 

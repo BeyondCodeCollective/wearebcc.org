@@ -14,23 +14,18 @@
 }
 
 /* Smaller than the default mono so the logo keeps its size on phones. On the
-   narrowest screens the word is kept for screen readers and the icon shows. */
+   narrowest screens the word stays and the icon goes, since people look for "Menu". */
 .toggle {
   font-size: var(--text-mono-xs);
 }
 
 @media (max-width: 419px) {
   .toggle {
-    padding: 0;
+    padding: 0 var(--space-2);
   }
 
-  .toggleLabel {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
+  .toggle svg {
+    display: none;
   }
 }
 

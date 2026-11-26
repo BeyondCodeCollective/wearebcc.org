@@ -91,8 +91,22 @@
   line-height: var(--leading-links);
 }
 
+/* Underlined so each name reads as a link, not a sentence (visitor rerun, 2026-11-26). */
 .moreLink {
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: var(--rule);
+  text-underline-offset: 0.18em;
+}
+
+/* Phones: one link per line, no slashes. */
+@media (max-width: 699px) {
+  .moreLinks > span {
+    display: block;
+  }
+
+  .slash {
+    display: none;
+  }
 }
 
 .moreLink:hover {

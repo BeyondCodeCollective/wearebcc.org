@@ -23,7 +23,7 @@ export const beyondTheGame: BeyondTheGamePageContent = {
       strong: "Beyond the Game",
       rest: " helps athletes move into tech careers when they leave their sport. Free certifications, career coaching, and people who have made the same move.",
     },
-    primary: { label: "Save my free seat", href: "#apply" },
+    primary: { label: "Apply free", href: "#apply" },
     secondary: { label: "How it works", href: "#path" },
     // The design's two photos are files the design tool could not export, so there is no image yet.
     then: { caption: "Then: the team, the schedule, the work." },
@@ -188,7 +188,7 @@ export const beyondTheGame: BeyondTheGamePageContent = {
       title: "Next cohort",
       // The design also has "[Date TBC]" above this line. It is left out until there is a date.
       meta: "Free · Part-time",
-      cta: { label: "Save my free seat ↗", href: "https://bccacademy.io", external: true },
+      cta: { label: "Apply on BCC Academy ↗", href: "https://bccacademy.io", external: true },
     },
     sponsor: {
       strong: "Leagues, teams, and athletic departments",

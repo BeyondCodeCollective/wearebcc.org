@@ -35,8 +35,8 @@
 }
 
 .helper {
-  color: color-mix(in srgb, var(--surface-fg) 62%, transparent);
-  font-size: var(--text-body-sm);
+  color: var(--surface-fg2);
+  font-size: var(--text-body);
 }
 
 .error {

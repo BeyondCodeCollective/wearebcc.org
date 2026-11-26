@@ -78,7 +78,7 @@
   /* Color: semantic */
   --fg1: var(--bcc-true-black);
   --fg2: var(--bcc-gray-700);
-  --fg3: var(--bcc-gray-550);
+  --fg3: var(--bcc-gray-600);
   --fg-inverse: var(--bcc-cream);
   --fg-accent: var(--bcc-cobalt);
   --fg-warning: var(--bcc-red-warning);
@@ -154,8 +154,8 @@
   --text-mono-lg: 1.125rem;
   --text-mono-md: 1.0625rem;
   --text-mono: 1rem;
-  --text-mono-sm: 0.9375rem;
-  --text-mono-xs: 0.875rem;
+  --text-mono-sm: 1rem;
+  --text-mono-xs: 0.9375rem;
 
   /* Type: leading, tracking, weight */
   --leading-hero: 0.85;
@@ -289,7 +289,7 @@
 .v01 [data-surface="crimson"] {
   --surface-fg: var(--fg-inverse);
   --surface-fg2: var(--fg-inverse);
-  --surface-fg3: var(--bcc-gray-300);
+  --surface-fg3: var(--bcc-gray-200);
   --surface-rule: var(--fg-inverse);
   --surface-rule-soft: color-mix(in srgb, var(--fg-inverse) 40%, transparent);
   --surface-highlight: var(--bcc-lemon);

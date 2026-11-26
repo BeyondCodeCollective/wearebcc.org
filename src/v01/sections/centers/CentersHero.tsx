@@ -33,6 +33,12 @@ export function CentersHero({ content }: Props) {
               {content.secondary.label}
               <ArrowRight size={16} weight="bold" aria-hidden="true" />
             </a>
+            {content.host && (
+              <a href={content.host.href} className={p.arrowLink}>
+                {content.host.label}
+                <ArrowRight size={16} weight="bold" aria-hidden="true" />
+              </a>
+            )}
           </div>
         </div>
       </div>
