@@ -38,7 +38,7 @@
 
 .cellLabel {
   font-size: var(--text-mono-sm);
-  opacity: 0.75;
+  opacity: 0.95;
 }
 
 .cellValue {

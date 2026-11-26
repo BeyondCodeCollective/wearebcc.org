@@ -78,7 +78,7 @@
   /* Color: semantic */
   --fg1: var(--bcc-true-black);
   --fg2: var(--bcc-gray-700);
-  --fg3: var(--bcc-gray-400);
+  --fg3: var(--bcc-gray-550);
   --fg-inverse: var(--bcc-cream);
   --fg-accent: var(--bcc-cobalt);
   --fg-warning: var(--bcc-red-warning);
@@ -155,7 +155,7 @@
   --text-mono-md: 0.875rem;
   --text-mono: 0.8125rem;
   --text-mono-sm: 0.75rem;
-  --text-mono-xs: 0.6875rem;
+  --text-mono-xs: 0.75rem;
 
   /* Type: leading, tracking, weight */
   --leading-hero: 0.85;

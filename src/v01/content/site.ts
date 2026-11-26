@@ -93,6 +93,10 @@ export function siteHeader(opts: HeaderOptions = {}): HeaderContent {
       { code: "ES", lang: "es", href: opts.spanishHref ?? routes.spanish },
     ],
     cta: { label: "Sign up", href: routes.signup },
+    quickLinks: [
+      { label: "Donate", href: routes.donate },
+      { label: "Volunteer", href: articleRoute("volunteer-with-bcc") },
+    ],
   };
   if (!opts.current) return header;
   return {
@@ -125,7 +129,8 @@ export function siteFooter(opts: FooterOptions = {}): FooterContent {
         links: [
           { label: "About", href: routes.story },
           { label: "Team", href: routes.team },
-          { label: "Contact", href: routes.partner },
+          { label: "Volunteer", href: articleRoute("volunteer-with-bcc") },
+          { label: "Contact us", href: `${routes.partner}#contact` },
           { label: "Instagram", href: "https://www.instagram.com/beyondcodecollective", external: true },
           { label: "LinkedIn", href: "https://www.linkedin.com/company/beyond-code-collective", external: true },
         ],

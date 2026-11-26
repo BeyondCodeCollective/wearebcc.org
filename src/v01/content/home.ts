@@ -1,4 +1,4 @@
-import { routes, siteFooter, siteHeader } from "./site";
+import { articleRoute, routes, siteFooter, siteHeader } from "./site";
 import type { FormMessages, HomeContent } from "./types";
 
 /**
@@ -72,14 +72,14 @@ export const home: HomeContent = {
     cards: [
       {
         title: ["I want", "to build."],
-        cta: "See programs",
+        cta: "Find a program",
         href: to.homePrograms,
         surface: "cobalt",
         image: { src: `${IMG}/cathy.jpg`, alt: "Cathy, smiling in a bright pink cardigan", position: "center 8%" },
       },
       {
         title: ["I have", "questions."],
-        cta: "SEE PROGRAMS",
+        cta: "Ask at a live session",
         href: to.events,
         surface: "lemon",
         image: {
@@ -91,14 +91,14 @@ export const home: HomeContent = {
       {
         title: ["I learn", "best in", "person."],
         titleHighlight: true,
-        cta: "See programs",
+        cta: "See the centers",
         href: to.centers,
         surface: "forest",
         image: { src: `${IMG}/street-group.jpg`, alt: "Four people leaning in and reaching toward the camera on a city street", position: "center 35%" },
       },
       {
         title: ["I’m in", "music or", "sports."],
-        cta: "See programs",
+        cta: "Explore Beyond the Game",
         href: to.beyondTheGame,
         surface: "crimson",
         image: { src: `${IMG}/kleon.jpg`, alt: "Kleon Penn in his purple basketball jersey", position: "center 4%" },
@@ -132,7 +132,7 @@ export const home: HomeContent = {
         meta: ["[In person]", "[New York]"],
         image: { src: `${IMG}/headphones.jpg`, alt: "", position: "center 42%" },
         // The design links this button to the events section itself.
-        signup: { label: "FOLLOW ALONG", href: to.events },
+        signup: { label: "Save my free seat", href: to.signup },
       },
       {
         id: "dialogues-2026-12-04",
@@ -228,7 +228,7 @@ export const home: HomeContent = {
           // Nov 19 has passed, so this tag hides itself.
           { label: "[Next: Nov 19]", hideAfter: "2026-11-20T00:00:00-05:00" },
         ],
-        cta: { label: "Save my free seat", href: "https://bccacademy.io/bcc/catalyst-labs", external: true },
+        cta: { label: "Save my free seat ↗", href: "https://bccacademy.io/bcc/catalyst-labs", external: true },
         image: { src: `${IMG}/labs.jpg`, alt: "A person seated in a chair by a city window, hands folded", position: "center 15%" },
       },
       {
@@ -250,7 +250,7 @@ export const home: HomeContent = {
         { label: "Beyond Code Dialogues", href: to.events },
         { label: "ASK ME ANYTHING", href: to.events },
         { label: "Beyond the Game", href: to.beyondTheGame },
-        { label: "Beyond the Music", href: to.events },
+        { label: "Beyond the Music", href: articleRoute("beyond-the-music") },
       ],
     },
   },
@@ -265,7 +265,7 @@ export const home: HomeContent = {
     quote: {
       // NOT IN DESIGN: label so the quote reads as a testimonial (Mica, 2026-11-23).
       label: "From our learners",
-      text: "[ This program has given me confidence in ways I did not think were even possible ]",
+      text: "“This program has given me confidence in ways I did not think were even possible.”",
       attribution: "TY, HOME FOR THE SUMMER PROGRAM",
       // NOT IN DESIGN: goes to the impact report while the Impact page is hidden (Mica, 2026-11-23).
       link: { label: "Read the impact report", href: to.impactReport },

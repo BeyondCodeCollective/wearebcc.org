@@ -46,7 +46,7 @@ export const codeAlong: CodeAlongPageContent = {
     image: { src: `${IMG}/ca-playlist-card.jpg`, alt: "Code Along Beyond: Music, Episode 2", position: "center" },
     cta: { label: "Subscribe on YouTube", href: `${CHANNEL}?sub_confirmation=1`, external: true },
   },
-  stat: { badge: "First month on YouTube", value: "2.5M", caption: "Views of Code Along Beyond" },
+  stat: { badge: "First month on YouTube", value: "2.3M", caption: "Views of Code Along Beyond" },
   episodes: {
     badge: "Season airing now",
     headline: "Code Along Beyond: Music",

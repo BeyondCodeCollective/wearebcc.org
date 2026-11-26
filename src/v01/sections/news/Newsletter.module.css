@@ -50,7 +50,7 @@
 }
 
 .input::placeholder {
-  color: color-mix(in srgb, var(--surface-fg) 58%, transparent);
+  color: color-mix(in srgb, var(--surface-fg) 72%, transparent);
   opacity: 1;
 }
 

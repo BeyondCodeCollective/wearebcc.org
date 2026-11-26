@@ -28,7 +28,7 @@
 }
 
 .field::placeholder {
-  color: color-mix(in srgb, var(--surface-fg) 56%, transparent);
+  color: color-mix(in srgb, var(--surface-fg) 72%, transparent);
   opacity: 1;
 }
 

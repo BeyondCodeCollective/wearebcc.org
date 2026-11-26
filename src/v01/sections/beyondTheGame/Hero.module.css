@@ -112,7 +112,7 @@
 }
 
 .dim {
-  color: color-mix(in srgb, var(--surface-fg) 60%, transparent);
+  color: color-mix(in srgb, var(--surface-fg) 88%, transparent);
 }
 
 .arrow {

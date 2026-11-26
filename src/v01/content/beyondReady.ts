@@ -176,17 +176,17 @@ export const beyondReady: BeyondReadyPageContent = {
         {
           title: "Employers",
           body: "A version built for your team, its problems, and timeline.",
-          link: { label: "Talk to us", href: routes.partner },
+          link: { label: "Talk to us about your team", href: `${routes.partner}#contact` },
         },
         {
           title: "Workforce boards",
           body: "Adapted to your region’s learners and jobs. Already tested in Georgia.",
-          link: { label: "Talk to us", href: routes.partner },
+          link: { label: "Talk to us about your region", href: `${routes.partner}#contact` },
         },
         {
           title: "Schools",
           body: "A cohort for your students, complementary to what's on campus.",
-          link: { label: "Talk to us", href: routes.partner },
+          link: { label: "Talk to us about your school", href: `${routes.partner}#contact` },
         },
       ],
     },

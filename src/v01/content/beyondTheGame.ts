@@ -188,7 +188,7 @@ export const beyondTheGame: BeyondTheGamePageContent = {
       title: "Next cohort",
       // The design also has "[Date TBC]" above this line. It is left out until there is a date.
       meta: "Free · Part-time",
-      cta: { label: "Save my free seat", href: "https://bccacademy.io", external: true },
+      cta: { label: "Save my free seat ↗", href: "https://bccacademy.io", external: true },
     },
     sponsor: {
       strong: "Leagues, teams, and athletic departments",

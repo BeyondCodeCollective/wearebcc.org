@@ -1,7 +1,7 @@
 import { DONATE_CAMPAIGN } from "@/lib/constants";
 import type { DonatePageContent } from "./donate.types";
 import { stickers } from "./stickers";
-import { routes, siteFooter, siteHeader } from "./site";
+import { articleRoute, routes, siteFooter, siteHeader } from "./site";
 
 const IMG = "/images/v01";
 
@@ -32,7 +32,7 @@ export const donate: DonatePageContent = {
       "Beyond Code Collective is a 501(c)(3) nonprofit. EIN 39-4554736. Gifts are tax-deductible to the extent allowed by law.",
     // NOT IN DESIGN: the design links to "#". This is the page the current site falls back to.
     fallback: {
-      label: "Form not loading? Give on Donorbox ↗",
+      label: "Prefer Donorbox? Give there ↗",
       href: `https://donorbox.org/${DONATE_CAMPAIGN}`,
       external: true,
     },
@@ -75,7 +75,7 @@ export const donate: DonatePageContent = {
         kind: "link",
         title: "Volunteer",
         body: "Tell us how you want to help. We follow up by email.",
-        link: { label: "Sign up", href: routes.signup },
+        link: { label: "Volunteer", href: articleRoute("volunteer-with-bcc") },
       },
       {
         kind: "details",

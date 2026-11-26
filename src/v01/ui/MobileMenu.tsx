@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import { CaretDown, List, X } from "@phosphor-icons/react";
-import type { LanguageLink, NavItem } from "../content/types";
+import type { LanguageLink, LinkRef, NavItem } from "../content/types";
 import { cx } from "../lib/cx";
 import p from "./primitives.module.css";
 import s from "./MobileMenu.module.css";
@@ -12,10 +12,11 @@ type Props = {
   navLabel: string;
   nav: NavItem[];
   languages: LanguageLink[];
+  quickLinks?: LinkRef[];
 };
 
 /** The primary nav on small screens: a button that opens a panel under the header. */
-export function MobileMenu({ label, navLabel, nav, languages }: Props) {
+export function MobileMenu({ label, navLabel, nav, languages, quickLinks }: Props) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
   const toggle = useRef<HTMLButtonElement>(null);
@@ -54,6 +55,17 @@ export function MobileMenu({ label, navLabel, nav, languages }: Props) {
           if ((event.target as HTMLElement).closest("a")) setOpen(false);
         }}
       >
+        {quickLinks && (
+          <ul className={cx(p.mono, s.quick)}>
+            {quickLinks.map((link) => (
+              <li key={link.label}>
+                <a href={link.href} className={s.quickLink}>
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
         <nav aria-label={navLabel}>
           <ul className={s.list}>
             {nav.map((item) => (

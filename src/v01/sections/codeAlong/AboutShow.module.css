@@ -26,6 +26,8 @@
   margin: 0;
   padding: var(--space-6);
   overflow-x: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
   background: var(--bcc-navy);
   color: var(--fg-inverse);
   font-family: var(--font-mono);

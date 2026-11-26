@@ -1,6 +1,7 @@
 "use client";
 
 import type { CSSProperties } from "react";
+import { ArrowRight } from "@phosphor-icons/react";
 import type { SessionEvent } from "../../content/events.types";
 import { cx } from "../../lib/cx";
 import { dayLabel, isUpcoming } from "../../lib/time";
@@ -17,6 +18,7 @@ export function Flyers({ sessions, label, now }: Props) {
   const shown = sessions.filter((event) => !event.flyer.hidden && isUpcoming(event, current));
 
   return (
+    <div className={s.wrap}>
     <div role="group" aria-label={label} className={s.board} tabIndex={0}>
       <div className={s.track}>
         {shown.map((event) => {
@@ -42,6 +44,12 @@ export function Flyers({ sessions, label, now }: Props) {
           );
         })}
       </div>
+    </div>
+      {shown.length > 1 && (
+        <p className={cx(p.mono, s.hint)} aria-hidden="true">
+          Swipe <ArrowRight size={14} weight="bold" />
+        </p>
+      )}
     </div>
   );
 }

@@ -111,7 +111,6 @@ export const events: EventsPageContent = {
   header: siteHeader({ current: "Events" }),
   footer: siteFooter({
     extraLinks: [
-      { label: "LinkedIn", href: "https://www.linkedin.com/company/beyond-code-collective", external: true },
       { label: "YouTube", href: "https://www.youtube.com/@BeyondCodeCollective", external: true },
     ],
   }),

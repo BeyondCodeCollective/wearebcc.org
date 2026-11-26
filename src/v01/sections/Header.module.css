@@ -190,6 +190,7 @@
   padding-inline: var(--space-4);
 }
 
+
 @media (min-width: 900px) {
   .stripExtra {
     display: block;

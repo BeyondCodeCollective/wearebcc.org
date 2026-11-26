@@ -24,8 +24,9 @@
 }
 
 .outline {
-  color: transparent;
-  -webkit-text-stroke: 2px var(--surface-fg);
+  color: color-mix(in srgb, var(--surface-fg) 22%, transparent);
+  -webkit-text-stroke: 3px var(--surface-fg);
+  paint-order: stroke fill;
 }
 
 .pill {

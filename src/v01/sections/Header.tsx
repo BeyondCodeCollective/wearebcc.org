@@ -95,6 +95,7 @@ export function Header({ content }: Props) {
               navLabel={content.navLabel}
               nav={content.nav}
               languages={content.languages}
+              quickLinks={content.quickLinks}
             />
           </div>
         </div>

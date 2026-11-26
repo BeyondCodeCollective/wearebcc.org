@@ -69,6 +69,8 @@ export type HeaderContent = {
   nav: NavItem[];
   languages: LanguageLink[];
   cta: LinkRef;
+  /** Direct links shown first in the open mobile menu. */
+  quickLinks?: LinkRef[];
 };
 
 /** How a form reaches the server. Kept as data so the block has no fixed URL. */
