@@ -57,15 +57,14 @@
 }
 
 .sticker {
-  top: var(--space-3);
-  right: var(--gutter);
-  width: 64px;
+  position: static;
+  align-self: flex-end;
+  width: 72px;
+  margin-bottom: calc(var(--space-3) * -1);
 }
 
 @media (min-width: 900px) {
   .sticker {
-    top: var(--space-3);
-    right: var(--gutter);
-    width: clamp(100px, 9.7vw, 140px);
+    width: clamp(96px, 8vw, 120px);
   }
 }

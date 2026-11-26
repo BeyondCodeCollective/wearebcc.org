@@ -94,8 +94,6 @@ export function siteHeader(opts: HeaderOptions = {}): HeaderContent {
     ],
     cta: { label: "Sign up", href: routes.signup },
     // NOT IN DESIGN: phone visitors could not find Programs, Events or Spanish behind Menu (rerun, 2026-11-25).
-    phoneNav: ["Programs", "Events"],
-    phoneNavLabel: "Sections",
     quickLinks: [
       { label: "Donate", href: routes.donate },
       { label: "Volunteer", href: articleRoute("volunteer-with-bcc") },

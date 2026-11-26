@@ -13,22 +13,6 @@
   cursor: pointer;
 }
 
-/* Smaller than the default mono so the logo keeps its size on phones. On the
-   narrowest screens the word stays and the icon goes, since people look for "Menu". */
-.toggle {
-  font-size: var(--text-mono-xs);
-}
-
-@media (max-width: 419px) {
-  .toggle {
-    padding: 0 var(--space-2);
-  }
-
-  .toggle svg {
-    display: none;
-  }
-}
-
 .toggle[aria-expanded="true"] {
   background: var(--surface-fg);
   color: var(--surface-bg);

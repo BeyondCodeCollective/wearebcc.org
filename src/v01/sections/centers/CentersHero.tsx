@@ -9,11 +9,10 @@ import s from "./CentersHero.module.css";
 
 type Props = { content: CentersHeroContent };
 
-/** Page title on forest, with the two ways in. */
+/** Page title on forest, with the two ways in. The globe badge sits above the lede, in flow, so it never covers text. */
 export function CentersHero({ content }: Props) {
   return (
     <Section id="top" surface="forest" pad="none" className={s.hero}>
-      <Sticker sticker={content.sticker} className={s.sticker} />
       <Breadcrumb items={content.breadcrumb} />
       <div className={s.head}>
         <h1 className={cx(p.display, s.headline)}>
@@ -24,6 +23,7 @@ export function CentersHero({ content }: Props) {
           ))}
         </h1>
         <div className={s.aside}>
+          <Sticker sticker={content.sticker} className={s.sticker} />
           <p className={s.lede}>{content.lede}</p>
           <div className={s.actions}>
             <a href={content.primary.href} className={cx(p.button, s.lemon, p.lg)}>
