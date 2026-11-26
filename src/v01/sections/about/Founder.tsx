@@ -18,7 +18,7 @@ export function Founder({ content }: Props) {
 
       <Section as="div" surface="ink" pad="none" flush className={s.card}>
         <div className={s.bg}>
-          <Photo image={content.image} sizes="(min-width: 1500px) 1360px, 100vw" className={s.fill} />
+          <Photo image={content.image} sizes="(min-width: 1500px) 1360px, (min-width: 700px) 100vw, 180vw" className={s.fill} />
         </div>
         <div className={s.scrim} aria-hidden="true" />
         <figure className={s.body}>

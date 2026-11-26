@@ -18,8 +18,8 @@ export const routes = {
   top: "#top",
   /** The all-programs page is gone: programs now means the programs section of Home. */
   homePrograms: "/en#programs", // S-Home, programs section
-  /** The six month report inside the site frame: a middleware rewrite, so no locale prefix. */
-  impactReport: "/impact-report",
+  /** The six month report inside the site frame. Kept under /en so the visitor never leaves the English site. */
+  impactReport: "/en/impact-report",
   events: "/en/events", // S-Events
   signup: "/en/sign-up", // S-Signup
   story: "/en/about", // S-About

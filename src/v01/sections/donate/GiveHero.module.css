@@ -108,6 +108,15 @@
   width: 100%;
   max-width: 26.5625rem;
   min-height: 12rem;
+  /* Donorbox draws its own box inside; clip it to the site's corner radius and keep it from spilling. */
+  overflow: hidden;
+  border-radius: var(--radius-sm);
+  background: var(--bcc-true-white, #fff);
+}
+
+.form dbox-widget {
+  display: block;
+  width: 100%;
 }
 
 .notch {

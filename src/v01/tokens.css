@@ -151,11 +151,11 @@
   --text-112: 7rem;
 
   /* Type: mono sizes, always uppercase */
-  --text-mono-lg: 1rem;
-  --text-mono-md: 0.9375rem;
-  --text-mono: 0.875rem;
-  --text-mono-sm: 0.8125rem;
-  --text-mono-xs: 0.8125rem;
+  --text-mono-lg: 1.125rem;
+  --text-mono-md: 1.0625rem;
+  --text-mono: 1rem;
+  --text-mono-sm: 0.9375rem;
+  --text-mono-xs: 0.875rem;
 
   /* Type: leading, tracking, weight */
   --leading-hero: 0.85;
