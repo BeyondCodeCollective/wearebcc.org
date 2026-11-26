@@ -42,7 +42,7 @@ export function MobileMenu({ label, navLabel, nav, languages, quickLinks }: Prop
         aria-controls={panelId}
         onClick={() => setOpen((value) => !value)}
       >
-        <span>{label}</span>
+        <span className={s.toggleLabel}>{label}</span>
         {open ? <X size={16} weight="bold" aria-hidden="true" /> : <List size={16} weight="bold" aria-hidden="true" />}
       </button>
 

@@ -13,6 +13,27 @@
   cursor: pointer;
 }
 
+/* Smaller than the default mono so the logo keeps its size on phones. On the
+   narrowest screens the word is kept for screen readers and the icon shows. */
+.toggle {
+  font-size: var(--text-mono-xs);
+}
+
+@media (max-width: 419px) {
+  .toggle {
+    padding: 0;
+  }
+
+  .toggleLabel {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
 .toggle[aria-expanded="true"] {
   background: var(--surface-fg);
   color: var(--surface-bg);
