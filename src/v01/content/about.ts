@@ -282,6 +282,8 @@ export const about: AboutPageContent = {
     headline: "The report.",
     paragraphs: ["The first six months.", "Who came through the door, what they built, and what we learned."],
     cta: { label: "Download the report", href: "/impact-report.html", external: true },
+    // NOT IN DESIGN: funders asked for a short download beside the full report (run 6, 2026-11-27).
+    also: { label: "Or the one-page summary (PDF)", href: "/resources/Beyond-Code-Collective-One-Pager.pdf", external: true },
   },
 
   build: {

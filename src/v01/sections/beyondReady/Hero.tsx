@@ -1,4 +1,4 @@
-import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import { ArrowDown, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import type { BeyondReadyHeroContent } from "../../content/beyondReady.types";
 import { cx } from "../../lib/cx";
 import { Photo } from "../../ui/Photo";
@@ -62,6 +62,10 @@ export function Hero({ content, id }: Props) {
                 <ArrowRight size={16} aria-hidden="true" />
               </a>
             </div>
+            <a href={content.groups.href} className={cx(p.arrowLink, s.groups)}>
+              {content.groups.label}
+              <ArrowDown size={16} aria-hidden="true" />
+            </a>
           </div>
           <Photo image={content.image} sizes="(min-width: 900px) 58vw, 100vw" priority className={s.photo} />
         </div>

@@ -50,6 +50,10 @@ export type PastEvent = {
 
 export type ArchiveContent = {
   headline: string;
+  /** Says plainly that these rows are over. */
+  note: string;
+  /** The label each past row wears. */
+  status: string;
   events: PastEvent[];
 };
 

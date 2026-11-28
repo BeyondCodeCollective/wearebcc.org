@@ -58,6 +58,7 @@
 }
 
 .bring {
+  scroll-margin-top: calc(var(--header-h) + var(--space-6));
   display: flex;
   flex-wrap: wrap;
   gap: 28px var(--space-7);

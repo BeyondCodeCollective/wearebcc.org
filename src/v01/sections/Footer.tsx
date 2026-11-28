@@ -7,7 +7,7 @@ import s from "./Footer.module.css";
 
 type Props = { content: FooterContent };
 
-/** Site footer for v0.1 pages: brand line, link columns, legal bar. */
+/** Site footer for v0.1 pages: brand line, link columns, how to reach us, legal bar. */
 export function Footer({ content }: Props) {
   return (
     <Section as="footer" pad="none">
@@ -45,6 +45,24 @@ export function Footer({ content }: Props) {
               </div>
             ))}
           </nav>
+
+          <address className={s.contact}>
+            <h2 className={cx(p.mono, s.heading)}>{content.contact.title}</h2>
+            <a href={content.contact.phone.href} className={s.contactLink}>
+              {content.contact.phone.label}
+            </a>
+            <a href={content.contact.email.href} className={s.contactLink}>
+              {content.contact.email.label}
+            </a>
+            <p className={s.address}>
+              {content.contact.address.map((line, index) => (
+                <span key={line}>
+                  {line}
+                  {index < content.contact.address.length - 1 && <br />}
+                </span>
+              ))}
+            </p>
+          </address>
         </div>
 
         <div className={cx(p.mono, s.legal)}>

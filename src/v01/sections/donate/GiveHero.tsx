@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
+import { ArrowDown, ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import Script from "next/script";
 import type { ElementType } from "react";
 import type { DonatePageContent } from "../../content/donate.types";
@@ -43,6 +43,10 @@ export function GiveHero({ content }: Props) {
             </div>
             <div className={s.legal}>
               <p className={s.trust}>{content.trust}</p>
+              <a href={content.otherWays.href} className={cx(p.arrowLink, s.otherWays)}>
+                {content.otherWays.label}
+                <ArrowDown size={16} aria-hidden="true" />
+              </a>
               <a href={content.fallback.href} target="_blank" rel="noopener" className={cx(p.mono, s.fallback)}>
                 {fallbackLead}{" "}
                 <span className={s.nowrap}>

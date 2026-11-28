@@ -21,16 +21,20 @@ const RENDERED_AT = Date.now();
 
 type Props = { content: HomeContent };
 
-/** Home, v0.1. Sections in the order of the design. All copy comes in as content. */
+/**
+ * Home, v0.1. All copy comes in as content.
+ * NOT IN DESIGN: the design runs About, Paths, Events, Programs. Visitors wanted "Start here"
+ * straight under the first screen, so the programs and the path cards now come first (run 6, 2026-11-27).
+ */
 export function Home({ content }: Props) {
   return (
     <PageShell header={content.header} footer={content.footer}>
       <Hero content={content.hero} />
       <NextUp content={content.nextUp} now={RENDERED_AT} />
-      <About id="about" content={content.about} />
+      <Programs id="programs" content={content.programs} now={RENDERED_AT} />
       <Paths id="paths" content={content.paths} />
       <Events id="events" content={content.events} now={RENDERED_AT} />
-      <Programs id="programs" content={content.programs} now={RENDERED_AT} />
+      <About id="about" content={content.about} />
       <Impact id="impact" content={content.impact} />
       <Film content={content.film} />
       <PartnersStrip content={content.partners} />

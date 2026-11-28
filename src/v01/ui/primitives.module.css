@@ -24,7 +24,7 @@
 :where(.mono) {
   font-family: var(--font-mono);
   font-size: var(--text-mono);
-  font-weight: var(--weight-medium);
+  font-weight: var(--weight-bold);
   letter-spacing: var(--tracking-mono);
   line-height: var(--leading-mono);
   text-transform: uppercase;

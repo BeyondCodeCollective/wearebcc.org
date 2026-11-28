@@ -58,6 +58,32 @@
   color: var(--surface-link-hover);
 }
 
+.contact {
+  display: flex;
+  flex: 1 1 13rem;
+  flex-direction: column;
+  align-items: flex-start;
+  font-style: normal;
+}
+.contactLink {
+  display: inline-block;
+  padding: var(--space-3) 0;
+  font-size: var(--text-body);
+  font-weight: var(--weight-medium);
+  line-height: 1.43;
+  text-decoration: underline;
+  text-decoration-thickness: var(--rule);
+  text-underline-offset: 4px;
+}
+.contactLink:hover {
+  color: var(--surface-link-hover);
+}
+.address {
+  padding-top: var(--space-3);
+  color: var(--surface-fg2);
+  font-size: var(--text-body);
+  line-height: 1.5;
+}
 .legal {
   display: flex;
   flex-wrap: wrap;

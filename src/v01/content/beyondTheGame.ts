@@ -79,7 +79,7 @@ export const beyondTheGame: BeyondTheGamePageContent = {
   path: {
     headline: ["One path,", "four steps."],
     intro: "Start with a single free session. Go as far as you want.",
-    diagramLabel: "Four steps along one path: try it, get the basics, join Field Ready, start your own",
+    diagramLabel: "Four steps along one path: try it, get the basics, join Beyond Ready, start your own",
     steps: [
       { kicker: "Try it", title: "A free Beyond Lab", body: "One 90-minute session to see if tech fits you." },
       {
@@ -88,7 +88,7 @@ export const beyondTheGame: BeyondTheGamePageContent = {
         body: "Four weeks to learn the basics, with an instructor beside you.",
       },
       {
-        kicker: "Join Field Ready",
+        kicker: "Join Beyond Ready",
         title: "BEYOND READY + MINDSET COACHING",
         body: "Then join Beyond Ready, an 8-week program that furthers your tech skills, alongside Mindset coaching tailored for your transition from athlete to technologist.",
       },

@@ -117,6 +117,39 @@
   color: var(--surface-fg3);
 }
 
+/* Phones: a small photo beside the name, so five programs fit in about two screens (run 6, 2026-11-27). */
+@media (max-width: 699px) {
+  .row {
+    grid-template-columns: 96px minmax(0, 1fr);
+    grid-template-areas:
+      "photo body"
+      "tags tags"
+      "cta cta";
+    align-items: start;
+    column-gap: var(--space-4);
+    row-gap: var(--space-3);
+  }
+
+  .photo {
+    grid-area: photo;
+    width: 96px;
+    height: 96px;
+    aspect-ratio: auto;
+  }
+
+  .body {
+    grid-area: body;
+  }
+
+  .tags {
+    grid-area: tags;
+  }
+
+  .cta {
+    grid-area: cta;
+  }
+}
+
 @media (min-width: 700px) {
   .row {
     grid-template-columns: 240px minmax(0, 1fr) auto;

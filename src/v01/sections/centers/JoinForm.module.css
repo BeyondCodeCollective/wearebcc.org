@@ -58,23 +58,24 @@
 }
 
 .label {
-  font-size: var(--text-mono-xs);
+  font-size: var(--text-mono-sm);
 }
 
+/* White boxes: outlined fields on a colour band read as part of the band (run 6, 2026-11-27). */
 .input {
   width: 100%;
   height: var(--control-h-lg);
   padding: 0 var(--space-4);
-  border: var(--rule) solid var(--surface-rule);
+  border: 2px solid var(--fg1);
   border-radius: var(--radius-xs);
-  background: transparent;
-  color: var(--surface-fg);
+  background: var(--bg-card);
+  color: var(--fg1);
   font-family: var(--font-sans);
   font-size: var(--text-body);
 }
 
 .input::placeholder {
-  color: color-mix(in srgb, var(--surface-fg) 84%, transparent);
+  color: var(--bcc-gray-500);
   opacity: 1;
 }
 
@@ -93,6 +94,7 @@
   position: absolute;
   top: 50%;
   right: var(--space-4);
+  color: var(--fg1);
   pointer-events: none;
   transform: translateY(-50%);
 }

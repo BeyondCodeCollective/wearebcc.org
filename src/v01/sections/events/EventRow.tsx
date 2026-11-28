@@ -1,7 +1,8 @@
-import type { ImageRef } from "../../content/types";
+import type { EventFact, ImageRef } from "../../content/types";
 import { cx } from "../../lib/cx";
 import { Photo } from "../../ui/Photo";
 import p from "../../ui/primitives.module.css";
+import { EventFacts } from "./EventFacts";
 import s from "./EventRow.module.css";
 
 type Props = {
@@ -12,6 +13,10 @@ type Props = {
   description: string;
   descriptionTail?: { lead: string; rest: string };
   meta: string[];
+  /** Plain when, where and who lines. Shown in place of the bracket tags. */
+  facts?: EventFact[];
+  /** A small label over the title, for rows that are not open for sign-up. */
+  status?: string;
   image?: ImageRef;
   cta: { label: string; href: string; external?: boolean };
   /** Fixed-width button, as the archive rows have. */
@@ -19,7 +24,7 @@ type Props = {
 };
 
 /** One row of a dated list: date, thumbnail, words, tags and one button. */
-export function EventRow({ label, dateTime, title, description, descriptionTail, meta, image, cta, fixedCta }: Props) {
+export function EventRow({ label, dateTime, title, description, descriptionTail, meta, facts, status, image, cta, fixedCta }: Props) {
   const value = dateTime ? <time dateTime={dateTime}>{label.value}</time> : label.value;
   return (
     <article className={s.row}>
@@ -29,6 +34,7 @@ export function EventRow({ label, dateTime, title, description, descriptionTail,
       </div>
       {image && <Photo image={image} sizes="96px" className={s.thumb} />}
       <div className={s.body}>
+        {status && <p className={cx(p.mono, s.status)}>{status}</p>}
         <h3 className={s.title}>{title}</h3>
         <p className={s.text}>
           {description}
@@ -41,13 +47,17 @@ export function EventRow({ label, dateTime, title, description, descriptionTail,
           )}
         </p>
       </div>
-      <p className={cx(p.mono, s.tags)}>
-        {meta.map((tag) => (
-          <span key={tag} className={s.tag}>
-            {tag}
-          </span>
-        ))}
-      </p>
+      {facts ? (
+        <EventFacts facts={facts} className={s.tags} />
+      ) : (
+        <p className={cx(p.mono, s.tags, s.tagRow)}>
+          {meta.map((tag) => (
+            <span key={tag} className={s.tag}>
+              {tag}
+            </span>
+          ))}
+        </p>
+      )}
       <a
         href={cta.href}
         className={cx(p.button, p.ghost, p.md, p.fine, s.cta, fixedCta && s.fixed)}

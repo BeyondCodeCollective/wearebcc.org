@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import { CaretDown, List, X } from "@phosphor-icons/react";
-import type { LanguageLink, LinkRef, NavItem } from "../content/types";
+import type { LinkRef, NavItem } from "../content/types";
 import { cx } from "../lib/cx";
 import p from "./primitives.module.css";
 import s from "./MobileMenu.module.css";
@@ -11,12 +11,14 @@ type Props = {
   label: string;
   navLabel: string;
   nav: NavItem[];
-  languages: LanguageLink[];
   quickLinks?: LinkRef[];
 };
 
-/** The primary nav on small screens: a button that opens a panel under the header. */
-export function MobileMenu({ label, navLabel, nav, languages, quickLinks }: Props) {
+/**
+ * The primary nav on small screens: a button that opens a panel under the header.
+ * The language switch is not in here: it sits in the yellow bar, always in view.
+ */
+export function MobileMenu({ label, navLabel, nav, quickLinks }: Props) {
   const [open, setOpen] = useState(false);
   const panelId = useId();
   const toggle = useRef<HTMLButtonElement>(null);
@@ -96,20 +98,6 @@ export function MobileMenu({ label, navLabel, nav, languages, quickLinks }: Prop
             ))}
           </ul>
         </nav>
-        <div className={cx(p.mono, s.languages)}>
-          {languages.map((language) => (
-            <a
-              key={language.code}
-              href={language.href}
-              lang={language.lang}
-              hrefLang={language.current ? undefined : language.lang}
-              aria-current={language.current ? "true" : undefined}
-              className={s.language}
-            >
-              {language.code}
-            </a>
-          ))}
-        </div>
       </div>
     </>
   );

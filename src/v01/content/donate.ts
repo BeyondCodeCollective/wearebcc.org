@@ -16,7 +16,7 @@ const IMG = "/images/v01";
  * Not from the design: the Donorbox campaign (from lib/constants, as on the current site).
  */
 export const donate: DonatePageContent = {
-  header: siteHeader({ current: "Hire & partner" }),
+  header: siteHeader({ current: "Donate" }),
   footer: siteFooter(),
 
   give: {
@@ -31,6 +31,8 @@ export const donate: DonatePageContent = {
     trust:
       "Beyond Code Collective is a 501(c)(3) nonprofit. EIN 39-4554736. Gifts are tax-deductible to the extent allowed by law.",
     // NOT IN DESIGN: the design links to "#". This is the page the current site falls back to.
+    // NOT IN DESIGN: funders giving by check, stock or fund had to scroll past the film to find how (run 6, 2026-11-27).
+    otherWays: { label: "Giving by check, stock or donor-advised fund? See how", href: "#ways" },
     fallback: {
       label: "Prefer Donorbox? Give there",
       href: `https://donorbox.org/${DONATE_CAMPAIGN}`,
@@ -63,6 +65,7 @@ export const donate: DonatePageContent = {
   },
 
   ways: {
+    id: "ways",
     headline: ["Other ways", "to give."],
     items: [
       {
@@ -75,7 +78,7 @@ export const donate: DonatePageContent = {
         kind: "link",
         title: "Volunteer",
         body: "Tell us how you want to help. We follow up by email.",
-        link: { label: "Volunteer", href: articleRoute("volunteer-with-bcc") },
+        link: { label: "Volunteer", href: routes.volunteer },
       },
       {
         kind: "details",

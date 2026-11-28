@@ -1,4 +1,4 @@
-import { articleRoute, routes, siteFooter, siteHeader } from "./site";
+import { routes, signupFor, siteFooter, siteHeader } from "./site";
 import type { FormMessages, HomeContent } from "./types";
 
 /**
@@ -30,7 +30,8 @@ export const home: HomeContent = {
 
   hero: {
     headline: [{ text: "Free AI skills" }, { text: "for every generation.", highlight: true }],
-    lede: "Free courses, live workshops, and in-person Centers that teach anyone to use AI with confidence: first-timers, career changers, athletes, and grandparents alike.",
+    // NOT IN DESIGN: "students" added. Visitors aged 16 to 24 doubted the site was for them (run 6, 2026-11-27).
+    lede: "Free courses, live workshops, and in-person Centers that teach anyone to use AI with confidence: students, first-timers, career changers, athletes, and grandparents alike.",
     form: {
       label: "Email address",
       placeholder: "you@example.com",
@@ -40,9 +41,10 @@ export const home: HomeContent = {
       messages: formMessages,
     },
     cta: { label: "Find your program", href: to.homePrograms },
+    // NOT IN DESIGN: the design's office-meeting photo read as a corporate site. This is a Beyond Code class.
     image: {
-      src: `${IMG}/team-table.jpg`,
-      alt: "A diverse team of colleagues meeting around a wooden table in a bright office",
+      src: `${IMG}/wwd-class.jpg`,
+      alt: "Young learners in Beyond Code Collective sweatshirts at a class",
       position: "center 40%",
     },
   },
@@ -62,13 +64,15 @@ export const home: HomeContent = {
     headlineHighlight: "Navigate it with us.",
     // NOT IN DESIGN: the design sets "[Our mission]" as a label over the sentence. Mica asked for one line (2026-11-23).
     body: "Our mission: to build intergenerational access in the technologies of today and tomorrow.",
-    link: { label: "About Beyond Code", href: to.team },
+    link: { label: "About Beyond Code", href: to.story },
     image: { src: `${IMG}/mission.jpg`, alt: "A group of builders gathered close together, laughing", position: "center 30%" },
   },
 
+  // NOT IN DESIGN: the design has four cards. Visitors asked for doors of their own: musicians were sent to
+  // the athletes' page, and working adults, families and people who want to code had no card (run 6, 2026-11-27).
   paths: {
     headline: "PICK THE PATH THAT SOUNDS LIKE YOU.",
-    lede: "Four ways in. Each one opens the programs built for it.",
+    lede: "Eight ways in. Each one opens the programs built for it.",
     cards: [
       {
         title: ["I want", "to build."],
@@ -76,6 +80,28 @@ export const home: HomeContent = {
         href: to.homePrograms,
         surface: "cobalt",
         image: { src: `${IMG}/cathy.jpg`, alt: "Cathy, smiling in a bright pink cardigan", position: "center 8%" },
+      },
+      {
+        title: ["I want AI", "skills for", "work."],
+        cta: "See Beyond Ready",
+        href: to.beyondReady,
+        surface: "peach",
+        image: {
+          src: `${IMG}/field-ready.jpg`,
+          alt: "Two women seated at a small table, looking at a laptop together",
+          position: "center 25%",
+        },
+      },
+      {
+        title: ["I want", "to learn", "to code."],
+        cta: "Watch Code Along",
+        href: to.codeAlong,
+        surface: "ink",
+        image: {
+          src: `${IMG}/ca-hero-still.jpg`,
+          alt: "Destiney Williams and Daniel Ray on the Code Along set",
+          position: "center 20%",
+        },
       },
       {
         title: ["I have", "questions."],
@@ -91,17 +117,35 @@ export const home: HomeContent = {
       {
         title: ["I learn", "best in", "person."],
         titleHighlight: true,
-        cta: "See the centers",
+        cta: "See the Centers",
         href: to.centers,
         surface: "forest",
         image: { src: `${IMG}/street-group.jpg`, alt: "Four people leaning in and reaching toward the camera on a city street", position: "center 35%" },
       },
       {
-        title: ["I’m in", "music or", "sports."],
+        title: ["I’m", "bringing", "my family."],
+        cta: "Kids to grandparents",
+        href: to.centers,
+        surface: "navy",
+        image: { src: `${IMG}/centers-families.jpg`, alt: "A father and his young son looking at a laptop together", position: "center 30%" },
+      },
+      {
+        title: ["I’m an", "athlete."],
         cta: "Explore Beyond the Game",
         href: to.beyondTheGame,
         surface: "crimson",
         image: { src: `${IMG}/kleon.jpg`, alt: "Kleon Penn in his purple basketball jersey", position: "center 4%" },
+      },
+      {
+        title: ["I make", "music."],
+        cta: "Explore Beyond the Music",
+        href: to.beyondTheMusic,
+        surface: "cobalt",
+        image: {
+          src: "/images/news/beyond-the-music.jpg",
+          alt: "Jerry Clark, Expert in Residence for Beyond the Music, smiling in a classroom",
+          position: "center 25%",
+        },
       },
     ],
   },
@@ -130,9 +174,13 @@ export const home: HomeContent = {
         timeTbd: true,
         tags: ["in-person"],
         meta: ["[In person]", "[New York]"],
+        facts: [
+          { label: "Time", value: "Start time to be confirmed" },
+          { label: "Where", value: "In person in New York, hosted with Hudson Guild. Address to be confirmed." },
+          { label: "For", value: "Older adults" },
+        ],
         image: { src: `${IMG}/headphones.jpg`, alt: "", position: "center 42%" },
-        // The design links this button to the events section itself.
-        signup: { label: "Save my free seat", href: to.signup },
+        signup: { label: "Save my free seat", href: signupFor("older-adult-ai-lab-2026-12-02") },
       },
       {
         id: "dialogues-2026-12-04",
@@ -143,8 +191,13 @@ export const home: HomeContent = {
         timeTbd: true,
         tags: ["virtual", "linkedin-live", "open"],
         meta: ["[Streamed on LinkedIn]", "[Virtual]", "[Open to the public]"],
+        facts: [
+          { label: "Time", value: "Start time to be confirmed" },
+          { label: "Where", value: "Online, streamed live on LinkedIn" },
+          { label: "For", value: "Open to the public" },
+        ],
         image: { src: `${IMG}/dialogues-boyd.jpg`, alt: "Dr. Brian Boyd", position: "center 20%" },
-        signup: { label: "Save my free seat", href: to.signup },
+        signup: { label: "Save my free seat", href: signupFor("dialogues-2026-12-04") },
       },
       {
         id: "beyond-lab-2026-12-08",
@@ -155,8 +208,13 @@ export const home: HomeContent = {
         timeTbd: true,
         tags: ["virtual", "open"],
         meta: ["[Virtual]", "[Open to the public]"],
+        facts: [
+          { label: "Time", value: "Start time to be confirmed" },
+          { label: "Where", value: "Online" },
+          { label: "For", value: "Open to the public" },
+        ],
         image: { src: `${IMG}/labs.jpg`, alt: "", position: "center 20%" },
-        signup: { label: "Save my free seat", href: to.signup },
+        signup: { label: "Save my free seat", href: signupFor("beyond-lab-2026-12-08") },
       },
       {
         id: "beyond-ready-lab-2026-12-14",
@@ -166,8 +224,12 @@ export const home: HomeContent = {
         timeZone: EASTERN,
         tags: ["virtual"],
         meta: ["[Virtual]", "[12:00 PM ET]"],
+        facts: [
+          { label: "Time", value: "12:00 PM Eastern" },
+          { label: "Where", value: "Online" },
+        ],
         image: { src: `${IMG}/field-ready.jpg`, alt: "", position: "center 25%" },
-        signup: { label: "Save my free seat", href: to.signup },
+        signup: { label: "Save my free seat", href: signupFor("beyond-ready-lab-2026-12-14") },
         hidden: "Description still carries the design note [Topic to confirm].",
       },
       {
@@ -178,8 +240,13 @@ export const home: HomeContent = {
         timeZone: EASTERN,
         tags: ["virtual"],
         meta: ["[Virtual]", "[6:00–7:30 PM ET]"],
+        facts: [
+          { label: "Time", value: "6:00 to 7:30 PM Eastern" },
+          { label: "Where", value: "Online" },
+          { label: "For", value: "Everyone" },
+        ],
         image: { src: `${IMG}/labs.jpg`, alt: "", position: "center 20%" },
-        signup: { label: "Save my free seat", href: to.signup },
+        signup: { label: "Save my free seat", href: signupFor("beyond-lab-2027-01-12") },
       },
       {
         id: "beyond-ready-2027-01",
@@ -192,8 +259,14 @@ export const home: HomeContent = {
         dateLabel: { eyebrow: "Starts", value: "Jan" },
         tags: [],
         meta: ["[8 weeks]", "[Free]", "[Any role]"],
+        facts: [
+          { label: "Starts", value: "January. Exact date to be confirmed." },
+          { label: "Length", value: "8 weeks" },
+          { label: "For", value: "People in any role" },
+          { label: "Cost", value: "Free" },
+        ],
         image: { src: `${IMG}/field-ready.jpg`, alt: "", position: "center 25%" },
-        signup: { label: "Join the waitlist", href: to.beyondReady },
+        signup: { label: "Join the waitlist", href: signupFor("beyond-ready") },
       },
     ],
     empty: { text: "Nothing on the calendar for this filter right now.", reset: "See all events" },
@@ -228,7 +301,8 @@ export const home: HomeContent = {
           // Nov 19 has passed, so this tag hides itself.
           { label: "[Next: Nov 19]", hideAfter: "2026-11-20T00:00:00-05:00" },
         ],
-        cta: { label: "Save my free seat ↗", href: "https://bccacademy.io/bcc/catalyst-labs", external: true },
+        // NOT IN DESIGN: this button left for bccacademy.io without saying so. Labs sessions are listed on Events.
+        cta: { label: "See upcoming Labs", href: to.events },
         image: { src: `${IMG}/labs.jpg`, alt: "A person seated in a chair by a city window, hands folded", position: "center 15%" },
       },
       {
@@ -242,15 +316,27 @@ export const home: HomeContent = {
           position: "center 30%",
         },
       },
+      // NOT IN DESIGN: Code Along Beyond was one link in the line below. Visitors asked for a row of its own.
+      {
+        title: "Code Along Beyond",
+        description: "A free coding academy on YouTube. Real projects, built step by step.",
+        tags: [{ label: "[Everyone]" }, { label: "[On YouTube]" }, { label: "[Free]" }],
+        cta: { label: "Watch Code Along", href: to.codeAlong },
+        image: {
+          src: `${IMG}/ca-hero-still.jpg`,
+          alt: "Destiney Williams and Daniel Ray on the Code Along set",
+          position: "center 20%",
+        },
+      },
     ],
+    // NOT IN DESIGN: Code Along Beyond has its own row above. "ASK ME ANYTHING" is off the list
+    // until a session with that name is on the calendar: its link led to a page that never mentions it.
     more: {
       label: "[More ways in]",
       links: [
-        { label: "Code Along Beyond", href: to.codeAlong },
         { label: "Beyond Code Dialogues", href: to.events },
-        { label: "ASK ME ANYTHING", href: to.events },
         { label: "Beyond the Game", href: to.beyondTheGame },
-        { label: "Beyond the Music", href: articleRoute("beyond-the-music") },
+        { label: "Beyond the Music", href: to.beyondTheMusic },
       ],
     },
   },
@@ -281,8 +367,8 @@ export const home: HomeContent = {
       label: "Play the Beyond Code film on YouTube (opens in a new tab)",
       href: "https://www.youtube.com/watch?v=-JEj-7AS7Kc&t=1s",
     },
-    // The design has a grey box reading "Video" here: a placeholder, so hidden.
-    poster: undefined,
+    // The design has a grey box reading "Video" here. The still is the one Donate uses for the same film.
+    poster: { src: `${IMG}/video-thumb.jpg`, alt: "The Beyond Code cohort together", position: "center" },
   },
 
   partners: {
@@ -331,12 +417,15 @@ export const home: HomeContent = {
 
   signup: {
     ariaLabel: "Sign up",
-    sentence: {
-      intro: "Hi, I’m",
-      name: { label: "your first name", placeholder: "your first name" },
-      want: "and I want to",
+    // NOT IN DESIGN: the design sets this form as one fill-in sentence. Visitors did not read it as a form,
+    // so it is now labelled boxes. The headline and lede reuse the hero helper line.
+    headline: "Get on the list.",
+    lede: "Tell us a little and we will point you to the right program.",
+    fields: {
+      name: { label: "First name", placeholder: "Your first name" },
+      email: { label: "Email", placeholder: "you@example.com" },
       interest: {
-        label: "What you want to do",
+        label: "I want to",
         options: [
           "build with AI",
           "learn in person",
@@ -347,14 +436,8 @@ export const home: HomeContent = {
           "volunteer",
         ],
       },
-      place: "in",
-      city: { label: "your city", placeholder: "your city" },
-      cityEnd: ".",
-      write: "Write to me in",
-      language: { label: "Language", options: ["English", "Español"] },
-      at: "at",
-      email: { label: "you@example.com", placeholder: "you@example.com" },
-      end: ".",
+      city: { label: "City", placeholder: "Your city" },
+      language: { label: "Write to me in", options: ["English", "Español"] },
     },
     submit: "Sign me up",
     note: "We never share your details. Unsubscribe any time.",

@@ -82,3 +82,10 @@
     width: clamp(100px, 11.8vw, 170px);
   }
 }
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-5);
+}

@@ -14,6 +14,7 @@ export type BeyondReadyHeroContent = {
   lede: string;
   primary: LinkRef;
   secondary: LinkRef;
+  groups: LinkRef;
   image: ImageRef;
 };
 

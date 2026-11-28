@@ -19,7 +19,7 @@ export function AnnouncementBanner() {
   if (HIDDEN_ON.some((p) => pathname.startsWith(p))) return null;
 
   return (
-    <div className="fixed left-0 right-0 top-0 z-[60] flex h-[var(--banner-h)] items-center justify-center bg-electric-green px-4">
+    <div data-site-banner className="fixed left-0 right-0 top-0 z-[60] flex h-[var(--banner-h)] items-center justify-center bg-electric-green px-4">
       <Link
         href="/donate"
         onClick={() => track("donate_click", { source: "banner", click_location: "announcement-banner" })}

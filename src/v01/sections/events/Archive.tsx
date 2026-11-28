@@ -13,6 +13,7 @@ export function Archive({ content }: Props) {
   return (
     <Section id="archive" pad="none" className={s.section}>
       <h2 className={cx(p.display, s.headline)}>{content.headline}</h2>
+      <p className={s.note}>{content.note}</p>
       <div className={cx(l.list, s.list)}>
         {content.events
           .filter((event) => !event.hidden)
@@ -23,6 +24,7 @@ export function Archive({ content }: Props) {
               title={event.title}
               description={event.description}
               meta={event.meta}
+              status={content.status}
               image={event.image}
               cta={event.cta}
               fixedCta

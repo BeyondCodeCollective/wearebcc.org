@@ -98,6 +98,24 @@ export const partner: PartnerPageContent = {
         cta: { label: "Fund a program", href: "#contact" },
         image: { src: `${IMG}/circle-looking-up.jpg`, alt: "", position: "center 30%" },
       },
+      // NOT IN DESIGN: the two below. Visitors from churches and neighborhood groups, and people who wanted
+      // to mentor, found no pill that fit them (run 6, 2026-11-27).
+      {
+        key: "community",
+        label: "A faith or community group",
+        head: "Bring a session to your people.",
+        body: "A congregation, a senior center, a neighborhood group. We start by listening, then shape a session or a Center with the people it is for.",
+        cta: { label: "Talk to us about your group", href: "#contact" },
+        image: { src: `${IMG}/centers-families.jpg`, alt: "", position: "center 30%" },
+      },
+      {
+        key: "volunteer",
+        label: "A volunteer or mentor",
+        head: "Give an hour.",
+        body: "Mentor a learner, speak to a cohort, or help at a live session. The volunteer page shows the open roles and where to sign up.",
+        cta: { label: "See how to volunteer", href: routes.volunteer },
+        image: { src: `${IMG}/wwd-career.jpg`, alt: "", position: "center 30%" },
+      },
     ],
   },
 
@@ -122,7 +140,13 @@ export const partner: PartnerPageContent = {
         id: "p-want",
         name: "want",
         label: "I want to…",
-        options: ["Hire graduates", "Bring a program to my community", "Sponsor a program", "Ask a press question"],
+        options: [
+          "Hire graduates",
+          "Bring a program to my community",
+          "Sponsor a program",
+          "Volunteer or mentor",
+          "Ask a press question",
+        ],
       },
       message: { id: "p-msg", name: "message", label: "Message" },
       submit: "Send",

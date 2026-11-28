@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import type { ReportContent } from "../../content/about.types";
 import { cx } from "../../lib/cx";
 import p from "../../ui/primitives.module.css";
@@ -34,7 +35,7 @@ export function Report({ content }: Props) {
               <p key={line}>{line}</p>
             ))}
           </div>
-          <div>
+          <div className={s.actions}>
             <a
               href={cta.href}
               className={cx(p.button, p.ink, p.lg)}
@@ -42,6 +43,16 @@ export function Report({ content }: Props) {
             >
               {cta.label}
             </a>
+            {content.also && (
+              <a
+                href={content.also.href}
+                className={p.arrowLink}
+                {...(content.also.external ? { target: "_blank", rel: "noopener" } : {})}
+              >
+                {content.also.label}
+                <ArrowUpRight size={16} aria-hidden="true" />
+              </a>
+            )}
           </div>
         </div>
       </div>

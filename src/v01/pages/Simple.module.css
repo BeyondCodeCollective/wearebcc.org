@@ -1,0 +1,20 @@
+/* Fluid display sizes the shared hero and closing line read, declared once. */
+.page {
+  --partner-h1: clamp(4rem, 10vw, 9.75rem);
+  --centers-bring: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.band {
+  padding-bottom: var(--space-7);
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+@media (min-width: 760px) {
+  .photo {
+    aspect-ratio: 16 / 7;
+  }
+}

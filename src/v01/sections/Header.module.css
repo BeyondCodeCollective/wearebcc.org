@@ -8,6 +8,82 @@
   border-bottom: var(--rule) solid var(--surface-rule-soft);
 }
 
+/*
+ * The yellow bar: fixed where the site-wide donate bar sits, and the same height.
+ * Phones get the language switch on the left and Donate on the right. Desktop
+ * centres the campaign line with Donate, since the bar below carries EN | ES.
+ */
+.utility {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  height: var(--banner-h, 40px);
+  padding: 0 var(--gutter);
+  background: var(--surface-bg);
+  color: var(--surface-fg);
+}
+.utilityLanguages {
+  display: flex;
+  align-items: center;
+  font-size: var(--text-mono-xs);
+  font-weight: var(--weight-bold);
+}
+.utilityLanguage {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: var(--banner-h, 40px);
+  text-decoration: none;
+}
+.utilityLanguages span:first-child .utilityLanguage {
+  justify-content: flex-start;
+  min-width: 30px;
+}
+.utilityLanguage[aria-current="true"] {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+.campaign {
+  display: none;
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-bold);
+  white-space: nowrap;
+}
+/* The link is as tall as the bar, so the whole strip height is the tap target. */
+.donate {
+  display: inline-flex;
+  align-items: center;
+  height: var(--banner-h, 40px);
+  text-decoration: none;
+}
+.donatePill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 30px;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-xs);
+  background: var(--bg-ink);
+  color: var(--bcc-lemon);
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-bold);
+  transition: background-color var(--dur-fast) linear;
+}
+.donate:hover .donatePill {
+  background: var(--bg-cobalt);
+  color: var(--fg-inverse);
+}
+.donate[aria-current="page"] .donatePill {
+  box-shadow: inset 0 -3px 0 var(--bcc-lemon);
+}
 .strip {
   display: none;
   justify-content: space-between;
@@ -244,7 +320,23 @@
 }
 
 /* The strip only shows where the full nav does, so small screens keep two bars. */
+@media (min-width: 560px) {
+  .campaign {
+    display: block;
+    margin-left: auto;
+  }
+}
 @media (min-width: 1120px) {
+  .utility {
+    justify-content: center;
+    gap: var(--space-4);
+  }
+  .utilityLanguages {
+    display: none;
+  }
+  .campaign {
+    margin-left: 0;
+  }
   .strip {
     display: flex;
   }

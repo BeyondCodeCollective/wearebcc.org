@@ -45,3 +45,60 @@
   background: var(--bcc-cream);
   color: var(--fg1);
 }
+
+.detail {
+  grid-column: 1 / -1;
+  max-width: 58ch;
+  font-size: var(--text-body-md);
+  line-height: var(--leading-body);
+  text-wrap: pretty;
+}
+
+.link {
+  grid-column: 1 / -1;
+  justify-self: start;
+}
+
+.elsewhere {
+  margin-top: var(--space-5);
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-body-lg);
+}
+
+.elsewhere a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
+.elsewhere a:hover {
+  color: var(--surface-highlight);
+}
+
+@media (min-width: 900px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 26rem) auto;
+    align-items: center;
+    column-gap: var(--space-7);
+  }
+
+  .city {
+    grid-row: 1 / span 2;
+  }
+
+  .detail {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+  }
+
+  .link {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+  }
+
+  .pill {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+}

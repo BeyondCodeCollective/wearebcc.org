@@ -60,6 +60,7 @@ export function EventList({ content, sessions, now }: Props) {
             description={event.description}
             descriptionTail={event.descriptionTail}
             meta={event.meta}
+            facts={event.facts}
             image={event.image}
             cta={event.signup}
           />

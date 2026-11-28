@@ -36,7 +36,7 @@ export function Join({ content, id }: Props) {
         </div>
       </div>
 
-      <div className={s.bring}>
+      <div id="bring" className={s.bring}>
         <h2 className={cx(p.display, s.bringHeadline)}>{content.bring.headline}</h2>
         <ul className={s.items}>
           {content.bring.items.map((item) => (

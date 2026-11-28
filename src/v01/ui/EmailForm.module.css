@@ -15,22 +15,23 @@
   gap: var(--space-2);
 }
 
+/* White boxes: outlined fields on a colour band read as part of the band (run 6, 2026-11-27). */
 .input {
   flex: 1 1 200px;
   min-width: 0;
   height: var(--control-h-lg);
   padding: 0 var(--space-4);
-  border: var(--rule) solid var(--surface-rule);
+  border: 2px solid var(--fg1);
   border-radius: var(--radius-xs);
-  background: transparent;
-  color: var(--surface-fg);
+  background: var(--bg-card);
+  color: var(--fg1);
   font-family: var(--font-sans);
   font-size: var(--text-body);
-  caret-color: var(--surface-highlight);
+  caret-color: var(--fg-accent);
 }
 
 .input::placeholder {
-  color: color-mix(in srgb, var(--surface-fg) 84%, transparent);
+  color: var(--bcc-gray-500);
   opacity: 1;
 }
 

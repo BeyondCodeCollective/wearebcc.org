@@ -1,11 +1,12 @@
-import { ArrowRight, Minus, Plus } from "@phosphor-icons/react/dist/ssr";
-import type { DonatePageContent, WayParagraph } from "../../content/donate.types";
+import { ArrowRight, ArrowUpRight, Minus, Plus } from "@phosphor-icons/react/dist/ssr";
+import type { WayParagraph, WaysContent } from "../../content/donate.types";
+import type { Surface } from "../../content/types";
 import { cx } from "../../lib/cx";
 import p from "../../ui/primitives.module.css";
 import { Section } from "../../ui/Section";
 import s from "./Ways.module.css";
 
-type Props = { content: DonatePageContent["ways"] };
+type Props = { content: WaysContent; surface?: Surface };
 
 function Paragraph({ paragraph }: { paragraph: WayParagraph }) {
   if ("lines" in paragraph) {
@@ -35,10 +36,10 @@ function Paragraph({ paragraph }: { paragraph: WayParagraph }) {
   );
 }
 
-/** Other ways to give: two links out, three rows that open in place. */
-export function Ways({ content }: Props) {
+/** A headline beside ruled rows: links out, plain facts, or rows that open in place. */
+export function Ways({ content, surface = "paper-warm" }: Props) {
   return (
-    <Section surface="paper-warm" pad="lg">
+    <Section id={content.id} surface={surface} pad="lg">
       <div className={s.layout}>
         <h2 className={cx(p.display, s.headline)}>
           {content.headline.map((line, index) => (
@@ -54,10 +55,23 @@ export function Ways({ content }: Props) {
               <li key={item.title} className={cx(s.row, s.linkRow)}>
                 <h3 className={cx(p.display, s.title)}>{item.title}</h3>
                 <p className={s.note}>{item.body}</p>
-                <a href={item.link.href} className={p.arrowLink}>
+                <a
+                  href={item.link.href}
+                  className={p.arrowLink}
+                  {...(item.link.external ? { target: "_blank", rel: "noopener" } : {})}
+                >
                   {item.link.label}
-                  <ArrowRight size={16} weight="regular" aria-hidden="true" />
+                  {item.link.external ? (
+                    <ArrowUpRight size={16} weight="bold" aria-hidden="true" />
+                  ) : (
+                    <ArrowRight size={16} weight="bold" aria-hidden="true" />
+                  )}
                 </a>
+              </li>
+            ) : item.kind === "text" ? (
+              <li key={item.title} className={cx(s.row, s.textRow)}>
+                <h3 className={cx(p.display, s.title)}>{item.title}</h3>
+                <p className={s.note}>{item.body}</p>
               </li>
             ) : (
               <li key={item.title} className={s.row}>

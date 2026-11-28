@@ -11,7 +11,7 @@ const formMessages: FormMessages = {
 
 /**
  * Signup, v0.1. Every word and link on the page lives here.
- * Copy is taken exactly from docs/design/v0-1/S-Signup-zdvm.dc.html.
+ * Copy is taken from docs/design/v0-1/S-Signup-zdvm.dc.html, except the form, which is noted below.
  */
 export const signup: SignupPageContent = {
   header: siteHeader(),
@@ -25,12 +25,15 @@ export const signup: SignupPageContent = {
 
   form: {
     ariaLabel: "Sign up",
-    sentence: {
-      intro: "Hi, I’m",
-      name: { label: "your first name", placeholder: "your first name" },
-      want: "and I want to",
+    // NOT IN DESIGN: the design sets this form as one fill-in sentence. Visitors did not read it as a form,
+    // so it is now labelled boxes with a headline.
+    headline: "Sign up.",
+    lede: "Tell us a little and we will point you to the right program.",
+    fields: {
+      name: { label: "First name", placeholder: "Your first name" },
+      email: { label: "Email", placeholder: "you@example.com" },
       interest: {
-        label: "What you want to do",
+        label: "I want to",
         options: [
           "build with AI",
           "learn in person",
@@ -41,14 +44,8 @@ export const signup: SignupPageContent = {
           "volunteer",
         ],
       },
-      place: "in",
-      city: { label: "your city", placeholder: "your city" },
-      cityEnd: ".",
-      write: "Write to me in",
-      language: { label: "Language", options: ["English", "Español"] },
-      at: "at",
-      email: { label: "you@example.com", placeholder: "you@example.com" },
-      end: ".",
+      city: { label: "City", placeholder: "Your city" },
+      language: { label: "Write to me in", options: ["English", "Español"] },
     },
     submit: "Sign me up",
     note: "We never share your details. Unsubscribe any time.",

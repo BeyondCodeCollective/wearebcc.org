@@ -27,10 +27,40 @@ export const centers: CentersPageContent = {
   },
   locations: {
     headline: "Where we are.",
+    // NOT IN DESIGN: the design lists city names only. Visitors could not tell where to go or when
+    // (21 of 200, 2026-11-27). The Atlanta host is from the Centers launch post. Its street address,
+    // days and hours are not in the repo, so the row says they are being confirmed.
     cities: [
-      { name: "Atlanta", status: "open", statusLabel: "Open" },
-      { name: "Los Angeles", status: "soon", statusLabel: "SOON" },
-      { name: "New York", status: "soon", statusLabel: "Soon" },
+      {
+        name: "Atlanta",
+        status: "open",
+        statusLabel: "Open",
+        detail:
+          "Hosted at North Star AI Labs, inside Georgia Tech’s Advanced Technology Development Center (ATDC). We are confirming this season’s days, hours and street address. Tell us you want to come and we will send them.",
+        link: { label: "Get Atlanta dates", href: "#join" },
+      },
+      {
+        name: "Los Angeles",
+        status: "soon",
+        statusLabel: "Soon",
+        detail: "Not open yet. The opening date is still to be announced.",
+        link: { label: "Tell me when it opens", href: "#join" },
+      },
+      {
+        name: "New York",
+        status: "soon",
+        statusLabel: "Soon",
+        detail:
+          "Not open yet. The opening date is still to be announced. Until then we hold sessions in New York with Hudson Guild.",
+        link: { label: "See New York sessions", href: routes.events },
+      },
+    ],
+    elsewhere: [
+      "Not near a Center? ",
+      { label: "Live sessions", href: routes.events },
+      " and ",
+      { label: "Code Along Beyond", href: routes.codeAlong },
+      " are online and free.",
     ],
   },
   inside: {
@@ -78,7 +108,8 @@ export const centers: CentersPageContent = {
   quote: {
     // The design gives this portrait the alt text "[Placeholder portrait]", which is a note, so it is left empty.
     image: { src: `${IMG}/cathy.jpg`, alt: "", position: "center 25%" },
-    text: '"THIS HELPED ME UNDERSTAND TECHNOLOGY IN A MORE APPROACHABLE WAY. IT WAS INSPIRING TO LEARN TOGETHER, ASK QUESTIONS FREELY, AND GROW OUR CONFIDENCE WITH TECH AS A COMMUNITY."',
+    // The design sets this in capitals. Sentence case reads faster at this length.
+    text: "“This helped me understand technology in a more approachable way. It was inspiring to learn together, ask questions freely, and grow our confidence with tech as a community.”",
     attribution: "Cathy, ai fundamentals for Wisdom learners",
   },
   join: {

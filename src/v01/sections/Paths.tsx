@@ -8,7 +8,7 @@ import s from "./Paths.module.css";
 
 type Props = { content: PathsContent; id?: string };
 
-/** Four poster links, one per way into the programs. Each poster sets its own surface. */
+/** Poster links, one per way into the programs. Each poster sets its own surface. */
 export function Paths({ content, id }: Props) {
   return (
     <Section id={id} pad="lg">

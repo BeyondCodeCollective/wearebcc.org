@@ -44,7 +44,7 @@ export function Apply({ content, id }: Props) {
           <strong>{content.sponsor.strong}</strong>
           {content.sponsor.rest}
         </p>
-        <a href={content.sponsor.link.href} className={p.arrowLink}>
+        <a href={content.sponsor.link.href} className={cx(p.button, p.cream, p.md)}>
           {content.sponsor.link.label}
           <ArrowRight size={16} aria-hidden="true" />
         </a>

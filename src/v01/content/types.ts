@@ -69,6 +69,11 @@ export type HeaderContent = {
   nav: NavItem[];
   languages: LanguageLink[];
   cta: LinkRef;
+  /** The Donate button in the yellow bar and, on desktop, beside Sign up. */
+  donate: LinkRef & { current?: boolean };
+  /** The campaign line beside Donate in the yellow bar. */
+  campaign: string;
+  languagesLabel: string;
   /** Direct links shown first in the open mobile menu. */
   quickLinks?: LinkRef[];
   /** Primary nav labels kept in view under the bar on small screens, beside the language switch. */
@@ -139,14 +144,18 @@ export type PathsContent = { headline: string; lede: string; cards: PathCard[] }
 
 export type EventTag = "virtual" | "in-person" | "linkedin-live" | "open" | "invite-only";
 
+export type EventFact = { label: string; value: string };
+
 export type HomeEvent = Timed & {
   id: string;
   title: string;
   description: string;
   /** Machine tags: what the filter chips match on. */
   tags: EventTag[];
-  /** The bracketed labels shown on the row, exactly as designed. */
+  /** The bracketed labels from the design. Shown only when an event has no facts. */
   meta: string[];
+  /** Plain answers to when, where and who it is for. Say "to be confirmed" where a fact is missing. */
+  facts?: EventFact[];
   /** Replaces the weekday and date drawn from startsAt. */
   dateLabel?: { eyebrow: string; value: string };
   image?: ImageRef;
@@ -205,22 +214,28 @@ export type PartnerCtaContent = {
   columns: { label: string; title: string; body: string; cta: LinkRef; image?: ImageRef }[];
 };
 
+/** Which session or program a sign-up is for. Shown above the form when the link named one. */
+export type SignupContext = {
+  /** For example "You’re saving a seat for". */
+  label: string;
+  title: string;
+  /** The day, when there is one. */
+  when?: string;
+  facts: EventFact[];
+  note: string;
+};
+
 export type SignupContent = {
   ariaLabel: string;
-  sentence: {
-    intro: string;
+  headline: string;
+  lede: string;
+  context?: SignupContext;
+  fields: {
     name: { label: string; placeholder: string };
-    want: string;
-    interest: { label: string; options: string[] };
-    place: string;
-    city: { label: string; placeholder: string };
-    /** Punctuation that closes the first sentence. Stays attached to the city field. */
-    cityEnd: string;
-    write: string;
-    language: { label: string; options: string[] };
-    at: string;
     email: { label: string; placeholder: string };
-    end: string;
+    interest: { label: string; options: string[] };
+    city: { label: string; placeholder: string };
+    language: { label: string; options: string[] };
   };
   submit: string;
   note: string;
@@ -235,6 +250,8 @@ export type FooterContent = {
   tagline: string;
   navLabel: string;
   columns: { title: string; links: LinkRef[] }[];
+  /** How to reach the team, printed on every page. */
+  contact: { title: string; phone: LinkRef; email: LinkRef; address: string[] };
   legal: string[];
 };
 

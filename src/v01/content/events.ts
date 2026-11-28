@@ -12,15 +12,16 @@ const IMG = "/images/v01";
 const to = routes;
 
 /**
- * Start times, time zones and hide times are the Home page's, matched by id,
+ * Start times, time zones, hide times, the facts list and the sign-up link are
+ * the Home page's, matched by id,
  * so the two pages can never disagree. NOT CONFIRMED.
  */
 const homeEvents = home.events.events;
 function timing(id: string) {
   const match = homeEvents.find((event) => event.id === id);
   if (!match) throw new Error(`Events: no Home event with id ${id}`);
-  const { startsAt, timeZone, timeTbd, hideAfter, tags } = match;
-  return { startsAt, timeZone, timeTbd, hideAfter, tags };
+  const { startsAt, timeZone, timeTbd, hideAfter, tags, facts, signup } = match;
+  return { startsAt, timeZone, timeTbd, hideAfter, tags, facts, signup };
 }
 
 const sessions: SessionEvent[] = [
@@ -31,7 +32,6 @@ const sessions: SessionEvent[] = [
     description: "A friendly, hands-on start with AI for older adults.",
     meta: ["[In person]", "[New York]"],
     image: { src: `${IMG}/headphones.jpg`, alt: "", position: "center 42%" },
-    signup: { label: "Save my free seat", href: to.signup },
     flyer: { tone: "green", tilt: 1.5, text: "A friendly, hands-on start with AI for older adults." },
   },
   {
@@ -45,7 +45,6 @@ const sessions: SessionEvent[] = [
     },
     meta: ["[Streamed on LinkedIn]", "[Virtual]", "[Open to the public]"],
     image: { src: `${IMG}/dialogues-boyd.jpg`, alt: "Dr. Brian Boyd", position: "center 20%" },
-    signup: { label: "Save my free seat", href: to.signup },
     flyer: {
       tone: "cobalt",
       tilt: -1.5,
@@ -59,7 +58,6 @@ const sessions: SessionEvent[] = [
     description: "A live online workshop on AI and entrepreneurship.",
     meta: ["[Virtual]", "[Open to the public]"],
     image: { src: `${IMG}/labs.jpg`, alt: "", position: "center 20%" },
-    signup: { label: "Save my free seat", href: to.signup },
     flyer: { tone: "lemon", tilt: 2, text: "A live online workshop on AI and entrepreneurship." },
   },
   {
@@ -71,7 +69,6 @@ const sessions: SessionEvent[] = [
       "A live online lab for learners really to gain applied AI skills and learn about the Beyond Ready program.",
     meta: ["[Virtual]", "[12:00 PM ET]"],
     image: { src: `${IMG}/field-ready.jpg`, alt: "", position: "center 25%" },
-    signup: { label: "Save my free seat", href: to.signup },
     flyer: {
       tone: "crimson",
       tilt: -2,
@@ -86,7 +83,6 @@ const sessions: SessionEvent[] = [
     description: "A live online workshop on AI and entrepreneurship.",
     meta: ["[Virtual]", "[6:00–7:30 PM ET]"],
     image: { src: `${IMG}/labs.jpg`, alt: "", position: "center 20%" },
-    signup: { label: "Save my free seat", href: to.signup },
     flyer: { tone: "peach", tilt: 1.5, text: "A live online workshop on AI and entrepreneurship." },
   },
   {
@@ -98,7 +94,6 @@ const sessions: SessionEvent[] = [
     dateLabel: { eyebrow: "Starts", value: "Jan" },
     meta: ["[8 weeks]", "[Any role]"],
     image: { src: `${IMG}/field-ready.jpg`, alt: "", position: "center 25%" },
-    signup: { label: "Join the waitlist", href: to.beyondReady },
     flyer: {
       tone: "cobalt",
       tilt: -1.5,
@@ -132,6 +127,9 @@ export const events: EventsPageContent = {
   },
   archive: {
     headline: "SOME PAST HIGHLIGHTS.",
+    // NOT IN DESIGN: visitors read these rows as bookable. The note and label say they are over.
+    note: "These sessions have already happened. Each row links to the recording or the story.",
+    status: "Past event",
     events: [
       {
         id: "dialogues-morey-2026-11-09",

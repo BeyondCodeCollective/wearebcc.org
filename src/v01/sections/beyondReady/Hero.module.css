@@ -112,6 +112,10 @@
   gap: var(--space-3) 22px;
 }
 
+.groups {
+  align-self: flex-start;
+}
+
 .photo {
   width: 100%;
   height: clamp(13rem, 24vw, 20rem);

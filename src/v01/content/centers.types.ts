@@ -17,9 +17,17 @@ export type CenterCity = {
   /** Open cities are set solid, coming ones in outline. */
   status: "open" | "soon";
   statusLabel: string;
+  /** What is known about this city. Says so plainly where a fact is still to come. */
+  detail: string;
+  link: LinkRef;
 };
 
-export type CentersLocationsContent = { headline: string; cities: CenterCity[] };
+export type CentersLocationsContent = {
+  headline: string;
+  cities: CenterCity[];
+  /** For people with no Center nearby. Strings and links, in reading order. */
+  elsewhere: (string | LinkRef)[];
+};
 
 export type CenterStrip = {
   title: string;

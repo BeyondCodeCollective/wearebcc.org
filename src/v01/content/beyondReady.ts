@@ -1,5 +1,5 @@
 import type { BeyondReadyPageContent } from "./beyondReady.types";
-import { routes, siteFooter, siteHeader } from "./site";
+import { routes, signupFor, siteFooter, siteHeader } from "./site";
 
 /**
  * BeyondReady, v0.1. Every word and link on the page lives here.
@@ -34,6 +34,8 @@ export const beyondReady: BeyondReadyPageContent = {
     lede: "Eight free weeks, supported by our partners and funders. You bring a real task from your work. You leave having built one thing that makes it better, and knowing how to judge what AI hands you.",
     primary: { label: "Join the waitlist", href: "#join" },
     secondary: { label: "Try it on your role", href: "#roles" },
+    // NOT IN DESIGN: employers found their route only at the foot of the page (run 6, 2026-11-27).
+    groups: { label: "Bringing it to a team, region or school?", href: "#bring" },
     image: {
       src: "/images/v01/field-ready.jpg",
       alt: "Two women seated at a small table, looking at a laptop together",
@@ -168,7 +170,7 @@ export const beyondReady: BeyondReadyPageContent = {
     body: ["Join the waitlist in under one minute.", "We email you when enrollment opens."],
     aside: {
       lines: ["First cohort.", "Free seats."],
-      cta: { label: "Join the waitlist", href: routes.signup },
+      cta: { label: "Join the waitlist", href: signupFor("beyond-ready") },
     },
     bring: {
       headline: "BRING BEYOND READY TO YOUR PEOPLE.",

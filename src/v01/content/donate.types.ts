@@ -5,7 +5,11 @@ export type WayParagraph = { text: (string | LinkRef)[] } | { lines: string[] };
 
 export type Way =
   | { kind: "link"; title: string; body: string; link: LinkRef }
+  | { kind: "text"; title: string; body: string }
   | { kind: "details"; title: string; paragraphs: WayParagraph[] };
+
+/** A headline beside ruled rows. Donate, Volunteer, Contact and Beyond the Music all use it. */
+export type WaysContent = { id?: string; headline: string[]; items: Way[] };
 
 /** Content for the Donate page. Its sections take these types as props and nothing else. */
 export type DonatePageContent = PageChrome & {
@@ -18,6 +22,7 @@ export type DonatePageContent = PageChrome & {
     body: string[];
     trust: string;
     /** Opens the live Donorbox page in a new tab. */
+    otherWays: LinkRef;
     fallback: LinkRef;
     donorbox: { campaign: string; scriptSrc: string; ariaLabel: string };
   };
@@ -32,6 +37,6 @@ export type DonatePageContent = PageChrome & {
     headline: string[];
     label: string;
   };
-  ways: { headline: string[]; items: Way[] };
+  ways: WaysContent;
   questions: { headline: string; items: { question: string; answer: string }[] };
 };

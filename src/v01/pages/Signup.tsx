@@ -4,7 +4,6 @@ import { Breadcrumb } from "../sections/signup/Breadcrumb";
 import { NextSteps } from "../sections/signup/NextSteps";
 import { Tiles } from "../sections/signup/Tiles";
 import { PageShell } from "../ui/PageShell";
-import s from "./Signup.module.css";
 
 type Props = { content: SignupPageContent };
 
@@ -13,9 +12,7 @@ export function SignupPage({ content }: Props) {
   return (
     <PageShell header={content.header} footer={content.footer}>
       <Breadcrumb {...content.breadcrumb} />
-      <div className={s.form}>
-        <Signup content={content.form} />
-      </div>
+      <Signup content={content.form} heading="h1" />
       <NextSteps headline={content.next.headline} steps={content.next.steps} />
       <Tiles tiles={content.tiles} />
     </PageShell>

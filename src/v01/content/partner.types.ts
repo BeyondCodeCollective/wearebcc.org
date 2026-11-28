@@ -1,6 +1,6 @@
 import type { FormMessages, ImageRef, LinkRef, LogoRef, PageChrome, StickerRef, SubscribeConfig } from "./types";
 
-export type AudienceKey = "employer" | "team" | "board" | "campus" | "funder";
+export type AudienceKey = "employer" | "team" | "board" | "campus" | "funder" | "community" | "volunteer";
 
 /** Text with links in it. */
 export type RichText = (string | LinkRef)[];

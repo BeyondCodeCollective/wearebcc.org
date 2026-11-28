@@ -9,3 +9,11 @@
 .list {
   margin-top: var(--space-5);
 }
+
+.note {
+  max-width: 44ch;
+  margin-top: var(--space-3);
+  color: var(--surface-fg2);
+  font-size: var(--text-body-md);
+  text-wrap: pretty;
+}

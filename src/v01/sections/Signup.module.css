@@ -1,98 +1,142 @@
 .inner {
   position: relative;
-  padding-bottom: var(--space-8);
+  display: grid;
+  gap: var(--space-6);
+  padding-bottom: var(--space-6);
 }
 
-.sentence {
-  max-width: 80rem;
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+.headline {
   font-size: var(--text-sentence);
-  line-height: var(--leading-sentence);
-  text-wrap: wrap;
+  line-height: var(--leading-display);
+  text-wrap: balance;
+}
+
+.lede {
+  max-width: 34ch;
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-body-lg);
+  text-wrap: pretty;
+}
+
+/* Which session or program this sign-up is for. An ink block, so it is the first thing read. */
+.context {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  max-width: 30rem;
+  margin-top: var(--space-2);
+  padding: var(--space-5);
+  border-radius: var(--radius-sm);
+  background: var(--surface-bg);
+  color: var(--surface-fg);
+}
+
+.contextLabel {
+  font-size: var(--text-15);
+  font-weight: 700;
+}
+
+.contextTitle {
+  font-size: var(--text-display-sm);
+  line-height: var(--leading-title);
+}
+
+.contextWhen {
+  font-size: var(--text-body-lg);
+  font-weight: 700;
+}
+
+.contextFacts {
+  margin-top: var(--space-2);
+  padding-top: var(--space-3);
+  border-top: var(--rule) solid var(--surface-rule);
+}
+
+.contextNote {
+  margin-top: var(--space-2);
+  color: var(--surface-fg2);
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-body);
+  text-wrap: pretty;
+}
+
+.formWrap {
+  min-width: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: var(--space-4);
 }
 
 .field {
-  display: inline-block;
-  max-width: 100%;
-  min-height: 1.2em;
-  padding: 0 var(--space-2);
-  border: 0;
-  border-bottom: var(--rule-heavy) solid var(--surface-rule);
-  border-radius: 0;
-  background: transparent;
-  color: var(--surface-highlight);
-  font: inherit;
-  letter-spacing: inherit;
-  line-height: 1;
-  vertical-align: baseline;
-  caret-color: var(--surface-highlight);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
 }
 
-.field::placeholder {
-  color: color-mix(in srgb, var(--surface-fg) 84%, transparent);
+.wide {
+  grid-column: 1 / -1;
+}
+
+.label {
+  font-size: var(--text-body);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.control {
+  width: 100%;
+  height: 3.5rem;
+  padding: 0 var(--space-4);
+  border: 2px solid var(--fg1);
+  border-radius: var(--radius-xs);
+  background: var(--bg-card);
+  color: var(--fg1);
+  font-family: var(--font-sans);
+  font-size: var(--text-body-md);
+  caret-color: var(--fg-accent);
+}
+
+.control::placeholder {
+  color: var(--bcc-gray-500);
   opacity: 1;
-}
-
-.field:focus-visible {
-  outline-offset: 4px;
-}
-
-.name {
-  width: 8em;
-}
-
-.city {
-  width: 5em;
-}
-
-.email {
-  width: min(9em, calc(100% - 0.4em));
-}
-
-/* A field and the punctuation that follows it never part at a line break. */
-.keep {
-  white-space: nowrap;
 }
 
 .choice {
   position: relative;
-  display: inline-block;
-  max-width: 100%;
-  vertical-align: baseline;
+  display: block;
 }
 
-/* A long choice wraps on a narrow screen instead of being cut off. */
-.value {
-  padding-right: 0.7em;
-  text-wrap: balance;
-}
-
-/* Invisible, over the value, at body size: that size is what the native list opens in. */
 .select {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  border: 0;
-  opacity: 0;
+  padding-right: var(--space-8);
   appearance: none;
   cursor: pointer;
-  font-family: var(--font-sans);
-  font-size: var(--text-body);
-}
-
-.choice:has(.select:focus-visible) .value {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 4px;
+  text-overflow: ellipsis;
 }
 
 .caret {
   position: absolute;
   top: 50%;
-  right: 0.1em;
-  width: 0.4em;
-  height: 0.4em;
-  color: var(--surface-fg);
+  right: var(--space-4);
+  width: 1.125rem;
+  height: 1.125rem;
+  color: var(--fg1);
   pointer-events: none;
   transform: translateY(-50%);
 }
@@ -102,7 +146,6 @@
   flex-wrap: wrap;
   align-items: center;
   gap: var(--space-4) var(--space-5);
-  margin-top: var(--space-7);
 }
 
 .note {
@@ -111,9 +154,9 @@
 }
 
 .error {
-  flex-basis: 100%;
-  color: var(--fg-warning);
-  font-weight: var(--weight-medium);
+  margin-top: var(--space-3);
+  color: var(--fg1);
+  font-weight: 700;
 }
 
 .done {
@@ -140,20 +183,29 @@
   overflow: hidden;
 }
 
+/* The sticker only shows where it has clear space beside the copy. */
 .sticker {
-  position: absolute;
-  right: 0;
-  bottom: calc(var(--space-10) * -1);
-  z-index: 1;
-  width: clamp(140px, 18vw, 260px);
-  height: auto;
-  pointer-events: none;
+  display: none;
 }
 
-/* On a phone the footer wordmark sits right under the section edge, so the sticker stays inside the section. */
-@media (max-width: 600px) {
+@media (min-width: 900px) {
+  .inner {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    column-gap: var(--space-9);
+    align-items: start;
+    padding-block: var(--space-5) var(--space-8);
+  }
+}
+
+@media (min-width: 1280px) {
   .sticker {
-    bottom: var(--space-2);
-    width: 120px;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: calc(var(--space-9) * -1);
+    z-index: 1;
+    width: 150px;
+    height: auto;
+    pointer-events: none;
   }
 }

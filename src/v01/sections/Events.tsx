@@ -10,6 +10,7 @@ import { Photo } from "../ui/Photo";
 import p from "../ui/primitives.module.css";
 import { FilterSelect } from "../ui/FilterSelect";
 import { Section } from "../ui/Section";
+import { EventFacts } from "./events/EventFacts";
 import s from "./Events.module.css";
 
 type Props = {
@@ -21,6 +22,8 @@ type Props = {
 
 type Filter = "all" | EventTag;
 
+const HOME_LIST_SIZE = 3;
+
 /**
  * Upcoming events with filter chips. An event leaves the list once it has
  * started, and never shows while its content marks it hidden.
@@ -30,7 +33,8 @@ export function Events({ content, id, now }: Props) {
   const current = useNow(now);
 
   const upcoming = content.events.filter((event) => !event.hidden && isUpcoming(event, current));
-  const shown = filter === "all" ? upcoming : upcoming.filter((event) => event.tags.includes(filter));
+  // Home shows the next few. The calendar link under the list has the rest.
+  const shown = (filter === "all" ? upcoming : upcoming.filter((event) => event.tags.includes(filter))).slice(0, HOME_LIST_SIZE);
 
   return (
     <Section id={id} surface="paper-warm">
@@ -77,13 +81,17 @@ export function Events({ content, id, now }: Props) {
                 <h3 className={s.title}>{event.title}</h3>
                 <p className={s.text}>{event.description}</p>
               </div>
-              <p className={cx(p.mono, s.tags)}>
-                {event.meta.map((tag) => (
-                  <span key={tag} className={s.tag}>
-                    {tag}
-                  </span>
-                ))}
-              </p>
+              {event.facts ? (
+                <EventFacts facts={event.facts} className={s.tags} />
+              ) : (
+                <p className={cx(p.mono, s.tags, s.tagRow)}>
+                  {event.meta.map((tag) => (
+                    <span key={tag} className={s.tag}>
+                      {tag}
+                    </span>
+                  ))}
+                </p>
+              )}
               <a href={event.signup.href} className={cx(p.button, p.ghost, p.fine, s.cta)}>
                 {event.signup.label}
               </a>

@@ -42,6 +42,12 @@ export function buildNews(posts: NewsPost[]): NewsPageContent {
           body: "info@wearebcc.org",
           cta: { label: "Email us", href: "mailto:info@wearebcc.org" },
         },
+        // NOT IN DESIGN: the phone number and office address lived only in the partners form (run 6, 2026-11-27).
+        {
+          title: "Phone and address",
+          body: "Every way to reach us, on one page.",
+          cta: { label: "Contact us", href: routes.contact },
+        },
       ],
     },
     newsletter: {

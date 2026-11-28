@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CaretDown } from "@phosphor-icons/react/dist/ssr";
+import { ArrowRight, CaretDown } from "@phosphor-icons/react/dist/ssr";
 import type { HeaderContent } from "../content/types";
 import { cx } from "../lib/cx";
 import { MobileMenu } from "../ui/MobileMenu";
@@ -9,14 +9,48 @@ import s from "./Header.module.css";
 type Props = { content: HeaderContent };
 
 /**
- * Site header for v0.1 pages: utility strip, then the bar with logo, primary
- * nav, language and sign-up. The strip scrolls away; the bar stays in view.
- * Below desktop the strip is hidden and a slim row under the bar keeps
- * Programs, Events and the language switch in view.
+ * Site header for v0.1 pages: the yellow bar with Donate (and, below desktop,
+ * the language switch), the utility strip, then the bar with logo, primary nav,
+ * language and sign-up. The strip scrolls away; the two bars stay in view.
+ * The yellow bar takes the place of the site-wide donate bar on these pages.
  */
 export function Header({ content }: Props) {
   return (
     <>
+      <div className={s.utility} data-surface="lemon">
+        <div className={cx(p.mono, s.utilityLanguages)} role="group" aria-label={content.languagesLabel}>
+          {content.languages.map((language, index) => (
+            <span key={language.code}>
+              {index > 0 && (
+                <span aria-hidden="true" className={s.divider}>
+                  |
+                </span>
+              )}
+              <a
+                href={language.href}
+                lang={language.lang}
+                hrefLang={language.current ? undefined : language.lang}
+                aria-current={language.current ? "true" : undefined}
+                className={s.utilityLanguage}
+              >
+                {language.code}
+              </a>
+            </span>
+          ))}
+        </div>
+        <p className={cx(p.mono, s.campaign)}>{content.campaign}</p>
+        <a
+          href={content.donate.href}
+          className={s.donate}
+          aria-current={content.donate.current ? "page" : undefined}
+        >
+          <span className={cx(p.mono, s.donatePill)}>
+            {content.donate.label}
+            <ArrowRight size={14} weight="bold" aria-hidden="true" />
+          </span>
+        </a>
+      </div>
+
       <div className={cx(p.mono, s.strip)} data-surface="paper">
         {content.strip.map((line, index) => (
           <p key={line} className={index > 0 ? s.stripExtra : undefined}>
@@ -96,7 +130,6 @@ export function Header({ content }: Props) {
               label={content.menuLabel}
               navLabel={content.navLabel}
               nav={content.nav}
-              languages={content.languages}
               quickLinks={content.quickLinks}
             />
           </div>

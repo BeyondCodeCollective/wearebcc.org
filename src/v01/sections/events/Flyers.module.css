@@ -105,6 +105,10 @@
   line-height: 1.4;
 }
 
+.facts {
+  font-size: var(--text-body-sm);
+}
+
 .tg {
   font-size: var(--text-mono-xs);
   line-height: 1.6;

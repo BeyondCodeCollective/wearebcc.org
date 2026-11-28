@@ -46,3 +46,9 @@
   line-height: var(--leading-body);
   color: var(--surface-fg2);
 }
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}

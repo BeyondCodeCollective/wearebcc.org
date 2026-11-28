@@ -95,6 +95,8 @@ export type ReportContent = {
   /** Adds a blank line between the paragraphs. */
   spaced?: boolean;
   cta: LinkRef;
+  /** A second, shorter download beside the report. */
+  also?: LinkRef;
   sticker?: StickerRef;
 };
 
