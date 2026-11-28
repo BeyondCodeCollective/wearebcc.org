@@ -21,9 +21,9 @@ export const centers: CentersPageContent = {
     headline: [{ text: "One room." }, { text: "Every generation.", highlight: true }],
     lede: "Beyond Centers are free, in-person hubs where an 8-year-old and his grandmother learn about tech at the same table.",
     primary: { label: "See upcoming sessions", href: routes.events },
-    secondary: { label: "Join a Center", href: "#join" },
+    secondary: { label: "Get dates near me", href: "#join" },
     // NOT IN DESIGN: churches and city staff could not find how to host (rerun, 2026-11-26).
-    host: { label: "Host a Center", href: `${routes.partner}#contact` },
+    host: { label: "Bring a Center to my town", href: `${routes.partner}#contact` },
   },
   locations: {
     headline: "Where we are.",

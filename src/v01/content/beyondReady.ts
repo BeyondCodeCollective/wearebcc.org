@@ -32,7 +32,7 @@ export const beyondReady: BeyondReadyPageContent = {
     },
     claim: { before: "Learn to work with AI in ", highlight: "the job you already have." },
     lede: "Eight free weeks, supported by our partners and funders. You bring a real task from your work. You leave having built one thing that makes it better, and knowing how to judge what AI hands you.",
-    primary: { label: "Join the waitlist", href: "#join" },
+    primary: { label: "Join the waitlist", href: signupFor("beyond-ready") },
     secondary: { label: "Try it on your role", href: "#roles" },
     // NOT IN DESIGN: employers found their route only at the foot of the page (run 6, 2026-11-27).
     groups: { label: "Bringing it to a team, region or school?", href: "#bring" },
